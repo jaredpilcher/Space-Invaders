@@ -1,0 +1,8 @@
+verilog plb_tft_cntlr_ref_v1_00_d C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/dcr_if.v
+verilog plb_tft_cntlr_ref_v1_00_d C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/h_sync.v
+verilog plb_tft_cntlr_ref_v1_00_d C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/v_sync.v
+verilog plb_tft_cntlr_ref_v1_00_d C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/rgb_bram.v
+verilog plb_tft_cntlr_ref_v1_00_d C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/plb_if.v
+verilog plb_tft_cntlr_ref_v1_00_d C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/tft_if.v
+verilog plb_tft_cntlr_ref_v1_00_d C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/plb_tft_cntlr_ref.v
+verilog work ../hdl/vga_framebuffer_wrapper.v

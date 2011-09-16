@@ -1,0 +1,23 @@
+C:\Lab3CleanBuild\implementation\system.ngc 1190652866
+C:/Lab3CleanBuild/implementation/ppc405_0_wrapper.ngc 1190652451
+C:/Lab3CleanBuild/implementation/ppc405_1_wrapper.ngc 1190652463
+C:/Lab3CleanBuild/implementation/jtagppc_0_wrapper.ngc 1190652474
+C:/Lab3CleanBuild/implementation/reset_block_wrapper.ngc 1190652485
+C:/Lab3CleanBuild/implementation/plb_wrapper.ngc 1190652511
+C:/Lab3CleanBuild/implementation/opb_wrapper.ngc 1190652527
+C:/Lab3CleanBuild/implementation/plb2opb_wrapper.ngc 1190652557
+C:/Lab3CleanBuild/implementation/rs232_uart_1_wrapper.ngc 1190652569
+C:/Lab3CleanBuild/implementation/sysace_compactflash_wrapper.ngc 1190652588
+C:/Lab3CleanBuild/implementation/pushbuttons_5bit_wrapper.ngc 1190652604
+C:/Lab3CleanBuild/implementation/ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc 1190652800
+C:/Lab3CleanBuild/implementation/plb_bram_if_cntlr_1_wrapper.ngc 1190652675
+C:/Lab3CleanBuild/implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc 1190652688
+C:/Lab3CleanBuild/implementation/sysclk_inv_wrapper.ngc 1190652700
+C:/Lab3CleanBuild/implementation/clk90_inv_wrapper.ngc 1190652711
+C:/Lab3CleanBuild/implementation/ddr_clk90_inv_wrapper.ngc 1190652722
+C:/Lab3CleanBuild/implementation/dcm_0_wrapper.ngc 1190652733
+C:/Lab3CleanBuild/implementation/dcm_1_wrapper.ngc 1190652744
+C:/Lab3CleanBuild/implementation/vga_framebuffer_wrapper.ngc 1190652762
+C:/Lab3CleanBuild/implementation/dcr_v29_0_wrapper.ngc 1190652773
+C:/Lab3CleanBuild/implementation/opb2dcr_bridge_0_wrapper.ngc 1190652794
+OK

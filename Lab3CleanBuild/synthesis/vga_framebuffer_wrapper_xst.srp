@@ -1,0 +1,940 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "vga_framebuffer_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\Lab3CleanBuild\pcores\" "C:\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\EDK\hw\XilinxReferenceDesigns\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/vga_framebuffer_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : vga_framebuffer_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/dcr_if.v" in library plb_tft_cntlr_ref_v1_00_d
+Compiling verilog file "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/h_sync.v" in library plb_tft_cntlr_ref_v1_00_d
+Module <dcr_if> compiled
+Compiling verilog file "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/v_sync.v" in library plb_tft_cntlr_ref_v1_00_d
+Module <h_sync> compiled
+Compiling verilog file "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/rgb_bram.v" in library plb_tft_cntlr_ref_v1_00_d
+Module <v_sync> compiled
+Compiling verilog file "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/plb_if.v" in library plb_tft_cntlr_ref_v1_00_d
+Module <rgb_bram> compiled
+Compiling verilog file "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/tft_if.v" in library plb_tft_cntlr_ref_v1_00_d
+Module <plb_if> compiled
+Compiling verilog file "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/plb_tft_cntlr_ref.v" in library plb_tft_cntlr_ref_v1_00_d
+Module <tft_if> compiled
+Module <plb_tft_cntlr_ref> compiled
+Compiling verilog file "C:\Lab3CleanBuild\pcores\/../hdl/vga_framebuffer_wrapper.v" in library work
+Module <vga_framebuffer_wrapper> compiled
+No errors in compilation
+Analysis of file <"vga_framebuffer_wrapper_xst.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <vga_framebuffer_wrapper> in library <work>.
+
+Analyzing hierarchy for module <plb_tft_cntlr_ref> in library <plb_tft_cntlr_ref_v1_00_d> with parameters.
+	C_DCR_BASEADDR = "00000000000000000000001000000000"
+	C_DCR_HIGHADDR = "00000000000000000000001000000001"
+	C_DEFAULT_TFT_BASE_ADDR = "00000000000000000000000000000000"
+	C_DPS_INIT = "00000000000000000000000000000001"
+	C_ON_INIT = "00000000000000000000000000000001"
+	C_PIXCLK_IS_BUSCLK_DIVBY4 = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dcr_if> in library <plb_tft_cntlr_ref_v1_00_d> with parameters.
+	C_DCR_BASE_ADDR = "00000000000000000000001000000000"
+	C_DEFAULT_TFT_BASE_ADDR = "00000000000000000000000000000000"
+	C_DPS_INIT = "00000000000000000000000000000001"
+	C_ON_INIT = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <plb_if> in library <plb_tft_cntlr_ref_v1_00_d>.
+
+Analyzing hierarchy for module <rgb_bram> in library <plb_tft_cntlr_ref_v1_00_d>.
+
+Analyzing hierarchy for module <h_sync> in library <plb_tft_cntlr_ref_v1_00_d> with parameters.
+	BACK_PORCH = "00100"
+	FRONT_PORCH = "10000"
+	PIXEL = "01000"
+	PULSE = "00010"
+	SET_COUNTERS = "00001"
+
+Analyzing hierarchy for module <v_sync> in library <plb_tft_cntlr_ref_v1_00_d> with parameters.
+	BACK_PORCH = "00100"
+	FRONT_PORCH = "10000"
+	LINE = "01000"
+	PULSE = "00010"
+	SET_COUNTERS = "00001"
+
+Analyzing hierarchy for module <tft_if> in library <plb_tft_cntlr_ref_v1_00_d>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <vga_framebuffer_wrapper>.
+Module <vga_framebuffer_wrapper> is correct for synthesis.
+ 
+Analyzing module <plb_tft_cntlr_ref> in library <plb_tft_cntlr_ref_v1_00_d>.
+	C_DCR_BASEADDR = 32'b00000000000000000000001000000000
+	C_DCR_HIGHADDR = 32'b00000000000000000000001000000001
+	C_DEFAULT_TFT_BASE_ADDR = 32'b00000000000000000000000000000000
+	C_DPS_INIT = 32'b00000000000000000000000000000001
+	C_ON_INIT = 32'b00000000000000000000000000000001
+	C_PIXCLK_IS_BUSCLK_DIVBY4 = 32'b00000000000000000000000000000001
+Module <plb_tft_cntlr_ref> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <FD_TFT_RST1> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "INIT =  1" for instance <FD_TFT_RST2> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "INIT =  1" for instance <FD_TFT_RST3> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "INIT =  1" for instance <FD_TFT_RST4> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "INIT =  1" for instance <FD_TFT_RST> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "CLKDV_DIVIDE =  4.0000000000000000" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "CLKIN_PERIOD =  10.0000000000000000" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_pixclk.DCM_pixclk> in unit <plb_tft_cntlr_ref>.
+Analyzing module <dcr_if> in library <plb_tft_cntlr_ref_v1_00_d>.
+	C_DCR_BASE_ADDR = 32'b00000000000000000000001000000000
+	C_DEFAULT_TFT_BASE_ADDR = 32'b00000000000000000000000000000000
+	C_DPS_INIT = 32'b00000000000000000000000000000001
+	C_ON_INIT = 32'b00000000000000000000000000000001
+Module <dcr_if> is correct for synthesis.
+ 
+Analyzing module <plb_if> in library <plb_tft_cntlr_ref_v1_00_d>.
+Module <plb_if> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <FDRS_MN_REQUEST_DLY> in unit <plb_if>.
+Analyzing module <rgb_bram> in library <plb_tft_cntlr_ref_v1_00_d>.
+Module <rgb_bram> is correct for synthesis.
+ 
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for unit <rgb_bram>.
+    Set user-defined property "INIT_A =  00000" for unit <rgb_bram>.
+    Set user-defined property "INIT_B =  000000000" for unit <rgb_bram>.
+    Set user-defined property "SIM_COLLISION_CHECK =  ALL" for unit <rgb_bram>.
+    Set user-defined property "SRVAL_A =  00000" for unit <rgb_bram>.
+    Set user-defined property "SRVAL_B =  000000000" for unit <rgb_bram>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for unit <rgb_bram>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for unit <rgb_bram>.
+Analyzing module <h_sync> in library <plb_tft_cntlr_ref_v1_00_d>.
+	BACK_PORCH = 5'b00100
+	FRONT_PORCH = 5'b10000
+	PIXEL = 5'b01000
+	PULSE = 5'b00010
+	SET_COUNTERS = 5'b00001
+Module <h_sync> is correct for synthesis.
+ 
+    Set property "syn_encoding = onehot" for signal <HSYNC_cs>.
+Analyzing module <v_sync> in library <plb_tft_cntlr_ref_v1_00_d>.
+	BACK_PORCH = 5'b00100
+	FRONT_PORCH = 5'b10000
+	LINE = 5'b01000
+	PULSE = 5'b00010
+	SET_COUNTERS = 5'b00001
+Module <v_sync> is correct for synthesis.
+ 
+    Set property "syn_encoding = onehot" for signal <VSYNC_cs>.
+Analyzing module <tft_if> in library <plb_tft_cntlr_ref_v1_00_d>.
+Module <tft_if> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <FDRE_HSYNC> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FDRE_HSYNC> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FDRE_VSYNC> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FDRE_VSYNC> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FDRE_DE> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FDRE_DE> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <TFT_CLK_OFDDR> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_R0> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_R0> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_R1> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_R1> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_R2> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_R2> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_R3> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_R3> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_R4> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_R4> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_R5> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_R5> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_G0> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_G0> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_G1> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_G1> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_G2> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_G2> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_G3> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_G3> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_G4> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_G4> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_G5> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_G5> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_B0> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_B0> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_B1> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_B1> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_B2> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_B2> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_B3> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_B3> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_B4> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_B4> in unit <tft_if>.
+    Set user-defined property "SYN_USEIOFF =  1" for instance <FD_B5> in unit <tft_if>.
+    Set user-defined property "INIT =  0" for instance <FD_B5> in unit <tft_if>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dcr_if>.
+    Related source file is "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/dcr_if.v".
+    Found 1-bit register for signal <tft_dps_reg>.
+    Found 1-bit register for signal <DCR_Ack>.
+    Found 1-bit register for signal <tft_on_reg>.
+    Found 11-bit register for signal <tft_base_addr>.
+    Found 1-bit register for signal <dcr_read_access>.
+    Found 32-bit register for signal <read_data>.
+    Summary:
+	inferred  47 D-type flip-flop(s).
+Unit <dcr_if> synthesized.
+
+
+Synthesizing Unit <h_sync>.
+    Related source file is "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/h_sync.v".
+    Found finite state machine <FSM_0> for signal <HSYNC_cs>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00001                                          |
+    | Encoding           | one-hot                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <h_pix_cnt_tc>.
+    Found 1-bit register for signal <h_bp_cnt_tc>.
+    Found 1-bit register for signal <h_pix_cnt_tc2>.
+    Found 1-bit register for signal <vsync_rst>.
+    Found 1-bit register for signal <h_bp_cnt_tc2>.
+    Found 6-bit up counter for signal <h_bp_cnt>.
+    Found 4-bit up counter for signal <h_fp_cnt>.
+    Found 1-bit register for signal <h_fp_cnt_tc>.
+    Found 7-bit up counter for signal <h_p_cnt>.
+    Found 1-bit register for signal <h_p_cnt_tc>.
+    Found 11-bit up counter for signal <h_pix_cnt>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   4 Counter(s).
+	inferred   7 D-type flip-flop(s).
+Unit <h_sync> synthesized.
+
+
+Synthesizing Unit <v_sync>.
+    Related source file is "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/v_sync.v".
+    Found finite state machine <FSM_1> for signal <VSYNC_cs>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Clock enable       | clk_ce_pos (positive)                          |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00001                                          |
+    | Encoding           | one-hot                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <v_bp_cnt_tc>.
+    Found 1-bit register for signal <v_l_cnt_tc>.
+    Found 1-bit register for signal <clk_ce_neg>.
+    Found 1-bit register for signal <clk_ce_pos>.
+    Found 1-bit register for signal <clk_stb_d1>.
+    Found 5-bit up counter for signal <v_bp_cnt>.
+    Found 4-bit up counter for signal <v_fp_cnt>.
+    Found 1-bit register for signal <v_fp_cnt_tc>.
+    Found 9-bit up counter for signal <v_l_cnt>.
+    Found 2-bit up counter for signal <v_p_cnt>.
+    Found 1-bit register for signal <v_p_cnt_tc>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   4 Counter(s).
+	inferred   7 D-type flip-flop(s).
+Unit <v_sync> synthesized.
+
+
+Synthesizing Unit <plb_if>.
+    Related source file is "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/plb_if.v".
+WARNING:Xst:647 - Input <PLB_MnRdWdAddr<0>> is never used.
+WARNING:Xst:647 - Input <PLB_MnRdWdAddr<3>> is never used.
+    Found 64-bit register for signal <PLB_BRAM_data>.
+    Found 2-bit register for signal <PLB_BRAM_addr_lsb>.
+    Found 1-bit register for signal <PLB_BRAM_we>.
+    Found 4-bit register for signal <data_xfer_shreg>.
+    Found 1-bit register for signal <data_xfer_shreg1_d1>.
+    Found 1-bit register for signal <dummy_rd_ack>.
+    Found 9-bit up counter for signal <line_cnt>.
+    Found 9-bit register for signal <line_cnt_i>.
+    Found 1-bit register for signal <skip_line_d1>.
+    Found 1-bit register for signal <skip_plb_xfer>.
+    Found 1-bit register for signal <skip_plb_xfer_d1>.
+    Found 1-bit register for signal <skip_plb_xfer_d2>.
+    Found 1-bit register for signal <skip_plb_xfer_d3>.
+    Found 1-bit register for signal <skip_plb_xfer_d4>.
+    Found 11-bit register for signal <tft_base_addr_i>.
+    Found 7-bit up counter for signal <trans_cnt>.
+    Found 7-bit register for signal <trans_cnt_i>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred 106 D-type flip-flop(s).
+Unit <plb_if> synthesized.
+
+
+Synthesizing Unit <rgb_bram>.
+    Related source file is "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/rgb_bram.v".
+WARNING:Xst:647 - Input <PLB_BRAM_data<0:7>> is never used.
+WARNING:Xst:647 - Input <PLB_BRAM_data<14:15>> is never used.
+WARNING:Xst:647 - Input <PLB_BRAM_data<22:23>> is never used.
+WARNING:Xst:647 - Input <PLB_BRAM_data<30:39>> is never used.
+WARNING:Xst:647 - Input <PLB_BRAM_data<46:47>> is never used.
+WARNING:Xst:647 - Input <PLB_BRAM_data<54:55>> is never used.
+WARNING:Xst:647 - Input <PLB_BRAM_data<62:63>> is never used.
+WARNING:Xst:1780 - Signal <nc0> is never used or assigned.
+WARNING:Xst:1780 - Signal <nc1> is never used or assigned.
+WARNING:Xst:1780 - Signal <nc2> is never used or assigned.
+WARNING:Xst:1780 - Signal <nc3> is never used or assigned.
+WARNING:Xst:1780 - Signal <nc4> is never used or assigned.
+WARNING:Xst:1780 - Signal <nc5> is never used or assigned.
+    Found 1-bit register for signal <G0>.
+    Found 1-bit register for signal <G1>.
+    Found 1-bit register for signal <G2>.
+    Found 1-bit register for signal <G3>.
+    Found 1-bit register for signal <G4>.
+    Found 1-bit register for signal <G5>.
+    Found 1-bit register for signal <R0>.
+    Found 1-bit register for signal <R1>.
+    Found 1-bit register for signal <R2>.
+    Found 1-bit register for signal <R3>.
+    Found 1-bit register for signal <R4>.
+    Found 1-bit register for signal <R5>.
+    Found 1-bit register for signal <B0>.
+    Found 1-bit register for signal <B1>.
+    Found 1-bit register for signal <B2>.
+    Found 1-bit register for signal <B3>.
+    Found 1-bit register for signal <B4>.
+    Found 1-bit register for signal <B5>.
+    Found 10-bit up counter for signal <BRAM_TFT_addr>.
+    Found 7-bit up counter for signal <PLB_BRAM_addr>.
+    Found 1-bit register for signal <tc>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  19 D-type flip-flop(s).
+Unit <rgb_bram> synthesized.
+
+
+Synthesizing Unit <tft_if>.
+    Related source file is "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/tft_if.v".
+Unit <tft_if> synthesized.
+
+
+Synthesizing Unit <plb_tft_cntlr_ref>.
+    Related source file is "C:\Lab3CleanBuild\pcores\plb_tft_cntlr_ref_v1_00_d/hdl/verilog/plb_tft_cntlr_ref.v".
+WARNING:Xst:647 - Input <PLB_pendPri> is never used.
+WARNING:Xst:647 - Input <PLB_MnWrDAck> is never used.
+WARNING:Xst:647 - Input <PLB_Mnssize> is never used.
+WARNING:Xst:647 - Input <PLB_MnErr> is never used.
+WARNING:Xst:647 - Input <PLB_MnRearbitrate> is never used.
+WARNING:Xst:647 - Input <PLB_MnRdBTerm> is never used.
+WARNING:Xst:647 - Input <PLB_reqPri> is never used.
+WARNING:Xst:647 - Input <SYS_tftClk> is never used.
+WARNING:Xst:647 - Input <PLB_MnBusy> is never used.
+WARNING:Xst:647 - Input <PLB_MnWrBTerm> is never used.
+WARNING:Xst:647 - Input <PLB_pendReq> is never used.
+WARNING:Xst:646 - Signal <h_pix_cnt_tc2> is assigned but never used.
+WARNING:Xst:653 - Signal <DCM_pixclk.PSINCDEC> is used but never assigned. Tied to value 0.
+    Found 1-bit xor2 for signal <BRAM_TFT_oe$xor0000> created at line 299.
+    Found 1-bit xor2 for signal <BRAM_TFT_rd$xor0000> created at line 298.
+    Found 1-bit register for signal <get_line>.
+    Found 1-bit register for signal <get_line_start_d1>.
+    Found 1-bit register for signal <get_line_start_d2>.
+    Found 1-bit register for signal <get_line_start_d3>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <plb_tft_cntlr_ref> synthesized.
+
+
+Synthesizing Unit <vga_framebuffer_wrapper>.
+    Related source file is "C:\Lab3CleanBuild\pcores\/../hdl/vga_framebuffer_wrapper.v".
+Unit <vga_framebuffer_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 12
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 7-bit up counter                                      : 3
+ 9-bit up counter                                      : 2
+# Registers                                            : 58
+ 1-bit register                                        : 50
+ 11-bit register                                       : 2
+ 2-bit register                                        : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+ 64-bit register                                       : 1
+ 7-bit register                                        : 1
+ 9-bit register                                        : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Optimizing FSM <vga_framebuffer/VSYNC_U3/VSYNC_cs> on signal <VSYNC_cs[1:5]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00001 | 00001
+ 00010 | 00010
+ 00100 | 00100
+ 01000 | 01000
+ 10000 | 10000
+-------------------
+Optimizing FSM <vga_framebuffer/HSYNC_U2/HSYNC_cs> on signal <HSYNC_cs[1:5]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00001 | 00001
+ 00010 | 00010
+ 00100 | 00100
+ 01000 | 01000
+ 10000 | 10000
+-------------------
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Counters                                             : 12
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 7-bit up counter                                      : 3
+ 9-bit up counter                                      : 2
+# Registers                                            : 227
+ Flip-Flops                                            : 227
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch  <read_data_11> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_12> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_13> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_14> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_15> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_16> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_17> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_18> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_19> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_20> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_21> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_22> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_23> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_24> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_25> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_26> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_27> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_28> (without init value) has a constant value of 0 in block <dcr_if>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_29> (without init value) has a constant value of 0 in block <dcr_if>.
+
+Optimizing unit <vga_framebuffer_wrapper> ...
+
+Optimizing unit <dcr_if> ...
+
+Optimizing unit <h_sync> ...
+
+Optimizing unit <v_sync> ...
+
+Optimizing unit <plb_if> ...
+
+Optimizing unit <rgb_bram> ...
+
+Optimizing unit <tft_if> ...
+
+Optimizing unit <plb_tft_cntlr_ref> ...
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_63> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_62> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_55> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_54> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_47> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_46> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_39> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_38> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_37> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_36> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_35> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_34> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_33> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_32> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_31> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_30> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_23> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_22> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_15> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_14> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_7> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_6> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_5> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_4> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_3> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_2> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_1> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_0> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+WARNING:Xst:2677 - Node <vga_framebuffer/HSYNC_U2/h_pix_cnt_tc2> of sequential type is unconnected in block <vga_framebuffer_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 260
+ Flip-Flops                                            : 260
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/vga_framebuffer_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 313
+
+Cell Usage :
+# BELS                             : 327
+#      GND                         : 1
+#      INV                         : 27
+#      LUT1                        : 53
+#      LUT2                        : 52
+#      LUT3                        : 34
+#      LUT3_L                      : 1
+#      LUT4                        : 44
+#      LUT4_L                      : 3
+#      MUXCY                       : 53
+#      MUXF5                       : 5
+#      VCC                         : 1
+#      XORCY                       : 53
+# FlipFlops/Latches                : 261
+#      FD                          : 66
+#      FDE                         : 44
+#      FDR                         : 30
+#      FDRE                        : 109
+#      FDRS                        : 1
+#      FDRSE                       : 1
+#      FDS                         : 6
+#      FDSE                        : 3
+#      OFDDRRSE                    : 1
+# RAMS                             : 1
+#      RAMB16_S18_S36              : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# DCMs                             : 1
+#      DCM                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                     157  out of  13696     1%  
+ Number of Slice Flip Flops:           261  out of  27392     0%  
+ Number of 4 input LUTs:               214  out of  27392     0%  
+ Number of IOs:                        313
+ Number of bonded IOBs:                  1  out of    556     0%  
+ Number of BRAMs:                        1  out of    136     0%  
+ Number of GCLKs:                        1  out of     16     6%  
+ Number of DCMs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                          | Load  |
+-----------------------------------+------------------------------------------------+-------+
+SYS_plbClk                         | vga_framebuffer/DCM_pixclk.DCM_pixclk:CLKDV    | 130   |
+SYS_plbClk                         | NONE(vga_framebuffer/PLB_IF_U1/PLB_BRAM_data_8)| 106   |
+SYS_dcrClk                         | NONE(vga_framebuffer/DCR_IF_U6/tft_base_addr_9)| 28    |
+-----------------------------------+------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 4.367ns (Maximum Frequency: 228.972MHz)
+   Minimum input arrival time before clock: 3.035ns
+   Maximum output required time after clock: 2.962ns
+   Maximum combinational path delay: 0.373ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SYS_plbClk'
+  Clock period: 4.367ns (frequency: 228.972MHz)
+  Total number of paths / destination ports: 1821 / 494
+-------------------------------------------------------------------------
+Delay:               4.367ns (Levels of Logic = 4)
+  Source:            vga_framebuffer/PLB_IF_U1/trans_cnt_5 (FF)
+  Destination:       vga_framebuffer/PLB_IF_U1/line_cnt_8 (FF)
+  Source Clock:      SYS_plbClk rising
+  Destination Clock: SYS_plbClk rising
+
+  Data Path: vga_framebuffer/PLB_IF_U1/trans_cnt_5 to vga_framebuffer/PLB_IF_U1/line_cnt_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.370   0.549  vga_framebuffer/PLB_IF_U1/trans_cnt_5 (vga_framebuffer/PLB_IF_U1/trans_cnt_5)
+     LUT3:I0->O            1   0.275   0.349  vga_framebuffer/PLB_IF_U1/line_cnt_ce4 (vga_framebuffer/PLB_IF_U1/line_cnt_ce_map2)
+     LUT4:I2->O            3   0.275   0.435  vga_framebuffer/PLB_IF_U1/line_cnt_ce18 (vga_framebuffer/PLB_IF_U1/line_cnt_ce)
+     LUT4:I3->O           10   0.275   0.529  vga_framebuffer/PLB_IF_U1/line_cnt_or00011 (vga_framebuffer/PLB_IF_U1/line_cnt_or0001)
+     LUT3:I2->O            9   0.275   0.499  vga_framebuffer/PLB_IF_U1/line_cnt_or000036 (vga_framebuffer/PLB_IF_U1/line_cnt_or0000)
+     FDRE:R                    0.536          vga_framebuffer/PLB_IF_U1/line_cnt_8
+    ----------------------------------------
+    Total                      4.367ns (2.006ns logic, 2.361ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SYS_dcrClk'
+  Clock period: 1.845ns (frequency: 542.049MHz)
+  Total number of paths / destination ports: 39 / 39
+-------------------------------------------------------------------------
+Delay:               1.845ns (Levels of Logic = 1)
+  Source:            vga_framebuffer/DCR_IF_U6/DCR_Ack (FF)
+  Destination:       vga_framebuffer/DCR_IF_U6/read_data_31 (FF)
+  Source Clock:      SYS_dcrClk rising
+  Destination Clock: SYS_dcrClk rising
+
+  Data Path: vga_framebuffer/DCR_IF_U6/DCR_Ack to vga_framebuffer/DCR_IF_U6/read_data_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.370   0.415  vga_framebuffer/DCR_IF_U6/DCR_Ack (DCR_Ack)
+     LUT4:I2->O           13   0.275   0.522  vga_framebuffer/DCR_IF_U6/read_data_and00001 (vga_framebuffer/DCR_IF_U6/read_data_and0000)
+     FDE:CE                    0.263          vga_framebuffer/DCR_IF_U6/read_data_31
+    ----------------------------------------
+    Total                      1.845ns (0.908ns logic, 0.937ns route)
+                                       (49.2% logic, 50.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SYS_plbClk'
+  Total number of paths / destination ports: 94 / 88
+-------------------------------------------------------------------------
+Offset:              1.458ns (Levels of Logic = 1)
+  Source:            SYS_plbReset (PAD)
+  Destination:       vga_framebuffer/RGB_BRAM_U4/BRAM_TFT_addr_9 (FF)
+  Destination Clock: SYS_plbClk rising 0.3X
+
+  Data Path: SYS_plbReset to vga_framebuffer/RGB_BRAM_U4/BRAM_TFT_addr_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O           10   0.275   0.511  vga_framebuffer/RGB_BRAM_U4/BRAM_TFT_addr_or00001 (vga_framebuffer/RGB_BRAM_U4/BRAM_TFT_addr_or0000)
+     FDRE:R                    0.536          vga_framebuffer/RGB_BRAM_U4/BRAM_TFT_addr_9
+    ----------------------------------------
+    Total                      1.458ns (0.947ns logic, 0.511ns route)
+                                       (65.0% logic, 35.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SYS_dcrClk'
+  Total number of paths / destination ports: 333 / 69
+-------------------------------------------------------------------------
+Offset:              3.035ns (Levels of Logic = 4)
+  Source:            DCR_ABus<7> (PAD)
+  Destination:       vga_framebuffer/DCR_IF_U6/tft_base_addr_10 (FF)
+  Destination Clock: SYS_dcrClk rising
+
+  Data Path: DCR_ABus<7> to vga_framebuffer/DCR_IF_U6/tft_base_addr_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.275   0.000  vga_framebuffer/DCR_IF_U6/dcr_addr_hit271 (N323)
+     MUXF5:I0->O           2   0.303   0.476  vga_framebuffer/DCR_IF_U6/dcr_addr_hit27_f5 (vga_framebuffer/DCR_IF_U6/dcr_addr_hit_map14)
+     LUT2:I1->O            4   0.275   0.511  vga_framebuffer/DCR_IF_U6/dcr_addr_hit30 (vga_framebuffer/DCR_IF_U6/DCR_Ack_and0000_norst)
+     LUT4:I1->O           11   0.275   0.521  vga_framebuffer/DCR_IF_U6/tft_base_addr_and00001 (vga_framebuffer/DCR_IF_U6/tft_base_addr_and0000)
+     FDRE:CE                   0.263          vga_framebuffer/DCR_IF_U6/tft_base_addr_10
+    ----------------------------------------
+    Total                      3.035ns (1.527ns logic, 1.508ns route)
+                                       (50.3% logic, 49.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SYS_dcrClk'
+  Total number of paths / destination ports: 47 / 34
+-------------------------------------------------------------------------
+Offset:              1.452ns (Levels of Logic = 1)
+  Source:            vga_framebuffer/DCR_IF_U6/dcr_read_access (FF)
+  Destination:       DCR_DBusOut<0> (PAD)
+  Source Clock:      SYS_dcrClk rising
+
+  Data Path: vga_framebuffer/DCR_IF_U6/dcr_read_access to DCR_DBusOut<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             32   0.370   0.807  vga_framebuffer/DCR_IF_U6/dcr_read_access (vga_framebuffer/DCR_IF_U6/dcr_read_access)
+     LUT2:I0->O            0   0.275   0.000  vga_framebuffer/DCR_IF_U6/DCR_DBusOut<29>1 (DCR_DBusOut<29>)
+    ----------------------------------------
+    Total                      1.452ns (0.645ns logic, 0.807ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SYS_plbClk'
+  Total number of paths / destination ports: 50 / 50
+-------------------------------------------------------------------------
+Offset:              2.962ns (Levels of Logic = 0)
+  Source:            vga_framebuffer/TFT_IF_U5/TFT_CLK_OFDDR (UNKNOWN)
+  Destination:       TFT_LCD_CLK (PAD)
+  Source Clock:      SYS_plbClk rising 0.3X
+
+  Data Path: vga_framebuffer/TFT_IF_U5/TFT_CLK_OFDDR to TFT_LCD_CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     OFDDRRSE:C0->Q        0   2.962   0.000  vga_framebuffer/TFT_IF_U5/TFT_CLK_OFDDR (TFT_LCD_CLK)
+    ----------------------------------------
+    Total                      2.962ns (2.962ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Delay:               0.373ns (Levels of Logic = 1)
+  Source:            DCR_DBusIn<0> (PAD)
+  Destination:       DCR_DBusOut<0> (PAD)
+
+  Data Path: DCR_DBusIn<0> to DCR_DBusOut<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT3:I1->O            0   0.275   0.000  vga_framebuffer/DCR_IF_U6/DCR_DBusOut<0>1 (DCR_DBusOut<0>)
+    ----------------------------------------
+    Total                      0.373ns (0.373ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FDRE_HSYNC.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FDRE_VSYNC.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FDRE_DE.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_R0.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_R1.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_R2.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_R3.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_R4.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_R5.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_G0.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_G1.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_G2.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_G3.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_G4.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_G5.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_B0.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_B1.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_B2.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_B3.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_B4.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_B5.
+WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/TFT_CLK_OFDDR.
+CPU : 17.05 / 17.17 s | Elapsed : 17.00 / 17.00 s
+ 
+--> 
+
+Total memory usage is 199512 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   98 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

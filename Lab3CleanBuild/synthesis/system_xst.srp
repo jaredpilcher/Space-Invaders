@@ -1,0 +1,660 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+Verilog Include Directory          : {"C:\Lab3CleanBuild\pcores\" "C:\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\EDK\hw\XilinxReferenceDesigns\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 10000
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Lab3CleanBuild/hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system> in library <work> (architecture <STRUCTURE>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> in library <work> (Architecture <STRUCTURE>).
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2236: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2244: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2252: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2260: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2268: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2276: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2284: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2292: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2300: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2308: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2316: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2324: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2332: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2340: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2348: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2356: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2364: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2372: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2380: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2388: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2396: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2404: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2412: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2420: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2428: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2436: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2444: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2452: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2460: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2468: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2476: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2484: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2492: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2500: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2508: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2516: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2524: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2532: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2540: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2548: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2556: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2564: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2572: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2580: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2588: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2596: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2604: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2612: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2620: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2628: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2636: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2644: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2652: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2660: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2668: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2676: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2684: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2692: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2700: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2708: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2716: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2724: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2732: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2740: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2748: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2756: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2764: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2772: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2780: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2788: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2796: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2804: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2812: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2820: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2828: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2836: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2844: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2852: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2860: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2868: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2876: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2884: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2892: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2900: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2908: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2916: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2924: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2932: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2940: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2948: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2956: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2964: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Lab3CleanBuild/hdl/system.vhd" line 2972: Instantiating black box module <IOBUF>.
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <system>.
+    Related source file is "C:/Lab3CleanBuild/hdl/system.vhd".
+WARNING:Xst:646 - Signal <plb_PLB_SMErr<2>> is assigned but never used.
+WARNING:Xst:646 - Signal <pgassign1<0>> is assigned but never used.
+WARNING:Xst:646 - Signal <plb_PLB_SMBusy<2>> is assigned but never used.
+Unit <system> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../implementation/ppc405_0_wrapper.ngc>.
+Reading core <../implementation/ppc405_1_wrapper.ngc>.
+Reading core <../implementation/jtagppc_0_wrapper.ngc>.
+Reading core <../implementation/reset_block_wrapper.ngc>.
+Reading core <../implementation/plb_wrapper.ngc>.
+Reading core <../implementation/opb_wrapper.ngc>.
+Reading core <../implementation/plb2opb_wrapper.ngc>.
+Reading core <../implementation/rs232_uart_1_wrapper.ngc>.
+Reading core <../implementation/sysace_compactflash_wrapper.ngc>.
+Reading core <../implementation/pushbuttons_5bit_wrapper.ngc>.
+Reading core <../implementation/ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc>.
+Reading core <../implementation/plb_bram_if_cntlr_1_wrapper.ngc>.
+Reading core <../implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc>.
+Reading core <../implementation/sysclk_inv_wrapper.ngc>.
+Reading core <../implementation/clk90_inv_wrapper.ngc>.
+Reading core <../implementation/ddr_clk90_inv_wrapper.ngc>.
+Reading core <../implementation/dcm_0_wrapper.ngc>.
+Reading core <../implementation/dcm_1_wrapper.ngc>.
+Reading core <../implementation/vga_framebuffer_wrapper.ngc>.
+Reading core <../implementation/dcr_v29_0_wrapper.ngc>.
+Reading core <../implementation/opb2dcr_bridge_0_wrapper.ngc>.
+Loading core <ppc405_0_wrapper> for timing and area information for instance <ppc405_0>.
+Loading core <ppc405_1_wrapper> for timing and area information for instance <ppc405_1>.
+Loading core <jtagppc_0_wrapper> for timing and area information for instance <jtagppc_0>.
+Loading core <reset_block_wrapper> for timing and area information for instance <reset_block>.
+Loading core <plb_wrapper> for timing and area information for instance <plb>.
+Loading core <opb_wrapper> for timing and area information for instance <opb>.
+Loading core <plb2opb_wrapper> for timing and area information for instance <plb2opb>.
+Loading core <rs232_uart_1_wrapper> for timing and area information for instance <rs232_uart_1>.
+Loading core <sysace_compactflash_wrapper> for timing and area information for instance <sysace_compactflash>.
+Loading core <pushbuttons_5bit_wrapper> for timing and area information for instance <pushbuttons_5bit>.
+Loading core <ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper> for timing and area information for instance <ddr_256mb_32mx64_rank1_row13_col10_cl2_5>.
+Loading core <plb_bram_if_cntlr_1_wrapper> for timing and area information for instance <plb_bram_if_cntlr_1>.
+Loading core <plb_bram_if_cntlr_1_bram_wrapper> for timing and area information for instance <plb_bram_if_cntlr_1_bram>.
+Loading core <sysclk_inv_wrapper> for timing and area information for instance <sysclk_inv>.
+Loading core <clk90_inv_wrapper> for timing and area information for instance <clk90_inv>.
+Loading core <ddr_clk90_inv_wrapper> for timing and area information for instance <ddr_clk90_inv>.
+Loading core <dcm_0_wrapper> for timing and area information for instance <dcm_0>.
+Loading core <dcm_1_wrapper> for timing and area information for instance <dcm_1>.
+Loading core <vga_framebuffer_wrapper> for timing and area information for instance <vga_framebuffer>.
+Loading core <dcr_v29_0_wrapper> for timing and area information for instance <dcr_v29_0>.
+Loading core <opb2dcr_bridge_0_wrapper> for timing and area information for instance <opb2dcr_bridge_0>.
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1> 
+INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/OE_NOPIPE_GEN.DQ_OE_REG_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 8 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_OE_REG_I>
+   <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_OE_REG_I> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following FF/Latch : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end_1> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_RST_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_RST_I>
+   <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_RST_I> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_SETRST_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_SETRST_I>
+   <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_SETRST_I> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[7].WR_DQS_EN_REG> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[6].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[5].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[4].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[3].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[2].WR_DQS_EN_REG>
+   <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[1].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[0].WR_DQS_EN_REG> 
+INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1> 
+INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/OE_NOPIPE_GEN.DQ_OE_REG_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 8 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_OE_REG_I>
+   <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_OE_REG_I> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following FF/Latch : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end_1> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_RST_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_RST_I>
+   <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_RST_I> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_SETRST_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_SETRST_I>
+   <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_SETRST_I> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[7].WR_DQS_EN_REG> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[6].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[5].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[4].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[3].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[2].WR_DQS_EN_REG>
+   <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[1].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[0].WR_DQS_EN_REG> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 174
+
+Cell Usage :
+# BELS                             : 3531
+#      BUF                         : 1
+#      GND                         : 24
+#      INV                         : 99
+#      LUT1                        : 85
+#      LUT2                        : 379
+#      LUT2_D                      : 17
+#      LUT2_L                      : 2
+#      LUT3                        : 477
+#      LUT3_D                      : 17
+#      LUT3_L                      : 15
+#      LUT4                        : 1231
+#      LUT4_D                      : 38
+#      LUT4_L                      : 50
+#      MULT_AND                    : 28
+#      MUXCY                       : 620
+#      MUXCY_D                     : 16
+#      MUXCY_L                     : 54
+#      MUXF5                       : 58
+#      MUXF6                       : 1
+#      VCC                         : 23
+#      XORCY                       : 296
+# FlipFlops/Latches                : 2897
+#      FD                          : 217
+#      FD_1                        : 5
+#      FDC                         : 72
+#      FDCE                        : 325
+#      FDCPE                       : 4
+#      FDDRRSE                     : 24
+#      FDE                         : 185
+#      FDP                         : 32
+#      FDPE                        : 91
+#      FDR                         : 837
+#      FDR_1                       : 24
+#      FDRE                        : 814
+#      FDRS                        : 72
+#      FDRS_1                      : 1
+#      FDRSE                       : 34
+#      FDS                         : 103
+#      FDS_1                       : 33
+#      FDSE                        : 23
+#      OFDDRRSE                    : 1
+# RAMS                             : 239
+#      RAM16X1D                    : 174
+#      RAMB16_S18_S36              : 1
+#      RAMB16_S1_S1                : 64
+# Shift Registers                  : 64
+#      SRL16                       : 45
+#      SRL16E                      : 19
+# Clock Buffers                    : 6
+#      BUFG                        : 5
+#      BUFGP                       : 1
+# IO Buffers                       : 172
+#      IBUF                        : 3
+#      IBUFG                       : 2
+#      IOBUF                       : 93
+#      OBUF                        : 74
+# DCMs                             : 3
+#      DCM                         : 3
+# Others                           : 3
+#      JTAGPPC                     : 1
+#      PPC405                      : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                    2526  out of  13696    18%  
+ Number of Slice Flip Flops:          2524  out of  27392     9%  
+ Number of 4 input LUTs:              2822  out of  27392    10%  
+    Number used as logic:             2410
+    Number used as Shift registers:     64
+    Number used as RAMs:               348
+ Number of IOs:                        174
+ Number of bonded IOBs:                173  out of    556    31%  
+    IOB Flip Flops:                    373
+ Number of BRAMs:                       65  out of    136    47%  
+ Number of GCLKs:                        6  out of     16    37%  
+ Number of PPC405s:                      2  out of      2   100%  
+ Number of DCMs:                         3  out of      8    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                                          | Clock buffer(FF name)                                                                                                                                                                          | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK0                                                                                                                                                               | 2535  |
+fpga_0_net_gnd_pin_OBUF                                                                                                                                                               | NONE(plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s1_s1_7)                                                                                                                         | 65    |
+fpga_0_SysACE_CompactFlash_SysACE_CLK_pin                                                                                                                                             | BUFGP                                                                                                                                                                                          | 92    |
+sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK90                                                                                                                                                              | 72    |
+fpga_0_DDR_CLK_FB                                                                                                                                                                     | dcm_1/Using_Virtex.DCM_INST:CLK90                                                                                                                                                              | 378   |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU133)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/BU133)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/BU133)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU133)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/BU133)| 2     |
+fpga_0_DDR_CLK_FB                                                                                                                                                                     | IBUFG                                                                                                                                                                                          | 4     |
+sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK0+vga_framebuffer/DCM_pixclk.DCM_pixclk:CLKDV                                                                                                                   | 130   |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                                                                                   | Buffer(FF name)                                                                                                                                                                                | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst:Q)                                                                                         | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU107)| 240   |
+plb2opb/plb2opb/PLB_abort_regd_clear(plb2opb/plb2opb/I_PLB_abort_regd_clear:O)                                                                                                                                                                                                                                                                                                   | NONE(plb2opb/plb2opb/I_PLB_abort_Reg)                                                                                                                                                          | 1     |
+plb2opb/BGO_dcrDBus<31>(plb2opb/XST_GND:G)                                                                                                                                                                                                                                                                                                                                       | NONE(plb2opb/plb2opb/I_PLB_abort_Reg)                                                                                                                                                          | 4     |
+rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO:Q)                                                                                                                                                                                                                                                       | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_RX_I/SRL_FIFO_I/data_Exists_I)                                                                                                 | 1     |
+plb2opb/plb2opb/PLBside_reset_OPB_timeout_onRd(plb2opb/plb2opb/I_OPB_timeout_side_Reg_CLR:O)                                                                                                                                                                                                                                                                                     | NONE(plb2opb/plb2opb/I_OPB_timeout_Reg)                                                                                                                                                        | 1     |
+plb2opb/plb2opb/PLBside_reset_OPB_retry_onRd(plb2opb/plb2opb/I_B_side_Reg_CLR:O)                                                                                                                                                                                                                                                                                                 | NONE(plb2opb/plb2opb/I_A_side_Reg)                                                                                                                                                             | 1     |
+fpga_0_net_gnd_pin_OBUF(XST_GND:G)                                                                                                                                                                                                                                                                                                                                               | NONE(dcm_0/dcm_0/rsti)                                                                                                                                                                         | 4     |
+plb2opb/plb2opb/OPBside_reset_Read_inprog_negedge_regd(plb2opb/plb2opb/I_OPBside_reset_Read_inprog_negedge_regd:O)                                                                                                                                                                                                                                                               | NONE(plb2opb/plb2opb/I_Read_inprog_negedge_Reg)                                                                                                                                                | 1     |
+rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO:Q)                                                                                                                                                                                                                                                       | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/SRL_FIFO_I/data_Exists_I)                                                                                                 | 1     |
+opb/OPB_Rst(opb/opb/POR_FF_I:Q)                                                                                                                                                                                                                                                                                                                                                  | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/uart_CS_3)                                                                                                                                  | 110   |
+sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/done3(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/DONE_REG3:Q)                                                                                                                                                                                                       | NONE(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/RDCE_REG2)                                                                                                    | 6     |
+plb/PLB_Rst(plb/plb/POR_FF2_I:Q)                                                                                                                                                                                                                                                                                                                                                 | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR_REGS_GEN[39].RDDATA_HIREG)      | 130   |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/DDR_DQ_ECC_t<6>(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/XST_GND:G)                                                                                                                                                                                                                                                                     | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DQS_REG_GEN[5].RDDQS_REG)           | 8     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU133)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/BU133)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/BU133)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU133)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/BU133)| 2     |
+dcm_1/dcm_1/reset(dcm_1/dcm_1/reset1_INV_0:O)                                                                                                                                                                                                                                                                                                                                    | NONE(dcm_1/dcm_1/rst_delay_0)                                                                                                                                                                  | 4     |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 7.628ns (Maximum Frequency: 131.095MHz)
+   Minimum input arrival time before clock: 1.746ns
+   Maximum output required time after clock: 3.293ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk_pin'
+  Clock period: 7.628ns (frequency: 131.095MHz)
+  Total number of paths / destination ports: 56072 / 7767
+-------------------------------------------------------------------------
+Delay:               7.628ns (Levels of Logic = 10)
+  Source:            plb/plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0 (FF)
+  Destination:       plb2opb/plb2opb/PLB_IF_I/wrBTerm_if_PAValid (FF)
+  Source Clock:      sys_clk_pin rising
+  Destination Clock: sys_clk_pin rising
+
+  Data Path: plb/plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0 to plb2opb/plb2opb/PLB_IF_I/wrBTerm_if_PAValid
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            64   0.370   0.853  plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0 (plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i<0>)
+     LUT4:I0->O            1   0.275   0.000  plb/I_PLB_ADDRPATH/I_PLBADDR_MUX/lutout_50_not00001 (plb/I_PLB_ADDRPATH/I_PLBADDR_MUX/lutout<50>)
+     MUXCY:S->O            1   0.334   0.000  plb/I_PLB_ADDRPATH/I_PLBADDR_MUX/ODD_GEN.DATA_WIDTH_GEN[25].CYMUX_FIRST (plb/I_PLB_ADDRPATH/I_PLBADDR_MUX/cyout<50>)
+     MUXCY:CI->O           4   0.600   0.549  plb/I_PLB_ADDRPATH/I_PLBADDR_MUX/ODD_GEN.DATA_WIDTH_GEN[25].ODD_BUS_GEN[1].CARRY_MUX (PLB_ABus<25>)
+     end scope: 'plb'
+     begin scope: 'plb2opb'
+     LUT4:I0->O            1   0.275   0.370  plb2opb/PLB_IF_I/at_1k_bndry_mux00032_SW0 (N35)
+     LUT4:I3->O            2   0.275   0.514  plb2opb/PLB_IF_I/at_1k_bndry_mux00032 (plb2opb/PLB_IF_I/N27)
+     LUT4:I0->O            1   0.275   0.467  plb2opb/PLB_IF_I/wrBTerm_if_PAValid_rst_or000019 (plb2opb/PLB_IF_I/wrBTerm_if_PAValid_rst_or0000_map9)
+     LUT3:I0->O            1   0.275   0.350  plb2opb/PLB_IF_I/wrBTerm_if_PAValid_rst_or000021 (plb2opb/PLB_IF_I/wrBTerm_if_PAValid_rst_or0000_map10)
+     LUT4:I2->O            1   0.275   0.429  plb2opb/PLB_IF_I/wrBTerm_if_PAValid_rst_or000078 (plb2opb/PLB_IF_I/wrBTerm_if_PAValid_rst_or0000_map24)
+     LUT4:I1->O            1   0.275   0.331  plb2opb/PLB_IF_I/wrBTerm_if_PAValid_rst_or0000108 (plb2opb/PLB_IF_I/wrBTerm_if_PAValid_rst)
+     FDRS:R                    0.536          plb2opb/PLB_IF_I/wrBTerm_if_PAValid
+    ----------------------------------------
+    Total                      7.628ns (3.765ns logic, 3.864ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fpga_0_SysACE_CompactFlash_SysACE_CLK_pin'
+  Clock period: 2.458ns (frequency: 406.909MHz)
+  Total number of paths / destination ports: 197 / 67
+-------------------------------------------------------------------------
+Delay:               2.458ns (Levels of Logic = 3)
+  Source:            sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd1 (FF)
+  Destination:       sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd3 (FF)
+  Source Clock:      fpga_0_SysACE_CompactFlash_SysACE_CLK_pin rising
+  Destination Clock: fpga_0_SysACE_CompactFlash_SysACE_CLK_pin rising
+
+  Data Path: sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd1 to sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             12   0.370   0.657  sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd1 (sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd1)
+     LUT3:I0->O            1   0.275   0.000  sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd3-In_SW01 (N89)
+     MUXF5:I1->O           1   0.303   0.369  sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd3-In_SW0_f5 (N71)
+     LUT4:I3->O            1   0.275   0.000  sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd3-In (sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd3-In)
+     FDC:D                     0.208          sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/current_State_FFd3
+    ----------------------------------------
+    Total                      2.458ns (1.431ns logic, 1.027ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fpga_0_DDR_CLK_FB'
+  Clock period: 2.916ns (frequency: 342.883MHz)
+  Total number of paths / destination ports: 1579 / 811
+-------------------------------------------------------------------------
+Delay:               2.916ns (Levels of Logic = 6)
+  Source:            ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU197 (FF)
+  Destination:       ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU252 (FF)
+  Source Clock:      fpga_0_DDR_CLK_FB rising +150
+  Destination Clock: fpga_0_DDR_CLK_FB rising +150
+
+  Data Path: ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU197 to ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU252
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.370   0.533  BU197 (N500)
+     LUT4:I0->O            1   0.275   0.000  BU238 (N1485)
+     MUXCY:S->O            1   0.334   0.000  BU239 (N1489)
+     MUXCY:CI->O           1   0.036   0.000  BU242 (N1488)
+     MUXCY:CI->O           1   0.036   0.000  BU245 (N1487)
+     MUXCY_D:CI->LO        0   0.416   0.000  BU248 (N1486)
+     XORCY:CI->O           1   0.708   0.000  BU251 (N1492)
+     FDPE:D                    0.208          BU252
+    ----------------------------------------
+    Total                      2.916ns (2.383ns logic, 0.533ns route)
+                                       (81.7% logic, 18.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_pin'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              1.746ns (Levels of Logic = 2)
+  Source:            sys_rst_pin (PAD)
+  Destination:       reset_block/reset_block/EXT_LPF/exr_d1 (FF)
+  Destination Clock: sys_clk_pin rising
+
+  Data Path: sys_rst_pin to reset_block/reset_block/EXT_LPF/exr_d1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.878   0.331  sys_rst_pin_IBUF (sys_rst_pin_IBUF)
+     begin scope: 'reset_block'
+     FDR:R                     0.536          reset_block/EXT_LPF/exr_d1
+    ----------------------------------------
+    Total                      1.746ns (1.414ns logic, 0.331ns route)
+                                       (81.0% logic, 19.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fpga_0_SysACE_CompactFlash_SysACE_CLK_pin'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              1.418ns (Levels of Logic = 2)
+  Source:            fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<8> (PAD)
+  Destination:       sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/MEM_DQ_I_GEN[15].MEM_DQ_I_1 (FF)
+  Destination Clock: fpga_0_SysACE_CompactFlash_SysACE_CLK_pin rising
+
+  Data Path: fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<8> to sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/MEM_DQ_I_GEN[15].MEM_DQ_I_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   0.878   0.331  iobuf_7 (fpga_0_SysACE_CompactFlash_SysACE_MPD_I<8>)
+     begin scope: 'sysace_compactflash'
+     FDCE:D                    0.208          sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/MEM_DQ_I_GEN[15].MEM_DQ_I_1
+    ----------------------------------------
+    Total                      1.418ns (1.086ns logic, 0.331ns route)
+                                       (76.6% logic, 23.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fpga_0_DDR_CLK_FB'
+  Total number of paths / destination ports: 136 / 136
+-------------------------------------------------------------------------
+Offset:              1.464ns (Levels of Logic = 2)
+  Source:            fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ_pin<63> (PAD)
+  Destination:       ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR_REGS_GEN[63].RDDATA_LOREG (FF)
+  Destination Clock: fpga_0_DDR_CLK_FB falling +150
+
+  Data Path: fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ_pin<63> to ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR_REGS_GEN[63].RDDATA_LOREG
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   0.878   0.378  iobuf_92 (fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ_I<63>)
+     begin scope: 'ddr_256mb_32mx64_rank1_row13_col10_cl2_5'
+     FDCE:D                    0.208          ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR_REGS_GEN[63].RDDATA_LOREG
+    ----------------------------------------
+    Total                      1.464ns (1.086ns logic, 0.378ns route)
+                                       (74.2% logic, 25.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk_pin'
+  Total number of paths / destination ports: 201 / 129
+-------------------------------------------------------------------------
+Offset:              3.293ns (Levels of Logic = 2)
+  Source:            vga_framebuffer/vga_framebuffer/TFT_IF_U5/FDRE_VSYNC (FF)
+  Destination:       fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC_pin (PAD)
+  Source Clock:      sys_clk_pin rising 0.3X
+
+  Data Path: vga_framebuffer/vga_framebuffer/TFT_IF_U5/FDRE_VSYNC to fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC_pin
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.370   0.332  vga_framebuffer/TFT_IF_U5/FDRE_VSYNC (TFT_LCD_VSYNC)
+     end scope: 'vga_framebuffer'
+     OBUF:I->O                 2.592          fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC_pin_OBUF (fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC_pin)
+    ----------------------------------------
+    Total                      3.293ns (2.962ns logic, 0.332ns route)
+                                       (89.9% logic, 10.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_SysACE_CompactFlash_SysACE_CLK_pin'
+  Total number of paths / destination ports: 42 / 26
+-------------------------------------------------------------------------
+Offset:              3.293ns (Levels of Logic = 2)
+  Source:            sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/SYSACE_CEN_REG (FF)
+  Destination:       fpga_0_SysACE_CompactFlash_SysACE_CEN_pin (PAD)
+  Source Clock:      fpga_0_SysACE_CompactFlash_SysACE_CLK_pin rising
+
+  Data Path: sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/SYSACE_CEN_REG to fpga_0_SysACE_CompactFlash_SysACE_CEN_pin
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.370   0.332  sysace_compactflash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/SYSACE_CEN_REG (SysACE_CEN)
+     end scope: 'sysace_compactflash'
+     OBUF:I->O                 2.592          fpga_0_SysACE_CompactFlash_SysACE_CEN_pin_OBUF (fpga_0_SysACE_CompactFlash_SysACE_CEN_pin)
+    ----------------------------------------
+    Total                      3.293ns (2.962ns logic, 0.332ns route)
+                                       (89.9% logic, 10.1% route)
+
+=========================================================================
+CPU : 64.70 / 64.90 s | Elapsed : 64.00 / 65.00 s
+ 
+--> 
+
+Total memory usage is 226264 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   96 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+

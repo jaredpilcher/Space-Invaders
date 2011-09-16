@@ -1,0 +1,355 @@
+Release 9.1.02i - platgen EDK_J_SP2.4
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc2vp30ff896-7 -lang vhdl system.mhs 
+
+Parse system.mhs ...
+
+Read MPD definitions ...
+WARNING:MDT - IPNAME:opb2dcr_bridge INSTANCE:opb2dcr_bridge_0 -
+   C:\Lab3CleanBuild\system.mhs line 337 - deprecated core for architecture
+   'virtex2p'!
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_sysace_v1_00_c/data/opb_sysace_v2_1_0.
+tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_ddr_v2_00_a/data/plb_ddr_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_module_v2_1_0.
+tcl ...
+
+Overriding IP level properties ...
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2_1_0.mpd
+   line 45 - ppc405_0 (ppc405) tcl is overriding PARAMETER C_ISOCM_DCR_HIGHADDR
+   value to 0b0000010011
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2_1_0.mpd
+   line 47 - ppc405_0 (ppc405) tcl is overriding PARAMETER C_DSOCM_DCR_HIGHADDR
+   value to 0b0000100011
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2_1_0.mpd
+   line 45 - ppc405_1 (ppc405) tcl is overriding PARAMETER C_ISOCM_DCR_HIGHADDR
+   value to 0b0000010011
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2_1_0.mpd
+   line 47 - ppc405_1 (ppc405) tcl is overriding PARAMETER C_DSOCM_DCR_HIGHADDR
+   value to 0b0000100011
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntl
+   r_v2_1_0.mpd line 35 - jtagppc_0 (jtagppc_cntlr) tool is overriding PARAMETER
+   C_DEVICE value to 2vp30
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.m
+   pd line 40 - PushButtons_5Bit (opb_gpio) tool is overriding PARAMETER
+   C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 41 - plb_bram_if_cntlr_1_bram (bram_block) tool is overriding
+   PARAMETER C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_module_v2_1
+   _0.mpd line 59 - dcm_0 (dcm_module) tool is overriding PARAMETER C_FAMILY
+   value to virtex2p
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_module_v2_1
+   _0.mpd line 59 - dcm_1 (dcm_module) tool is overriding PARAMETER C_FAMILY
+   value to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_if_cntlr_v
+2_1_0.tcl ...
+WARNING:MDT - plb2opb_bridge (plb2opb) - C:\Lab3CleanBuild\system.mhs line 135 -
+   ADDRESS specified by PARAMETER C_RNG1_BASEADDR is ignored
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0b1000000000-0b1000000001)
+VGA_FrameBuffer	plb->plb2opb->opb->opb2dcr_bridge_0->dcr_v29_0
+  (0000000000-0x0fffffff) DDR_256MB_32MX64_rank1_row13_col10_cl2_5	plb
+  (0x40000000-0x4000ffff) PushButtons_5Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+  (0b0000010000-0b0000010011) ppc405_1	
+  (0b0000100000-0b0000100011) ppc405_1	
+
+Check platform address map ...
+
+Overriding system level properties ...
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 41 - plb (plb_v34) tool is overriding PARAMETER C_PLB_NUM_MASTERS value
+   to 3
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 42 - plb (plb_v34) tool is overriding PARAMETER C_PLB_NUM_SLAVES value
+   to 3
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 43 - plb (plb_v34) tool is overriding PARAMETER C_PLB_MID_WIDTH value to
+   2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 44 - plb (plb_v34) tool is overriding PARAMETER C_PLB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 45 - plb (plb_v34) tool is overriding PARAMETER C_PLB_DWIDTH value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 36 - opb (opb_v20) tool is overriding PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 37 - opb (opb_v20) tool is overriding PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 38 - opb (opb_v20) tool is overriding PARAMETER C_NUM_MASTERS value to 1
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 39 - opb (opb_v20) tool is overriding PARAMETER C_NUM_SLAVES value to 4
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 48 - plb2opb (plb2opb_bridge) tool is overriding
+   PARAMETER C_PLB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 49 - plb2opb (plb2opb_bridge) tool is overriding
+   PARAMETER C_PLB_DWIDTH value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 50 - plb2opb (plb2opb_bridge) tool is overriding
+   PARAMETER C_PLB_NUM_MASTERS value to 3
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 51 - plb2opb (plb2opb_bridge) tool is overriding
+   PARAMETER C_PLB_MID_WIDTH value to 2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 52 - plb2opb (plb2opb_bridge) tool is overriding
+   PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 53 - plb2opb (plb2opb_bridge) tool is overriding
+   PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\data\opb_uartlite_
+   v2_1_0.mpd line 37 - RS232_Uart_1 (opb_uartlite) tool is overriding PARAMETER
+   C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\data\opb_uartlite_
+   v2_1_0.mpd line 38 - RS232_Uart_1 (opb_uartlite) tool is overriding PARAMETER
+   C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_sysace_v1_00_c\data\opb_sysace_v2_1
+   _0.mpd line 39 - SysACE_CompactFlash (opb_sysace) tool is overriding
+   PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_sysace_v1_00_c\data\opb_sysace_v2_1
+   _0.mpd line 40 - SysACE_CompactFlash (opb_sysace) tool is overriding
+   PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.m
+   pd line 38 - PushButtons_5Bit (opb_gpio) tool is overriding PARAMETER
+   C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.m
+   pd line 39 - PushButtons_5Bit (opb_gpio) tool is overriding PARAMETER
+   C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_v2_1_0.mpd
+   line 78 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool is
+   overriding PARAMETER C_PLB_NUM_MASTERS value to 3
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_v2_1_0.mpd
+   line 79 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool is
+   overriding PARAMETER C_PLB_MID_WIDTH value to 2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_v2_1_0.mpd
+   line 80 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool is
+   overriding PARAMETER C_PLB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_v2_1_0.mpd
+   line 81 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool is
+   overriding PARAMETER C_PLB_DWIDTH value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 42 - plb_bram_if_cntlr_1 (plb_bram_if_cntlr) tool
+   is overriding PARAMETER c_num_masters value to 3
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 46 - plb_bram_if_cntlr_1 (plb_bram_if_cntlr) tool
+   is overriding PARAMETER c_plb_dwidth value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 47 - plb_bram_if_cntlr_1 (plb_bram_if_cntlr) tool
+   is overriding PARAMETER c_plb_awidth value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 49 - plb_bram_if_cntlr_1 (plb_bram_if_cntlr) tool
+   is overriding PARAMETER c_plb_mid_width value to 2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 37 - plb_bram_if_cntlr_1_bram (bram_block) tool is overriding
+   PARAMETER C_MEMSIZE value to 0x20000
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 38 - plb_bram_if_cntlr_1_bram (bram_block) tool is overriding
+   PARAMETER C_PORT_DWIDTH value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 39 - plb_bram_if_cntlr_1_bram (bram_block) tool is overriding
+   PARAMETER C_PORT_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 40 - plb_bram_if_cntlr_1_bram (bram_block) tool is overriding
+   PARAMETER C_NUM_WE value to 8
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a\data\dcr_v29_v2_1_0.mpd
+   line 39 - dcr_v29_0 (dcr_v29) tool is overriding PARAMETER C_DCR_AWIDTH value
+   to 10
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a\data\dcr_v29_v2_1_0.mpd
+   line 40 - dcr_v29_0 (dcr_v29) tool is overriding PARAMETER C_DCR_DWIDTH value
+   to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb2dcr_bridge_v1_00_a\data\opb2dcr_bri
+   dge_v2_1_0.mpd line 36 - opb2dcr_bridge_0 (opb2dcr_bridge) tool is overriding
+   PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb2dcr_bridge_v1_00_a\data\opb2dcr_bri
+   dge_v2_1_0.mpd line 37 - opb2dcr_bridge_0 (opb2dcr_bridge) tool is overriding
+   PARAMETER C_OPB_DWIDTH value to 32
+
+Running system level Update ...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl ...
+
+Check platform configuration ...
+IPNAME:plb_v34 INSTANCE:plb - C:\Lab3CleanBuild\system.mhs line 117 - 3
+master(s) : 3 slave(s)
+IPNAME:opb_v20 INSTANCE:opb - C:\Lab3CleanBuild\system.mhs line 127 - 1
+master(s) : 4 slave(s)
+IPNAME:dcr_v29 INSTANCE:dcr_v29_0 - C:\Lab3CleanBuild\system.mhs line 331 - 1
+master(s) : 1 slave(s)
+
+Check port drivers...
+
+Performing Clock DRCs...
+
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:plb_bram_if_cntlr_1_bram -
+C:\Lab3CleanBuild\system.mhs line 243 - elaborating IP
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 12.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 1.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+INFO:MDT - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
+IPNAME:ppc405_0_wrapper INSTANCE:ppc405_0 - C:\Lab3CleanBuild\system.mhs line 72
+- Running XST synthesis
+IPNAME:ppc405_1_wrapper INSTANCE:ppc405_1 - C:\Lab3CleanBuild\system.mhs line 88
+- Running XST synthesis
+IPNAME:jtagppc_0_wrapper INSTANCE:jtagppc_0 - C:\Lab3CleanBuild\system.mhs line
+94 - Running XST synthesis
+IPNAME:reset_block_wrapper INSTANCE:reset_block - C:\Lab3CleanBuild\system.mhs
+line 101 - Running XST synthesis
+IPNAME:plb_wrapper INSTANCE:plb - C:\Lab3CleanBuild\system.mhs line 117 -
+Running XST synthesis
+IPNAME:opb_wrapper INSTANCE:opb - C:\Lab3CleanBuild\system.mhs line 127 -
+Running XST synthesis
+IPNAME:plb2opb_wrapper INSTANCE:plb2opb - C:\Lab3CleanBuild\system.mhs line 135
+- Running XST synthesis
+IPNAME:rs232_uart_1_wrapper INSTANCE:rs232_uart_1 - C:\Lab3CleanBuild\system.mhs
+line 148 - Running XST synthesis
+IPNAME:sysace_compactflash_wrapper INSTANCE:sysace_compactflash -
+C:\Lab3CleanBuild\system.mhs line 163 - Running XST synthesis
+IPNAME:pushbuttons_5bit_wrapper INSTANCE:pushbuttons_5bit -
+C:\Lab3CleanBuild\system.mhs line 179 - Running XST synthesis
+IPNAME:ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper
+INSTANCE:ddr_256mb_32mx64_rank1_row13_col10_cl2_5 - C:\Lab3CleanBuild\system.mhs
+line 192 - Running XST synthesis
+IPNAME:plb_bram_if_cntlr_1_wrapper INSTANCE:plb_bram_if_cntlr_1 -
+C:\Lab3CleanBuild\system.mhs line 233 - Running XST synthesis
+IPNAME:plb_bram_if_cntlr_1_bram_wrapper INSTANCE:plb_bram_if_cntlr_1_bram -
+C:\Lab3CleanBuild\system.mhs line 243 - Running XST synthesis
+IPNAME:sysclk_inv_wrapper INSTANCE:sysclk_inv - C:\Lab3CleanBuild\system.mhs
+line 249 - Running XST synthesis
+IPNAME:clk90_inv_wrapper INSTANCE:clk90_inv - C:\Lab3CleanBuild\system.mhs line
+258 - Running XST synthesis
+IPNAME:ddr_clk90_inv_wrapper INSTANCE:ddr_clk90_inv -
+C:\Lab3CleanBuild\system.mhs line 267 - Running XST synthesis
+IPNAME:dcm_0_wrapper INSTANCE:dcm_0 - C:\Lab3CleanBuild\system.mhs line 276 -
+Running XST synthesis
+IPNAME:dcm_1_wrapper INSTANCE:dcm_1 - C:\Lab3CleanBuild\system.mhs line 293 -
+Running XST synthesis
+IPNAME:vga_framebuffer_wrapper INSTANCE:vga_framebuffer -
+C:\Lab3CleanBuild\system.mhs line 312 - Running XST synthesis
+IPNAME:dcr_v29_0_wrapper INSTANCE:dcr_v29_0 - C:\Lab3CleanBuild\system.mhs line
+331 - Running XST synthesis
+IPNAME:opb2dcr_bridge_0_wrapper INSTANCE:opb2dcr_bridge_0 -
+C:\Lab3CleanBuild\system.mhs line 337 - Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper
+INSTANCE:ddr_256mb_32mx64_rank1_row13_col10_cl2_5 - C:\Lab3CleanBuild\system.mhs
+line 192 - Running NGCBUILD
+
+Rebuilding cache ...
+
+Total run time: 461.00 seconds

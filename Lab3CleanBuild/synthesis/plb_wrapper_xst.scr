@@ -1,0 +1,11 @@
+run
+-opt_mode speed
+-opt_level 1
+-p xc2vp30ff896-7
+-top plb_wrapper
+-ifmt MIXED
+-ifn plb_wrapper_xst.prj
+-ofn ../implementation/plb_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}

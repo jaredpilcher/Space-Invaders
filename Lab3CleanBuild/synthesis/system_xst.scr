@@ -1,0 +1,13 @@
+run
+-opt_mode speed
+-opt_level 1
+-p xc2vp30ff896-7
+-top system
+-ifmt MIXED
+-ifn system_xst.prj
+-ofn ../implementation/system.ngc
+-hierarchy_separator /
+-iobuf YES
+-max_fanout 10000
+-sd {../implementation}
+-vlgincdir {"C:\Lab3CleanBuild\pcores\" "C:\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\EDK\hw\XilinxReferenceDesigns\pcores\" }
