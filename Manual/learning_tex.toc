@@ -1,0 +1,11 @@
+\contentsline {chapter}{\numberline {1}Space Invaders Overview}{2}
+\contentsline {section}{\numberline {1.1}History of Space Invaders}{2}
+\contentsline {section}{\numberline {1.2}Game Play}{2}
+\contentsline {subsection}{\numberline {1.2.1}Objective}{2}
+\contentsline {subsection}{\numberline {1.2.2}The Tank}{2}
+\contentsline {subsection}{\numberline {1.2.3}Enemies}{2}
+\contentsline {subsection}{\numberline {1.2.4}Points}{2}
+\contentsline {section}{\numberline {1.3}Game Details and Specifications}{2}
+\contentsline {subsection}{\numberline {1.3.1}Aliens}{2}
+\contentsline {subsection}{\numberline {1.3.2}The Tank}{2}
+\contentsline {subsection}{\numberline {1.3.3}Bullets}{2}
