@@ -4,12 +4,13 @@
 \contentsline {subsection}{\numberline {1.2.1}Objective}{2}
 \contentsline {subsection}{\numberline {1.2.2}The Tank}{2}
 \contentsline {subsection}{\numberline {1.2.3}Enemies}{3}
+\contentsline {subsubsection}{Spaceship}{3}
+\contentsline {subsubsection}{Aliens}{3}
 \contentsline {subsection}{\numberline {1.2.4}Points}{3}
 \contentsline {section}{\numberline {1.3}Game Details and Specifications}{3}
 \contentsline {subsection}{\numberline {1.3.1}Aliens}{3}
 \contentsline {subsection}{\numberline {1.3.2}The Tank}{3}
 \contentsline {subsection}{\numberline {1.3.3}Bullets}{3}
-\contentsline {chapter}{\numberline {2}Next Chapter}{4}
-\contentsline {section}{\numberline {2.1}Something intereset}{4}
-\contentsline {subsection}{\numberline {2.1.1}boring stuff}{4}
-\contentsline {subsection}{\numberline {2.1.2}other stuff}{4}
+\contentsline {chapter}{\numberline {2}Bug Reports and File Organization}{4}
+\contentsline {section}{\numberline {2.1}Bug Reports}{4}
+\contentsline {subsection}{\numberline {2.1.1}Drawing Bullets}{4}

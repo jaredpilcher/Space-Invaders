@@ -1,4 +1,5 @@
 \documentclass[11pt,letter,oneside]{report}
+\usepackage[pdftex]{graphicx}
 \begin{document}
 
 \title{Space Invaders}
@@ -20,17 +21,29 @@ Designed by Tomohiro Nishikado, Space Invaders is one of the greatest arcade gam
 
 \subsection{Objective}
 
-The world is being invaded by marching aliens.  All of humanity has gathered behind 4 bunkers for protection.  You control the only weapons available, a supply of 3 tanks.  The fate of the world lies in your hands.
+The world is being invaded by marching aliens.  All of humanity has gathered behind 4 bunkers for protection.  You control the only weapons available, a supply of 3 tanks and a handful of missiles. Kill all the aliens! Watchout! The alien mothership flies over head! Destroy it at all costs!  The fate of the world rests in your hands...
 
 \subsection{The Tank}
+\includegraphics[]{tank.jpg}
 
-You are the tank.
+You are the tank. Push the left button to move left, and the right button to move right. 
 
-As the tank you must dodge bullets.
+Watchout! Enemy fire rains from above! Dodge the alien fire by moving the tank left or right. 
+
+Fire your missile to destroy the alien invaders! Push the middle button to fire your missile, aiming for the aliens. When the missile hits an alien, it dies. Be careful! They move left and right, and get closer as time goes on.
 
 \subsection{Enemies}
 
-There are 55 enemies on the screen.
+\subsubsection{Spaceship}
+
+The alien mothership circles the Earth, looking for its prey. Destroy it at all costs! It flies occasionally from left to right. As it flies overhead, launch your tank missile by pushing the middle button. Be careful, it tries to evade you missile, so shoot accurately and quick!
+
+\includegraphics[]{big-alien.png}
+
+\subsubsection{Aliens}
+55 aliens are marching toward your position! You are charged with destroying all of them before they reach you! Fire your missiles to kill them!There are 55 aliens on the screen.
+
+\includegraphics[]{aliens.jpg}
 
 \subsection{Points}
 
@@ -41,5 +54,11 @@ There are 55 enemies on the screen.
 \subsection{The Tank}
 
 \subsection{Bullets}
+
+\chapter{Bug Reports and File Organization}
+
+\section{Bug Reports}
+
+\subsection{Drawing Bullets}
 
 \end{document}
