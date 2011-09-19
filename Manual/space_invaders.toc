@@ -1,0 +1,33 @@
+\contentsline {chapter}{\numberline {1}Space Invaders Overview}{2}
+\contentsline {section}{\numberline {1.1}History of Space Invaders}{2}
+\contentsline {section}{\numberline {1.2}Game Play}{2}
+\contentsline {subsection}{\numberline {1.2.1}Objective}{2}
+\contentsline {subsection}{\numberline {1.2.2}The Tank}{3}
+\contentsline {subsection}{\numberline {1.2.3}Enemies}{3}
+\contentsline {subsubsection}{Spaceship}{3}
+\contentsline {subsubsection}{Aliens}{3}
+\contentsline {subsection}{\numberline {1.2.4}Points}{4}
+\contentsline {section}{\numberline {1.3}Game Details and Specifications}{4}
+\contentsline {subsection}{\numberline {1.3.1}Aliens}{4}
+\contentsline {subsubsection}{Alien Placement and Appearance}{4}
+\contentsline {subsubsection}{Alien Movement}{4}
+\contentsline {subsubsection}{Alien Explosions}{5}
+\contentsline {subsection}{\numberline {1.3.2}Alien Mothership}{5}
+\contentsline {subsection}{\numberline {1.3.3}The Tank}{5}
+\contentsline {subsubsection}{Movement}{5}
+\contentsline {subsubsection}{Firing Bullets}{5}
+\contentsline {subsubsection}{Death}{5}
+\contentsline {subsection}{\numberline {1.3.4}Bullets}{5}
+\contentsline {subsubsection}{Tank Bullets}{5}
+\contentsline {subsubsection}{Alien Bullets}{6}
+\contentsline {subsection}{\numberline {1.3.5}The Bunkers}{7}
+\contentsline {subsection}{\numberline {1.3.6}Scoring}{7}
+\contentsline {subsection}{\numberline {1.3.7}End of Game}{7}
+\contentsline {subsection}{\numberline {1.3.8}Appearance}{7}
+\contentsline {chapter}{\numberline {2}Bug Reports and File Organization}{8}
+\contentsline {section}{\numberline {2.1}Bug Reports}{8}
+\contentsline {subsection}{\numberline {2.1.1}Drawing Bullets}{8}
+\contentsline {subsection}{\numberline {2.1.2}Destroying Aliens}{8}
+\contentsline {subsection}{\numberline {2.1.3}Moving Aliens to Right of Screen}{9}
+\contentsline {subsection}{\numberline {2.1.4}Overlay of Bullet Black Boxes}{9}
+\contentsline {subsection}{\numberline {2.1.5}One Alien Firing Two Bullets Simultaneously}{9}
