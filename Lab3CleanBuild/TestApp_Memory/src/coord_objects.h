@@ -1,9 +1,12 @@
 #ifndef SPACE_INVADERS_COORD_OBJECT
 #define SPACE_INVADERS_COORD_OBJECT
+#include "TestApp_Memory.h"
 typedef struct {
   int x;
   int y;
 } coord_object;
+
+extern int direction;
 
 void eraseTank(coord_object old_tank);
 void drawTank(coord_object new_tank);

@@ -1,3 +1,4 @@
+#include "TestApp_Memory.h"
 
 void eraseTank(coord_object old_tank){
 	XTft_DrawTank(FRAME1,old_tank.x,old_tank.y,BLACK,BLACK);

@@ -1,5 +1,6 @@
 #ifndef SPACE_INVADER_BULLETS
 #define SPACE_INVADER_BULLETS
+#include "TestApp_Memory.h"
 typedef struct {
   int x;
   int y;

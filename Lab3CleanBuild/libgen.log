@@ -3,13 +3,14 @@ Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 
 Command Line: libgen -mhs system.mhs -p xc2vp30ff896-7 system.mss 
 
-Output Directory (-od)		: D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\
+Output Directory (-od)		:
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\
 Part (-p)			: virtex2p
 
 Software Specification file	: system.mss
 WARNING:MDT - IPNAME:opb2dcr_bridge INSTANCE:opb2dcr_bridge_0 -
-   D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\system.mhs line 337 - deprecated
-   core for architecture 'virtex2p'!
+   D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 337
+   - deprecated core for architecture 'virtex2p'!
 Sourcing tcl file
 C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_
 0.tcl ...
@@ -83,8 +84,8 @@ Sourcing tcl file
 C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_
 if_cntlr_v2_1_0.tcl ...
 WARNING:MDT - plb2opb_bridge (plb2opb) -
-   D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\system.mhs line 135 - ADDRESS
-   specified by PARAMETER C_RNG1_BASEADDR is ignored
+   D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 135
+   - ADDRESS specified by PARAMETER C_RNG1_BASEADDR is ignored
 Address Map for Processor ppc405_0
   (0b0000010000-0b0000010011) ppc405_0	
   (0b0000100000-0b0000100011) ppc405_0	
@@ -264,14 +265,14 @@ C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl
 
 Check platform configuration ...
 IPNAME:plb_v34 INSTANCE:plb -
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\system.mhs line 117 - 3 master(s) : 3
-slave(s)
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 117 -
+3 master(s) : 3 slave(s)
 IPNAME:opb_v20 INSTANCE:opb -
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\system.mhs line 127 - 1 master(s) : 4
-slave(s)
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 127 -
+1 master(s) : 4 slave(s)
 IPNAME:dcr_v29 INSTANCE:dcr_v29_0 -
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\system.mhs line 331 - 1 master(s) : 1
-slave(s)
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 331 -
+1 master(s) : 1 slave(s)
 
 Check port drivers...
 
@@ -279,8 +280,9 @@ Performing Clock DRCs...
 
 INFO:MDT - List of peripherals addressable from processor instance ppc405_0 : 
   - opb
-WARNING:MDT - D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\system.mhs line 127 -
-   No Driver Found for instance opb. To avoid seeing this warning, assign the
+WARNING:MDT -
+   D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 127
+   - No Driver Found for instance opb. To avoid seeing this warning, assign the
    appropriate driver or driver "generic 1.00.a " to instance opb
 
   - RS232_Uart_1
@@ -299,33 +301,39 @@ Running CopyFiles ...
 
 Copying files for os standalone_v1_00_a from
 C:\Xilinx91i\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_0\libsrc\standalone_v1_00_a\
-...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_0\libsrc\standa
+lone_v1_00_a\ ...
 
 Copying files for driver uartlite_v1_02_a from
 C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v1_02_a\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_0\libsrc\uartlite_v1_02_a\ ...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_0\libsrc\uartli
+te_v1_02_a\ ...
 
 Copying files for driver sysace_v1_01_a from
 C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\sysace_v1_01_a\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_0\libsrc\sysace_v1_01_a\ ...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_0\libsrc\sysace
+_v1_01_a\ ...
 
 Copying files for driver gpio_v2_01_a from
 C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\gpio_v2_01_a\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_0\libsrc\gpio_v2_01_a\ ...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_0\libsrc\gpio_v
+2_01_a\ ...
 
 Copying files for driver tft_ref_v1_00_a from
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\drivers\tft_ref_v1_00_a\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_0\libsrc\tft_ref_v1_00_a\ ...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\drivers\tft_ref_v1_00_
+a\src\ to
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_0\libsrc\tft_re
+f_v1_00_a\ ...
 
 Copying files for driver ddr_v1_00_b from
 C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\ddr_v1_00_b\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_0\libsrc\ddr_v1_00_b\ ...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_0\libsrc\ddr_v1
+_00_b\ ...
 
 Copying files for driver cpu_ppc405_v1_00_a from
 C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_0\libsrc\cpu_ppc405_v1_00_a\
-...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_0\libsrc\cpu_pp
+c405_v1_00_a\ ...
 
 Running DRCs for OSes, Drivers and Libraries ... 
 
@@ -345,7 +353,8 @@ Configuring make for target libs using:
 make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
 "COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
 
-Libraries generated in D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_0\lib\
+Libraries generated in
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_0\lib\
 directory
 
 Running execs_generate for OS'es, Drivers and Libraries ... 
@@ -358,13 +367,13 @@ Running CopyFiles ...
 
 Copying files for os standalone_v1_00_a from
 C:\Xilinx91i\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_1\libsrc\standalone_v1_00_a\
-...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_1\libsrc\standa
+lone_v1_00_a\ ...
 
 Copying files for driver cpu_ppc405_v1_00_a from
 C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
-D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_1\libsrc\cpu_ppc405_v1_00_a\
-...
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_1\libsrc\cpu_pp
+c405_v1_00_a\ ...
 
 Running DRCs for OSes, Drivers and Libraries ... 
 
@@ -384,7 +393,8 @@ Configuring make for target libs using:
 make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
 "COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
 
-Libraries generated in D:\Put_Your_Temp_Files_Here\Lab3CleanBuild\ppc405_1\lib\
+Libraries generated in
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\ppc405_1\lib\
 directory
 
 Running execs_generate for OS'es, Drivers and Libraries ... 

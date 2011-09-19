@@ -1,63 +1,95 @@
 Release 9.1.02i Xflow J.33
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 xflow.exe -wd implementation -p xc2vp30ff896-7 -implement xflow.opt system.ngc  
-.... Copying flowfile C:/Xilinx91i/xilinx/data/fpga.flw into working directory
-C:/Lab3CleanBuild/implementation 
 
-Using Flow File: C:/Lab3CleanBuild/implementation/fpga.flw 
+Using Flow File:
+D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/fpga.fl
+w 
 Using Option File(s): 
- C:/Lab3CleanBuild/implementation/xflow.opt 
+ D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/xflow.
+opt 
 
 Creating Script File ... 
 
 #----------------------------------------------#
 # Starting program ngdbuild
 # ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm
-"C:/Lab3CleanBuild/implementation/system.ngc" -uc system.ucf system.ngd 
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/system
+.ngc" -uc system.ucf system.ngd 
 #----------------------------------------------#
 Release 9.1.02i - ngdbuild J.33
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 
 Command Line: ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm
-C:/Lab3CleanBuild/implementation/system.ngc -uc system.ucf system.ngd
+D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/system.
+ngc -uc system.ucf system.ngd
 
-Reading NGO file "C:/Lab3CleanBuild/implementation/system.ngc" ...
-Loading design module "C:/Lab3CleanBuild/implementation/ppc405_0_wrapper.ngc"...
-Loading design module "C:/Lab3CleanBuild/implementation/ppc405_1_wrapper.ngc"...
+Reading NGO file
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/system
+.ngc" ...
 Loading design module
-"C:/Lab3CleanBuild/implementation/jtagppc_0_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/ppc405
+_0_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/reset_block_wrapper.ngc"...
-Loading design module "C:/Lab3CleanBuild/implementation/plb_wrapper.ngc"...
-Loading design module "C:/Lab3CleanBuild/implementation/opb_wrapper.ngc"...
-Loading design module "C:/Lab3CleanBuild/implementation/plb2opb_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/ppc405
+_1_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/rs232_uart_1_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/jtagpp
+c_0_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/sysace_compactflash_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/reset_
+block_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/pushbuttons_5bit_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/plb_wr
+apper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapp
-er.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/opb_wr
+apper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/plb_bram_if_cntlr_1_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/plb2op
+b_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/rs232_
+uart_1_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/sysclk_inv_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/sysace
+_compactflash_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/clk90_inv_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/pushbu
+ttons_5bit_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/ddr_clk90_inv_wrapper.ngc"...
-Loading design module "C:/Lab3CleanBuild/implementation/dcm_0_wrapper.ngc"...
-Loading design module "C:/Lab3CleanBuild/implementation/dcm_1_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/ddr_25
+6mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/vga_framebuffer_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/plb_br
+am_if_cntlr_1_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/dcr_v29_0_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/plb_br
+am_if_cntlr_1_bram_wrapper.ngc"...
 Loading design module
-"C:/Lab3CleanBuild/implementation/opb2dcr_bridge_0_wrapper.ngc"...
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/sysclk
+_inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/clk90_
+inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/ddr_cl
+k90_inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/dcm_0_
+wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/dcm_1_
+wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/vga_fr
+amebuffer_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/dcr_v2
+9_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/opb2dc
+r_bridge_0_wrapper.ngc"...
 
 Applying constraints in "system.ucf" to the design...
 
@@ -806,9 +838,9 @@ Total Number of 4 input LUTs:          2,264 out of  27,392    8%
 
 Total equivalent gate count for design:  4,362,648
 Additional JTAG gate count for IOBs:  8,304
-Peak Memory Usage:  239 MB
-Total REAL time to MAP completion:  24 secs 
-Total CPU time to MAP completion:   24 secs 
+Peak Memory Usage:  241 MB
+Total REAL time to MAP completion:  15 secs 
+Total CPU time to MAP completion:   14 secs 
 
 NOTES:
 
@@ -871,36 +903,36 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 11 secs 
-Finished initial Timing Analysis.  REAL time: 11 secs 
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
 
 
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:99227b) REAL time: 17 secs 
+Phase 1.1 (Checksum:99227b) REAL time: 11 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:1312cfe) REAL time: 17 secs 
+Phase 2.7 (Checksum:1312cfe) REAL time: 11 secs 
 
 Phase 3.31
 WARNING:Place:479 - Use of the left PPC405 has been detected. The left processor requires specialdesign considerations
    when operating above 350 MHz in the -7 speed grade part.Please see Xilinx Application Note XAPP755 for details.
-Phase 3.31 (Checksum:1c9c37d) REAL time: 17 secs 
+Phase 3.31 (Checksum:1c9c37d) REAL time: 11 secs 
 
 Phase 4.2
 ......
 .................
-Phase 4.2 (Checksum:98e1e3) REAL time: 20 secs 
+Phase 4.2 (Checksum:98e1e3) REAL time: 13 secs 
 
 Phase 5.30
-Phase 5.30 (Checksum:2faf07b) REAL time: 20 secs 
+Phase 5.30 (Checksum:2faf07b) REAL time: 13 secs 
 
 Phase 6.3
-Phase 6.3 (Checksum:39386fa) REAL time: 20 secs 
+Phase 6.3 (Checksum:39386fa) REAL time: 13 secs 
 
 Phase 7.5
-Phase 7.5 (Checksum:42c1d79) REAL time: 21 secs 
+Phase 7.5 (Checksum:42c1d79) REAL time: 13 secs 
 
 Phase 8.8
 ..............
@@ -909,56 +941,56 @@ Phase 8.8
 .........
 .........
 ...
-Phase 8.8 (Checksum:1098cc7) REAL time: 43 secs 
+Phase 8.8 (Checksum:1098cc7) REAL time: 25 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:55d4a77) REAL time: 44 secs 
+Phase 9.5 (Checksum:55d4a77) REAL time: 26 secs 
 
 Phase 10.18
-Phase 10.18 (Checksum:5f5e0f6) REAL time: 1 mins 2 secs 
+Phase 10.18 (Checksum:5f5e0f6) REAL time: 35 secs 
 
 Phase 11.5
-Phase 11.5 (Checksum:68e7775) REAL time: 1 mins 2 secs 
+Phase 11.5 (Checksum:68e7775) REAL time: 35 secs 
 
 Phase 12.27
-Phase 12.27 (Checksum:7270df4) REAL time: 1 mins 3 secs 
+Phase 12.27 (Checksum:7270df4) REAL time: 35 secs 
 
 Phase 13.24
-Phase 13.24 (Checksum:7bfa473) REAL time: 1 mins 3 secs 
+Phase 13.24 (Checksum:7bfa473) REAL time: 35 secs 
 
-REAL time consumed by placer: 1 mins 7 secs 
-CPU  time consumed by placer: 1 mins 7 secs 
+REAL time consumed by placer: 38 secs 
+CPU  time consumed by placer: 37 secs 
 Writing design to file system.ncd
 
 
-Total REAL time to Placer completion: 1 mins 8 secs 
-Total CPU time to Placer completion: 1 mins 8 secs 
+Total REAL time to Placer completion: 38 secs 
+Total CPU time to Placer completion: 37 secs 
 
 Starting Router
 
-Phase 1: 19180 unrouted;       REAL time: 1 mins 21 secs 
+Phase 1: 19180 unrouted;       REAL time: 47 secs 
 
-Phase 2: 15461 unrouted;       REAL time: 1 mins 23 secs 
+Phase 2: 15461 unrouted;       REAL time: 48 secs 
 
-Phase 3: 2480 unrouted;       REAL time: 1 mins 33 secs 
+Phase 3: 2480 unrouted;       REAL time: 53 secs 
 
-Phase 4: 2480 unrouted; (12306)      REAL time: 1 mins 33 secs 
+Phase 4: 2480 unrouted; (12306)      REAL time: 53 secs 
 
-Phase 5: 2495 unrouted; (0)      REAL time: 1 mins 36 secs 
+Phase 5: 2495 unrouted; (0)      REAL time: 55 secs 
 
-Phase 6: 2495 unrouted; (0)      REAL time: 1 mins 37 secs 
+Phase 6: 2495 unrouted; (0)      REAL time: 55 secs 
 
-Phase 7: 0 unrouted; (0)      REAL time: 1 mins 42 secs 
+Phase 7: 0 unrouted; (0)      REAL time: 58 secs 
 
-Phase 8: 0 unrouted; (0)      REAL time: 1 mins 47 secs 
+Phase 8: 0 unrouted; (0)      REAL time: 1 mins 1 secs 
 
 WARNING:Route:455 - CLK Net:sys_clk_pin_IBUFG may have excessive skew because 
       3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:fpga_0_DDR_CLK_FB_IBUFG may have excessive skew because 
       3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 1 mins 49 secs 
-Total CPU time to Router completion: 1 mins 49 secs 
+Total REAL time to Router completion: 1 mins 2 secs 
+Total CPU time to Router completion: 1 mins 1 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -1054,10 +1086,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 1 mins 54 secs 
-Total CPU time to PAR completion: 1 mins 53 secs 
+Total REAL time to PAR completion: 1 mins 4 secs 
+Total CPU time to PAR completion: 1 mins 3 secs 
 
-Peak Memory Usage:  314 MB
+Peak Memory Usage:  313 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
@@ -1119,13 +1151,13 @@ Design statistics:
    Minimum period:  32.484ns (Maximum frequency:  30.784MHz)
 
 
-Analysis completed Mon Sep 24 10:57:30 2007
+Analysis completed Mon Sep 19 17:31:42 2011
 --------------------------------------------------------------------------------
 
 Generating Report ...
 
 Number of warnings: 0
 Number of info messages: 2
-Total time: 12 secs 
+Total time: 7 secs 
 
 

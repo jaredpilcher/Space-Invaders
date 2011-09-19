@@ -37,11 +37,16 @@ SwProj: TestApp_Memory
 Processor: ppc405_0
 Executable: TestApp_Memory/executable.elf
 Source: TestApp_Memory/src/TestApp_Memory.c
-Source: TestApp_Memory/src/drawUtils.c
 Source: TestApp_Memory/src/alienCodes.c
+Source: TestApp_Memory/src/bullets.c
+Source: TestApp_Memory/src/coord_objects.c
+Source: TestApp_Memory/src/drawUtils.c
 Header: TestApp_Memory/src/ddr_header.h
 Header: TestApp_Memory/src/drawUtils.h
 Header: TestApp_Memory/src/alienCodes.h
+Header: TestApp_Memory/src/TestApp_Memory.h
+Header: TestApp_Memory/src/bullets.h
+Header: TestApp_Memory/src/coord_objects.h
 DefaultInit: EXECUTABLE
 InitBram: 1
 Active: 1

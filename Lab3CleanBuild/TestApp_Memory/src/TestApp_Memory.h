@@ -1,5 +1,3 @@
-#ifdef SPACE_INVADERS_MAIN_HEADER
-#define SPACE_INVADERS_MAIN_HEADER
 #include "xparameters.h"
 #include "xuartlite_l.h"
 #include "xtft_l.h"
@@ -9,6 +7,7 @@
 #include "drawUtils.h"
 #include "alienCodes.h"
 #include "bullets.h"
+#include "coord_objects.h"
 
 #define FRAME1 0x00000000
 #define FRAME2 0x00200000
@@ -46,5 +45,3 @@
 #define TANK_BULLET_TYPE 7
 #define ALIEN_BULLET_ONE 0
 #define ALIEN_BULLET_TWO 3
-
-#endif

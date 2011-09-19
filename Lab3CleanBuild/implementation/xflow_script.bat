@@ -6,7 +6,7 @@
 @REM #
 @REM # Command line for ngdbuild
 @REM #
-ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm "C:/Lab3CleanBuild/implementation/system.ngc" -uc system.ucf system.ngd 
+ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm "D:/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/implementation/system.ngc" -uc system.ucf system.ngd 
 
 @REM #
 @REM # Command line for map

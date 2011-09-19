@@ -88,8 +88,8 @@ Sourcing tcl file
 C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_
 if_cntlr_v2_1_0.tcl ...
 WARNING:MDT - plb2opb_bridge (plb2opb) -
-   D:\Put_Your_Temp_Files_Here\Lab3\Lab3CleanBuild\system.mhs line 135 - ADDRESS
-   specified by PARAMETER C_RNG1_BASEADDR is ignored
+   D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 135
+   - ADDRESS specified by PARAMETER C_RNG1_BASEADDR is ignored
 Address Map for Processor ppc405_0
   (0b0000010000-0b0000010011) ppc405_0	
   (0b0000100000-0b0000100011) ppc405_0	

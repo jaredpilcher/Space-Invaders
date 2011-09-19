@@ -9,4 +9,4 @@ run
 -hierarchy_separator /
 -iobuf NO
 -sd {../implementation}
--vlgincdir {"C:\Lab3CleanBuild\pcores\" "C:\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\EDK\hw\XilinxReferenceDesigns\pcores\" }
+-vlgincdir {"D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\pcores\" "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\Xilinx91i\EDK\hw\XilinxReferenceDesigns\pcores\" }

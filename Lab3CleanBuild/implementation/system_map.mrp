@@ -8,7 +8,7 @@ Target Device  : xc2vp30
 Target Package : ff896
 Target Speed   : -7
 Mapper Version : virtex2p -- $Revision: 1.36 $
-Mapped Date    : Mon Sep 24 10:54:56 2007
+Mapped Date    : Mon Sep 19 17:30:11 2011
 
 Design Summary
 --------------
@@ -42,9 +42,9 @@ Total Number of 4 input LUTs:          2,264 out of  27,392    8%
 
 Total equivalent gate count for design:  4,362,648
 Additional JTAG gate count for IOBs:  8,304
-Peak Memory Usage:  239 MB
-Total REAL time to MAP completion:  24 secs 
-Total CPU time to MAP completion:   24 secs 
+Peak Memory Usage:  241 MB
+Total REAL time to MAP completion:  15 secs 
+Total CPU time to MAP completion:   14 secs 
 
 NOTES:
 
