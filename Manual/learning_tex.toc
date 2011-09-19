@@ -6,15 +6,19 @@
 \contentsline {subsection}{\numberline {1.2.3}Enemies}{3}
 \contentsline {subsubsection}{Spaceship}{3}
 \contentsline {subsubsection}{Aliens}{3}
-\contentsline {subsection}{\numberline {1.2.4}Points}{3}
-\contentsline {section}{\numberline {1.3}Game Details and Specifications}{3}
-\contentsline {subsection}{\numberline {1.3.1}Aliens}{3}
-\contentsline {subsubsection}{Alien Placement and Appearance}{3}
+\contentsline {subsection}{\numberline {1.2.4}Points}{4}
+\contentsline {section}{\numberline {1.3}Game Details and Specifications}{4}
+\contentsline {subsection}{\numberline {1.3.1}Aliens}{4}
+\contentsline {subsubsection}{Alien Placement and Appearance}{4}
 \contentsline {subsubsection}{Alien Movement}{4}
-\contentsline {subsection}{\numberline {1.3.2}The Tank}{4}
-\contentsline {subsection}{\numberline {1.3.3}Bullets}{4}
-\contentsline {subsubsection}{Tank Bullets}{4}
-\contentsline {subsubsection}{Alien Bullets}{4}
-\contentsline {chapter}{\numberline {2}Bug Reports and File Organization}{6}
-\contentsline {section}{\numberline {2.1}Bug Reports}{6}
-\contentsline {subsection}{\numberline {2.1.1}Drawing Bullets}{6}
+\contentsline {subsection}{\numberline {1.3.2}Alien Mothership}{5}
+\contentsline {subsection}{\numberline {1.3.3}The Tank}{5}
+\contentsline {subsection}{\numberline {1.3.4}Bullets}{5}
+\contentsline {subsubsection}{Tank Bullets}{5}
+\contentsline {subsubsection}{Alien Bullets}{5}
+\contentsline {subsection}{\numberline {1.3.5}Scoring}{6}
+\contentsline {subsection}{\numberline {1.3.6}End of Game}{6}
+\contentsline {subsection}{\numberline {1.3.7}Appearance}{7}
+\contentsline {chapter}{\numberline {2}Bug Reports and File Organization}{8}
+\contentsline {section}{\numberline {2.1}Bug Reports}{8}
+\contentsline {subsection}{\numberline {2.1.1}Drawing Bullets}{8}
