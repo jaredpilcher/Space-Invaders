@@ -153,6 +153,8 @@ Second, we found a bug when the first bullet was fired. Without permission, anot
 During our design phase, we found a bug involving the destroying of aliens. We thought that the lab instructions said to give find a random number between 0 and 54 and destroy that alien. When we tried to pass it off, the TA told us that we needed to ask the user to input a number. To fix the bug, we used the read() function to acquire a number from the user, one integer at a time. We destroyed the alien that corresponded to that number.
 
 \subsection{Moving Aliens to Right of Screen}
+We initially had some naive logic concerning the aliens reaching the edge of the screen.  We set a hard limit for the grid of aliens.  Once the top left corner of the grid had reached the limit, moved down an changed directions.  This did not account for all aliens on the edge of the grid being dead, which would require the alien grid to move one column closer to the edge than it did with all aliens alive.  We fixed this by using a more dynamic approach.
+
 \subsection{Overlay of Bullet Black Boxes}
 During our design phase, we found a bug involving the overlay of the bullet black boxes. We discovered that as a bullet was launched, and when it flew over objects on the screen, it had black boxes surrounding it. We have not yet resolved this bug, but will do so in the near future.
 
