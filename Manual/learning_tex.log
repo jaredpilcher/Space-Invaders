@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  19 SEP 2011 14:41
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  19 SEP 2011 14:46
 entering extended mode
 **D:/Put_Your_Temp_Files_Here/space_invaders/Manual/learning_tex.tex
 (D:/Put_Your_Temp_Files_Here/space_invaders/Manual/learning_tex.tex
@@ -134,28 +134,28 @@ File: aliens.jpg Graphic file (type jpg)
 Package pdftex.def Info: aliens.jpg used on input line 46.
 (pdftex.def)             Requested size: 79.29604pt x 79.29604pt.
  [3 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/big-alien.png> <D:/Put_Y
-our_Temp_Files_Here/space_invaders/Manual/aliens.jpg>]
+our_Temp_Files_Here/space_invaders/Manual/aliens.jpg>] [4] [5]
 Chapter 2.
-[4
+[6
 
 ] (D:\Put_Your_Temp_Files_Here\space_invaders\Manual\learning_tex.aux) ) 
 Here is how much of TeX's memory you used:
  1169 strings out of 494045
  15499 string characters out of 3148324
- 65093 words of memory out of 3000000
+ 66093 words of memory out of 3000000
  4496 multiletter control sequences out of 15000+200000
  10023 words of font info for 35 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,6n,21p,407b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,21p,476b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmr17.pfb>
-Output written on learning_tex.pdf (5 pages, 90942 bytes).
+Output written on learning_tex.pdf (7 pages, 96182 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
