@@ -133,7 +133,7 @@ The game ends when one of the following three events occur:
 \item The tank has been destroyed three times.
 \item All aliens are destroyed.
 \end{enumerate}
-When the game ends, a gameover screen is displayed.
+When the game ends, a game over screen is displayed.
 
 \subsection{Appearance}
 The game appearance is identical to the flash version of Space Invasion. The game runs smoothly and at a decent speed. The screen is also updated close to the same rate as the flash-based game. No artifacts appear on the screen. No flickering occurs on the screen.
@@ -150,9 +150,12 @@ First, we had difficulty cycling through the different different stages of the b
 Second, we found a bug when the first bullet was fired. Without permission, another belt was drawn at pixel location (1,1). We found the problem by analyzing our bullet structs. We discovered that our bullet variables were not initialized to zero. We assumed that they would be initialized to zero, but a random value was placed there. When we initialized all variables, the bug was fixed.
 
 \subsection{Destroying Aliens}
+During our design phase, we found a bug involving the destroying of aliens. We thought that the lab instructions said to give find a random number between 0 and 54 and destroy that alien. When we tried to pass it off, the TA told us that we needed to ask the user to input a number. To fix the bug, we used the read() function to acquire a number from the user, one integer at a time. We destroyed the alien that corresponded to that number.
+
 \subsection{Moving Aliens to Right of Screen}
 \subsection{Overlay of Bullet Black Boxes}
+During our design phase, we found a bug involving the overlay of the bullet black boxes. We discovered that as a bullet was launched, and when it flew over objects on the screen, it had black boxes surrounding it. We have not yet resolved this bug, but will do so in the near future.
 
-\subsection{One Alien Firing Two Bullets Simultaneoously}
-While trying test our implementation of aliens firing bullets, we encountered a situation in which an alien fires two bullets on top of eachother.  They will appear as one bullet.  We solved this by limiting the firing of a bullet until the first one has moved out of its original position. 
+\subsection{One Alien Firing Two Bullets Simultaneously}
+While trying test our implementation of aliens firing bullets, we encountered a situation in which an alien fires two bullets on top of each other.  They will appear as one bullet.  We solved this by limiting the firing of a bullet until the first one has moved out of its original position. 
 \end{document}
