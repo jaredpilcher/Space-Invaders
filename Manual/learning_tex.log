@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  19 SEP 2011 15:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  19 SEP 2011 16:31
 entering extended mode
 **D:/Put_Your_Temp_Files_Here/space_invaders/Manual/learning_tex.tex
 (D:/Put_Your_Temp_Files_Here/space_invaders/Manual/learning_tex.tex
@@ -141,33 +141,81 @@ Package pdftex.def Info: scoring.jpg used on input line 53.
 (pdftex.def)             Requested size: 192.71951pt x 120.44969pt.
  [3 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/big-alien.png> <D:/Put_Y
 our_Temp_Files_Here/space_invaders/Manual/aliens.jpg>] [4 <D:/Put_Your_Temp_Fil
-es_Here/space_invaders/Manual/scoring.jpg>] [5]
+es_Here/space_invaders/Manual/scoring.jpg>] <ZigBullet0.png, id=26, 8.03pt x 12
+.045pt>
+File: ZigBullet0.png Graphic file (type png)
+
+<use ZigBullet0.png>
+Package pdftex.def Info: ZigBullet0.png used on input line 88.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+ <ZigBullet1.png, id=28, 8.03pt x 12.045pt>
+File: ZigBullet1.png Graphic file (type png)
+
+<use ZigBullet1.png>
+Package pdftex.def Info: ZigBullet1.png used on input line 90.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+ <ZigBullet2.png, id=29, 8.03pt x 12.045pt>
+File: ZigBullet2.png Graphic file (type png)
+
+<use ZigBullet2.png>
+Package pdftex.def Info: ZigBullet2.png used on input line 92.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+ <ZigBullet3.png, id=30, 8.03pt x 12.045pt>
+File: ZigBullet3.png Graphic file (type png)
+
+<use ZigBullet3.png>
+Package pdftex.def Info: ZigBullet3.png used on input line 94.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+ [5 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/ZigBullet0.png> <D:/Put_
+Your_Temp_Files_Here/space_invaders/Manual/ZigBullet1.png> <D:/Put_Your_Temp_Fi
+les_Here/space_invaders/Manual/ZigBullet2.png>]
+<TBullet0.png, id=37, 8.03pt x 12.045pt>
+File: TBullet0.png Graphic file (type png)
+ <use TBullet0.png>
+Package pdftex.def Info: TBullet0.png used on input line 101.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+
+<TBullet1.png, id=38, 8.03pt x 12.045pt>
+File: TBullet1.png Graphic file (type png)
+ <use TBullet1.png>
+Package pdftex.def Info: TBullet1.png used on input line 103.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+
+<TBullet2.png, id=39, 8.03pt x 12.045pt>
+File: TBullet2.png Graphic file (type png)
+ <use TBullet2.png>
+Package pdftex.def Info: TBullet2.png used on input line 105.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 File: scoring.jpg Graphic file (type jpg)
  <use scoring.jpg>
-Package pdftex.def Info: scoring.jpg used on input line 108.
+Package pdftex.def Info: scoring.jpg used on input line 113.
 (pdftex.def)             Requested size: 192.71951pt x 120.44969pt.
- [6] [7]
+
+[6 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/ZigBullet3.png> <D:/Put_Y
+our_Temp_Files_Here/space_invaders/Manual/TBullet0.png> <D:/Put_Your_Temp_Files
+_Here/space_invaders/Manual/TBullet1.png> <D:/Put_Your_Temp_Files_Here/space_in
+vaders/Manual/TBullet2.png>] [7]
 Chapter 2.
 [8
 
 ] (D:\Put_Your_Temp_Files_Here\space_invaders\Manual\learning_tex.aux) ) 
 Here is how much of TeX's memory you used:
- 1174 strings out of 494045
- 15573 string characters out of 3148324
- 66093 words of memory out of 3000000
- 4500 multiletter control sequences out of 15000+200000
+ 1209 strings out of 494045
+ 16166 string characters out of 3148324
+ 67093 words of memory out of 3000000
+ 4528 multiletter control sequences out of 15000+200000
  10023 words of font info for 35 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,6n,21p,719b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,21p,718b,250s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmr17.pfb>
-Output written on learning_tex.pdf (9 pages, 111363 bytes).
+Output written on learning_tex.pdf (9 pages, 114928 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

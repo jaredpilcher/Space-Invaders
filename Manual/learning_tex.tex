@@ -61,18 +61,18 @@ Earn extra points for destroying the mothership! Earn between 50 to 350 points f
 \subsection{Aliens}
 
 \subsubsection{Alien Placement and Appearance}
-There are 55 enemies that start on the screen.  They are on a 11 by 5 grid.  Each grid is 15 pixels by 15 pixels.  There are three types of aliens.  The first two rows are the widest aliens, the next two rows are a little narrower and the top row has the narrowest alien.
+There are 55 enemies that start on the screen.  They are on a 11 by 5 grid.  Each grid is 15 pixels by 15 pixels.  There are three types of aliens.  The first two rows are the widest aliens, the next two rows are a little narrower and the top row has the narrowest alien. When an alien is destroyed by a tank
 
 \subsubsection{Alien Movement}
-The aliens move laterally in increments of 2 pixels.  When the rightmost aliens reach the right edge of the screen, the grid of aliens will move down 7 pixels and start moving left.  When the leftmost aliens reach the left edge of the screen, they will move down 7 pixels and start moving right.  The rightmost alien and leftmost alien is the closest alien to the respective sides that has not been killed. When the rightmost column of aliens are destroyed, the aliens march toward the side of the screen until the next column hits that side. The Aliens continue this pattern of movement untill the bottommost row reaches the bottom of the bunkers. 
+The aliens move laterally in increments of 2 pixels.  When the rightmost aliens reach the right edge of the screen, the grid of aliens will move down 7 pixels and start moving left.  When the leftmost aliens reach the left edge of the screen, they will move down 7 pixels and start moving right.  The rightmost alien and leftmost alien is the closest alien to the respective sides that has not been killed. When the rightmost column of aliens are destroyed, the aliens march toward the side of the screen until the next column hits that side. The Aliens continue this pattern of movement until the bottommost row reaches the bottom of the bunkers. 
 
 \subsection{Alien Mothership}
-The alien mothership flies across the screen from left to right. It's tiem of appearance is random. When a bullet strikes the mothership, it flashes, revealing the score received.
+The alien mothership flies across the screen from left to right. It's time of appearance is random. When a bullet strikes the mothership, it flashes, revealing the score received.
 
 \subsection{The Tank}
-The tank moves laterally across the bottom of the screen. The user is able to push the right button to move right, or push the left button to move left at a rate of two pixels. The user is able to hold down the left or right buttons to keep the tank moving accross the screen.
+The tank moves laterally across the bottom of the screen. The user is able to push the right button to move right, or push the left button to move left at a rate of two pixels. The user is able to hold down the left or right buttons to keep the tank moving across the screen.
 
-You may also fire a missile by pushing the middle button. The tank is capable of moving and firing simultaneously. It is also capable of changing direction while shooting. This means that it you are able to hold down the fire button and change directins.
+You may also fire a missile by pushing the middle button. The tank is capable of moving and firing simultaneously. It is also capable of changing direction while shooting. This means that it you are able to hold down the fire button and change directions.
 
 \subsection{Bullets}
 \subsubsection{Tank Bullets}
@@ -81,23 +81,28 @@ Tanks are capable of firing bullets by pushing the middle button. Tank bullets, 
 \subsubsection{Alien Bullets}
 There are two types of alien bullets:
 \begin{enumerate}
-\item{}  Zig zag bullets rotate cyclicly through the following appearances:
+\item{}  Zig zag bullets rotate cyclically through the following appearances:
 
 \begin{enumerate}
 \item 
-
+ \includegraphics[scale=2]{ZigBullet0.png}
 \item 
-
-\item >
-\item 2
+ \includegraphics[scale=2]{ZigBullet1.png}
+\item
+ \includegraphics[scale=2]{ZigBullet2.png}
+\item
+ \includegraphics[scale=2]{ZigBullet3.png}
 \end{enumerate}
 
 \item{}  Cross bullets oscillate through the following appearance:
 
 \begin{enumerate}
-\item T
-\item +
-\item L
+\item
+ \includegraphics[scale=2]{TBullet0.png}
+\item
+ \includegraphics[scale=2]{TBullet1.png}
+\item
+ \includegraphics[scale=2]{TBullet2.png}
 \end{enumerate}
 
 \end{enumerate}
@@ -125,5 +130,15 @@ The game appearance is identical to the flash version of Space Invasion. The gam
 \section{Bug Reports}
 
 \subsection{Drawing Bullets}
+During our design phase, we found a bug involving the drawing of alien bullets to the screen. 
+
+First, we had difficulty cycling through the different different stages of the bullet. We were able to cycle through four stages, however, the fourth state was a different bullet type entirely. We fixed the bug by placing a simple if statement in our draw bullet loop. When the bullet was in the fourth stage, it cycled back to the third state to and reset its state to the first state. In this way we were able to use the same functions for a four cycle bullet and a three cycle bullet.
+
+Second, we found a bug when the first bullet was fired. Without permission, another belt was drawn at pixel location (1,1). We found the problem by analyzing our bullet structs. We discovered that our bullet variables were not initialized to zero. We assumed that they would be initialized to zero, but a random value was placed there. When we initialized all variables, the bug was fixed.
+
+\subsection{Destroying Aliens}
+\subsection{Moving Aliens to Right of Screen}
+\subsection{Overlay of Bullet Black Boxes}
+
 
 \end{document}
