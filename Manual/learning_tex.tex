@@ -151,6 +151,8 @@ Second, we found a bug when the first bullet was fired. Without permission, anot
 
 \subsection{Destroying Aliens}
 \subsection{Moving Aliens to Right of Screen}
+We initially had some naive logic concerning the aliens reaching the edge of the screen.  We set a hard limit for the grid of aliens.  Once the top left corner of the grid had reached the limit, moved down an changed directions.  This did not account for all aliens on the edge of the grid being dead, which would require the alien grid to move one column closer to the edge than it did with all aliens alive.  We fixed this by using a more dynamic approach.
+
 \subsection{Overlay of Bullet Black Boxes}
 
 \subsection{One Alien Firing Two Bullets Simultaneoously}
