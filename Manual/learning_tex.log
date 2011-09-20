@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  19 SEP 2011 17:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  20 SEP 2011 12:50
 entering extended mode
 **D:/Put_Your_Temp_Files_Here/space_invaders/Manual/learning_tex.tex
 (D:/Put_Your_Temp_Files_Here/space_invaders/Manual/learning_tex.tex
@@ -105,9 +105,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {C:/Documents and Settings/All Users/Application Data/MiKTeX/2.9/pdftex/config/
 pdftex.map}]
-No file learning_tex.toc.
+(D:\Put_Your_Temp_Files_Here\space_invaders\Manual\learning_tex.toc)
 \tf@toc=\write3
-[1
+ [1
 
 ]
 Chapter 1.
@@ -128,8 +128,8 @@ End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 1143 strings out of 494045
- 14964 string characters out of 3148324
+ 1145 strings out of 494045
+ 15096 string characters out of 3148324
  64093 words of memory out of 3000000
  4480 multiletter control sequences out of 15000+200000
  9408 words of font info for 33 fonts, out of 3000000 for 9000
