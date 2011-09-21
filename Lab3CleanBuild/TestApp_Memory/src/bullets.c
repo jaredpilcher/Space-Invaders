@@ -11,7 +11,7 @@ void eraseBullet(bullet old_bullet, int prev_frame){
 		} else {
 			type = old_bullet.type;
 		}
-		XTft_DrawBullet(prev_frame,type,old_bullet.x,old_bullet.y,BLACK,BLACK);
+		XTft_EraseBullet(prev_frame,FRAME3,type,old_bullet.x,old_bullet.y);
 	}
 }
 void drawBullet(bullet new_bullet, int next_frame){

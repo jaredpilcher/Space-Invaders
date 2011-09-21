@@ -3,6 +3,12 @@
 #include "xtft_l.h"
 #include "xsysace.h"
 #include "stdlib.h"
+#include "xexception_l.h"
+#include "xgpio.h"
+#include "stdio.h"
+
+#include "xutil.h"
+
 
 #include "drawUtils.h"
 #include "alienCodes.h"

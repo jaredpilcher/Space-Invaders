@@ -49,7 +49,25 @@ void XTft_FillScreen2(Xuint32 BaseAddress, Xuint32 xu, Xuint32 yu, Xuint32 xl,
 
 
 
-
+void XTft_EraseAlien(
+  Xuint32 BaseAddress,
+  Xuint32 BGAddress,
+  Xuint32 type,
+  Xuint32 xu,
+  Xuint32 yu)
+ {  
+  Xuint32 col, x, y;
+  Xuint16 val;
+  for (y = 0; y < XTFT_ALIEN_HEIGHT; y++)
+  {
+    val = XTft_vidAliens[(Xuint32) type][y/2];
+    for (x = 0; x < XTFT_ALIEN_WIDTH; x++)
+    {
+	  col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
+      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+    }
+  }
+}
 
 
 void XTft_DrawAlien(
@@ -57,12 +75,10 @@ void XTft_DrawAlien(
   Xint16 ch,
   Xuint32 xu,
   Xuint32 yu,
-  Xuint32 fgColor,
-  Xuint32 bgColor)
+  Xuint32 fgColor)
 {
   Xuint32 col, x, y;
   Xuint16 val;
-
   for (y = 0; y < XTFT_ALIEN_HEIGHT; y++)
   {
     val = XTft_vidAliens[(Xuint32) ch][y/2];
@@ -71,7 +87,7 @@ void XTft_DrawAlien(
       if (val & (1 << (XTFT_ALIEN_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-        col = bgColor;
+	    continue;
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
     }
   }
@@ -96,13 +112,40 @@ void XTft_DrawTank(
       if (val & (1 << (XTFT_TANK_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-        col = bgColor;
+		continue;
+        //col = bgColor;
       
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
     }
   }
 }
 
+void XTft_EraseBullet(
+  Xuint32 BaseAddress,
+  Xuint32 BGAddress,
+  Xuint32 type,
+  Xuint32 xu,
+  Xuint32 yu)
+ {  
+  Xuint32 col, x, y;
+  Xuint16 val;
+
+  for (y = 0; y < XTFT_BULLET_HEIGHT; y++)
+  {
+    val = XTft_bullets[(Xuint32) type][y/2];
+    for (x = 0; x < XTFT_BULLET_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_BULLET_WIDTH/2 - x/2 - 1)))
+        col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
+      else
+		continue;
+        //col = bgColor;
+      
+        XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+     }
+  }
+}
+ 
 void XTft_DrawBullet(
   Xuint32 BaseAddress,
   Xuint32 type,
@@ -122,7 +165,8 @@ void XTft_DrawBullet(
       if (val & (1 << (XTFT_BULLET_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-        col = bgColor;
+		continue;
+        //col = bgColor;
       
         XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
      }
@@ -147,7 +191,8 @@ void XTft_DrawBunker(
       if (val & (1 << (XTFT_BUNKER_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-        col = bgColor;
+		continue;
+        //col = bgColor;
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
     }
   }

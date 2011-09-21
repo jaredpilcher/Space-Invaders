@@ -8,11 +8,11 @@ void drawTank(coord_object new_tank, int next_frame){
 }
 
 void drawAlien(int x, int y,int type, int next_frame){
-	XTft_DrawAlien(next_frame,type,x,y,WHITE,BLACK);
+	XTft_DrawAlien(next_frame,type,x,y,WHITE);
 }
 
 void eraseAlien(int x, int y,int type, int prev_frame){
-	XTft_DrawAlien(prev_frame,type,x,y,BLACK,BLACK);
+	XTft_EraseAlien(prev_frame,FRAME3,type,x,y);
 }
 
 void eraseAllAliens(coord_object aliens, int prev_frame) {
