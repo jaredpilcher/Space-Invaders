@@ -9,8 +9,8 @@ typedef struct {
   int position;
 } bullet;
 
-void eraseBullet(bullet old_bullet);
-void drawBullet(bullet new_bullet);
+void eraseBullet(bullet old_bullet, int prev_frame);
+void drawBullet(bullet new_bullet, int next_frame);
 bullet moveBullet(bullet new_bullet);
 
 #endif

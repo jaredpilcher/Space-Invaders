@@ -1,6 +1,6 @@
 #include "bullets.h"
 
-void eraseBullet(bullet old_bullet){
+void eraseBullet(bullet old_bullet, int prev_frame){
 	if(old_bullet.active){	   
 		int type;
 		if (old_bullet.type != TANK_BULLET_TYPE){
@@ -11,10 +11,10 @@ void eraseBullet(bullet old_bullet){
 		} else {
 			type = old_bullet.type;
 		}
-		XTft_DrawBullet(FRAME1,type,old_bullet.x,old_bullet.y,BLACK,BLACK);
+		XTft_DrawBullet(prev_frame,type,old_bullet.x,old_bullet.y,BLACK,BLACK);
 	}
 }
-void drawBullet(bullet new_bullet){
+void drawBullet(bullet new_bullet, int next_frame){
 	if (new_bullet.active){
 	   int type;
 		if (new_bullet.type != TANK_BULLET_TYPE){
@@ -26,7 +26,7 @@ void drawBullet(bullet new_bullet){
 			type = new_bullet.type;
 		}
 	   xil_printf("active: %d x: %d y: %d\n\r", new_bullet.active, new_bullet.x, new_bullet.y);
-		XTft_DrawBullet(FRAME1,type,new_bullet.x,new_bullet.y,WHITE,BLACK);
+		XTft_DrawBullet(next_frame,type,new_bullet.x,new_bullet.y,WHITE,BLACK);
 	}
 }
 bullet moveBullet(bullet new_bullet){

@@ -1,11 +1,12 @@
 #include "TestApp_Memory.h"
-#include "bullets.h"
 
 int direction= RIGHT;
 coord_object tank;
 coord_object aliens_coord;
 bullet bullets[4];
 bullet tank_bullet;
+int prev_frame;
+int next_frame;
 
 int aliens[55];
 
@@ -30,38 +31,65 @@ bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col){
 	return new_bullet;
 }
 	
-void drawBunkers(){
-	XTft_DrawBunker(FRAME1,90,335,GREEN,BLACK);
-	XTft_DrawBunker(FRAME1,225,335,GREEN,BLACK);
-	XTft_DrawBunker(FRAME1,362,335,GREEN,BLACK);
-	XTft_DrawBunker(FRAME1,498,335,GREEN,BLACK);
+void drawBunkers(int frame){
+	XTft_DrawBunker(frame,90,335,GREEN,BLACK);
+	XTft_DrawBunker(frame,225,335,GREEN,BLACK);
+	XTft_DrawBunker(frame,362,335,GREEN,BLACK);
+	XTft_DrawBunker(frame,498,335,GREEN,BLACK);
 }
 
+//  NOTE TO US:  render currently takes the global aliens array.  This means we have to erase all aliens, instead of just the ones
+//  that were drawn.  The other problem is that we are passing a pointer for alien_bullets, which resides on the previous stack frame.
+// If there are any problems, look there first.
 void render(coord_object new_aliens_coord, coord_object new_tank, bullet new_tank_bullet, int * aliens, bullet * alien_bullets){
-		  drawBunkers();
-		  eraseAllAliens(aliens_coord);
-		  drawAllAliens(new_aliens_coord, aliens);
-		  eraseTank(tank);
-		  drawTank(new_tank);
-		  eraseBullet(tank_bullet);
-		  drawBullet(new_tank_bullet);
 		  int i;
+		  
+		  //draw stuff to next frame
+		  drawAllAliens(new_aliens_coord, aliens, next_frame);
+		  drawTank(new_tank, next_frame);
+		  drawBullet(new_tank_bullet, next_frame);
 		  for(i=0; i<4; i++){
-		    eraseBullet(bullets[i]);
 			 //xil_printf("%d active: %d x: %d y: %d\n\r", i, alien_bullets[i].active, alien_bullets[i].x, alien_bullets[i].y );
 			 if(alien_bullets[i].active){
 			   
-				drawBullet(alien_bullets[i]);
+				drawBullet(alien_bullets[i], next_frame);
 			 }
-		    bullets[i] = alien_bullets[i];
+
 		  }
+		  
+		  //switch frame
+		  XIo_Out32(XPAR_VGA_FRAMEBUFFER_DCR_BASEADDR, next_frame);
+		  
+		  //erase stuff from previous frame
+		  for(i=0; i<4; i++){
+		    eraseBullet(bullets[i], prev_frame);
+		  }
+		  eraseAllAliens(aliens_coord, prev_frame);
+		  eraseTank(tank, prev_frame);
+		  eraseBullet(tank_bullet, prev_frame);
+
+		  //copy to global state
 		  tank = new_tank;
 		  tank_bullet = new_tank_bullet;
 		  aliens_coord = new_aliens_coord;
+		  for(i=0; i < 4; i++){
+		  		    bullets[i] = alien_bullets[i];
+		  }
+		  
+		  //swap frame variables
+		  prev_frame^=next_frame;
+		  next_frame^=prev_frame;
+		  prev_frame^=next_frame;
+}
+void initialize_frame(int frame){
+  XTft_mClearScreen(frame, BLACK);
 }
 
 int main() {
-  XTft_mClearScreen(FRAME1, BLACK);
+  prev_frame = FRAME1;
+  next_frame = FRAME2;
+  initialize_frame(prev_frame);
+  initialize_frame(next_frame);
   srand(91745452);
   aliens_coord.x= START_X;
   aliens_coord.y= START_Y;
@@ -74,11 +102,12 @@ int main() {
   }
   
   tank_bullet.active = 0;
-  drawAllAliens(aliens_coord, aliens);
+  drawAllAliens(aliens_coord, aliens, prev_frame);
   tank.x = 200;
   tank.y = 400;
-  drawTank(tank);
-  drawBunkers();
+  drawTank(tank, prev_frame);
+  drawBunkers(prev_frame);
+  drawBunkers(next_frame);
   while(1){
     char input;
 	 int alien_number;

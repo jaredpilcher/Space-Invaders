@@ -1,21 +1,21 @@
 #include "TestApp_Memory.h"
 
-void eraseTank(coord_object old_tank){
-	XTft_DrawTank(FRAME1,old_tank.x,old_tank.y,BLACK,BLACK);
+void eraseTank(coord_object old_tank, int prev_frame){
+	XTft_DrawTank(prev_frame,old_tank.x,old_tank.y,BLACK,BLACK);
 }
-void drawTank(coord_object new_tank){
-	XTft_DrawTank(FRAME1,new_tank.x,new_tank.y,GREEN,BLACK);
-}
-
-void drawAlien(int x, int y,int type, int frame){
-	XTft_DrawAlien(frame,type,x,y,WHITE,BLACK);
+void drawTank(coord_object new_tank, int next_frame){
+	XTft_DrawTank(next_frame,new_tank.x,new_tank.y,GREEN,BLACK);
 }
 
-void eraseAlien(int x, int y,int type, int frame){
-	XTft_DrawAlien(frame,type,x,y,BLACK,BLACK);
+void drawAlien(int x, int y,int type, int next_frame){
+	XTft_DrawAlien(next_frame,type,x,y,WHITE,BLACK);
 }
 
-void eraseAllAliens(coord_object aliens) {
+void eraseAlien(int x, int y,int type, int prev_frame){
+	XTft_DrawAlien(prev_frame,type,x,y,BLACK,BLACK);
+}
+
+void eraseAllAliens(coord_object aliens, int prev_frame) {
 	int i;
 	for(i=0; i<NUMBER_OF_ALIENS; i++){
 	   int col = i % 11;
@@ -34,11 +34,11 @@ void eraseAllAliens(coord_object aliens) {
 		} else {
 		   type = THE_CLAW | position;
 		}
-		eraseAlien(x,y,type,FRAME1);
+		eraseAlien(x,y,type,prev_frame);
 	}
 }
 
-void drawAllAliens(coord_object aliens, int * aliens_array) {
+void drawAllAliens(coord_object aliens, int * aliens_array, int next_frame) {
 	int i;
 	for(i=0; i<NUMBER_OF_ALIENS; i++){
 		if( ! aliens_array[i]){
@@ -62,7 +62,7 @@ void drawAllAliens(coord_object aliens, int * aliens_array) {
 		} else {
 			type = BOB | position;
 		}
-		drawAlien(x,y,type,FRAME1);
+		drawAlien(x,y,type,next_frame);
 	}
 }
 
