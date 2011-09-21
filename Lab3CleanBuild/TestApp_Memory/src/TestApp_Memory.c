@@ -24,7 +24,6 @@ bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col){
 	bullet new_bullet;
 	new_bullet.x = new_aliens_coord.x + col*30 + 12;
 	new_bullet.y = new_aliens_coord.y + row*30 + 18;
-	xil_printf("%d %d\n\r",new_bullet.x, new_bullet.y);
 	new_bullet.type = rand() % 2? ALIEN_BULLET_ONE : ALIEN_BULLET_TWO;
 	new_bullet.active = 1;
 	new_bullet.position = 0;
@@ -49,9 +48,7 @@ void render(coord_object new_aliens_coord, coord_object new_tank, bullet new_tan
 		  drawTank(new_tank, next_frame);
 		  drawBullet(new_tank_bullet, next_frame);
 		  for(i=0; i<4; i++){
-			 //xil_printf("%d active: %d x: %d y: %d\n\r", i, alien_bullets[i].active, alien_bullets[i].x, alien_bullets[i].y );
 			 if(alien_bullets[i].active){
-			   
 				drawBullet(alien_bullets[i], next_frame);
 			 }
 
@@ -159,7 +156,6 @@ int main() {
 		  int j;
 		  while(!unique){
 		    for(j=0; j < 4; j++){
-			   xil_printf("Comparing %x and %x\n\r", new_bullets[j].x, alien_number*30 + 12 + new_aliens_coord.x);
 				if (
 				(new_bullets[j].x == alien_number*30 + 12 + new_aliens_coord.x) &&
 				(new_bullets[j].y == new_aliens_coord.y + 4*30 + 18)

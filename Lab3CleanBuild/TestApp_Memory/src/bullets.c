@@ -25,7 +25,6 @@ void drawBullet(bullet new_bullet, int next_frame){
 		} else {
 			type = new_bullet.type;
 		}
-	   xil_printf("active: %d x: %d y: %d\n\r", new_bullet.active, new_bullet.x, new_bullet.y);
 		XTft_DrawBullet(next_frame,type,new_bullet.x,new_bullet.y,WHITE,BLACK);
 	}
 }
