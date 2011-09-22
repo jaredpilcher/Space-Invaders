@@ -122,9 +122,9 @@ FPGA_IMP_DEPENDENCY = $(BMM_FILE) $(POSTSYN_NETLIST) $(UCF_FILE) $(BITGEN_UT_FIL
 # SOFTWARE APPLICATION TESTAPP_MEMORY
 #################################################################
 
-TESTAPP_MEMORY_SOURCES = TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c 
+TESTAPP_MEMORY_SOURCES = TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c 
 
-TESTAPP_MEMORY_HEADERS = TestApp_Memory/src/ddr_header.h TestApp_Memory/src/drawUtils.h TestApp_Memory/src/alienCodes.h TestApp_Memory/src/TestApp_Memory.h TestApp_Memory/src/bullets.h TestApp_Memory/src/coord_objects.h 
+TESTAPP_MEMORY_HEADERS = TestApp_Memory/src/ddr_header.h TestApp_Memory/src/drawUtils.h TestApp_Memory/src/alienCodes.h TestApp_Memory/src/TestApp_Memory.h TestApp_Memory/src/bullets.h TestApp_Memory/src/coord_objects.h TestApp_Memory/src/timer.h 
 
 TESTAPP_MEMORY_CC = powerpc-eabi-gcc
 TESTAPP_MEMORY_CC_SIZE = powerpc-eabi-size

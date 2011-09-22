@@ -50,7 +50,6 @@ void render(coord_object new_aliens_coord, coord_object new_tank, bullet new_tan
 		  int i;
 		  
 		  //draw stuff to next frame
-		  xil_printf("new aliens position:  %d  %d\n\r",new_aliens_coord.x, new_aliens_coord.y);
 		  drawAllAliens(new_aliens_coord, aliens, next_frame);
 		  drawTank(new_tank, next_frame);
 		  drawBullet(new_tank_bullet, next_frame);
@@ -68,7 +67,6 @@ void render(coord_object new_aliens_coord, coord_object new_tank, bullet new_tan
 		  for(i=0; i<4; i++){
 		    eraseBullet(bullets[i], prev_frame);
 		  }
-		  xil_printf("previous aliens position:  %d  %d\n\r",aliens_coord.x, aliens_coord.y);
 		  eraseAllAliens(aliens_coord, prev_frame);
 		  eraseTank(tank, prev_frame);
 		  eraseBullet(tank_bullet, prev_frame);
@@ -88,6 +86,10 @@ void render(coord_object new_aliens_coord, coord_object new_tank, bullet new_tan
 }
 void initialize_frame(int frame){
   XTft_mClearScreen(frame, BLACK);
+}
+
+void helloWorld(){
+  xil_printf("Hello World %x\r\n");
 }
 
 int main() {
@@ -130,10 +132,13 @@ int main() {
 	unsigned old_pit_counter = 0;
 	unsigned new_pit_counter = 0;
 	unsigned time_delta=0;
+	Timer test_timer;
+	test_timer = newTimer(100, helloWorld);
   while(1){
 	new_pit_counter=pit_counter;
 	time_delta=new_pit_counter-old_pit_counter;
 	if(time_delta != 0){
+		incTimer(&test_timer,time_delta);
 		alien_counter+=time_delta;
 		if(alien_counter > 50){
 			alien_counter=alien_counter-400;
