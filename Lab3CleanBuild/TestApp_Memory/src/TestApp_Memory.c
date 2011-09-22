@@ -31,8 +31,8 @@ bullet fireBullet(coord_object tank){
 	return new_bullet;
 }
 
-
 bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col){
+	xil_printf("fire bullet: %d, %d", row, col);
 	bullet new_bullet;
 	new_bullet.x = new_aliens_coord.x + col*30 + 12;
 	new_bullet.y = new_aliens_coord.y + row*30 + 18;
@@ -41,7 +41,37 @@ bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col){
 	new_bullet.position = 0;
 	return new_bullet;
 }
-	
+
+void newAlienBullet(){
+	int i;
+	for(i = 0; i < 4; i++){
+		if (new_bullets[i].active == 0){
+			break;
+		}
+	}
+	if(i == 4){
+		return;
+	}
+	int alien_bullet = i;
+	int col_number = rand() % 11;
+	int alien_number;
+	for(i = 4; i >=0; i--){
+		if(aliens[i*11+col_number]){
+			new_bullets[alien_bullet]=fireAlienBullet(new_aliens_coord, i, col_number);
+			return;
+		}
+	}
+}
+
+void moveAllBullets(){
+	int i;
+	new_tank_bullet = moveBullet(new_tank_bullet);
+	for(i = 0; i < 4; i++){
+		if(new_bullets[i].active){
+			new_bullets[i] = moveBullet(new_bullets[i]);
+		}
+	}
+}
 void drawBunkers(int frame){
 	XTft_DrawBunker(frame,90,335,GREEN,BLACK);
 	XTft_DrawBunker(frame,225,335,GREEN,BLACK);
@@ -113,6 +143,10 @@ int main() {
   for(i=0; i<sizeof(aliens);i++){
 	aliens[i]=1;
   }
+  aliens[46]=0;
+  aliens[54]=0;
+  aliens[50]=0;
+  aliens[39]=0;
   for(i=0; i<4; i++){
 	bullets[i].active = 0;
   }
@@ -146,13 +180,15 @@ int main() {
 	unsigned time_delta=0;
 
 	timers[0] = newTimer(1000, helloWorld);
-	timers[1] = newTimer(500, moveAliens);
-	timers[2] = newTimer(16, render);
+	timers[1] = newTimer(450, moveAliens);
+	timers[2] = newTimer(1000, newAlienBullet);
+	timers[3] = newTimer(80, moveAllBullets);
+	timers[4] = newTimer(16, render);
   while(1){
 	new_pit_counter=pit_counter;
 	time_delta=new_pit_counter-old_pit_counter;
 	if(time_delta != 0){
-		for(i=0;i<3;i++){
+		for(i=0;i<5;i++){
 			incTimer(&timers[i],time_delta);
 		}
 	}
