@@ -1,4 +1,5 @@
 #include "TestApp_Memory.h"
+#include "coord_objects.h"
 
 void eraseTank(coord_object old_tank, int prev_frame){
 	XTft_DrawTank(prev_frame,old_tank.x,old_tank.y,BLACK,BLACK);
@@ -81,20 +82,20 @@ coord_object moveDown(coord_object aliens){
 	return aliens;
 }
 
-coord_object moveAliens(coord_object aliens) {
+void moveAliens() {
   if (direction==RIGHT){
-    if (aliens.x > 640 - (330 + MINIMUM_MOVEMENT)){
+    if (new_aliens_coord.x > 640 - (330 + MINIMUM_MOVEMENT)){
 	   direction = LEFT;
-		return moveDown(aliens);
+		new_aliens_coord = moveDown(new_aliens_coord);
 	 }else{
-		return moveRight(aliens);
+		new_aliens_coord = moveRight(new_aliens_coord);
 	 }
   } else {
-  	 if (aliens.x < MINIMUM_MOVEMENT){
+  	 if (new_aliens_coord.x < MINIMUM_MOVEMENT){
 	   direction = RIGHT;
-		return moveDown(aliens);
+		new_aliens_coord = moveDown(new_aliens_coord);
 	 } else {
-	   return moveLeft(aliens);
+	   new_aliens_coord = moveLeft(new_aliens_coord);
 	 }
   }
 }

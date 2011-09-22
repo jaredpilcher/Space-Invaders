@@ -1,10 +1,16 @@
 #include "TestApp_Memory.h"
 
+Timer timers[10];
+
 int direction= RIGHT;
 coord_object tank;
+coord_object new_tank;
 coord_object aliens_coord;
+coord_object new_aliens_coord;
 bullet bullets[4];
+bullet new_bullets[4];
 bullet tank_bullet;
+bullet new_tank_bullet;
 int prev_frame;
 int next_frame;
 unsigned pit_counter;
@@ -46,7 +52,7 @@ void drawBunkers(int frame){
 //  NOTE TO US:  render currently takes the global aliens array.  This means we have to erase all aliens, instead of just the ones
 //  that were drawn.  The other problem is that we are passing a pointer for alien_bullets, which resides on the previous stack frame.
 // If there are any problems, look there first.
-void render(coord_object new_aliens_coord, coord_object new_tank, bullet new_tank_bullet, int * aliens, bullet * alien_bullets){
+void render(){
 		  int i;
 		  
 		  //draw stuff to next frame
@@ -54,8 +60,8 @@ void render(coord_object new_aliens_coord, coord_object new_tank, bullet new_tan
 		  drawTank(new_tank, next_frame);
 		  drawBullet(new_tank_bullet, next_frame);
 		  for(i=0; i<4; i++){
-			 if(alien_bullets[i].active){
-				drawBullet(alien_bullets[i], next_frame);
+			 if(new_bullets[i].active){
+				drawBullet(new_bullets[i], next_frame);
 			 }
 
 		  }
@@ -76,7 +82,7 @@ void render(coord_object new_aliens_coord, coord_object new_tank, bullet new_tan
 		  tank_bullet = new_tank_bullet;
 		  aliens_coord = new_aliens_coord;
 		  for(i=0; i < 4; i++){
-		  		    bullets[i] = alien_bullets[i];
+		  		    bullets[i] = new_bullets[i];
 		  }
 		  
 		  //swap frame variables
@@ -102,6 +108,7 @@ int main() {
   srand(91745452);
   aliens_coord.x= START_X;
   aliens_coord.y= START_Y;
+  new_aliens_coord = aliens_coord;
   int i;
   for(i=0; i<sizeof(aliens);i++){
 	aliens[i]=1;
@@ -109,11 +116,16 @@ int main() {
   for(i=0; i<4; i++){
 	bullets[i].active = 0;
   }
+  for(i=0; i<4; i++){
+	new_bullets[i] = bullets[i];
+  }
   
   tank_bullet.active = 0;
+  new_tank_bullet = tank_bullet;
   drawAllAliens(aliens_coord, aliens, prev_frame);
   tank.x = 200;
   tank.y = 400;
+  new_tank = tank;
   drawTank(tank, prev_frame);
   drawBunkers(prev_frame);
   drawBunkers(next_frame);
@@ -124,7 +136,7 @@ int main() {
 	XExc_RegisterHandler(XEXC_ID_PIT_INT, pithandler,
                           data);
 	XTime_PITEnableAutoReload();
-	XTime_PITSetInterval(1000000);
+	XTime_PITSetInterval(100000);
 	XExc_mEnableExceptions(XEXC_ALL);
 	XTime_PITEnableInterrupt(); 
 	XTime_PITClearInterrupt();
@@ -132,19 +144,16 @@ int main() {
 	unsigned old_pit_counter = 0;
 	unsigned new_pit_counter = 0;
 	unsigned time_delta=0;
-	Timer test_timer;
-	test_timer = newTimer(100, helloWorld);
+
+	timers[0] = newTimer(1000, helloWorld);
+	timers[1] = newTimer(500, moveAliens);
+	timers[2] = newTimer(16, render);
   while(1){
 	new_pit_counter=pit_counter;
 	time_delta=new_pit_counter-old_pit_counter;
 	if(time_delta != 0){
-		incTimer(&test_timer,time_delta);
-		alien_counter+=time_delta;
-		if(alien_counter > 50){
-			alien_counter=alien_counter-400;
-			coord_object new_aliens_coord = aliens_coord;
-			new_aliens_coord = moveAliens(new_aliens_coord);
-			render(new_aliens_coord,tank, tank_bullet, aliens, bullets);
+		for(i=0;i<3;i++){
+			incTimer(&timers[i],time_delta);
 		}
 	}
 	old_pit_counter=new_pit_counter;

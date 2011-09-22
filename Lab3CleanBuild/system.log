@@ -17265,3 +17265,1541 @@ Downloading Bitstream onto the target board
 impact -batch etc/download.cmd
 
 
+Release 9.1.02i - iMPACT J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+AutoDetecting cable. Please wait.
+
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+
+ Driver windrvr6.sys version = 8.1.0.0. WinDriver v8.10 Jungo (c) 1997 - 2006 Build Date: Aug 15 2006 X86 32bit SYS
+14:21:34, version = 810.
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+ ECP hardware is detected.
+Cable connection established.
+
+Connecting to cable (Parallel Port - LPT1) in ECP mode.
+Checking cable driver.
+ Driver xpc4drvr.sys version = 1.0.4.0. LPT base address = 0378h.
+
+ Cable Type = 1, Revision = 0.
+ Setting cable speed to 5 MHz.
+Cable connection established.
+Identifying chain contents ....Version is 0001
+'1': : Manufacturer's ID =Xilinx xc2vp30, Version : 1
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/virtex2p/data/xc2vp30.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 0000
+'2': : Manufacturer's ID =Xilinx xccace, Version : 0
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/acecf/data/xccace.bsd...
+INFO:iMPACT:501 - '1': Added Device xccace successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 1111
+'3': : Manufacturer's ID =Xilinx xcf32p, Version : 15
+
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/xcfp/data/xcf32p.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      0 sec.
+Elapsed time =      0 sec.
+'3': Loading file 'implementation/download.bit' ...
+
+done.
+INFO:iMPACT:501 - '3': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'3': Programming device...
+
+done.
+'3': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '3': Completed downloading bit file to device.
+INFO:iMPACT - '3': Checking done pin....done.
+'3': Programmed successfully.
+Elapsed time =      3 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 16:51:04 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+At Local date and time: Thu Sep 22 16:51:06 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/coord_objects.h:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'new_aliens_coord'
+TestApp_Memory/src/TestApp_Memory.c: In function 'main':
+TestApp_Memory/src/TestApp_Memory.c:139: error: 'alien_timer' undeclared (first use in this function)
+TestApp_Memory/src/TestApp_Memory.c:139: error: (Each undeclared identifier is reported only once
+TestApp_Memory/src/TestApp_Memory.c:139: error: for each function it appears in.)
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/coord_objects.h:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'new_aliens_coord'
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/coord_objects.h:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'new_aliens_coord'
+TestApp_Memory/src/coord_objects.c:84: warning: conflicting types for 'moveAliens'
+TestApp_Memory/src/coord_objects.h:23: warning: previous declaration of 'moveAliens' was here
+TestApp_Memory/src/coord_objects.c: In function 'moveAliens':
+TestApp_Memory/src/coord_objects.c:86: error: 'new_aliens_coord' undeclared (first use in this function)
+TestApp_Memory/src/coord_objects.c:86: error: (Each undeclared identifier is reported only once
+TestApp_Memory/src/coord_objects.c:86: error: for each function it appears in.)
+TestApp_Memory/src/coord_objects.c:93: error: 'aliens' undeclared (first use in this function)
+
+
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+make: *** [TestApp_Memory/executable.elf] Error 1
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 16:51:45 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/coord_objects.h:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'new_aliens_coord'
+TestApp_Memory/src/TestApp_Memory.c: In function 'main':
+TestApp_Memory/src/TestApp_Memory.c:139: error: 'alien_timer' undeclared (first use in this function)
+TestApp_Memory/src/TestApp_Memory.c:139: error: (Each undeclared identifier is reported only once
+TestApp_Memory/src/TestApp_Memory.c:139: error: for each function it appears in.)
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/coord_objects.h:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'new_aliens_coord'
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/coord_objects.h:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'new_aliens_coord'
+TestApp_Memory/src/coord_objects.c:2:26: error: coord_object.h: No such file or directory
+TestApp_Memory/src/coord_objects.c:85: warning: conflicting types for 'moveAliens'
+TestApp_Memory/src/coord_objects.h:23: warning: previous declaration of 'moveAliens' was here
+TestApp_Memory/src/coord_objects.c: In function 'moveAliens':
+TestApp_Memory/src/coord_objects.c:87: error: 'new_aliens_coord' undeclared (first use in this function)
+TestApp_Memory/src/coord_objects.c:87: error: (Each undeclared identifier is reported only once
+TestApp_Memory/src/coord_objects.c:87: error: for each function it appears in.)
+
+
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+make: *** [TestApp_Memory/executable.elf] Error 1
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 16:52:11 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+At Local date and time: Thu Sep 22 16:52:13 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/TestApp_Memory.c: In function 'main':
+TestApp_Memory/src/TestApp_Memory.c:139: error: 'alien_timer' undeclared (first use in this function)
+TestApp_Memory/src/TestApp_Memory.c:139: error: (Each undeclared identifier is reported only once
+TestApp_Memory/src/TestApp_Memory.c:139: error: for each function it appears in.)
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/coord_objects.c:2:26: error: coord_object.h: No such file or directory
+TestApp_Memory/src/coord_objects.c:85: warning: conflicting types for 'moveAliens'
+TestApp_Memory/src/coord_objects.h:24: warning: previous declaration of 'moveAliens' was here
+
+
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+make: *** [TestApp_Memory/executable.elf] Error 1
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 16:52:52 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/TestApp_Memory.c: In function 'main':
+TestApp_Memory/src/TestApp_Memory.c:139: error: 'alien_timer' undeclared (first use in this function)
+TestApp_Memory/src/TestApp_Memory.c:139: error: (Each undeclared identifier is reported only once
+TestApp_Memory/src/TestApp_Memory.c:139: error: for each function it appears in.)
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+
+
+make: *** [TestApp_Memory/executable.elf] Error 1
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 16:53:23 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+
+
+powerpc-eabi-size TestApp_Memory/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22462	   4748	   2776	  29986	   7522	TestApp_Memory/executable.elf
+
+
+
+*********************************************
+Initializing BRAM contents of the bitstream
+
+
+*********************************************
+bitinit system.mhs  -pe ppc405_0 TestApp_Memory/executable.elf  \
+-bt implementation/system.bit -o implementation/download.bit
+
+
+
+bitinit version Xilinx EDK 9.1.02 Build EDK_J_SP2.4
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_
+0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagp
+pc_cntlr_v2_1_0.tcl ...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_
+1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2
+opb_bridge_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_sysace_v1_00_c/data/opb_sysa
+ce_v2_1_0.tcl ...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_ddr_v2_00_a/data/plb_ddr_v2_
+1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/p
+lb_bram_if_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_modu
+le_v2_1_0.tcl ...
+
+
+
+Overriding IP level properties ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jt
+   agppc_cntlr_v2_1_0.mpd line 35 - jtagppc_0 (jtagppc_cntlr) tool is overriding
+   PARAMETER C_DEVICE value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 38 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 40 - PushButtons_5Bit (opb_gpio) tool is overriding
+   PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_
+   v2_1_0.mpd line 43 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool
+   is overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 41 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_0 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_1 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2dcr_bridge_v1_00_a\data\o
+   pb2dcr_bridge_v2_1_0.mpd line 38 - opb2dcr_bridge_0 (opb2dcr_bridge) tool is
+   overriding PARAMETER C_FAMILY value to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_
+if_cntlr_v2_1_0.tcl ...
+WARNING:MDT - plb2opb_bridge (plb2opb) -
+   D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 135
+   - ADDRESS specified by PARAMETER C_RNG1_BASEADDR is ignored
+
+
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0b1000000000-0b1000000001)
+VGA_FrameBuffer	plb->plb2opb->opb->opb2dcr_bridge_0->dcr_v29_0
+  (0000000000-0x0fffffff) DDR_256MB_32MX64_rank1_row13_col10_cl2_5	plb
+  (0x40000000-0x4000ffff) PushButtons_5Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+  (0b0000010000-0b0000010011) ppc405_1	
+  (0b0000100000-0b0000100011) ppc405_1	
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file TestApp_Memory/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -bt "implementation/system.bit"  -bd
+"TestApp_Memory/executable.elf" tag ppc405_0  -o b implementation/download.bit 
+
+
+Memory Initialization completed successfully.
+
+
+
+
+*********************************************
+Downloading Bitstream onto the target board
+
+
+*********************************************
+impact -batch etc/download.cmd
+
+
+Release 9.1.02i - iMPACT J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+AutoDetecting cable. Please wait.
+
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 8.1.0.0. WinDriver v8.10 Jungo (c) 1997 - 2006 Build Date: Aug 15 2006 X86 32bit SYS
+14:21:34, version = 810.
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+ ECP hardware is detected.
+Cable connection established.
+
+Connecting to cable (Parallel Port - LPT1) in ECP mode.
+Checking cable driver.
+ Driver xpc4drvr.sys version = 1.0.4.0. LPT base address = 0378h.
+ Cable Type = 1, Revision = 0.
+ Setting cable speed to 5 MHz.
+Cable connection established.
+Identifying chain contents ....Version is 0001
+'1': : Manufacturer's ID =Xilinx xc2vp30, Version : 1
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/virtex2p/data/xc2vp30.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 0000
+'2': : Manufacturer's ID =Xilinx xccace, Version : 0
+
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/acecf/data/xccace.bsd...
+INFO:iMPACT:501 - '1': Added Device xccace successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 1111
+'3': : Manufacturer's ID =Xilinx xcf32p, Version : 15
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/xcfp/data/xcf32p.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      0 sec.
+Elapsed time =      0 sec.
+'3': Loading file 'implementation/download.bit' ...
+
+done.
+INFO:iMPACT:501 - '3': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'3': Programming device...
+
+done.
+'3': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '3': Completed downloading bit file to device.
+INFO:iMPACT - '3': Checking done pin....done.
+'3': Programmed successfully.
+Elapsed time =      4 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 17:00:37 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/TestApp_Memory.c: In function 'render':
+TestApp_Memory/src/TestApp_Memory.c:61: error: 'alien_bullets' undeclared (first use in this function)
+TestApp_Memory/src/TestApp_Memory.c:61: error: (Each undeclared identifier is reported only once
+TestApp_Memory/src/TestApp_Memory.c:61: error: for each function it appears in.)
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+
+
+make: *** [TestApp_Memory/executable.elf] Error 1
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 17:03:04 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+
+
+powerpc-eabi-size TestApp_Memory/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22490	   4748	   2876	  30114	   75a2	TestApp_Memory/executable.elf
+
+
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit system.mhs  -pe ppc405_0 TestApp_Memory/executable.elf  \
+-bt implementation/system.bit -o implementation/download.bit
+
+
+
+bitinit version Xilinx EDK 9.1.02 Build EDK_J_SP2.4
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_
+0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagp
+pc_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_
+1_0.tcl ...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2
+opb_bridge_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_sysace_v1_00_c/data/opb_sysa
+ce_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_ddr_v2_00_a/data/plb_ddr_v2_
+1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/p
+lb_bram_if_cntlr_v2_1_0.tcl ...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_modu
+le_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jt
+   agppc_cntlr_v2_1_0.mpd line 35 - jtagppc_0 (jtagppc_cntlr) tool is overriding
+   PARAMETER C_DEVICE value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 38 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 40 - PushButtons_5Bit (opb_gpio) tool is overriding
+   PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_
+   v2_1_0.mpd line 43 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool
+   is overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 41 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_0 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_1 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2dcr_bridge_v1_00_a\data\o
+   pb2dcr_bridge_v2_1_0.mpd line 38 - opb2dcr_bridge_0 (opb2dcr_bridge) tool is
+   overriding PARAMETER C_FAMILY value to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl
+...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_
+if_cntlr_v2_1_0.tcl ...
+WARNING:MDT - plb2opb_bridge (plb2opb) -
+   D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 135
+   - ADDRESS specified by PARAMETER C_RNG1_BASEADDR is ignored
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0b1000000000-0b1000000001)
+VGA_FrameBuffer	plb->plb2opb->opb->opb2dcr_bridge_0->dcr_v29_0
+  (0000000000-0x0fffffff) DDR_256MB_32MX64_rank1_row13_col10_cl2_5	plb
+  (0x40000000-0x4000ffff) PushButtons_5Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+  (0b0000010000-0b0000010011) ppc405_1	
+  (0b0000100000-0b0000100011) ppc405_1	
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file TestApp_Memory/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -bt "implementation/system.bit"  -bd
+"TestApp_Memory/executable.elf" tag ppc405_0  -o b implementation/download.bit 
+
+
+Memory Initialization completed successfully.
+
+
+
+
+
+
+*********************************************
+Downloading Bitstream onto the target board
+*********************************************
+impact -batch etc/download.cmd
+
+
+Release 9.1.02i - iMPACT J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+AutoDetecting cable. Please wait.
+
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 8.1.0.0. WinDriver v8.10 Jungo (c) 1997 - 2006 Build Date: Aug 15 2006 X86 32bit SYS
+14:21:34, version = 810.
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+ ECP hardware is detected.
+Cable connection established.
+
+Connecting to cable (Parallel Port - LPT1) in ECP mode.
+Checking cable driver.
+ Driver xpc4drvr.sys version = 1.0.4.0. LPT base address = 0378h.
+ Cable Type = 1, Revision = 0.
+ Setting cable speed to 5 MHz.
+Cable connection established.
+Identifying chain contents ....Version is 0001
+'1': : Manufacturer's ID =Xilinx xc2vp30, Version : 1
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/virtex2p/data/xc2vp30.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 0000
+'2': : Manufacturer's ID =Xilinx xccace, Version : 0
+
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/acecf/data/xccace.bsd...
+INFO:iMPACT:501 - '1': Added Device xccace successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 1111
+'3': : Manufacturer's ID =Xilinx xcf32p, Version : 15
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/xcfp/data/xcf32p.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      1 sec.
+Elapsed time =      0 sec.
+'3': Loading file 'implementation/download.bit' ...
+
+done.
+INFO:iMPACT:501 - '3': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'3': Programming device...
+
+done.
+'3': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '3': Completed downloading bit file to device.
+INFO:iMPACT - '3': Checking done pin....done.
+'3': Programmed successfully.
+Elapsed time =      3 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 17:04:08 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+
+
+powerpc-eabi-size TestApp_Memory/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22490	   4748	   2876	  30114	   75a2	TestApp_Memory/executable.elf
+
+
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit system.mhs  -pe ppc405_0 TestApp_Memory/executable.elf  \
+-bt implementation/system.bit -o implementation/download.bit
+
+
+
+bitinit version Xilinx EDK 9.1.02 Build EDK_J_SP2.4
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_
+0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagp
+pc_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_
+1_0.tcl ...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2
+opb_bridge_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_sysace_v1_00_c/data/opb_sysa
+ce_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_ddr_v2_00_a/data/plb_ddr_v2_
+1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/p
+lb_bram_if_cntlr_v2_1_0.tcl ...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_modu
+le_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jt
+   agppc_cntlr_v2_1_0.mpd line 35 - jtagppc_0 (jtagppc_cntlr) tool is overriding
+   PARAMETER C_DEVICE value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 38 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 40 - PushButtons_5Bit (opb_gpio) tool is overriding
+   PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_
+   v2_1_0.mpd line 43 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool
+   is overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 41 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_0 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_1 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2dcr_bridge_v1_00_a\data\o
+   pb2dcr_bridge_v2_1_0.mpd line 38 - opb2dcr_bridge_0 (opb2dcr_bridge) tool is
+   overriding PARAMETER C_FAMILY value to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_
+if_cntlr_v2_1_0.tcl ...
+WARNING:MDT - plb2opb_bridge (plb2opb) -
+   D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 135
+   - ADDRESS specified by PARAMETER C_RNG1_BASEADDR is ignored
+
+
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0b1000000000-0b1000000001)
+VGA_FrameBuffer	plb->plb2opb->opb->opb2dcr_bridge_0->dcr_v29_0
+  (0000000000-0x0fffffff) DDR_256MB_32MX64_rank1_row13_col10_cl2_5	plb
+  (0x40000000-0x4000ffff) PushButtons_5Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+  (0b0000010000-0b0000010011) ppc405_1	
+  (0b0000100000-0b0000100011) ppc405_1	
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file TestApp_Memory/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -bt "implementation/system.bit"  -bd
+"TestApp_Memory/executable.elf" tag ppc405_0  -o b implementation/download.bit 
+
+
+Memory Initialization completed successfully.
+
+
+
+
+
+
+*********************************************
+Downloading Bitstream onto the target board
+*********************************************
+impact -batch etc/download.cmd
+
+
+Release 9.1.02i - iMPACT J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+AutoDetecting cable. Please wait.
+
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 8.1.0.0. WinDriver v8.10 Jungo (c) 1997 - 2006 Build Date: Aug 15 2006 X86 32bit SYS
+14:21:34, version = 810.
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+ ECP hardware is detected.
+Cable connection established.
+
+Connecting to cable (Parallel Port - LPT1) in ECP mode.
+Checking cable driver.
+ Driver xpc4drvr.sys version = 1.0.4.0. LPT base address = 0378h.
+ Cable Type = 1, Revision = 0.
+ Setting cable speed to 5 MHz.
+Cable connection established.
+Identifying chain contents ....Version is 0001
+'1': : Manufacturer's ID =Xilinx xc2vp30, Version : 1
+
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/virtex2p/data/xc2vp30.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 0000
+'2': : Manufacturer's ID =Xilinx xccace, Version : 0
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/acecf/data/xccace.bsd...
+INFO:iMPACT:501 - '1': Added Device xccace successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 1111
+'3': : Manufacturer's ID =Xilinx xcf32p, Version : 15
+
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/xcfp/data/xcf32p.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      1 sec.
+Elapsed time =      0 sec.
+'3': Loading file 'implementation/download.bit' ...
+
+done.
+INFO:iMPACT:501 - '3': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'3': Programming device...
+
+done.
+'3': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '3': Completed downloading bit file to device.
+INFO:iMPACT - '3': Checking done pin....done.
+'3': Programmed successfully.
+Elapsed time =      3 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 17:06:25 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/TestApp_Memory.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/TestApp_Memory.c: In function 'main':
+TestApp_Memory/src/TestApp_Memory.c:156: error: too few arguments to function 'incTimer'
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/bullets.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/TestApp_Memory.h:17,
+                 from TestApp_Memory/src/coord_objects.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:16,
+                 from TestApp_Memory/src/bullets.h:3,
+                 from TestApp_Memory/src/TestApp_Memory.h:15,
+                 from TestApp_Memory/src/coord_objects.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+
+
+In file included from TestApp_Memory/src/timer.c:1:
+TestApp_Memory/src/timer.h:11:7: warning: no newline at end of file
+TestApp_Memory/src/timer.c:17:2: warning: no newline at end of file
+make: *** [TestApp_Memory/executable.elf] Error 1
+
+
+
+
+Done!
+
+At Local date and time: Thu Sep 22 17:08:49 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+powerpc-eabi-size TestApp_Memory/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22490	   4748	   3004	  30242	   7622	TestApp_Memory/executable.elf
+
+
+
+*********************************************
+Initializing BRAM contents of the bitstream
+
+
+*********************************************
+bitinit system.mhs  -pe ppc405_0 TestApp_Memory/executable.elf  \
+-bt implementation/system.bit -o implementation/download.bit
+
+
+
+bitinit version Xilinx EDK 9.1.02 Build EDK_J_SP2.4
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_
+0.tcl ...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagp
+pc_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_
+1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2
+opb_bridge_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_sysace_v1_00_c/data/opb_sysa
+ce_v2_1_0.tcl ...
+
+
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_ddr_v2_00_a/data/plb_ddr_v2_
+1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/p
+lb_bram_if_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_modu
+le_v2_1_0.tcl ...
+
+
+
+Overriding IP level properties ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jt
+   agppc_cntlr_v2_1_0.mpd line 35 - jtagppc_0 (jtagppc_cntlr) tool is overriding
+   PARAMETER C_DEVICE value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 38 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 40 - PushButtons_5Bit (opb_gpio) tool is overriding
+   PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_
+   v2_1_0.mpd line 43 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool
+   is overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 41 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_0 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_1 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2dcr_bridge_v1_00_a\data\o
+   pb2dcr_bridge_v2_1_0.mpd line 38 - opb2dcr_bridge_0 (opb2dcr_bridge) tool is
+   overriding PARAMETER C_FAMILY value to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_
+if_cntlr_v2_1_0.tcl ...
+WARNING:MDT - plb2opb_bridge (plb2opb) -
+   D:\Put_Your_Temp_Files_Here\space_invaders\Lab3CleanBuild\system.mhs line 135
+   - ADDRESS specified by PARAMETER C_RNG1_BASEADDR is ignored
+
+
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0b1000000000-0b1000000001)
+VGA_FrameBuffer	plb->plb2opb->opb->opb2dcr_bridge_0->dcr_v29_0
+  (0000000000-0x0fffffff) DDR_256MB_32MX64_rank1_row13_col10_cl2_5	plb
+  (0x40000000-0x4000ffff) PushButtons_5Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+  (0b0000010000-0b0000010011) ppc405_1	
+  (0b0000100000-0b0000100011) ppc405_1	
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file TestApp_Memory/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -bt "implementation/system.bit"  -bd
+"TestApp_Memory/executable.elf" tag ppc405_0  -o b implementation/download.bit 
+
+
+Memory Initialization completed successfully.
+
+
+
+
+*********************************************
+
+
+Downloading Bitstream onto the target board
+*********************************************
+impact -batch etc/download.cmd
+
+
+Release 9.1.02i - iMPACT J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+AutoDetecting cable. Please wait.
+
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 8.1.0.0. WinDriver v8.10 Jungo (c) 1997 - 2006 Build Date: Aug 15 2006 X86 32bit SYS
+14:21:34, version = 810.
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+ ECP hardware is detected.
+Cable connection established.
+
+Connecting to cable (Parallel Port - LPT1) in ECP mode.
+Checking cable driver.
+ Driver xpc4drvr.sys version = 1.0.4.0. LPT base address = 0378h.
+ Cable Type = 1, Revision = 0.
+ Setting cable speed to 5 MHz.
+Cable connection established.
+Identifying chain contents ....Version is 0001
+'1': : Manufacturer's ID =Xilinx xc2vp30, Version : 1
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/virtex2p/data/xc2vp30.bsd...
+
+INFO:iMPACT:501 - '1': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 0000
+'2': : Manufacturer's ID =Xilinx xccace, Version : 0
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/acecf/data/xccace.bsd...
+INFO:iMPACT:501 - '1': Added Device xccace successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Version is 1111
+'3': : Manufacturer's ID =Xilinx xcf32p, Version : 15
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx91i/xcfp/data/xcf32p.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      1 sec.
+Elapsed time =      0 sec.
+'3': Loading file 'implementation/download.bit' ...
+
+done.
+INFO:iMPACT:501 - '3': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'3': Programming device...
+
+done.
+'3': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '3': Completed downloading bit file to device.
+INFO:iMPACT - '3': Checking done pin....done.
+'3': Programmed successfully.
+Elapsed time =      3 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+
+
+
+Done!
+
