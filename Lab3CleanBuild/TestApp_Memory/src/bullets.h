@@ -12,5 +12,6 @@ typedef struct {
 void eraseBullet(bullet old_bullet, int prev_frame);
 void drawBullet(bullet new_bullet, int next_frame);
 bullet moveBullet(bullet new_bullet);
+bullet updateBullet(bullet new_bullet);
 
 #endif

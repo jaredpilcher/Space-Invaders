@@ -63,7 +63,7 @@ void XTft_EraseAlien(
     val = XTft_vidAliens[(Xuint32) type][y/2];
     for (x = 0; x < XTFT_ALIEN_WIDTH; x++)
     {
-		if (y > 240)
+		if (yu+y > 330)
 			col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
 		else
 			col = 0;

@@ -44,17 +44,21 @@ bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col){
 
 void newAlienBullet(){
 	int i;
+	// find available bullet
 	for(i = 0; i < 4; i++){
 		if (new_bullets[i].active == 0){
 			break;
 		}
 	}
+	// if all bullets are on screen, return
 	if(i == 4){
 		return;
 	}
+	// save which bullet we are using
 	int alien_bullet = i;
+	// pick a column to shoot from
 	int col_number = rand() % 11;
-	int alien_number;
+	// traverse up column to find first live alien
 	for(i = 4; i >=0; i--){
 		if(aliens[i*11+col_number]){
 			new_bullets[alien_bullet]=fireAlienBullet(new_aliens_coord, i, col_number);
@@ -69,6 +73,14 @@ void moveAllBullets(){
 	for(i = 0; i < 4; i++){
 		if(new_bullets[i].active){
 			new_bullets[i] = moveBullet(new_bullets[i]);
+		}
+	}
+}
+void updateAllBullets(){
+	int i;
+	for(i = 0; i < 4; i++){
+		if(new_bullets[i].active){
+			new_bullets[i] = updateBullet(new_bullets[i]);
 		}
 	}
 }
@@ -145,10 +157,10 @@ XCache_EnableDCache(0x00000001);
   for(i=0; i<sizeof(aliens);i++){
 	aliens[i]=1;
   }
-  aliens[46]=0;
-  aliens[54]=0;
-  aliens[50]=0;
-  aliens[39]=0;
+  //aliens[46]=0;
+  //aliens[54]=0;
+  //aliens[50]=0;
+  //aliens[39]=0;
   for(i=0; i<4; i++){
 	bullets[i].active = 0;
   }
@@ -181,10 +193,10 @@ XCache_EnableDCache(0x00000001);
 	unsigned new_pit_counter = 0;
 	unsigned time_delta=0;
 
-	//timers[0] = newTimer(1000, helloWorld);
-	timers[1] = newTimer(450, moveAliens);
+	timers[0] = newTimer(50, updateAllBullets);
+	timers[1] = newTimer(150, moveAliens);
 	timers[2] = newTimer(1000, newAlienBullet);
-	timers[3] = newTimer(15, moveAllBullets);
+	timers[3] = newTimer(30, moveAllBullets);
 	timers[4] = newTimer(50, render);
 	int longest_delta = 0;
   while(1){
@@ -195,7 +207,7 @@ XCache_EnableDCache(0x00000001);
 			longest_delta = time_delta;
 			xil_printf("new longest delta %d\n\r",longest_delta);
 		}
-		for(i=1;i<5;i++){
+		for(i=0;i<5;i++){
 			incTimer(&timers[i],time_delta);
 		}
 	}

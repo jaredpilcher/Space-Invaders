@@ -218,3 +218,52 @@ Xuint16 XTft_vidAliens[8][9] =
 		},		
 
 	};
+	
+	Xuint16 XTft_vidBunkerBlocks[5][6] = 
+	{ 
+	    /* top-row alien, first guise*/ 
+		{ 
+   		/* Line  0 */  genBunkerPixels( 0, 0, 0, 0, 0, 1),
+		/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 1, 1),
+		/* Line  2 */  genBunkerPixels( 0, 0, 0, 1, 1, 1),
+		/* Line  3 */  genBunkerPixels( 0, 0, 1, 1, 1, 1),
+		/* Line  4 */  genBunkerPixels( 0, 1, 1, 1, 1, 1),
+		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		},
+			    /* top-row alien, first guise*/ 
+		{ 
+   		/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		},
+			    /* top-row alien, first guise*/ 
+		{ 
+   		/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		},
+			    /* top-row alien, first guise*/ 
+		{ 
+   		/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		},
+			    /* top-row alien, first guise*/ 
+		{ 
+   		/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		}
+	};

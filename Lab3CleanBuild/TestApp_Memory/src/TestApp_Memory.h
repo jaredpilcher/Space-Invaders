@@ -34,7 +34,8 @@
 #define MINIMUM_MOVEMENT 4
 #define MOVE_DOWN_DISTANCE 14
 #define NUMBER_OF_ALIENS 55
-#define BULLET_SPEED 1
+#define BULLET_SPEED 4
+
 
 #define START_X  165
 #define START_Y  45

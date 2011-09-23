@@ -83,6 +83,8 @@ coord_object moveDown(coord_object aliens){
 }
 
 void moveAliens() {
+  if (new_aliens_coord.y > 300)
+	new_aliens_coord.y -= 300;
   if (direction==RIGHT){
     if (new_aliens_coord.x > 640 - (330 + MINIMUM_MOVEMENT)){
 	   direction = LEFT;

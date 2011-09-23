@@ -35,11 +35,15 @@ bullet moveBullet(bullet new_bullet){
 		  new_bullet.active = 0;
 		}
 	} else {
-	   new_bullet.position = (new_bullet.position + 1) % 4;
 		new_bullet.y += BULLET_SPEED;
 		if(new_bullet.y > BOTTOM_OF_SCREEN){
 		  new_bullet.active = 0;
 		}
 	}
+	return new_bullet;
+}
+
+bullet updateBullet(bullet new_bullet){
+	new_bullet.position = (new_bullet.position + 1) % 4;
 	return new_bullet;
 }
