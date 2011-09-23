@@ -32,7 +32,7 @@ bullet fireBullet(coord_object tank){
 }
 
 bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col){
-	xil_printf("fire bullet: %d, %d", row, col);
+	//xil_printf("fire bullet: %d, %d", row, col);
 	bullet new_bullet;
 	new_bullet.x = new_aliens_coord.x + col*30 + 12;
 	new_bullet.y = new_aliens_coord.y + row*30 + 18;
@@ -129,6 +129,8 @@ void helloWorld(){
 }
 
 int main() {
+XCache_EnableICache(0x00000001);
+XCache_EnableDCache(0x00000001);
   pit_counter = 0;
   prev_frame = FRAME1;
   next_frame = FRAME2;
@@ -179,16 +181,21 @@ int main() {
 	unsigned new_pit_counter = 0;
 	unsigned time_delta=0;
 
-	timers[0] = newTimer(1000, helloWorld);
+	//timers[0] = newTimer(1000, helloWorld);
 	timers[1] = newTimer(450, moveAliens);
 	timers[2] = newTimer(1000, newAlienBullet);
-	timers[3] = newTimer(80, moveAllBullets);
-	timers[4] = newTimer(16, render);
+	timers[3] = newTimer(15, moveAllBullets);
+	timers[4] = newTimer(50, render);
+	int longest_delta = 0;
   while(1){
 	new_pit_counter=pit_counter;
 	time_delta=new_pit_counter-old_pit_counter;
 	if(time_delta != 0){
-		for(i=0;i<5;i++){
+		if(time_delta > longest_delta){
+			longest_delta = time_delta;
+			xil_printf("new longest delta %d\n\r",longest_delta);
+		}
+		for(i=1;i<5;i++){
 			incTimer(&timers[i],time_delta);
 		}
 	}

@@ -52,9 +52,9 @@ Header: TestApp_Memory/src/timer.h
 DefaultInit: EXECUTABLE
 InitBram: 1
 Active: 1
-CompilerOptLevel: 2
+CompilerOptLevel: 3
 GlobPtrOpt: 0
-DebugSym: 1
+DebugSym: 0
 ProfileFlag: 0
 ProgStart: 
 StackSize: 
