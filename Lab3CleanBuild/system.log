@@ -6126,3 +6126,52 @@ Elapsed time =      3 sec.
 
 Done!
 
+At Local date and time: Sun Sep 25 13:18:30 2011
+ xbash -q -c "cd /cygdrive/d/Put_Your_Temp_Files_Here/space_invaders/Lab3CleanBuild/; /usr/bin/make -f system.make download; exit;" started...
+
+powerpc-eabi-gcc -O3 TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c  -o TestApp_Memory/executable.elf \
+     -Wl,-T -Wl,TestApp_Memory/src/TestApp_Memory_LinkScr.ld     -I./ppc405_0/include/  -ITestApp_Memory/src/  -L./ppc405_0/lib/  \
+  
+
+
+TestApp_Memory/src/alienCodes.c:226:54: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:226: error: 'genBunkerPixels' undeclared here (not in a function)
+TestApp_Memory/src/alienCodes.c:227:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:228:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:229:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:230:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:231:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:235:54: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:236:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:237:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:238:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:239:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:240:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:244:54: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:245:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:246:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:247:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:248:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:249:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:253:54: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:254:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:255:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:256:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:257:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:258:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:262:54: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:263:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:264:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:265:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:266:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/alienCodes.c:267:51: error: macro "genBunkerPixels" requires 24 arguments, but only 6 given
+TestApp_Memory/src/bullets.c:49:2: warning: no newline at end of file
+
+
+make: *** [TestApp_Memory/executable.elf] Error 1
+
+
+
+
+Done!
+
