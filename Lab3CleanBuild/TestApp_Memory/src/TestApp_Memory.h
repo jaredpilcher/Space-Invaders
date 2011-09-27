@@ -36,6 +36,7 @@
 #define NUMBER_OF_ALIENS 55
 #define BULLET_SPEED 4
 
+#define SHIP_MOVEMENT 4
 
 #define START_X  165
 #define START_Y  45
@@ -53,3 +54,17 @@
 #define TANK_BULLET_TYPE 7
 #define ALIEN_BULLET_ONE 0
 #define ALIEN_BULLET_TWO 3
+
+#define BLOCK_TYPE_0 0
+#define BLOCK_TYPE_1 1
+#define BLOCK_TYPE_2 2
+#define BLOCK_TYPE_3 3
+#define BLOCK_TYPE_4 4
+
+#define BLOCK_EROSION_0 0
+#define BLOCK_EROSION_1 1
+#define BLOCK_EROSION_2 2
+#define BLOCK_EROSION_3 3
+#define BLOCK_EROSION_4 4
+
+#define BLOCK_WIDTH 12

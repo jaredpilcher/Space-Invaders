@@ -16,9 +16,16 @@
 #define XTFT_BUNKER_WIDTH		48
 #define XTFT_BUNKER_HEIGHT		36
 
+#define XTFT_BUNKER_BLOCK_HEIGHT 12
+#define XTFT_BUNKER_BLOCK_WIDTH 12
+
+#define XTFT_SHIP_HEIGHT 32
+#define XTFT_SHIP_WIDTH 64
+
+extern Xuint32 XTft_SpaceShip[16];	
 extern Xuint16 XTft_vidAliens[8][9];
 extern Xuint16 XTft_tank[9];
 extern Xuint16 XTft_bullets[8][5];
-extern Xuint32 XTft_bunker[18];
-		
+extern Xuint16 XTft_BunkerBlocks[5][5][6];
+	
 #endif

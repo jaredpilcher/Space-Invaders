@@ -11,7 +11,7 @@ Timer newTimer(int interval, void (* callback)()){
 void incTimer(Timer * t, int amount){
 	t->current += amount;
 	if (t->current > t->max){
-		t->current = 0;
+		t->current -= t->max;
 		t->callback();
 	}
 }

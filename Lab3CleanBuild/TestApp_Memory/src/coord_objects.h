@@ -7,6 +7,7 @@
 typedef struct {
   int x;
   int y;
+  int active;
 } coord_object;
 
 extern int direction;

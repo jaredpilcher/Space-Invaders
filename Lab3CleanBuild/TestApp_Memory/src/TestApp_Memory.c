@@ -1,12 +1,13 @@
 #include "TestApp_Memory.h"
 
-Timer timers[10];
+Timer timers[7];
 
 int direction= RIGHT;
 coord_object tank;
 coord_object new_tank;
 coord_object aliens_coord;
 coord_object new_aliens_coord;
+coord_object space_ship, new_space_ship;
 bullet bullets[4];
 bullet new_bullets[4];
 bullet tank_bullet;
@@ -14,6 +15,8 @@ bullet new_tank_bullet;
 int prev_frame;
 int next_frame;
 unsigned pit_counter;
+int bunker_state[4][10];
+int bunker_position[4]={90,225,362,498};
 
 
 int aliens[55];
@@ -22,6 +25,38 @@ void my_pitHandler(void * DataPtr){
    XTime_PITClearInterrupt();
    pit_counter++;
 }
+
+void initializeShip(){
+	space_ship.x=-64;
+	space_ship.y=45;
+	new_space_ship.x=-64;
+	new_space_ship.y=45;
+	space_ship.active=1;
+	new_space_ship.active=1;
+}
+
+void moveShip(){
+	new_space_ship.x+=SHIP_MOVEMENT;
+	if(new_space_ship.x>640){
+		new_space_ship.active=0;
+	}
+}
+
+void drawShip(int next_frame){
+	if(new_space_ship.active){
+		XTft_DrawShip(next_frame,new_space_ship.x,new_space_ship.y,RED,BLACK);
+	}
+}
+
+void eraseShip(int prev_frame){
+	if(space_ship.active){
+		XTft_DrawShip(prev_frame,space_ship.x,space_ship.y,BLACK,RED);
+	}
+	if(!new_space_ship.active){
+		space_ship.active=0;
+	}
+}
+
 bullet fireBullet(coord_object tank){
 	bullet new_bullet;
 	new_bullet.x = tank.x + 12;
@@ -85,10 +120,32 @@ void updateAllBullets(){
 	}
 }
 void drawBunkers(int frame){
-	XTft_DrawBunker(frame,90,335,GREEN,BLACK);
-	XTft_DrawBunker(frame,225,335,GREEN,BLACK);
-	XTft_DrawBunker(frame,362,335,GREEN,BLACK);
-	XTft_DrawBunker(frame,498,335,GREEN,BLACK);
+	int cur_x;
+	int i;
+	int j;
+	bunker_state[3][2]=2;
+	for(i=0;i<4;i++){
+		cur_x= bunker_position[i];
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_0,bunker_state[i][0], cur_x,335,GREEN,BLACK);
+		cur_x+=BLOCK_WIDTH;
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][1],cur_x,335,GREEN,BLACK);
+		cur_x+=BLOCK_WIDTH;
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][2],cur_x,335,GREEN,BLACK);
+		cur_x+=BLOCK_WIDTH;
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_2,bunker_state[i][3],cur_x,335,GREEN,BLACK);
+		cur_x= bunker_position[i];
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][4],cur_x,347,GREEN,BLACK);
+		cur_x+=BLOCK_WIDTH;
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_3,bunker_state[i][5],cur_x,347,GREEN,BLACK);
+		cur_x+=BLOCK_WIDTH;
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_4,bunker_state[i][6],cur_x,347,GREEN,BLACK);
+		cur_x+=BLOCK_WIDTH;
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][7],cur_x,347,GREEN,BLACK);
+		cur_x= bunker_position[i];
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][8],cur_x,359,GREEN,BLACK);
+		cur_x+=BLOCK_WIDTH*3;
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][9],cur_x,359,GREEN,BLACK);
+	}
 }
 
 //  NOTE TO US:  render currently takes the global aliens array.  This means we have to erase all aliens, instead of just the ones
@@ -98,9 +155,11 @@ void render(){
 		  int i;
 		  
 		  //draw stuff to next frame
+		  drawBunkers(next_frame);
 		  drawAllAliens(new_aliens_coord, aliens, next_frame);
 		  drawTank(new_tank, next_frame);
 		  drawBullet(new_tank_bullet, next_frame);
+		  drawShip(next_frame);
 		  for(i=0; i<4; i++){
 			 if(new_bullets[i].active){
 				drawBullet(new_bullets[i], next_frame);
@@ -112,6 +171,7 @@ void render(){
 		  XIo_Out32(XPAR_VGA_FRAMEBUFFER_DCR_BASEADDR, next_frame);
 		  
 		  //erase stuff from previous frame
+		  eraseShip(prev_frame);
 		  for(i=0; i<4; i++){
 		    eraseBullet(bullets[i], prev_frame);
 		  }
@@ -123,6 +183,7 @@ void render(){
 		  tank = new_tank;
 		  tank_bullet = new_tank_bullet;
 		  aliens_coord = new_aliens_coord;
+		  space_ship=new_space_ship;
 		  for(i=0; i < 4; i++){
 		  		    bullets[i] = new_bullets[i];
 		  }
@@ -154,6 +215,7 @@ XCache_EnableDCache(0x00000001);
   aliens_coord.y= START_Y;
   new_aliens_coord = aliens_coord;
   int i;
+  int j;
   for(i=0; i<sizeof(aliens);i++){
 	aliens[i]=1;
   }
@@ -167,7 +229,11 @@ XCache_EnableDCache(0x00000001);
   for(i=0; i<4; i++){
 	new_bullets[i] = bullets[i];
   }
-  
+  for(i=0;i<4;i++){
+	for(j=0;j<10;j++){
+		bunker_state[i][j]=0;
+	}
+  }
   tank_bullet.active = 0;
   new_tank_bullet = tank_bullet;
   drawAllAliens(aliens_coord, aliens, prev_frame);
@@ -176,8 +242,7 @@ XCache_EnableDCache(0x00000001);
   new_tank = tank;
   drawTank(tank, prev_frame);
   drawBunkers(prev_frame);
-  drawBunkers(next_frame);
-  drawBunkers(FRAME3);
+  //drawBunkers(next_frame);
   	void * data;
 	XExceptionHandler pithandler = &my_pitHandler;
 	XExc_Init();
@@ -197,7 +262,10 @@ XCache_EnableDCache(0x00000001);
 	timers[1] = newTimer(150, moveAliens);
 	timers[2] = newTimer(1000, newAlienBullet);
 	timers[3] = newTimer(30, moveAllBullets);
-	timers[4] = newTimer(50, render);
+	timers[4] = newTimer(25, moveShip);
+	timers[5] = newTimer(40000, initializeShip);
+	timers[6] = newTimer(50, render);
+	
 	int longest_delta = 0;
   while(1){
 	new_pit_counter=pit_counter;
@@ -207,7 +275,7 @@ XCache_EnableDCache(0x00000001);
 			longest_delta = time_delta;
 			xil_printf("new longest delta %d\n\r",longest_delta);
 		}
-		for(i=0;i<5;i++){
+		for(i=0;i<7;i++){
 			incTimer(&timers[i],time_delta);
 		}
 	}

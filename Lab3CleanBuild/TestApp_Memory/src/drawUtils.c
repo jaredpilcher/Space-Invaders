@@ -28,6 +28,8 @@
 #include "xtft_l.h"
 #include "alienCodes.h"
 
+#define FRAME3 0x00400000
+
 /************************** Constant Definitions ****************************/
 
 
@@ -123,6 +125,35 @@ void XTft_DrawTank(
   }
 }
 
+void XTft_DrawBunkerBlock(
+  Xuint32 BaseAddress,
+  Xuint32 type,
+  Xuint32 erosion,
+  Xuint32 xu,
+  Xuint32 yu,
+  Xuint32 fgColor,
+  Xuint32 bgColor)
+{
+  Xuint32 col, x, y;
+  Xuint16 val;
+
+  for (y = 0; y < XTFT_BUNKER_BLOCK_HEIGHT; y++)
+  {
+    val = XTft_BunkerBlocks[type][erosion][y/2];
+    for (x = 0; x < XTFT_BUNKER_BLOCK_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_BUNKER_BLOCK_WIDTH/2 - x/2 - 1)))
+        col = fgColor;
+      else
+		continue;
+        //col = bgColor;
+      
+      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+	  XTft_mSetPixel(FRAME3, xu+x, yu+y, col);
+    }
+  }
+}
+
 void XTft_EraseBullet(
   Xuint32 BaseAddress,
   Xuint32 BGAddress,
@@ -176,7 +207,7 @@ void XTft_DrawBullet(
   }
 }
 
-void XTft_DrawBunker(
+void XTft_DrawShip(
   Xuint32 BaseAddress,
   Xuint32 xu,
   Xuint32 yu,
@@ -186,17 +217,18 @@ void XTft_DrawBunker(
   Xuint32 col, x, y;
   Xuint32 val;
 
-  for (y = 0; y < XTFT_BUNKER_HEIGHT; y++)
+  for (y = 0; y < XTFT_SHIP_HEIGHT; y++)
   {
-    val = XTft_bunker[y/2];
-    for (x = 0; x < XTFT_BUNKER_WIDTH; x++)
+    val = XTft_SpaceShip[y/2];
+    for (x = 0; x < XTFT_SHIP_WIDTH; x++)
     {
-      if (val & (1 << (XTFT_BUNKER_WIDTH/2 - x/2 - 1)))
+      if (val & (1 << (XTFT_SHIP_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
 		continue;
         //col = bgColor;
-      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
-    }
+      
+        XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+     }
   }
 }

@@ -27,8 +27,9 @@
 
 #define genAlienPixels(a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0) ( ((a11) << 11) | ((a10) << 10) | ((a9) << 9) | ((a8) << 8) |  ((a7) << 7)  | ((a6) << 6)  | ((a5) << 5)  | ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
 #define genTankPixels(a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0) ( ((a14) << 14) | ((a13) << 13) | ((a12) << 12) | ((a11) << 11) | ((a10) << 10) | ((a9) << 9) | ((a8) << 8) |  ((a7) << 7)  | ((a6) << 6)  | ((a5) << 5)  | ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
-#define genBunkerPixels(a23,a22,a21,a20,a19,a18,a17,a16,a15,a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0) ( ((a23) << 23) | ((a22) << 22) | ((a21) << 21) | ((a20) << 20) | ((a19) << 19) | ((a18) << 18) | ((a17) << 17) | ((a16) << 16) | ((a15) << 15) | ((a14) << 14) | ((a13) << 13) | ((a12) << 12) | ((a11) << 11) | ((a10) << 10) | ((a9) << 9) | ((a8) << 8) |  ((a7) << 7)  | ((a6) << 6)  | ((a5) << 5)  | ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
+#define genBunkerPixels(a5, a4, a3, a2, a1, a0) ( ((a5) << 5)  | ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
 #define genBulletPixels(a2, a1, a0) (((a2) << 2)  | ((a1) << 1) | ((a0)) )
+#define genShipPixels(a31, a30, a29, a28, a27, a26, a25, a24, a23, a22, a21, a20, a19, a18, a17, a16, a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0) ( ((a31) << 31) | ((a30) << 30) | ((a29) << 29) | ((a28) << 28) | ((a27) << 27) | ((a26) << 26) | ((a25) << 25) | ((a24) << 24) | ((a23) << 23) | ((a22) << 22) | ((a21) << 21) | ((a20) << 20) | ((a19) << 19) | ((a18) << 18) | ((a17) << 17) | ((a16) << 16) | ((a15) << 15) | ((a14) << 14) | ((a13) << 13) | ((a12) << 12) | ((a11) << 11) | ((a10) << 10) | ((a9) << 9) | ((a8) << 8) |  ((a7) << 7)  | ((a6) << 6)  | ((a5) << 5)  | ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
 Xuint16 XTft_tank[9] = {
 	genTankPixels(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 	genTankPixels(0,0,0,0,0,0,0,1,0,0,0,0,0,0,0),
@@ -41,26 +42,6 @@ Xuint16 XTft_tank[9] = {
 	genTankPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
 	};
 	
-Xuint32 XTft_bunker[18] = {
-	genBunkerPixels(0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0),
-	genBunkerPixels(0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0),
-	genBunkerPixels(0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0),
-	genBunkerPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1),
-	genBunkerPixels(1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1),
-};
 
 Xuint16 XTft_bullets[8][5] = {
 	{
@@ -219,51 +200,262 @@ Xuint16 XTft_vidAliens[8][9] =
 
 	};
 	
-	Xuint16 XTft_vidBunkerBlocks[5][6] = 
-	{ 
-	    /* top-row alien, first guise*/ 
-		{ 
-   		/* Line  0 */  genBunkerPixels( 0, 0, 0, 0, 0, 1),
-		/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 1, 1),
-		/* Line  2 */  genBunkerPixels( 0, 0, 0, 1, 1, 1),
-		/* Line  3 */  genBunkerPixels( 0, 0, 1, 1, 1, 1),
-		/* Line  4 */  genBunkerPixels( 0, 1, 1, 1, 1, 1),
-		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+Xuint16 XTft_BunkerBlocks[5][5][6] = 
+	{
+		{
+			/* zeroeth block*/ 
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 1, 1, 1),
+			/* Line  1 */  genBunkerPixels( 0, 0, 1, 1, 1, 1),
+			/* Line  2 */  genBunkerPixels( 0, 1, 1, 1, 1, 1),
+			/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			},
+			/* erode once */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 1, 1, 1),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 1, 1),
+			/* Line  2 */  genBunkerPixels( 0, 1, 1, 1, 1, 1),
+			/* Line  3 */  genBunkerPixels( 1, 0, 0, 1, 0, 1),
+			/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  5 */  genBunkerPixels( 1, 0, 1, 0, 1, 1),
+			},
+			/* erode twice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 1, 1, 0),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 1, 1),
+			/* Line  2 */  genBunkerPixels( 0, 1, 0, 1, 0, 1),
+			/* Line  3 */  genBunkerPixels( 1, 0, 0, 1, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 1, 0, 1, 0, 1),
+			/* Line  5 */  genBunkerPixels( 1, 0, 1, 0, 1, 0),
+			},
+			/* erode thrice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 1, 0, 0),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 1, 0),
+			/* Line  2 */  genBunkerPixels( 0, 1, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 1, 0, 0, 1, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 1, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 1, 0, 0, 0, 1, 0),
+			},
+			/* erode four times */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  2 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			},
+			
 		},
-			    /* top-row alien, first guise*/ 
-		{ 
-   		/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		{
+			/* first block*/  
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			},
+			/* erode once */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 1, 1, 0, 1, 1),
+			/* Line  1 */  genBunkerPixels( 1, 0, 0, 1, 1, 0),
+			/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 0, 1),
+			/* Line  3 */  genBunkerPixels( 1, 0, 1, 1, 1, 1),
+			/* Line  4 */  genBunkerPixels( 1, 1, 1, 0, 1, 1),
+			/* Line  5 */  genBunkerPixels( 1, 1, 0, 1, 1, 1),
+			},
+			/* erode twice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 1, 1, 0, 1, 1),
+			/* Line  1 */  genBunkerPixels( 1, 0, 0, 1, 1, 0),
+			/* Line  2 */  genBunkerPixels( 0, 1, 0, 1, 0, 0),
+			/* Line  3 */  genBunkerPixels( 1, 0, 0, 1, 0, 1),
+			/* Line  4 */  genBunkerPixels( 0, 1, 0, 0, 1, 0),
+			/* Line  5 */  genBunkerPixels( 1, 1, 0, 1, 0, 1),
+			},
+			/* erode thrice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 1, 0, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 1, 0, 0, 1, 1, 0),
+			/* Line  2 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 1, 0, 0, 1, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 1, 0),
+			/* Line  5 */  genBunkerPixels( 1, 0, 0, 1, 0, 0),
+			},
+			/* erode four times */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  2 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			},
 		},
-			    /* top-row alien, first guise*/ 
-		{ 
-   		/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		{
+			/* second block*/  
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 1, 1, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 0, 0),
+			/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 0),
+			/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			},
+			/* erode once */
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 0, 1, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 0, 0),
+			/* Line  2 */  genBunkerPixels( 1, 0, 1, 1, 0, 0),
+			/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 0, 1),
+			/* Line  4 */  genBunkerPixels( 1, 1, 0, 1, 1, 1),
+			/* Line  5 */  genBunkerPixels( 1, 0, 1, 1, 0, 1),
+			},
+			/* erode twice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 0, 1, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 1, 0, 1, 0, 0, 0),
+			/* Line  2 */  genBunkerPixels( 0, 0, 1, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 1, 0, 1, 0, 0, 1),
+			/* Line  4 */  genBunkerPixels( 0, 1, 0, 1, 1, 0),
+			/* Line  5 */  genBunkerPixels( 1, 0, 1, 1, 0, 1),
+			},
+			/* erode thrice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 0, 0, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 1, 0, 1, 0, 0, 0),
+			/* Line  2 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 1, 0, 1, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 1, 0, 0, 1, 0),
+			/* Line  5 */  genBunkerPixels( 1, 0, 0, 0, 0, 0),
+			},
+			/* erode four times */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  2 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			},
 		},
-			    /* top-row alien, first guise*/ 
-		{ 
-   		/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		{
+		/* third block*/ 
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 0, 0),
+			/* Line  3 */  genBunkerPixels( 1, 1, 1, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 1, 1, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 1, 0, 0, 0, 0, 0),
+			},
+			/* erode once */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 1, 1, 0, 1, 1),
+			/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  2 */  genBunkerPixels( 1, 0, 1, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 1, 1, 1, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 1, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 1, 0, 0, 0, 0, 0),
+			},
+			/* erode twice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 1, 1, 0, 0, 1),
+			/* Line  1 */  genBunkerPixels( 0, 1, 0, 1, 0, 1),
+			/* Line  2 */  genBunkerPixels( 1, 0, 1, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 1, 1, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 1, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			},
+			/* erode thrice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 1, 0, 0, 0, 1),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 0, 1),
+			/* Line  2 */  genBunkerPixels( 1, 0, 1, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 1, 0, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			},
+			/* erode four times */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  2 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			},
 		},
-			    /* top-row alien, first guise*/ 
-		{ 
-   		/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  2 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  3 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  4 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
-		/* Line  5 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+		{
+			/* fourth block*/ 
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  2 */  genBunkerPixels( 0, 0, 1, 1, 1, 1),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 1, 1, 1),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 1, 1),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 1),
+			},
+			/* erode once */
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 0, 0, 1, 1, 1),
+			/* Line  1 */  genBunkerPixels( 1, 1, 1, 1, 1, 1),
+			/* Line  2 */  genBunkerPixels( 0, 0, 1, 1, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 1, 1, 1),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 1),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 1),
+			},
+			/* erode twice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 0, 0, 1, 0, 0),
+			/* Line  1 */  genBunkerPixels( 1, 1, 0, 1, 0, 1),
+			/* Line  2 */  genBunkerPixels( 0, 0, 1, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 1, 1, 1),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 1),
+			},
+			/* erode thrice */
+			{ 
+			/* Line  0 */  genBunkerPixels( 1, 0, 0, 1, 0, 0),
+			/* Line  1 */  genBunkerPixels( 0, 1, 0, 0, 0, 1),
+			/* Line  2 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 1, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 1),
+			},
+			/* erode four times */
+			{ 
+			/* Line  0 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  1 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  2 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  3 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  4 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			/* Line  5 */  genBunkerPixels( 0, 0, 0, 0, 0, 0),
+			},
 		}
+	};
+
+	Xuint32 XTft_SpaceShip[16] = 
+	    /* space ship*/ 
+		{ 
+   		/* Line  0 */  genShipPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+		/* Line  1 */  genShipPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+		/* Line  2 */  genShipPixels( 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
+		/* Line  3 */  genShipPixels( 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
+		/* Line  4 */  genShipPixels( 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0),
+		/* Line  5 */  genShipPixels( 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0),
+		/* Line  6 */  genShipPixels( 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0),
+		/* Line  7 */  genShipPixels( 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0),
+		/* Line  8 */  genShipPixels( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+		/* Line  9 */  genShipPixels( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+		/* Line  10 */  genShipPixels( 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0),
+		/* Line  12 */  genShipPixels( 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0),
+		/* Line  13 */  genShipPixels( 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0),
+		/* Line  14 */  genShipPixels( 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0),
+		/* Line  15 */  genShipPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 	};
