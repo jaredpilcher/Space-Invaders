@@ -15,7 +15,7 @@ bullet new_tank_bullet;
 int prev_frame;
 int next_frame;
 unsigned pit_counter;
-int bunker_state[4][10];
+int bunker_state[4][12];
 int bunker_position[4]={90,225,362,498};
 
 
@@ -26,7 +26,7 @@ void my_pitHandler(void * DataPtr){
    pit_counter++;
 }
 
-void initializeShip(){
+void newShip(){
 	space_ship.x=-64;
 	space_ship.y=45;
 	new_space_ship.x=-64;
@@ -102,15 +102,52 @@ void newAlienBullet(){
 	}
 }
 
+
+void erodeBunker(int bunker_number,int block_number){
+	int state = bunker_state[bunker_number][block_number];
+	bunker_state[bunker_number][block_number] = (state == 4) ? 4: state + 1;
+}
+
+bullet detectCollision(bullet new_bullet){
+	int i;
+	// If not in range
+	if( new_bullet.y < 325 || new_bullet.y > 371){
+		return new_bullet;
+	}
+		print("detecting collision\r\n");
+	for(i = 0; i < 4; i++){
+		int x_offset = bunker_position[i];
+		int y_offset = 335;
+		int x_lower_limit = x_offset -6;
+		int x_upper_limit = x_offset + 48;
+		if(x_lower_limit<new_bullet.x && new_bullet.x<x_upper_limit){
+			int rel_y = new_bullet.y - y_offset;
+			int rel_x = new_bullet.x - x_offset;
+			int row = rel_y/12;
+			int col = rel_x/12;
+			int block = row*4 + col;
+			if (bunker_state[i][block] != 4){
+				erodeBunker(i, block);
+				new_bullet.active = 0;
+				return new_bullet;
+			}
+		}
+	}
+	return new_bullet;
+}
+
+
 void moveAllBullets(){
 	int i;
 	new_tank_bullet = moveBullet(new_tank_bullet);
 	for(i = 0; i < 4; i++){
 		if(new_bullets[i].active){
 			new_bullets[i] = moveBullet(new_bullets[i]);
+			new_bullets[i] = detectCollision(new_bullets[i]);
 		}
 	}
 }
+
 void updateAllBullets(){
 	int i;
 	for(i = 0; i < 4; i++){
@@ -119,11 +156,11 @@ void updateAllBullets(){
 		}
 	}
 }
+
 void drawBunkers(int frame){
 	int cur_x;
 	int i;
 	int j;
-	bunker_state[3][2]=2;
 	for(i=0;i<4;i++){
 		cur_x= bunker_position[i];
 		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_0,bunker_state[i][0], cur_x,335,GREEN,BLACK);
@@ -144,7 +181,7 @@ void drawBunkers(int frame){
 		cur_x= bunker_position[i];
 		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][8],cur_x,359,GREEN,BLACK);
 		cur_x+=BLOCK_WIDTH*3;
-		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][9],cur_x,359,GREEN,BLACK);
+		XTft_DrawBunkerBlock(frame,BLOCK_TYPE_1,bunker_state[i][11],cur_x,359,GREEN,BLACK);
 	}
 }
 
@@ -263,7 +300,7 @@ XCache_EnableDCache(0x00000001);
 	timers[2] = newTimer(1000, newAlienBullet);
 	timers[3] = newTimer(30, moveAllBullets);
 	timers[4] = newTimer(25, moveShip);
-	timers[5] = newTimer(40000, initializeShip);
+	timers[5] = newTimer(40000, newShip);
 	timers[6] = newTimer(50, render);
 	
 	int longest_delta = 0;

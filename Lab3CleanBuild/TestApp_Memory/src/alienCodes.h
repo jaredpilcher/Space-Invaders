@@ -22,7 +22,7 @@
 #define XTFT_SHIP_HEIGHT 32
 #define XTFT_SHIP_WIDTH 64
 
-extern Xuint32 XTft_SpaceShip[16];	
+extern Xuint16 XTft_SpaceShip[8];	
 extern Xuint16 XTft_vidAliens[8][9];
 extern Xuint16 XTft_tank[9];
 extern Xuint16 XTft_bullets[8][5];

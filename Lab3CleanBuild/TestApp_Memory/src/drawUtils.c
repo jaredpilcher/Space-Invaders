@@ -145,7 +145,7 @@ void XTft_DrawBunkerBlock(
       if (val & (1 << (XTFT_BUNKER_BLOCK_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-		continue;
+		col = bgColor;
         //col = bgColor;
       
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
