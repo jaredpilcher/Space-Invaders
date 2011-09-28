@@ -1,6 +1,6 @@
 #include "TestApp_Memory.h"
 
-Timer timers[7];
+Timer timers[20];
 
 int direction= RIGHT;
 coord_object tank;
@@ -18,6 +18,7 @@ unsigned pit_counter;
 int bunker_state[4][12];
 int bunker_position[4]={90,225,362,498};
 
+XGpio gpPB;
 
 int aliens[55];
 
@@ -110,36 +111,44 @@ void erodeBunker(int bunker_number,int block_number){
 
 bullet detectCollision(bullet new_bullet){
 	int i;
-	// If not in range
-	if( new_bullet.y < 325 || new_bullet.y > 371){
-		return new_bullet;
-	}
-		print("detecting collision\r\n");
-	for(i = 0; i < 4; i++){
-		int x_offset = bunker_position[i];
-		int y_offset = 335;
-		int x_lower_limit = x_offset -6;
-		int x_upper_limit = x_offset + 48;
-		if(x_lower_limit<new_bullet.x && new_bullet.x<x_upper_limit){
-			int rel_y = new_bullet.y - y_offset;
-			int rel_x = new_bullet.x - x_offset;
-			int row = rel_y/12;
-			int col = rel_x/12;
-			int block = row*4 + col;
-			if (bunker_state[i][block] != 4){
-				erodeBunker(i, block);
-				new_bullet.active = 0;
-				return new_bullet;
+	// Check bunkers
+	if( new_bullet.y > 325 && new_bullet.y < 371){
+		for(i = 0; i < 4; i++){
+			int x_offset = bunker_position[i];
+			int y_offset = 335;
+			int x_lower_limit = x_offset -6;
+			int x_upper_limit = x_offset + 48;
+			if(x_lower_limit<new_bullet.x && new_bullet.x<x_upper_limit){
+				int rel_y = new_bullet.y - y_offset;
+				int rel_x = new_bullet.x - x_offset;
+				int row = rel_y/12;
+				int col = rel_x/12;
+				int block = row*4 + col;
+				if (bunker_state[i][block] != 4){
+					erodeBunker(i, block);
+					new_bullet.active = 0;
+					return new_bullet;
+				}
 			}
 		}
 	}
+	//  Check aliens
+	
+	//  Check tank
+	
+	//  Check Space Ship
+	
 	return new_bullet;
 }
 
 
 void moveAllBullets(){
 	int i;
-	new_tank_bullet = moveBullet(new_tank_bullet);
+	if (new_tank_bullet.active){
+		new_tank_bullet = moveBullet(new_tank_bullet);
+		new_tank_bullet = detectCollision(new_tank_bullet);
+	}
+	
 	for(i = 0; i < 4; i++){
 		if(new_bullets[i].active){
 			new_bullets[i] = moveBullet(new_bullets[i]);
@@ -238,9 +247,37 @@ void helloWorld(){
   xil_printf("Hello World %x\r\n");
 }
 
+void pollButtons(){
+	Xuint32 data;
+	data = XGpio_DiscreteRead(&gpPB, 1);
+	// LEFT = 2
+	if( ~data & 2 ){
+		new_tank = moveLeft(new_tank);
+	}
+	// RIGHT = 1
+	if ( ~data & 1 ){
+	   new_tank = moveRight(new_tank);
+	}
+	// MIDDLE = 16
+	if ( ~data & 16 ){
+		if(new_tank_bullet.active == 0){
+			new_tank_bullet = fireBullet(new_tank);
+		}
+	}
+}
+
 int main() {
 XCache_EnableICache(0x00000001);
 XCache_EnableDCache(0x00000001);
+     //XGpio gpLED;
+
+     // Initialise the peripherals
+     //XGpio_Initialize(&gpLED, XPAR_LEDS_4BIT_DEVICE_ID);
+     XGpio_Initialize(&gpPB, XPAR_PUSHBUTTONS_5BIT_DEVICE_ID);
+     // Set the LED peripheral to outputs
+     //XGpio_SetDataDirection(&gpLED, 1, 0x00000000);
+     // Set the Push Button peripheral to inputs
+     XGpio_SetDataDirection(&gpPB, 1, 0x0000001F);
   pit_counter = 0;
   prev_frame = FRAME1;
   next_frame = FRAME2;
@@ -267,9 +304,13 @@ XCache_EnableDCache(0x00000001);
 	new_bullets[i] = bullets[i];
   }
   for(i=0;i<4;i++){
-	for(j=0;j<10;j++){
+	for(j=0;j<9;j++){
 		bunker_state[i][j]=0;
 	}
+	for(;j<11;j++){
+		bunker_state[i][j]=4;
+	}
+	bunker_state[i][11]=0;
   }
   tank_bullet.active = 0;
   new_tank_bullet = tank_bullet;
@@ -302,6 +343,7 @@ XCache_EnableDCache(0x00000001);
 	timers[4] = newTimer(25, moveShip);
 	timers[5] = newTimer(40000, newShip);
 	timers[6] = newTimer(50, render);
+	timers[7] = newTimer(30, pollButtons);
 	
 	int longest_delta = 0;
   while(1){
@@ -312,7 +354,7 @@ XCache_EnableDCache(0x00000001);
 			longest_delta = time_delta;
 			xil_printf("new longest delta %d\n\r",longest_delta);
 		}
-		for(i=0;i<7;i++){
+		for(i=0;i<8;i++){
 			incTimer(&timers[i],time_delta);
 		}
 	}
