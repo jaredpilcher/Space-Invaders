@@ -15,6 +15,7 @@
 #include "bullets.h"
 #include "coord_objects.h"
 #include "timer.h"
+#include "explosion.h"
 
 #define FRAME1 0x00000000
 #define FRAME2 0x00200000
@@ -35,6 +36,7 @@
 #define MOVE_DOWN_DISTANCE 14
 #define NUMBER_OF_ALIENS 55
 #define BULLET_SPEED 4
+#define ALIEN_FIRE_PROBABILITY 40
 
 #define SHIP_MOVEMENT 4
 

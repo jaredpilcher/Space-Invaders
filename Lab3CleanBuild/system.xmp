@@ -42,6 +42,7 @@ Source: TestApp_Memory/src/bullets.c
 Source: TestApp_Memory/src/coord_objects.c
 Source: TestApp_Memory/src/drawUtils.c
 Source: TestApp_Memory/src/timer.c
+Source: TestApp_Memory/src/explosion.c
 Header: TestApp_Memory/src/ddr_header.h
 Header: TestApp_Memory/src/drawUtils.h
 Header: TestApp_Memory/src/alienCodes.h
@@ -49,6 +50,7 @@ Header: TestApp_Memory/src/TestApp_Memory.h
 Header: TestApp_Memory/src/bullets.h
 Header: TestApp_Memory/src/coord_objects.h
 Header: TestApp_Memory/src/timer.h
+Header: TestApp_Memory/src/explosion.h
 DefaultInit: EXECUTABLE
 InitBram: 1
 Active: 1

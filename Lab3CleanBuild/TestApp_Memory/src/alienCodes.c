@@ -142,7 +142,6 @@ Xuint16 XTft_vidAliens[8][9] =
 	    /* */
 
 		{ 
-		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		/* Line  1 */  genAlienPixels( 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0),
 		/* Line  2 */  genAlienPixels( 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0),
 		/* Line  3 */  genAlienPixels( 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0),
@@ -151,10 +150,10 @@ Xuint16 XTft_vidAliens[8][9] =
 		/* Line  6 */  genAlienPixels( 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0),
 		/* Line  7 */  genAlienPixels( 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0),
 		/* Line  8 */  genAlienPixels( 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0),
+		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		},
 	    /* */
 		{ 
-		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		/* Line  1 */  genAlienPixels( 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0),
 		/* Line  2 */  genAlienPixels( 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1),
 		/* Line  3 */  genAlienPixels( 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1),
@@ -163,9 +162,9 @@ Xuint16 XTft_vidAliens[8][9] =
 		/* Line  6 */  genAlienPixels( 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0),
 		/* Line  7 */  genAlienPixels( 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0),
 		/* Line  8 */  genAlienPixels( 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0),
+		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		},
 		{ 
-		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		/* Line  1 */  genAlienPixels( 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0),
 		/* Line  2 */  genAlienPixels( 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),
 		/* Line  3 */  genAlienPixels( 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0),
@@ -174,9 +173,9 @@ Xuint16 XTft_vidAliens[8][9] =
 		/* Line  6 */  genAlienPixels( 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 		/* Line  7 */  genAlienPixels( 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1),
 		/* Line  8 */  genAlienPixels( 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0),
+		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		},
 		{ 
-		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		/* Line  1 */  genAlienPixels( 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0),
 		/* Line  2 */  genAlienPixels( 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0),
 		/* Line  3 */  genAlienPixels( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
@@ -185,9 +184,9 @@ Xuint16 XTft_vidAliens[8][9] =
 		/* Line  6 */  genAlienPixels( 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0),
 		/* Line  7 */  genAlienPixels( 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0),
 		/* Line  8 */  genAlienPixels( 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1),
+		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		},
 		{ 
-		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		/* Line  1 */  genAlienPixels( 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0),
 		/* Line  2 */  genAlienPixels( 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0),
 		/* Line  3 */  genAlienPixels( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
@@ -196,6 +195,7 @@ Xuint16 XTft_vidAliens[8][9] =
 		/* Line  6 */  genAlienPixels( 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0),
 		/* Line  7 */  genAlienPixels( 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0),
 		/* Line  8 */  genAlienPixels( 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0),
+		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 		},		
 
 	};
@@ -452,3 +452,19 @@ Xuint16 XTft_BunkerBlocks[5][5][6] =
 		/* Line  14 */  genShipPixels( 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
 		/* Line  15 */  genShipPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 		};
+		
+		Xuint16 XTft_Explosion[10] = 
+	    /* explosion*/ 
+		{ 
+		/* Line  0 */  genAlienPixels( 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0),
+		/* Line  1 */  genAlienPixels( 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0),
+		/* Line  2 */  genAlienPixels( 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1),
+		/* Line  3 */  genAlienPixels( 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0),
+		/* Line  4 */  genAlienPixels( 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+		/* Line  5 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1),
+		/* Line  6 */  genAlienPixels( 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),
+		/* Line  7 */  genAlienPixels( 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0),
+		/* Line  8 */  genAlienPixels( 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0),
+		/* Line  8 */  genAlienPixels( 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0),
+		};
+		

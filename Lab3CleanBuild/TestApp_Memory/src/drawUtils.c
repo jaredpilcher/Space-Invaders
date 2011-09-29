@@ -232,3 +232,48 @@ void XTft_DrawShip(
      }
   }
 }
+
+void XTft_EraseExplosion(
+  Xuint32 BaseAddress,
+  Xuint32 BGAddress,
+  Xuint32 xu,
+  Xuint32 yu)
+ {  
+  Xuint32 col, x, y;
+  Xuint16 val;
+  for (y = 0; y < XTFT_EXPLOSION_HEIGHT; y++)
+  {
+    val = XTft_Explosion[y/2];
+    for (x = 0; x < XTFT_EXPLOSION_WIDTH; x++)
+    {
+		if (yu+y > 330)
+			col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
+		else
+			col = 0;
+     XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+    }
+  }
+}
+
+
+void XTft_DrawExplosion(
+  Xuint32 BaseAddress,
+  Xuint32 xu,
+  Xuint32 yu,
+  Xuint32 fgColor)
+{
+  Xuint32 col, x, y;
+  Xuint16 val;
+  for (y = 0; y < XTFT_EXPLOSION_HEIGHT; y++)
+  {
+    val = XTft_Explosion[y/2];
+    for (x = 0; x < XTFT_EXPLOSION_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_EXPLOSION_WIDTH/2 - x/2 - 1)))
+        col = fgColor;
+      else
+	    continue;
+      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+    }
+  }
+}

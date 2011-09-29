@@ -8,6 +8,7 @@ coord_object new_tank;
 coord_object aliens_coord;
 coord_object new_aliens_coord;
 coord_object space_ship, new_space_ship;
+explosion cur_explosion, new_explosion;
 bullet bullets[4];
 bullet new_bullets[4];
 bullet tank_bullet;
@@ -35,12 +36,21 @@ void newShip(){
 	}
 }
 
+void newExplosion(int x, int y){
+	if(!new_explosion.active){
+		new_explosion.x=x;
+		new_explosion.y=y;
+		new_explosion.active=1;
+		new_explosion.time_elapsed=0;
+	}
+}
+
 void updateShip(){
 	new_space_ship = moveShip(new_space_ship);
 }
 
 void updateAliens(){
-	new_aliens_coord = moveAliens(new_aliens_coord);
+	new_aliens_coord = moveAliens(new_aliens_coord,aliens);
 }
 
 bullet fireBullet(coord_object tank){
@@ -65,6 +75,8 @@ bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col){
 
 void newAlienBullet(){
 	int i;
+	if (rand() % 100 > ALIEN_FIRE_PROBABILITY)
+		return;
 	// find available bullet
 	for(i = 0; i < 4; i++){
 		if (new_bullets[i].active == 0){
@@ -94,6 +106,32 @@ void erodeBunker(int bunker_number,int block_number){
 	bunker_state[bunker_number][block_number] = (state == 4) ? 4: state + 1;
 }
 
+int is_alien_hit(int rel_x, int rel_y){
+	int row = rel_y/30;
+	int col = rel_x/30;
+	int alien_rel_x = rel_x % 30;
+	int alien_rel_y = rel_y % 30;
+	switch(row){
+		case 0:
+			if (alien_rel_x > 3 && alien_rel_x < 20 && alien_rel_y < 16){
+				return 1;
+			}
+			break;
+		case 1:
+		case 2:
+			if (alien_rel_y < 16 && alien_rel_x > 1 && alien_rel_x < 24){
+				return 1;
+			}
+			break;
+		default:
+			if (alien_rel_y < 16 && alien_rel_x < 24){
+				return 1;
+			}
+			break;
+	}
+	return 0;
+}
+
 bullet detectCollision(bullet new_bullet){
 	int i;
 	// Check bunkers
@@ -103,7 +141,7 @@ bullet detectCollision(bullet new_bullet){
 			int y_offset = 335;
 			int x_lower_limit = x_offset -6;
 			int x_upper_limit = x_offset + 48;
-			if(x_lower_limit<new_bullet.x && new_bullet.x<x_upper_limit){
+			if(x_lower_limit < new_bullet.x && new_bullet.x<x_upper_limit){
 				int rel_y = new_bullet.y - y_offset;
 				int rel_x = new_bullet.x - x_offset;
 				int row = rel_y/12;
@@ -118,6 +156,27 @@ bullet detectCollision(bullet new_bullet){
 		}
 	}
 	//  Check aliens
+	int aliens_x_low = new_aliens_coord.x;
+	int aliens_x_high = new_aliens_coord.x + 330;
+	int aliens_y_low = new_aliens_coord.y;
+	int aliens_y_high = new_aliens_coord.y + 150;
+	if(new_bullet.y > aliens_y_low && new_bullet.y < aliens_y_high && new_bullet.type == TANK_BULLET_TYPE){
+		int rel_y = new_bullet.y - aliens_y_low;
+		int rel_x = new_bullet.x - aliens_x_low;
+		int row = rel_y/30;
+		int col = rel_x/30;
+		int alien_number = row*11 + col;
+		if(aliens[alien_number]){
+			if (is_alien_hit(rel_x,rel_y)){
+				aliens[alien_number] = 0;
+				new_bullet.active = 0;
+				newExplosion(new_aliens_coord.x + col*30, new_aliens_coord.y + row*30);
+				return new_bullet;
+			}
+		}
+	}
+	
+	
 	
 	//  Check tank
 	
@@ -126,6 +185,9 @@ bullet detectCollision(bullet new_bullet){
 	return new_bullet;
 }
 
+void expireExplosion(){
+	new_explosion=updateExplosion(new_explosion);
+}
 
 void moveAllBullets(){
 	int i;
@@ -190,6 +252,8 @@ void render(){
 		  drawAllAliens(new_aliens_coord, aliens, new_space_ship, next_frame);
 		  drawTank(new_tank, next_frame);
 		  drawBullet(new_tank_bullet, next_frame);
+		  if( new_explosion.active)
+			drawExplosion(new_explosion,next_frame);
 		  for(i=0; i<4; i++){
 			 if(new_bullets[i].active){
 				drawBullet(new_bullets[i], next_frame);
@@ -207,12 +271,15 @@ void render(){
 		  eraseAllAliens(aliens_coord, space_ship, prev_frame);
 		  eraseTank(tank, prev_frame);
 		  eraseBullet(tank_bullet, prev_frame);
+		  if( cur_explosion.active )
+			eraseExplosion(cur_explosion, prev_frame);
 
 		  //copy to global state
 		  tank = new_tank;
 		  tank_bullet = new_tank_bullet;
 		  aliens_coord = new_aliens_coord;
 		  space_ship=new_space_ship;
+		  cur_explosion=new_explosion;
 		  for(i=0; i < 4; i++){
 		  		    bullets[i] = new_bullets[i];
 		  }
@@ -271,6 +338,8 @@ XCache_EnableDCache(0x00000001);
   aliens_coord.x= START_X;
   aliens_coord.y= START_Y;
   new_aliens_coord = aliens_coord;
+  cur_explosion.active = 0;
+  new_explosion = cur_explosion;
   int i;
   int j;
   for(i=0; i<sizeof(aliens);i++){
@@ -321,12 +390,13 @@ XCache_EnableDCache(0x00000001);
 
 	timers[0] = newTimer(50, updateAllBullets);
 	timers[1] = newTimer(150, updateAliens);
-	timers[2] = newTimer(1000, newAlienBullet);
+	timers[2] = newTimer(500, newAlienBullet);
 	timers[3] = newTimer(30, moveAllBullets);
 	timers[4] = newTimer(25, updateShip);
 	timers[5] = newTimer(40, newShip);
 	timers[6] = newTimer(50, render);
 	timers[7] = newTimer(30, pollButtons);
+	timers[8] = newTimer(50, expireExplosion);
 	
 	int longest_delta = 0;
   while(1){
@@ -337,7 +407,7 @@ XCache_EnableDCache(0x00000001);
 			longest_delta = time_delta;
 			xil_printf("new longest delta %d\n\r",longest_delta);
 		}
-		for(i=0;i<8;i++){
+		for(i=0;i<9;i++){
 			incTimer(&timers[i],time_delta);
 		}
 	}

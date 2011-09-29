@@ -21,6 +21,6 @@ void drawAllAliens(coord_object aliens, int * aliens_array, coord_object space_s
 coord_object moveRight(coord_object aliens);
 coord_object moveLeft(coord_object aliens);
 coord_object moveDown(coord_object aliens);
-coord_object moveAliens(coord_object new_aliens_coord);
+coord_object moveAliens(coord_object new_aliens_coord, int * aliens);
 coord_object moveShip(coord_object ship);
 #endif

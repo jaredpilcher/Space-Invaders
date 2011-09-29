@@ -94,18 +94,44 @@ coord_object moveDown(coord_object aliens){
 	return aliens;
 }
 
-coord_object moveAliens(coord_object new_aliens_coord) {
+coord_object moveAliens(coord_object new_aliens_coord, int * aliens) {
+  // Dummy restart aliens logic
   if (new_aliens_coord.y > 300)
 	new_aliens_coord.y -= 300;
+  int alien_right_edge;
+  int alien_left_edge;
+  int i,j;
+  for(i = 10; i >=0; i++){
+	int col_not_empty = 0;
+	for(j=0;j<5;j++){
+	  col_not_empty |= aliens[j*11+i];
+	}
+	if(col_not_empty){
+		break;
+	}
+  }
+  // i should never be 30
+  alien_right_edge = 30 + i*30;
+  for(i = 0; i <11; i++){
+	int col_not_empty = 0;
+	for(j=0;j<5;j++){
+	  col_not_empty |= aliens[j*11+i];
+	}
+	if(col_not_empty){
+		break;
+	}
+  }
+  alien_left_edge = i*30;
+
   if (direction==RIGHT){
-    if (new_aliens_coord.x > 640 - (330 + MINIMUM_MOVEMENT)){
+    if (new_aliens_coord.x + alien_right_edge > 640 - MINIMUM_MOVEMENT){
 	   direction = LEFT;
 		new_aliens_coord = moveDown(new_aliens_coord);
 	 }else{
 		new_aliens_coord = moveRight(new_aliens_coord);
 	 }
   } else {
-  	 if (new_aliens_coord.x < MINIMUM_MOVEMENT){
+  	 if (new_aliens_coord.x + alien_left_edge < MINIMUM_MOVEMENT){
 	   direction = RIGHT;
 		new_aliens_coord = moveDown(new_aliens_coord);
 	 } else {
