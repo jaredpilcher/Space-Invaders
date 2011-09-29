@@ -28,34 +28,19 @@ void my_pitHandler(void * DataPtr){
 }
 
 void newShip(){
-	space_ship.x=-64;
-	space_ship.y=45;
-	new_space_ship.x=-64;
-	new_space_ship.y=45;
-	space_ship.active=1;
-	new_space_ship.active=1;
-}
-
-void moveShip(){
-	new_space_ship.x+=SHIP_MOVEMENT;
-	if(new_space_ship.x>640){
-		new_space_ship.active=0;
-	}
-}
-
-void drawShip(int next_frame){
-	if(new_space_ship.active){
-		XTft_DrawShip(next_frame,new_space_ship.x,new_space_ship.y,RED,BLACK);
-	}
-}
-
-void eraseShip(int prev_frame){
-	if(space_ship.active){
-		XTft_DrawShip(prev_frame,space_ship.x,space_ship.y,BLACK,RED);
-	}
 	if(!new_space_ship.active){
-		space_ship.active=0;
+		new_space_ship.x=-64;
+		new_space_ship.y=45;
+		new_space_ship.active=1;
 	}
+}
+
+void updateShip(){
+	new_space_ship = moveShip(new_space_ship);
+}
+
+void updateAliens(){
+	new_aliens_coord = moveAliens(new_aliens_coord);
 }
 
 bullet fireBullet(coord_object tank){
@@ -202,15 +187,13 @@ void render(){
 		  
 		  //draw stuff to next frame
 		  drawBunkers(next_frame);
-		  drawAllAliens(new_aliens_coord, aliens, next_frame);
+		  drawAllAliens(new_aliens_coord, aliens, new_space_ship, next_frame);
 		  drawTank(new_tank, next_frame);
 		  drawBullet(new_tank_bullet, next_frame);
-		  drawShip(next_frame);
 		  for(i=0; i<4; i++){
 			 if(new_bullets[i].active){
 				drawBullet(new_bullets[i], next_frame);
 			 }
-
 		  }
 		  
 		  //switch frame
@@ -221,7 +204,7 @@ void render(){
 		  for(i=0; i<4; i++){
 		    eraseBullet(bullets[i], prev_frame);
 		  }
-		  eraseAllAliens(aliens_coord, prev_frame);
+		  eraseAllAliens(aliens_coord, space_ship, prev_frame);
 		  eraseTank(tank, prev_frame);
 		  eraseBullet(tank_bullet, prev_frame);
 
@@ -314,7 +297,7 @@ XCache_EnableDCache(0x00000001);
   }
   tank_bullet.active = 0;
   new_tank_bullet = tank_bullet;
-  drawAllAliens(aliens_coord, aliens, prev_frame);
+  drawAllAliens(aliens_coord, aliens, space_ship, prev_frame);
   tank.x = 200;
   tank.y = 400;
   new_tank = tank;
@@ -337,11 +320,11 @@ XCache_EnableDCache(0x00000001);
 	unsigned time_delta=0;
 
 	timers[0] = newTimer(50, updateAllBullets);
-	timers[1] = newTimer(150, moveAliens);
+	timers[1] = newTimer(150, updateAliens);
 	timers[2] = newTimer(1000, newAlienBullet);
 	timers[3] = newTimer(30, moveAllBullets);
-	timers[4] = newTimer(25, moveShip);
-	timers[5] = newTimer(40000, newShip);
+	timers[4] = newTimer(25, updateShip);
+	timers[5] = newTimer(40, newShip);
 	timers[6] = newTimer(50, render);
 	timers[7] = newTimer(30, pollButtons);
 	

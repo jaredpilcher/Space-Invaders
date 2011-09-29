@@ -19,8 +19,8 @@
 #define XTFT_BUNKER_BLOCK_HEIGHT 12
 #define XTFT_BUNKER_BLOCK_WIDTH 12
 
-#define XTFT_SHIP_HEIGHT 32
-#define XTFT_SHIP_WIDTH 64
+#define XTFT_SHIP_HEIGHT 16
+#define XTFT_SHIP_WIDTH 32
 
 extern Xuint16 XTft_SpaceShip[8];	
 extern Xuint16 XTft_vidAliens[8][9];

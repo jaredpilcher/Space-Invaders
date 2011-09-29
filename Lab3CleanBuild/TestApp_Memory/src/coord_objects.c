@@ -7,6 +7,12 @@ void eraseTank(coord_object old_tank, int prev_frame){
 void drawTank(coord_object new_tank, int next_frame){
 	XTft_DrawTank(next_frame,new_tank.x,new_tank.y,GREEN,BLACK);
 }
+void eraseShip(coord_object space_ship, int prev_frame){
+		XTft_DrawShip(prev_frame,space_ship.x,space_ship.y,BLACK,RED);
+}
+void drawShip(coord_object new_space_ship,int next_frame){
+		XTft_DrawShip(next_frame,new_space_ship.x,new_space_ship.y,RED,BLACK);
+}
 
 void drawAlien(int x, int y,int type, int next_frame){
 	XTft_DrawAlien(next_frame,type,x,y,WHITE);
@@ -16,8 +22,11 @@ void eraseAlien(int x, int y,int type, int prev_frame){
 	XTft_EraseAlien(prev_frame,FRAME3,type,x,y);
 }
 
-void eraseAllAliens(coord_object aliens, int prev_frame) {
+void eraseAllAliens(coord_object aliens, coord_object space_ship, int prev_frame) {
 	int i;
+	if(space_ship.active){
+		eraseShip(space_ship,prev_frame);
+	}
 	for(i=0; i<NUMBER_OF_ALIENS; i++){
 	   int col = i % 11;
 		int row = i / 11;
@@ -39,8 +48,11 @@ void eraseAllAliens(coord_object aliens, int prev_frame) {
 	}
 }
 
-void drawAllAliens(coord_object aliens, int * aliens_array, int next_frame) {
+void drawAllAliens(coord_object aliens, int * aliens_array, coord_object space_ship, int next_frame) {
 	int i;
+	if(space_ship.active){
+		drawShip(space_ship,next_frame);
+	}
 	for(i=0; i<NUMBER_OF_ALIENS; i++){
 		if( ! aliens_array[i]){
 			continue;
@@ -82,7 +94,7 @@ coord_object moveDown(coord_object aliens){
 	return aliens;
 }
 
-void moveAliens() {
+coord_object moveAliens(coord_object new_aliens_coord) {
   if (new_aliens_coord.y > 300)
 	new_aliens_coord.y -= 300;
   if (direction==RIGHT){
@@ -100,4 +112,12 @@ void moveAliens() {
 	   new_aliens_coord = moveLeft(new_aliens_coord);
 	 }
   }
+  return new_aliens_coord;
+}
+coord_object moveShip(coord_object new_space_ship){
+	new_space_ship.x+=SHIP_MOVEMENT;
+	if(new_space_ship.x>640){
+		new_space_ship.active=0;
+	}
+	return new_space_ship;
 }
