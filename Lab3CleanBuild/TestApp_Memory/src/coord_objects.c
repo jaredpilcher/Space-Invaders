@@ -23,6 +23,7 @@ void eraseAlien(int x, int y,int type, int prev_frame){
 }
 
 void eraseAllAliens(coord_object aliens, coord_object space_ship, int prev_frame) {
+
 	int i;
 	if(space_ship.active){
 		eraseShip(space_ship,prev_frame);
@@ -101,7 +102,7 @@ coord_object moveAliens(coord_object new_aliens_coord, int * aliens) {
   int alien_right_edge;
   int alien_left_edge;
   int i,j;
-  for(i = 10; i >=0; i++){
+  for(i = 10; i >=0; i--){
 	int col_not_empty = 0;
 	for(j=0;j<5;j++){
 	  col_not_empty |= aliens[j*11+i];
@@ -110,7 +111,7 @@ coord_object moveAliens(coord_object new_aliens_coord, int * aliens) {
 		break;
 	}
   }
-  // i should never be 30
+  // i should never be 0
   alien_right_edge = 30 + i*30;
   for(i = 0; i <11; i++){
 	int col_not_empty = 0;

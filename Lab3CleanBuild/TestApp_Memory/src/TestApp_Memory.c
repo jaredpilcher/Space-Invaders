@@ -156,22 +156,25 @@ bullet detectCollision(bullet new_bullet){
 		}
 	}
 	//  Check aliens
+	//  Possible problem - bullets on left side withing 2px would be a miss.  They should be a hit.
 	int aliens_x_low = new_aliens_coord.x;
 	int aliens_x_high = new_aliens_coord.x + 330;
-	int aliens_y_low = new_aliens_coord.y;
+	int aliens_y_low = new_aliens_coord.y; 
 	int aliens_y_high = new_aliens_coord.y + 150;
 	if(new_bullet.y > aliens_y_low && new_bullet.y < aliens_y_high && new_bullet.type == TANK_BULLET_TYPE){
-		int rel_y = new_bullet.y - aliens_y_low;
-		int rel_x = new_bullet.x - aliens_x_low;
-		int row = rel_y/30;
-		int col = rel_x/30;
-		int alien_number = row*11 + col;
-		if(aliens[alien_number]){
-			if (is_alien_hit(rel_x,rel_y)){
-				aliens[alien_number] = 0;
-				new_bullet.active = 0;
-				newExplosion(new_aliens_coord.x + col*30, new_aliens_coord.y + row*30);
-				return new_bullet;
+		if (new_bullet.x > aliens_x_low && new_bullet.x < aliens_x_high){
+			int rel_y = new_bullet.y - aliens_y_low;
+			int rel_x = new_bullet.x - aliens_x_low;
+			int row = rel_y/30;
+			int col = rel_x/30;
+			int alien_number = row*11 + col;
+			if(aliens[alien_number]){
+				if (is_alien_hit(rel_x,rel_y)){
+					aliens[alien_number] = 0;
+					new_bullet.active = 0;
+					newExplosion(new_aliens_coord.x + col*30, new_aliens_coord.y + row*30);
+					return new_bullet;
+				}
 			}
 		}
 	}
@@ -264,10 +267,11 @@ void render(){
 		  XIo_Out32(XPAR_VGA_FRAMEBUFFER_DCR_BASEADDR, next_frame);
 		  
 		  //erase stuff from previous frame
-		  eraseShip(prev_frame);
+
 		  for(i=0; i<4; i++){
 		    eraseBullet(bullets[i], prev_frame);
 		  }
+		  xil_printf("%d %d\n\r", aliens_coord.x, aliens_coord.y);
 		  eraseAllAliens(aliens_coord, space_ship, prev_frame);
 		  eraseTank(tank, prev_frame);
 		  eraseBullet(tank_bullet, prev_frame);
@@ -288,6 +292,7 @@ void render(){
 		  prev_frame^=next_frame;
 		  next_frame^=prev_frame;
 		  prev_frame^=next_frame;
+		  
 }
 void initialize_frame(int frame){
   XTft_mClearScreen(frame, BLACK);
@@ -331,6 +336,7 @@ XCache_EnableDCache(0x00000001);
   pit_counter = 0;
   prev_frame = FRAME1;
   next_frame = FRAME2;
+
   initialize_frame(prev_frame);
   initialize_frame(next_frame);
   initialize_frame(FRAME3);
@@ -338,6 +344,7 @@ XCache_EnableDCache(0x00000001);
   aliens_coord.x= START_X;
   aliens_coord.y= START_Y;
   new_aliens_coord = aliens_coord;
+  
   cur_explosion.active = 0;
   new_explosion = cur_explosion;
   int i;
@@ -366,6 +373,7 @@ XCache_EnableDCache(0x00000001);
   }
   tank_bullet.active = 0;
   new_tank_bullet = tank_bullet;
+
   drawAllAliens(aliens_coord, aliens, space_ship, prev_frame);
   tank.x = 200;
   tank.y = 400;
@@ -394,11 +402,18 @@ XCache_EnableDCache(0x00000001);
 	timers[3] = newTimer(30, moveAllBullets);
 	timers[4] = newTimer(25, updateShip);
 	timers[5] = newTimer(40, newShip);
-	timers[6] = newTimer(50, render);
+	timers[6] = newTimer(20, render);
 	timers[7] = newTimer(30, pollButtons);
 	timers[8] = newTimer(50, expireExplosion);
 	
 	int longest_delta = 0;
+	  DrawWord("I10VLES",300,10,FRAME1);
+  DrawWord("I10VLES",300,10,FRAME2);
+  DrawWord("I10VLES",300,10,FRAME3);
+  DrawWord("0987654321",20,10,FRAME1);
+  DrawWord("0987654321",20,10,FRAME2);
+  DrawWord("0987654321",20,10,FRAME3);
+  EraseWord("0987654321",20,10,FRAME3);
   while(1){
 	new_pit_counter=pit_counter;
 	time_delta=new_pit_counter-old_pit_counter;

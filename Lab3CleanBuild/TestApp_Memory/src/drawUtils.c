@@ -27,6 +27,7 @@
 
 #include "xtft_l.h"
 #include "alienCodes.h"
+#include "text.h"
 
 #define FRAME3 0x00400000
 
@@ -65,7 +66,7 @@ void XTft_EraseAlien(
     val = XTft_vidAliens[(Xuint32) type][y/2];
     for (x = 0; x < XTFT_ALIEN_WIDTH; x++)
     {
-		if (yu+y > 330)
+		if (yu+y > 330 || yu+y < 100)
 			col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
 		else
 			col = 0;
@@ -270,6 +271,24 @@ void XTft_DrawExplosion(
     for (x = 0; x < XTFT_EXPLOSION_WIDTH; x++)
     {
       if (val & (1 << (XTFT_EXPLOSION_WIDTH/2 - x/2 - 1)))
+        col = fgColor;
+      else
+	    continue;
+      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+    }
+  }
+}
+
+
+void XTft_DrawLetter(Xuint32 BaseAddress, Xuint32 char_index, Xuint32 xu, Xuint32 yu, Xuint32 fgColor){
+  Xuint32 col, x, y;
+  Xuint16 val;
+  for (y = 0; y < XTFT_LETTER_HEIGHT; y++)
+  {
+    val = XTft_Letters[(Xuint32) char_index][y/2];
+    for (x = 0; x < XTFT_LETTER_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_LETTER_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
 	    continue;

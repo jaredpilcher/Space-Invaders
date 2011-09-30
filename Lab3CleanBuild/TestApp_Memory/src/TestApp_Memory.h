@@ -16,6 +16,7 @@
 #include "coord_objects.h"
 #include "timer.h"
 #include "explosion.h"
+#include "text.h"
 
 #define FRAME1 0x00000000
 #define FRAME2 0x00200000
