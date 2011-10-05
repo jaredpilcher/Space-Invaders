@@ -142,9 +142,11 @@ coord_object moveAliens(coord_object new_aliens_coord, int * aliens) {
   return new_aliens_coord;
 }
 coord_object moveShip(coord_object new_space_ship){
-	new_space_ship.x+=SHIP_MOVEMENT;
-	if(new_space_ship.x>640){
-		new_space_ship.active=0;
-	}
+	new_space_ship.x=100;
+	new_space_ship.y=45;
+	// new_space_ship.x+=SHIP_MOVEMENT;
+	// if(new_space_ship.x>640){
+		// new_space_ship.active=0;
+	// }
 	return new_space_ship;
 }

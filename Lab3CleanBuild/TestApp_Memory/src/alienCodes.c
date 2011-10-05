@@ -30,6 +30,9 @@
 #define genBunkerPixels(a5, a4, a3, a2, a1, a0) ( ((a5) << 5)  | ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
 #define genBulletPixels(a2, a1, a0) (((a2) << 2)  | ((a1) << 1) | ((a0)) )
 #define genShipPixels( a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0) ( ((a15) << 15) | ((a14) << 14) | ((a13) << 13) | ((a12) << 12) | ((a11) << 11) | ((a10) << 10) | ((a9) << 9) | ((a8) << 8) |  ((a7) << 7)  | ((a6) << 6)  | ((a5) << 5)  | ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
+#define genLetterPixels( a4, a3, a2, a1, a0) ( ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
+#define genTankExplosionPixels(a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0) ( ((a14) << 14) | ((a13) << 13) | ((a12) << 12) | ((a11) << 11) | ((a10) << 10) | ((a9) << 9) | ((a8) << 8) |  ((a7) << 7)  | ((a6) << 6)  | ((a5) << 5)  | ((a4) << 4)  | ((a3) << 3)  | ((a2) << 2)  | ((a1) << 1) | ((a0))  )
+	
 Xuint16 XTft_tank[9] = {
 	genTankPixels(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 	genTankPixels(0,0,0,0,0,0,0,1,0,0,0,0,0,0,0),
@@ -41,6 +44,42 @@ Xuint16 XTft_tank[9] = {
 	genTankPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1),
 	genTankPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
 	};
+	
+Xuint16 XTft_tank_explosion[3][9] = {
+	{
+		genTankExplosionPixels(0,0,1,0,0,0,0,0,0,1,0,0,0,0,0),
+		genTankExplosionPixels(0,0,0,0,0,1,0,0,0,0,0,1,0,1,0),
+		genTankExplosionPixels(0,0,1,0,1,0,1,0,0,1,0,0,0,0,0),
+		genTankExplosionPixels(0,0,0,0,1,0,0,1,0,0,0,0,0,1,0),
+		genTankExplosionPixels(0,0,1,0,0,0,0,0,0,0,1,0,0,0,0),
+		genTankExplosionPixels(0,0,0,0,0,0,0,1,1,1,1,1,0,0,0),
+		genTankExplosionPixels(0,1,0,0,1,1,1,1,1,1,1,1,1,1,0),
+		genTankExplosionPixels(0,0,0,1,1,1,1,1,1,1,1,1,1,1,0),
+		genTankExplosionPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+	},
+	{
+		genTankExplosionPixels(0,0,0,0,1,0,0,0,0,0,0,0,1,0,0),
+		genTankExplosionPixels(0,1,0,0,0,0,1,0,0,1,0,0,0,0,0),
+		genTankExplosionPixels(0,0,0,0,0,0,0,0,0,0,0,0,0,1,0),
+		genTankExplosionPixels(0,0,1,0,1,0,0,1,0,1,0,0,0,0,0),
+		genTankExplosionPixels(0,0,0,0,0,0,0,0,0,1,0,0,0,1,0),
+		genTankExplosionPixels(0,1,0,0,0,0,0,0,1,1,1,0,0,0,0),
+		genTankExplosionPixels(0,0,0,0,0,1,1,1,1,1,1,1,1,0,0),
+		genTankExplosionPixels(0,0,0,1,1,1,1,1,1,1,1,1,1,1,0),
+		genTankExplosionPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+	},
+	{
+		genTankExplosionPixels(0,0,0,0,0,0,0,0,0,1,0,0,0,0,1),
+		genTankExplosionPixels(0,1,0,0,1,0,0,1,0,0,1,0,0,0,0),
+		genTankExplosionPixels(0,0,0,0,0,0,0,0,0,0,0,0,0,1,0),
+		genTankExplosionPixels(1,0,0,1,0,0,0,1,1,0,0,0,0,1,0),
+		genTankExplosionPixels(0,0,0,0,0,0,0,0,0,0,1,0,0,0,0),
+		genTankExplosionPixels(0,0,0,0,0,0,0,1,1,0,1,1,0,0,0),
+		genTankExplosionPixels(0,1,0,0,1,1,0,1,1,1,1,1,1,0,0),
+		genTankExplosionPixels(0,0,0,0,1,1,1,1,1,1,1,1,1,1,0),
+		genTankExplosionPixels(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+	},
+};
 	
 
 Xuint16 XTft_bullets[8][5] = {

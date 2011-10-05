@@ -9,6 +9,8 @@ coord_object aliens_coord;
 coord_object new_aliens_coord;
 coord_object space_ship, new_space_ship;
 explosion cur_explosion, new_explosion;
+explosion cur_tank_explosion, new_tank_explosion;
+explosion ship_explosion, new_ship_explosion;
 bullet bullets[4];
 bullet new_bullets[4];
 bullet tank_bullet;
@@ -30,19 +32,33 @@ void my_pitHandler(void * DataPtr){
 
 void newShip(){
 	if(!new_space_ship.active){
+		if (rand() % 100 > NEW_SHIP_PROBABILITY)
+			return;
 		new_space_ship.x=-64;
 		new_space_ship.y=45;
 		new_space_ship.active=1;
 	}
 }
 
-void newExplosion(int x, int y){
-	if(!new_explosion.active){
-		new_explosion.x=x;
-		new_explosion.y=y;
-		new_explosion.active=1;
-		new_explosion.time_elapsed=0;
+explosion newExplosion(explosion temp_explosion, int x, int y){
+	if(!temp_explosion.active){
+		temp_explosion.x=x;
+		temp_explosion.y=y;
+		temp_explosion.active=1;
+		temp_explosion.time_elapsed=0;
 	}
+	return temp_explosion;
+}
+
+explosion newShipExplosion(explosion temp_explosion, int x, int y){
+	if(!temp_explosion.active){
+		temp_explosion.x=x;
+		temp_explosion.y=y;
+		temp_explosion.active=1;
+		temp_explosion.time_elapsed=0;
+		temp_explosion.score=(rand()%301) + 50;
+	}
+	return temp_explosion;
 }
 
 void updateShip(){
@@ -172,7 +188,8 @@ bullet detectCollision(bullet new_bullet){
 				if (is_alien_hit(rel_x,rel_y)){
 					aliens[alien_number] = 0;
 					new_bullet.active = 0;
-					newExplosion(new_aliens_coord.x + col*30, new_aliens_coord.y + row*30);
+					new_explosion=newExplosion(new_explosion,new_aliens_coord.x + col*30, new_aliens_coord.y + row*30);
+					new_explosion.type=ALIEN_EXPLOSION;
 					return new_bullet;
 				}
 			}
@@ -182,14 +199,46 @@ bullet detectCollision(bullet new_bullet){
 	
 	
 	//  Check tank
+	int tank_x_low = new_tank.x;
+	int tank_x_high = new_tank.x + 30;
+	int tank_y_low = new_tank.y;
+	int tank_y_high = new_tank.y + 18;
+	if((new_bullet.y > tank_y_low || (new_bullet.y + 10) > tank_y_low) && new_bullet.y < tank_y_high && (new_bullet.type == ALIEN_BULLET_ONE || new_bullet.type == ALIEN_BULLET_TWO)){
+		if ((new_bullet.x > tank_x_low || (new_bullet.x + 6) > tank_x_low)&& new_bullet.x < tank_x_high){
+		    new_tank.active=0;
+			new_bullet.active=0;
+			new_tank_explosion=newExplosion(new_tank_explosion,new_tank.x, new_tank.y);
+			new_tank_explosion.type=TANK_EXPLOSION;
+		}
+	}
 	
 	//  Check Space Ship
+	int ship_x_low = new_space_ship.x;
+	int ship_x_high = new_space_ship.x + 32;
+	int ship_y_low = new_space_ship.y;
+	int ship_y_high = new_space_ship.y + 16;
+	if(new_bullet.y > tank_y_low && new_bullet.y < tank_y_high){
+		if ((new_bullet.x > tank_x_low || (new_bullet.x + 6) > tank_x_low)&& new_bullet.x < tank_x_high){
+			new_space_ship.active=0;
+			new_bullet.active=0;
+			new_ship_explosion=newShipExplosion(new_ship_explosion,new_space_ship.x,new_space_ship.y);
+			new_ship_explosion.type = SHIP_EXPLOSION;
+		}
+	}
+	
 	
 	return new_bullet;
 }
 
 void expireExplosion(){
 	new_explosion=updateExplosion(new_explosion);
+}
+
+void expireTankExplosion(){
+	new_tank_explosion=updateExplosion(new_tank_explosion);
+	if(!new_tank_explosion.active){
+		new_tank.active=1;
+	}
 }
 
 void moveAllBullets(){
@@ -253,8 +302,14 @@ void render(){
 		  //draw stuff to next frame
 		  drawBunkers(next_frame);
 		  drawAllAliens(new_aliens_coord, aliens, new_space_ship, next_frame);
-		  drawTank(new_tank, next_frame);
+		  if(new_tank.active){
+			drawTank(new_tank, next_frame);
+		  }
 		  drawBullet(new_tank_bullet, next_frame);
+		  new_tank_explosion.explosion_type=(new_tank_explosion.explosion_type +1)%3;
+		  if(new_tank_explosion.active){
+			drawTankExplosion(new_tank_explosion,next_frame);
+		  }
 		  if( new_explosion.active)
 			drawExplosion(new_explosion,next_frame);
 		  for(i=0; i<4; i++){
@@ -271,12 +326,16 @@ void render(){
 		  for(i=0; i<4; i++){
 		    eraseBullet(bullets[i], prev_frame);
 		  }
-		  xil_printf("%d %d\n\r", aliens_coord.x, aliens_coord.y);
+		  //xil_printf("%d %d\n\r", aliens_coord.x, aliens_coord.y);
 		  eraseAllAliens(aliens_coord, space_ship, prev_frame);
-		  eraseTank(tank, prev_frame);
+		  if(tank.active){
+			eraseTank(tank, prev_frame);
+		  }
 		  eraseBullet(tank_bullet, prev_frame);
 		  if( cur_explosion.active )
 			eraseExplosion(cur_explosion, prev_frame);
+		  if( cur_tank_explosion.active )
+			eraseTankExplosion(cur_tank_explosion, prev_frame);
 
 		  //copy to global state
 		  tank = new_tank;
@@ -284,6 +343,7 @@ void render(){
 		  aliens_coord = new_aliens_coord;
 		  space_ship=new_space_ship;
 		  cur_explosion=new_explosion;
+		  cur_tank_explosion=new_tank_explosion;
 		  for(i=0; i < 4; i++){
 		  		    bullets[i] = new_bullets[i];
 		  }
@@ -307,16 +367,22 @@ void pollButtons(){
 	data = XGpio_DiscreteRead(&gpPB, 1);
 	// LEFT = 2
 	if( ~data & 2 ){
-		new_tank = moveLeft(new_tank);
+		if(new_tank.active){
+			new_tank = moveLeft(new_tank);
+		}
 	}
 	// RIGHT = 1
 	if ( ~data & 1 ){
-	   new_tank = moveRight(new_tank);
+		if(new_tank.active){
+			new_tank = moveRight(new_tank);
+		}
 	}
 	// MIDDLE = 16
 	if ( ~data & 16 ){
 		if(new_tank_bullet.active == 0){
-			new_tank_bullet = fireBullet(new_tank);
+			if(new_tank.active){
+				new_tank_bullet = fireBullet(new_tank);
+			}
 		}
 	}
 }
@@ -347,6 +413,9 @@ XCache_EnableDCache(0x00000001);
   
   cur_explosion.active = 0;
   new_explosion = cur_explosion;
+  cur_tank_explosion.active =0;
+  cur_tank_explosion.explosion_type=0;
+  new_tank_explosion = cur_tank_explosion;
   int i;
   int j;
   for(i=0; i<sizeof(aliens);i++){
@@ -401,19 +470,17 @@ XCache_EnableDCache(0x00000001);
 	timers[2] = newTimer(500, newAlienBullet);
 	timers[3] = newTimer(30, moveAllBullets);
 	timers[4] = newTimer(25, updateShip);
-	timers[5] = newTimer(40, newShip);
+	timers[5] = newTimer(500, newShip);
 	timers[6] = newTimer(20, render);
 	timers[7] = newTimer(30, pollButtons);
 	timers[8] = newTimer(50, expireExplosion);
+	timers[9] = newTimer(50, expireTankExplosion);
 	
 	int longest_delta = 0;
-	  DrawWord("I10VLES",300,10,FRAME1);
-  DrawWord("I10VLES",300,10,FRAME2);
-  DrawWord("I10VLES",300,10,FRAME3);
-  DrawWord("0987654321",20,10,FRAME1);
-  DrawWord("0987654321",20,10,FRAME2);
-  DrawWord("0987654321",20,10,FRAME3);
-  EraseWord("0987654321",20,10,FRAME3);
+	  DrawWord("LIVES",400,10,FRAME1, 1);
+  DrawWord("LIVES",400,10,FRAME2, 1);
+  DrawWord("SCORE",30,10,FRAME1, 1);
+  DrawWord("SCORE",30,10,FRAME2, 1);
   while(1){
 	new_pit_counter=pit_counter;
 	time_delta=new_pit_counter-old_pit_counter;
@@ -422,7 +489,7 @@ XCache_EnableDCache(0x00000001);
 			longest_delta = time_delta;
 			xil_printf("new longest delta %d\n\r",longest_delta);
 		}
-		for(i=0;i<9;i++){
+		for(i=0;i<10;i++){
 			incTimer(&timers[i],time_delta);
 		}
 	}

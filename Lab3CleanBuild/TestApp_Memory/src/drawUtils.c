@@ -119,7 +119,34 @@ void XTft_DrawTank(
         col = fgColor;
       else
 		continue;
-        //col = bgColor;
+		//col = bgColor;
+      
+      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+    }
+  }
+}
+
+void XTft_DrawTankExplosion(
+  Xuint32 BaseAddress,
+  Xuint32 type,
+  Xuint32 xu,
+  Xuint32 yu,
+  Xuint32 fgColor,
+  Xuint32 bgColor)
+{
+  Xuint32 col, x, y;
+  Xuint16 val;
+
+  for (y = 0; y < XTFT_TANK_HEIGHT; y++)
+  {
+    val = XTft_tank_explosion[type][y/2];
+    for (x = 0; x < XTFT_TANK_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_TANK_WIDTH/2 - x/2 - 1)))
+        col = fgColor;
+      else
+		continue;
+		//col = bgColor;
       
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
     }
@@ -293,6 +320,7 @@ void XTft_DrawLetter(Xuint32 BaseAddress, Xuint32 char_index, Xuint32 xu, Xuint3
       else
 	    continue;
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+	  XTft_mSetPixel(FRAME3, xu+x, yu+y, col);
     }
   }
 }

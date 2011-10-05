@@ -6,6 +6,6 @@
 #define XTFT_LETTER_WIDTH 10
 
 extern Xuint16 XTft_Letters[20][5];
-void DrawWord(char * message, int x, int y, int frame);
+void DrawWord(char * message, int x, int y, int frame, int color);
 
 #endif

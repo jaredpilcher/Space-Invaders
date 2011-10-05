@@ -127,7 +127,7 @@ Xuint16 XTft_Letters[20][5] =
 		};
 		
 		
-void DrawWord(char * message, int x, int y, int frame){
+void DrawWord(char * message, int x, int y, int frame, int color){
 	int position = x;
 	int i;
 	int letter_index;
@@ -207,9 +207,17 @@ void DrawWord(char * message, int x, int y, int frame){
 			default:
 				break;
 		}
-		XTft_DrawLetter(frame,letter_index,position, y + y_offset,0x00ffffff);
+		switch(color){
+			case 1:
+				XTft_DrawLetter(frame,letter_index,position, y + y_offset,0x00ffffff);
+				break;
+			case 0:
+				XTft_DrawLetter(frame,letter_index,position, y + y_offset,0x00000000);
+				break;
+			default:
+				break;
+		}
 		position = next_position;
 		y_offset = 0;
 	}
-}
-		
+}	

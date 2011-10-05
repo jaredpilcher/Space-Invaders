@@ -38,6 +38,7 @@
 #define NUMBER_OF_ALIENS 55
 #define BULLET_SPEED 4
 #define ALIEN_FIRE_PROBABILITY 40
+#define NEW_SHIP_PROBABILITY 10
 
 #define SHIP_MOVEMENT 4
 
@@ -53,6 +54,10 @@
 
 #define RIGHT 1
 #define LEFT 0
+
+#define ALIEN_EXPLOSION 1
+#define TANK_EXPLOSION 2
+#define SHIP_EXPLOSION 2
 
 #define TANK_BULLET_TYPE 7
 #define ALIEN_BULLET_ONE 0
