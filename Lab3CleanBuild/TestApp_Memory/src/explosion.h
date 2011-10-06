@@ -8,10 +8,11 @@ typedef struct {
   int x;
   int y;
   int type;
-  int explosion_type;
   int active;
   int time_elapsed;
   int score;
+  int animation_step;
+  int visible;
 } explosion;
 void drawTankExplosion(explosion new_explosion, int next_frame);
 void eraseTankExplosion(explosion old_explosion, int prev_frame);

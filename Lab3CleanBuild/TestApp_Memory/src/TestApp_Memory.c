@@ -1,7 +1,5 @@
 #include "TestApp_Memory.h"
 
-Timer timers[20];
-
 int direction= RIGHT;
 coord_object tank;
 coord_object new_tank;
@@ -24,6 +22,9 @@ int bunker_position[4]={90,225,362,498};
 XGpio gpPB;
 
 int aliens[55];
+
+Timer timers[20];
+
 
 void my_pitHandler(void * DataPtr){
    XTime_PITClearInterrupt();
@@ -55,6 +56,7 @@ explosion newShipExplosion(explosion temp_explosion, int x, int y){
 		temp_explosion.x=x;
 		temp_explosion.y=y;
 		temp_explosion.active=1;
+		temp_explosion.visible=1;
 		temp_explosion.time_elapsed=0;
 		temp_explosion.score=(rand()%301) + 50;
 	}
@@ -63,6 +65,11 @@ explosion newShipExplosion(explosion temp_explosion, int x, int y){
 
 void updateShip(){
 	new_space_ship = moveShip(new_space_ship);
+}
+
+void stepShipExplosion(){
+	if(new_ship_explosion.active)
+		new_ship_explosion = updateExplosion(new_ship_explosion);
 }
 
 void updateAliens(){
@@ -190,6 +197,9 @@ bullet detectCollision(bullet new_bullet){
 					new_bullet.active = 0;
 					new_explosion=newExplosion(new_explosion,new_aliens_coord.x + col*30, new_aliens_coord.y + row*30);
 					new_explosion.type=ALIEN_EXPLOSION;
+					//// <SKETCHY_CODE>
+					timers[1].max = timers[1].max;
+					//// </SKETCHY_CODE>
 					return new_bullet;
 				}
 			}
@@ -213,12 +223,13 @@ bullet detectCollision(bullet new_bullet){
 	}
 	
 	//  Check Space Ship
+	
 	int ship_x_low = new_space_ship.x;
 	int ship_x_high = new_space_ship.x + 32;
 	int ship_y_low = new_space_ship.y;
-	int ship_y_high = new_space_ship.y + 16;
-	if(new_bullet.y > tank_y_low && new_bullet.y < tank_y_high){
-		if ((new_bullet.x > tank_x_low || (new_bullet.x + 6) > tank_x_low)&& new_bullet.x < tank_x_high){
+	int ship_y_high = new_space_ship.y + 14;
+	if(space_ship.active && new_bullet.y > ship_y_low && new_bullet.y < ship_y_high){
+		if ((new_bullet.x > ship_x_low || (new_bullet.x + 6) > ship_x_low)&& new_bullet.x < ship_x_high){
 			new_space_ship.active=0;
 			new_bullet.active=0;
 			new_ship_explosion=newShipExplosion(new_ship_explosion,new_space_ship.x,new_space_ship.y);
@@ -306,12 +317,15 @@ void render(){
 			drawTank(new_tank, next_frame);
 		  }
 		  drawBullet(new_tank_bullet, next_frame);
-		  new_tank_explosion.explosion_type=(new_tank_explosion.explosion_type +1)%3;
 		  if(new_tank_explosion.active){
 			drawTankExplosion(new_tank_explosion,next_frame);
 		  }
 		  if( new_explosion.active)
 			drawExplosion(new_explosion,next_frame);
+			
+		  if( new_ship_explosion.active && new_ship_explosion.visible ){
+			drawShipExplosion(new_ship_explosion, next_frame);
+		  }
 		  for(i=0; i<4; i++){
 			 if(new_bullets[i].active){
 				drawBullet(new_bullets[i], next_frame);
@@ -336,6 +350,8 @@ void render(){
 			eraseExplosion(cur_explosion, prev_frame);
 		  if( cur_tank_explosion.active )
 			eraseTankExplosion(cur_tank_explosion, prev_frame);
+		  if( ship_explosion.active  && ship_explosion.visible )
+			eraseShipExplosion(ship_explosion, prev_frame);
 
 		  //copy to global state
 		  tank = new_tank;
@@ -344,6 +360,7 @@ void render(){
 		  space_ship=new_space_ship;
 		  cur_explosion=new_explosion;
 		  cur_tank_explosion=new_tank_explosion;
+		  ship_explosion=new_ship_explosion;
 		  for(i=0; i < 4; i++){
 		  		    bullets[i] = new_bullets[i];
 		  }
@@ -391,7 +408,6 @@ int main() {
 XCache_EnableICache(0x00000001);
 XCache_EnableDCache(0x00000001);
      //XGpio gpLED;
-
      // Initialise the peripherals
      //XGpio_Initialize(&gpLED, XPAR_LEDS_4BIT_DEVICE_ID);
      XGpio_Initialize(&gpPB, XPAR_PUSHBUTTONS_5BIT_DEVICE_ID);
@@ -414,11 +430,14 @@ XCache_EnableDCache(0x00000001);
   cur_explosion.active = 0;
   new_explosion = cur_explosion;
   cur_tank_explosion.active =0;
-  cur_tank_explosion.explosion_type=0;
+  cur_tank_explosion.animation_step=0;
   new_tank_explosion = cur_tank_explosion;
+  ship_explosion.active = 0;
+  ship_explosion.animation_step=0;
+  new_ship_explosion = ship_explosion;
   int i;
   int j;
-  for(i=0; i<sizeof(aliens);i++){
+  for(i=0; i<55;i++){
 	aliens[i]=1;
   }
   //aliens[46]=0;
@@ -450,6 +469,7 @@ XCache_EnableDCache(0x00000001);
   drawTank(tank, prev_frame);
   drawBunkers(prev_frame);
   //drawBunkers(next_frame);
+  
   	void * data;
 	XExceptionHandler pithandler = &my_pitHandler;
 	XExc_Init();
@@ -466,18 +486,23 @@ XCache_EnableDCache(0x00000001);
 	unsigned time_delta=0;
 
 	timers[0] = newTimer(50, updateAllBullets);
-	timers[1] = newTimer(150, updateAliens);
+	//// <SKETCHY_DESIGN>
+	//// THIS MUST BE timers[1]
+	timers[1] = newTimer(900, updateAliens);
+	//// </SKETCHY_DESIGN>
 	timers[2] = newTimer(500, newAlienBullet);
 	timers[3] = newTimer(30, moveAllBullets);
-	timers[4] = newTimer(25, updateShip);
-	timers[5] = newTimer(500, newShip);
+	timers[4] = newTimer(175, updateShip);
+	timers[5] = newTimer(1500, newShip);
 	timers[6] = newTimer(20, render);
 	timers[7] = newTimer(30, pollButtons);
 	timers[8] = newTimer(50, expireExplosion);
 	timers[9] = newTimer(50, expireTankExplosion);
+	timers[10] = newTimer(100, stepShipExplosion);
+	
 	
 	int longest_delta = 0;
-	  DrawWord("LIVES",400,10,FRAME1, 1);
+  DrawWord("LIVES",400,10,FRAME1, 1);
   DrawWord("LIVES",400,10,FRAME2, 1);
   DrawWord("SCORE",30,10,FRAME1, 1);
   DrawWord("SCORE",30,10,FRAME2, 1);
@@ -487,10 +512,12 @@ XCache_EnableDCache(0x00000001);
 	if(time_delta != 0){
 		if(time_delta > longest_delta){
 			longest_delta = time_delta;
-			xil_printf("new longest delta %d\n\r",longest_delta);
+			//xil_printf("new longest delta %d\n\r",longest_delta);
 		}
-		for(i=0;i<10;i++){
+		for(i=0;i<11;i++){
+			//xil_printf("Timer number %d is running\n\r", i);
 			incTimer(&timers[i],time_delta);
+			//xil_printf("ship explosion stuff: active: %d, visible: %d\n\r", new_ship_explosion.active, new_ship_explosion.visible);
 		}
 	}
 	old_pit_counter=new_pit_counter;

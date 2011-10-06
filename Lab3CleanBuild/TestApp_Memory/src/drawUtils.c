@@ -122,6 +122,7 @@ void XTft_DrawTank(
 		//col = bgColor;
       
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+	  XTft_mSetPixel(BaseAddress, 0, 0, 0xFFFFFF);
     }
   }
 }
