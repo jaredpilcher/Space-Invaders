@@ -96,9 +96,6 @@ coord_object moveDown(coord_object aliens){
 }
 
 coord_object moveAliens(coord_object new_aliens_coord, int * aliens) {
-  // Dummy restart aliens logic
-  if (new_aliens_coord.y > 300)
-	new_aliens_coord.y -= 300;
   int alien_right_edge;
   int alien_left_edge;
   int i,j;
@@ -141,6 +138,24 @@ coord_object moveAliens(coord_object new_aliens_coord, int * aliens) {
   }
   return new_aliens_coord;
 }
+
+int aliens_landed(coord_object new_aliens_coord, int * aliens){
+  int alien_bottom_edge;
+  int i,j;
+  for(i = 4; i >=0; i--){
+	int row_not_empty = 0;
+	for(j=0;j<11;j++){
+	  row_not_empty |= aliens[i*11+j];
+	}
+	if(row_not_empty){
+		break;
+	}
+  }
+  
+  alien_bottom_edge = new_aliens_coord.y + i*30;
+  return (alien_bottom_edge + XTFT_ALIEN_HEIGHT > 335 + XTFT_BUNKER_HEIGHT);
+}
+
 coord_object moveShip(coord_object new_space_ship){
 	new_space_ship.x+=SHIP_MOVEMENT;
 	if(new_space_ship.x>640){

@@ -43,7 +43,10 @@
 #define SHIP_MOVEMENT 4
 
 #define START_X  165
-#define START_Y  45
+#define START_Y  100
+
+#define TANK_X 200
+#define TANK_Y 400
 
 #define SCHMO 2
 #define THE_CLAW 4

@@ -22,5 +22,6 @@ coord_object moveRight(coord_object aliens);
 coord_object moveLeft(coord_object aliens);
 coord_object moveDown(coord_object aliens);
 coord_object moveAliens(coord_object new_aliens_coord, int * aliens);
+int aliens_landed(coord_object new_aliens_coord, int * aliens);
 coord_object moveShip(coord_object ship);
 #endif

@@ -23,7 +23,6 @@ void eraseShipExplosion(explosion old_explosion, int prev_frame){
 }
 
 void drawShipExplosion(explosion new_explosion, int next_frame){
-	print("we are drawing the explosion\n\r");
 	char mess[] = "000"; 
 	mess[3]=0;
 	int score = new_explosion.score;
@@ -43,7 +42,6 @@ explosion updateExplosion(explosion new_explosion){
 			new_explosion.active=0;
 		}
 	}else if(new_explosion.type==SHIP_EXPLOSION){
-		xil_printf("ship explosion stuff: active: %d, visible: %d, animation: %d\n\r", new_explosion.active, new_explosion.visible, new_explosion.animation_step);
 		new_explosion.animation_step+=1;
 		switch(new_explosion.animation_step){
 			case 0:

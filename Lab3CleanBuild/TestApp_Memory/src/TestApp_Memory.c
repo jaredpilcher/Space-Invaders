@@ -13,8 +13,11 @@ bullet bullets[4];
 bullet new_bullets[4];
 bullet tank_bullet;
 bullet new_tank_bullet;
+int game_over,new_game_over;
 int score;
 int new_score;
+int lives;
+int new_lives;
 
 
 int prev_frame;
@@ -26,6 +29,7 @@ int bunker_position[4]={90,225,362,498};
 XGpio gpPB;
 
 int aliens[55];
+int aliens_alive = 55;
 
 Timer timers[20];
 
@@ -76,8 +80,13 @@ void stepShipExplosion(){
 		new_ship_explosion = updateExplosion(new_ship_explosion);
 }
 
+
+
 void updateAliens(){
 	new_aliens_coord = moveAliens(new_aliens_coord,aliens);
+	if(aliens_landed(new_aliens_coord,aliens)){
+		new_game_over = 1;
+	}
 }
 
 bullet fireBullet(coord_object tank){
@@ -184,7 +193,7 @@ bullet detectCollision(bullet new_bullet){
 	}
 	//  Check aliens
 	//  Possible problem - bullets on left side withing 2px would be a miss.  They should be a hit.
-	int aliens_x_low = new_aliens_coord.x;
+	int aliens_x_low = new_aliens_coord.x - 2;
 	int aliens_x_high = new_aliens_coord.x + 330;
 	int aliens_y_low = new_aliens_coord.y; 
 	int aliens_y_high = new_aliens_coord.y + 150;
@@ -198,11 +207,15 @@ bullet detectCollision(bullet new_bullet){
 			if(aliens[alien_number]){
 				if (is_alien_hit(rel_x,rel_y)){
 					aliens[alien_number] = 0;
+					aliens_alive--;
+					if(!aliens_alive){
+						new_game_over = 1;
+					}
 					new_bullet.active = 0;
 					new_explosion=newExplosion(new_explosion,new_aliens_coord.x + col*30, new_aliens_coord.y + row*30);
 					new_explosion.type=ALIEN_EXPLOSION;
 					//// <SKETCHY_CODE>
-					timers[1].max = timers[1].max;
+					timers[1].max = timers[1].max*.96;
 					//// </SKETCHY_CODE>
 					switch(row){
 						case 0:
@@ -219,7 +232,7 @@ bullet detectCollision(bullet new_bullet){
 						default:
 							break;
 					}
-							
+					
 					return new_bullet;
 				}
 			}
@@ -237,8 +250,15 @@ bullet detectCollision(bullet new_bullet){
 		if ((new_bullet.x > tank_x_low || (new_bullet.x + 6) > tank_x_low)&& new_bullet.x < tank_x_high){
 		    new_tank.active=0;
 			new_bullet.active=0;
+			if(!new_tank_explosion.active){
+				new_lives--;
+			}
 			new_tank_explosion=newExplosion(new_tank_explosion,new_tank.x, new_tank.y);
 			new_tank_explosion.type=TANK_EXPLOSION;
+
+			if (new_lives < 1){
+				new_game_over = 1;
+			}
 		}
 	}
 	
@@ -331,6 +351,7 @@ void drawBunkers(int frame){
 void render(){
 		  int i;
 		  //draw stuff to next frame
+		  drawAllLives(new_lives,next_frame);
 		  drawBunkers(next_frame);
 		  drawAllAliens(new_aliens_coord, aliens, new_space_ship, next_frame);
 		  if(new_tank.active){
@@ -374,6 +395,7 @@ void render(){
 		  if( ship_explosion.active  && ship_explosion.visible )
 			eraseShipExplosion(ship_explosion, prev_frame);
 		  eraseScore(score,prev_frame);
+		  eraseAllLives(lives,prev_frame);
 			
 		  //copy to global state
 		  tank = new_tank;
@@ -384,6 +406,8 @@ void render(){
 		  cur_tank_explosion=new_tank_explosion;
 		  ship_explosion=new_ship_explosion;
 		  score = new_score;
+		  game_over = new_game_over;
+		  lives = new_lives;
 		  for(i=0; i < 4; i++){
 		  		    bullets[i] = new_bullets[i];
 		  }
@@ -397,23 +421,18 @@ void render(){
 void initialize_frame(int frame){
   XTft_mClearScreen(frame, BLACK);
 }
-
-void helloWorld(){
-  xil_printf("Hello World %x\r\n");
-}
-
 void pollButtons(){
 	Xuint32 data;
 	data = XGpio_DiscreteRead(&gpPB, 1);
 	// LEFT = 2
 	if( ~data & 2 ){
-		if(new_tank.active){
+		if(new_tank.active && (new_tank.x - MINIMUM_MOVEMENT > 0)){
 			new_tank = moveLeft(new_tank);
 		}
 	}
 	// RIGHT = 1
 	if ( ~data & 1 ){
-		if(new_tank.active){
+		if(new_tank.active && (new_tank.x + XTFT_TANK_WIDTH + MINIMUM_MOVEMENT < 640)){
 			new_tank = moveRight(new_tank);
 		}
 	}
@@ -426,6 +445,38 @@ void pollButtons(){
 		}
 	}
 }
+
+void drawAllLives(int next_lives, int frame){
+	if(next_lives > 0){
+		XTft_DrawTank(frame,480,5,GREEN,BLACK);
+		XTft_DrawTank(FRAME3,480,5,GREEN,BLACK);
+	}
+	if(next_lives > 1) {
+		XTft_DrawTank(frame,480 + XTFT_TANK_WIDTH+5,5,GREEN,BLACK);
+		XTft_DrawTank(FRAME3,480 + XTFT_TANK_WIDTH+5,5,GREEN,BLACK);
+	}
+	if(next_lives > 2) {
+		XTft_DrawTank(frame,480 + (XTFT_TANK_WIDTH+5)*2,5,GREEN,BLACK);
+		XTft_DrawTank(FRAME3,480 + (XTFT_TANK_WIDTH+5)*2,5,GREEN,BLACK);
+	}
+}
+
+void eraseAllLives(int prev_lives,int frame){
+	if(prev_lives > 0){
+		XTft_DrawTank(frame,480,5,BLACK,BLACK);
+		XTft_DrawTank(FRAME3,480,5,BLACK,BLACK);
+	}
+	if(prev_lives > 1) {
+		XTft_DrawTank(frame,480 + XTFT_TANK_WIDTH+5,5,BLACK,BLACK);
+		XTft_DrawTank(FRAME3,480 + XTFT_TANK_WIDTH+5,5,BLACK,BLACK);
+	}
+	if(prev_lives > 2) {
+		XTft_DrawTank(frame,480 + (XTFT_TANK_WIDTH+5)*2,5,BLACK,BLACK);
+		XTft_DrawTank(FRAME3,480 + (XTFT_TANK_WIDTH+5)*2,5,BLACK,BLACK);
+	}
+}
+
+
 
 int main() {
 XCache_EnableICache(0x00000001);
@@ -460,6 +511,10 @@ XCache_EnableDCache(0x00000001);
   new_ship_explosion = ship_explosion;
   score = 0;
   new_score = score;
+  game_over = 0;
+  new_game_over = game_over;
+  lives = 3;
+  new_lives = lives;
   int i;
   int j;
   for(i=0; i<55;i++){
@@ -488,8 +543,8 @@ XCache_EnableDCache(0x00000001);
   new_tank_bullet = tank_bullet;
 
   drawAllAliens(aliens_coord, aliens, space_ship, prev_frame);
-  tank.x = 200;
-  tank.y = 400;
+  tank.x = TANK_X;
+  tank.y = TANK_Y;
   new_tank = tank;
   drawTank(tank, prev_frame);
   drawBunkers(prev_frame);
@@ -516,7 +571,7 @@ XCache_EnableDCache(0x00000001);
 	timers[1] = newTimer(900, updateAliens);
 	//// </SKETCHY_DESIGN>
 	timers[2] = newTimer(500, newAlienBullet);
-	timers[3] = newTimer(50, moveAllBullets);
+	timers[3] = newTimer(30, moveAllBullets);
 	timers[4] = newTimer(50, updateShip);
 	timers[5] = newTimer(1500, newShip);
 	timers[6] = newTimer(50, render);
@@ -526,29 +581,46 @@ XCache_EnableDCache(0x00000001);
 	timers[10] = newTimer(100, stepShipExplosion);
 	
 	
-	int longest_delta = 0;
+	int longest_delta = 100;
   DrawWord("LIVES",400,10,FRAME1, 1);
   DrawWord("LIVES",400,10,FRAME2, 1);
   DrawWord("SCORE",30,10,FRAME1, 1);
   DrawWord("SCORE",30,10,FRAME2, 1);
+  XTft_DrawLine(FRAME1, 424 + XTFT_TANK_HEIGHT, GREEN);
+  XTft_DrawLine(FRAME2, 424 + XTFT_TANK_HEIGHT, GREEN);
+  XTft_DrawLine(FRAME3,424 + XTFT_TANK_HEIGHT, GREEN);
+
+  drawAllLives(lives,FRAME3);
   //drawScore(score,FRAME1);
   //drawScore(score,FRAME2);
-  while(1){
+
+  while(!game_over){
 	new_pit_counter=pit_counter;
 	time_delta=new_pit_counter-old_pit_counter;
 	if(time_delta != 0){
-		if(time_delta > longest_delta){
+		if(time_delta < longest_delta){
 			longest_delta = time_delta;
-			//xil_printf("new longest delta %d\n\r",longest_delta);
+			xil_printf("new shortest delta %d\n\r",longest_delta);
 		}
 		for(i=0;i<11;i++){
-			//xil_printf("Timer number %d is running\n\r", i);
 			incTimer(&timers[i],time_delta);
-			//xil_printf("ship explosion stuff: active: %d, visible: %d\n\r", new_ship_explosion.active, new_ship_explosion.visible);
 		}
 	}
 	old_pit_counter=new_pit_counter;
   }
+  for(i = 0; i < 55; i++){
+	aliens[i] = 0;
+  }
+  new_space_ship.active = 0;
+  for(i = 0; i < 4; i++){
+	new_bullets[i].active= 0;
+  }
+  new_tank_bullet.active = 0;
+  
+  render();
+  DrawScaledWord("GAME OVER",175,200,prev_frame,GREEN,3);
+  //clear screen
+  //display game over
   return 0;
 }
 

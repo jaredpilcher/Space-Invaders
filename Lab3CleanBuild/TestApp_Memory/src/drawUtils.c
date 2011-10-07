@@ -66,7 +66,7 @@ void XTft_EraseAlien(
     val = XTft_vidAliens[(Xuint32) type][y/2];
     for (x = 0; x < XTFT_ALIEN_WIDTH; x++)
     {
-		if (yu+y > 330 || yu+y < 100)
+		if ((yu+y > 330 && yu+y < 640) || yu+y < 100)
 			col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
 		else
 			col = 0;
@@ -308,15 +308,15 @@ void XTft_DrawExplosion(
 }
 
 
-void XTft_DrawLetter(Xuint32 BaseAddress, Xuint32 char_index, Xuint32 xu, Xuint32 yu, Xuint32 fgColor){
+void XTft_DrawLetter(Xuint32 BaseAddress, Xuint32 char_index, Xuint32 xu, Xuint32 yu, Xuint32 fgColor, int scale){
   Xuint32 col, x, y;
   Xuint16 val;
-  for (y = 0; y < XTFT_LETTER_HEIGHT; y++)
+  for (y = 0; y < XTFT_LETTER_HEIGHT*scale; y++)
   {
-    val = XTft_Letters[(Xuint32) char_index][y/2];
-    for (x = 0; x < XTFT_LETTER_WIDTH; x++)
+    val = XTft_Letters[(Xuint32) char_index][y/2/scale];
+    for (x = 0; x < XTFT_LETTER_WIDTH*scale; x++)
     {
-      if (val & (1 << (XTFT_LETTER_WIDTH/2 - x/2 - 1)))
+      if (val & (1 << (XTFT_LETTER_WIDTH/2 - x/2/scale - 1)))
         col = fgColor;
       else
 	    continue;
@@ -324,4 +324,12 @@ void XTft_DrawLetter(Xuint32 BaseAddress, Xuint32 char_index, Xuint32 xu, Xuint3
 	  XTft_mSetPixel(FRAME3, xu+x, yu+y, col);
     }
   }
+}
+
+void XTft_DrawLine(Xuint32 BaseAddress, Xuint32 yu, Xuint32 fgColor){
+	int x = 0;
+	for( x = 0; x < 640; x++){
+		XTft_mSetPixel(BaseAddress, x, yu, fgColor);
+		XTft_mSetPixel(BaseAddress, x, yu + 1, fgColor);
+	}
 }
