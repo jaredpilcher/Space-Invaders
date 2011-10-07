@@ -13,6 +13,10 @@ bullet bullets[4];
 bullet new_bullets[4];
 bullet tank_bullet;
 bullet new_tank_bullet;
+int score;
+int new_score;
+
+
 int prev_frame;
 int next_frame;
 unsigned pit_counter;
@@ -200,6 +204,22 @@ bullet detectCollision(bullet new_bullet){
 					//// <SKETCHY_CODE>
 					timers[1].max = timers[1].max;
 					//// </SKETCHY_CODE>
+					switch(row){
+						case 0:
+							new_score+=40;
+							break;
+						case 1:
+						case 2:
+							new_score+=20;
+							break;
+						case 3:
+						case 4:
+							new_score+=10;
+							break;
+						default:
+							break;
+					}
+							
 					return new_bullet;
 				}
 			}
@@ -234,6 +254,7 @@ bullet detectCollision(bullet new_bullet){
 			new_bullet.active=0;
 			new_ship_explosion=newShipExplosion(new_ship_explosion,new_space_ship.x,new_space_ship.y);
 			new_ship_explosion.type = SHIP_EXPLOSION;
+			new_score+=new_ship_explosion.score;
 		}
 	}
 	
@@ -309,7 +330,6 @@ void drawBunkers(int frame){
 // If there are any problems, look there first.
 void render(){
 		  int i;
-		  
 		  //draw stuff to next frame
 		  drawBunkers(next_frame);
 		  drawAllAliens(new_aliens_coord, aliens, new_space_ship, next_frame);
@@ -331,6 +351,7 @@ void render(){
 				drawBullet(new_bullets[i], next_frame);
 			 }
 		  }
+		  drawScore(new_score,next_frame);
 		  
 		  //switch frame
 		  XIo_Out32(XPAR_VGA_FRAMEBUFFER_DCR_BASEADDR, next_frame);
@@ -352,7 +373,8 @@ void render(){
 			eraseTankExplosion(cur_tank_explosion, prev_frame);
 		  if( ship_explosion.active  && ship_explosion.visible )
 			eraseShipExplosion(ship_explosion, prev_frame);
-
+		  eraseScore(score,prev_frame);
+			
 		  //copy to global state
 		  tank = new_tank;
 		  tank_bullet = new_tank_bullet;
@@ -361,6 +383,7 @@ void render(){
 		  cur_explosion=new_explosion;
 		  cur_tank_explosion=new_tank_explosion;
 		  ship_explosion=new_ship_explosion;
+		  score = new_score;
 		  for(i=0; i < 4; i++){
 		  		    bullets[i] = new_bullets[i];
 		  }
@@ -435,6 +458,8 @@ XCache_EnableDCache(0x00000001);
   ship_explosion.active = 0;
   ship_explosion.animation_step=0;
   new_ship_explosion = ship_explosion;
+  score = 0;
+  new_score = score;
   int i;
   int j;
   for(i=0; i<55;i++){
@@ -491,10 +516,10 @@ XCache_EnableDCache(0x00000001);
 	timers[1] = newTimer(900, updateAliens);
 	//// </SKETCHY_DESIGN>
 	timers[2] = newTimer(500, newAlienBullet);
-	timers[3] = newTimer(30, moveAllBullets);
-	timers[4] = newTimer(175, updateShip);
+	timers[3] = newTimer(50, moveAllBullets);
+	timers[4] = newTimer(50, updateShip);
 	timers[5] = newTimer(1500, newShip);
-	timers[6] = newTimer(20, render);
+	timers[6] = newTimer(50, render);
 	timers[7] = newTimer(30, pollButtons);
 	timers[8] = newTimer(50, expireExplosion);
 	timers[9] = newTimer(50, expireTankExplosion);
@@ -506,6 +531,8 @@ XCache_EnableDCache(0x00000001);
   DrawWord("LIVES",400,10,FRAME2, 1);
   DrawWord("SCORE",30,10,FRAME1, 1);
   DrawWord("SCORE",30,10,FRAME2, 1);
+  //drawScore(score,FRAME1);
+  //drawScore(score,FRAME2);
   while(1){
 	new_pit_counter=pit_counter;
 	time_delta=new_pit_counter-old_pit_counter;

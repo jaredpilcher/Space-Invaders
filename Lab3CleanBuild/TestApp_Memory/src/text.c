@@ -124,6 +124,13 @@ Xuint16 XTft_Letters[20][5] =
 						genLetterPixels( 0, 0, 0, 0, 1),
 						genLetterPixels( 0, 1, 1, 1, 0),
 			},
+			{ //,
+						genLetterPixels( 0, 0, 0, 0, 0),
+						genLetterPixels( 0, 0, 0, 0, 0),
+						genLetterPixels( 0, 1, 0, 0, 0),
+						genLetterPixels( 0, 1, 0, 0, 0),
+						genLetterPixels( 1, 0, 0, 0, 0),
+			},
 		};
 		
 		
@@ -204,6 +211,11 @@ void DrawWord(char * message, int x, int y, int frame, int color){
 				letter_index = 16;
 				next_position += 12;
 				break;
+			case ',':
+				letter_index = 17;
+				next_position += 6;
+				y_offset = 4;
+				break;
 			default:
 				break;
 		}
@@ -221,3 +233,59 @@ void DrawWord(char * message, int x, int y, int frame, int color){
 		y_offset = 0;
 	}
 }	
+
+// better_divide should only be used when the result is less that 10
+int better_divide(int amount, int divisor){
+	return amount / divisor;
+}
+
+
+void drawScore(int score, int frame){
+	Draw_Or_Erase_Score(score, frame, 1);
+}
+
+void eraseScore(int score, int frame){
+	Draw_Or_Erase_Score(score, frame, 0);
+}
+
+void Draw_Or_Erase_Score(int score, int frame, int color){
+  char mess[20];
+  int millions = better_divide(score,1000000);
+  score -= millions*1000000;
+  int hundred_thousands = better_divide(score,100000);
+  score -= hundred_thousands*100000;
+  int ten_thousands = better_divide(score,10000);
+  score -= ten_thousands*10000;
+  int thousands = better_divide(score,1000);
+  score -= thousands*1000;
+  int hundreds = better_divide(score,100);
+  score -= hundreds*100;
+  int tens = better_divide(score,10);
+  score -= tens*10;
+  int ones = score;
+  int i = 0;
+  
+  if(millions){
+	mess[i++]=millions+48;
+	mess[i++]=',';
+  }
+  if(hundred_thousands || i){
+	mess[i++]=hundred_thousands+48;
+  }
+  if(ten_thousands || i){
+	mess[i++]=ten_thousands+48;
+  }
+  if(thousands || i){
+	mess[i++]=thousands+48;
+	mess[i++]=',';
+  }
+  if(hundreds || i){
+    mess[i++]=hundreds+48;
+  }
+  if(tens || i){
+	mess[i++]=tens+48;
+  }
+  mess[i++]=ones+48;
+  mess[i]=0;
+  DrawWord(mess,100,10,frame, color);
+}

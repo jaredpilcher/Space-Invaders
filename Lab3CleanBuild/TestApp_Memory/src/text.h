@@ -7,5 +7,7 @@
 
 extern Xuint16 XTft_Letters[20][5];
 void DrawWord(char * message, int x, int y, int frame, int color);
-
+void drawScore(int score, int frame);
+void eraseScore(int score, int frame);
+void Draw_Or_Erase_Score(int score, int frame, int color);
 #endif
