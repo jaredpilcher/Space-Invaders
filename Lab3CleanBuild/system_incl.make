@@ -122,13 +122,13 @@ FPGA_IMP_DEPENDENCY = $(BMM_FILE) $(POSTSYN_NETLIST) $(UCF_FILE) $(BITGEN_UT_FIL
 # SOFTWARE APPLICATION TESTAPP_MEMORY
 #################################################################
 
-TESTAPP_MEMORY_SOURCES = TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c 
+TESTAPP_MEMORY_SOURCES = TestApp_Memory/src/TestApp_Memory.c TestApp_Memory/src/alienCodes.c TestApp_Memory/src/bullets.c TestApp_Memory/src/coord_objects.c TestApp_Memory/src/drawUtils.c TestApp_Memory/src/timer.c TestApp_Memory/src/explosion.c TestApp_Memory/src/text.c 
 
-TESTAPP_MEMORY_HEADERS = TestApp_Memory/src/ddr_header.h TestApp_Memory/src/drawUtils.h TestApp_Memory/src/alienCodes.h TestApp_Memory/src/TestApp_Memory.h TestApp_Memory/src/bullets.h TestApp_Memory/src/coord_objects.h 
+TESTAPP_MEMORY_HEADERS = TestApp_Memory/src/ddr_header.h TestApp_Memory/src/drawUtils.h TestApp_Memory/src/alienCodes.h TestApp_Memory/src/TestApp_Memory.h TestApp_Memory/src/bullets.h TestApp_Memory/src/coord_objects.h TestApp_Memory/src/timer.h TestApp_Memory/src/explosion.h TestApp_Memory/src/text.h 
 
 TESTAPP_MEMORY_CC = powerpc-eabi-gcc
 TESTAPP_MEMORY_CC_SIZE = powerpc-eabi-size
-TESTAPP_MEMORY_CC_OPT = -O2
+TESTAPP_MEMORY_CC_OPT = -O3
 TESTAPP_MEMORY_CFLAGS = 
 TESTAPP_MEMORY_CC_SEARCH = # -B
 TESTAPP_MEMORY_LIBPATH = -L./ppc405_0/lib/ # -L
@@ -136,7 +136,7 @@ TESTAPP_MEMORY_INCLUDES = -I./ppc405_0/include/  -ITestApp_Memory/src/ # -I
 TESTAPP_MEMORY_LFLAGS = # -l
 TESTAPP_MEMORY_LINKER_SCRIPT = TestApp_Memory/src/TestApp_Memory_LinkScr.ld
 TESTAPP_MEMORY_LINKER_SCRIPT_FLAG = -Wl,-T -Wl,$(TESTAPP_MEMORY_LINKER_SCRIPT) 
-TESTAPP_MEMORY_CC_DEBUG_FLAG =  -g 
+TESTAPP_MEMORY_CC_DEBUG_FLAG = # -[g|gstabs]
 TESTAPP_MEMORY_CC_PROFILE_FLAG = # -pg
 TESTAPP_MEMORY_CC_GLOBPTR_FLAG= # -msdata=eabi
 TESTAPP_MEMORY_CC_INFERRED_FLAGS= 

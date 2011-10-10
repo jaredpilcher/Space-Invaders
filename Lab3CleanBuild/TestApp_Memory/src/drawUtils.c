@@ -27,6 +27,9 @@
 
 #include "xtft_l.h"
 #include "alienCodes.h"
+#include "text.h"
+
+#define FRAME3 0x00400000
 
 /************************** Constant Definitions ****************************/
 
@@ -49,7 +52,28 @@ void XTft_FillScreen2(Xuint32 BaseAddress, Xuint32 xu, Xuint32 yu, Xuint32 xl,
 
 
 
-
+void XTft_EraseAlien(
+  Xuint32 BaseAddress,
+  Xuint32 BGAddress,
+  Xuint32 type,
+  Xuint32 xu,
+  Xuint32 yu)
+ {  
+  Xuint32 col, x, y;
+  Xuint16 val;
+  for (y = 0; y < XTFT_ALIEN_HEIGHT; y++)
+  {
+    val = XTft_vidAliens[(Xuint32) type][y/2];
+    for (x = 0; x < XTFT_ALIEN_WIDTH; x++)
+    {
+		if ((yu+y > 330 && yu+y < 640) || yu+y < 100)
+			col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
+		else
+			col = 0;
+     XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+    }
+  }
+}
 
 
 void XTft_DrawAlien(
@@ -57,12 +81,10 @@ void XTft_DrawAlien(
   Xint16 ch,
   Xuint32 xu,
   Xuint32 yu,
-  Xuint32 fgColor,
-  Xuint32 bgColor)
+  Xuint32 fgColor)
 {
   Xuint32 col, x, y;
   Xuint16 val;
-
   for (y = 0; y < XTFT_ALIEN_HEIGHT; y++)
   {
     val = XTft_vidAliens[(Xuint32) ch][y/2];
@@ -71,7 +93,7 @@ void XTft_DrawAlien(
       if (val & (1 << (XTFT_ALIEN_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-        col = bgColor;
+	    continue;
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
     }
   }
@@ -96,13 +118,97 @@ void XTft_DrawTank(
       if (val & (1 << (XTFT_TANK_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-        col = bgColor;
+		continue;
+		//col = bgColor;
+      
+      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+	  XTft_mSetPixel(BaseAddress, 0, 0, 0xFFFFFF);
+    }
+  }
+}
+
+void XTft_DrawTankExplosion(
+  Xuint32 BaseAddress,
+  Xuint32 type,
+  Xuint32 xu,
+  Xuint32 yu,
+  Xuint32 fgColor,
+  Xuint32 bgColor)
+{
+  Xuint32 col, x, y;
+  Xuint16 val;
+
+  for (y = 0; y < XTFT_TANK_HEIGHT; y++)
+  {
+    val = XTft_tank_explosion[type][y/2];
+    for (x = 0; x < XTFT_TANK_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_TANK_WIDTH/2 - x/2 - 1)))
+        col = fgColor;
+      else
+		continue;
+		//col = bgColor;
       
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
     }
   }
 }
 
+void XTft_DrawBunkerBlock(
+  Xuint32 BaseAddress,
+  Xuint32 type,
+  Xuint32 erosion,
+  Xuint32 xu,
+  Xuint32 yu,
+  Xuint32 fgColor,
+  Xuint32 bgColor)
+{
+  Xuint32 col, x, y;
+  Xuint16 val;
+
+  for (y = 0; y < XTFT_BUNKER_BLOCK_HEIGHT; y++)
+  {
+    val = XTft_BunkerBlocks[type][erosion][y/2];
+    for (x = 0; x < XTFT_BUNKER_BLOCK_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_BUNKER_BLOCK_WIDTH/2 - x/2 - 1)))
+        col = fgColor;
+      else
+		col = bgColor;
+        //col = bgColor;
+      
+      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+	  XTft_mSetPixel(FRAME3, xu+x, yu+y, col);
+    }
+  }
+}
+
+void XTft_EraseBullet(
+  Xuint32 BaseAddress,
+  Xuint32 BGAddress,
+  Xuint32 type,
+  Xuint32 xu,
+  Xuint32 yu)
+ {  
+  Xuint32 col, x, y;
+  Xuint16 val;
+
+  for (y = 0; y < XTFT_BULLET_HEIGHT; y++)
+  {
+    val = XTft_bullets[(Xuint32) type][y/2];
+    for (x = 0; x < XTFT_BULLET_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_BULLET_WIDTH/2 - x/2 - 1)))
+        col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
+      else
+		continue;
+        //col = bgColor;
+      
+        XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+     }
+  }
+}
+ 
 void XTft_DrawBullet(
   Xuint32 BaseAddress,
   Xuint32 type,
@@ -122,14 +228,15 @@ void XTft_DrawBullet(
       if (val & (1 << (XTFT_BULLET_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-        col = bgColor;
+		continue;
+        //col = bgColor;
       
         XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
      }
   }
 }
 
-void XTft_DrawBunker(
+void XTft_DrawShip(
   Xuint32 BaseAddress,
   Xuint32 xu,
   Xuint32 yu,
@@ -139,16 +246,90 @@ void XTft_DrawBunker(
   Xuint32 col, x, y;
   Xuint32 val;
 
-  for (y = 0; y < XTFT_BUNKER_HEIGHT; y++)
+  for (y = 0; y < XTFT_SHIP_HEIGHT; y++)
   {
-    val = XTft_bunker[y/2];
-    for (x = 0; x < XTFT_BUNKER_WIDTH; x++)
+    val = XTft_SpaceShip[y/2];
+    for (x = 0; x < XTFT_SHIP_WIDTH; x++)
     {
-      if (val & (1 << (XTFT_BUNKER_WIDTH/2 - x/2 - 1)))
+      if (val & (1 << (XTFT_SHIP_WIDTH/2 - x/2 - 1)))
         col = fgColor;
       else
-        col = bgColor;
+		continue;
+        //col = bgColor;
+      
+        XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+     }
+  }
+}
+
+void XTft_EraseExplosion(
+  Xuint32 BaseAddress,
+  Xuint32 BGAddress,
+  Xuint32 xu,
+  Xuint32 yu)
+ {  
+  Xuint32 col, x, y;
+  Xuint16 val;
+  for (y = 0; y < XTFT_EXPLOSION_HEIGHT; y++)
+  {
+    val = XTft_Explosion[y/2];
+    for (x = 0; x < XTFT_EXPLOSION_WIDTH; x++)
+    {
+		if (yu+y > 330)
+			col = XTft_mGetPixel(BGAddress, xu+x, yu+y);
+		else
+			col = 0;
+     XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+    }
+  }
+}
+
+
+void XTft_DrawExplosion(
+  Xuint32 BaseAddress,
+  Xuint32 xu,
+  Xuint32 yu,
+  Xuint32 fgColor)
+{
+  Xuint32 col, x, y;
+  Xuint16 val;
+  for (y = 0; y < XTFT_EXPLOSION_HEIGHT; y++)
+  {
+    val = XTft_Explosion[y/2];
+    for (x = 0; x < XTFT_EXPLOSION_WIDTH; x++)
+    {
+      if (val & (1 << (XTFT_EXPLOSION_WIDTH/2 - x/2 - 1)))
+        col = fgColor;
+      else
+	    continue;
       XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
     }
   }
+}
+
+
+void XTft_DrawLetter(Xuint32 BaseAddress, Xuint32 char_index, Xuint32 xu, Xuint32 yu, Xuint32 fgColor, int scale){
+  Xuint32 col, x, y;
+  Xuint16 val;
+  for (y = 0; y < XTFT_LETTER_HEIGHT*scale; y++)
+  {
+    val = XTft_Letters[(Xuint32) char_index][y/2/scale];
+    for (x = 0; x < XTFT_LETTER_WIDTH*scale; x++)
+    {
+      if (val & (1 << (XTFT_LETTER_WIDTH/2 - x/2/scale - 1)))
+        col = fgColor;
+      else
+	    continue;
+      XTft_mSetPixel(BaseAddress, xu+x, yu+y, col);
+	  XTft_mSetPixel(FRAME3, xu+x, yu+y, col);
+    }
+  }
+}
+
+void XTft_DrawLine(Xuint32 BaseAddress, Xuint32 yu, Xuint32 fgColor){
+	int x = 0;
+	for( x = 0; x < 640; x++){
+		XTft_mSetPixel(BaseAddress, x, yu, fgColor);
+		XTft_mSetPixel(BaseAddress, x, yu + 1, fgColor);
+	}
 }

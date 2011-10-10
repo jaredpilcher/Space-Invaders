@@ -41,18 +41,24 @@ Source: TestApp_Memory/src/alienCodes.c
 Source: TestApp_Memory/src/bullets.c
 Source: TestApp_Memory/src/coord_objects.c
 Source: TestApp_Memory/src/drawUtils.c
+Source: TestApp_Memory/src/timer.c
+Source: TestApp_Memory/src/explosion.c
+Source: TestApp_Memory/src/text.c
 Header: TestApp_Memory/src/ddr_header.h
 Header: TestApp_Memory/src/drawUtils.h
 Header: TestApp_Memory/src/alienCodes.h
 Header: TestApp_Memory/src/TestApp_Memory.h
 Header: TestApp_Memory/src/bullets.h
 Header: TestApp_Memory/src/coord_objects.h
+Header: TestApp_Memory/src/timer.h
+Header: TestApp_Memory/src/explosion.h
+Header: TestApp_Memory/src/text.h
 DefaultInit: EXECUTABLE
 InitBram: 1
 Active: 1
-CompilerOptLevel: 2
+CompilerOptLevel: 3
 GlobPtrOpt: 0
-DebugSym: 1
+DebugSym: 0
 ProfileFlag: 0
 ProgStart: 
 StackSize: 

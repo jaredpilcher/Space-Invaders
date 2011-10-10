@@ -10,14 +10,14 @@
 /*                                                                 */
 /*******************************************************************/
 
-_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x2000;
-_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x2000;
+_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x400;
+_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x400;
 
 /* Define Memories in the system */
 
 MEMORY
 {
-   DDR_128MB_16MX64_rank1_row13_col9_cl2_5_C_MEM0_BASEADDR : ORIGIN = 0x00000000, LENGTH = 0x08000000
+   DDR_256MB_32MX64_rank1_row13_col10_cl2_5_C_MEM0_BASEADDR : ORIGIN = 0x00000000, LENGTH = 0x10000000
    plb_bram_if_cntlr_1 : ORIGIN = 0xFFFE0000, LENGTH = 0x00020000
 }
 
@@ -30,6 +30,12 @@ STARTUP(boot.o)
 
 SECTIONS
 {
+.vectors : {
+   __vectors_start = .;
+   *(.vectors)
+   __vectors_end = .;
+} > plb_bram_if_cntlr_1
+
 .text : {
    *(.text)
    *(.text.*)
