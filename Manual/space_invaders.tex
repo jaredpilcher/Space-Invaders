@@ -141,6 +141,70 @@ When the game ends, a game over screen is displayed.
 \subsection{Appearance}
 The game appearance is identical to the flash version of Space Invasion. The game runs smoothly and at a decent speed. The screen is also updated close to the same rate as the flash-based game. No artifacts appear on the screen. No flickering occurs on the screen.
 
+\chapter{Game Console and Engine}
+
+\section{Game Console}
+\subsection{Xilinx University Program Board}
+\subsection{Xilinx Virtex II. Pro EDK System}
+
+\section{Game Engine }
+\subsection{Software Game Engine}
+\subsubsection{Tming System}
+Our application is built upon a framework of timers.
+The following timed events exist:
+
+\begin{itemize}
+\item New Space Ship:  If the space ship is not currently on the screen, this timed event has a random probability of initializing the space ship on the screen.
+\item Move Aliens:  Moves all the aliens one move.  If the aliens have reached the bottom of the screen, initiate game over state.
+\item Move Space Ship:  If the space ship is currently on the screen, move the space ship one step across the screen.
+\item Fire Alien Bullet:  If less than four bullets are currently on the screen, this timed event has a random probability of initializing a new bullet on the screen.  It      chooses a random non-empty column among the aliens and the bullet is fired from the lowest alien in that column.
+\item Poll Buttons:  Check the value of the push buttons.  If the left button is pushed, move the tank left.  If the tank is already on the left edge of the screen, do nothing.  If the right button is pushed, move the tank right.  If the tank is already on the right edge of the screen, do nothing.  If the middle button is pushed, fire a new bullet from the tank.  If there is already a bullet on the screen, do nothing.
+\item Move Bullets:  Move all bullet along the screen.  Alien bullets move down the screen.  Tank bullets move up the screen.  For each bullet currently on screen, detect any possible collisions.  See the section further down on "Detecting Collisions" for details.
+\item Update Bullets:  The alien bullets animate as they move.  Update bullets updates the stage of the animation that should be draw to the screen.
+\item Process Explosions:  There are three types of explosions.  Each explosion has different behavior.  This timed event updates the explosion, resulting in either an additional step in the animation being displayed or the explosion no longer being drawn to the screen.
+\item Render Screen:  Renders the screen.  See the section titled "Rendering".
+\end{itemize}
+
+A PIT handler is installed to update a global pit\_counter variable.  In main(), there is a timer loop that does the following:
+\begin{enumerate}
+\item{} Take a snapshot of pit\_counter.  
+\item{} Compare this value with the previous snapshot.
+\item{} Iterate through each Timer and increment the Timer's counter.
+\item{} If the Timer's counter exceeds the maximum value, reset the counter and execute the registered callback function.
+\end{enumerate}
+
+The timer loop will continue to run until the game over state is reached.
+
+\subsubsection{Detecting Collisions}
+The following diagram demonstrates the general logic used to determine a collision.
+\begin{figure}
+\centering
+\includegraphics[scale=.5]{Detect_Collision.jpg}
+\caption{Collision Detection}
+\end{figure}
+
+\subsubsection{Render}
+We render passively.  That is to say, we render the screen on a set interval whether or not anything has changed.We render passively.
+
+\subsubsection{Double Buffering}
+In order to avoid flickering on the screen, we implement double buffering.  We never modify the frame currently being displayed.  All modifications are made to an inactive frame.  The diagram shows the steps in rendering the screen.
+
+\begin{figure}
+\centering
+\includegraphics[scale=.5]{Render.jpg}
+\caption{Double Buffer}
+\end{figure}
+
+\subsubsection{Flying over the bunkers}
+When the aliens reach the bunkers, they need to march over them.  In order to redraw the bunkers properly, we keep the state of the bunkers in FRAME3.  When erasing a value in the bunkers region, the screen is erased to the value of that pixel as stored in FRAME3.
+
+
+\subsection{Software APIs}
+\subsubsection{Rendering of images}
+Images are stored in memory as an encoded bitstring.  A Xuint16 can represent a single line of an image up to 16 pixels wide.  Each image is an array of these encoded bitstrings.  To draw to the screen, the images are scaled up to double their size.  A single pixel in the stored image corresponds to a 2 by 2 block of pixels on the screen. Each image type has it's own rendering function.  The functions typically take an x and y coordinate, a frame to draw to, and a color to draw.
+
+\subsection{Meeting the Game Specifications}
+
 \chapter{Bug Reports and File Organization}
 
 \section{Bug Reports}
