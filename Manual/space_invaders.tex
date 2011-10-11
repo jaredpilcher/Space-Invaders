@@ -148,55 +148,85 @@ The game appearance is identical to the flash version of Space Invasion. The gam
 \subsection{Xilinx Virtex II. Pro EDK System}
 
 \section{Game Engine }
+
 \subsection{Software Game Engine}
-\subsubsection{Tming System}
-Our application is built upon a framework of timers.
-The following timed events exist:
+The structure of the Space Invaders Game is complex and intricate. The main() function initializes the state of all objects of the game. When complete, it enters an infinite loop, calling functions whose timers have expired. Timing is kept using the PIT and its handler. Using these timers, the tank, mothership, aliens, bullets, and explosions move at a configurable rate. As a bullet moves toward an object, its screen coordinates are consistently checked for a collision with a bunker, mothership, tank, or alien. When the object is struck, the states of the game are updated, and a collision is drawn to the screen.
+
+The Space Invaders game uses double buffering. It draws only to the next frame, switches to that screen, and erases only the pixels of the objects that have changed in the previous frame. For example, when the tank moves, it's drawn to the next frame, the viewer sees the new tank, and the previous frame tank is erased in the background. This process is handled in our render() function, and occurs on regular intervals using the designed timers.
+
+Figure~\ref{fig:overview} contains an overview of the structure of the Space Invaders Game. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=.80]{Space_Invaders_Overview.jpg}
+\caption{Space Invaders Overview. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.}
+\label{fig:overview}
+\end{figure}
+
+\subsubsection{Timers}
+The sequence of events in the Space Invaders game is controlled using timers. After initializing the state of the game and creating timers, main() enters an infinite loop, determining when timer functions should be called. A timer is a structure that contains the interval of ticks between calling its registered callback function. Each time the PIT timer interrupt invokes the PIT handler, the global variable pit\_counter is incremented. Because of the complexity of the game, many timers currently exist. These include:
 
 \begin{itemize}
-\item New Space Ship:  If the space ship is not currently on the screen, this timed event has a random probability of initializing the space ship on the screen.
-\item Move Aliens:  Moves all the aliens one move.  If the aliens have reached the bottom of the screen, initiate game over state.
-\item Move Space Ship:  If the space ship is currently on the screen, move the space ship one step across the screen.
-\item Fire Alien Bullet:  If less than four bullets are currently on the screen, this timed event has a random probability of initializing a new bullet on the screen.  It      chooses a random non-empty column among the aliens and the bullet is fired from the lowest alien in that column.
-\item Poll Buttons:  Check the value of the push buttons.  If the left button is pushed, move the tank left.  If the tank is already on the left edge of the screen, do nothing.  If the right button is pushed, move the tank right.  If the tank is already on the right edge of the screen, do nothing.  If the middle button is pushed, fire a new bullet from the tank.  If there is already a bullet on the screen, do nothing.
-\item Move Bullets:  Move all bullet along the screen.  Alien bullets move down the screen.  Tank bullets move up the screen.  For each bullet currently on screen, detect any possible collisions.  See the section further down on "Detecting Collisions" for details.
-\item Update Bullets:  The alien bullets animate as they move.  Update bullets updates the stage of the animation that should be draw to the screen.
-\item Process Explosions:  There are three types of explosions.  Each explosion has different behavior.  This timed event updates the explosion, resulting in either an additional step in the animation being displayed or the explosion no longer being drawn to the screen.
-\item Render Screen:  Renders the screen.  See the section titled "Rendering".
+\item \textbf{New Space Ship:} If the mothership is not currently on the screen, this timed event has a random probability of initializing the mothership on the screen.
+\item  \textbf{Move Aliens:}  Moves all the aliens by a configurable amount of pixels.  If the aliens reach the bottom of the screen, the Game Over state is initialized.
+\item  \textbf{Move Space Ship:}  If the mothership is currently on the screen, it moves by a configurable amounts of pixels across the screen.
+\item  \textbf{Fire Alien Bullet:}  If less than four alien bullets are currently on the screen, this timed event has a random probability of initializing a new alien bullet on the screen.  A random, non-empty column among the aliens is chosen, and the bullet is fired from the lowest alien in that column.
+\item  \textbf{Poll Buttons:}  Checks the value of the push buttons.  If the left button is pushed, the tank move  left by a configurable amount of pixels.  If the tank is already on the left edge of the screen, nothing is performed.  If the right button is pushed, the tank moves right by the same amount.  If the tank is already on the right edge of the screen, nothing is performed.  If the middle button is pushed, a new tank bullet is fired from the tank.  If there is already a bullet on the screen, nothing is performed.
+\item  \textbf{Move Bullets:}  All bullets move across the screen by their configured amount of pixels.  Alien bullets move down the screen and tank bullets move up the screen.  The location of each bullet is checked to detect possible collisions.  See the section \textit{Detecting Collisions} for more details.
+\item  \textbf{Update Bullets:}  Updates the stage of animation for each active alien bullet as they move across the screen.
+\item  \textbf{Process Explosions:}  Three types of explosions exist that exhibit different behavior.  This timer function updates the animation of the explosion. When the animation sequence is fully performed, it is no longer drawn to the screen.
+\item  \textbf{Render Screen:}  Renders the screen.  See the section \textit{Rendering} for further details.
 \end{itemize}
 
-A PIT handler is installed to update a global pit\_counter variable.  In main(), there is a timer loop that does the following:
+A PIT handler is used to increment the global variable pit\_counter.  After initializing the state of the game and creating timers, main() enters an infinite loop that performs the following:
 \begin{enumerate}
-\item{} Take a snapshot of pit\_counter.  
-\item{} Compare this value with the previous snapshot.
-\item{} Iterate through each Timer and increment the Timer's counter.
-\item{} If the Timer's counter exceeds the maximum value, reset the counter and execute the registered callback function.
+\item{} A snapshot of pit\_counter is taken.  
+\item{} This value is compared with the value of the previous snapshot.
+\item{} It iterates through each timer and increments the timer's counter.
+\item{} If the timer's counter exceeds the maximum value, it resets the counter and executes the timer's registered callback function.
 \end{enumerate}
 
 The timer loop will continue to run until the game over state is reached.
 
 \subsubsection{Detecting Collisions}
-The following diagram demonstrates the general logic used to determine a collision.
-\begin{figure}
+Figure~\ref{fig:collisions} demonstrates the general logic used to determine a collision. Each time a bullet moves, its coordinates are compared against the coordinates of the bunkers, tank, aliens, and mothership. The collision detection algorithms are implemented in the detectCollision() function.
+ 
+If the bullet is a tank bullet, its coordinates are compared against the coordinates of the bunkers, aliens, or mothership. The different collision scenarios are as follows:
+
+\begin{itemize}
+\item If it is within the coordinates of the bunkers, the collision detection function determines which bunker, and bunker block it hit. If the block is still active, the bunker is eroded and the bullet is deactivated.
+\item If it is within the coordinates of the aliens, the alien row and column are determined to specify the hit alien. If the alien is still active, the type of alien is determined. If the bullet is within the the bounds of that alien type, they alien explodes and the bullet is deactivated.
+\item If it is within the coordinates of the mothership, the mothership explodes and the bullet is deactivated.
+\end{itemize}
+
+If the bullet is an alien bullet, its coordinates are compared against the coordinates of the bunker, and tank.
+
+\begin{itemize}
+\item If it is within the coordinates of the bunkers, the collision detection function determines which bunker, and bunker block it hit. If the block is still active, the bunker is eroded and the bullet is deactivated.
+\item If it is within the coordinates of the tank, the tank explodes, and the bullet is deactivated.
+\end{itemize}
+
+\begin{figure}[ht]
 \centering
-\includegraphics[scale=.5]{Detect_Collision.jpg}
-\caption{Collision Detection}
+\label{fig:collisions}
+\includegraphics[scale=.7]{Detect_Collision.jpg}
+\caption{Collision Detection. The green blocks represent the state that must be met to continue. The orange blocks represent the process of determining the specific object that was hit. The blue blocks represent the actions taken to change the game state during a collision.}
 \end{figure}
 
-\subsubsection{Render}
-We render passively.  That is to say, we render the screen on a set interval whether or not anything has changed.We render passively.
+\subsubsection{Rendering}
+The screen is rendered on regular intervals by using a timer. The rendering process occurs whether or not the the state of the game is changed. This mirrors the rendering process of the flash game. This rendering process creates a very smooth animation process.
 
 \subsubsection{Double Buffering}
-In order to avoid flickering on the screen, we implement double buffering.  We never modify the frame currently being displayed.  All modifications are made to an inactive frame.  The diagram shows the steps in rendering the screen.
+Flickering on the screen is caused by drawing and erasing objects on the same screen. In order to avoid flickering, double buffering is used. Double buffering involves writing to another part of memory, or frame than the currently displayed screen. The currently displayed frame is never modified.  After drawing is finished on this separate frame, the program changes the screen to display this new frame. Thus, all modifications to the screen occur on an inactive frame. Figure~\ref{fig:render} shows the steps in rendering process.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
+\label{fig:render}
 \includegraphics[scale=.5]{Render.jpg}
-\caption{Double Buffer}
+\caption{Double Buffer. The currently displayed frame is never modified. Only after writing correct values to a new frame, the program changes the screen to display it.}
 \end{figure}
 
 \subsubsection{Flying over the bunkers}
-When the aliens reach the bunkers, they need to march over them.  In order to redraw the bunkers properly, we keep the state of the bunkers in FRAME3.  When erasing a value in the bunkers region, the screen is erased to the value of that pixel as stored in FRAME3.
+Aliens must march over bunkers when they reach them. However, erasing and redrawing the aliens can erase blocks of bunkers, even though they aren't inactive. In order to redraw the bunkers properly, the state of the bunkers are always drawn in a dedicated frame, FRAME3.  As an alien is erased, the program accesses the bunker pixel values that are stored in this frame to restore these pixels. When an alien is drawn in the bunker region, the background values of BLACK are replaced by the values stored in FRAME3. Thus the alien appears to march over the bunkers.
 
 
 \subsection{Software APIs}
@@ -204,6 +234,115 @@ When the aliens reach the bunkers, they need to march over them.  In order to re
 Images are stored in memory as an encoded bitstring.  A Xuint16 can represent a single line of an image up to 16 pixels wide.  Each image is an array of these encoded bitstrings.  To draw to the screen, the images are scaled up to double their size.  A single pixel in the stored image corresponds to a 2 by 2 block of pixels on the screen. Each image type has it's own rendering function.  The functions typically take an x and y coordinate, a frame to draw to, and a color to draw.
 
 \subsection{Meeting the Game Specifications}
+
+\subsubsection{The Tank}
+\includegraphics[]{tank.jpg}
+
+The buttons are polled in regular intervals using the the Poll Buttons timer. As the tank moves laterally, it is drawn to a new frame, in a new position. The screen switches to that frame, and the tank in the old frame is erased, creating a smooth animation. Furthermore, the tank can only move to the edge of the screen. When it reaches the edge of the screen, it stops, unable to move left. Each time the tank moves, its coordinates are compared against the edges of the screen. When it reaches the edge of the screen, the moveTank() function doesn't change the coordinate of the tank.
+
+The user is able to hold down the left or right buttons to keep the tank moving across the screen. This is done by using a timer to control the speed of the tank movement. The Poll Buttons timer is checked in regular intervals. If a left or right button is asserted, it is update the location of the tank, moving left or right.
+
+The tank is capable of firing and moving simultaneously. The middle button is polled on regular intervals. When it is pushed, the bullet is drawn directly above the center of the tank. This polling is done independently of the tank movement. Thus, the tank can move and the tank bullet can fire during the same frame change.
+
+When an alien bullet hits the tank, it explodes. This is implemented using three animations that are stored in an array. Each time the explosion update timer is called, the animation changes to a new position in the array. This happens on regular intervals when an explosion occurs. The tank appears to explode because of the implemented double buffering. A new animation is drawn to the new frame, while the old animation in the old frame is erased.
+
+Each time a tank explodes, the lives global variable is decremented and one tank is erased from the screen on the top right corner.
+
+\subsubsection{Mothership}
+\includegraphics[]{big-alien.png}
+
+The mothership is randomly activated on regular intervals, flying from left to right. This means that after a certain period of time, the program determines whether or not the mothership should appear. The probability of its appearance is configurable.
+
+When the mothership explodes, a random integer between 50 and 350 flashes for one second in its place. This score is added to the total score and displayed in the top left corner of the screen. The flashing is done by alternating between two animations in regular intervals. One animation shows the score of the hit, and the other animation displays black. Thus the score appears to flash.
+
+\subsubsection{Aliens}
+\includegraphics[]{aliens.jpg}
+
+There are 55 aliens total that are formed in an 11 by 5 grid. Each alien is drawn in a 30 by 30 pixel block. Only the coordinates of the top left corner of the top left alien is stored. All other aliens reference this value. An array 55 integers is kept globally to store whether or not the alien is active. Only aliens that are active are redrawn to the screen. The first two rows of are the widest aliens, the next two rows are a little narrower and the top row has the narrowest alien.
+
+An alien becomes inactive when a bullet hits it. A hit occurs when at least one of the pixels of the bullet overlap the pixels of an alien. Each row of aliens is different. Although the aliens are drawn in blocks, unless the bullet overlaps a white pixel of an alien, it will not explode. This is necessary for a bullet to fly between aliens. For example, a bullet can miss a bottom row alien, and hit a second row alien. When an alien is killed, an explosion replaces it for a short time before dissipating. The other aliens continue onward while the explosion occurs.
+
+Aliens march over bunkers when they reach them. However, erasing and redrawing the aliens can erase blocks of bunkers, even though they aren't inactive. In order to redraw the bunkers properly, the state of the bunkers are always drawn in a dedicated frame, FRAME3.  As an alien is erased, the program accesses the bunker pixel values that are stored in this frame to restore these pixels. When an alien is drawn in the bunker region, the background values of BLACK are replaced by the values stored in FRAME3. Thus the alien appears to march over the bunkers.
+
+The aliens move laterally in increments of 4 pixels.  When the rightmost aliens reach the right edge of the screen, the grid of aliens move down 7 pixels and start moving left.  When the leftmost aliens reach the left edge of the screen, they move down 7 pixels and start moving right.  The rightmost alien and leftmost alien is the closest alien to the respective sides that has not been killed. This means that when the rightmost column of aliens are destroyed, the aliens march toward the side of the screen until the next column hits that side. The aliens continue this pattern of movement until the bottommost row of alive aliens reaches the bottom of the screen. 
+
+We check for the rightmost or leftmost active alien by iterating each alien in each column. If there isn't an active alien in a column, the next inner column is checked until an active alien is discovered. When we move the aliens, we do not change the direction of the grid of aliens until the rightmost or leftmost alien reaches the edge of the screen.
+
+Each time an alien is killed, the animation speed of the aliens increases logarithmically. This is done using the timers. Each time an alien is destroyed, the time between alien movements decreases by 10%. This means that when there is only one alien, it will move 10 times as fast as when it started.
+
+\subsubsection{Scoring}
+\includegraphics[]{scoring.jpg}
+
+Points are earned when the mothership is destroyed, or an alien is killed. This happens when at least one pixel of bullet overlaps a drawn pixel of an alien or mothership. The lower two rows of aliens, middle two rows of aliens, and the top row of aliens are worth 10, 20 points and 40 points per alien, respectively. When the mothership is destroyed, a value between 50 to 350 points is added to the total score.
+
+The score is displayed in the top left corner of the screen. All numbers are left justified, imitating the flash game. Commas are drawn slightly lower than numbers. Thus, they appear to be in the correct position.
+
+
+\subsubsection{Firing Bullets}
+You may also fire a missile by pushing the middle button. The tank is capable of moving and firing simultaneously. It is also capable of changing direction while shooting. This means that you are able to hold down the fire button and change directions.
+\subsubsection{Death}
+When the tank is struck by an alien bullet, it explodes.  The player will lose a life and continue the current level.
+
+\subsection{Bullets}
+\subsubsection{Tank Bullets}
+Tanks are capable of firing bullets by pushing the middle button. Tank bullets, unlike Alien Bullets, only have one appearance. They are white rectangles that are ejected just above the center of the tank. No black boxes surround the bullet. In other words, when it leaves the tank, or strikes an object, an overlay of a black box cannot be seen. 
+
+When a bullet is on the screen, the tank cannot fire again until the bullet has left the screen. Each bullet travels at a rate of 2 pixels. When it strikes an alien or mothership, the object is destroyed.
+
+\subsubsection{Alien Bullets}
+There are two types of alien bullets:
+\begin{enumerate}
+\item{}  Zig zag bullets rotate cyclically through the following appearances:
+
+\begin{enumerate}
+\item 
+ \includegraphics[scale=2]{ZigBullet0.png}
+\item 
+ \includegraphics[scale=2]{ZigBullet1.png}
+\item
+ \includegraphics[scale=2]{ZigBullet2.png}
+\item
+ \includegraphics[scale=2]{ZigBullet3.png}
+\end{enumerate}
+
+\item{}  Cross bullets oscillate through the following appearance:
+
+\begin{enumerate}
+\item
+ \includegraphics[scale=2]{TBullet0.png}
+\item
+ \includegraphics[scale=2]{TBullet1.png}
+\item
+ \includegraphics[scale=2]{TBullet2.png}
+\end{enumerate}
+
+\end{enumerate}
+
+Each bullet is ejected from the center of an alien, randomly chosen to be an alien on the bottommost row. There can only be 4 bullets on the screen at any given point in time.  Once a bullet leaves the screen, a new bullet can be fired. Each bullet travels at a rate of 2 pixels. When the bullet strikes a tank, it is destroyed. When the bullet strikes a bunker, the bunker is eroded. When a piece of the bunker is completely eroded, the bullet can pass through it.  No black boxes surround the bullet. In other words, when it leaves an alien, or strikes an object, an overlay of a black box cannot be seen. 
+
+\subsection{The Bunkers}
+There are four bunkers available for the tank to use as cover.  Each bunker is divided into 10 sections.  Each section partially erodes with each collision of an alien bullet.  After 4 collisions, the section is fully eroded and will allow bullets to pass through.
+
+When the aliens reach the bunkers, they will walk above the bunkers as they move through them. In other words, they will be drawn over the bunkers and those portions of the bunkers will be destroyed.
+
+
+\subsection{Scoring}
+\includegraphics[]{scoring.jpg}
+
+Earn points by destroying the aliens with your tank missiles. The lower two rows of aliens, middle two rows of aliens, and the top row of aliens are worth 10, 20 points and 40 points per alien, respectively.
+
+\subsection{End of Game}
+The game ends when one of the following three events occur:
+\begin{enumerate}
+\item The bottommost row of aliens that are alive reach the bottom of the bunkers.
+\item The tank has been destroyed three times.
+\item All aliens are destroyed.
+\end{enumerate}
+When the game ends, a game over screen is displayed.
+
+\subsection{Appearance}
+The game appearance is identical to the flash version of Space Invasion. The game runs smoothly and at a decent speed. The screen is also updated close to the same rate as the flash-based game. No artifacts appear on the screen. No flickering occurs on the screen.
+
 
 \chapter{Bug Reports and File Organization}
 
