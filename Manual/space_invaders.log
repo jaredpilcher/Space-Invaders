@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  10 OCT 2011 19:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  11 OCT 2011 15:59
 entering extended mode
 **D:/Put_Your_Temp_Files_Here/space_invaders/Manual/space_invaders.tex
 (D:/Put_Your_Temp_Files_Here/space_invaders/Manual/space_invaders.tex
@@ -251,58 +251,53 @@ Package pdftex.def Info: tank.jpg used on input line 239.
  [14]
 File: big-alien.png Graphic file (type png)
  <use big-alien.png>
-Package pdftex.def Info: big-alien.png used on input line 252.
+Package pdftex.def Info: big-alien.png used on input line 250.
 (pdftex.def)             Requested size: 64.23984pt x 64.23984pt.
 File: aliens.jpg Graphic file (type jpg)
  <use aliens.jpg>
-Package pdftex.def Info: aliens.jpg used on input line 259.
+Package pdftex.def Info: aliens.jpg used on input line 257.
 (pdftex.def)             Requested size: 79.29604pt x 79.29604pt.
- [15] [16]
+ [15]
 File: scoring.jpg Graphic file (type jpg)
 
 <use scoring.jpg>
-Package pdftex.def Info: scoring.jpg used on input line 274.
+Package pdftex.def Info: scoring.jpg used on input line 272.
 (pdftex.def)             Requested size: 192.71951pt x 120.44969pt.
- [17]
+ [16] [17]
 File: ZigBullet0.png Graphic file (type png)
  <use ZigBullet0.png>
-Package pdftex.def Info: ZigBullet0.png used on input line 299.
+Package pdftex.def Info: ZigBullet0.png used on input line 291.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 File: ZigBullet1.png Graphic file (type png)
  <use ZigBullet1.png>
-Package pdftex.def Info: ZigBullet1.png used on input line 301.
+Package pdftex.def Info: ZigBullet1.png used on input line 293.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 File: ZigBullet2.png Graphic file (type png)
 
 <use ZigBullet2.png>
-Package pdftex.def Info: ZigBullet2.png used on input line 303.
+Package pdftex.def Info: ZigBullet2.png used on input line 295.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 File: ZigBullet3.png Graphic file (type png)
  <use ZigBullet3.png>
-Package pdftex.def Info: ZigBullet3.png used on input line 305.
+Package pdftex.def Info: ZigBullet3.png used on input line 297.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 File: TBullet0.png Graphic file (type png)
  <use TBullet0.png>
-Package pdftex.def Info: TBullet0.png used on input line 312.
+Package pdftex.def Info: TBullet0.png used on input line 304.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 File: TBullet1.png Graphic file (type png)
 
 <use TBullet1.png>
-Package pdftex.def Info: TBullet1.png used on input line 314.
+Package pdftex.def Info: TBullet1.png used on input line 306.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 File: TBullet2.png Graphic file (type png)
  <use TBullet2.png>
-Package pdftex.def Info: TBullet2.png used on input line 316.
+Package pdftex.def Info: TBullet2.png used on input line 308.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
- [18]
-File: scoring.jpg Graphic file (type jpg)
- <use scoring.jpg>
-Package pdftex.def Info: scoring.jpg used on input line 330.
-(pdftex.def)             Requested size: 192.71951pt x 120.44969pt.
- [19] [20] [21 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/Space_Invader
-s_Overview.jpg>]
-[22 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/Detect_Collision.jpg>]
-[23 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/Render.jpg>]
+ [18] [19] [20] [21 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/Space_In
+vaders_Overview.jpg>] [22 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/De
+tect_Collision.jpg>] [23 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/Ren
+der.jpg>]
 Chapter 3.
 [24
 
@@ -315,7 +310,7 @@ Here is how much of TeX's memory you used:
  4559 multiletter control sequences out of 15000+200000
  10369 words of font info for 36 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,7n,21p,816b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,21p,932b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 
@@ -323,7 +318,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX
 /type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti10.pfb>
-Output written on space_invaders.pdf (26 pages, 629447 bytes).
+Output written on space_invaders.pdf (26 pages, 631297 bytes).
 PDF statistics:
  136 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

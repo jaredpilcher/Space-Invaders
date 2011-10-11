@@ -242,9 +242,7 @@ The buttons are polled in regular intervals using the the Poll Buttons timer. As
 
 The user is able to hold down the left or right buttons to keep the tank moving across the screen. This is done by using a timer to control the speed of the tank movement. The Poll Buttons timer is checked in regular intervals. If a left or right button is asserted, it is update the location of the tank, moving left or right.
 
-The tank is capable of firing and moving simultaneously. The middle button is polled on regular intervals. When it is pushed, the bullet is drawn directly above the center of the tank. This polling is done independently of the tank movement. Thus, the tank can move and the tank bullet can fire during the same frame change.
-
-When an alien bullet hits the tank, it explodes. This is implemented using three animations that are stored in an array. Each time the explosion update timer is called, the animation changes to a new position in the array. This happens on regular intervals when an explosion occurs. The tank appears to explode because of the implemented double buffering. A new animation is drawn to the new frame, while the old animation in the old frame is erased.
+When an alien bullet hits the tank, the tank explodes. This is implemented using three tank animations that are stored in an array. Each time the explosion update timer is called, the animation changes to a new position in the array. This happens on regular intervals when an explosion occurs. The tank appears to explode because of the implemented double buffering and switching between these items in the array. A new animation is drawn to the new frame, while the old animation in the old frame is erased.
 
 Each time a tank explodes, the lives global variable is decremented and one tank is erased from the screen on the top right corner.
 
@@ -278,16 +276,10 @@ Points are earned when the mothership is destroyed, or an alien is killed. This 
 The score is displayed in the top left corner of the screen. All numbers are left justified, imitating the flash game. Commas are drawn slightly lower than numbers. Thus, they appear to be in the correct position.
 
 
-\subsubsection{Firing Bullets}
-You may also fire a missile by pushing the middle button. The tank is capable of moving and firing simultaneously. It is also capable of changing direction while shooting. This means that you are able to hold down the fire button and change directions.
-\subsubsection{Death}
-When the tank is struck by an alien bullet, it explodes.  The player will lose a life and continue the current level.
-
-\subsection{Bullets}
 \subsubsection{Tank Bullets}
-Tanks are capable of firing bullets by pushing the middle button. Tank bullets, unlike Alien Bullets, only have one appearance. They are white rectangles that are ejected just above the center of the tank. No black boxes surround the bullet. In other words, when it leaves the tank, or strikes an object, an overlay of a black box cannot be seen. 
+Tank bullets are fired when the middle button is pushed. The Poll Buttons timer checks the middle button on regular intervals for changes. When it detects that the middle button has been pushed, a bullet is drawn to the screen just above the center of the tank, and the global tank bullet variable is set to active. This is done by checking both the middle, left and right buttons every time the buttons are polled. Each button handler changes the state of the game before the next render. Thus the tank can move, change directions and fire between two calls to render(). Then, on regular intervals, the bullet moves upward until it leaves the screen or hits the mothership or an alien. When it strikes any of these two objects, it is deactivated, and it is neither drawn to the screen or move. Explosion sequences are activated when the tank bullet hits them.
 
-When a bullet is on the screen, the tank cannot fire again until the bullet has left the screen. Each bullet travels at a rate of 2 pixels. When it strikes an alien or mothership, the object is destroyed.
+When a bullet is on the screen, more tank bullets are not created until the middle button is pushed again, and the tank bullet is off the screen.  Each bullet travels at a configurable rate.
 
 \subsubsection{Alien Bullets}
 There are two types of alien bullets:
@@ -318,18 +310,22 @@ There are two types of alien bullets:
 
 \end{enumerate}
 
-Each bullet is ejected from the center of an alien, randomly chosen to be an alien on the bottommost row. There can only be 4 bullets on the screen at any given point in time.  Once a bullet leaves the screen, a new bullet can be fired. Each bullet travels at a rate of 2 pixels. When the bullet strikes a tank, it is destroyed. When the bullet strikes a bunker, the bunker is eroded. When a piece of the bunker is completely eroded, the bullet can pass through it.  No black boxes surround the bullet. In other words, when it leaves an alien, or strikes an object, an overlay of a black box cannot be seen. 
+Each of these animation sequences are stored in an array of encoded bits. The location of the bullet determines which animation is drawn to the screen using modulus. Thus, as the alien bullets move downward, they cycle through the animations, making them appear to zig zag or oscillate.
+
+
+The bullet regularly moves using a timer by a configurable amount of pixels. Each time the timer calls the moveAliens() callback function, the bullets position is updated, and compared with the position of the bunkers and tanks. If any of the bullet's pixels overlap any of the pixels in these objects, an explosion occurs, and the bullet is deactivated.
+
+Each bullet is ejected from the center of an alien, randomly chosen to be the bottommost alien of an active column. This means that when a bottom row alien is destroyed, the alien just above it is able to fire a bullet. We implemented this by randomly choosing a column of aliens. Iterating upward, we searched for the first active alien in that column. When it was found, the alien bullet used the coordinates determine where to be drawn..
+
+Only 4 alien bullets are active at a time. In our code, this means that there are only 4 alien bullet structures. Once a bullet is active, it cannot be reactivated until it strikes a bunker or tank, or leaves the screen. The movement of the alien bullet determines if it destroyed an object. If its new coordinates cause it to overlap an active bunker block or tank, it causes them to erode or explode.
+
+No black boxes surround the alien bullets. In other words, when it leaves an alien, or strikes an object, an overlay of a black box cannot be seen. This is done by Only drawing only the foreground color of the bullets.
 
 \subsection{The Bunkers}
-There are four bunkers available for the tank to use as cover.  Each bunker is divided into 10 sections.  Each section partially erodes with each collision of an alien bullet.  After 4 collisions, the section is fully eroded and will allow bullets to pass through.
 
-When the aliens reach the bunkers, they will walk above the bunkers as they move through them. In other words, they will be drawn over the bunkers and those portions of the bunkers will be destroyed.
+When a tank or alien bullet strikes a bunker, the bunker erodes. This is done by dividing the bunker into 12 equal size blocks. An array of 48 integers controls the state of each block. When a block is hit by a bullet, it's associated integer is incremented until it reaches 4. When it reaches this state, bullets can pass through them, and are not destroyed when they hit them.
 
-
-\subsection{Scoring}
-\includegraphics[]{scoring.jpg}
-
-Earn points by destroying the aliens with your tank missiles. The lower two rows of aliens, middle two rows of aliens, and the top row of aliens are worth 10, 20 points and 40 points per alien, respectively.
+A function strategically places the bunker block in the correct positions of the screen. Since they do not move, they are always drawn in the same position.
 
 \subsection{End of Game}
 The game ends when one of the following three events occur:
@@ -340,8 +336,14 @@ The game ends when one of the following three events occur:
 \end{enumerate}
 When the game ends, a game over screen is displayed.
 
+First, when the aliens move, if their position is is equal to the position of the bottom of the bunkers the game\_over global variable is set to 1. Second, when the tank is destroyed, if no other lives exist, the game\_over global variable is set to 1. Third, when an alien is destroyed, if not other aliens are active, the game\_over global variable is set to 1.
+
+In the main() function, when the game\_over global variable is set to 1, it stops checking the timer values and jumps out of the while() loop. The aliens are erased, and  the game freezes with a large GAME OVER text in the center of the screen.
+
 \subsection{Appearance}
 The game appearance is identical to the flash version of Space Invasion. The game runs smoothly and at a decent speed. The screen is also updated close to the same rate as the flash-based game. No artifacts appear on the screen. No flickering occurs on the screen.
+
+The render() function makes this possible. Because the screen is updated on small intervals, the screen is consistently updated close to the rate of the flash-based game. This eliminates flickering, making the animation smooth.
 
 
 \chapter{Bug Reports and File Organization}
@@ -366,4 +368,7 @@ During our design phase, we found a bug involving the overlay of the bullet blac
 
 \subsection{One Alien Firing Two Bullets Simultaneously}
 While trying test our implementation of aliens firing bullets, we encountered a situation in which an alien fires two bullets on top of each other.  They will appear as one bullet.  We solved this by limiting the firing of a bullet until the first one has moved out of its original position. 
+
+\subsection{Overwriting Memory}
+With good intent, we wrote a for loop to iterate through an array, and ended it using a call to sizeof() in our main() function. Our screen exhibited strange behavior, drawing objects in the top left corner of the screen. Ensuring that we initialized our objects to be inactive, they still appeared there. Using print statements throughout the program, we determined that the initial values of our variables were incorrect. They seemed to change value within only a small block of initialization code in main(). Determined to discover the issue, we closely scrutinized our code and discovered the issue. We learned that sizeof() returns the number of bytes of the entire array, instead of the number of objects in the array. After correcting this mistake, our issue was resolved.
 \end{document}
