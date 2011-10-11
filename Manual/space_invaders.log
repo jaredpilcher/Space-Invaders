@@ -1,21 +1,24 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  20 SEP 2011 15:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  10 OCT 2011 22:46
 entering extended mode
-**D:/Put_Your_Temp_Files_Here/space_invaders/Manual/space_invaders.tex
-(D:/Put_Your_Temp_Files_Here/space_invaders/Manual/space_invaders.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
-vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
-an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
-romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
-sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
-senglishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**space_invaders.tex
+(./space_invaders.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -31,31 +34,31 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -67,7 +70,9 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 LaTeX Warning: Unused global option(s):
     [letter].
 
-(D:\Put_Your_Temp_Files_Here\space_invaders\Manual\space_invaders.aux)
+(./space_invaders.aux)
+\openout1 = `space_invaders.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
@@ -81,7 +86,7 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen105
@@ -94,129 +99,286 @@ LaTeX Font Info:    ... okay on input line 3.
 \MPnumerator=\count93
 \makeMPintoPDFobject=\count94
 \everyMPtoPDFconversion=\toks16
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 )
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 8.
- [1
 
-{C:/Documents and Settings/All Users/Application Data/MiKTeX/2.9/pdftex/config/
-pdftex.map}]
-(D:\Put_Your_Temp_Files_Here\space_invaders\Manual\space_invaders.toc
+[1
+
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./space_invaders.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 2.
-)
-\tf@toc=\write3
  [1
 
-]
-Chapter 1.
-[2
+])
+\tf@toc=\write3
+\openout3 = `space_invaders.toc'.
 
-] <tank.jpg, id=16, 50.1875pt x 50.1875pt>
+ [2]
+Chapter 1.
+[3
+
+] <tank.jpg, id=20, 50.1875pt x 50.1875pt>
 File: tank.jpg Graphic file (type jpg)
  <use tank.jpg>
 Package pdftex.def Info: tank.jpg used on input line 30.
 (pdftex.def)             Requested size: 50.18736pt x 50.18736pt.
 
-<big-alien.png, id=17, 64.24pt x 64.24pt>
+<big-alien.png, id=21, 64.24pt x 64.24pt>
 File: big-alien.png Graphic file (type png)
  <use big-alien.png>
 Package pdftex.def Info: big-alien.png used on input line 41.
 (pdftex.def)             Requested size: 64.23984pt x 64.23984pt.
 
-<aliens.jpg, id=18, 79.29625pt x 79.29625pt>
+<aliens.jpg, id=22, 79.29625pt x 79.29625pt>
 File: aliens.jpg Graphic file (type jpg)
  <use aliens.jpg>
 Package pdftex.def Info: aliens.jpg used on input line 47.
 (pdftex.def)             Requested size: 79.29604pt x 79.29604pt.
- [3 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/tank.jpg> <D:/Put_Your_T
-emp_Files_Here/space_invaders/Manual/big-alien.png>] <scoring.jpg, id=22, 192.7
-2pt x 120.45pt>
+ [4 <./tank.jpg> <./big-alien.png>] <scoring.jpg, id=26, 192.72pt x 120.45pt>
 File: scoring.jpg Graphic file (type jpg)
-
-<use scoring.jpg>
+ <use scoring.jpg>
 Package pdftex.def Info: scoring.jpg used on input line 54.
 (pdftex.def)             Requested size: 192.71951pt x 120.44969pt.
- [4 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/aliens.jpg> <D:/Put_Your
-_Temp_Files_Here/space_invaders/Manual/scoring.jpg>] [5]
-<ZigBullet0.png, id=29, 8.03pt x 12.045pt>
+
+[5 <./aliens.jpg> <./scoring.jpg>] [6]
+<ZigBullet0.png, id=34, 8.03pt x 12.045pt>
 File: ZigBullet0.png Graphic file (type png)
  <use ZigBullet0.png>
 Package pdftex.def Info: ZigBullet0.png used on input line 97.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 
-<ZigBullet1.png, id=31, 8.03pt x 12.045pt>
+<ZigBullet1.png, id=36, 8.03pt x 12.045pt>
 File: ZigBullet1.png Graphic file (type png)
  <use ZigBullet1.png>
 Package pdftex.def Info: ZigBullet1.png used on input line 99.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 
-<ZigBullet2.png, id=32, 8.03pt x 12.045pt>
+<ZigBullet2.png, id=37, 8.03pt x 12.045pt>
 File: ZigBullet2.png Graphic file (type png)
  <use ZigBullet2.png>
 Package pdftex.def Info: ZigBullet2.png used on input line 101.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 
-<ZigBullet3.png, id=33, 8.03pt x 12.045pt>
+<ZigBullet3.png, id=38, 8.03pt x 12.045pt>
 File: ZigBullet3.png Graphic file (type png)
  <use ZigBullet3.png>
 Package pdftex.def Info: ZigBullet3.png used on input line 103.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 
-<TBullet0.png, id=34, 8.03pt x 12.045pt>
+<TBullet0.png, id=39, 8.03pt x 12.045pt>
 File: TBullet0.png Graphic file (type png)
  <use TBullet0.png>
 Package pdftex.def Info: TBullet0.png used on input line 110.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 
-<TBullet1.png, id=35, 8.03pt x 12.045pt>
+<TBullet1.png, id=40, 8.03pt x 12.045pt>
 File: TBullet1.png Graphic file (type png)
  <use TBullet1.png>
 Package pdftex.def Info: TBullet1.png used on input line 112.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
 
-<TBullet2.png, id=36, 8.03pt x 12.045pt>
+<TBullet2.png, id=41, 8.03pt x 12.045pt>
 File: TBullet2.png Graphic file (type png)
  <use TBullet2.png>
 Package pdftex.def Info: TBullet2.png used on input line 114.
 (pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
- [6 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/ZigBullet0.png> <D:/Put_
-Your_Temp_Files_Here/space_invaders/Manual/ZigBullet1.png> <D:/Put_Your_Temp_Fi
-les_Here/space_invaders/Manual/ZigBullet2.png> <D:/Put_Your_Temp_Files_Here/spa
-ce_invaders/Manual/ZigBullet3.png> <D:/Put_Your_Temp_Files_Here/space_invaders/
-Manual/TBullet0.png> <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/TBullet
-1.png> <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/TBullet2.png>]
+ [7 <./ZigBullet0.png> <./ZigBullet1.png> <./ZigBullet2.png> <./ZigBullet3.png>
+ <./TBullet0.png> <./TBullet1.png> <./TBullet2.png>]
 File: scoring.jpg Graphic file (type jpg)
  <use scoring.jpg>
 Package pdftex.def Info: scoring.jpg used on input line 128.
 (pdftex.def)             Requested size: 192.71951pt x 120.44969pt.
- [7]
-[8]
+ [8] [9]
 Chapter 2.
-[9
 
-] [10] (D:\Put_Your_Temp_Files_Here\space_invaders\Manual\space_invaders.aux) )
- 
+LaTeX Warning: File `Space Invaders Overview.jpg' not found on input line 160.
+
+<Space Invaders Overview.jpg, id=58, 564.1075pt x 585.18625pt>
+File: Space Invaders Overview.jpg Graphic file (type jpg)
+
+<use Space Invaders Overview.jpg>
+Package pdftex.def Info: Space Invaders Overview.jpg used on input line 160.
+(pdftex.def)             Requested size: 451.2866pt x 468.14963pt.
+
+Overfull \hbox (201.21257pt too wide) in paragraph at lines 160--161
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 6.87859pt on input line 163.
+
+[10
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 169.
+
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 169.
+ [11]
+[12]
+
+LaTeX Warning: File `Detect Collision.jpg' not found on input line 211.
+
+<Detect Collision.jpg, id=71, 536.0025pt x 748.7975pt>
+File: Detect Collision.jpg Graphic file (type jpg)
+
+<use Detect Collision.jpg>
+Package pdftex.def Info: Detect Collision.jpg used on input line 211.
+(pdftex.def)             Requested size: 375.19919pt x 524.15468pt.
+
+Overfull \hbox (78.2226pt too wide) in paragraph at lines 211--212
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 49.28363pt on input line 213.
+
+<Render.jpg, id=72, 123.46124pt x 483.8075pt>
+File: Render.jpg Graphic file (type jpg)
+ <use Render.jpg>
+Package pdftex.def Info: Render.jpg used on input line 224.
+(pdftex.def)             Requested size: 61.73045pt x 241.90315pt.
+ [13]
+File: tank.jpg Graphic file (type jpg)
+
+<use tank.jpg>
+Package pdftex.def Info: tank.jpg used on input line 239.
+(pdftex.def)             Requested size: 50.18736pt x 50.18736pt.
+ [14]
+File: big-alien.png Graphic file (type png)
+ <use big-alien.png>
+Package pdftex.def Info: big-alien.png used on input line 252.
+(pdftex.def)             Requested size: 64.23984pt x 64.23984pt.
+File: aliens.jpg Graphic file (type jpg)
+ <use aliens.jpg>
+Package pdftex.def Info: aliens.jpg used on input line 259.
+(pdftex.def)             Requested size: 79.29604pt x 79.29604pt.
+ [15] [16]
+File: scoring.jpg Graphic file (type jpg)
+
+<use scoring.jpg>
+Package pdftex.def Info: scoring.jpg used on input line 274.
+(pdftex.def)             Requested size: 192.71951pt x 120.44969pt.
+ [17]
+File: ZigBullet0.png Graphic file (type png)
+ <use ZigBullet0.png>
+Package pdftex.def Info: ZigBullet0.png used on input line 299.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+File: ZigBullet1.png Graphic file (type png)
+ <use ZigBullet1.png>
+Package pdftex.def Info: ZigBullet1.png used on input line 301.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+File: ZigBullet2.png Graphic file (type png)
+
+<use ZigBullet2.png>
+Package pdftex.def Info: ZigBullet2.png used on input line 303.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+File: ZigBullet3.png Graphic file (type png)
+ <use ZigBullet3.png>
+Package pdftex.def Info: ZigBullet3.png used on input line 305.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+File: TBullet0.png Graphic file (type png)
+ <use TBullet0.png>
+Package pdftex.def Info: TBullet0.png used on input line 312.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+File: TBullet1.png Graphic file (type png)
+
+<use TBullet1.png>
+Package pdftex.def Info: TBullet1.png used on input line 314.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+File: TBullet2.png Graphic file (type png)
+ <use TBullet2.png>
+Package pdftex.def Info: TBullet2.png used on input line 316.
+(pdftex.def)             Requested size: 16.05994pt x 24.0899pt.
+ [18]
+File: scoring.jpg Graphic file (type jpg)
+ <use scoring.jpg>
+Package pdftex.def Info: scoring.jpg used on input line 330.
+(pdftex.def)             Requested size: 192.71951pt x 120.44969pt.
+ [19] [20] [21 <./Space Invaders Overview.jpg>] [22 <./Detect Collision.jpg>] [
+23 <./Render.jpg>]
+Chapter 3.
+[24
+
+] [25] (./space_invaders.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1209 strings out of 494045
- 16190 string characters out of 3148324
- 67093 words of memory out of 3000000
- 4528 multiletter control sequences out of 15000+200000
- 10023 words of font info for 35 fonts, out of 3000000 for 9000
- 715 hyphenation exceptions out of 8191
- 27i,6n,21p,816b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on space_invaders.pdf (11 pages, 121938 bytes).
+ 1581 strings out of 493633
+ 22931 string characters out of 3143378
+ 78270 words of memory out of 3000000
+ 4869 multiletter control sequences out of 15000+200000
+ 10369 words of font info for 36 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 37i,7n,23p,765b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on space_invaders.pdf (26 pages, 617612 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

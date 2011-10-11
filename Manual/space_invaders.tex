@@ -157,7 +157,7 @@ The Space Invaders game uses double buffering. It draws only to the next frame, 
 Figure~\ref{fig:overview} contains an overview of the structure of the Space Invaders Game. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=.80]{Space_Invaders_Overview.jpg}
+\includegraphics[scale=.80]{Space Invaders Overview.jpg}
 \caption{Space Invaders Overview. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.}
 \label{fig:overview}
 \end{figure}
@@ -208,7 +208,7 @@ If the bullet is an alien bullet, its coordinates are compared against the coord
 \begin{figure}[ht]
 \centering
 \label{fig:collisions}
-\includegraphics[scale=.7]{Detect_Collision.jpg}
+\includegraphics[scale=.7]{Detect Collision.jpg}
 \caption{Collision Detection. The green blocks represent the state that must be met to continue. The orange blocks represent the process of determining the specific object that was hit. The blue blocks represent the actions taken to change the game state during a collision.}
 \end{figure}
 
@@ -230,8 +230,56 @@ Aliens must march over bunkers when they reach them. However, erasing and redraw
 
 
 \subsection{Software APIs}
+\subsubsection{Game State}
+Because our engine implements passive rendering (i.e. the screen is rendered whether or not the game state has changed), most of the game logic involves modifying the game state.  There are two copies of the game state at any given point in time.  The current state reflects what is currently drawn to the screen.  All modification are made to the next state of the game.  When the screen is rendered, the next state is copied to the current state.
+
+To facilitate testing and to protect our global variables, most of our game logic exists in pure functions.  They will accept the data as parameters and return a copy of the data.
+
+Example:
+
+new\_tank\_bullet = moveBullet(new\_tank\_bullet);
+
+This will take the current coordinates of the tank bullet, and increment the y coordinate (causing the bullet to move up).  The bullet struct is not modified by the function call, but instead a new bullet is returned.  The global new\_tank\_bullet is assigned to the returned value.  The following functions act in a similar manner:
+
+Bullets:
+
+bullet moveBullet(bullet new\_bullet);
+bullet updateBullet(bullet new\_bullet);
+
+Coordinate Objects (such as aliens, space ships or the tank):
+
+coord\_object moveRight(coord\_object aliens);
+coord\_object moveLeft(coord\_object aliens);
+coord\_object moveDown(coord\_object aliens);
+coord\_object moveAliens(coord\_object new\_aliens\_coord, int * aliens);
+coord\_object moveShip(coord\_object ship);
+
+Note:  Some functions take additional game state parameters, such as moveAliens, which influence the behavior of the function.  These are not modified in any way.
+
+Explosions:
+
+explosion updateExplosion(explosion new\_explosion);
+explosion newExplosion(explosion temp\_explosion, int x, int y);
+explosion newShipExplosion(explosion temp\_explosion, int x, int y);
+
+There are also methods that deal with interaction of multiple object types:
+
+bullet fireAlienBullet(coord\_object new\_aliens\_coord, int row, int col);;
+bullet fireBullet(coord\_object tank);
+
+
+Another class of methods are those dealing with multiple parts of the game state:
+
+bullet detectCollision(bullet new\_bullet);
+  This method takes a bullet as a parameter.  It compares the coordinates of the bullet to the location of the bunkers, the aliens, and the tank.  If it is determined to be a hit, the method will deactivate the bullet and either erode a bunker or explode an alien, depending on what sort of collision was detected.  It then returns the updated bullet.  While it doesn't modify the bullet, this is not a pure function because it does modify other aspects of the game state (eroding bunkers, killing aliens, or losing lives).
+
+If the functions listed above are the building blocks of the application, then the glue consists of the callback functions of the Timers.  (See Chapter 2.1.1)  The callback functions modify the game state through all of the above functions.  
+
 \subsubsection{Rendering of images}
-Images are stored in memory as an encoded bitstring.  A Xuint16 can represent a single line of an image up to 16 pixels wide.  Each image is an array of these encoded bitstrings.  To draw to the screen, the images are scaled up to double their size.  A single pixel in the stored image corresponds to a 2 by 2 block of pixels on the screen. Each image type has it's own rendering function.  The functions typically take an x and y coordinate, a frame to draw to, and a color to draw.
+Images are stored in memory as an encoded bitstring.  A Xuint16 can represent a single line of an image up to 16 pixels wide.  Each image is an array of these encoded bitstrings.  To draw to the screen, the images are scaled up to double their size.  A single pixel in the stored image corresponds to a 2 by 2 block of pixels on the screen. Each image type has it's own rendering function.  The functions typically take an x and y coordinate, a frame to draw to, and a color to draw.  To erase, the functions draw black to the screen.  In some situations, such as around the bunkers, the functions read from a third frame of the screen in order to erase to a non-black value.  This is very costly to performance, so this is only done in necessary regions of the screen.
+
+
+
 
 \subsection{Meeting the Game Specifications}
 

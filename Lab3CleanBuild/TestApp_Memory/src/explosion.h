@@ -19,6 +19,8 @@ void eraseTankExplosion(explosion old_explosion, int prev_frame);
 void eraseExplosion(explosion old_explosion, int prev_frame);
 void drawExplosion(explosion new_explosion, int next_frame);
 explosion updateExplosion(explosion new_explosion);
+explosion newExplosion(explosion temp_explosion, int x, int y);
+explosion newShipExplosion(explosion temp_explosion, int x, int y);
 
 
 
