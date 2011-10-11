@@ -371,4 +371,18 @@ While trying test our implementation of aliens firing bullets, we encountered a 
 
 \subsection{Overwriting Memory}
 With good intent, we wrote a for loop to iterate through an array, and ended it using a call to sizeof() in our main() function. Our screen exhibited strange behavior, drawing objects in the top left corner of the screen. Ensuring that we initialized our objects to be inactive, they still appeared there. Using print statements throughout the program, we determined that the initial values of our variables were incorrect. They seemed to change value within only a small block of initialization code in main(). Determined to discover the issue, we closely scrutinized our code and discovered the issue. We learned that sizeof() returns the number of bytes of the entire array, instead of the number of objects in the array. After correcting this mistake, our issue was resolved.
+
+
+\subsection{Tank Out of Bounds}
+During most of our initial tests, we did not try to push the tank to the edge of the screen. After accidentally holding down the right button, we discovered that part of our tank disappeared into the side of the screen. To fix this issue, we inserted an if statement to check the position of the tank every time it moved. If it is within a given range of the left or right side of the screen, it is unable to move past that point. However, it is still able to move the opposite direction.
+
+\subsection{Not Enough Bunker Blocks}
+After constructing the bunkers using the bunker block images, we discovered that a systematic comparison with the position of the blocks with the bullet positions was not possible. We had only used 10 blocks per bunker, but we needed 12. The two blocks in the bottom and center of each bunker needed to be constructed and placed there. We added 8 new places in the global bunker block state array for each of these new blocks and set each state to 4. Therefore, when a bullet hit them, they were already considered destroyed, and the bullets flew through them. This greatly simplified our code.
+
+\subsection{Tank Movement During Explosion}
+Alien bullets are capable of destroying a tank. When a tank is destroyed, it is supposed to flip through a series of animations to appear to explode. It soon became evident that as the tank exploded, it was capable of moving during the explosion. The solution was simple. When the moveTank() function is called, it now determines if the tank is currently exploding. If it is, it does not update its position, but simply returns. The tank now appears to be frozen while it explodes.
+
+\subsection{Tank Bullet Grazing Aliens}
+After playing the game several times, it became clear that if a bullet overlapped an alien by only 2 pixels, it did not explode. After doing some investigation, it became clear that when the bullet moved, the function that compares the bullet position and the alien position was off by 2 pixels. with a simple addition of 2, the alien now explodes when the bullet's pixels overlap any of the aliens' pixels.
+
 \end{document}
