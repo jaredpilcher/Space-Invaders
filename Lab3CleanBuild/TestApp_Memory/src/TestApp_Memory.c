@@ -49,27 +49,6 @@ void newShip(){
 	}
 }
 
-explosion newExplosion(explosion temp_explosion, int x, int y){
-	if(!temp_explosion.active){
-		temp_explosion.x=x;
-		temp_explosion.y=y;
-		temp_explosion.active=1;
-		temp_explosion.time_elapsed=0;
-	}
-	return temp_explosion;
-}
-
-explosion newShipExplosion(explosion temp_explosion, int x, int y){
-	if(!temp_explosion.active){
-		temp_explosion.x=x;
-		temp_explosion.y=y;
-		temp_explosion.active=1;
-		temp_explosion.visible=1;
-		temp_explosion.time_elapsed=0;
-		temp_explosion.score=(rand()%301) + 50;
-	}
-	return temp_explosion;
-}
 
 void updateShip(){
 	new_space_ship = moveShip(new_space_ship);
