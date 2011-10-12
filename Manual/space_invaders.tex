@@ -145,6 +145,48 @@ The game appearance is identical to the flash version of Space Invasion. The gam
 
 \section{Game Console}
 \subsection{Xilinx University Program Board}
+	\subsubsection{Virtex II Pro}
+		The board we are using contains a Virtex II Pro XC2VP30. The specifications are as follows:
+		\begin{itemize}
+			\item 2 PowerPC Processor Blocks
+			\item 30,816 Logic Cells
+			\item 13,696 Slices for a maximum of 428 Kb of Distributed RAM
+			\item 136 18 x 18 bit multiplier blocks
+			\item 136 18Kb Blocks of SelectRAM+ for a maximum RAM block of 2,448 Kb
+			\item 8 DCMs
+			\item A Maximum of 644 User I/O Pads
+		\end{itemize}
+   	\subsubsection{256 DDR Memory}
+		The 256MB DDR Memory provides additional memory for the program to use.    The board can use either buffered or unbuffered memory with a maximum capacity of 2 GB.  The RAM is Double Data Rate, which allows for faster reads and writes than are typical with SDRAM.  It achieves double the data rate by reading and writing on both the rising and falling edges of the clock cycle.  Even with the Double Data Rate, reads and writes to the DRAM are quite slow in comparison to local cache and should be avoided in performance critical applications.
+	\subsubsection{AC-97 Sound Controller and jacks}
+		The AC-97 Sound Controller resides on the FPGA board acts as a buffer and encoder for the AC-97 hardware. The AC-97 hardware is only able to accept serial data. To make the driver programming easier, the Sound Controller hardware accepts a large quantity of 32 bit words and sends it to the AC-97 hardware in a serial data stream. Furthermore, it sends the data to an Analog Codec and sends the stream to the the AC-97 hardware. Lastly, the analog codec receives analog signals through a MIC\_IN port and translates it to a serial digital signal. The AC-97 port transforms this data into 32 bit words and sends them to the PPC.
+		\begin{itemize}
+		\item LINE\_IN
+
+		The input signal line from the LINE\_IN port on the board. It is not amplified, but it is filtered by the Analog Codec and digitized.
+		\item LINE\_OUT
+
+		The signal line that is sent to the amplified PC speaker array through a jack port.
+		\item MIC\_IN
+
+		The input signal line from the MIC\_IN port on the board. It is later amplified and filtered by the Analog Codec and digitized.
+		\item AMP\_OUT
+		
+		The amplified signal line that is sent to the headphone jack for listening.
+		\end{itemize}
+		\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=.8]{AC97.jpg}
+		\caption{AC-97 controller overview. The AC-97 Controller acts as a buffer to the AC-97 hardware.}
+		\label{fig:overview}
+		\end{figure}
+     	\subsubsection{VGA Controller}
+		The VGA controller actively draws the contents of a frame buffers to the screen. The frame buffer is defined by a range of memory addresses on the DDR. The user specifies the address of the frame buffer. The vga controller is a block of IP placed in the FPGA fabric. The Video DAC converts 8 bits per color (24 bits per pixel) to the corresponding analog signal for the output to the VGA.
+	\subsubsection{Compact Flash}
+		Compact Flash provides non volatile memory that allows data to be persistent across resets. The FPGA logic can be stored on this memory to provide support for board resets. Upon resetting, the logic is loaded from the flash memory into the FPGA board if configured to do so.
+	\subsubsection{UART/JTAG for debugging purposes}
+		The Xilinx stdio library provides access to the UART.  Input and output operations that would normally be to STDOUT and from STDIN are instead made to the UART.  Print statements can be read via the UART on a connected machine,  and input from the connected machine can be read by the stdio library via the UART.  JTAG provides a method of programming the FPGA and/or the system memory.  JTAG on the board can use 3 different sources to program the board.  It can use the Compact Flash at boot time.  It can use a USB to PC connection.  It can use a PC4 cable connection.  Each of these methods is advantageous in different scenarios, and the priority is specified via switches on the board.
+
 \subsection{Xilinx Virtex II. Pro EDK System}
 
 \section{Game Engine }
@@ -157,12 +199,13 @@ The Space Invaders game uses double buffering. It draws only to the next frame, 
 Figure~\ref{fig:overview} contains an overview of the structure of the Space Invaders Game. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=.80]{Space Invaders Overview.jpg}
+\includegraphics[scale=.80]{Space_Invaders_Overview.jpg}
 \caption{Space Invaders Overview. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.}
 \label{fig:overview}
 \end{figure}
 
 \subsubsection{Timers}
+\label{sec:timers}
 The sequence of events in the Space Invaders game is controlled using timers. After initializing the state of the game and creating timers, main() enters an infinite loop, determining when timer functions should be called. A timer is a structure that contains the interval of ticks between calling its registered callback function. Each time the PIT timer interrupt invokes the PIT handler, the global variable pit\_counter is incremented. Because of the complexity of the game, many timers currently exist. These include:
 
 \begin{itemize}
@@ -241,45 +284,49 @@ new\_tank\_bullet = moveBullet(new\_tank\_bullet);
 
 This will take the current coordinates of the tank bullet, and increment the y coordinate (causing the bullet to move up).  The bullet struct is not modified by the function call, but instead a new bullet is returned.  The global new\_tank\_bullet is assigned to the returned value.  The following functions act in a similar manner:
 
-Bullets:
+\begin{itemize}
+	\item Bullets:
+		\begin{verbatim}
+		bullet moveBullet(bullet new_bullet);
+		bullet updateBullet(bullet new_bullet);
+		\end{verbatim}
+	\item	Coordinate Objects (such as aliens, space ships or the tank):
+		\begin{verbatim}
+		coord_object moveRight(coord_object aliens);
+		coord_object moveLeft(coord_object aliens);
+		coord_object moveDown(coord_object aliens);
+		coord_object moveAliens(coord_object new_aliens_coord, int * aliens);
+		coord_object moveShip(coord_object ship);
+		\end{verbatim}
+		\textbf{Note:}  Some functions take additional game state parameters, such as moveAliens, which influence the behavior of the function.  These are not modified in any way.
+	\item Explosions:
+		\begin{verbatim}
+			explosion updateExplosion(explosion new_explosion);
+			explosion newExplosion(explosion temp_explosion, int x, int y);
+			explosion newShipExplosion(explosion temp_explosion, int x, int y);
+		\end{verbatim}
+	\item There are also methods that deal with interaction of multiple object types:
+		\begin{verbatim}
+			bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col);;
+			bullet fireBullet(coord_object tank);
+		\end{verbatim}
+	\item Another class of methods are those dealing with multiple parts of the game state:
+		\begin{itemize}
+			\item
+			\begin{verbatim}
+			bullet detectCollision(bullet new_bullet);
+			\end{verbatim}
 
-bullet moveBullet(bullet new\_bullet);
-bullet updateBullet(bullet new\_bullet);
+			  This method takes a bullet as a parameter.  It compares the coordinates of the bullet to the location of the bunkers, the aliens, and the tank.  If it is determined to be a hit, the method will deactivate the bullet and either erode a bunker or explode an alien, depending on what sort of collision was detected.  It then returns the updated bullet.  While it doesn't modify the bullet, this is not a pure function because it does modify other aspects of the game state (eroding bunkers, killing aliens, or losing lives).
+		\end{itemize}
+\end{itemize}
 
-Coordinate Objects (such as aliens, space ships or the tank):
-
-coord\_object moveRight(coord\_object aliens);
-coord\_object moveLeft(coord\_object aliens);
-coord\_object moveDown(coord\_object aliens);
-coord\_object moveAliens(coord\_object new\_aliens\_coord, int * aliens);
-coord\_object moveShip(coord\_object ship);
-
-Note:  Some functions take additional game state parameters, such as moveAliens, which influence the behavior of the function.  These are not modified in any way.
-
-Explosions:
-
-explosion updateExplosion(explosion new\_explosion);
-explosion newExplosion(explosion temp\_explosion, int x, int y);
-explosion newShipExplosion(explosion temp\_explosion, int x, int y);
-
-There are also methods that deal with interaction of multiple object types:
-
-bullet fireAlienBullet(coord\_object new\_aliens\_coord, int row, int col);;
-bullet fireBullet(coord\_object tank);
-
-
-Another class of methods are those dealing with multiple parts of the game state:
-
-bullet detectCollision(bullet new\_bullet);
-  This method takes a bullet as a parameter.  It compares the coordinates of the bullet to the location of the bunkers, the aliens, and the tank.  If it is determined to be a hit, the method will deactivate the bullet and either erode a bunker or explode an alien, depending on what sort of collision was detected.  It then returns the updated bullet.  While it doesn't modify the bullet, this is not a pure function because it does modify other aspects of the game state (eroding bunkers, killing aliens, or losing lives).
-
-If the functions listed above are the building blocks of the application, then the glue consists of the callback functions of the Timers.  (See Chapter 2.1.1)  The callback functions modify the game state through all of the above functions.  
+If the functions listed above are the building blocks of the application, then the glue consists of the callback functions of the Timers.  (See Section~\ref{sec:timers} under Timers)  The callback functions modify the game state through all of the above functions.  
 
 \subsubsection{Rendering of images}
-Images are stored in memory as an encoded bitstring.  A Xuint16 can represent a single line of an image up to 16 pixels wide.  Each image is an array of these encoded bitstrings.  To draw to the screen, the images are scaled up to double their size.  A single pixel in the stored image corresponds to a 2 by 2 block of pixels on the screen. Each image type has it's own rendering function.  The functions typically take an x and y coordinate, a frame to draw to, and a color to draw.  To erase, the functions draw black to the screen.  In some situations, such as around the bunkers, the functions read from a third frame of the screen in order to erase to a non-black value.  This is very costly to performance, so this is only done in necessary regions of the screen.
+Images are stored in memory as an encoded bitstring.  A Xuint16 can represent a single line of an image up to 16 pixels wide.  Each image is an array of these encoded bitstrings.  To draw to the screen, the images are scaled up to double their size.  A single pixel in the stored image corresponds to a 2 by 2 block of pixels on the screen. Each image type has it's own rendering function.  The functions typically take an x and y coordinate, a frame to draw to, and a color to draw.  To erase, the functions draw black to the screen.  In some situations, such as around the bunkers, the functions read from a third frame of the screen in order to erase to a non-black value.  This is very costly to performance, so this is only done in necessary regions of the screen.  
 
-
-
+Because we use passive rendering, the only function that modifies the screen is our render function.  This is called by a Timer and is by default called twenty times a second.  No other functions will call render.  Render calls draw and erase function for each object on the screen.
 
 \subsection{Meeting the Game Specifications}
 
