@@ -457,7 +457,7 @@ void eraseAllLives(int prev_lives,int frame){
 
 
 
-int main() {
+int mains() {
 XCache_EnableICache(0x00000001);
 XCache_EnableDCache(0x00000001);
      //XGpio gpLED;

@@ -45,7 +45,10 @@
 #include "xgpio.h"
 #include "gpio_header.h"
 #include "gpio_intr_header.h"
+#include "sysace_stdio.h"
+#include "xac97_l.h"
 
+#include "game_sounds2.h"
 #define GPIO_CHANNEL1 1
 
 //====================================================
@@ -53,136 +56,42 @@
 int main (void) {
 
 
-   static XIntc intc;
-
-   static XGpio PushButtons_5Bit_Gpio;
-   print("-- Entering main() --\r\n");
-
-
-   {
-      XStatus status;
-      
-      print("\r\n Runnning IntcSelfTestExample() for opb_intc_0...\r\n");
-      
-      status = IntcSelfTestExample(XPAR_OPB_INTC_0_DEVICE_ID);
-      
-      if (status == 0) {
-         print("IntcSelfTestExample PASSED\r\n");
-      }
-      else {
-         print("IntcSelfTestExample FAILED\r\n");
-      }
-   } 
 	
-   {
-       XStatus Status;
+   XAC97_mSetControl(XPAR_AUDIO_CODEC_BASEADDR, AC97_ENABLE_RESET_AC97);
+   usleep(100);
+   XAC97_mSetControl(XPAR_AUDIO_CODEC_BASEADDR, AC97_DISABLE_RESET_AC97);
+   usleep(100);
+   XAC97_SoftReset(XPAR_AUDIO_CODEC_BASEADDR);
 
-       Status = IntcInterruptSetup(&intc, XPAR_OPB_INTC_0_DEVICE_ID);
-       if (Status == 0) {
-          print("Intc Interrupt Setup PASSED\r\n");
-       } 
-       else {
-         print("Intc Interrupt Setup FAILED\r\n");
-      } 
-   }
-
-   /*
-    * Peripheral SelfTest will not be run for RS232_Uart_1
-    * because it has been selected as the STDOUT device
-    */
-
-
-
-   {
-      XStatus status;
-      
-      print("\r\nRunning SysAceSelfTestExample() for SysACE_CompactFlash...\r\n");
-      status = SysAceSelfTestExample(XPAR_SYSACE_COMPACTFLASH_DEVICE_ID);
-      if (status == 0) {
-         print("SysAceSelfTestExample PASSED\r\n");
-      }
-      else {
-         print("SysAceSelfTestExample FAILED\r\n");
-      }
-   }
-
-
-   {
-      Xuint32 status;
-      
-      print("\r\nRunning GpioOutputExample() for LEDs_4Bit...\r\n");
-
-      status = GpioOutputExample(XPAR_LEDS_4BIT_DEVICE_ID,4);
-      
-      if (status == 0) {
-         print("GpioOutputExample PASSED.\r\n");
-      }
-      else {
-         print("GpioOutputExample FAILED.\r\n");
-      }
-   }
-
-
-   {
-      Xuint32 status;
-      
-      print("\r\nRunning GpioInputExample() for DIPSWs_4Bit...\r\n");
-
-      Xuint32 DataRead;
-      
-      status = GpioInputExample(XPAR_DIPSWS_4BIT_DEVICE_ID, &DataRead);
-      
-      if (status == 0) {
-         xil_printf("GpioInputExample PASSED. Read data:0x%X\r\n", DataRead);
-      }
-      else {
-         print("GpioInputExample FAILED.\r\n");
-      }
-   }
-
-
-   {
-      Xuint32 status;
-      
-      print("\r\nRunning GpioInputExample() for PushButtons_5Bit...\r\n");
-
-      Xuint32 DataRead;
-      
-      status = GpioInputExample(XPAR_PUSHBUTTONS_5BIT_DEVICE_ID, &DataRead);
-      
-      if (status == 0) {
-         xil_printf("GpioInputExample PASSED. Read data:0x%X\r\n", DataRead);
-      }
-      else {
-         print("GpioInputExample FAILED.\r\n");
-      }
-   }
-   {
-      
-      XStatus Status;
-        
-      Xuint32 DataRead;
-      
-      print(" Press button to Generate Interrupt\r\n");
-      
-      Status = GpioIntrExample(&intc, &PushButtons_5Bit_Gpio, \
-                               XPAR_PUSHBUTTONS_5BIT_DEVICE_ID, \
-                               XPAR_OPB_INTC_0_PUSHBUTTONS_5BIT_IP2INTC_IRPT_INTR, \
-                               GPIO_CHANNEL1, &DataRead);
+	XAC97_AwaitCodecReady(XPAR_AUDIO_CODEC_BASEADDR);
+	XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_MasterVol,0x0a0a);
+	int i = 0;
+	while(1){
+		if(!XAC97_isInFIFOFull(XPAR_AUDIO_CODEC_BASEADDR)){
+			XAC97_mSetInFifoData(XPAR_AUDIO_CODEC_BASEADDR,shoot_wav_sound[i]);
+			i++;
+		}
+		if (i >= SHOOT_WAV_LEN){
+				i = 0;
+				usleep(1000000);
+		}
+	}
+		
 	
-      if (Status == 0 ){
-             if(DataRead == 0)
-                print("No button pressed. \r\n");
-             else
-                print("Gpio Interrupt Test PASSED. \r\n"); 
-      } 
-      else {
-         print("Gpio Interrupt Test FAILED.\r\n");
-      }
+	SYSACE_FILE * infile;
+	char * audiobuffer = 0x00600000;
+	int numread;
+	infile = sysace_fopen("a:\\fire.wav", "r");
+	if(infile) {
+		xil_printf("Reading file : %s\n\r", "a:\\fire.wav");
+		int total_to_read = 500;
+		numread = sysace_fread(audiobuffer, 2, total_to_read, infile);
+		int i;
+		for(i = 0; i < total_to_read; i++){
+			xil_printf("%x ",audiobuffer[i]);
+		}
+		print("\n\r");
+		sysace_fclose(infile);
+	}
 	
-   }
-
-   print("-- Exiting main() --\r\n");
-   return 0;
 }
-
