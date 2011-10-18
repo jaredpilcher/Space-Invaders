@@ -57,10 +57,10 @@ void volumeDown(){
 
 Sound createSound(char * filename){
 	Sound newSound;
-	newSound.length = getFileFromCF(tempSpace, filename);
-	newSound.address = convertArrayToInt(tempSpace, newSound.length);
+	newSound.length = getFileFromCF((char *)tempSpace, filename);
+	newSound.address = convertArrayToInt((char *)tempSpace, newSound.length);
 	nextFreeAddress += newSound.length;
-	newSound.sampling = AC97_PCM_RATE_44100_HZ;
+	newSound.sampling = getSampleRate(tempSpace);
 	newSound.current_sample = 0;
 	return newSound;
 }
