@@ -21,5 +21,6 @@ Sound createSound(char * filename);
 
 extern int * tempSpace;
 extern int * nextFreeAddress;
+extern int soundPos;
 
 #endif

@@ -62,9 +62,32 @@ int * nextFreeAddress = 0x00800000;
 enum sound_enum { AMove1, AMove2, AMove3, AMove4, Fire, TankExplode, SpaceShip, SpaceShipHit };
 Sound sounds[20];
 
+Sound * current_sound;
+
+void bufferUnderrun(XIntc * device){
+	XIntc_Disable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	XIntc_Acknowledge(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	if(current_sound){
+		int result = fillFIFOWithSound(current_sound);
+		xil_printf("Result: %d\n\r", result);
+		if (result == 0){
+			current_sound = 0;
+		}
+	} else {
+		fillFIFOWithSilence();
+	}
+	XIntc_Enable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+}
+
 int main (void) {
+	print("round asfklawer\n\r");
 	int i;
+	void * data;
+	XIntc ac97_opb;
 	initializeSound();
+	XIntc_Initialize(&ac97_opb, XPAR_INTC_SINGLE_DEVICE_ID);
+	XIntc_Start(&ac97_opb,XIN_REAL_MODE);
+	XIntc_Connect(&ac97_opb, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR, bufferUnderrun, &ac97_opb);
 	sounds[AMove1] = createSound("a:\\AMove1.wav");
 	sounds[AMove2] = createSound("a:\\AMove2.wav");
 	sounds[AMove3] = createSound("a:\\AMove3.wav");
@@ -73,10 +96,18 @@ int main (void) {
 	sounds[TankExplode] = createSound("a:\\TankXplo.wav");
 	sounds[SpaceShip] = createSound("a:\\SHigh2.wav");
 	sounds[SpaceShipHit] = createSound("a:\\SLow.wav");
+	playSound(sounds[Fire]);
+	XExc_Init();
+	XExc_mEnableExceptions(XEXC_NON_CRITICAL);
+	XExc_RegisterHandler(XEXC_ID_NON_CRITICAL_INT, XIntc_InterruptHandler , &ac97_opb);
+	XIntc_Enable(&ac97_opb, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
 	while(1){
-		for(i = 0; i < 8; i++){
-			playSound(sounds[i]);
-			playSilenceMS(1000);
-		}
+		usleep(1000000);
+		xil_printf("Fire Value: %d",sounds[Fire].current_sample);
+		current_sound = &sounds[Fire];
+		print("Play Fire\n\r");
+		usleep(1000000);
+		current_sound = 0;
+		print("Play Silence\n\r");
 	}
 }

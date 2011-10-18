@@ -13,6 +13,7 @@ void initializeSound(){
    XAC97_mSetControl(XPAR_AUDIO_CODEC_BASEADDR, AC97_DISABLE_RESET_AC97);
    usleep(100);
    XAC97_SoftReset(XPAR_AUDIO_CODEC_BASEADDR);
+   XAC97_mSetControl(XPAR_AUDIO_CODEC_BASEADDR, AC97_ENABLE_IN_FIFO_INTERRUPT);
    XAC97_AwaitCodecReady(XPAR_AUDIO_CODEC_BASEADDR);
 
    XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_MasterVol,0x0909);
@@ -34,12 +35,40 @@ Sound createSound(char * filename){
 	return newSound;
 }
 
+void fillFIFOWithSilence(){
+	int fifo_level = XAC97_getInFIFOLevel(XPAR_AUDIO_CODEC_BASEADDR);
+	int i;
+	for(i=fifo_level; i < 1000; i++){
+		XAC97_mSetInFifoData(XPAR_AUDIO_CODEC_BASEADDR,0);
+		break;
+	}
+}
+
+int fillFIFOWithSound(Sound * newSound){
+	int fifo_level = XAC97_getInFIFOLevel(XPAR_AUDIO_CODEC_BASEADDR);
+	int i;
+	int limit = newSound->current_sample + (1000- fifo_level);
+	if(limit <= 0)
+		return 1;
+	//xil_printf("FIFO Level: %d, limit: %d, current: %d",fifo_level,limit,newSound->current_sample);
+	for(i=newSound->current_sample; (i < limit )&&( i < newSound->length); i++){
+		XAC97_mSetInFifoData(XPAR_AUDIO_CODEC_BASEADDR, newSound->address[i]);
+	} 
+	if(i == newSound->length){
+		newSound->current_sample = 0;
+	}else{
+		newSound->current_sample = i;
+	}
+	return newSound->current_sample;
+}
+
 void playSilenceMS(int time_in_ms){
 	int i;
 	for(i = 0; i < (time_in_ms * 11025)/1000; i++){
 		while(1){
+		
 			int fifo_level = XAC97_getInFIFOLevel(XPAR_AUDIO_CODEC_BASEADDR);
-			if(fifo_level < 100){
+			if(fifo_level < 300){
 				XAC97_mSetInFifoData(XPAR_AUDIO_CODEC_BASEADDR,0);
 				break;
 			}
@@ -68,7 +97,7 @@ int getFileFromCF(char * wav_file_char, char * filename){
 			}
 			
 		} else {
-			print ("Failure\n\r");
+			print ("COMPACT FLASH Failure\n\r");
 			break;
 		}
 	}
@@ -96,7 +125,7 @@ void playSound(Sound newSound){
 	for(i = newSound.current_sample; i < newSound.length; i++){
 		while(1){
 			int fifo_level = XAC97_getInFIFOLevel(XPAR_AUDIO_CODEC_BASEADDR);
-			if(fifo_level < 100){
+			if(fifo_level < 300){
 				XAC97_mSetInFifoData(XPAR_AUDIO_CODEC_BASEADDR,newSound.address[i]);
 				break;
 			}
