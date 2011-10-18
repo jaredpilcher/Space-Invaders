@@ -18,6 +18,20 @@
 #include "explosion.h"
 #include "text.h"
 
+#include "xintc.h"
+#include "intc_header.h"
+#include "sysace_header.h"
+#include "xbasic_types.h"
+#include "gpio_header.h"
+#include "gpio_intr_header.h"
+#include "sysace_stdio.h"
+#include "xac97_l.h"
+
+#include "sound.h"
+//====================================================
+
+#define GPIO_CHANNEL1 1
+
 #define FRAME1 0x00000000
 #define FRAME2 0x00200000
 #define FRAME3 0x00400000
@@ -40,9 +54,9 @@
 #define ALIEN_FIRE_PROBABILITY 40
 #define NEW_SHIP_PROBABILITY 10
 
-#define SHIP_MOVEMENT 4
+#define SHIP_MOVEMENT 6
 
-#define START_X  165
+#define START_X  161
 #define START_Y  100
 
 #define TANK_X 200

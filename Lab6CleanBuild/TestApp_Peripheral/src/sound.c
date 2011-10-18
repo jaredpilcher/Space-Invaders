@@ -25,6 +25,36 @@ void initializeSound(){
 
 }
 
+void volumeUp(){
+	int master = XAC97_ReadReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_MasterVol);
+	if(master < 0x1f1f){
+		XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_MasterVol,master + 0x0101);
+	}
+	int pcm = XAC97_ReadReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_PCMOutVol);
+	if(pcm < 0x1f1f){
+		XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_PCMOutVol,pcm + 0x0101);
+	}
+	int aux = XAC97_ReadReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_AuxOutVol);
+	if(aux < 0x1f1f){
+		XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_AuxOutVol,aux + 0x0101);
+	}
+}
+
+void volumeDown(){
+	int master = XAC97_ReadReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_MasterVol);
+	if(master > 0x0000){
+		XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_MasterVol,master - 0x0101);
+	}
+	int pcm = XAC97_ReadReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_PCMOutVol);
+	if(pcm > 0x0000){
+		XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_PCMOutVol,pcm - 0x0101);
+	}
+	int aux = XAC97_ReadReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_AuxOutVol);
+	if(aux > 0x0000){
+		XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_AuxOutVol,aux - 0x0101);
+	}
+}
+
 Sound createSound(char * filename){
 	Sound newSound;
 	newSound.length = getFileFromCF(tempSpace, filename);
@@ -119,16 +149,18 @@ int * convertArrayToInt(char * wav_sound, int length){
 	return sound;
 }
 
-void playSound(Sound newSound){
-	int i;
-
-	for(i = newSound.current_sample; i < newSound.length; i++){
-		while(1){
-			int fifo_level = XAC97_getInFIFOLevel(XPAR_AUDIO_CODEC_BASEADDR);
-			if(fifo_level < 300){
-				XAC97_mSetInFifoData(XPAR_AUDIO_CODEC_BASEADDR,newSound.address[i]);
-				break;
-			}
-		}
+void playSound(Sound * newSound){
+	newSound->current_sample=0;
+	if(current_sound && newSound->priority > current_sound->priority){
+		current_sound->current_sample=0;
+		current_sound=newSound;
+	} else if(!current_sound) {
+		current_sound=newSound;
 	}
+	return;
+}
+
+void endSound(Sound * newSound){
+	newSound->current_sample=0;
+	current_sound = 0;
 }

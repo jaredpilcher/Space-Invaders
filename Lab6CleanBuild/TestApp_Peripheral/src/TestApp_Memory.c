@@ -33,6 +33,26 @@ int aliens_alive = 55;
 
 Timer timers[20];
 
+int * tempSpace = 0x00600000;
+int * nextFreeAddress = 0x00800000;
+enum sound_enum { AMove1, AMove2, AMove3, AMove4, Fire, TankExplode, SpaceShip, SpaceShipHit };
+Sound sounds[20];
+
+Sound * current_sound;
+
+void bufferUnderrun(XIntc * device){
+	XIntc_Disable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	XIntc_Acknowledge(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	if(current_sound){
+		int result = fillFIFOWithSound(current_sound);
+		if (result == 0){
+			current_sound = 0;
+		}
+	} else {
+		fillFIFOWithSilence();
+	}
+	XIntc_Enable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+}
 
 void my_pitHandler(void * DataPtr){
    XTime_PITClearInterrupt();
@@ -46,12 +66,16 @@ void newShip(){
 		new_space_ship.x=-64;
 		new_space_ship.y=45;
 		new_space_ship.active=1;
+		playSound(&sounds[SpaceShip]);
 	}
 }
 
 
 void updateShip(){
+	int ship_active = new_space_ship.active;
 	new_space_ship = moveShip(new_space_ship);
+	if(ship_active && !new_space_ship.active)
+		endSound(&sounds[SpaceShip]);
 }
 
 void stepShipExplosion(){
@@ -62,6 +86,10 @@ void stepShipExplosion(){
 
 
 void updateAliens(){
+	if (direction == RIGHT)
+		playSound(&sounds[(new_aliens_coord.x/4)%4]);
+	else
+		playSound(&sounds[3 - (new_aliens_coord.x/4)%4]);
 	new_aliens_coord = moveAliens(new_aliens_coord,aliens);
 	if(aliens_landed(new_aliens_coord,aliens)){
 		new_game_over = 1;
@@ -74,6 +102,7 @@ bullet fireBullet(coord_object tank){
 	new_bullet.y = tank.y - 8;
 	new_bullet.type = TANK_BULLET_TYPE;
 	new_bullet.active = 1;
+	playSound(&sounds[Fire]);
 	return new_bullet;
 }
 
@@ -234,7 +263,7 @@ bullet detectCollision(bullet new_bullet){
 			}
 			new_tank_explosion=newExplosion(new_tank_explosion,new_tank.x, new_tank.y);
 			new_tank_explosion.type=TANK_EXPLOSION;
-
+			playSound(&sounds[TankExplode]);
 			if (new_lives < 1){
 				new_game_over = 1;
 			}
@@ -254,6 +283,7 @@ bullet detectCollision(bullet new_bullet){
 			new_ship_explosion=newShipExplosion(new_ship_explosion,new_space_ship.x,new_space_ship.y);
 			new_ship_explosion.type = SHIP_EXPLOSION;
 			new_score+=new_ship_explosion.score;
+			playSound(&sounds[SpaceShipHit]);
 		}
 	}
 	
@@ -423,6 +453,14 @@ void pollButtons(){
 			}
 		}
 	}
+	// UP = 4
+	if ( ~data & 4){
+		volumeUp();
+	}
+	// DOWN = 8
+	if (~data & 8){
+		volumeDown();
+	}
 }
 
 void drawAllLives(int next_lives, int frame){
@@ -457,9 +495,36 @@ void eraseAllLives(int prev_lives,int frame){
 
 
 
-int mains() {
-XCache_EnableICache(0x00000001);
-XCache_EnableDCache(0x00000001);
+int main() {
+	print("begin\n\r");
+	XCache_EnableICache(0x00000001);
+	XCache_EnableDCache(0x00000001);
+	XIntc ac97_opb;
+	initializeSound();
+	XIntc_Initialize(&ac97_opb, XPAR_INTC_SINGLE_DEVICE_ID);
+	XIntc_Start(&ac97_opb,XIN_REAL_MODE);
+	XIntc_Connect(&ac97_opb, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR, bufferUnderrun, &ac97_opb);
+	sounds[AMove1] = createSound("a:\\AMove1.wav");
+	sounds[AMove1].priority = 1;
+	sounds[AMove2] = createSound("a:\\AMove2.wav");
+	sounds[AMove2].priority = 1;
+	sounds[AMove3] = createSound("a:\\AMove3.wav");
+	sounds[AMove3].priority = 1;
+	sounds[AMove4] = createSound("a:\\AMove4.wav");
+	sounds[AMove4].priority = 1;
+	sounds[Fire] = createSound("a:\\fire.wav");
+	sounds[Fire].priority = 7;
+	sounds[TankExplode] = createSound("a:\\TankXplo.wav");
+	sounds[TankExplode].priority = 10;
+	sounds[SpaceShip] = createSound("a:\\SHigh2.wav");
+	sounds[SpaceShip].priority = 8;
+	sounds[SpaceShipHit] = createSound("a:\\SLow.wav");
+	sounds[SpaceShipHit].priority = 9;
+	XExc_Init();
+	XExc_mEnableExceptions(XEXC_NON_CRITICAL);
+	XExc_RegisterHandler(XEXC_ID_NON_CRITICAL_INT, XIntc_InterruptHandler , &ac97_opb);
+	XIntc_Enable(&ac97_opb, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	print("hey\n\r");
      //XGpio gpLED;
      // Initialise the peripherals
      //XGpio_Initialize(&gpLED, XPAR_LEDS_4BIT_DEVICE_ID);
@@ -468,6 +533,7 @@ XCache_EnableDCache(0x00000001);
      //XGpio_SetDataDirection(&gpLED, 1, 0x00000000);
      // Set the Push Button peripheral to inputs
      XGpio_SetDataDirection(&gpPB, 1, 0x0000001F);
+	 	print("hey\n\r");
   pit_counter = 0;
   prev_frame = FRAME1;
   next_frame = FRAME2;
@@ -531,7 +597,6 @@ XCache_EnableDCache(0x00000001);
   
   	void * data;
 	XExceptionHandler pithandler = &my_pitHandler;
-	XExc_Init();
 	XExc_RegisterHandler(XEXC_ID_PIT_INT, pithandler,
                           data);
 	XTime_PITEnableAutoReload();
@@ -600,109 +665,7 @@ XCache_EnableDCache(0x00000001);
   DrawScaledWord("GAME OVER",175,200,prev_frame,GREEN,3);
   //clear screen
   //display game over
+  while(1){};
   return 0;
 }
 
-// prev_frame = FRAME1;
-  // next_frame = FRAME2;
-  // initialize_frame(prev_frame);
-  // initialize_frame(next_frame);
-  // initialize_frame(FRAME3);
-  // srand(91745452);
-  // aliens_coord.x= START_X;
-  // aliens_coord.y= START_Y;
-  // int i;
-  // for(i=0; i<sizeof(aliens);i++){
-	// aliens[i]=1;
-  // }
-  // for(i=0; i<4; i++){
-	// bullets[i].active = 0;
-  // }
-  
-  // tank_bullet.active = 0;
-  // drawAllAliens(aliens_coord, aliens, prev_frame);
-  // tank.x = 200;
-  // tank.y = 400;
-  // drawTank(tank, prev_frame);
-  // drawBunkers(prev_frame);
-  // drawBunkers(next_frame);
-  // drawBunkers(FRAME3);
-  // while(1){
-    // char input;
-	 // int alien_number;
-	 // char input2;
-	 // coord_object new_aliens_coord = aliens_coord;
-	 // coord_object new_tank = tank;
-	 // bullet new_bullets[4];
-	 // new_bullets[0] = bullets[0];
-	 // new_bullets[1] = bullets[1];
-	 // new_bullets[2] = bullets[2];
-	 // new_bullets[3] = bullets[3];
-	 // bullet new_tank_bullet = tank_bullet;
-    // read(0,&input,1);
-	 // switch(input){
-		// case '4':
-		  // new_tank = moveLeft(new_tank);
-		  // break;
-		// case '6':
-		  // new_tank = moveRight(new_tank);
-		  // break;
-		// case '8':
-		  // new_aliens_coord = moveAliens(new_aliens_coord);
-		  // break;
-		// case '2':
-		  // read(0,&input2,1);
-		  // alien_number = 10*(input2 - 48);
-		  // read(0,&input2,1);
-		  // alien_number += (input2 - 48);
-		  // aliens[alien_number] = 0;
-		  // break;
-		// case '5':
-		  // if(new_tank_bullet.active){
-		    // break;
-		  // }
-		  // new_tank_bullet = fireBullet(new_tank);
-		  // break;
-		// case '3':
-		  // for(i = 0; i < 4; i++){
-		    // if (new_bullets[i].active == 0){
-			   // break;
-			 // }
-		  // }
-		  // if(i == 4){
-			 // break;
-		  // }
-		  
-		  // int alien_number = rand() % 11;
-		  // int unique = 0;
-		  // int j;
-		  // while(!unique){
-		    // for(j=0; j < 4; j++){
-				// if (
-				// (new_bullets[j].x == alien_number*30 + 12 + new_aliens_coord.x) &&
-				// (new_bullets[j].y == new_aliens_coord.y + 4*30 + 18)
-				// ){
-					// break;
-		      // }
-			 // }
-			 // if (j == 4){
-				// unique = 1;
-			 // } else {
-				// alien_number = rand() % 11;
-			 // }
-		  // }
-		  
-		  // new_bullets[i] = fireAlienBullet(new_aliens_coord, 4, alien_number);
-		  // break;
-		// case '9':
-		  // new_tank_bullet = moveBullet(new_tank_bullet);
-		  // for(i = 0; i < 4; i++){
-		    // if(new_bullets[i].active){
-				// new_bullets[i] = moveBullet(new_bullets[i]);
-			 // }
-		  // }
-		  // break;	
-	 // }
-	 // render(new_aliens_coord,new_tank, new_tank_bullet, aliens, new_bullets);
-  // }
-  
