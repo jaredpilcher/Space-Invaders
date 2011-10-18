@@ -35,7 +35,7 @@ Timer timers[20];
 
 int * tempSpace = 0x00600000;
 int * nextFreeAddress = 0x00800000;
-enum sound_enum { AMove1, AMove2, AMove3, AMove4, Fire, TankExplode, SpaceShip, SpaceShipHit };
+enum sound_enum { AMove1, AMove2, AMove3, AMove4, Fire, TankExplode, SpaceShip, SpaceShipHit, Stairway };
 Sound sounds[20];
 
 Sound * current_sound;
@@ -665,6 +665,9 @@ int main() {
   DrawScaledWord("GAME OVER",175,200,prev_frame,GREEN,3);
   //clear screen
   //display game over
+  sounds[Stairway] = createSound("a:\\stairway.wav");
+  sounds[Stairway].priority = 9;
+  playSound(&sounds[Stairway]);
   while(1){};
   return 0;
 }
