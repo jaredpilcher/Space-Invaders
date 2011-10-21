@@ -150,6 +150,7 @@ int * convertArrayToInt(char * wav_sound, int length){
 }
 
 void playSound(Sound * newSound){
+	XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_PCM_DAC_Rate,newSound->sampling);
 	newSound->current_sample=0;
 	if(current_sound && newSound->priority > current_sound->priority){
 		current_sound->current_sample=0;

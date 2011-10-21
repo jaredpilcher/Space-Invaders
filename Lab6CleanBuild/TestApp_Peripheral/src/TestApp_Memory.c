@@ -668,7 +668,10 @@ int main() {
   sounds[Stairway] = createSound("a:\\stairway.wav");
   sounds[Stairway].priority = 9;
   playSound(&sounds[Stairway]);
-  while(1){};
+  while(1){
+	pollButtons();
+	usleep(100000);
+  };
   return 0;
 }
 
