@@ -478,6 +478,68 @@ The game appearance is identical to the flash version of Space Invasion. The gam
 
 The render() function makes this possible. Because the screen is updated on small intervals, the screen is consistently updated close to the rate of the flash-based game. This eliminates flickering, making the animation smooth.
 
+\chapter{Game Audio}
+\section{AC97 Operation}
+\subsection{ Loading Audio Files From the Compact Flash}
+To copy the data from the compact flash to the DDR, the following steps are taken:
+\begin{enumerate}
+\item Read from compact flash to temp space
+\item Using wav\_header struct, extract necessary header information
+\item Preprocess wav file for FIFO buffering
+\item store in DDR, store address and header in sound struct
+\end{enumerate}
+
+\subsubsection{Reading from Compact Flash}
+
+We use given function sysace\_fread() to retrieve the sound data from the compact flash card. The data is read one byte at a time, and placed in a designated, tempSpace address in memory on the DDR. 
+
+\subsubsection{Wav Sound Struct}
+
+Once the file is in the DDR memory (at the tempSpace address), A wave struct is overlayed on the memory address. This allows us to parse out the individual attributes in the header. The values that are useful are the sample rate, the file size, bits per sample, and the number of channels. 
+
+\subsubsection{Preprocess Wav File for FIFO Buffering}
+
+Because there is no live mixing of sounds, we can preprocess the wav sound data before storing the data permanently in DDR memory. This means that we can avoid processing the sound during game play, speeding up our implementation. If we were to mix sounds, we could not do this. We would have to store the raw data, and process on the fly, adding additional sounds. 
+
+The FIFO expects a 32 bit integer of sampled sound data. The upper 16 bits represent the right channel, and the lower 16 bits represent the left channel. Because the data is stored in the DDR memory as 8 bit characters, they need to be cast into integers, and placed in both the upper and lower 16 bits of the integer respectively.  We also amplify each channel by shifting the value 8 bits to the left, effectively multiplying each value by 256. This increases the volume to reasonable levels.
+
+\subsubsection{Store sound file in memory}
+
+In order to keep track of multiple sound files, we have an array of our sound struct in global memory.  The array contains information about the file, such as sample rate and length, as well as a pointer to the sound data in memory.
+
+The sound data is stored on the DDR.  We have a set starting address for the first sound.  The starting address for the sound is stored in its struct along with its length and other data.  The next sound is stored directly following it in memory.  We dynamically adjust the starting address for each new sound as it is parsed in.
+
+In order to keep tract of individual sounds, we use an enum variable to index into our sound struct array by a descriptive name.  (i.e. sounds[TankExplode] is the struct for the tank explosion sound)
+
+\subsection{AC97 Operation}
+
+Provide a high-level overview of the OPB\_AC97 Controller. Explain the interations between the PowerPC, OPB\_AC97 controller and the AC97.
+
+\subsection{Sound Triggering}
+
+\subsubsection{Playing a sound}
+In order to facilitate an interrupt driven model, we have a global pointer to a Sound struct  called current\_sound.  The interrupt handler will fill the FIFO with data from the current sound.  The position within the sound is stored in the struct so the interrupt handler can continue where it left off.  With this structure, we need only set current\_sound to the address of the sound struct we would like to play.  If current\_sound is not assigned or is null, the FIFO is filled with silence.
+
+\subsubsection{Our sounds}
+
+Because we are only playing one sound at a time, we have a priority among sounds which determines whether or not a sound can interrupt the one currently playing.
+
+We have the following sounds in our game, from lowest priority to highest priority:
+
+\begin{itemize}
+\item Alien Movement - The four sounds determining alien movement play cyclically.  The sound played is determined by the position on the screen and its direction of movement.  This results in sounds playing in the proper order even as the aliens reach an edge and change direction.  This sound is interrupted by all other sounds.  Unless interrupted, it will play until it finishes
+\item Tank Bullet - When a bullet is fired from the tank, it makes a sound.  It will interrupt the Alien Movement sounds, but will be interrupted by Space Ship Movement, Space Ship Explosion, and Tank Explosion.  Unless interrupted, it will play until it finishes.
+\item Space Ship Movement - When the Space Ship enters the screen, this sound is played.  When it leaves the screen, the sound is stopped.  It will only be interrupted by Space Ship Explosion and Tank Explosion.
+\item Space Ship Explosion - When the Space Ship is hit by a tank bullet, this sound is played while the score value flashes.  It is interrupted only by the Tank Explosion.  Unless interrupted, it will play until it finishes.
+\item Tank Explosion - When the tank is hit by an alien bullet, this sound is played.  It is never interrupted and will continue to play until finished.
+\end{itemize}
+
+In our code we wrote a nice wrapper for playing and stopping sounds.  One need only make a call to playSound( Sound * new\_sound ).  It takes as its parameter the address of the Sound struct to be played.  If the currently playing sound is higher priority than the one passed in, it will not be played.  Otherwise, the currently playing sound is stopped and the new sound is played.  The sound that was interrupted is reset so that it begins from the beginning the next time it is played.  The current sound can be stopped with a call to endSound(Sound * sound).  It takes the address of the Sound struct to be stopped.  This will result in silence being played until a new sound has been played.
+
+Bug Report
+
+Same as last time.
+
 
 \chapter{Bug Reports and File Organization}
 
@@ -517,5 +579,11 @@ Alien bullets are capable of destroying a tank. When a tank is destroyed, it is 
 
 \subsection{Tank Bullet Grazing Aliens}
 After playing the game several times, it became clear that if a bullet overlapped an alien by only 2 pixels, it did not explode. After doing some investigation, it became clear that when the bullet moved, the function that compares the bullet position and the alien position was off by 2 pixels. with a simple addition of 2, the alien now explodes when the bullet's pixels overlap any of the aliens' pixels.
+
+\subsection{Knowing when a sound has finished playing}
+We had some trouble determining from our interrupt handler when a sound was finished playing.  We were depending upon a return value for our method that fills the FIFO with sound data, but were getting unexpected results.  It turned out that we had set the return type to void instead of int and when we fixed it all was working great!
+
+\subsection{AC97 Interrupts}
+When we were implementing our interrupt driven sounds, we followed the wrapper documentation to determine how to play sounds. We believed that we had retrieved all of the function calls that were necessary, however, we were missing a few. We had not enabled the interrupts on the AC97 controller. Once we did that, we received the expected interrupts.
 
 \end{document}
