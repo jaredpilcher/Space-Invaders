@@ -1,5 +1,6 @@
 \documentclass[11pt,letter,oneside]{report}
 \usepackage[pdftex]{graphicx}
+\usepackage{float}
 \begin{document}
 
 \title{Space Invaders}
@@ -145,8 +146,85 @@ The game appearance is identical to the flash version of Space Invasion. The gam
 
 \section{Game Console}
 \subsection{Xilinx University Program Board}
-\subsection{Xilinx Virtex II. Pro EDK System}
+	\subsubsection{Virtex II Pro}
+		The board we are using contains a Virtex II Pro XC2VP30. The specifications are as follows:
+		\begin{itemize}
+			\item 2 PowerPC Processor Blocks
+			\item 30,816 Logic Cells
+			\item 13,696 Slices for a maximum of 428 Kb of Distributed RAM
+			\item 136 18 x 18 bit multiplier blocks
+			\item 136 18Kb Blocks of SelectRAM+ for a maximum RAM block of 2,448 Kb
+			\item 8 DCMs
+			\item A Maximum of 644 User I/O Pads
+		\end{itemize}
+   	\subsubsection{256 DDR Memory}
+		The 256MB DDR Memory provides additional memory for the program to use.    The board can use either buffered or unbuffered memory with a maximum capacity of 2 GB.  The RAM is Double Data Rate, which allows for faster reads and writes than are typical with SDRAM.  It achieves double the data rate by reading and writing on both the rising and falling edges of the clock cycle.  Even with the Double Data Rate, reads and writes to the DRAM are quite slow in comparison to local cache and should be avoided in performance critical applications.
+	\subsubsection{AC-97 Sound Controller and jacks}
+		The AC-97 Sound Controller resides on the FPGA board acts as a buffer and encoder for the AC-97 hardware. The AC-97 hardware is only able to accept serial data. To make the driver programming easier, the Sound Controller hardware accepts a large quantity of 32 bit words and sends it to the AC-97 hardware in a serial data stream. Furthermore, it sends the data to an Analog Codec and sends the stream to the the AC-97 hardware. Lastly, the analog codec receives analog signals through a MIC\_IN port and translates it to a serial digital signal. The AC-97 port transforms this data into 32 bit words and sends them to the PPC.
+		\begin{itemize}
+		\item LINE\_IN
 
+		The input signal line from the LINE\_IN port on the board. It is not amplified, but it is filtered by the Analog Codec and digitized.
+		\item LINE\_OUT
+
+		The signal line that is sent to the amplified PC speaker array through a jack port.
+		\item MIC\_IN
+
+		The input signal line from the MIC\_IN port on the board. It is later amplified and filtered by the Analog Codec and digitized.
+		\item AMP\_OUT
+		
+		The amplified signal line that is sent to the headphone jack for listening.
+		\end{itemize}
+		\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=.8]{AC97.jpg}
+		\caption{AC-97 controller overview. The AC-97 Controller acts as a buffer to the AC-97 hardware.}
+		\label{fig:ac97}
+		\end{figure}
+     	\subsubsection{VGA Controller}
+		The VGA controller actively draws the contents of a frame buffers to the screen. The frame buffer is defined by a range of memory addresses on the DDR. The user specifies the address of the frame buffer. The vga controller is a block of IP placed in the FPGA fabric. The Video DAC converts 8 bits per color (24 bits per pixel) to the corresponding analog signal for the output to the VGA.
+
+		\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=.8]{VGA.jpg}
+		\caption{VGA controller. Three 8 bit signals are sent to the DAC, which transforms it into an analog signal in red, green and blue.}
+		\label{fig:vga}
+		\end{figure}
+	\subsubsection{Compact Flash}
+		Compact Flash provides non volatile memory that allows data to be persistent across resets. The FPGA logic can be stored on this memory to provide support for board resets. Upon resetting, the logic is loaded from the flash memory into the FPGA board if configured to do so.
+	\subsubsection{UART/JTAG for debugging purposes}
+	\label{sec:jtag}
+		The Xilinx stdio library provides access to the UART.  Input and output operations that would normally be to STDOUT and from STDIN are instead made to the UART.  Print statements can be read via the UART on a connected machine,  and input from the connected machine can be read by the stdio library via the UART.  JTAG provides a method of programming the FPGA and/or the system memory.  JTAG on the board can use 3 different sources to program the board.  It can use the Compact Flash at boot time.  It can use a USB to PC connection.  It can use a PC4 cable connection.  Each of these methods is advantageous in different scenarios, and the priority is specified via switches on the board.
+
+\subsection{Xilinx Virtex II. Pro EDK System}
+	\begin{itemize}
+		\item \textbf{PowerPC 405:}
+			There are 2 PowerPC 405 cores in the FPGA.  They can be disabled but they cannot be reconfigured.  They operate at 300 Mhz.  They interact with various components through the OPB Bus, such as the GPIO Controller, the AC-97 Controller.  It can interact with other components (such as SATA or Ethernet) via the OPB Bus.  It interacts directly with the interrupt controller.
+		\item \textbf{OPB:}
+			The On-Chip Peripheral Bus is a data bus between peripheral controllers.  The OPB bus controller handles the how this bus is accessed.
+		\item \textbf{AC-97 Controller:}
+			See Figure~\ref{fig:ac97}.  The AC-97 controller buffers output to the AC-97 hardware.  Other controllers and the PowerPC interact with it via the OPB.  It is not a reconfigurable component of the FPGA.
+		\item \textbf{GPIO Controller:}
+			The GPIO Controller handles input and output to the GPIO modules (such as LEDs, switches, and push buttons).  It interacts with other controllers and the PowerPC via the OPB.  It is not a reconfigurable component of the FPGA.
+		\item \textbf{VGA Controller:}
+			The VGA Controller includes a video DAC and the IP necessary to drive the sync signals of a VGA output.  It is not a reconfigurable component.  It interacts with the system via the OPB.  It connects to the VGA output port on the board.
+		\item \textbf{UART:}
+			The UART handles communication via the RS-232 port on the board.  This is configurable logic and many UART IPs exists which can be used with the board.
+		\item \textbf{Ethernet:}
+			The ethernet port on the board is the PHY layer of the ethernet protocol. This allows high speed network capabilities. The Ethernet controller is configurable logic.  The EDK ships with many different ethernet modules that can be used.
+		\item \textbf{Multi-gigabit Transceiver:}
+			The FPGA has 8 multi-gigabit Transceivers.  3 of these are accessible via the SATA ports.  The Multi-gigabit Transceiver is not configurable logic, but additional logic would be necessary to implement the SATA protocol above the PHY layer.  The board provides a 75Mhz clock in order to use the transceivers.
+		\item \textbf{SDRAM memory controllers:}
+			The board has a DDR memory slot.  The The controller for the memory is configurable logic and there are many controllers to choose from.  The memory controller interacts with various parts of the system.  The PowerPC core has a MMU which communicates with the memory controller.
+		\item \textbf{High Speed Expansion Port:}
+			The board has a high speed expansion port.  Any implementation of a high speed protocol must be done in reconfigurable logic.
+		\item \textbf{CPU Debug Port:}
+			There is a debug port on the board.  This allows one to step through processor instructions and inspect system memory.
+		\item \textbf{User Clocks:}
+			There are a 2 user clock inputs that can be attached to whatever clock the user wants to use.
+		\item \textbf{JTAG inputs:}
+			There are 3 methods of using JTAG to program the board.  See Section~\ref{sec:jtag} Heading \textit{UART/JTAG for debugging purposes} for more details.
+	\end{itemize}
 \section{Game Engine }
 
 \subsection{Software Game Engine}
@@ -155,14 +233,16 @@ The structure of the Space Invaders Game is complex and intricate. The main() fu
 The Space Invaders game uses double buffering. It draws only to the next frame, switches to that screen, and erases only the pixels of the objects that have changed in the previous frame. For example, when the tank moves, it's drawn to the next frame, the viewer sees the new tank, and the previous frame tank is erased in the background. This process is handled in our render() function, and occurs on regular intervals using the designed timers.
 
 Figure~\ref{fig:overview} contains an overview of the structure of the Space Invaders Game. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.
-\begin{figure}[ht]
+
+\begin{figure}[H]
 \centering
-\includegraphics[scale=.80]{Space Invaders Overview.jpg}
+\includegraphics[scale=.80]{Space_Invaders_Overview.jpg}
 \caption{Space Invaders Overview. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.}
 \label{fig:overview}
 \end{figure}
 
 \subsubsection{Timers}
+\label{sec:timers}
 The sequence of events in the Space Invaders game is controlled using timers. After initializing the state of the game and creating timers, main() enters an infinite loop, determining when timer functions should be called. A timer is a structure that contains the interval of ticks between calling its registered callback function. Each time the PIT timer interrupt invokes the PIT handler, the global variable pit\_counter is incremented. Because of the complexity of the game, many timers currently exist. These include:
 
 \begin{itemize}
@@ -205,24 +285,25 @@ If the bullet is an alien bullet, its coordinates are compared against the coord
 \item If it is within the coordinates of the tank, the tank explodes, and the bullet is deactivated.
 \end{itemize}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\label{fig:collisions}
-\includegraphics[scale=.7]{Detect Collision.jpg}
+\includegraphics[scale=.7]{Detect_Collision.jpg}
 \caption{Collision Detection. The green blocks represent the state that must be met to continue. The orange blocks represent the process of determining the specific object that was hit. The blue blocks represent the actions taken to change the game state during a collision.}
+\label{fig:collisions}
 \end{figure}
 
 \subsubsection{Rendering}
 The screen is rendered on regular intervals by using a timer. The rendering process occurs whether or not the the state of the game is changed. This mirrors the rendering process of the flash game. This rendering process creates a very smooth animation process.
 
+
 \subsubsection{Double Buffering}
 Flickering on the screen is caused by drawing and erasing objects on the same screen. In order to avoid flickering, double buffering is used. Double buffering involves writing to another part of memory, or frame than the currently displayed screen. The currently displayed frame is never modified.  After drawing is finished on this separate frame, the program changes the screen to display this new frame. Thus, all modifications to the screen occur on an inactive frame. Figure~\ref{fig:render} shows the steps in rendering process.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\label{fig:render}
-\includegraphics[scale=.5]{Render.jpg}
+\includegraphics[scale=.8]{Render.jpg}
 \caption{Double Buffer. The currently displayed frame is never modified. Only after writing correct values to a new frame, the program changes the screen to display it.}
+\label{fig:render}
 \end{figure}
 
 \subsubsection{Flying over the bunkers}
@@ -241,45 +322,49 @@ new\_tank\_bullet = moveBullet(new\_tank\_bullet);
 
 This will take the current coordinates of the tank bullet, and increment the y coordinate (causing the bullet to move up).  The bullet struct is not modified by the function call, but instead a new bullet is returned.  The global new\_tank\_bullet is assigned to the returned value.  The following functions act in a similar manner:
 
-Bullets:
+\begin{itemize}
+	\item Bullets:
+		\begin{verbatim}
+		bullet moveBullet(bullet new_bullet);
+		bullet updateBullet(bullet new_bullet);
+		\end{verbatim}
+	\item	Coordinate Objects (such as aliens, space ships or the tank):
+		\begin{verbatim}
+		coord_object moveRight(coord_object aliens);
+		coord_object moveLeft(coord_object aliens);
+		coord_object moveDown(coord_object aliens);
+		coord_object moveAliens(coord_object new_aliens_coord, int * aliens);
+		coord_object moveShip(coord_object ship);
+		\end{verbatim}
+		\textbf{Note:}  Some functions take additional game state parameters, such as moveAliens, which influence the behavior of the function.  These are not modified in any way.
+	\item Explosions:
+		\begin{verbatim}
+			explosion updateExplosion(explosion new_explosion);
+			explosion newExplosion(explosion temp_explosion, int x, int y);
+			explosion newShipExplosion(explosion temp_explosion, int x, int y);
+		\end{verbatim}
+	\item There are also methods that deal with interaction of multiple object types:
+		\begin{verbatim}
+			bullet fireAlienBullet(coord_object new_aliens_coord, int row, int col);;
+			bullet fireBullet(coord_object tank);
+		\end{verbatim}
+	\item Another class of methods are those dealing with multiple parts of the game state:
+		\begin{itemize}
+			\item
+			\begin{verbatim}
+			bullet detectCollision(bullet new_bullet);
+			\end{verbatim}
 
-bullet moveBullet(bullet new\_bullet);
-bullet updateBullet(bullet new\_bullet);
+			  This method takes a bullet as a parameter.  It compares the coordinates of the bullet to the location of the bunkers, the aliens, and the tank.  If it is determined to be a hit, the method will deactivate the bullet and either erode a bunker or explode an alien, depending on what sort of collision was detected.  It then returns the updated bullet.  While it doesn't modify the bullet, this is not a pure function because it does modify other aspects of the game state (eroding bunkers, killing aliens, or losing lives).
+		\end{itemize}
+\end{itemize}
 
-Coordinate Objects (such as aliens, space ships or the tank):
-
-coord\_object moveRight(coord\_object aliens);
-coord\_object moveLeft(coord\_object aliens);
-coord\_object moveDown(coord\_object aliens);
-coord\_object moveAliens(coord\_object new\_aliens\_coord, int * aliens);
-coord\_object moveShip(coord\_object ship);
-
-Note:  Some functions take additional game state parameters, such as moveAliens, which influence the behavior of the function.  These are not modified in any way.
-
-Explosions:
-
-explosion updateExplosion(explosion new\_explosion);
-explosion newExplosion(explosion temp\_explosion, int x, int y);
-explosion newShipExplosion(explosion temp\_explosion, int x, int y);
-
-There are also methods that deal with interaction of multiple object types:
-
-bullet fireAlienBullet(coord\_object new\_aliens\_coord, int row, int col);;
-bullet fireBullet(coord\_object tank);
-
-
-Another class of methods are those dealing with multiple parts of the game state:
-
-bullet detectCollision(bullet new\_bullet);
-  This method takes a bullet as a parameter.  It compares the coordinates of the bullet to the location of the bunkers, the aliens, and the tank.  If it is determined to be a hit, the method will deactivate the bullet and either erode a bunker or explode an alien, depending on what sort of collision was detected.  It then returns the updated bullet.  While it doesn't modify the bullet, this is not a pure function because it does modify other aspects of the game state (eroding bunkers, killing aliens, or losing lives).
-
-If the functions listed above are the building blocks of the application, then the glue consists of the callback functions of the Timers.  (See Chapter 2.1.1)  The callback functions modify the game state through all of the above functions.  
+If the functions listed above are the building blocks of the application, then the glue consists of the callback functions of the Timers.  (See Section~\ref{sec:timers} under Timers)  The callback functions modify the game state through all of the above functions.  
 
 \subsubsection{Rendering of images}
-Images are stored in memory as an encoded bitstring.  A Xuint16 can represent a single line of an image up to 16 pixels wide.  Each image is an array of these encoded bitstrings.  To draw to the screen, the images are scaled up to double their size.  A single pixel in the stored image corresponds to a 2 by 2 block of pixels on the screen. Each image type has it's own rendering function.  The functions typically take an x and y coordinate, a frame to draw to, and a color to draw.  To erase, the functions draw black to the screen.  In some situations, such as around the bunkers, the functions read from a third frame of the screen in order to erase to a non-black value.  This is very costly to performance, so this is only done in necessary regions of the screen.
+Images are stored in memory as an encoded bitstring.  A Xuint16 can represent a single line of an image up to 16 pixels wide.  Each image is an array of these encoded bitstrings.  To draw to the screen, the images are scaled up to double their size.  A single pixel in the stored image corresponds to a 2 by 2 block of pixels on the screen. Each image type has it's own rendering function.  The functions typically take an x and y coordinate, a frame to draw to, and a color to draw.  To erase, the functions draw black to the screen.  In some situations, such as around the bunkers, the functions read from a third frame of the screen in order to erase to a non-black value.  This is very costly to performance, so this is only done in necessary regions of the screen.  
 
-
-
+Because we use passive rendering, the only function that modifies the screen is our render function.  This is called by a Timer and is by default called twenty times a second.  No other functions will call render.  Render calls draw and erase function for each object on the screen.
 
 \subsection{Meeting the Game Specifications}
 
@@ -393,6 +478,68 @@ The game appearance is identical to the flash version of Space Invasion. The gam
 
 The render() function makes this possible. Because the screen is updated on small intervals, the screen is consistently updated close to the rate of the flash-based game. This eliminates flickering, making the animation smooth.
 
+\chapter{Game Audio}
+\section{AC97 Operation}
+\subsection{ Loading Audio Files From the Compact Flash}
+To copy the data from the compact flash to the DDR, the following steps are taken:
+\begin{enumerate}
+\item Read from compact flash to temp space
+\item Using wav\_header struct, extract necessary header information
+\item Preprocess wav file for FIFO buffering
+\item store in DDR, store address and header in sound struct
+\end{enumerate}
+
+\subsubsection{Reading from Compact Flash}
+
+We use given function sysace\_fread() to retrieve the sound data from the compact flash card. The data is read one byte at a time, and placed in a designated, tempSpace address in memory on the DDR. 
+
+\subsubsection{Wav Sound Struct}
+
+Once the file is in the DDR memory (at the tempSpace address), A wave struct is overlayed on the memory address. This allows us to parse out the individual attributes in the header. The values that are useful are the sample rate, the file size, bits per sample, and the number of channels. 
+
+\subsubsection{Preprocess Wav File for FIFO Buffering}
+
+Because there is no live mixing of sounds, we can preprocess the wav sound data before storing the data permanently in DDR memory. This means that we can avoid processing the sound during game play, speeding up our implementation. If we were to mix sounds, we could not do this. We would have to store the raw data, and process on the fly, adding additional sounds. 
+
+The FIFO expects a 32 bit integer of sampled sound data. The upper 16 bits represent the right channel, and the lower 16 bits represent the left channel. Because the data is stored in the DDR memory as 8 bit characters, they need to be cast into integers, and placed in both the upper and lower 16 bits of the integer respectively.  We also amplify each channel by shifting the value 8 bits to the left, effectively multiplying each value by 256. This increases the volume to reasonable levels.
+
+\subsubsection{Store sound file in memory}
+
+In order to keep track of multiple sound files, we have an array of our sound struct in global memory.  The array contains information about the file, such as sample rate and length, as well as a pointer to the sound data in memory.
+
+The sound data is stored on the DDR.  We have a set starting address for the first sound.  The starting address for the sound is stored in its struct along with its length and other data.  The next sound is stored directly following it in memory.  We dynamically adjust the starting address for each new sound as it is parsed in.
+
+In order to keep tract of individual sounds, we use an enum variable to index into our sound struct array by a descriptive name.  (i.e. sounds[TankExplode] is the struct for the tank explosion sound)
+
+\subsection{AC97 Operation}
+
+Provide a high-level overview of the OPB\_AC97 Controller. Explain the interations between the PowerPC, OPB\_AC97 controller and the AC97.
+
+\subsection{Sound Triggering}
+
+\subsubsection{Playing a sound}
+In order to facilitate an interrupt driven model, we have a global pointer to a Sound struct  called current\_sound.  The interrupt handler will fill the FIFO with data from the current sound.  The position within the sound is stored in the struct so the interrupt handler can continue where it left off.  With this structure, we need only set current\_sound to the address of the sound struct we would like to play.  If current\_sound is not assigned or is null, the FIFO is filled with silence.
+
+\subsubsection{Our sounds}
+
+Because we are only playing one sound at a time, we have a priority among sounds which determines whether or not a sound can interrupt the one currently playing.
+
+We have the following sounds in our game, from lowest priority to highest priority:
+
+\begin{itemize}
+\item Alien Movement - The four sounds determining alien movement play cyclically.  The sound played is determined by the position on the screen and its direction of movement.  This results in sounds playing in the proper order even as the aliens reach an edge and change direction.  This sound is interrupted by all other sounds.  Unless interrupted, it will play until it finishes
+\item Tank Bullet - When a bullet is fired from the tank, it makes a sound.  It will interrupt the Alien Movement sounds, but will be interrupted by Space Ship Movement, Space Ship Explosion, and Tank Explosion.  Unless interrupted, it will play until it finishes.
+\item Space Ship Movement - When the Space Ship enters the screen, this sound is played.  When it leaves the screen, the sound is stopped.  It will only be interrupted by Space Ship Explosion and Tank Explosion.
+\item Space Ship Explosion - When the Space Ship is hit by a tank bullet, this sound is played while the score value flashes.  It is interrupted only by the Tank Explosion.  Unless interrupted, it will play until it finishes.
+\item Tank Explosion - When the tank is hit by an alien bullet, this sound is played.  It is never interrupted and will continue to play until finished.
+\end{itemize}
+
+In our code we wrote a nice wrapper for playing and stopping sounds.  One need only make a call to playSound( Sound * new\_sound ).  It takes as its parameter the address of the Sound struct to be played.  If the currently playing sound is higher priority than the one passed in, it will not be played.  Otherwise, the currently playing sound is stopped and the new sound is played.  The sound that was interrupted is reset so that it begins from the beginning the next time it is played.  The current sound can be stopped with a call to endSound(Sound * sound).  It takes the address of the Sound struct to be stopped.  This will result in silence being played until a new sound has been played.
+
+Bug Report
+
+Same as last time.
+
 
 \chapter{Bug Reports and File Organization}
 
@@ -432,5 +579,11 @@ Alien bullets are capable of destroying a tank. When a tank is destroyed, it is 
 
 \subsection{Tank Bullet Grazing Aliens}
 After playing the game several times, it became clear that if a bullet overlapped an alien by only 2 pixels, it did not explode. After doing some investigation, it became clear that when the bullet moved, the function that compares the bullet position and the alien position was off by 2 pixels. with a simple addition of 2, the alien now explodes when the bullet's pixels overlap any of the aliens' pixels.
+
+\subsection{Knowing when a sound has finished playing}
+We had some trouble determining from our interrupt handler when a sound was finished playing.  We were depending upon a return value for our method that fills the FIFO with sound data, but were getting unexpected results.  It turned out that we had set the return type to void instead of int and when we fixed it all was working great!
+
+\subsection{AC97 Interrupts}
+When we were implementing our interrupt driven sounds, we followed the wrapper documentation to determine how to play sounds. We believed that we had retrieved all of the function calls that were necessary, however, we were missing a few. We had not enabled the interrupts on the AC97 controller. Once we did that, we received the expected interrupts.
 
 \end{document}
