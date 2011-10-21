@@ -513,7 +513,14 @@ In order to keep tract of individual sounds, we use an enum variable to index in
 
 \subsection{AC97 Operation}
 
-In order to use the AC97 properly, multiple components of the system are used.  Most of the complexity in the system is based around the interrupt based model of keeping the AC97 Controller FIFO filled. The PowerPC is responsible for this activity, and must enable is non-critical exceptions, in order to accept interrupts from the OPB Interrupt Controller. The OPB Interrupt controller is responsible for accepting interrupts from the OPB\_AC97 Controller when the FIFO is less than 50% full. As long as the FIFO does not overflow or underflow, the signals sent to the AC97 hardware (and thus the speakers) is clean, free of clicking.
+In order to use the AC97 properly, multiple components of the system are used.  Most of the complexity in the system is based around the interrupt based model of keeping the AC97 Controller FIFO filled. As shown in Figure~\ref{fig:AC97}, the PowerPC is responsible for this activity, and must enable its non-critical exceptions in order to accept interrupts from the OPB Interrupt Controller. The OPB Interrupt controller is responsible for accepting interrupts from the OPB\_AC97 Controller when the FIFO is less than 50% full. As long as the FIFO does not overflow or underflow, the signals sent to the AC97 hardware (and thus the speakers) is clean, free of clicking.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.7]{AC97_Operation.jpg}
+\caption{AC\_97 Operation. The OPB\_AC97 Controller sends a signal to the OPB Interrupt Controller when its FIFO is less than 50\% full. The OPB Interrupt Controller interrupts the PowerPC, which sends data to the OPB\_AC97 Controller FIFO.}
+\label{fig:AC97}
+\end{figure}
 
 \subsubsection{PowerPC}
 
@@ -598,5 +605,11 @@ We had some trouble determining from our interrupt handler when a sound was fini
 
 \subsection{AC97 Interrupts}
 When we were implementing our interrupt driven sounds, we followed the wrapper documentation to determine how to play sounds. We believed that we had retrieved all of the function calls that were necessary, however, we were missing a few. We had not enabled the interrupts on the AC97 controller. Once we did that, we received the expected interrupts.
+
+\subsection{Big Endian}
+When we attempted to parse our wav file for the sample rate, it appeared that we were correctly playing the sound with the correct sample rate. However, we found that the sound was being played much too fast. One error was that we were not setting the sample rate every time and was hard coded to 44kHz. Another issue had to do with how the data was read from the compact flash drive. The compact flash drive is setup in little endian, however the function to read from the flash drive expects big endian. Thus, the bytes were swapped. After we correctly swapped the bytes back, we were able to place the correct sample rate into the AC97 and play our sound.
+
+\subsection{Initial Failure}
+When we first began implementing sound, our experiments were erratic. We attempted to perform all of our parsing, and playing simultaneously in the main() function. It turned into spaghetti code, and was very disorderly. After several hours of looking through the code, we could not determine why the sound from the AC97 was scratchy. We separated our code into multiple functions, and found it much easier to implement the sound. The bugs became more clear, and we were able to finish the lab code only a few hours later.
 
 \end{document}
