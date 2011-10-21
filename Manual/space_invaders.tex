@@ -513,7 +513,23 @@ In order to keep tract of individual sounds, we use an enum variable to index in
 
 \subsection{AC97 Operation}
 
-Provide a high-level overview of the OPB\_AC97 Controller. Explain the interations between the PowerPC, OPB\_AC97 controller and the AC97.
+In order to use the AC97 properly, multiple components of the system are used.  Most of the complexity in the system is based around the interrupt based model of keeping the AC97 Controller FIFO filled. The PowerPC is responsible for this activity, and must enable is non-critical exceptions, in order to accept interrupts from the OPB Interrupt Controller. The OPB Interrupt controller is responsible for accepting interrupts from the OPB\_AC97 Controller when the FIFO is less than 50% full. As long as the FIFO does not overflow or underflow, the signals sent to the AC97 hardware (and thus the speakers) is clean, free of clicking.
+
+\subsubsection{PowerPC}
+
+The PowerPC is responsible for keeping the AC97 Controller FIFO filled.  When the FIFO level is low (less than 50%), it sends and interrupt.  The PowerPC needs to accept the interrupt and respond by adding data to the AC97 Controller FIFO.  In order to do this, the PowerPC must be configured to respond to interrupts.  The exception handler must be configured to allow non-critical interrupts.  Once an interrupt is received, it should call XIntc_InterruptHandler, which is configured by the OPB Interrupt Controller.
+
+\subsubsection{OPB\_AC97 Controller}
+
+The OPB\_AC97 Controller is responsible for managing its FIFO of data.  This data is sent serially to the AC97 codec at the configured sample rate.  When the FIFO level is low (below 50%) the OPB\_AC97 Controller sends an interrupt via the OPB Interrupt Controller.  This interrupt is handled to fill the FIFO with data. However, if the PowerPC overfills the FIFO, data is lost, and the signal to the AC97, and thus the speaker is not clean. Also, if the FIFO is empty, it will continue to play from the top of the FIFO. This can result in clicking sound. Care is taken to to underflow or overflow the FIFO. The OPB\_AC97 Controller's interrupt mechanism must be enabled before it sends any interrupt signals.
+
+\subsubsection{OPB Interrupt Controller}
+
+The OPB Interrupt Controller receives interrupts from various pieces of hardware.  In our case, it receives interrupts from the OPB\_AC97 Controller.  Each interrupt type is configured to be handled by individual handlers.  This configuration takes place in the OPB Interrupt Controller. A wrapper is provided to handle the setting of the handler functions. This wrapper also allows easy initialization of the OPB Interrupt Controller.
+
+\subsubsection{AC97}
+
+The AC97 is hardware that is connected to a speaker. It receives data from the FIFO in the OPB\_AC97 Controller. Because the AC97 requires analog signals, the OPB\_AC97 Controller converts the digital signals in its FIFO to analog before sending it to the AC97 hardware. The AC97 doesn't concern itself with the sample rate, but only plays the signals that it receives from the controller.
 
 \subsection{Sound Triggering}
 
@@ -536,9 +552,6 @@ We have the following sounds in our game, from lowest priority to highest priori
 
 In our code we wrote a nice wrapper for playing and stopping sounds.  One need only make a call to playSound( Sound * new\_sound ).  It takes as its parameter the address of the Sound struct to be played.  If the currently playing sound is higher priority than the one passed in, it will not be played.  Otherwise, the currently playing sound is stopped and the new sound is played.  The sound that was interrupted is reset so that it begins from the beginning the next time it is played.  The current sound can be stopped with a call to endSound(Sound * sound).  It takes the address of the Sound struct to be stopped.  This will result in silence being played until a new sound has been played.
 
-Bug Report
-
-Same as last time.
 
 
 \chapter{Bug Reports and File Organization}
