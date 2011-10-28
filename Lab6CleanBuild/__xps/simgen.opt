@@ -1,0 +1,1 @@
+ -p virtex2p -lang vhdl    -pe ppc405_0 TestApp_Peripheral/executable.elf -s mti -X D:/Put_Your_Temp_Files_Here/space_invaders/Lab6CleanBuild/ -E D:/Put_Your_Temp_Files_Here/space_invaders/Lab6CleanBuild/

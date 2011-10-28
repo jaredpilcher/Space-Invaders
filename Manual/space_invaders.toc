@@ -1,0 +1,87 @@
+\contentsline {chapter}{\numberline {1}Space Invaders Overview}{3}
+\contentsline {section}{\numberline {1.1}History of Space Invaders}{3}
+\contentsline {section}{\numberline {1.2}Game Play}{4}
+\contentsline {subsection}{\numberline {1.2.1}Objective}{4}
+\contentsline {subsection}{\numberline {1.2.2}The Tank}{4}
+\contentsline {subsection}{\numberline {1.2.3}Enemies}{4}
+\contentsline {subsubsection}{Spaceship}{4}
+\contentsline {subsubsection}{Aliens}{5}
+\contentsline {subsection}{\numberline {1.2.4}Points}{5}
+\contentsline {section}{\numberline {1.3}Game Details and Specifications}{5}
+\contentsline {subsection}{\numberline {1.3.1}Aliens}{5}
+\contentsline {subsubsection}{Alien Placement and Appearance}{5}
+\contentsline {subsubsection}{Alien Movement}{6}
+\contentsline {subsubsection}{Alien Explosions}{6}
+\contentsline {subsection}{\numberline {1.3.2}Alien Mothership}{6}
+\contentsline {subsection}{\numberline {1.3.3}The Tank}{6}
+\contentsline {subsubsection}{Movement}{6}
+\contentsline {subsubsection}{Firing Bullets}{6}
+\contentsline {subsubsection}{Death}{7}
+\contentsline {subsection}{\numberline {1.3.4}Bullets}{7}
+\contentsline {subsubsection}{Tank Bullets}{7}
+\contentsline {subsubsection}{Alien Bullets}{7}
+\contentsline {subsection}{\numberline {1.3.5}The Bunkers}{8}
+\contentsline {subsection}{\numberline {1.3.6}Scoring}{8}
+\contentsline {subsection}{\numberline {1.3.7}End of Game}{8}
+\contentsline {subsection}{\numberline {1.3.8}Appearance}{9}
+\contentsline {chapter}{\numberline {2}Game Console and Engine}{10}
+\contentsline {section}{\numberline {2.1}Game Console}{10}
+\contentsline {subsection}{\numberline {2.1.1}Xilinx University Program Board}{10}
+\contentsline {subsubsection}{Virtex II Pro}{10}
+\contentsline {subsubsection}{256 DDR Memory}{10}
+\contentsline {subsubsection}{AC-97 Sound Controller and jacks}{11}
+\contentsline {subsubsection}{VGA Controller}{11}
+\contentsline {subsubsection}{Compact Flash}{12}
+\contentsline {subsubsection}{UART/JTAG for debugging purposes}{12}
+\contentsline {subsection}{\numberline {2.1.2}Xilinx Virtex II. Pro EDK System}{13}
+\contentsline {section}{\numberline {2.2}Game Engine }{15}
+\contentsline {subsection}{\numberline {2.2.1}Software Game Engine}{15}
+\contentsline {subsubsection}{Timers}{17}
+\contentsline {subsubsection}{Detecting Collisions}{18}
+\contentsline {subsubsection}{Rendering}{20}
+\contentsline {subsubsection}{Double Buffering}{21}
+\contentsline {subsubsection}{Flying over the bunkers}{22}
+\contentsline {subsection}{\numberline {2.2.2}Software APIs}{23}
+\contentsline {subsubsection}{Game State}{23}
+\contentsline {subsubsection}{Rendering of images}{24}
+\contentsline {subsection}{\numberline {2.2.3}Meeting the Game Specifications}{25}
+\contentsline {subsubsection}{The Tank}{25}
+\contentsline {subsubsection}{Mothership}{26}
+\contentsline {subsubsection}{Aliens}{26}
+\contentsline {subsubsection}{Scoring}{27}
+\contentsline {subsubsection}{Tank Bullets}{28}
+\contentsline {subsubsection}{Alien Bullets}{28}
+\contentsline {subsection}{\numberline {2.2.4}The Bunkers}{29}
+\contentsline {subsection}{\numberline {2.2.5}End of Game}{30}
+\contentsline {subsection}{\numberline {2.2.6}Appearance}{30}
+\contentsline {chapter}{\numberline {3}Game Audio}{31}
+\contentsline {section}{\numberline {3.1}AC97 Operation}{31}
+\contentsline {subsection}{\numberline {3.1.1} Loading Audio Files From the Compact Flash}{31}
+\contentsline {subsubsection}{Reading from Compact Flash}{31}
+\contentsline {subsubsection}{Wav Sound Struct}{31}
+\contentsline {subsubsection}{Preprocess Wav File for FIFO Buffering}{32}
+\contentsline {subsubsection}{Store sound file in memory}{32}
+\contentsline {subsection}{\numberline {3.1.2}AC97 Operation}{32}
+\contentsline {subsubsection}{PowerPC}{33}
+\contentsline {subsubsection}{OPB\_AC97 Controller}{33}
+\contentsline {subsubsection}{OPB Interrupt Controller}{33}
+\contentsline {subsubsection}{AC97}{34}
+\contentsline {subsection}{\numberline {3.1.3}Sound Triggering}{34}
+\contentsline {subsubsection}{Playing a sound}{34}
+\contentsline {subsubsection}{Our sounds}{34}
+\contentsline {chapter}{\numberline {4}Bug Reports and File Organization}{36}
+\contentsline {section}{\numberline {4.1}Bug Reports}{36}
+\contentsline {subsection}{\numberline {4.1.1}Drawing Bullets}{36}
+\contentsline {subsection}{\numberline {4.1.2}Destroying Aliens}{36}
+\contentsline {subsection}{\numberline {4.1.3}Moving Aliens to Right of Screen}{37}
+\contentsline {subsection}{\numberline {4.1.4}Overlay of Bullet Black Boxes}{37}
+\contentsline {subsection}{\numberline {4.1.5}One Alien Firing Two Bullets Simultaneously}{37}
+\contentsline {subsection}{\numberline {4.1.6}Overwriting Memory}{37}
+\contentsline {subsection}{\numberline {4.1.7}Tank Out of Bounds}{38}
+\contentsline {subsection}{\numberline {4.1.8}Not Enough Bunker Blocks}{38}
+\contentsline {subsection}{\numberline {4.1.9}Tank Movement During Explosion}{38}
+\contentsline {subsection}{\numberline {4.1.10}Tank Bullet Grazing Aliens}{38}
+\contentsline {subsection}{\numberline {4.1.11}Knowing when a sound has finished playing}{39}
+\contentsline {subsection}{\numberline {4.1.12}AC97 Interrupts}{39}
+\contentsline {subsection}{\numberline {4.1.13}Big Endian}{39}
+\contentsline {subsection}{\numberline {4.1.14}Initial Failure}{39}

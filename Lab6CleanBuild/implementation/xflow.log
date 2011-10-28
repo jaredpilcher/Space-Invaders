@@ -1,0 +1,1358 @@
+Release 9.1.02i Xflow J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc2vp30ff896-7 -implement xflow.opt system.ngc  
+
+Using Flow File:
+D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/fpga.fl
+w 
+Using Option File(s): 
+ D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/xflow.
+opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/system
+.ngc" -uc system.ucf system.ngd 
+#----------------------------------------------#
+Release 9.1.02i - ngdbuild J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm
+D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/system.
+ngc -uc system.ucf system.ngd
+
+Reading NGO file
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/system
+.ngc" ...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/ppc405
+_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/ppc405
+_1_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/jtagpp
+c_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/reset_
+block_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/plb_wr
+apper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/opb_wr
+apper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/plb2op
+b_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/rs232_
+uart_1_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/sysace
+_compactflash_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/leds_4
+bit_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/dipsws
+_4bit_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/pushbu
+ttons_5bit_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/ddr_25
+6mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/plb_br
+am_if_cntlr_1_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/plb_br
+am_if_cntlr_1_bram_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/opb_in
+tc_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/sysclk
+_inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/clk90_
+inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/ddr_cl
+k90_inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/dcm_0_
+wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/dcm_1_
+wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/vga_fr
+amebuffer_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/dcr_v2
+9_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/opb2dc
+r_bridge_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/lab6cleanbuild/Lab6CleanBuild/implementation/audio_
+codec_wrapper.ngc"...
+
+Applying constraints in "system.ucf" to the design...
+
+Checking timing specifications ...
+INFO:XdmHelpers:851 - TNM "fpga_0_DDR_CLK_FB", used in period specification
+   "TS_fpga_0_DDR_CLK_FB", was traced into DCM instance
+   "dcm_1/dcm_1/Using_Virtex.DCM_INST". The following new TNM groups and period
+   specifications were generated at the DCM output(s):
+   CLK90: TS_dcm_1_dcm_1_CLK90_BUF=PERIOD dcm_1_dcm_1_CLK90_BUF
+TS_fpga_0_DDR_CLK_FB*1 PHASE + 4.844 nS HIGH 50%
+INFO:XdmHelpers:851 - TNM "sys_clk_pin", used in period specification
+   "TS_sys_clk_pin", was traced into DCM instance
+   "dcm_0/dcm_0/Using_Virtex.DCM_INST". The following new TNM groups and period
+   specifications were generated at the DCM output(s):
+   CLK0: TS_dcm_0_dcm_0_CLK0_BUF=PERIOD dcm_0_dcm_0_CLK0_BUF TS_sys_clk_pin*1
+HIGH 50%
+   CLK90: TS_dcm_0_dcm_0_CLK90_BUF=PERIOD dcm_0_dcm_0_CLK90_BUF TS_sys_clk_pin*1
+PHASE + 2.5 nS HIGH 50%
+INFO:XdmHelpers:851 - TNM "dcm_0_dcm_0_CLK0_BUF", used in period specification
+   "TS_dcm_0_dcm_0_CLK0_BUF", was traced into DCM instance
+   "vga_framebuffer/vga_framebuffer/DCM_pixclk.DCM_pixclk". The following new
+   TNM groups and period specifications were generated at the DCM output(s):
+   CLKDV: TS_vga_framebuffer_vga_framebuffer_CLKDV=PERIOD
+vga_framebuffer_vga_framebuffer_CLKDV TS_dcm_0_dcm_0_CLK0_BUF*4 HIGH 50%
+
+Processing BMM file ...
+
+Checking expanded design ...
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[63].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[62].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[61].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[60].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[59].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[58].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[57].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[56].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[55].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[54].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[53].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[52].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[51].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[50].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[49].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[48].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[47].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[46].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[45].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[44].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[43].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[42].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[41].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[40].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[39].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[38].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[37].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[36].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[35].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[34].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[33].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[32].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[31].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[30].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[29].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[28].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[27].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[26].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[25].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[24].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[23].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[22].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[21].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[20].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[19].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[18].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[17].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[16].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[15].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[14].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[13].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[12].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[11].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[10].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[9].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[8].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[7].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[6].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[5].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[4].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[3].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[2].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[1].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[0].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_SLOW_MODE_BURSTXFER.I_ADDRESS_
+   COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_SLOW_MODE_BURSTXFER.I_ADDRESS_
+   COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG[0].I_AD
+   DR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG[1].I_AD
+   DR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG[2].I_AD
+   DR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0
+   ].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0
+   ].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0
+   ].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG0' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG1' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG2' has
+   unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SL
+   OW_MODE_BURSTXFER.I_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SL
+   OW_MODE_BURSTXFER.I_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[0].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[1].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[2].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[29].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[28].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[27].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[26].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[25].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[24].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[23].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[22].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[21].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[20].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[19].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[18].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[17].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[16].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[15].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[14].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[13].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[12].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[11].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[10].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[9].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[8].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[7].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[6].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[5].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[4].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[3].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[2].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[1].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[0].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[31].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[30].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[26].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[25].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[24].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[23].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[22].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[21].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[20].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[19].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[18].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[17].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[16].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[15].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[14].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[13].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[12].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[11].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[10].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[9].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[8].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[7].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[6].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[5].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[4].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[3].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[2].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[1].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[0].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 225
+
+Writing NGD file "system.ngd" ...
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -pr b system.ngd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - Map J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+Using target part "2vp30ff896-7".
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Writing design file "system_map.ncd"...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   12
+Logic Utilization:
+  Number of Slice Flip Flops:       2,655 out of  27,392    9%
+  Number of 4 input LUTs:           2,141 out of  27,392    7%
+Logic Distribution:
+  Number of occupied Slices:        2,511 out of  13,696   18%
+  Number of Slices containing only related logic:   2,511 out of   2,511  100%
+  Number of Slices containing unrelated logic:          0 out of   2,511    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          2,724 out of  27,392    9%
+  Number used as logic:             2,141
+  Number used as a route-thru:        167
+  Number used for Dual Port RAMs:     342
+    (Two LUTs used per Dual Port RAM)
+  Number used as Shift registers:      74
+
+  Number of bonded IOBs:              186 out of     556   33%
+    IOB Flip Flops:                   322
+    IOB Dual-Data Rate Flops:          24
+  Number of PPC405s:                   2 out of       2  100%
+  Number of JTAGPPCs:                  1 out of       1  100%
+  Number of Block RAMs:                67 out of     136   49%
+  Number of GCLKs:                      7 out of      16   43%
+  Number of DCMs:                       3 out of       8   37%
+  Number of GTs:                        0 out of       8    0%
+  Number of GT10s:                      0 out of       0    0%
+
+Total equivalent gate count for design:  4,500,910
+Additional JTAG gate count for IOBs:  8,928
+Peak Memory Usage:  246 MB
+Total REAL time to MAP completion:  16 secs 
+Total CPU time to MAP completion:   15 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - par J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.400 Volts. (default - Range: 1.400 to 1.600 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.93 2007-02-23".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                        7 out of 16     43%
+   Number of DCMs                            3 out of 8      37%
+   Number of External IOBs                 186 out of 556    33%
+      Number of LOCed IOBs                 186 out of 186   100%
+
+   Number of JTAGPPCs                        1 out of 1     100%
+   Number of PPC405s                         2 out of 2     100%
+   Number of RAMB16s                        67 out of 136    49%
+   Number of SLICEs                       2511 out of 13696  18%
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:993cc7) REAL time: 12 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:1312cfe) REAL time: 12 secs 
+
+Phase 3.31
+WARNING:Place:479 - Use of the left PPC405 has been detected. The left processor requires specialdesign considerations
+   when operating above 350 MHz in the -7 speed grade part.Please see Xilinx Application Note XAPP755 for details.
+Phase 3.31 (Checksum:1c9c37d) REAL time: 12 secs 
+
+Phase 4.2
+......
+.....................
+Phase 4.2 (Checksum:9909ef) REAL time: 14 secs 
+
+Phase 5.30
+Phase 5.30 (Checksum:2faf07b) REAL time: 14 secs 
+
+Phase 6.3
+Phase 6.3 (Checksum:39386fa) REAL time: 14 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:42c1d79) REAL time: 14 secs 
+
+Phase 8.8
+...................
+........
+............................
+......
+......
+..
+Phase 8.8 (Checksum:11ba6ff) REAL time: 29 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:55d4a77) REAL time: 29 secs 
+
+Phase 10.18
+Phase 10.18 (Checksum:5f5e0f6) REAL time: 39 secs 
+
+Phase 11.5
+Phase 11.5 (Checksum:68e7775) REAL time: 40 secs 
+
+Phase 12.27
+Phase 12.27 (Checksum:7270df4) REAL time: 40 secs 
+
+Phase 13.24
+Phase 13.24 (Checksum:7bfa473) REAL time: 40 secs 
+
+REAL time consumed by placer: 43 secs 
+CPU  time consumed by placer: 42 secs 
+Writing design to file system.ncd
+
+
+Total REAL time to Placer completion: 43 secs 
+Total CPU time to Placer completion: 43 secs 
+
+Starting Router
+
+Phase 1: 21862 unrouted;       REAL time: 52 secs 
+
+Phase 2: 17841 unrouted;       REAL time: 53 secs 
+
+Phase 3: 3078 unrouted;       REAL time: 59 secs 
+
+Phase 4: 3078 unrouted; (443)      REAL time: 59 secs 
+
+Phase 5: 3075 unrouted; (0)      REAL time: 1 mins 
+
+Phase 6: 3075 unrouted; (0)      REAL time: 1 mins 
+
+Phase 7: 0 unrouted; (0)      REAL time: 1 mins 4 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 1 mins 7 secs 
+
+WARNING:Route:455 - CLK Net:fpga_0_DDR_CLK_FB_IBUFG may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:sys_clk_pin_IBUFG may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 1 mins 8 secs 
+Total CPU time to Router completion: 1 mins 7 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|plb_bram_if_cntlr_1_ |              |      |      |            |             |
+|       port_BRAM_Clk |     BUFGMUX6P| No   | 1710 |  0.281     |  1.258      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_Audio_Codec_B |              |      |      |            |             |
+|    it_Clk_pin_BUFGP |     BUFGMUX0S| No   |   79 |  0.174     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_SysACE_Compac |              |      |      |            |             |
+|tFlash_SysACE_CLK_pi |              |      |      |            |             |
+|             n_BUFGP |     BUFGMUX1S| No   |   61 |  0.110     |  1.241      |
++---------------------+--------------+------+------+------------+-------------+
+|            clk_90_s |     BUFGMUX5S| No   |   50 |  0.145     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|vga_framebuffer/vga_ |              |      |      |            |             |
+|framebuffer/buffered |              |      |      |            |             |
+|        _pixel_clock |     BUFGMUX3P| No   |   92 |  0.261     |  1.252      |
++---------------------+--------------+------+------+------------+-------------+
+|        ddr_clk_90_s |     BUFGMUX2S| No   |  202 |  0.147     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_DDR_CLK_FB_IB |              |      |      |            |             |
+|                 UFG |         Local|      |    4 |  0.359     |  1.976      |
++---------------------+--------------+------+------+------------+-------------+
+|   sys_clk_pin_IBUFG |         Local|      |    4 |  0.212     |  1.508      |
++---------------------+--------------+------+------+------------+-------------+
+|jtagppc_0_0_JTGC405T |              |      |      |            |             |
+|                  CK |         Local|      |    2 |  1.792     |  4.548      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  TS_dcm_0_dcm_0_CLK0_BUF = PERIOD TIMEGRP  | SETUP   |     0.072ns|     9.928ns|       0|           0
+  "dcm_0_dcm_0_CLK0_BUF" TS_sys_clk_pin     | HOLD    |     0.233ns|            |       0|           0
+       HIGH 50%                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_dcm_0_dcm_0_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     0.451ns|     8.196ns|       0|           0
+   "dcm_0_dcm_0_CLK90_BUF"         TS_sys_c | HOLD    |     0.452ns|            |       0|           0
+  lk_pin PHASE 2.5 ns HIGH 50%              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_vga_framebuffer_vga_framebuffer_CLKDV  | SETUP   |     1.799ns|    32.804ns|       0|           0
+  = PERIOD TIMEGRP         "vga_framebuffer | HOLD    |     0.224ns|            |       0|           0
+  _vga_framebuffer_CLKDV" TS_dcm_0_dcm_0_CL |         |            |            |        |            
+  K0_BUF * 4         HIGH 50%               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_dcm_1_dcm_1_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     5.396ns|     4.604ns|       0|           0
+   "dcm_1_dcm_1_CLK90_BUF"         TS_fpga_ | HOLD    |     0.484ns|            |       0|           0
+  0_DDR_CLK_FB PHASE 4.844 ns HIGH 50%      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_fpga_0_DDR_CLK_FB = PERIOD TIMEGRP "fp | SETUP   |     8.540ns|     1.460ns|       0|           0
+  ga_0_DDR_CLK_FB" 10 ns HIGH 50%           | HOLD    |     0.791ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP   |     8.632ns|     1.368ns|       0|           0
+  pin" 10 ns HIGH 50%                       | HOLD    |     0.554ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "fpga_0_SysACE_CompactFlash_SysACE_CL | SETUP   |    25.615ns|     4.385ns|       0|           0
+  K_pin_BUFGP/IBUFG" PERIOD = 30 ns         | HOLD    |     0.463ns|            |       0|           0
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "fpga_0_Audio_Codec_Bit_Clk_pin_BUFGP | SETUP   |    37.707ns|     6.707ns|       0|           0
+  /IBUFG" PERIOD = 81.38 ns HIGH 50%        | HOLD    |     0.553ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  PATH "TS_RST1_path" TIG                   | SETUP   |         N/A|     3.353ns|     N/A|           0
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 1 mins 11 secs 
+Total CPU time to PAR completion: 1 mins 10 secs 
+
+Peak Memory Usage:  324 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 3
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+C:\Xilinx91i.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+--------------------------------------------------------------------------------
+Release 9.1.02i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+trce -e 3 -xml system.twx system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc2vp30,-7 (PRODUCTION 1.93 2007-02-23)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a
+   50 Ohm transmission line loading model.  For the details of this model, and
+   for more information on accounting for different loading conditions, please
+   see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 57501 paths, 0 nets, and 18164 connections
+
+Design statistics:
+   Minimum period:  32.804ns (Maximum frequency:  30.484MHz)
+
+
+Analysis completed Wed Oct 12 16:17:24 2011
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 2
+Total time: 8 secs 
+
+

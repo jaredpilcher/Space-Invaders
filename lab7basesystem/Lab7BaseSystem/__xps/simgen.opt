@@ -1,0 +1,1 @@
+ -p virtex2p -lang vhdl   -s mti -X C:/hutch/ECEn427/Labs/Lab7BaseSystem/ -E C:/hutch/ECEn427/Labs/Lab7BaseSystem/

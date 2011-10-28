@@ -1,0 +1,510 @@
+# ##############################################################################
+# Created by Base System Builder Wizard for Xilinx EDK 9.1.02 Build EDK_J_SP2.4
+# Mon Oct 15 14:35:56 2007
+# Target Board:  Xilinx XUP Virtex-II Pro Development System Rev C
+# Family:	 virtex2p
+# Device:	 xc2vp30
+# Package:	 ff896
+# Speed Grade:	 -7
+# Processor: PPC 405
+# Processor clock frequency: 100.000000 MHz
+# Bus clock frequency: 100.000000 MHz
+# Debug interface: FPGA JTAG
+# On Chip Memory : 128 KB
+# Total Off Chip Memory : 256 MB
+# - DDR_SDRAM_32Mx64 Single Rank = 256 MB
+# ##############################################################################
+
+
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT fpga_0_RS232_Uart_1_RX_pin = fpga_0_RS232_Uart_1_RX, DIR = I
+ PORT fpga_0_RS232_Uart_1_TX_pin = fpga_0_RS232_Uart_1_TX, DIR = O
+ PORT fpga_0_SysACE_CompactFlash_SysACE_CLK_pin = fpga_0_SysACE_CompactFlash_SysACE_CLK, DIR = I
+ PORT fpga_0_SysACE_CompactFlash_SysACE_MPA_pin = fpga_0_SysACE_CompactFlash_SysACE_MPA, DIR = O, VEC = [6:0]
+ PORT fpga_0_SysACE_CompactFlash_SysACE_MPD_pin = fpga_0_SysACE_CompactFlash_SysACE_MPD, DIR = IO, VEC = [15:0]
+ PORT fpga_0_SysACE_CompactFlash_SysACE_CEN_pin = fpga_0_SysACE_CompactFlash_SysACE_CEN, DIR = O
+ PORT fpga_0_SysACE_CompactFlash_SysACE_OEN_pin = fpga_0_SysACE_CompactFlash_SysACE_OEN, DIR = O
+ PORT fpga_0_SysACE_CompactFlash_SysACE_WEN_pin = fpga_0_SysACE_CompactFlash_SysACE_WEN, DIR = O
+ PORT fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin = fpga_0_SysACE_CompactFlash_SysACE_MPIRQ, DIR = I
+ PORT fpga_0_LEDs_4Bit_GPIO_IO_pin = fpga_0_LEDs_4Bit_GPIO_IO, DIR = IO, VEC = [0:3]
+ PORT fpga_0_DIPSWs_4Bit_GPIO_IO_pin = fpga_0_DIPSWs_4Bit_GPIO_IO, DIR = IO, VEC = [0:3]
+ PORT fpga_0_PushButtons_5Bit_GPIO_IO_pin = fpga_0_PushButtons_5Bit_GPIO_IO, DIR = IO, VEC = [0:4]
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clk_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clk, DIR = O, VEC = [0:2]
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clkn_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clkn, DIR = O, VEC = [0:2]
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Addr_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Addr, DIR = O, VEC = [0:12]
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_BankAddr_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_BankAddr, DIR = O, VEC = [0:1]
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CASn_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CASn, DIR = O
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_RASn_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_RASn, DIR = O
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_WEn_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_WEn, DIR = O
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DM_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DM, DIR = O, VEC = [0:7]
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQS_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQS, DIR = IO, VEC = [0:7]
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ, DIR = IO, VEC = [0:63]
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CKE_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CKE, DIR = O
+ PORT fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CSn_pin = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CSn, DIR = O
+ PORT fpga_0_VGA_FrameBuffer_TFT_LCD_HSYNC_pin = fpga_0_VGA_FrameBuffer_TFT_LCD_HSYNC, DIR = O
+ PORT fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC_pin = fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC, DIR = O
+ PORT fpga_0_VGA_FrameBuffer_TFT_LCD_CLK_pin = fpga_0_VGA_FrameBuffer_TFT_LCD_CLK, DIR = O
+ PORT fpga_0_VGA_FrameBuffer_TFT_LCD_R_pin = fpga_0_VGA_FrameBuffer_TFT_LCD_R, DIR = O, VEC = [5:0]
+ PORT fpga_0_VGA_FrameBuffer_TFT_LCD_G_pin = fpga_0_VGA_FrameBuffer_TFT_LCD_G, DIR = O, VEC = [5:0]
+ PORT fpga_0_VGA_FrameBuffer_TFT_LCD_B_pin = fpga_0_VGA_FrameBuffer_TFT_LCD_B, DIR = O, VEC = [5:0]
+ PORT fpga_0_VGA_FrameBuffer_TFT_LCD_BLNK_pin = fpga_0_VGA_FrameBuffer_TFT_LCD_BLNK, DIR = O
+ PORT fpga_0_Audio_Codec_Bit_Clk_pin = fpga_0_Audio_Codec_Bit_Clk, DIR = I
+ PORT fpga_0_Audio_Codec_AC97Reset_n_pin = fpga_0_Audio_Codec_AC97Reset_n, DIR = O
+ PORT fpga_0_Audio_Codec_SData_In_pin = fpga_0_Audio_Codec_SData_In, DIR = I
+ PORT fpga_0_Audio_Codec_SData_Out_pin = fpga_0_Audio_Codec_SData_Out, DIR = O
+ PORT fpga_0_Audio_Codec_Sync_pin = fpga_0_Audio_Codec_Sync, DIR = O
+ PORT fpga_0_net_gnd_pin = net_gnd, DIR = O
+ PORT fpga_0_net_gnd_1_pin = net_gnd, DIR = O
+ PORT fpga_0_net_gnd_2_pin = net_gnd, DIR = O
+ PORT fpga_0_net_gnd_3_pin = net_gnd, DIR = O
+ PORT fpga_0_net_gnd_4_pin = net_gnd, DIR = O
+ PORT fpga_0_net_gnd_5_pin = net_gnd, DIR = O
+ PORT fpga_0_net_gnd_6_pin = net_gnd, DIR = O
+ PORT fpga_0_DDR_CLK_FB = ddr_feedback_s, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
+ PORT fpga_0_DDR_CLK_FB_OUT = ddr_clk_feedback_out_s, DIR = O
+ PORT sys_clk_pin = dcm_clk_s, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
+ PORT sys_rst_pin = sys_rst_s, DIR = I, RST_POLARITY = 0, SIGIS = RST
+# ######################################################################
+# Epansion port pins. Comment is the DIO1 signal name they connect with.
+# ######################################################################
+# ########
+# J5
+# ########
+# SW3
+ PORT exp_io_40_pin = exp_io_40, DIR = I
+# CB
+ PORT exp_io_41_pin = exp_io_41, DIR = O
+# SW2
+ PORT exp_io_42_pin = exp_io_42, DIR = I
+# CA
+ PORT exp_io_43_pin = exp_io_43, DIR = O
+# SW1
+ PORT exp_io_44_pin = exp_io_44, DIR = I
+# BTN5
+ PORT exp_io_45_pin = exp_io_45, DIR = I
+# #########
+# J6
+# #########
+# LD8
+ PORT exp_io_48_pin = exp_io_48, DIR = O
+# LD7
+ PORT exp_io_50_pin = exp_io_50, DIR = O
+# LD6
+ PORT exp_io_52_pin = exp_io_52, DIR = O
+# A4
+ PORT exp_io_53_pin = exp_io_53, DIR = O
+# LD5
+ PORT exp_io_54_pin = exp_io_54, DIR = O
+# A3
+ PORT exp_io_55_pin = exp_io_55, DIR = O
+# LD4
+ PORT exp_io_56_pin = exp_io_56, DIR = O
+# A2
+ PORT exp_io_57_pin = exp_io_57, DIR = O
+# LD3
+ PORT exp_io_58_pin = exp_io_58, DIR = O
+# A1
+ PORT exp_io_59_pin = exp_io_59, DIR = O
+# LD2
+ PORT exp_io_60_pin = exp_io_60, DIR = O
+# BTN4
+ PORT exp_io_61_pin = exp_io_61, DIR = I
+# LD1
+ PORT exp_io_62_pin = exp_io_62, DIR = O
+# BTN2
+ PORT exp_io_63_pin = exp_io_63, DIR = I
+# BTN3
+ PORT exp_io_64_pin = exp_io_64, DIR = I
+# DP
+ PORT exp_io_65_pin = exp_io_65, DIR = O
+# BTN1
+ PORT exp_io_66_pin = exp_io_66, DIR = I
+# CG
+ PORT exp_io_67_pin = exp_io_67, DIR = O
+# SW8
+ PORT exp_io_68_pin = exp_io_68, DIR = I
+# CF
+ PORT exp_io_69_pin = exp_io_69, DIR = O
+# SW7
+ PORT exp_io_70_pin = exp_io_70, DIR = I
+# CE
+ PORT exp_io_71_pin = exp_io_71, DIR = O
+# SW6
+ PORT exp_io_72_pin = exp_io_72, DIR = I
+# CD
+ PORT exp_io_73_pin = exp_io_73, DIR = O
+# SW5
+ PORT exp_io_74_pin = exp_io_74, DIR = I
+# CC
+ PORT exp_io_75_pin = exp_io_75, DIR = O
+# SW4
+ PORT exp_io_76_pin = exp_io_76, DIR = I
+
+
+BEGIN ppc405
+ PARAMETER INSTANCE = ppc405_0
+ PARAMETER HW_VER = 2.00.c
+ BUS_INTERFACE JTAGPPC = jtagppc_0_0
+ BUS_INTERFACE IPLB = plb
+ BUS_INTERFACE DPLB = plb
+ PORT PLBCLK = sys_clk_s
+ PORT C405RSTCHIPRESETREQ = C405RSTCHIPRESETREQ
+ PORT C405RSTCORERESETREQ = C405RSTCORERESETREQ
+ PORT C405RSTSYSRESETREQ = C405RSTSYSRESETREQ
+ PORT RSTC405RESETCHIP = RSTC405RESETCHIP
+ PORT RSTC405RESETCORE = RSTC405RESETCORE
+ PORT RSTC405RESETSYS = RSTC405RESETSYS
+ PORT EICC405EXTINPUTIRQ = EICC405EXTINPUTIRQ
+ PORT CPMC405CLOCK = sys_clk_s
+END
+
+BEGIN ppc405
+ PARAMETER INSTANCE = ppc405_1
+ PARAMETER HW_VER = 2.00.c
+ BUS_INTERFACE JTAGPPC = jtagppc_0_1
+END
+
+BEGIN jtagppc_cntlr
+ PARAMETER INSTANCE = jtagppc_0
+ PARAMETER HW_VER = 2.00.a
+ BUS_INTERFACE JTAGPPC0 = jtagppc_0_0
+ BUS_INTERFACE JTAGPPC1 = jtagppc_0_1
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = reset_block
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_EXT_RESET_HIGH = 0
+ PORT Ext_Reset_In = sys_rst_s
+ PORT Slowest_sync_clk = sys_clk_s
+ PORT Chip_Reset_Req = C405RSTCHIPRESETREQ
+ PORT Core_Reset_Req = C405RSTCORERESETREQ
+ PORT System_Reset_Req = C405RSTSYSRESETREQ
+ PORT Rstc405resetchip = RSTC405RESETCHIP
+ PORT Rstc405resetcore = RSTC405RESETCORE
+ PORT Rstc405resetsys = RSTC405RESETSYS
+ PORT Bus_Struct_Reset = sys_bus_reset
+ PORT Dcm_locked = dcm_1_lock
+END
+
+BEGIN plb_v34
+ PARAMETER INSTANCE = plb
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_DCR_INTFCE = 0
+ PARAMETER C_NUM_OPBCLK_PLB2OPB_REARB = 100
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT SYS_Rst = sys_bus_reset
+ PORT PLB_Clk = sys_clk_s
+END
+
+BEGIN opb_v20
+ PARAMETER INSTANCE = opb
+ PARAMETER HW_VER = 1.10.c
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT SYS_Rst = sys_bus_reset
+ PORT OPB_Clk = sys_clk_s
+END
+
+BEGIN plb2opb_bridge
+ PARAMETER INSTANCE = plb2opb
+ PARAMETER HW_VER = 1.01.a
+ PARAMETER C_DCR_INTFCE = 0
+ PARAMETER C_NUM_ADDR_RNG = 1
+ PARAMETER C_RNG0_BASEADDR = 0x40000000
+ PARAMETER C_RNG0_HIGHADDR = 0x7fffffff
+ BUS_INTERFACE SPLB = plb
+ BUS_INTERFACE MOPB = opb
+END
+
+BEGIN opb_uartlite
+ PARAMETER INSTANCE = RS232_Uart_1
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER C_BAUDRATE = 9600
+ PARAMETER C_DATA_BITS = 8
+ PARAMETER C_ODD_PARITY = 0
+ PARAMETER C_USE_PARITY = 0
+ PARAMETER C_CLK_FREQ = 100000000
+ PARAMETER C_BASEADDR = 0x40600000
+ PARAMETER C_HIGHADDR = 0x4060ffff
+ BUS_INTERFACE SOPB = opb
+ PORT RX = fpga_0_RS232_Uart_1_RX
+ PORT TX = fpga_0_RS232_Uart_1_TX
+END
+
+BEGIN opb_sysace
+ PARAMETER INSTANCE = SysACE_CompactFlash
+ PARAMETER HW_VER = 1.00.c
+ PARAMETER C_MEM_WIDTH = 16
+ PARAMETER C_BASEADDR = 0x41800000
+ PARAMETER C_HIGHADDR = 0x4180ffff
+ BUS_INTERFACE SOPB = opb
+ PORT SysACE_CLK = fpga_0_SysACE_CompactFlash_SysACE_CLK
+ PORT SysACE_MPA = fpga_0_SysACE_CompactFlash_SysACE_MPA
+ PORT SysACE_MPD = fpga_0_SysACE_CompactFlash_SysACE_MPD
+ PORT SysACE_CEN = fpga_0_SysACE_CompactFlash_SysACE_CEN
+ PORT SysACE_OEN = fpga_0_SysACE_CompactFlash_SysACE_OEN
+ PORT SysACE_WEN = fpga_0_SysACE_CompactFlash_SysACE_WEN
+ PORT SysACE_MPIRQ = fpga_0_SysACE_CompactFlash_SysACE_MPIRQ
+END
+
+BEGIN opb_gpio
+ PARAMETER INSTANCE = LEDs_4Bit
+ PARAMETER HW_VER = 3.01.b
+ PARAMETER C_GPIO_WIDTH = 4
+ PARAMETER C_IS_DUAL = 0
+ PARAMETER C_IS_BIDIR = 0
+ PARAMETER C_ALL_INPUTS = 0
+ PARAMETER C_BASEADDR = 0x40040000
+ PARAMETER C_HIGHADDR = 0x4004ffff
+ BUS_INTERFACE SOPB = opb
+ PORT GPIO_IO = fpga_0_LEDs_4Bit_GPIO_IO
+END
+
+BEGIN opb_gpio
+ PARAMETER INSTANCE = DIPSWs_4Bit
+ PARAMETER HW_VER = 3.01.b
+ PARAMETER C_GPIO_WIDTH = 4
+ PARAMETER C_IS_DUAL = 0
+ PARAMETER C_IS_BIDIR = 1
+ PARAMETER C_ALL_INPUTS = 1
+ PARAMETER C_BASEADDR = 0x40020000
+ PARAMETER C_HIGHADDR = 0x4002ffff
+ BUS_INTERFACE SOPB = opb
+ PORT GPIO_IO = fpga_0_DIPSWs_4Bit_GPIO_IO
+END
+
+BEGIN opb_gpio
+ PARAMETER INSTANCE = PushButtons_5Bit
+ PARAMETER HW_VER = 3.01.b
+ PARAMETER C_INTERRUPT_PRESENT = 1
+ PARAMETER C_GPIO_WIDTH = 5
+ PARAMETER C_IS_DUAL = 0
+ PARAMETER C_IS_BIDIR = 1
+ PARAMETER C_ALL_INPUTS = 1
+ PARAMETER C_BASEADDR = 0x40000000
+ PARAMETER C_HIGHADDR = 0x4000ffff
+ BUS_INTERFACE SOPB = opb
+ PORT IP2INTC_Irpt = PushButtons_5Bit_IP2INTC_Irpt
+ PORT GPIO_IO = fpga_0_PushButtons_5Bit_GPIO_IO
+END
+
+BEGIN plb_ddr
+ PARAMETER INSTANCE = DDR_256MB_32MX64_rank1_row13_col10_cl2_5
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_PLB_CLK_PERIOD_PS = 10000
+ PARAMETER C_NUM_BANKS_MEM = 1
+ PARAMETER C_NUM_CLK_PAIRS = 4
+ PARAMETER C_REG_DIMM = 0
+ PARAMETER C_DDR_TMRD = 20000
+ PARAMETER C_DDR_TWR = 20000
+ PARAMETER C_DDR_TRAS = 60000
+ PARAMETER C_DDR_TRC = 90000
+ PARAMETER C_DDR_TRFC = 100000
+ PARAMETER C_DDR_TRCD = 30000
+ PARAMETER C_DDR_TRRD = 20000
+ PARAMETER C_DDR_TRP = 30000
+ PARAMETER C_DDR_AWIDTH = 13
+ PARAMETER C_DDR_COL_AWIDTH = 10
+ PARAMETER C_DDR_BANK_AWIDTH = 2
+ PARAMETER C_DDR_DWIDTH = 64
+ PARAMETER C_MEM0_BASEADDR = 0x00000000
+ PARAMETER C_MEM0_HIGHADDR = 0x0fffffff
+ BUS_INTERFACE SPLB = plb
+ PORT DDR_Addr = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Addr
+ PORT DDR_BankAddr = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_BankAddr
+ PORT DDR_CASn = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CASn
+ PORT DDR_CKE = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CKE
+ PORT DDR_CSn = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CSn
+ PORT DDR_RASn = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_RASn
+ PORT DDR_WEn = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_WEn
+ PORT DDR_DM = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DM
+ PORT DDR_DQS = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQS
+ PORT DDR_DQ = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ
+ PORT DDR_Clk = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clk & ddr_clk_feedback_out_s
+ PORT DDR_Clkn = fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clkn & 0b0
+ PORT Clk90_in = clk_90_s
+ PORT Clk90_in_n = clk_90_n_s
+ PORT PLB_Clk_n = sys_clk_n_s
+ PORT DDR_Clk90_in = ddr_clk_90_s
+ PORT DDR_Clk90_in_n = ddr_clk_90_n_s
+END
+
+BEGIN plb_bram_if_cntlr
+ PARAMETER INSTANCE = plb_bram_if_cntlr_1
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER c_plb_clk_period_ps = 10000
+ PARAMETER c_baseaddr = 0xfffe0000
+ PARAMETER c_highaddr = 0xffffffff
+ BUS_INTERFACE SPLB = plb
+ BUS_INTERFACE PORTA = plb_bram_if_cntlr_1_port
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = plb_bram_if_cntlr_1_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = plb_bram_if_cntlr_1_port
+END
+
+BEGIN opb_intc
+ PARAMETER INSTANCE = opb_intc_0
+ PARAMETER HW_VER = 1.00.c
+ PARAMETER C_BASEADDR = 0x41200000
+ PARAMETER C_HIGHADDR = 0x4120ffff
+ BUS_INTERFACE SOPB = opb
+ PORT Irq = EICC405EXTINPUTIRQ
+ PORT Intr = PushButtons_5Bit_IP2INTC_Irpt&Audio_Codec_Interrupt&lab3_slave_interrupt_request
+END
+
+BEGIN util_vector_logic
+ PARAMETER INSTANCE = sysclk_inv
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_SIZE = 1
+ PARAMETER C_OPERATION = not
+ PORT Op1 = sys_clk_s
+ PORT Res = sys_clk_n_s
+END
+
+BEGIN util_vector_logic
+ PARAMETER INSTANCE = clk90_inv
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_SIZE = 1
+ PARAMETER C_OPERATION = not
+ PORT Op1 = clk_90_s
+ PORT Res = clk_90_n_s
+END
+
+BEGIN util_vector_logic
+ PARAMETER INSTANCE = ddr_clk90_inv
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_SIZE = 1
+ PARAMETER C_OPERATION = not
+ PORT Op1 = ddr_clk_90_s
+ PORT Res = ddr_clk_90_n_s
+END
+
+BEGIN dcm_module
+ PARAMETER INSTANCE = dcm_0
+ PARAMETER HW_VER = 1.00.c
+ PARAMETER C_CLK0_BUF = TRUE
+ PARAMETER C_CLK90_BUF = TRUE
+ PARAMETER C_CLKIN_PERIOD = 10.000000
+ PARAMETER C_CLK_FEEDBACK = 1X
+ PARAMETER C_DLL_FREQUENCY_MODE = LOW
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT CLKIN = dcm_clk_s
+ PORT CLK0 = sys_clk_s
+ PORT CLK90 = clk_90_s
+ PORT CLKFB = sys_clk_s
+ PORT RST = net_gnd
+ PORT LOCKED = dcm_0_lock
+END
+
+BEGIN dcm_module
+ PARAMETER INSTANCE = dcm_1
+ PARAMETER HW_VER = 1.00.c
+ PARAMETER C_CLK0_BUF = TRUE
+ PARAMETER C_CLK90_BUF = TRUE
+ PARAMETER C_CLKIN_PERIOD = 10.000000
+ PARAMETER C_CLK_FEEDBACK = 1X
+ PARAMETER C_DLL_FREQUENCY_MODE = LOW
+ PARAMETER C_PHASE_SHIFT = 60
+ PARAMETER C_CLKOUT_PHASE_SHIFT = FIXED
+ PARAMETER C_EXT_RESET_HIGH = 0
+ PORT CLKIN = ddr_feedback_s
+ PORT CLK90 = ddr_clk_90_s
+ PORT CLK0 = dcm_1_FB
+ PORT CLKFB = dcm_1_FB
+ PORT RST = dcm_0_lock
+ PORT LOCKED = dcm_1_lock
+END
+
+BEGIN plb_tft_cntlr_ref
+ PARAMETER INSTANCE = VGA_FrameBuffer
+ PARAMETER HW_VER = 1.00.d
+ PARAMETER C_DEFAULT_TFT_BASE_ADDR = 0b00000000000
+ PARAMETER C_PIXCLK_IS_BUSCLK_DIVBY4 = 0b1
+ PARAMETER C_DCR_BASEADDR = 0b1000000000
+ PARAMETER C_DCR_HIGHADDR = 0b1000000001
+ BUS_INTERFACE MPLB = plb
+ BUS_INTERFACE SDCR = dcr_v29_0
+ PORT SYS_dcrClk = sys_clk_s
+ PORT TFT_LCD_CLK = fpga_0_VGA_FrameBuffer_TFT_LCD_CLK
+ PORT TFT_LCD_HSYNC = fpga_0_VGA_FrameBuffer_TFT_LCD_HSYNC
+ PORT TFT_LCD_VSYNC = fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC
+ PORT TFT_LCD_B = fpga_0_VGA_FrameBuffer_TFT_LCD_B
+ PORT TFT_LCD_G = fpga_0_VGA_FrameBuffer_TFT_LCD_G
+ PORT TFT_LCD_R = fpga_0_VGA_FrameBuffer_TFT_LCD_R
+ PORT TFT_LCD_BLNK = fpga_0_VGA_FrameBuffer_TFT_LCD_BLNK
+END
+
+BEGIN dcr_v29
+ PARAMETER INSTANCE = dcr_v29_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_DCR_NUM_SLAVES = 1
+END
+
+BEGIN opb2dcr_bridge
+ PARAMETER INSTANCE = opb2dcr_bridge_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x41818000
+ PARAMETER C_HIGHADDR = 0x41818fff
+ BUS_INTERFACE SOPB = opb
+ BUS_INTERFACE MDCR = dcr_v29_0
+END
+
+BEGIN opb_ac97
+ PARAMETER INSTANCE = Audio_Codec
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_BASEADDR = 0x7d400000
+ PARAMETER C_HIGHADDR = 0x7d40ffff
+ BUS_INTERFACE SOPB = opb
+ PORT OPB_Clk = sys_clk_s
+ PORT Interrupt = Audio_Codec_Interrupt
+ PORT Bit_Clk = fpga_0_Audio_Codec_Bit_Clk
+ PORT SData_In = fpga_0_Audio_Codec_SData_In
+ PORT SData_Out = fpga_0_Audio_Codec_SData_Out
+ PORT Sync = fpga_0_Audio_Codec_Sync
+ PORT AC97Reset_n = fpga_0_Audio_Codec_AC97Reset_n
+END
+
+BEGIN lab3_slave
+ PARAMETER INSTANCE = lab3_slave_0
+ BUS_INTERFACE SOPB = opb
+ PORT interruptRequest = lab3_slave_interrupt_request
+ PORT exp_io_40_s = exp_io_40
+ PORT exp_io_41_s = exp_io_41
+ PORT exp_io_42_s = exp_io_42
+ PORT exp_io_43_s = exp_io_43
+ PORT exp_io_44_s = exp_io_44
+ PORT exp_io_45_s = exp_io_45
+ PORT exp_io_48_s = exp_io_48
+ PORT exp_io_50_s = exp_io_50
+ PORT exp_io_52_s = exp_io_52
+ PORT exp_io_53_s = exp_io_53
+ PORT exp_io_54_s = exp_io_54
+ PORT exp_io_55_s = exp_io_55
+ PORT exp_io_56_s = exp_io_56
+ PORT exp_io_57_s = exp_io_57
+ PORT exp_io_58_s = exp_io_58
+ PORT exp_io_59_s = exp_io_59
+ PORT exp_io_60_s = exp_io_60
+ PORT exp_io_61_s = exp_io_61
+ PORT exp_io_62_s = exp_io_62
+ PORT exp_io_63_s = exp_io_63
+ PORT exp_io_64_s = exp_io_64
+ PORT exp_io_65_s = exp_io_65
+ PORT exp_io_66_s = exp_io_66
+ PORT exp_io_67_s = exp_io_67
+ PORT exp_io_68_s = exp_io_68
+ PORT exp_io_69_s = exp_io_69
+ PORT exp_io_70_s = exp_io_70
+ PORT exp_io_71_s = exp_io_71
+ PORT exp_io_72_s = exp_io_72
+ PORT exp_io_73_s = exp_io_73
+ PORT exp_io_74_s = exp_io_74
+ PORT exp_io_75_s = exp_io_75
+ PORT exp_io_76_s = exp_io_76
+END
+

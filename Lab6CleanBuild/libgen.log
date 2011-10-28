@@ -1,0 +1,505 @@
+Release 9.1.02i - libgen Xilinx EDK 9.1.02
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -mhs system.mhs -p xc2vp30ff896-7 system.mss 
+
+Output Directory (-od)		:
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\
+Part (-p)			: virtex2p
+
+Software Specification file	: system.mss
+WARNING:MDT - IPNAME:opb2dcr_bridge INSTANCE:opb2dcr_bridge_0 -
+   D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\system.mhs line 373
+   - deprecated core for architecture 'virtex2p'!
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_
+0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagp
+pc_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_
+1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2
+opb_bridge_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_sysace_v1_00_c/data/opb_sysa
+ce_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_ddr_v2_00_a/data/plb_ddr_v2_
+1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/p
+lb_bram_if_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_modu
+le_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_0 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 45 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2
+   _1_0.mpd line 47 - ppc405_1 (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jt
+   agppc_cntlr_v2_1_0.mpd line 35 - jtagppc_0 (jtagppc_cntlr) tool is overriding
+   PARAMETER C_DEVICE value to 2vp30
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 40 - LEDs_4Bit (opb_gpio) tool is overriding PARAMETER
+   C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 40 - DIPSWs_4Bit (opb_gpio) tool is overriding PARAMETER
+   C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 40 - PushButtons_5Bit (opb_gpio) tool is overriding
+   PARAMETER C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 41 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_int
+   c_v2_1_0.mpd line 38 - opb_intc_0 (opb_intc) tool is overriding PARAMETER
+   C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_0 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
+   odule_v2_1_0.mpd line 59 - dcm_1 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_
+if_cntlr_v2_1_0.tcl ...
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0b1000000000-0b1000000001)
+VGA_FrameBuffer	plb->plb2opb->opb->opb2dcr_bridge_0->dcr_v29_0
+  (0000000000-0x0fffffff) DDR_256MB_32MX64_rank1_row13_col10_cl2_5	plb
+  (0x40000000-0x4000ffff) PushButtons_5Bit	plb->plb2opb->opb
+  (0x40020000-0x4002ffff) DIPSWs_4Bit	plb->plb2opb->opb
+  (0x40040000-0x4004ffff) LEDs_4Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x41200000-0x4120ffff) opb_intc_0	plb->plb2opb->opb
+  (0x41800000-0x4180ffff) SysACE_CompactFlash	plb->plb2opb->opb
+  (0x7d400000-0x7d40ffff) Audio_Codec	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+  (0b0000010000-0b0000010011) ppc405_1	
+  (0b0000100000-0b0000100011) ppc405_1	
+
+Check platform address map ...
+
+Overriding system level properties ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_
+   v2_1_0.mpd line 41 - plb (plb_v34) tool is overriding PARAMETER
+   C_PLB_NUM_MASTERS value to 3
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_
+   v2_1_0.mpd line 42 - plb (plb_v34) tool is overriding PARAMETER
+   C_PLB_NUM_SLAVES value to 3
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_
+   v2_1_0.mpd line 43 - plb (plb_v34) tool is overriding PARAMETER
+   C_PLB_MID_WIDTH value to 2
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_
+   v2_1_0.mpd line 44 - plb (plb_v34) tool is overriding PARAMETER C_PLB_AWIDTH
+   value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_
+   v2_1_0.mpd line 45 - plb (plb_v34) tool is overriding PARAMETER C_PLB_DWIDTH
+   value to 64
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_
+   v2_1_0.mpd line 36 - opb (opb_v20) tool is overriding PARAMETER C_OPB_AWIDTH
+   value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_
+   v2_1_0.mpd line 37 - opb (opb_v20) tool is overriding PARAMETER C_OPB_DWIDTH
+   value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_
+   v2_1_0.mpd line 38 - opb (opb_v20) tool is overriding PARAMETER C_NUM_MASTERS
+   value to 1
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_
+   v2_1_0.mpd line 39 - opb (opb_v20) tool is overriding PARAMETER C_NUM_SLAVES
+   value to 8
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 48 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_PLB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 49 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_PLB_DWIDTH value to 64
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 50 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_PLB_NUM_MASTERS value to 3
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 51 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_PLB_MID_WIDTH value to 2
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 52 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\p
+   lb2opb_bridge_v2_1_0.mpd line 53 - plb2opb (plb2opb_bridge) tool is
+   overriding PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\data\opb
+   _uartlite_v2_1_0.mpd line 37 - RS232_Uart_1 (opb_uartlite) tool is overriding
+   PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\data\opb
+   _uartlite_v2_1_0.mpd line 38 - RS232_Uart_1 (opb_uartlite) tool is overriding
+   PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_sysace_v1_00_c\data\opb_s
+   ysace_v2_1_0.mpd line 39 - SysACE_CompactFlash (opb_sysace) tool is
+   overriding PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_sysace_v1_00_c\data\opb_s
+   ysace_v2_1_0.mpd line 40 - SysACE_CompactFlash (opb_sysace) tool is
+   overriding PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 38 - LEDs_4Bit (opb_gpio) tool is overriding PARAMETER
+   C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 39 - LEDs_4Bit (opb_gpio) tool is overriding PARAMETER
+   C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 38 - DIPSWs_4Bit (opb_gpio) tool is overriding PARAMETER
+   C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 39 - DIPSWs_4Bit (opb_gpio) tool is overriding PARAMETER
+   C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 38 - PushButtons_5Bit (opb_gpio) tool is overriding
+   PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpi
+   o_v2_1_0.mpd line 39 - PushButtons_5Bit (opb_gpio) tool is overriding
+   PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_
+   v2_1_0.mpd line 78 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool
+   is overriding PARAMETER C_PLB_NUM_MASTERS value to 3
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_
+   v2_1_0.mpd line 79 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool
+   is overriding PARAMETER C_PLB_MID_WIDTH value to 2
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_
+   v2_1_0.mpd line 80 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool
+   is overriding PARAMETER C_PLB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_ddr_v2_00_a\data\plb_ddr_
+   v2_1_0.mpd line 81 - DDR_256MB_32MX64_rank1_row13_col10_cl2_5 (plb_ddr) tool
+   is overriding PARAMETER C_PLB_DWIDTH value to 64
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\dat
+   a\plb_bram_if_cntlr_v2_1_0.mpd line 42 - plb_bram_if_cntlr_1
+   (plb_bram_if_cntlr) tool is overriding PARAMETER c_num_masters value to 3
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\dat
+   a\plb_bram_if_cntlr_v2_1_0.mpd line 46 - plb_bram_if_cntlr_1
+   (plb_bram_if_cntlr) tool is overriding PARAMETER c_plb_dwidth value to 64
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\dat
+   a\plb_bram_if_cntlr_v2_1_0.mpd line 47 - plb_bram_if_cntlr_1
+   (plb_bram_if_cntlr) tool is overriding PARAMETER c_plb_awidth value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\dat
+   a\plb_bram_if_cntlr_v2_1_0.mpd line 49 - plb_bram_if_cntlr_1
+   (plb_bram_if_cntlr) tool is overriding PARAMETER c_plb_mid_width value to 2
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 37 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_MEMSIZE value to 0x20000
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 38 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_PORT_DWIDTH value to 64
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 39 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_PORT_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_
+   block_v2_1_0.mpd line 40 - plb_bram_if_cntlr_1_bram (bram_block) tool is
+   overriding PARAMETER C_NUM_WE value to 8
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_int
+   c_v2_1_0.mpd line 42 - opb_intc_0 (opb_intc) tool is overriding PARAMETER
+   C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_int
+   c_v2_1_0.mpd line 43 - opb_intc_0 (opb_intc) tool is overriding PARAMETER
+   C_OPB_DWIDTH value to 32
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core
+_v2_1_0.tcl ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_int
+   c_v2_1_0.mpd line 46 - opb_intc_0 (opb_intc) tcl is overriding PARAMETER
+   C_NUM_INTR_INPUTS value to 2
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core
+_v2_1_0.tcl ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_int
+   c_v2_1_0.mpd line 47 - opb_intc_0 (opb_intc) tcl is overriding PARAMETER
+   C_KIND_OF_INTR value to 0b00000000000000000000000000000000
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core
+_v2_1_0.tcl ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_int
+   c_v2_1_0.mpd line 48 - opb_intc_0 (opb_intc) tcl is overriding PARAMETER
+   C_KIND_OF_EDGE value to 0b00000000000000000000000000000000
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core
+_v2_1_0.tcl ...
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_int
+   c_v2_1_0.mpd line 49 - opb_intc_0 (opb_intc) tcl is overriding PARAMETER
+   C_KIND_OF_LVL value to 0b00000000000000000000000000000011
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a\data\dcr_v29_
+   v2_1_0.mpd line 39 - dcr_v29_0 (dcr_v29) tool is overriding PARAMETER
+   C_DCR_AWIDTH value to 10
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a\data\dcr_v29_
+   v2_1_0.mpd line 40 - dcr_v29_0 (dcr_v29) tool is overriding PARAMETER
+   C_DCR_DWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2dcr_bridge_v1_00_a\data\o
+   pb2dcr_bridge_v2_1_0.mpd line 36 - opb2dcr_bridge_0 (opb2dcr_bridge) tool is
+   overriding PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2dcr_bridge_v1_00_a\data\o
+   pb2dcr_bridge_v2_1_0.mpd line 37 - opb2dcr_bridge_0 (opb2dcr_bridge) tool is
+   overriding PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\pcores\opb_ac97_v2_
+   00_a\data\opb_ac97_v2_1_0.mpd line 25 - Audio_Codec (opb_ac97) tool is
+   overriding PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\pcores\opb_ac97_v2_
+   00_a\data\opb_ac97_v2_1_0.mpd line 26 - Audio_Codec (opb_ac97) tool is
+   overriding PARAMETER C_OPB_AWIDTH value to 32
+
+Running system level Update ...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ddr_v2_00_c/data/ddr_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core
+_v2_1_0.tcl ...
+
+Check platform configuration ...
+IPNAME:plb_v34 INSTANCE:plb -
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\system.mhs line 117 -
+3 master(s) : 3 slave(s)
+IPNAME:opb_v20 INSTANCE:opb -
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\system.mhs line 127 -
+1 master(s) : 8 slave(s)
+IPNAME:dcr_v29 INSTANCE:dcr_v29_0 -
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\system.mhs line 367 -
+1 master(s) : 1 slave(s)
+
+Check port drivers...
+
+Performing Clock DRCs...
+
+INFO:MDT - Frequency for Top-Level Input Clock 'fpga_0_Audio_Codec_Bit_Clk_pin'
+   is not specified. Clock DRCs will not be performed for IPs connected to that
+   clock port. 
+
+INFO:MDT - List of peripherals addressable from processor instance ppc405_0 : 
+  - opb
+WARNING:MDT -
+   D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\system.mhs line 127
+   - No Driver Found for instance opb. To avoid seeing this warning, assign the
+   appropriate driver or driver "generic 1.00.a " to instance opb
+
+  - RS232_Uart_1
+  - SysACE_CompactFlash
+  - LEDs_4Bit
+  - DIPSWs_4Bit
+  - PushButtons_5Bit
+  - opb_intc_0
+  - VGA_FrameBuffer
+  - Audio_Codec
+  - DDR_256MB_32MX64_rank1_row13_col10_cl2_5
+  - plb_bram_if_cntlr_1
+INFO:MDT - List of peripherals addressable from processor instance ppc405_1 : 
+
+Building Directory Structure for ppc405_0
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+C:\Xilinx91i\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\standa
+lone_v1_00_a\ ...
+
+Copying files for driver uartlite_v1_02_a from
+C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v1_02_a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\uartli
+te_v1_02_a\ ...
+
+Copying files for driver sysace_v1_01_a from
+C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\sysace_v1_01_a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\sysace
+_v1_01_a\ ...
+
+Copying files for driver gpio_v2_01_a from
+C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\gpio_v2_01_a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\gpio_v
+2_01_a\ ...
+
+Copying files for driver intc_v1_00_c from
+C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\intc_v1_00_c\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\intc_v
+1_00_c\ ...
+
+Copying files for driver tft_ref_v1_00_a from
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\drivers\tft_ref_v1_00_
+a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\tft_re
+f_v1_00_a\ ...
+
+Copying files for driver ac97_v2_00_a from
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\drivers\ac97_v2_00_a\s
+rc\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\ac97_v
+2_00_a\ ...
+
+Copying files for driver ddr_v1_00_b from
+C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\ddr_v1_00_b\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\ddr_v1
+_00_b\ ...
+
+Copying files for driver cpu_ppc405_v1_00_a from
+C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\cpu_pp
+c405_v1_00_a\ ...
+
+Copying files for library xilfatfs_v1_00_a from
+C:\Xilinx91i\EDK\sw\lib\sw_services\xilfatfs_v1_00_a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\libsrc\xilfat
+fs_v1_00_a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Libraries generated in
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_0\lib\
+directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+Building Directory Structure for ppc405_1
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+C:\Xilinx91i\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_1\libsrc\standa
+lone_v1_00_a\ ...
+
+Copying files for driver cpu_ppc405_v1_00_a from
+C:\Xilinx91i\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_1\libsrc\cpu_pp
+c405_v1_00_a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Libraries generated in
+D:\Put_Your_Temp_Files_Here\lab6cleanbuild\Lab6CleanBuild\ppc405_1\lib\
+directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+LibGen Done. 

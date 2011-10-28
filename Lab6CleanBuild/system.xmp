@@ -51,6 +51,7 @@ Source: TestApp_Peripheral/src/TestApp_Peripheral.c
 Source: TestApp_Peripheral/src/text.c
 Source: TestApp_Peripheral/src/sound.c
 Source: TestApp_Peripheral/src/wave_header.c
+Source: TestApp_Peripheral/src/OPB_Int.c
 Header: TestApp_Peripheral/src/intc_header.h
 Header: TestApp_Peripheral/src/sysace_header.h
 Header: TestApp_Peripheral/src/gpio_header.h
@@ -67,6 +68,7 @@ Header: TestApp_Peripheral/src/text.h
 Header: TestApp_Peripheral/src/sounds/game_sounds2.h
 Header: TestApp_Peripheral/src/sound.h
 Header: TestApp_Peripheral/src/wave_header.h
+Header: TestApp_Peripheral/src/OPB_Int.h
 DefaultInit: EXECUTABLE
 InitBram: 1
 Active: 1

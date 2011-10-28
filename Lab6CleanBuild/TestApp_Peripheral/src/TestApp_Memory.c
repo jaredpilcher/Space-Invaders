@@ -1,4 +1,5 @@
 #include "TestApp_Memory.h"
+#include "OPB_Int.h"
 
 int direction= RIGHT;
 coord_object tank;
@@ -40,9 +41,12 @@ Sound sounds[20];
 
 Sound * current_sound;
 
+
 void bufferUnderrun(XIntc * device){
-	XIntc_Disable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
-	XIntc_Acknowledge(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	disableAudioInterrupt();
+	acknowledgeAudioInterrupts();
+	//XIntc_Disable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	//XIntc_Acknowledge(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
 	if(current_sound){
 		int result = fillFIFOWithSound(current_sound);
 		if (result == 0){
@@ -51,7 +55,8 @@ void bufferUnderrun(XIntc * device){
 	} else {
 		fillFIFOWithSilence();
 	}
-	XIntc_Enable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	enableAudioInterrupt();
+	//XIntc_Enable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
 }
 
 void my_pitHandler(void * DataPtr){
@@ -501,9 +506,11 @@ int main() {
 	XCache_EnableDCache(0x00000001);
 	XIntc ac97_opb;
 	initializeSound();
-	XIntc_Initialize(&ac97_opb, XPAR_INTC_SINGLE_DEVICE_ID);
-	XIntc_Start(&ac97_opb,XIN_REAL_MODE);
-	XIntc_Connect(&ac97_opb, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR, bufferUnderrun, &ac97_opb);
+	clearInterrupts();
+	initializeMER();
+	//XIntc_Initialize(&ac97_opb, XPAR_INTC_SINGLE_DEVICE_ID);
+	//XIntc_Start(&ac97_opb,XIN_REAL_MODE);
+	//XIntc_Connect(&ac97_opb, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR, bufferUnderrun, &ac97_opb);
 	sounds[AMove1] = createSound("a:\\AMove1.wav");
 	sounds[AMove1].priority = 1;
 	sounds[AMove2] = createSound("a:\\AMove2.wav");
@@ -522,8 +529,9 @@ int main() {
 	sounds[SpaceShipHit].priority = 9;
 	XExc_Init();
 	XExc_mEnableExceptions(XEXC_NON_CRITICAL);
-	XExc_RegisterHandler(XEXC_ID_NON_CRITICAL_INT, XIntc_InterruptHandler , &ac97_opb);
-	XIntc_Enable(&ac97_opb, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+	XExc_RegisterHandler(XEXC_ID_NON_CRITICAL_INT, bufferUnderrun , &ac97_opb);
+	enableAudioInterrupt();
+	//XIntc_Enable(&ac97_opb, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
 	print("hey\n\r");
      //XGpio gpLED;
      // Initialise the peripherals

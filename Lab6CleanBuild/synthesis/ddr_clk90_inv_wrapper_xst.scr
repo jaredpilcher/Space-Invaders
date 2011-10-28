@@ -1,0 +1,11 @@
+run
+-opt_mode speed
+-opt_level 1
+-p xc2vp30ff896-7
+-top ddr_clk90_inv_wrapper
+-ifmt MIXED
+-ifn ddr_clk90_inv_wrapper_xst.prj
+-ofn ../implementation/ddr_clk90_inv_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}

@@ -1,0 +1,41 @@
+Release 9.1.02i ngcbuild J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngcbuild -p xc2vp30ff896-7 -intstyle silent -sd ..
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc
+../ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc
+
+Reading NGO file
+"C:/Lab5CleanBuild/implementation/ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapp
+er/ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc" ...
+Executing edif2ngd -noa
+"C:\Lab5CleanBuild\implementation\ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapp
+er_async_fifo_v4_0.edn"
+"ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper_async_fifo_v4_0.ngo"
+Release 9.1.02i - edif2ngd J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 9.1.02i edif2ngd J.33
+INFO:NgdBuild - Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+Writing module to
+"ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper_async_fifo_v4_0.ngo"...
+Loading design module
+"C:\Lab5CleanBuild\implementation\ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapp
+er\ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper_async_fifo_v4_0.ngo"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 70028 kilobytes
+
+Writing NGC file "../ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc" ...
+
+Writing NGCBUILD log file
+"../ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper.blc"...

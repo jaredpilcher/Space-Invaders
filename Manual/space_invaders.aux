@@ -1,0 +1,110 @@
+\relax 
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Space Invaders Overview}{3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}History of Space Invaders}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Game Play}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Objective}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}The Tank}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Enemies}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{Spaceship}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{Aliens}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}Points}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Game Details and Specifications}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Aliens}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{Alien Placement and Appearance}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{Alien Movement}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{Alien Explosions}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Alien Mothership}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}The Tank}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{Movement}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{Firing Bullets}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{Death}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.4}Bullets}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{Tank Bullets}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{Alien Bullets}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.5}The Bunkers}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.6}Scoring}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.7}End of Game}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.8}Appearance}{9}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Game Console and Engine}{10}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Game Console}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Xilinx University Program Board}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{Virtex II Pro}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{256 DDR Memory}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{AC-97 Sound Controller and jacks}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{VGA Controller}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces AC-97 controller overview. The AC-97 Controller acts as a buffer to the AC-97 hardware.}}{12}}
+\newlabel{fig:ac97}{{2.1}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{Compact Flash}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{UART/JTAG for debugging purposes}{12}}
+\newlabel{sec:jtag}{{2.1.1}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces VGA controller. Three 8 bit signals are sent to the DAC, which transforms it into an analog signal in red, green and blue.}}{13}}
+\newlabel{fig:vga}{{2.2}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Xilinx Virtex II. Pro EDK System}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Game Engine }{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Software Game Engine}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Space Invaders Overview. The red blocks represent the functions that form the skeleton of the program. The green blocks represent the actions are are performed in those function. The yellow block represents the global array of implemented timers. The blue blocks represent the individual timers used to update the state of the game, or render the screen.}}{16}}
+\newlabel{fig:overview}{{2.3}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{Timers}{17}}
+\newlabel{sec:timers}{{2.2.1}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{Detecting Collisions}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Collision Detection. The green blocks represent the state that must be met to continue. The orange blocks represent the process of determining the specific object that was hit. The blue blocks represent the actions taken to change the game state during a collision.}}{20}}
+\newlabel{fig:collisions}{{2.4}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{Rendering}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{Double Buffering}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Double Buffer. The currently displayed frame is never modified. Only after writing correct values to a new frame, the program changes the screen to display it.}}{22}}
+\newlabel{fig:render}{{2.5}{22}}
+\@writefile{toc}{\contentsline {subsubsection}{Flying over the bunkers}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Software APIs}{23}}
+\@writefile{toc}{\contentsline {subsubsection}{Game State}{23}}
+\@writefile{toc}{\contentsline {subsubsection}{Rendering of images}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Meeting the Game Specifications}{25}}
+\@writefile{toc}{\contentsline {subsubsection}{The Tank}{25}}
+\@writefile{toc}{\contentsline {subsubsection}{Mothership}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{Aliens}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{Scoring}{27}}
+\@writefile{toc}{\contentsline {subsubsection}{Tank Bullets}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{Alien Bullets}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}The Bunkers}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}End of Game}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}Appearance}{30}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Game Audio}{31}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}AC97 Operation}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1} Loading Audio Files From the Compact Flash}{31}}
+\@writefile{toc}{\contentsline {subsubsection}{Reading from Compact Flash}{31}}
+\@writefile{toc}{\contentsline {subsubsection}{Wav Sound Struct}{31}}
+\@writefile{toc}{\contentsline {subsubsection}{Preprocess Wav File for FIFO Buffering}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{Store sound file in memory}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}AC97 Operation}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces AC\_97 Operation. The OPB\_AC97 Controller sends a signal to the OPB Interrupt Controller when its FIFO is less than 50\% full. The OPB Interrupt Controller interrupts the PowerPC, which sends data to the OPB\_AC97 Controller FIFO.}}{33}}
+\newlabel{fig:AC97}{{3.1}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{PowerPC}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{OPB\_AC97 Controller}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{OPB Interrupt Controller}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{AC97}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Sound Triggering}{34}}
+\@writefile{toc}{\contentsline {subsubsection}{Playing a sound}{34}}
+\@writefile{toc}{\contentsline {subsubsection}{Our sounds}{34}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Bug Reports and File Organization}{36}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Bug Reports}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Drawing Bullets}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Destroying Aliens}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Moving Aliens to Right of Screen}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Overlay of Bullet Black Boxes}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}One Alien Firing Two Bullets Simultaneously}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.6}Overwriting Memory}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.7}Tank Out of Bounds}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.8}Not Enough Bunker Blocks}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.9}Tank Movement During Explosion}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.10}Tank Bullet Grazing Aliens}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.11}Knowing when a sound has finished playing}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.12}AC97 Interrupts}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.13}Big Endian}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.14}Initial Failure}{39}}
