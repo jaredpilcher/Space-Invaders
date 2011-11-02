@@ -1,0 +1,8 @@
+vhdl common_v1_00_a "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\common_v1_00_a\hdl\vhdl\pselect.vhd"
+vhdl opb_uartlite_v1_00_b "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\hdl\vhdl\baudrate.vhd"
+vhdl opb_uartlite_v1_00_b "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\hdl\vhdl\srl_fifo.vhd"
+vhdl opb_uartlite_v1_00_b "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\hdl\vhdl\opb_uartlite_rx.vhd"
+vhdl opb_uartlite_v1_00_b "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\hdl\vhdl\opb_uartlite_tx.vhd"
+vhdl opb_uartlite_v1_00_b "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\hdl\vhdl\opb_uartlite_core.vhd"
+vhdl opb_uartlite_v1_00_b "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\hdl\vhdl\opb_uartlite.vhd"
+vhdl work "D:\Put_Your_Temp_Files_Here\space_invaders\lab7basesystem\Lab7BaseSystem\hdl\rs232_uart_1_wrapper.vhd"

@@ -1,0 +1,1619 @@
+Release 9.1.02i Xflow J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc2vp30ff896-7 -implement xflow.opt system.ngc  
+.... Copying flowfile C:/Xilinx91i/xilinx/data/fpga.flw into working directory
+D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation 
+
+Using Flow File:
+D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/fpg
+a.flw 
+Using Option File(s): 
+ D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/xf
+low.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/sy
+stem.ngc" -uc system.ucf system.ngd 
+#----------------------------------------------#
+Release 9.1.02i - ngdbuild J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm
+D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/sys
+tem.ngc -uc system.ucf system.ngd
+
+Reading NGO file
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/sy
+stem.ngc" ...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/pp
+c405_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/pp
+c405_1_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/jt
+agppc_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/re
+set_block_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/pl
+b_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/op
+b_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/pl
+b2opb_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/rs
+232_uart_1_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/sy
+sace_compactflash_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/le
+ds_4bit_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/di
+psws_4bit_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/pu
+shbuttons_5bit_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/dd
+r_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/pl
+b_bram_if_cntlr_1_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/pl
+b_bram_if_cntlr_1_bram_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/op
+b_intc_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/sy
+sclk_inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/cl
+k90_inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/dd
+r_clk90_inv_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/dc
+m_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/dc
+m_1_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/vg
+a_framebuffer_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/dc
+r_v29_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/op
+b2dcr_bridge_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/au
+dio_codec_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/implementation/la
+b3_slave_0_wrapper.ngc"...
+
+Applying constraints in "system.ucf" to the design...
+INFO:NgdBuild:738 - A case sensitive search for the INST, PAD, or NET element
+   referred to by a constraint entry in 'system.ucf' that accompanies this
+   design has failed, while a case insensitive search is in progress. The result
+   of the case insensitive search will be used, but messages will accompany each
+   and every use of a case insensitive result. Constraints are case sensitive
+   with respect to user-specified identifiers, which includes names of logic
+   elements in a design.
+INFO:NgdBuild:740 - "system.ucf" Line 553: Found case insensitive match for NET
+   name 'EXP_IO_40_pin'. NET is 'exp_io_40_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 554: Found case insensitive match for NET
+   name 'EXP_IO_40_pin'. NET is 'exp_io_40_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 559: Found case insensitive match for NET
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 560: Found case insensitive match for NET
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 561: Found case insensitive match for NET
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 562: Found case insensitive match for NET
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 563: Found case insensitive match for NET
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 565: Found case insensitive match for NET
+   name 'EXP_IO_42_pin'. NET is 'exp_io_42_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 566: Found case insensitive match for NET
+   name 'EXP_IO_42_pin'. NET is 'exp_io_42_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 571: Found case insensitive match for NET
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 572: Found case insensitive match for NET
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 573: Found case insensitive match for NET
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 574: Found case insensitive match for NET
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 575: Found case insensitive match for NET
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 577: Found case insensitive match for NET
+   name 'EXP_IO_44_pin'. NET is 'exp_io_44_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 578: Found case insensitive match for NET
+   name 'EXP_IO_44_pin'. NET is 'exp_io_44_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 583: Found case insensitive match for NET
+   name 'EXP_IO_45_pin'. NET is 'exp_io_45_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 584: Found case insensitive match for NET
+   name 'EXP_IO_45_pin'. NET is 'exp_io_45_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 596: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 597: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 598: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 599: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 600: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 604: Found case insensitive match for NET
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 605: Found case insensitive match for NET
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 606: Found case insensitive match for NET
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 607: Found case insensitive match for NET
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 608: Found case insensitive match for NET
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 612: Found case insensitive match for NET
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 613: Found case insensitive match for NET
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 614: Found case insensitive match for NET
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 615: Found case insensitive match for NET
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 616: Found case insensitive match for NET
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 618: Found case insensitive match for NET
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 619: Found case insensitive match for NET
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 620: Found case insensitive match for NET
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 621: Found case insensitive match for NET
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 622: Found case insensitive match for NET
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 624: Found case insensitive match for NET
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 625: Found case insensitive match for NET
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 626: Found case insensitive match for NET
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 627: Found case insensitive match for NET
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 628: Found case insensitive match for NET
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 630: Found case insensitive match for NET
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 631: Found case insensitive match for NET
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 632: Found case insensitive match for NET
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 633: Found case insensitive match for NET
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 634: Found case insensitive match for NET
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 636: Found case insensitive match for NET
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 637: Found case insensitive match for NET
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 638: Found case insensitive match for NET
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 639: Found case insensitive match for NET
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 640: Found case insensitive match for NET
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 642: Found case insensitive match for NET
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 643: Found case insensitive match for NET
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 644: Found case insensitive match for NET
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 645: Found case insensitive match for NET
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 646: Found case insensitive match for NET
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 648: Found case insensitive match for NET
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 649: Found case insensitive match for NET
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 650: Found case insensitive match for NET
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 651: Found case insensitive match for NET
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 652: Found case insensitive match for NET
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 654: Found case insensitive match for NET
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 655: Found case insensitive match for NET
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 656: Found case insensitive match for NET
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 657: Found case insensitive match for NET
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 658: Found case insensitive match for NET
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 660: Found case insensitive match for NET
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 661: Found case insensitive match for NET
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 662: Found case insensitive match for NET
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 663: Found case insensitive match for NET
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 664: Found case insensitive match for NET
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 666: Found case insensitive match for NET
+   name 'EXP_IO_61_pin'. NET is 'exp_io_61_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 667: Found case insensitive match for NET
+   name 'EXP_IO_61_pin'. NET is 'exp_io_61_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 672: Found case insensitive match for NET
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 673: Found case insensitive match for NET
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 674: Found case insensitive match for NET
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 675: Found case insensitive match for NET
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 676: Found case insensitive match for NET
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 678: Found case insensitive match for NET
+   name 'EXP_IO_63_pin'. NET is 'exp_io_63_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 679: Found case insensitive match for NET
+   name 'EXP_IO_63_pin'. NET is 'exp_io_63_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 684: Found case insensitive match for NET
+   name 'EXP_IO_64_pin'. NET is 'exp_io_64_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 685: Found case insensitive match for NET
+   name 'EXP_IO_64_pin'. NET is 'exp_io_64_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 690: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 691: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 692: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 693: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 694: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 696: Found case insensitive match for NET
+   name 'EXP_IO_66_pin'. NET is 'exp_io_66_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 697: Found case insensitive match for NET
+   name 'EXP_IO_66_pin'. NET is 'exp_io_66_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 702: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 703: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 704: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 705: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 706: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 708: Found case insensitive match for NET
+   name 'EXP_IO_68_pin'. NET is 'exp_io_68_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 709: Found case insensitive match for NET
+   name 'EXP_IO_68_pin'. NET is 'exp_io_68_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 714: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 715: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 716: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 717: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 718: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 720: Found case insensitive match for NET
+   name 'EXP_IO_70_pin'. NET is 'exp_io_70_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 721: Found case insensitive match for NET
+   name 'EXP_IO_70_pin'. NET is 'exp_io_70_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 726: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 727: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 728: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 729: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 730: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 732: Found case insensitive match for NET
+   name 'EXP_IO_72_pin'. NET is 'exp_io_72_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 733: Found case insensitive match for NET
+   name 'EXP_IO_72_pin'. NET is 'exp_io_72_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 738: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 739: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 740: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 741: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 742: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 744: Found case insensitive match for NET
+   name 'EXP_IO_74_pin'. NET is 'exp_io_74_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 745: Found case insensitive match for NET
+   name 'EXP_IO_74_pin'. NET is 'exp_io_74_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 750: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 751: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 752: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 753: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 754: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 756: Found case insensitive match for NET
+   name 'EXP_IO_76_pin'. NET is 'exp_io_76_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 757: Found case insensitive match for NET
+   name 'EXP_IO_76_pin'. NET is 'exp_io_76_pin'.
+
+Checking timing specifications ...
+INFO:XdmHelpers:851 - TNM "fpga_0_DDR_CLK_FB", used in period specification
+   "TS_fpga_0_DDR_CLK_FB", was traced into DCM instance
+   "dcm_1/dcm_1/Using_Virtex.DCM_INST". The following new TNM groups and period
+   specifications were generated at the DCM output(s):
+   CLK90: TS_dcm_1_dcm_1_CLK90_BUF=PERIOD dcm_1_dcm_1_CLK90_BUF
+TS_fpga_0_DDR_CLK_FB*1 PHASE + 4.844 nS HIGH 50%
+INFO:XdmHelpers:851 - TNM "sys_clk_pin", used in period specification
+   "TS_sys_clk_pin", was traced into DCM instance
+   "dcm_0/dcm_0/Using_Virtex.DCM_INST". The following new TNM groups and period
+   specifications were generated at the DCM output(s):
+   CLK0: TS_dcm_0_dcm_0_CLK0_BUF=PERIOD dcm_0_dcm_0_CLK0_BUF TS_sys_clk_pin*1
+HIGH 50%
+   CLK90: TS_dcm_0_dcm_0_CLK90_BUF=PERIOD dcm_0_dcm_0_CLK90_BUF TS_sys_clk_pin*1
+PHASE + 2.5 nS HIGH 50%
+INFO:XdmHelpers:851 - TNM "dcm_0_dcm_0_CLK0_BUF", used in period specification
+   "TS_dcm_0_dcm_0_CLK0_BUF", was traced into DCM instance
+   "vga_framebuffer/vga_framebuffer/DCM_pixclk.DCM_pixclk". The following new
+   TNM groups and period specifications were generated at the DCM output(s):
+   CLKDV: TS_vga_framebuffer_vga_framebuffer_CLKDV=PERIOD
+vga_framebuffer_vga_framebuffer_CLKDV TS_dcm_0_dcm_0_CLK0_BUF*4 HIGH 50%
+
+Processing BMM file ...
+
+Checking expanded design ...
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[63].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[62].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[61].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[60].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[59].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[58].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[57].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[56].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[55].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[54].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[53].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[52].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[51].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[50].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[49].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[48].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[47].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[46].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[45].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[44].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[43].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[42].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[41].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[40].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[39].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[38].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[37].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[36].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[35].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[34].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[33].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[32].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[31].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[30].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[29].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[28].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[27].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[26].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[25].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[24].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[23].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[22].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[21].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[20].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[19].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[18].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[17].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[16].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[15].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[14].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[13].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[12].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[11].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[10].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[9].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[8].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[7].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[6].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[5].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[4].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[3].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[2].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[1].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR
+   _REGS_GEN[0].RDDATA_LOREG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_SLOW_MODE_BURSTXFER.I_ADDRESS_
+   COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_SLOW_MODE_BURSTXFER.I_ADDRESS_
+   COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG[0].I_AD
+   DR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG[1].I_AD
+   DR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG[2].I_AD
+   DR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0
+   ].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0
+   ].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0
+   ].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG0' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG1' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG2' has
+   unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[7].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[6].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[5].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[4].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[3].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[2].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[1].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU133' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_
+   cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FI
+   FO_GEN[0].V2_ASYNCH_FIFO_I/BU240' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SL
+   OW_MODE_BURSTXFER.I_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SL
+   OW_MODE_BURSTXFER.I_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[0].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[1].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[2].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[28].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[27].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[26].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[25].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[24].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[23].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[22].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[21].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[20].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[19].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[18].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[17].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[16].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[15].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[14].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[13].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[12].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[11].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[10].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[9].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[8].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[7].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[6].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[5].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[4].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[3].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[2].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[1].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[0].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[31].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[30].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[26].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[25].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[24].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[23].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[22].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[21].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[20].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[19].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[18].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[17].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[16].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[15].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[14].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[13].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[12].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[11].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[10].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[9].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[8].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[7].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[6].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[5].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[4].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[3].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[2].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[1].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[0].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 224
+
+Writing NGD file "system.ngd" ...
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -pr b system.ngd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - Map J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+Using target part "2vp30ff896-7".
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Writing design file "system_map.ncd"...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   31
+Logic Utilization:
+  Number of Slice Flip Flops:       2,732 out of  27,392    9%
+  Number of 4 input LUTs:           2,264 out of  27,392    8%
+Logic Distribution:
+  Number of occupied Slices:        2,624 out of  13,696   19%
+  Number of Slices containing only related logic:   2,624 out of   2,624  100%
+  Number of Slices containing unrelated logic:          0 out of   2,624    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          2,875 out of  27,392   10%
+  Number used as logic:             2,264
+  Number used as a route-thru:        195
+  Number used for Dual Port RAMs:     342
+    (Two LUTs used per Dual Port RAM)
+  Number used as Shift registers:      74
+
+  Number of bonded IOBs:              219 out of     556   39%
+    IOB Flip Flops:                   335
+    IOB Dual-Data Rate Flops:          24
+  Number of PPC405s:                   2 out of       2  100%
+  Number of JTAGPPCs:                  1 out of       1  100%
+  Number of Block RAMs:                67 out of     136   49%
+  Number of GCLKs:                      7 out of      16   43%
+  Number of DCMs:                       3 out of       8   37%
+  Number of GTs:                        0 out of       8    0%
+  Number of GT10s:                      0 out of       0    0%
+
+Total equivalent gate count for design:  4,502,590
+Additional JTAG gate count for IOBs:  10,512
+Peak Memory Usage:  245 MB
+Total REAL time to MAP completion:  15 secs 
+Total CPU time to MAP completion:   15 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - par J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.400 Volts. (default - Range: 1.400 to 1.600 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.93 2007-02-23".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                        7 out of 16     43%
+   Number of DCMs                            3 out of 8      37%
+   Number of External IOBs                 219 out of 556    39%
+      Number of LOCed IOBs                 219 out of 219   100%
+
+   Number of JTAGPPCs                        1 out of 1     100%
+   Number of PPC405s                         2 out of 2     100%
+   Number of RAMB16s                        67 out of 136    49%
+   Number of SLICEs                       2624 out of 13696  19%
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:994fa1) REAL time: 12 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:1312cfe) REAL time: 12 secs 
+
+Phase 3.31
+WARNING:Place:479 - Use of the left PPC405 has been detected. The left processor requires specialdesign considerations
+   when operating above 350 MHz in the -7 speed grade part.Please see Xilinx Application Note XAPP755 for details.
+Phase 3.31 (Checksum:1c9c37d) REAL time: 12 secs 
+
+Phase 4.2
+......
+......................
+Phase 4.2 (Checksum:990a0f) REAL time: 14 secs 
+
+Phase 5.30
+Phase 5.30 (Checksum:2faf07b) REAL time: 14 secs 
+
+Phase 6.3
+Phase 6.3 (Checksum:39386fa) REAL time: 14 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:42c1d79) REAL time: 15 secs 
+
+Phase 8.8
+...................
+.......
+...........
+.......
+.......
+...
+Phase 8.8 (Checksum:1214a0f) REAL time: 29 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:55d4a77) REAL time: 29 secs 
+
+Phase 10.18
+Phase 10.18 (Checksum:5f5e0f6) REAL time: 44 secs 
+
+Phase 11.5
+Phase 11.5 (Checksum:68e7775) REAL time: 44 secs 
+
+Phase 12.27
+Phase 12.27 (Checksum:7270df4) REAL time: 46 secs 
+
+Phase 13.24
+Phase 13.24 (Checksum:7bfa473) REAL time: 46 secs 
+
+REAL time consumed by placer: 48 secs 
+CPU  time consumed by placer: 48 secs 
+Writing design to file system.ncd
+
+
+Total REAL time to Placer completion: 49 secs 
+Total CPU time to Placer completion: 49 secs 
+
+Starting Router
+
+Phase 1: 22550 unrouted;       REAL time: 58 secs 
+
+Phase 2: 18426 unrouted;       REAL time: 59 secs 
+
+Phase 3: 3300 unrouted;       REAL time: 1 mins 6 secs 
+
+Phase 4: 3300 unrouted; (150463)      REAL time: 1 mins 6 secs 
+
+Phase 5: 3478 unrouted; (502)      REAL time: 1 mins 9 secs 
+
+Phase 6: 3480 unrouted; (0)      REAL time: 1 mins 9 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 1 mins 14 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 1 mins 18 secs 
+
+WARNING:Route:455 - CLK Net:sys_clk_pin_IBUFG may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:fpga_0_DDR_CLK_FB_IBUFG may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 1 mins 19 secs 
+Total CPU time to Router completion: 1 mins 19 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|plb_bram_if_cntlr_1_ |              |      |      |            |             |
+|       port_BRAM_Clk |     BUFGMUX3S| No   | 1770 |  0.281     |  1.258      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_SysACE_Compac |              |      |      |            |             |
+|tFlash_SysACE_CLK_pi |              |      |      |            |             |
+|             n_BUFGP |     BUFGMUX1S| No   |   61 |  0.110     |  1.241      |
++---------------------+--------------+------+------+------------+-------------+
+|            clk_90_s |     BUFGMUX2P| No   |   50 |  0.145     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|vga_framebuffer/vga_ |              |      |      |            |             |
+|framebuffer/buffered |              |      |      |            |             |
+|        _pixel_clock |     BUFGMUX7P| No   |   92 |  0.246     |  1.252      |
++---------------------+--------------+------+------+------------+-------------+
+|        ddr_clk_90_s |     BUFGMUX5P| No   |  202 |  0.147     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_Audio_Codec_B |              |      |      |            |             |
+|    it_Clk_pin_BUFGP |     BUFGMUX0S| No   |   79 |  0.158     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|   sys_clk_pin_IBUFG |         Local|      |    4 |  0.210     |  1.351      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_DDR_CLK_FB_IB |              |      |      |            |             |
+|                 UFG |         Local|      |    4 |  0.249     |  1.638      |
++---------------------+--------------+------+------+------------+-------------+
+|jtagppc_0_0_JTGC405T |              |      |      |            |             |
+|                  CK |         Local|      |    2 |  1.792     |  4.548      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  TS_dcm_0_dcm_0_CLK0_BUF = PERIOD TIMEGRP  | SETUP   |     0.015ns|     9.834ns|       0|           0
+  "dcm_0_dcm_0_CLK0_BUF" TS_sys_clk_pin     | HOLD    |     0.238ns|            |       0|           0
+       HIGH 50%                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_dcm_0_dcm_0_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     0.380ns|     8.480ns|       0|           0
+   "dcm_0_dcm_0_CLK90_BUF"         TS_sys_c | HOLD    |     0.452ns|            |       0|           0
+  lk_pin PHASE 2.5 ns HIGH 50%              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_vga_framebuffer_vga_framebuffer_CLKDV  | SETUP   |     2.326ns|     7.674ns|       0|           0
+  = PERIOD TIMEGRP         "vga_framebuffer | HOLD    |     0.553ns|            |       0|           0
+  _vga_framebuffer_CLKDV" TS_dcm_0_dcm_0_CL |         |            |            |        |            
+  K0_BUF * 4         HIGH 50%               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_dcm_1_dcm_1_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     5.350ns|     4.650ns|       0|           0
+   "dcm_1_dcm_1_CLK90_BUF"         TS_fpga_ | HOLD    |     0.478ns|            |       0|           0
+  0_DDR_CLK_FB PHASE 4.844 ns HIGH 50%      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP   |     8.632ns|     1.368ns|       0|           0
+  pin" 10 ns HIGH 50%                       | HOLD    |     0.535ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TS_fpga_0_DDR_CLK_FB = PERIOD TIMEGRP "fp | SETUP   |     8.665ns|     1.335ns|       0|           0
+  ga_0_DDR_CLK_FB" 10 ns HIGH 50%           | HOLD    |     0.513ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "fpga_0_SysACE_CompactFlash_SysACE_CL | SETUP   |    25.662ns|     4.338ns|       0|           0
+  K_pin_BUFGP/IBUFG" PERIOD = 30 ns         | HOLD    |     0.463ns|            |       0|           0
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "fpga_0_Audio_Codec_Bit_Clk_pin_BUFGP | SETUP   |    37.640ns|     7.508ns|       0|           0
+  /IBUFG" PERIOD = 81.38 ns HIGH 50%        | HOLD    |     0.555ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  PATH "TS_RST1_path" TIG                   | SETUP   |         N/A|     3.815ns|     N/A|           0
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 1 mins 23 secs 
+Total CPU time to PAR completion: 1 mins 22 secs 
+
+Peak Memory Usage:  329 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 3
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+C:\Xilinx91i.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+--------------------------------------------------------------------------------
+Release 9.1.02i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+trce -e 3 -xml system.twx system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc2vp30,-7 (PRODUCTION 1.93 2007-02-23)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a
+   50 Ohm transmission line loading model.  For the details of this model, and
+   for more information on accounting for different loading conditions, please
+   see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 134872 paths, 0 nets, and 18764 connections
+
+Design statistics:
+   Minimum period:  30.696ns (Maximum frequency:  32.578MHz)
+
+
+Analysis completed Tue Nov 01 19:53:26 2011
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 2
+Total time: 8 secs 
+
+

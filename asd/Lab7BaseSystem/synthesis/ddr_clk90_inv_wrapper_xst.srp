@@ -1,0 +1,238 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "ddr_clk90_inv_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/ddr_clk90_inv_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : ddr_clk90_inv_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/util_vector_logic_v1_00_a/hdl/vhdl/util_vector_logic.vhd" in Library util_vector_logic_v1_00_a.
+Entity <util_vector_logic> compiled.
+Entity <util_vector_logic> (Architecture <IMP>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/hdl/ddr_clk90_inv_wrapper.vhd" in Library work.
+Entity <ddr_clk90_inv_wrapper> compiled.
+Entity <ddr_clk90_inv_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ddr_clk90_inv_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <util_vector_logic> in library <util_vector_logic_v1_00_a> (architecture <IMP>) with generics.
+	C_OPERATION = "not"
+	C_SIZE = 1
+WARNING:Xst:795 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/util_vector_logic_v1_00_a/hdl/vhdl/util_vector_logic.vhd" line 76: Size of operands are different : result is <false>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ddr_clk90_inv_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set user-defined property "X_CORE_INFO =  util_vector_logic_v1_00_a" for unit <util_vector_logic>.
+Entity <ddr_clk90_inv_wrapper> analyzed. Unit <ddr_clk90_inv_wrapper> generated.
+
+Analyzing generic Entity <util_vector_logic> in library <util_vector_logic_v1_00_a> (Architecture <IMP>).
+	C_OPERATION = "not"
+	C_SIZE = 1
+WARNING:Xst:795 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/util_vector_logic_v1_00_a/hdl/vhdl/util_vector_logic.vhd" line 127: Size of operands are different : result is <false>.
+Entity <util_vector_logic> analyzed. Unit <util_vector_logic> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <util_vector_logic>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/util_vector_logic_v1_00_a/hdl/vhdl/util_vector_logic.vhd".
+WARNING:Xst:647 - Input <Op2<0>> is never used.
+Unit <util_vector_logic> synthesized.
+
+
+Synthesizing Unit <ddr_clk90_inv_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/hdl/ddr_clk90_inv_wrapper.vhd".
+Unit <ddr_clk90_inv_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ddr_clk90_inv_wrapper> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/ddr_clk90_inv_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 3
+
+Cell Usage :
+# BELS                             : 1
+#      INV                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                       1  out of  13696     0%  
+ Number of 4 input LUTs:                 1  out of  27392     0%  
+ Number of IOs:                          3
+ Number of bonded IOBs:                  0  out of    556     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 0.275ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.275ns (Levels of Logic = 1)
+  Source:            Op1<0> (PAD)
+  Destination:       Res<0> (PAD)
+
+  Data Path: Op1<0> to Res<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     INV:I->O              0   0.275   0.000  ddr_clk90_inv/Res_0_not00001_INV_0 (Res<0>)
+    ----------------------------------------
+    Total                      0.275ns (0.275ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+CPU : 5.63 / 5.70 s | Elapsed : 6.00 / 6.00 s
+ 
+--> 
+
+Total memory usage is 196012 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

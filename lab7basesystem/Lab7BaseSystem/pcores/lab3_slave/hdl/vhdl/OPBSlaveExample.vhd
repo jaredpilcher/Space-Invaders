@@ -114,3 +114,74 @@ entity lab3_slave is
 
 end entity lab3_slave;
 
+architecture DI01 of lab3_slave is
+
+	type state_type is (Idle, R, W);
+	signal next_state, current_state: state_type;
+	signal SL_DBusEn: std_logic := '0';
+	signal our_value, our_value_next: std_logic_vector(31 downto 0) := "10101010101010101010101010101010";
+	signal interrupt_enable, interrupt_enable_next: std_logic := '0';
+	signal interrupts_acknowledged : std_logic := '1';
+	signal score, lives, aliens_left: std_logic_vector(31 downto 0) := (others => '0');
+	
+begin
+	registers: process(OPB_Clk)
+	begin
+		if(OPB_Clk'event and OPB_Clk='1') then
+			our_value <= our_value_next;
+		end if;
+	end process;
+	
+	logic: process(OPB_select, OPB_RNW, OPB_ABus, OPB_DBus)
+	begin
+		SL_DBusEn <= '0';
+		Sl_xferAck <= '0';
+		our_value_next <= our_value;
+		if OPB_select = '1' then
+			if OPB_ABus >= C_BASEADDR and OPB_ABus <= C_HIGHADDR then
+				if OPB_RNW = '1' then
+					SL_DBusEn <= '1';
+					Sl_xferAck <= '1';
+				else
+					our_value_next <= OPB_DBus;
+				end if;
+			end if;
+		end if;
+	end process;
+	
+	Sl_DBus <= 	our_value when SL_DBusEn = '1' else
+				(others => '0');
+	
+	--unused out ports
+    Sl_errAck <= '0';
+    Sl_retry <= '0';
+    Sl_toutSup <= '0';
+    interruptRequest <= '0';
+
+    -- These are the pins that go to the DIO1 board.
+    -- J5 Connections
+    exp_io_41_s <= '0';
+    exp_io_43_s <= '0';
+	
+    -- J6 Connections
+    exp_io_48_s <= '0';
+    exp_io_50_s <= '0';
+    exp_io_52_s <= '0';
+    exp_io_53_s <= '0';
+    exp_io_54_s <= '0';
+    exp_io_55_s <= '0';
+    exp_io_56_s <= '0';
+    exp_io_57_s <= '0';
+    exp_io_58_s <= '0';
+    exp_io_59_s <= '0';
+    exp_io_60_s <= '0';
+    exp_io_62_s <= '0';
+    exp_io_65_s <= '0';
+    exp_io_67_s <= '0';
+    exp_io_69_s <= '0';
+    exp_io_71_s <= '0';
+    exp_io_73_s <= '0';
+    exp_io_75_s <= '0';
+	
+end DI01;
+

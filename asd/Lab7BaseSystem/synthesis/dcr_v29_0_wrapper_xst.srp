@@ -1,0 +1,262 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "dcr_v29_0_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/dcr_v29_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : dcr_v29_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_muxcy.vhd" in Library proc_common_v1_00_b.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd" in Library proc_common_v1_00_b.
+Entity <or_gate> compiled.
+Entity <or_gate> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcr_v29_v1_00_a/hdl/vhdl/dcr_v29.vhd" in Library dcr_v29_v1_00_a.
+Entity <dcr_v29> compiled.
+Entity <dcr_v29> (Architecture <imp>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/hdl/dcr_v29_0_wrapper.vhd" in Library work.
+Entity <dcr_v29_0_wrapper> compiled.
+Entity <dcr_v29_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <dcr_v29_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <dcr_v29> in library <dcr_v29_v1_00_a> (architecture <imp>) with generics.
+	C_DCR_AWIDTH = 10
+	C_DCR_DWIDTH = 32
+	C_DCR_NUM_SLAVES = 1
+	C_USE_LUT_OR = 1
+
+Analyzing hierarchy for entity <or_gate> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 1
+	C_OR_WIDTH = 1
+	C_USE_LUT_OR = true
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <dcr_v29_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set user-defined property "X_CORE_INFO =  dcr_v29_v1_00_a" for unit <dcr_v29>.
+Entity <dcr_v29_0_wrapper> analyzed. Unit <dcr_v29_0_wrapper> generated.
+
+Analyzing generic Entity <dcr_v29> in library <dcr_v29_v1_00_a> (Architecture <imp>).
+	C_DCR_AWIDTH = 10
+	C_DCR_DWIDTH = 32
+	C_DCR_NUM_SLAVES = 1
+	C_USE_LUT_OR = 1
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcr_v29_v1_00_a/hdl/vhdl/dcr_v29.vhd" line 196: Instantiating black box module <BUF>.
+Entity <dcr_v29> analyzed. Unit <dcr_v29> generated.
+
+Analyzing generic Entity <or_gate> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_BUS_WIDTH = 1
+	C_OR_WIDTH = 1
+	C_USE_LUT_OR = true
+Entity <or_gate> analyzed. Unit <or_gate> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <or_gate>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned.
+Unit <or_gate> synthesized.
+
+
+Synthesizing Unit <dcr_v29>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcr_v29_v1_00_a/hdl/vhdl/dcr_v29.vhd".
+WARNING:Xst:646 - Signal <dummy> is assigned but never used.
+Unit <dcr_v29> synthesized.
+
+
+Synthesizing Unit <dcr_v29_0_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/hdl/dcr_v29_0_wrapper.vhd".
+Unit <dcr_v29_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <dcr_v29_0_wrapper> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/dcr_v29_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 154
+
+Cell Usage :
+# BELS                             : 2
+#      BUF                         : 1
+#      VCC                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                       0  out of  13696     0%  
+ Number of IOs:                        154
+ Number of bonded IOBs:                  0  out of    556     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 0.000ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 77 / 77
+-------------------------------------------------------------------------
+Delay:               0.000ns (Levels of Logic = 0)
+  Source:            Sl_dcrAck<0> (PAD)
+  Destination:       DCR_Ack (PAD)
+
+  Data Path: Sl_dcrAck<0> to DCR_Ack
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+CPU : 6.05 / 6.13 s | Elapsed : 6.00 / 6.00 s
+ 
+--> 
+
+Total memory usage is 197036 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

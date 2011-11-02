@@ -1,1 +1,1 @@
- -p virtex2p -lang vhdl   -s mti -X C:/hutch/ECEn427/Labs/Lab7BaseSystem/ -E C:/hutch/ECEn427/Labs/Lab7BaseSystem/
+ -p virtex2p -lang vhdl   -s mti -X D:/Put_Your_Temp_Files_Here/space_invaders/lab7basesystem/Lab7BaseSystem/ -E D:/Put_Your_Temp_Files_Here/space_invaders/lab7basesystem/Lab7BaseSystem/
