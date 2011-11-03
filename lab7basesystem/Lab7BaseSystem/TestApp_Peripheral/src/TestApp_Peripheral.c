@@ -34,6 +34,7 @@
 // Located in: ppc405_0/include/xparameters.h
 #include "xparameters.h"
 
+
 #include "stdio.h"
 
 #include "xintc.h"
@@ -50,139 +51,225 @@
 
 //====================================================
 
+void disableSlaveInterrupt(){
+	Xint32 ier = XIntc_In32(XPAR_OPB_INTC_0_BASEADDR + XIN_IER_OFFSET);
+	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_IER_OFFSET, (ier & ~XPAR_LAB3_SLAVE_0_INTERRUPTREQUEST_MASK));
+}
+
+void enableSlaveInterrupt(){
+	Xint32 ier = XIntc_In32(XPAR_OPB_INTC_0_BASEADDR + XIN_IER_OFFSET);
+	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_IER_OFFSET, (ier | XPAR_LAB3_SLAVE_0_INTERRUPTREQUEST_MASK));
+	XIo_Out32(0x40080000 + 16, 1);
+}
+
+void acknowledgeSlaveInterrupts(){
+	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_IAR_OFFSET, XPAR_LAB3_SLAVE_0_INTERRUPTREQUEST_MASK);
+	XIo_Out32(0x40080000 + 12, 1);
+}
+
+void clearSlaveInterrupts(){
+	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_MER_OFFSET, 0);
+	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_IER_OFFSET, 0);
+	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_IAR_OFFSET, 0xFFFFFFFF);
+	XIo_Out32(0x40080000 + 16, 0);
+}
+
+void initializeMER(){
+	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_MER_OFFSET, XIN_INT_MASTER_ENABLE_MASK | XIN_INT_HARDWARE_ENABLE_MASK);
+}
+
+void testHandler(XIntc * device){
+	disableSlaveInterrupt();
+	acknowledgeSlaveInterrupts();
+	print("interrupt occured");
+	enableSlaveInterrupt();
+	//XIntc_Enable(device, XPAR_OPB_INTC_0_AUDIO_CODEC_INTERRUPT_INTR);
+}
+
+int to_hex_display(int value){
+	int d0 = value % 10;
+	int d1 = (value % 100)/10;
+	int d2 = (value % 1000)/100;
+	int d3 = (value % 10000)/1000;
+	return d0 + 16*d1 + 16*16*d2 + 16*16*16*d3;
+}
 int main (void) {
-
-
-   static XIntc intc;
-
-   static XGpio PushButtons_5Bit_Gpio;
-   print("-- Entering main() --\r\n");
-
-
-   {
-      XStatus status;
-      
-      print("\r\n Runnning IntcSelfTestExample() for opb_intc_0...\r\n");
-      
-      status = IntcSelfTestExample(XPAR_OPB_INTC_0_DEVICE_ID);
-      
-      if (status == 0) {
-         print("IntcSelfTestExample PASSED\r\n");
-      }
-      else {
-         print("IntcSelfTestExample FAILED\r\n");
-      }
-   } 
+	XIntc dud;
+	clearSlaveInterrupts();
+	acknowledgeSlaveInterrupts();
+	initializeMER();
+	XExc_Init();
+	XIo_Out32(0x40080050, 16000000);
+	XExc_mEnableExceptions(XEXC_NON_CRITICAL);
+	XExc_RegisterHandler(XEXC_ID_NON_CRITICAL_INT, testHandler , &dud);
+	enableSlaveInterrupt();
 	
-   {
-       XStatus Status;
+	int value = 4379;
 
-       Status = IntcInterruptSetup(&intc, XPAR_OPB_INTC_0_DEVICE_ID);
-       if (Status == 0) {
-          print("Intc Interrupt Setup PASSED\r\n");
-       } 
-       else {
-         print("Intc Interrupt Setup FAILED\r\n");
-      } 
-   }
-
-   /*
-    * Peripheral SelfTest will not be run for RS232_Uart_1
-    * because it has been selected as the STDOUT device
-    */
-
-
-
-   {
-      XStatus status;
-      
-      print("\r\nRunning SysAceSelfTestExample() for SysACE_CompactFlash...\r\n");
-      status = SysAceSelfTestExample(XPAR_SYSACE_COMPACTFLASH_DEVICE_ID);
-      if (status == 0) {
-         print("SysAceSelfTestExample PASSED\r\n");
-      }
-      else {
-         print("SysAceSelfTestExample FAILED\r\n");
-      }
-   }
-
-
-   {
-      Xuint32 status;
-      
-      print("\r\nRunning GpioOutputExample() for LEDs_4Bit...\r\n");
-
-      status = GpioOutputExample(XPAR_LEDS_4BIT_DEVICE_ID,4);
-      
-      if (status == 0) {
-         print("GpioOutputExample PASSED.\r\n");
-      }
-      else {
-         print("GpioOutputExample FAILED.\r\n");
-      }
-   }
-
-
-   {
-      Xuint32 status;
-      
-      print("\r\nRunning GpioInputExample() for DIPSWs_4Bit...\r\n");
-
-      Xuint32 DataRead;
-      
-      status = GpioInputExample(XPAR_DIPSWS_4BIT_DEVICE_ID, &DataRead);
-      
-      if (status == 0) {
-         xil_printf("GpioInputExample PASSED. Read data:0x%X\r\n", DataRead);
-      }
-      else {
-         print("GpioInputExample FAILED.\r\n");
-      }
-   }
-
-
-   {
-      Xuint32 status;
-      
-      print("\r\nRunning GpioInputExample() for PushButtons_5Bit...\r\n");
-
-      Xuint32 DataRead;
-      
-      status = GpioInputExample(XPAR_PUSHBUTTONS_5BIT_DEVICE_ID, &DataRead);
-      
-      if (status == 0) {
-         xil_printf("GpioInputExample PASSED. Read data:0x%X\r\n", DataRead);
-      }
-      else {
-         print("GpioInputExample FAILED.\r\n");
-      }
-   }
-   {
-      
-      XStatus Status;
-        
-      Xuint32 DataRead;
-      
-      print(" Press button to Generate Interrupt\r\n");
-      
-      Status = GpioIntrExample(&intc, &PushButtons_5Bit_Gpio, \
-                               XPAR_PUSHBUTTONS_5BIT_DEVICE_ID, \
-                               XPAR_OPB_INTC_0_PUSHBUTTONS_5BIT_IP2INTC_IRPT_INTR, \
-                               GPIO_CHANNEL1, &DataRead);
+	XIo_Out32(0x40080000, to_hex_display(4379));
+//	int ack = XIo_In32(0x40080000 + 12);
+//	int int_en = XIo_In32(0x40080000 + 16);
+//	xil_printf("ack value: %x int_en value: %x\n\r",ack, int_en);
+//	char c;
+//	print("push a button\n\r");
+//	read(0,&c,1);
+//	
+//	ack = XIo_In32(0x40080000 + 12);
+//	int_en = XIo_In32(0x40080000 + 16);
+//	xil_printf("ack value: %x int_en value: %x\n\r",ack, int_en);
+//	XIo_Out32(0x40080000 + 16, 1);
+//	print("enabled interrupts\n\r");
+//	int_en = XIo_In32(0x40080000 + 16);
+//	xil_printf("ack value: %x int_en value: %x\n\r",ack, int_en);
+//	print("push a button\n\r");
+//	read(0,&c,1);
+//	
+//	ack = XIo_In32(0x40080000 + 12);
+//	int_en = XIo_In32(0x40080000 + 16);
+//	xil_printf("ack value: %x int_en value: %x\n\r",ack, int_en);
+//	print("acknowledging interrupt\n\r");
+//	XIo_Out32(0x40080000 + 12, 1);
+//	ack = XIo_In32(0x40080000 + 12);
+//	int_en = XIo_In32(0x40080000 + 16);
+//	xil_printf("ack value: %x int_en value: %x\n\r",ack, int_en);
 	
-      if (Status == 0 ){
-             if(DataRead == 0)
-                print("No button pressed. \r\n");
-             else
-                print("Gpio Interrupt Test PASSED. \r\n"); 
-      } 
-      else {
-         print("Gpio Interrupt Test FAILED.\r\n");
-      }
+	while(1){
+//		char c;
+//		xil_printf("LEDS: %x\n\r", XIo_In32(0x40080000 + 40));
+//		read(0,&c,1);
+//		XIo_Out32;
+	}
 	
-   }
+//   static XIntc intc;
 
-   print("-- Exiting main() --\r\n");
-   return 0;
+//   static XGpio PushButtons_5Bit_Gpio;
+//   print("-- Entering main() --\r\n");
+//
+//
+//   {
+//      XStatus status;
+//      
+//      print("\r\n Runnning IntcSelfTestExample() for opb_intc_0...\r\n");
+//      
+//      status = IntcSelfTestExample(XPAR_OPB_INTC_0_DEVICE_ID);
+//      
+//      if (status == 0) {
+//         print("IntcSelfTestExample PASSED\r\n");
+//      }
+//      else {
+//         print("IntcSelfTestExample FAILED\r\n");
+//      }
+//   } 
+//	
+//   {
+//       XStatus Status;
+//
+//       Status = IntcInterruptSetup(&intc, XPAR_OPB_INTC_0_DEVICE_ID);
+//       if (Status == 0) {
+//          print("Intc Interrupt Setup PASSED\r\n");
+//       } 
+//       else {
+//         print("Intc Interrupt Setup FAILED\r\n");
+//      } 
+//   }
+//
+//   /*
+//    * Peripheral SelfTest will not be run for RS232_Uart_1
+//    * because it has been selected as the STDOUT device
+//    */
+//
+//
+//
+//   {
+//      XStatus status;
+//      
+//      print("\r\nRunning SysAceSelfTestExample() for SysACE_CompactFlash...\r\n");
+//      status = SysAceSelfTestExample(XPAR_SYSACE_COMPACTFLASH_DEVICE_ID);
+//      if (status == 0) {
+//         print("SysAceSelfTestExample PASSED\r\n");
+//      }
+//      else {
+//         print("SysAceSelfTestExample FAILED\r\n");
+//      }
+//   }
+//
+//
+//   {
+//      Xuint32 status;
+//      
+//      print("\r\nRunning GpioOutputExample() for LEDs_4Bit...\r\n");
+//
+//      status = GpioOutputExample(XPAR_LEDS_4BIT_DEVICE_ID,4);
+//      
+//      if (status == 0) {
+//         print("GpioOutputExample PASSED.\r\n");
+//      }
+//      else {
+//         print("GpioOutputExample FAILED.\r\n");
+//      }
+//   }
+//
+//
+//   {
+//      Xuint32 status;
+//      
+//      print("\r\nRunning GpioInputExample() for DIPSWs_4Bit...\r\n");
+//
+//      Xuint32 DataRead;
+//      
+//      status = GpioInputExample(XPAR_DIPSWS_4BIT_DEVICE_ID, &DataRead);
+//      
+//      if (status == 0) {
+//         xil_printf("GpioInputExample PASSED. Read data:0x%X\r\n", DataRead);
+//      }
+//      else {
+//         print("GpioInputExample FAILED.\r\n");
+//      }
+//   }
+//
+//
+//   {
+//      Xuint32 status;
+//      
+//      print("\r\nRunning GpioInputExample() for PushButtons_5Bit...\r\n");
+//
+//      Xuint32 DataRead;
+//      
+//      status = GpioInputExample(XPAR_PUSHBUTTONS_5BIT_DEVICE_ID, &DataRead);
+//      
+//      if (status == 0) {
+//         xil_printf("GpioInputExample PASSED. Read data:0x%X\r\n", DataRead);
+//      }
+//      else {
+//         print("GpioInputExample FAILED.\r\n");
+//      }
+//   }
+//   {
+//      
+//      XStatus Status;
+//        
+//      Xuint32 DataRead;
+//      
+//      print(" Press button to Generate Interrupt\r\n");
+//      
+//      Status = GpioIntrExample(&intc, &PushButtons_5Bit_Gpio, \
+//                               XPAR_PUSHBUTTONS_5BIT_DEVICE_ID, \
+//                               XPAR_OPB_INTC_0_PUSHBUTTONS_5BIT_IP2INTC_IRPT_INTR, \
+//                               GPIO_CHANNEL1, &DataRead);
+//	
+//      if (Status == 0 ){
+//             if(DataRead == 0)
+//                print("No button pressed. \r\n");
+//             else
+//                print("Gpio Interrupt Test PASSED. \r\n"); 
+//      } 
+//      else {
+//         print("Gpio Interrupt Test FAILED.\r\n");
+//      }
+//	
+//   }
+//
+//   print("-- Exiting main() --\r\n");
+//   return 0;
 }
 

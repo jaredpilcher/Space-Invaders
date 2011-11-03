@@ -1,0 +1,476 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "lab3_slave_0_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/lab3_slave_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : lab3_slave_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd" in Library lab3_slave.
+Entity <lab3_slave> compiled.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd" Line 220. Choice + is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd" Line 222. Choice C_BASEADDR is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd" Line 227. Choice + is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd" Line 229. Choice + is not a locally static expression.
+Entity <lab3_slave> (Architecture <DI01>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/lab3_slave_0_wrapper.vhd" in Library work.
+Entity <lab3_slave_0_wrapper> compiled.
+Entity <lab3_slave_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <lab3_slave_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <lab3_slave> in library <lab3_slave> (architecture <DI01>) with generics.
+	C_BASEADDR = "01000000000010000000000000000000"
+	C_FAMILY = "virtex2p"
+	C_HIGHADDR = "01000000000010001111111111111111"
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <lab3_slave_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+    Set user-defined property "X_CORE_INFO =  lab3_slave_v" for unit <lab3_slave>.
+Entity <lab3_slave_0_wrapper> analyzed. Unit <lab3_slave_0_wrapper> generated.
+
+Analyzing generic Entity <lab3_slave> in library <lab3_slave> (Architecture <DI01>).
+	C_BASEADDR = "01000000000010000000000000000000"
+	C_FAMILY = "virtex2p"
+	C_HIGHADDR = "01000000000010001111111111111111"
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd" line 194: The following signals are missing in the process sensitivity list:
+   our_value, leds, digit0, digit1, digit2, digit3, interrupts_acknowledged, interrupt_enable, buttons_old, switches_old.
+Entity <lab3_slave> analyzed. Unit <lab3_slave> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <lab3_slave>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd".
+WARNING:Xst:647 - Input <OPB_BE> is never used.
+WARNING:Xst:647 - Input <OPB_Rst> is never used.
+WARNING:Xst:647 - Input <OPB_seqAddr> is never used.
+WARNING:Xst:1780 - Signal <current_state> is never used or assigned.
+WARNING:Xst:1780 - Signal <segments<7>> is never used or assigned.
+WARNING:Xst:646 - Signal <our_value> is assigned but never used.
+WARNING:Xst:653 - Signal <display_data<0:15>> is used but never assigned. Tied to value 0000000000000000.
+WARNING:Xst:1780 - Signal <next_state> is never used or assigned.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+    Found 16x3-bit ROM for signal <final_digit$rom0000>.
+    Found 1-of-4 decoder for signal <an_out>.
+    Found 32-bit register for signal <buttons_old>.
+    Found 20-bit up counter for signal <count>.
+    Found 32-bit register for signal <debounce_counter>.
+    Found 32-bit register for signal <debounce_counter_next>.
+    Found 32-bit adder for signal <debounce_counter_next$addsub0000> created at line 166.
+    Found 33-bit comparator lessequal for signal <debounce_counter_next$cmp_le0000> created at line 165.
+    Found 4-bit register for signal <digit0>.
+    Found 4-bit register for signal <digit1>.
+    Found 4-bit register for signal <digit2>.
+    Found 4-bit register for signal <digit3>.
+    Found 4-bit 4-to-1 multiplexer for signal <final_digit>.
+    Found 1-bit register for signal <inputs_changed>.
+    Found 32-bit comparator not equal for signal <inputs_changed_next$cmp_ne0000> created at line 207.
+    Found 32-bit comparator not equal for signal <inputs_changed_next$cmp_ne0001> created at line 207.
+    Found 1-bit register for signal <interrupt_enable>.
+    Found 1-bit register for signal <interrupts_acknowledged>.
+    Found 32-bit comparator greater for signal <interrupts_acknowledged$cmp_gt0000> created at line 214.
+    Found 32-bit comparator less for signal <interrupts_acknowledged$cmp_lt0000> created at line 214.
+    Found 32-bit register for signal <leds>.
+    Found 1-bit register for signal <read_buttons>.
+    Found 32-bit comparator greatequal for signal <SL_DBusEn$cmp_ge0000> created at line 214.
+    Found 32-bit comparator lessequal for signal <SL_DBusEn$cmp_le0000> created at line 214.
+    Found 32-bit register for signal <switches_old>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred 180 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <lab3_slave> synthesized.
+
+
+Synthesizing Unit <lab3_slave_0_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/lab3_slave_0_wrapper.vhd".
+Unit <lab3_slave_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x3-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 13
+ 1-bit register                                        : 4
+ 32-bit register                                       : 5
+ 4-bit register                                        : 4
+# Comparators                                          : 7
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+ 32-bit comparator lessequal                           : 1
+ 32-bit comparator not equal                           : 2
+ 33-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2404 -  FFs/Latches <switches_old<0:7>> (without init value) have a constant value of 0 in block <lab3_slave>.
+WARNING:Xst:2404 -  FFs/Latches <buttons_old<0:4>> (without init value) have a constant value of 0 in block <lab3_slave>.
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x3-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+# Comparators                                          : 7
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+ 32-bit comparator lessequal                           : 1
+ 32-bit comparator not equal                           : 2
+ 33-bit comparator lessequal                           : 1
+# Multiplexers                                         : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <lab3_slave_0_wrapper> ...
+
+Optimizing unit <lab3_slave> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 149
+ Flip-Flops                                            : 149
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/lab3_slave_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 143
+
+Cell Usage :
+# BELS                             : 376
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 55
+#      LUT2                        : 16
+#      LUT3                        : 66
+#      LUT4                        : 71
+#      MUXCY                       : 101
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 50
+# FlipFlops/Latches                : 149
+#      FD                          : 34
+#      FDE                         : 50
+#      FDR                         : 65
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                     140  out of  13696     1%  
+ Number of Slice Flip Flops:           149  out of  27392     0%  
+ Number of 4 input LUTs:               214  out of  27392     0%  
+ Number of IOs:                        143
+ Number of bonded IOBs:                  0  out of    556     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                      | Load  |
+-----------------------------------+--------------------------------------------+-------+
+OPB_Clk                            | NONE(lab3_slave_0/debounce_counter_next_11)| 149   |
+-----------------------------------+--------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 4.127ns (Maximum Frequency: 242.301MHz)
+   Minimum input arrival time before clock: 3.094ns
+   Maximum output required time after clock: 2.482ns
+   Maximum combinational path delay: 5.201ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OPB_Clk'
+  Clock period: 4.127ns (frequency: 242.301MHz)
+  Total number of paths / destination ports: 1938 / 152
+-------------------------------------------------------------------------
+Delay:               4.127ns (Levels of Logic = 33)
+  Source:            lab3_slave_0/debounce_counter_30 (FF)
+  Destination:       lab3_slave_0/debounce_counter_next_0 (FF)
+  Source Clock:      OPB_Clk rising
+  Destination Clock: OPB_Clk rising
+
+  Data Path: lab3_slave_0/debounce_counter_30 to lab3_slave_0/debounce_counter_next_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.370   0.549  lab3_slave_0/debounce_counter_30 (lab3_slave_0/debounce_counter_30)
+     LUT1:I0->O            1   0.275   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<1>_rt (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.334   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<1> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<2> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<3> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<4> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<5> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<6> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<7> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<8> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<9> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<10> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<11> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<12> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<13> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<14> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<15> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<16> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<17> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<18> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<19> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<20> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<21> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<22> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<23> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<24> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<25> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<26> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<27> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<28> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<29> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.036   0.000  lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<30> (lab3_slave_0/Madd_debounce_counter_next_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.708   0.349  lab3_slave_0/Madd_debounce_counter_next_addsub0000_xor<31> (lab3_slave_0/debounce_counter_next_addsub0000<31>)
+     LUT3:I2->O            1   0.275   0.000  lab3_slave_0/debounce_counter_next_mux0002<31>1 (lab3_slave_0/debounce_counter_next_mux0002<31>)
+     FDR:D                     0.208          lab3_slave_0/debounce_counter_next_0
+    ----------------------------------------
+    Total                      4.127ns (3.228ns logic, 0.899ns route)
+                                       (78.2% logic, 21.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 1835 / 114
+-------------------------------------------------------------------------
+Offset:              3.094ns (Levels of Logic = 10)
+  Source:            OPB_ABus<8> (PAD)
+  Destination:       lab3_slave_0/interrupts_acknowledged (FF)
+  Destination Clock: OPB_Clk rising
+
+  Data Path: OPB_ABus<8> to lab3_slave_0/interrupts_acknowledged
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/interrupt_enable_not00011_wg_lut<0> (N2)
+     MUXCY:S->O            1   0.334   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<0> (lab3_slave_0/interrupt_enable_not00011_wg_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<1> (lab3_slave_0/interrupt_enable_not00011_wg_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<2> (lab3_slave_0/interrupt_enable_not00011_wg_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<3> (lab3_slave_0/interrupt_enable_not00011_wg_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<4> (lab3_slave_0/interrupt_enable_not00011_wg_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<5> (lab3_slave_0/interrupt_enable_not00011_wg_cy<5>)
+     MUXCY:CI->O           5   0.415   0.564  lab3_slave_0/interrupt_enable_not00011_wg_cy<6> (lab3_slave_0/output_and0000)
+     LUT3:I0->O            1   0.275   0.430  lab3_slave_0/interrupts_acknowledged_mux00002 (lab3_slave_0/interrupts_acknowledged_mux0000_map1)
+     LUT4:I1->O            1   0.275   0.000  lab3_slave_0/interrupts_acknowledged_mux000015 (lab3_slave_0/interrupts_acknowledged_mux0000)
+     FDE:D                     0.208          lab3_slave_0/interrupts_acknowledged
+    ----------------------------------------
+    Total                      3.094ns (2.101ns logic, 0.993ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 264 / 52
+-------------------------------------------------------------------------
+Offset:              2.482ns (Levels of Logic = 3)
+  Source:            lab3_slave_0/count_1 (FF)
+  Destination:       exp_io_75_s (PAD)
+  Source Clock:      OPB_Clk rising
+
+  Data Path: lab3_slave_0/count_1 to exp_io_75_s
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              13   0.370   0.658  lab3_slave_0/count_1 (lab3_slave_0/count_1)
+     LUT3:I0->O            1   0.275   0.000  lab3_slave_0/mux_3 (lab3_slave_0/N26)
+     MUXF5:I1->O           7   0.303   0.601  lab3_slave_0/mux_2_f5 (lab3_slave_0/final_digit<3>)
+     LUT4:I0->O            0   0.275   0.000  lab3_slave_0/segments_4_or00001 (exp_io_71_s)
+    ----------------------------------------
+    Total                      2.482ns (1.223ns logic, 1.259ns route)
+                                       (49.3% logic, 50.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3237 / 33
+-------------------------------------------------------------------------
+Delay:               5.201ns (Levels of Logic = 13)
+  Source:            OPB_ABus<8> (PAD)
+  Destination:       Sl_DBus<24> (PAD)
+
+  Data Path: OPB_ABus<8> to Sl_DBus<24>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/interrupt_enable_not00011_wg_lut<0> (N2)
+     MUXCY:S->O            1   0.334   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<0> (lab3_slave_0/interrupt_enable_not00011_wg_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<1> (lab3_slave_0/interrupt_enable_not00011_wg_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<2> (lab3_slave_0/interrupt_enable_not00011_wg_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<3> (lab3_slave_0/interrupt_enable_not00011_wg_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<4> (lab3_slave_0/interrupt_enable_not00011_wg_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<5> (lab3_slave_0/interrupt_enable_not00011_wg_cy<5>)
+     MUXCY:CI->O           5   0.416   0.564  lab3_slave_0/interrupt_enable_not00011_wg_cy<6> (lab3_slave_0/output_and0000)
+     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/Sl_DBus<24>311 (N260)
+     MUXF5:I1->O          30   0.303   0.766  lab3_slave_0/Sl_DBus<24>31_f5 (lab3_slave_0/N101)
+     LUT2:I1->O           11   0.275   0.657  lab3_slave_0/Sl_DBus<24>21 (lab3_slave_0/N81)
+     LUT4:I0->O            1   0.275   0.468  lab3_slave_0/Sl_DBus<26>_SW0 (N74)
+     LUT4:I0->O            0   0.275   0.000  lab3_slave_0/Sl_DBus<26> (Sl_DBus<26>)
+    ----------------------------------------
+    Total                      5.201ns (2.746ns logic, 2.455ns route)
+                                       (52.8% logic, 47.2% route)
+
+=========================================================================
+CPU : 8.11 / 8.19 s | Elapsed : 8.00 / 8.00 s
+ 
+--> 
+
+Total memory usage is 200108 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

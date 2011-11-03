@@ -73,7 +73,6 @@ netlist: $(POSTSYN_NETLIST)
 libs: $(LIBRARIES)
 
 program: $(ALL_USER_ELF_FILES)
-	@echo "No user software applications specified"
 
 download: $(DOWNLOAD_BIT) dummy
 	@echo "*********************************************"
@@ -148,6 +147,24 @@ ppc405_0_libsclean:
 
 ppc405_1_libsclean:
 	rm -rf ppc405_1/lib/
+
+#################################################################
+# SOFTWARE APPLICATION TESTAPP_PERIPHERAL
+#################################################################
+
+TestApp_Peripheral_program: $(TESTAPP_PERIPHERAL_OUTPUT) 
+
+$(TESTAPP_PERIPHERAL_OUTPUT) : $(TESTAPP_PERIPHERAL_SOURCES) $(TESTAPP_PERIPHERAL_HEADERS) $(TESTAPP_PERIPHERAL_LINKER_SCRIPT) \
+                    $(LIBRARIES) __xps/testapp_peripheral_compiler.opt
+	@mkdir -p $(TESTAPP_PERIPHERAL_OUTPUT_DIR) 
+	$(TESTAPP_PERIPHERAL_CC) $(TESTAPP_PERIPHERAL_CC_OPT) $(TESTAPP_PERIPHERAL_SOURCES) -o $(TESTAPP_PERIPHERAL_OUTPUT) \
+	$(TESTAPP_PERIPHERAL_OTHER_CC_FLAGS) $(TESTAPP_PERIPHERAL_INCLUDES) $(TESTAPP_PERIPHERAL_LIBPATH) \
+	$(TESTAPP_PERIPHERAL_CFLAGS) $(TESTAPP_PERIPHERAL_LFLAGS) 
+	$(TESTAPP_PERIPHERAL_CC_SIZE) $(TESTAPP_PERIPHERAL_OUTPUT) 
+	@echo ""
+
+TestApp_Peripheral_programclean:
+	rm -f $(TESTAPP_PERIPHERAL_OUTPUT) 
 
 #################################################################
 # BOOTLOOP ELF FILES

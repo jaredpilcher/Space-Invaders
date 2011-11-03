@@ -1,8 +1,0 @@
-VHDL common_v1_00_a C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\common_v1_00_a/hdl/vhdl/pselect.vhd
-VHDL opb_ac97_v2_00_a D:\Put_Your_Temp_Files_Here\space_invaders\lab7basesystem\Lab7BaseSystem\pcores\opb_ac97_v2_00_a/hdl/vhdl/srl_fifo.vhd
-VHDL opb_ac97_v2_00_a D:\Put_Your_Temp_Files_Here\space_invaders\lab7basesystem\Lab7BaseSystem\pcores\opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd
-VHDL opb_ac97_v2_00_a D:\Put_Your_Temp_Files_Here\space_invaders\lab7basesystem\Lab7BaseSystem\pcores\opb_ac97_v2_00_a/hdl/vhdl/ac97_timing.vhd
-VHDL opb_ac97_v2_00_a D:\Put_Your_Temp_Files_Here\space_invaders\lab7basesystem\Lab7BaseSystem\pcores\opb_ac97_v2_00_a/hdl/vhdl/ac97_core.vhd
-VHDL opb_ac97_v2_00_a D:\Put_Your_Temp_Files_Here\space_invaders\lab7basesystem\Lab7BaseSystem\pcores\opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd
-VHDL opb_ac97_v2_00_a D:\Put_Your_Temp_Files_Here\space_invaders\lab7basesystem\Lab7BaseSystem\pcores\opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd
-vhdl work ../hdl/audio_codec_wrapper.vhd

@@ -1,0 +1,1407 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "plb_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/plb_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : plb_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_muxcy.vhd" in Library proc_common_v1_00_b.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v1_00_b.
+Package <proc_common_pkg> compiled.
+WARNING:HDLParsers:3534 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" Line 364. In the function Get_RLOC_Name, not all control paths contain a return statement.
+WARNING:HDLParsers:3534 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" Line 379. In the function Get_Reg_File_Area, not all control paths contain a return statement.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd" in Library proc_common_v1_00_b.
+Entity <pselect> compiled.
+Entity <pselect> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/down_counter.vhd" in Library proc_common_v1_00_b.
+Entity <down_counter> compiled.
+Entity <down_counter> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" in Library proc_common_v1_00_b.
+Entity <mux_onehot> compiled.
+Entity <mux_onehot> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_bits.vhd" in Library proc_common_v1_00_b.
+Entity <or_bits> compiled.
+Entity <or_bits> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd" in Library proc_common_v1_00_b.
+Entity <or_gate> compiled.
+Entity <or_gate> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/qual_priority.vhd" in Library plb_v34_v1_02_a.
+Entity <qual_priority> compiled.
+Entity <qual_priority> (Architecture <qual_priority>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/qual_request.vhd" in Library plb_v34_v1_02_a.
+Entity <qual_request> compiled.
+Entity <qual_request> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/bus_control.vhd" in Library plb_v34_v1_02_a.
+Entity <bus_control> compiled.
+Entity <bus_control> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/priority_encoder.vhd" in Library plb_v34_v1_02_a.
+Entity <priority_encoder> compiled.
+Entity <priority_encoder> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/pending_priority.vhd" in Library plb_v34_v1_02_a.
+Entity <pending_priority> compiled.
+Entity <pending_priority> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/pend_request.vhd" in Library plb_v34_v1_02_a.
+Entity <pend_request> compiled.
+Entity <pend_request> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/arb_addr_sel.vhd" in Library plb_v34_v1_02_a.
+Entity <arb_addr_sel> compiled.
+Entity <arb_addr_sel> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_priority_encoder.vhd" in Library plb_v34_v1_02_a.
+Entity <plb_priority_encoder> compiled.
+Entity <plb_priority_encoder> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/arb_control_sm.vhd" in Library plb_v34_v1_02_a.
+Entity <arb_control_sm> compiled.
+Entity <arb_control_sm> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/gen_qual_req.vhd" in Library plb_v34_v1_02_a.
+Entity <gen_qual_req> compiled.
+Entity <gen_qual_req> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/muxed_signals.vhd" in Library plb_v34_v1_02_a.
+Entity <muxed_signals> compiled.
+Entity <muxed_signals> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/arb_registers.vhd" in Library plb_v34_v1_02_a.
+Entity <arb_registers> compiled.
+Entity <arb_registers> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/watchdog_timer.vhd" in Library plb_v34_v1_02_a.
+Entity <watchdog_timer> compiled.
+Entity <watchdog_timer> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/dcr_regs.vhd" in Library plb_v34_v1_02_a.
+Entity <dcr_regs> compiled.
+Entity <dcr_regs> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_interrupt.vhd" in Library plb_v34_v1_02_a.
+Entity <plb_interrupt> compiled.
+Entity <plb_interrupt> (Architecture <plb_interrupt>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/bus_lock_sm.vhd" in Library plb_v34_v1_02_a.
+Entity <bus_lock_sm> compiled.
+Entity <bus_lock_sm> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_addrpath.vhd" in Library plb_v34_v1_02_a.
+Entity <plb_addrpath> compiled.
+Entity <plb_addrpath> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_wr_datapath.vhd" in Library plb_v34_v1_02_a.
+Entity <plb_wr_datapath> compiled.
+Entity <plb_wr_datapath> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_rd_datapath.vhd" in Library plb_v34_v1_02_a.
+Entity <plb_rd_datapath> compiled.
+Entity <plb_rd_datapath> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_slave_ors.vhd" in Library plb_v34_v1_02_a.
+Entity <plb_slave_ors> compiled.
+Entity <plb_slave_ors> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_arbiter_logic.vhd" in Library plb_v34_v1_02_a.
+Entity <plb_arbiter_logic> compiled.
+Entity <plb_arbiter_logic> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_v34.vhd" in Library plb_v34_v1_02_a.
+Entity <plb_v34> compiled.
+Entity <plb_v34> (Architecture <simulation>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/plb_wrapper.vhd" in Library work.
+Entity <plb_wrapper> compiled.
+Entity <plb_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <plb_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <plb_v34> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_BASEADDR = "1111111111"
+	C_DCR_AWIDTH = 10
+	C_DCR_DWIDTH = 32
+	C_DCR_INTFCE = 0
+	C_EXT_RESET_HIGH = 1
+	C_HIGHADDR = "0000000000"
+	C_IRQ_ACTIVE = '1'
+	C_NUM_OPBCLK_PLB2OPB_REARB = 100
+	C_PLB_AWIDTH = 32
+	C_PLB_DWIDTH = 64
+	C_PLB_MID_WIDTH = 2
+	C_PLB_NUM_MASTERS = 3
+	C_PLB_NUM_SLAVES = 3
+
+Analyzing hierarchy for entity <plb_addrpath> in library <plb_v34_v1_02_a> (architecture <implementation>) with generics.
+	C_NUM_MASTERS = 3
+	C_PLB_AWIDTH = 32
+	C_PLB_DWIDTH = 64
+
+Analyzing hierarchy for entity <plb_wr_datapath> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+	C_PLB_DWIDTH = 64
+
+Analyzing hierarchy for entity <plb_rd_datapath> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+	C_PLB_DWIDTH = 64
+
+Analyzing hierarchy for entity <plb_slave_ors> in library <plb_v34_v1_02_a> (architecture <implementation>) with generics.
+	C_NUM_MASTERS = 3
+	C_NUM_SLAVES = 3
+	C_PLB_DWIDTH = 64
+
+Analyzing hierarchy for entity <plb_arbiter_logic> in library <plb_v34_v1_02_a> (architecture <implementation>) with generics.
+	C_BASEADDR = "1111111111"
+	C_DCR_AWIDTH = 10
+	C_DCR_DWIDTH = 32
+	C_DCR_INTFCE = 0
+	C_HIGHADDR = "0000000000"
+	C_IRQ_ACTIVE = '1'
+	C_MID_BITS = 2
+	C_NUM_MASTERS = 3
+	C_NUM_OPBCLK_PLB2OPB_REARB = 100
+	C_NUM_PLB2OPB_BRIDGE = 3
+	C_PLB_AWIDTH = 32
+	C_PLB_DWIDTH = 64
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 32
+	C_NB = 3
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 8
+	C_NB = 3
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 4
+	C_NB = 3
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 3
+	C_NB = 3
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 1
+	C_NB = 3
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 2
+	C_NB = 3
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 64
+	C_NB = 3
+
+Analyzing hierarchy for entity <or_gate> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 1
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+
+Analyzing hierarchy for entity <or_gate> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 3
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+
+Analyzing hierarchy for entity <or_gate> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 64
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+
+Analyzing hierarchy for entity <or_gate> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 4
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+
+Analyzing hierarchy for entity <or_gate> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 2
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+
+Analyzing hierarchy for entity <plb_priority_encoder> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+	C_NUM_MSTRS_PAD = 4
+
+Analyzing hierarchy for entity <arb_control_sm> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+	C_NUM_OPBCLK_PLB2OPB_REARB = 100
+	C_NUM_PLB2OPB_BRIDGE = 3
+
+Analyzing hierarchy for entity <gen_qual_req> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+
+Analyzing hierarchy for entity <muxed_signals> in library <plb_v34_v1_02_a> (architecture <implementation>) with generics.
+	C_MID_BITS = 2
+	C_NUM_MASTERS = 3
+	C_NUM_MSTRS_PAD = 4
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+
+Analyzing hierarchy for entity <arb_registers> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+
+Analyzing hierarchy for entity <watchdog_timer> in library <plb_v34_v1_02_a> (architecture <simulation>).
+
+Analyzing hierarchy for entity <plb_interrupt> in library <plb_v34_v1_02_a> (architecture <plb_interrupt>) with generics.
+	C_IRQ_ACTIVE = '1'
+
+Analyzing hierarchy for entity <bus_lock_sm> in library <plb_v34_v1_02_a> (architecture <implementation>).
+
+Analyzing hierarchy for entity <priority_encoder> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 4
+
+Analyzing hierarchy for entity <pending_priority> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+
+Analyzing hierarchy for entity <pend_request> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+
+Analyzing hierarchy for entity <arb_addr_sel> in library <plb_v34_v1_02_a> (architecture <simulation>) with generics.
+	C_NUM_MASTERS = 3
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 2
+	C_NB = 3
+
+Analyzing hierarchy for entity <mux_onehot> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_DW = 1
+	C_NB = 3
+
+Analyzing hierarchy for entity <or_bits> in library <proc_common_v1_00_b> (architecture <implementation>) with generics.
+	C_BUS_SIZE = 4
+	C_NUM_BITS = 2
+	C_START_BIT = 2
+
+Analyzing hierarchy for entity <or_bits> in library <proc_common_v1_00_b> (architecture <implementation>) with generics.
+	C_BUS_SIZE = 4
+	C_NUM_BITS = 1
+	C_START_BIT = 1
+
+Analyzing hierarchy for entity <or_bits> in library <proc_common_v1_00_b> (architecture <implementation>) with generics.
+	C_BUS_SIZE = 4
+	C_NUM_BITS = 1
+	C_START_BIT = 3
+
+Analyzing hierarchy for entity <bus_control> in library <plb_v34_v1_02_a> (architecture <simulation>).
+
+Analyzing hierarchy for entity <down_counter> in library <proc_common_v1_00_b> (architecture <simulation>) with generics.
+	C_CNT_WIDTH = 4
+
+Analyzing hierarchy for entity <qual_request> in library <plb_v34_v1_02_a> (architecture <simulation>).
+
+Analyzing hierarchy for entity <qual_priority> in library <plb_v34_v1_02_a> (architecture <qual_priority>).
+
+WARNING:Xst:2591 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_v34.vhd" line 732: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <plb_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set property "syn_maxfan = 10000" for signal <PLB_Rst> in unit <plb_v34>.
+    Set property "syn_maxfan = 10000" for signal <PLB_Clk> in unit <plb_v34>.
+    Set user-defined property "X_CORE_INFO =  plb_v34_v1_02_a" for unit <plb_v34>.
+Entity <plb_wrapper> analyzed. Unit <plb_wrapper> generated.
+
+Analyzing generic Entity <plb_v34> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_BASEADDR = "1111111111"
+	C_DCR_AWIDTH = 10
+	C_DCR_DWIDTH = 32
+	C_DCR_INTFCE = 0
+	C_EXT_RESET_HIGH = 1
+	C_HIGHADDR = "0000000000"
+	C_IRQ_ACTIVE = '1'
+	C_NUM_OPBCLK_PLB2OPB_REARB = 100
+	C_PLB_AWIDTH = 32
+	C_PLB_DWIDTH = 64
+	C_PLB_MID_WIDTH = 2
+	C_PLB_NUM_MASTERS = 3
+	C_PLB_NUM_SLAVES = 3
+    Set property "syn_maxfan = 10000" for signal <PLB_Rst> in unit <plb_v34>.
+    Set property "syn_maxfan = 10000" for signal <PLB_Clk> in unit <plb_v34>.
+    Set user-defined property "INIT =  FFFF" for instance <POR_SRL_I> in unit <plb_v34>.
+    Set user-defined property "INIT =  1" for instance <POR_FF1_I> in unit <plb_v34>.
+    Set user-defined property "INIT =  1" for instance <POR_FF2_I> in unit <plb_v34>.
+Entity <plb_v34> analyzed. Unit <plb_v34> generated.
+
+Analyzing generic Entity <plb_addrpath> in library <plb_v34_v1_02_a> (Architecture <implementation>).
+	C_NUM_MASTERS = 3
+	C_PLB_AWIDTH = 32
+	C_PLB_DWIDTH = 64
+Entity <plb_addrpath> analyzed. Unit <plb_addrpath> generated.
+
+Analyzing generic Entity <mux_onehot.1> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_DW = 32
+	C_NB = 3
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+Entity <mux_onehot.1> analyzed. Unit <mux_onehot.1> generated.
+
+Analyzing generic Entity <mux_onehot.2> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_DW = 8
+	C_NB = 3
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+Entity <mux_onehot.2> analyzed. Unit <mux_onehot.2> generated.
+
+Analyzing generic Entity <mux_onehot.3> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_DW = 4
+	C_NB = 3
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+Entity <mux_onehot.3> analyzed. Unit <mux_onehot.3> generated.
+
+Analyzing generic Entity <mux_onehot.4> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_DW = 3
+	C_NB = 3
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+Entity <mux_onehot.4> analyzed. Unit <mux_onehot.4> generated.
+
+Analyzing generic Entity <mux_onehot.5> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_DW = 1
+	C_NB = 3
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+Entity <mux_onehot.5> analyzed. Unit <mux_onehot.5> generated.
+
+Analyzing generic Entity <mux_onehot.6> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_DW = 2
+	C_NB = 3
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+Entity <mux_onehot.6> analyzed. Unit <mux_onehot.6> generated.
+
+Analyzing generic Entity <plb_wr_datapath> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+	C_PLB_DWIDTH = 64
+Entity <plb_wr_datapath> analyzed. Unit <plb_wr_datapath> generated.
+
+Analyzing generic Entity <mux_onehot.7> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_DW = 64
+	C_NB = 3
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 220: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd" line 238: Instantiating black box module <MUXCY>.
+Entity <mux_onehot.7> analyzed. Unit <mux_onehot.7> generated.
+
+Analyzing generic Entity <plb_rd_datapath> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+	C_PLB_DWIDTH = 64
+Entity <plb_rd_datapath> analyzed. Unit <plb_rd_datapath> generated.
+
+Analyzing generic Entity <plb_slave_ors> in library <plb_v34_v1_02_a> (Architecture <implementation>).
+	C_NUM_MASTERS = 3
+	C_NUM_SLAVES = 3
+	C_PLB_DWIDTH = 64
+Entity <plb_slave_ors> analyzed. Unit <plb_slave_ors> generated.
+
+Analyzing generic Entity <or_gate.1> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_BUS_WIDTH = 1
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+Entity <or_gate.1> analyzed. Unit <or_gate.1> generated.
+
+Analyzing generic Entity <or_gate.2> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_BUS_WIDTH = 3
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+Entity <or_gate.2> analyzed. Unit <or_gate.2> generated.
+
+Analyzing generic Entity <or_gate.3> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_BUS_WIDTH = 64
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+Entity <or_gate.3> analyzed. Unit <or_gate.3> generated.
+
+Analyzing generic Entity <or_gate.4> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_BUS_WIDTH = 4
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+Entity <or_gate.4> analyzed. Unit <or_gate.4> generated.
+
+Analyzing generic Entity <or_gate.5> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_BUS_WIDTH = 2
+	C_OR_WIDTH = 3
+	C_USE_LUT_OR = true
+Entity <or_gate.5> analyzed. Unit <or_gate.5> generated.
+
+Analyzing generic Entity <plb_arbiter_logic> in library <plb_v34_v1_02_a> (Architecture <implementation>).
+	C_BASEADDR = "1111111111"
+	C_DCR_AWIDTH = 10
+	C_DCR_DWIDTH = 32
+	C_DCR_INTFCE = 0
+	C_HIGHADDR = "0000000000"
+	C_IRQ_ACTIVE = '1'
+	C_MID_BITS = 2
+	C_NUM_MASTERS = 3
+	C_NUM_OPBCLK_PLB2OPB_REARB = 100
+	C_NUM_PLB2OPB_BRIDGE = 3
+	C_PLB_AWIDTH = 32
+	C_PLB_DWIDTH = 64
+Entity <plb_arbiter_logic> analyzed. Unit <plb_arbiter_logic> generated.
+
+Analyzing generic Entity <plb_priority_encoder> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+	C_NUM_MSTRS_PAD = 4
+    Set user-defined property "INIT =  1111" for instance <AVOID_MAPERR_GEN.AVOID_MAP_ERR_LUT> in unit <plb_priority_encoder>.
+Entity <plb_priority_encoder> analyzed. Unit <plb_priority_encoder> generated.
+
+Analyzing generic Entity <priority_encoder> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 4
+Entity <priority_encoder> analyzed. Unit <priority_encoder> generated.
+
+Analyzing Entity <qual_request> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+INFO:Xst:1561 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/qual_request.vhd" line 196: Mux is complete : default of case is discarded
+Entity <qual_request> analyzed. Unit <qual_request> generated.
+
+Analyzing generic Entity <pending_priority> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+Entity <pending_priority> analyzed. Unit <pending_priority> generated.
+
+Analyzing Entity <qual_priority> in library <plb_v34_v1_02_a> (Architecture <qual_priority>).
+INFO:Xst:1561 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/qual_priority.vhd" line 185: Mux is complete : default of case is discarded
+Entity <qual_priority> analyzed. Unit <qual_priority> generated.
+
+Analyzing generic Entity <pend_request> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+Entity <pend_request> analyzed. Unit <pend_request> generated.
+
+Analyzing generic Entity <arb_addr_sel> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+Entity <arb_addr_sel> analyzed. Unit <arb_addr_sel> generated.
+
+Analyzing generic Entity <arb_control_sm> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+	C_NUM_OPBCLK_PLB2OPB_REARB = 100
+	C_NUM_PLB2OPB_BRIDGE = 3
+Entity <arb_control_sm> analyzed. Unit <arb_control_sm> generated.
+
+Analyzing generic Entity <gen_qual_req> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+Entity <gen_qual_req> analyzed. Unit <gen_qual_req> generated.
+
+Analyzing generic Entity <muxed_signals> in library <plb_v34_v1_02_a> (Architecture <implementation>).
+	C_MID_BITS = 2
+	C_NUM_MASTERS = 3
+	C_NUM_MSTRS_PAD = 4
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+Entity <muxed_signals> analyzed. Unit <muxed_signals> generated.
+
+Analyzing generic Entity <or_bits.1> in library <proc_common_v1_00_b> (Architecture <implementation>).
+	C_BUS_SIZE = 4
+	C_NUM_BITS = 2
+	C_START_BIT = 2
+Entity <or_bits.1> analyzed. Unit <or_bits.1> generated.
+
+Analyzing generic Entity <or_bits.2> in library <proc_common_v1_00_b> (Architecture <implementation>).
+	C_BUS_SIZE = 4
+	C_NUM_BITS = 1
+	C_START_BIT = 1
+Entity <or_bits.2> analyzed. Unit <or_bits.2> generated.
+
+Analyzing generic Entity <or_bits.3> in library <proc_common_v1_00_b> (Architecture <implementation>).
+	C_BUS_SIZE = 4
+	C_NUM_BITS = 1
+	C_START_BIT = 3
+Entity <or_bits.3> analyzed. Unit <or_bits.3> generated.
+
+Analyzing generic Entity <arb_registers> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+	C_NUM_MASTERS = 3
+Entity <arb_registers> analyzed. Unit <arb_registers> generated.
+
+Analyzing Entity <bus_control> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+Entity <bus_control> analyzed. Unit <bus_control> generated.
+
+Analyzing Entity <watchdog_timer> in library <plb_v34_v1_02_a> (Architecture <simulation>).
+Entity <watchdog_timer> analyzed. Unit <watchdog_timer> generated.
+
+Analyzing generic Entity <down_counter> in library <proc_common_v1_00_b> (Architecture <simulation>).
+	C_CNT_WIDTH = 4
+Entity <down_counter> analyzed. Unit <down_counter> generated.
+
+Analyzing generic Entity <plb_interrupt> in library <plb_v34_v1_02_a> (Architecture <plb_interrupt>).
+	C_IRQ_ACTIVE = '1'
+    Set user-defined property "INIT =  0" for instance <RISING_EDGE_GEN.INTERRUPT_REFF_I> in unit <plb_interrupt>.
+Entity <plb_interrupt> analyzed. Unit <plb_interrupt> generated.
+
+Analyzing Entity <bus_lock_sm> in library <plb_v34_v1_02_a> (Architecture <implementation>).
+Entity <bus_lock_sm> analyzed. Unit <bus_lock_sm> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <plb_rd_datapath>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_rd_datapath.vhd".
+Unit <plb_rd_datapath> synthesized.
+
+
+Synthesizing Unit <or_gate_1>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned.
+Unit <or_gate_1> synthesized.
+
+
+Synthesizing Unit <or_gate_2>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned.
+Unit <or_gate_2> synthesized.
+
+
+Synthesizing Unit <or_gate_3>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned.
+Unit <or_gate_3> synthesized.
+
+
+Synthesizing Unit <or_gate_4>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned.
+Unit <or_gate_4> synthesized.
+
+
+Synthesizing Unit <or_gate_5>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned.
+Unit <or_gate_5> synthesized.
+
+
+Synthesizing Unit <arb_control_sm>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/arb_control_sm.vhd".
+    Found finite state machine <FSM_0> for signal <arbctrl_sm_cs>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 35                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 7                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000001                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <SAValid>.
+    Found 1-bit register for signal <PAValid>.
+    Found 7-bit down counter for signal <Cnt_on_plb2opb_rearb>.
+    Found 1-bit register for signal <Cnt_on_plb2opb_rearb_en>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <arb_control_sm> synthesized.
+
+
+Synthesizing Unit <gen_qual_req>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/gen_qual_req.vhd".
+Unit <gen_qual_req> synthesized.
+
+
+Synthesizing Unit <bus_lock_sm>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/bus_lock_sm.vhd".
+    Found 1-bit register for signal <plb_buslock_reg>.
+    Found 1-bit register for signal <sm_buslock_reg>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <bus_lock_sm> synthesized.
+
+
+Synthesizing Unit <arb_addr_sel>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/arb_addr_sel.vhd".
+    Found 3-bit register for signal <arbAddrSelReg_i>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <arb_addr_sel> synthesized.
+
+
+Synthesizing Unit <qual_request>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/qual_request.vhd".
+Unit <qual_request> synthesized.
+
+
+Synthesizing Unit <qual_priority>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/qual_priority.vhd".
+Unit <qual_priority> synthesized.
+
+
+Synthesizing Unit <or_bits_1>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_bits.vhd".
+WARNING:Xst:647 - Input <In_bus<0:1>> is never used.
+Unit <or_bits_1> synthesized.
+
+
+Synthesizing Unit <or_bits_2>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_bits.vhd".
+WARNING:Xst:647 - Input <In_bus<0>> is never used.
+WARNING:Xst:647 - Input <In_bus<2:3>> is never used.
+Unit <or_bits_2> synthesized.
+
+
+Synthesizing Unit <or_bits_3>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_bits.vhd".
+WARNING:Xst:647 - Input <In_bus<0:2>> is never used.
+Unit <or_bits_3> synthesized.
+
+
+Synthesizing Unit <bus_control>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/bus_control.vhd".
+Unit <bus_control> synthesized.
+
+
+Synthesizing Unit <down_counter>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/down_counter.vhd".
+    Found 4-bit down counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <down_counter> synthesized.
+
+
+Synthesizing Unit <plb_slave_ors>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_slave_ors.vhd".
+Unit <plb_slave_ors> synthesized.
+
+
+Synthesizing Unit <mux_onehot_1>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <sel<96:127>> is never used or assigned.
+WARNING:Xst:1780 - Signal <Dreord<96:127>> is never used or assigned.
+Unit <mux_onehot_1> synthesized.
+
+
+Synthesizing Unit <mux_onehot_2>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <sel<24:31>> is never used or assigned.
+WARNING:Xst:1780 - Signal <Dreord<24:31>> is never used or assigned.
+Unit <mux_onehot_2> synthesized.
+
+
+Synthesizing Unit <mux_onehot_3>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <sel<12:15>> is never used or assigned.
+WARNING:Xst:1780 - Signal <Dreord<12:15>> is never used or assigned.
+Unit <mux_onehot_3> synthesized.
+
+
+Synthesizing Unit <mux_onehot_4>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <sel<9:11>> is never used or assigned.
+WARNING:Xst:1780 - Signal <Dreord<9:11>> is never used or assigned.
+Unit <mux_onehot_4> synthesized.
+
+
+Synthesizing Unit <mux_onehot_5>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <sel<3>> is never used or assigned.
+WARNING:Xst:1780 - Signal <Dreord<3>> is never used or assigned.
+Unit <mux_onehot_5> synthesized.
+
+
+Synthesizing Unit <mux_onehot_6>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <sel<6:7>> is never used or assigned.
+WARNING:Xst:1780 - Signal <Dreord<6:7>> is never used or assigned.
+Unit <mux_onehot_6> synthesized.
+
+
+Synthesizing Unit <mux_onehot_7>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/mux_onehot.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <sel<192:255>> is never used or assigned.
+WARNING:Xst:1780 - Signal <Dreord<192:255>> is never used or assigned.
+Unit <mux_onehot_7> synthesized.
+
+
+Synthesizing Unit <arb_registers>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/arb_registers.vhd".
+WARNING:Xst:1780 - Signal <arbPriWrBurstIn> is never used or assigned.
+WARNING:Xst:1780 - Signal <arbSecWrBurstReg> is never used or assigned.
+    Found 2-bit register for signal <ArbSecRdInProgPriorReg>.
+    Found 1-bit register for signal <ArbPriRdBurstReg>.
+    Found 3-bit register for signal <ArbPriRdMasterRegReg>.
+    Found 3-bit register for signal <ArbDisMReqReg>.
+    Found 3-bit register for signal <ArbPriWrMasterReg>.
+    Found 2-bit register for signal <ArbSecWrInProgPriorReg>.
+    Found 3-bit register for signal <arbPriRdMasterReg_i>.
+    Found 1-bit register for signal <arbRdDBusBusyReg_i>.
+    Found 1-bit register for signal <arbSecRdBurstReg>.
+    Found 1-bit register for signal <arbSecRdInProgReg_i>.
+    Found 3-bit register for signal <arbSecRdMasterReg_i>.
+    Found 1-bit register for signal <arbSecWrInProgReg_i>.
+    Found 3-bit register for signal <arbSecWrMasterReg_i>.
+    Found 1-bit register for signal <arbWrDBusBusyReg_i>.
+    Summary:
+	inferred  28 D-type flip-flop(s).
+Unit <arb_registers> synthesized.
+
+
+Synthesizing Unit <watchdog_timer>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/watchdog_timer.vhd".
+WARNING:Xst:1780 - Signal <wdtControlStatesG1> is never used or assigned.
+WARNING:Xst:1780 - Signal <wdtTimeOutCountIn> is never used or assigned.
+WARNING:Xst:1780 - Signal <wdtTransferSizeG1> is never used or assigned.
+WARNING:Xst:1780 - Signal <wdtTimeOutG1> is never used or assigned.
+    Found 1-bit register for signal <PLB_RNWReg>.
+    Found 1-bit register for signal <PLB_RNWRegReg>.
+    Found 1-bit register for signal <wdtBurstAccReg>.
+    Found 1-bit register for signal <wdtCompReg>.
+    Found 1-bit register for signal <wdtDAckReg>.
+    Found 1-bit register for signal <wdtLine16AccReg>.
+    Found 1-bit register for signal <wdtLine4AccReg>.
+    Found 1-bit register for signal <wdtLine8AccReg>.
+    Found 1-bit register for signal <wdtSingleAccReg>.
+    Found 1-bit register for signal <wdtTimeOutReg_i>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <watchdog_timer> synthesized.
+
+
+Synthesizing Unit <plb_interrupt>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_interrupt.vhd".
+    Found 1-bit register for signal <sl_addrack_d1>.
+    Found 1-bit register for signal <wdtaddrack_d1>.
+    Found 1-bit register for signal <wdtcountiszero_d1>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <plb_interrupt> synthesized.
+
+
+Synthesizing Unit <priority_encoder>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/priority_encoder.vhd".
+WARNING:Xst:1780 - Signal <temp_sel> is never used or assigned.
+WARNING:Xst:1780 - Signal <one> is never used or assigned.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+Unit <priority_encoder> synthesized.
+
+
+Synthesizing Unit <pending_priority>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/pending_priority.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+Unit <pending_priority> synthesized.
+
+
+Synthesizing Unit <pend_request>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/pend_request.vhd".
+WARNING:Xst:653 - Signal <one> is used but never assigned. Tied to value 1.
+WARNING:Xst:653 - Signal <zero> is used but never assigned. Tied to value 0.
+Unit <pend_request> synthesized.
+
+
+Synthesizing Unit <plb_addrpath>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_addrpath.vhd".
+Unit <plb_addrpath> synthesized.
+
+
+Synthesizing Unit <plb_wr_datapath>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_wr_datapath.vhd".
+WARNING:Xst:1780 - Signal <wr_dack> is never used or assigned.
+Unit <plb_wr_datapath> synthesized.
+
+
+Synthesizing Unit <plb_priority_encoder>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_priority_encoder.vhd".
+WARNING:Xst:646 - Signal <avoid_map_error> is assigned but never used.
+Unit <plb_priority_encoder> synthesized.
+
+
+Synthesizing Unit <muxed_signals>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/muxed_signals.vhd".
+WARNING:Xst:653 - Signal <temp_or<0>> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <temp_or0<0>> is used but never assigned. Tied to value 0.
+Unit <muxed_signals> synthesized.
+
+
+Synthesizing Unit <plb_arbiter_logic>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_arbiter_logic.vhd".
+WARNING:Xst:647 - Input <DCR_Write> is never used.
+WARNING:Xst:647 - Input <M_lockErr> is never used.
+WARNING:Xst:647 - Input <PLB_BE> is never used.
+WARNING:Xst:647 - Input <DCR_Read> is never used.
+WARNING:Xst:647 - Input <DCR_ABus> is never used.
+WARNING:Xst:647 - Input <PLB_ABus> is never used.
+WARNING:Xst:647 - Input <PLB_type> is never used.
+WARNING:Xst:646 - Signal <arbAValid> is assigned but never used.
+WARNING:Xst:646 - Signal <wdtTimeOutAct> is assigned but never used.
+WARNING:Xst:1780 - Signal <rdPrimReg> is never used or assigned.
+WARNING:Xst:646 - Signal <wdtTimeOutReg> is assigned but never used.
+WARNING:Xst:646 - Signal <arbSecWrMasterReg> is assigned but never used.
+WARNING:Xst:646 - Signal <arbSecRdMasterReg> is assigned but never used.
+    Found 1-bit register for signal <arbreset_i>.
+    Found 1-bit register for signal <plb_rdprimreg_i>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <plb_arbiter_logic> synthesized.
+
+
+Synthesizing Unit <plb_v34>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/hdl/vhdl/plb_v34.vhd".
+Unit <plb_v34> synthesized.
+
+
+Synthesizing Unit <plb_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/plb_wrapper.vhd".
+Unit <plb_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 4-bit down counter                                    : 2
+ 7-bit down counter                                    : 1
+# Registers                                            : 35
+ 1-bit register                                        : 26
+ 2-bit register                                        : 2
+ 3-bit register                                        : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs> on signal <arbctrl_sm_cs[1:8]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000001 | 00000001
+ 00001000 | 00000010
+ 01000000 | 00000100
+ 00000010 | 00001000
+ 00010000 | 00010000
+ 10000000 | 00100000
+ 00000100 | 01000000
+ 00100000 | 10000000
+----------------------
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 3
+ 4-bit down counter                                    : 2
+ 7-bit down counter                                    : 1
+# Registers                                            : 62
+ Flip-Flops                                            : 62
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <plb_wrapper> ...
+
+Optimizing unit <arb_control_sm> ...
+
+Optimizing unit <mux_onehot_1> ...
+
+Optimizing unit <mux_onehot_2> ...
+
+Optimizing unit <mux_onehot_7> ...
+
+Optimizing unit <arb_registers> ...
+
+Optimizing unit <priority_encoder> ...
+
+Optimizing unit <pending_priority> ...
+
+Optimizing unit <watchdog_timer> ...
+
+Optimizing unit <muxed_signals> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+FlipFlop plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0 has been replicated 1 time(s)
+FlipFlop plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1 has been replicated 1 time(s)
+FlipFlop plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 80
+ Flip-Flops                                            : 80
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/plb_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 1167
+
+Cell Usage :
+# BELS                             : 882
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 1
+#      LUT2                        : 137
+#      LUT2_D                      : 5
+#      LUT3                        : 155
+#      LUT3_D                      : 8
+#      LUT3_L                      : 3
+#      LUT4                        : 228
+#      LUT4_D                      : 5
+#      LUT4_L                      : 13
+#      MUXCY                       : 302
+#      MUXF5                       : 5
+#      VCC                         : 1
+#      XORCY                       : 7
+# FlipFlops/Latches                : 80
+#      FD                          : 1
+#      FDR                         : 25
+#      FDRE                        : 46
+#      FDRS                        : 5
+#      FDS                         : 3
+# Shift Registers                  : 1
+#      SRL16                       : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                     322  out of  13696     2%  
+ Number of Slice Flip Flops:            80  out of  27392     0%  
+ Number of 4 input LUTs:               567  out of  27392     2%  
+    Number used as logic:              566
+    Number used as Shift registers:      1
+ Number of IOs:                       1167
+ Number of bonded IOBs:                  0  out of    556     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                             | Load  |
+-----------------------------------+-------------------------------------------------------------------+-------+
+PLB_Clk                            | NONE(plb/I_PLB_ARBITER_LOGIC/I_ARBREGISTERS/arbSecRdMasterReg_i_0)| 81    |
+-----------------------------------+-------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 5.176ns (Maximum Frequency: 193.188MHz)
+   Minimum input arrival time before clock: 4.484ns
+   Maximum output required time after clock: 4.235ns
+   Maximum combinational path delay: 3.217ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLB_Clk'
+  Clock period: 5.176ns (frequency: 193.188MHz)
+  Total number of paths / destination ports: 1810 / 200
+-------------------------------------------------------------------------
+Delay:               5.176ns (Levels of Logic = 5)
+  Source:            plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1 (FF)
+  Destination:       plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_4 (FF)
+  Source Clock:      PLB_Clk rising
+  Destination Clock: PLB_Clk rising
+
+  Data Path: plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1 to plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.370   0.495  plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1 (plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1)
+     LUT2:I1->O            1   0.275   0.000  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/lutout_1_not00001 (plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/lutout<1>)
+     MUXCY:S->O            9   0.897   0.597  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/ODD_GEN.DATA_WIDTH_GEN[0].ODD_BUS_GEN[1].CARRY_MUX (plb/I_PLB_ARBITER_LOGIC/mstr_buslock)
+     LUT2:I1->O            3   0.275   0.415  plb/I_PLB_ARBITER_LOGIC/I_BUSLOCK_SM/PLB_busLock1 (PLB_busLock)
+     LUT4_D:I2->O          1   0.275   0.370  plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_or00007 (plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_or0000_map3)
+     LUT4:I3->O            3   0.275   0.397  plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Mcount_Cnt_on_plb2opb_rearb_val1 (plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Mcount_Cnt_on_plb2opb_rearb_val)
+     FDR:R                     0.536          plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_1
+    ----------------------------------------
+    Total                      5.176ns (2.903ns logic, 2.273ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLB_Clk'
+  Total number of paths / destination ports: 1939 / 102
+-------------------------------------------------------------------------
+Offset:              4.484ns (Levels of Logic = 6)
+  Source:            M_busLock<0> (PAD)
+  Destination:       plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_4 (FF)
+  Destination Clock: PLB_Clk rising
+
+  Data Path: M_busLock<0> to plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.275   0.000  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/lutout_0_not00001 (plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/lutout<0>)
+     MUXCY:S->O            1   0.334   0.000  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/ODD_GEN.DATA_WIDTH_GEN[0].CYMUX_FIRST (plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/cyout<0>)
+     MUXCY:CI->O           9   0.599   0.597  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/ODD_GEN.DATA_WIDTH_GEN[0].ODD_BUS_GEN[1].CARRY_MUX (plb/I_PLB_ARBITER_LOGIC/mstr_buslock)
+     LUT2:I1->O            3   0.275   0.415  plb/I_PLB_ARBITER_LOGIC/I_BUSLOCK_SM/PLB_busLock1 (PLB_busLock)
+     LUT4_D:I2->O          1   0.275   0.370  plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_or00007 (plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_or0000_map3)
+     LUT4:I3->O            3   0.275   0.397  plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Mcount_Cnt_on_plb2opb_rearb_val1 (plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Mcount_Cnt_on_plb2opb_rearb_val)
+     FDR:R                     0.536          plb/I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/Cnt_on_plb2opb_rearb_1
+    ----------------------------------------
+    Total                      4.484ns (2.706ns logic, 1.778ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLB_Clk'
+  Total number of paths / destination ports: 635 / 178
+-------------------------------------------------------------------------
+Offset:              4.235ns (Levels of Logic = 5)
+  Source:            plb/I_PLB_ARBITER_LOGIC/I_ARBREGISTERS/ArbPriWrMasterReg_2 (FF)
+  Destination:       PLB_MWrBTerm<0> (PAD)
+  Source Clock:      PLB_Clk rising
+
+  Data Path: plb/I_PLB_ARBITER_LOGIC/I_ARBREGISTERS/ArbPriWrMasterReg_2 to PLB_MWrBTerm<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            68   0.370   0.820  plb/I_PLB_ARBITER_LOGIC/I_ARBREGISTERS/ArbPriWrMasterReg_2 (plb/I_PLB_ARBITER_LOGIC/I_ARBREGISTERS/ArbPriWrMasterReg_2)
+     LUT2:I1->O            1   0.275   0.000  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/WRBURST_MUX/lutout_1_not00001 (plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/WRBURST_MUX/lutout<1>)
+     MUXCY:S->O            1   0.713   0.468  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/WRBURST_MUX/ODD_GEN.DATA_WIDTH_GEN[0].ODD_BUS_GEN[1].CARRY_MUX (plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/wr_burst)
+     LUT3:I0->O            1   0.275   0.350  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_wrBurst_and00001 (PLB_wrBurst)
+     LUT4:I2->O            3   0.275   0.415  plb/I_PLB_ARBITER_LOGIC/I_WDT/wdtWrBTerm_i1 (plb/I_PLB_ARBITER_LOGIC/wdtWrBTerm)
+     LUT3:I2->O            0   0.275   0.000  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MWrBTerm_2_and00001 (PLB_MWrBTerm<2>)
+    ----------------------------------------
+    Total                      4.235ns (2.183ns logic, 2.052ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1466 / 480
+-------------------------------------------------------------------------
+Delay:               3.217ns (Levels of Logic = 6)
+  Source:            M_wrBurst<0> (PAD)
+  Destination:       PLB_MWrBTerm<0> (PAD)
+
+  Data Path: M_wrBurst<0> to PLB_MWrBTerm<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.275   0.000  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/WRBURST_MUX/lutout_0_not00001 (plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/WRBURST_MUX/lutout<0>)
+     MUXCY:S->O            1   0.334   0.000  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/WRBURST_MUX/ODD_GEN.DATA_WIDTH_GEN[0].CYMUX_FIRST (plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/WRBURST_MUX/cyout<0>)
+     MUXCY:CI->O           1   0.415   0.468  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/WRBURST_MUX/ODD_GEN.DATA_WIDTH_GEN[0].ODD_BUS_GEN[1].CARRY_MUX (plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/wr_burst)
+     LUT3:I0->O            1   0.275   0.350  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_wrBurst_and00001 (PLB_wrBurst)
+     LUT4:I2->O            3   0.275   0.415  plb/I_PLB_ARBITER_LOGIC/I_WDT/wdtWrBTerm_i1 (plb/I_PLB_ARBITER_LOGIC/wdtWrBTerm)
+     LUT3:I2->O            0   0.275   0.000  plb/I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MWrBTerm_2_and00001 (PLB_MWrBTerm<2>)
+    ----------------------------------------
+    Total                      3.217ns (1.985ns logic, 1.232ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+CPU : 15.38 / 15.47 s | Elapsed : 15.00 / 15.00 s
+ 
+--> 
+
+Total memory usage is 232488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  306 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

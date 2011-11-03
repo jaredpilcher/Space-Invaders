@@ -1,0 +1,42 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\pcores\lab3_slave\hdl\vhdl
+T_opt
+Z1 VeakLC;CkVU??fXdj50BL61
+Z2 04 10 4 work lab3_slave di01 1
+Z3 =1-000ffe75aea7-4eb209ad-388-2f78
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 OE;O;6.4;39
+Elab3_slave
+Z6 w1320290702
+Z7 DPx21 C:\modeltech_6.4\ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z8 DPx21 C:\modeltech_6.4\ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z9 DPx21 C:\modeltech_6.4\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z10 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+Z11 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+l0
+L45
+Z12 V?_EOmj8g7zePS:NnUF]Hl1
+Z13 OE;C;6.4;39
+Z14 o-work work
+Z15 tExplicit 1
+Z16 !s100 Iko:1nXFR99<L`Tm5>]TY2
+Adi01
+R7
+R8
+R9
+DEx100 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\pcores\lab3_slave\hdl\vhdl\work 10 lab3_slave 0 22 ?_EOmj8g7zePS:NnUF]Hl1
+32
+Mx3 21 C:\modeltech_6.4\ieee 14 std_logic_1164
+Mx2 21 C:\modeltech_6.4\ieee 15 std_logic_arith
+Mx1 21 C:\modeltech_6.4\ieee 18 std_logic_unsigned
+l142
+L117
+Z17 V5cKcO=JQSR;^L`ZIRQM=:3
+R13
+R14
+R15
+Z18 !s100 ]ASzDoI?E3WCfF_Qdh;4j3

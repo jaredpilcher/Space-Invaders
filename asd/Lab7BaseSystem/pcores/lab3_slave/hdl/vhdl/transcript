@@ -552,3 +552,262 @@ vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/a
 # ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(205): Case choice must be a locally static expression.
 # ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(210): Case choice must be a locally static expression.
 # ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(212): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(157): Integer literal 0 is not of type ieee.std_logic_arith.unsigned.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(163): (vcom-103) Extended identifier "\= debounced_buttons then" terminates at a newline character (0x0a).
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(163): Signal "buttons_old" is type ieee.std_logic_1164.std_logic_vector; expecting type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(163): near "\= debounced_buttons": expecting "GENERATE" or "THEN"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(168): near "if": expecting "PROCESS"
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(157): Integer literal 0 is not of type ieee.std_logic_arith.unsigned.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(212): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(214): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(219): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(221): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(311): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(157): Enumeration literal '0' is not of type ieee.std_logic_arith.unsigned.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(212): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(214): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(219): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(221): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(311): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(212): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(214): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(219): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(221): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(158): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(158): (vcom-1136) Unknown identifier "deboounced_switches".
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(219): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(221): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(226): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(228): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(318): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(225): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(227): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(234): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(222): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(224): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(229): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(231): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(223): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(225): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(230): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(224): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(229): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(231): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(226): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(231): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(233): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(227): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(234): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(248): (vcom-1136) Unknown identifier "save_switches".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(248): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(329): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(227): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(234): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(171): No feasible entries for infix operator "<=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(171): Type error resolving infix expression "<=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(176): No feasible entries for infix operator "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(176): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(227): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(234): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(329): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(176): No feasible entries for infix operator "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(176): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(227): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(234): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(329): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(227): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(234): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(227): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(234): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(227): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(232): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(234): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(230): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(235): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(237): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(231): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(236): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(238): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(231): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(236): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(238): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture di01 of lab3_slave
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(203): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(205): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(210): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/asd/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(212): Case choice must be a locally static expression.

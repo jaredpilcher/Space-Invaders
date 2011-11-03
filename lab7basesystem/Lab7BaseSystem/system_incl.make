@@ -31,6 +31,9 @@ LIBGEN_OPTIONS = -mhs $(MHSFILE) -p $(DEVICE) $(SEARCHPATHOPT)
 
 VPGEN_OPTIONS = -p $(DEVICE) $(SEARCHPATHOPT)
 
+TESTAPP_PERIPHERAL_OUTPUT_DIR = TestApp_Peripheral
+TESTAPP_PERIPHERAL_OUTPUT = $(TESTAPP_PERIPHERAL_OUTPUT_DIR)/executable.elf
+
 MICROBLAZE_BOOTLOOP = $(XILINX_EDK_DIR)/sw/lib/microblaze/mb_bootloop.elf
 PPC405_BOOTLOOP = $(XILINX_EDK_DIR)/sw/lib/ppc405/ppc_bootloop.elf
 PPC440_BOOTLOOP = $(XILINX_EDK_DIR)/sw/lib/ppc440/ppc440_bootloop.elf
@@ -40,10 +43,10 @@ PPC405_0_BOOTLOOP = $(BOOTLOOP_DIR)/ppc405_0.elf
 
 PPC405_1_BOOTLOOP = $(BOOTLOOP_DIR)/ppc405_1.elf
 
-BRAMINIT_ELF_FILES =  
-BRAMINIT_ELF_FILE_ARGS =  
+BRAMINIT_ELF_FILES =  $(TESTAPP_PERIPHERAL_OUTPUT) 
+BRAMINIT_ELF_FILE_ARGS =   -pe ppc405_0 $(TESTAPP_PERIPHERAL_OUTPUT) 
 
-ALL_USER_ELF_FILES = 
+ALL_USER_ELF_FILES = $(TESTAPP_PERIPHERAL_OUTPUT) 
 
 SIM_CMD = vsim
 
@@ -67,7 +70,7 @@ VPEXEC = virtualplatform/vpexec.exe
 
 LIBSCLEAN_TARGETS = ppc405_0_libsclean ppc405_1_libsclean 
 
-PROGRAMCLEAN_TARGETS = 
+PROGRAMCLEAN_TARGETS = TestApp_Peripheral_programclean 
 
 CORE_STATE_DEVELOPMENT_FILES = 
 
@@ -119,3 +122,33 @@ XPLORER_DEPENDENCY = __xps/xplorer.opt
 XPLORER_OPTIONS = -p $(DEVICE) -uc $(SYSTEM).ucf -bm $(SYSTEM).bmm -max_runs 7
 
 FPGA_IMP_DEPENDENCY = $(BMM_FILE) $(POSTSYN_NETLIST) $(UCF_FILE) $(BITGEN_UT_FILE) $(XFLOW_DEPENDENCY)
+
+#################################################################
+# SOFTWARE APPLICATION TESTAPP_PERIPHERAL
+#################################################################
+
+TESTAPP_PERIPHERAL_SOURCES = TestApp_Peripheral/src/TestApp_Peripheral.c TestApp_Peripheral/src/xintc_tapp_example.c TestApp_Peripheral/src/xsysace_selftest_example.c TestApp_Peripheral/src/xgpio_tapp_example.c TestApp_Peripheral/src/xgpio_intr_tapp_example.c 
+
+TESTAPP_PERIPHERAL_HEADERS = TestApp_Peripheral/src/intc_header.h TestApp_Peripheral/src/sysace_header.h TestApp_Peripheral/src/gpio_header.h TestApp_Peripheral/src/gpio_intr_header.h 
+
+TESTAPP_PERIPHERAL_CC = powerpc-eabi-gcc
+TESTAPP_PERIPHERAL_CC_SIZE = powerpc-eabi-size
+TESTAPP_PERIPHERAL_CC_OPT = -O2
+TESTAPP_PERIPHERAL_CFLAGS = 
+TESTAPP_PERIPHERAL_CC_SEARCH = # -B
+TESTAPP_PERIPHERAL_LIBPATH = -L./ppc405_0/lib/ # -L
+TESTAPP_PERIPHERAL_INCLUDES = -I./ppc405_0/include/  -ITestApp_Peripheral/src/ # -I
+TESTAPP_PERIPHERAL_LFLAGS = # -l
+TESTAPP_PERIPHERAL_LINKER_SCRIPT = TestApp_Peripheral/src/TestApp_Peripheral_LinkScr.ld
+TESTAPP_PERIPHERAL_LINKER_SCRIPT_FLAG = -Wl,-T -Wl,$(TESTAPP_PERIPHERAL_LINKER_SCRIPT) 
+TESTAPP_PERIPHERAL_CC_DEBUG_FLAG =  -g 
+TESTAPP_PERIPHERAL_CC_PROFILE_FLAG = # -pg
+TESTAPP_PERIPHERAL_CC_GLOBPTR_FLAG= # -msdata=eabi
+TESTAPP_PERIPHERAL_CC_INFERRED_FLAGS= 
+TESTAPP_PERIPHERAL_CC_START_ADDR_FLAG=  #  # -Wl,-defsym -Wl,_START_ADDR=
+TESTAPP_PERIPHERAL_CC_STACK_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_STACK_SIZE=
+TESTAPP_PERIPHERAL_CC_HEAP_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_HEAP_SIZE=
+TESTAPP_PERIPHERAL_OTHER_CC_FLAGS= $(TESTAPP_PERIPHERAL_CC_GLOBPTR_FLAG)  \
+                  $(TESTAPP_PERIPHERAL_CC_START_ADDR_FLAG) $(TESTAPP_PERIPHERAL_CC_STACK_SIZE_FLAG) $(TESTAPP_PERIPHERAL_CC_HEAP_SIZE_FLAG)  \
+                  $(TESTAPP_PERIPHERAL_CC_INFERRED_FLAGS)  \
+                  $(TESTAPP_PERIPHERAL_LINKER_SCRIPT_FLAG) $(TESTAPP_PERIPHERAL_CC_DEBUG_FLAG) $(TESTAPP_PERIPHERAL_CC_PROFILE_FLAG) 
