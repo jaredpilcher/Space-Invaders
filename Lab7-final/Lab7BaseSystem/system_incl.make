@@ -127,9 +127,9 @@ FPGA_IMP_DEPENDENCY = $(BMM_FILE) $(POSTSYN_NETLIST) $(UCF_FILE) $(BITGEN_UT_FIL
 # SOFTWARE APPLICATION TESTAPP_PERIPHERAL
 #################################################################
 
-TESTAPP_PERIPHERAL_SOURCES = TestApp_Peripheral/src/TestApp_Peripheral.c TestApp_Peripheral/src/xintc_tapp_example.c TestApp_Peripheral/src/xsysace_selftest_example.c TestApp_Peripheral/src/xgpio_tapp_example.c TestApp_Peripheral/src/xgpio_intr_tapp_example.c 
+TESTAPP_PERIPHERAL_SOURCES = TestApp_Peripheral/src/alienCodes.c TestApp_Peripheral/src/bullets.c TestApp_Peripheral/src/coord_objects.c TestApp_Peripheral/src/drawUtils.c TestApp_Peripheral/src/explosion.c TestApp_Peripheral/src/OPB_Int.c TestApp_Peripheral/src/sound.c TestApp_Peripheral/src/TestApp_Memory.c TestApp_Peripheral/src/TestApp_Peripheral.c TestApp_Peripheral/src/text.c TestApp_Peripheral/src/timer.c TestApp_Peripheral/src/wave_header.c TestApp_Peripheral/src/xgpio_intr_tapp_example.c TestApp_Peripheral/src/xgpio_tapp_example.c TestApp_Peripheral/src/xintc_tapp_example.c TestApp_Peripheral/src/xsysace_selftest_example.c TestApp_Peripheral/src/slave.c 
 
-TESTAPP_PERIPHERAL_HEADERS = TestApp_Peripheral/src/intc_header.h TestApp_Peripheral/src/sysace_header.h TestApp_Peripheral/src/gpio_header.h TestApp_Peripheral/src/gpio_intr_header.h 
+TESTAPP_PERIPHERAL_HEADERS = TestApp_Peripheral/src/intc_header.h TestApp_Peripheral/src/sysace_header.h TestApp_Peripheral/src/gpio_header.h TestApp_Peripheral/src/gpio_intr_header.h TestApp_Peripheral/src/alienCodes.h TestApp_Peripheral/src/bullets.h TestApp_Peripheral/src/coord_objects.h TestApp_Peripheral/src/ddr_header.h TestApp_Peripheral/src/drawUtils.h TestApp_Peripheral/src/explosion.h TestApp_Peripheral/src/OPB_Int.h TestApp_Peripheral/src/sound.h TestApp_Peripheral/src/TestApp_Memory.h TestApp_Peripheral/src/text.h TestApp_Peripheral/src/timer.h TestApp_Peripheral/src/wave_header.h TestApp_Peripheral/src/slave.h 
 
 TESTAPP_PERIPHERAL_CC = powerpc-eabi-gcc
 TESTAPP_PERIPHERAL_CC_SIZE = powerpc-eabi-size

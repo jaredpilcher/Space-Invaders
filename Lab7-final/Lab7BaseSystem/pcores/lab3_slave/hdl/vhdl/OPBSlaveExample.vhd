@@ -239,8 +239,8 @@ begin
 	
 	display_data(16 to 31) <= digit3 & digit2 & digit1 & digit0;
 	
-	output <= 	switches	when OPB_ABus = C_BASEADDR + 4 else
-				buttons		when OPB_ABus = C_BASEADDR + 8 else
+	output <= 	debounced_switches	when OPB_ABus = C_BASEADDR + 4 else
+				debounced_buttons		when OPB_ABus = C_BASEADDR + 8 else
 				(0 to 30 => '0') & interrupts_acknowledged when OPB_ABus = C_BASEADDR + 12 else
 				(0 to 30 => '0') & interrupt_enable when OPB_ABus = C_BASEADDR + 16 else
 				leds		when OPB_ABus = C_BASEADDR + 40 else
