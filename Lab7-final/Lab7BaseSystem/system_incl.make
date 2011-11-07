@@ -99,7 +99,8 @@ implementation/vga_framebuffer_wrapper.ngc \
 implementation/dcr_v29_0_wrapper.ngc \
 implementation/opb2dcr_bridge_0_wrapper.ngc \
 implementation/audio_codec_wrapper.ngc \
-implementation/lab3_slave_0_wrapper.ngc
+implementation/lab3_slave_0_wrapper.ngc \
+implementation/opb_spi_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

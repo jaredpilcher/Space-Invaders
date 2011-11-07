@@ -86,6 +86,9 @@ tion/audio_codec_wrapper.ngc"...
 Loading design module
 "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/implementa
 tion/lab3_slave_0_wrapper.ngc"...
+Loading design module
+"D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/implementa
+tion/opb_spi_0_wrapper.ngc"...
 
 Applying constraints in "system.ucf" to the design...
 INFO:NgdBuild:738 - A case sensitive search for the INST, PAD, or NET element
@@ -96,256 +99,376 @@ INFO:NgdBuild:738 - A case sensitive search for the INST, PAD, or NET element
    with respect to user-specified identifiers, which includes names of logic
    elements in a design.
 INFO:NgdBuild:740 - "system.ucf" Line 553: Found case insensitive match for NET
-   name 'EXP_IO_40_pin'. NET is 'exp_io_40_pin'.
+   name 'EXP_IO_37_pin'. NET is 'exp_io_37_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 554: Found case insensitive match for NET
-   name 'EXP_IO_40_pin'. NET is 'exp_io_40_pin'.
+   name 'EXP_IO_37_pin'. NET is 'exp_io_37_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 555: Found case insensitive match for NET
+   name 'EXP_IO_37_pin'. NET is 'exp_io_37_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 556: Found case insensitive match for NET
+   name 'EXP_IO_37_pin'. NET is 'exp_io_37_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 557: Found case insensitive match for NET
+   name 'EXP_IO_37_pin'. NET is 'exp_io_37_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 559: Found case insensitive match for NET
-   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+   name 'EXP_IO_38_pin'. NET is 'exp_io_38_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 560: Found case insensitive match for NET
-   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+   name 'EXP_IO_38_pin'. NET is 'exp_io_38_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 561: Found case insensitive match for NET
-   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+   name 'EXP_IO_38_pin'. NET is 'exp_io_38_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 562: Found case insensitive match for NET
-   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+   name 'EXP_IO_38_pin'. NET is 'exp_io_38_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 563: Found case insensitive match for NET
-   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+   name 'EXP_IO_38_pin'. NET is 'exp_io_38_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 565: Found case insensitive match for NET
-   name 'EXP_IO_42_pin'. NET is 'exp_io_42_pin'.
+   name 'EXP_IO_35_pin'. NET is 'exp_io_35_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 566: Found case insensitive match for NET
-   name 'EXP_IO_42_pin'. NET is 'exp_io_42_pin'.
+   name 'EXP_IO_35_pin'. NET is 'exp_io_35_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 567: Found case insensitive match for NET
+   name 'EXP_IO_35_pin'. NET is 'exp_io_35_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 568: Found case insensitive match for NET
+   name 'EXP_IO_35_pin'. NET is 'exp_io_35_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 569: Found case insensitive match for NET
+   name 'EXP_IO_35_pin'. NET is 'exp_io_35_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 571: Found case insensitive match for NET
-   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+   name 'EXP_IO_36_pin'. NET is 'exp_io_36_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 572: Found case insensitive match for NET
-   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+   name 'EXP_IO_36_pin'. NET is 'exp_io_36_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 573: Found case insensitive match for NET
-   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+   name 'EXP_IO_36_pin'. NET is 'exp_io_36_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 574: Found case insensitive match for NET
-   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+   name 'EXP_IO_36_pin'. NET is 'exp_io_36_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 575: Found case insensitive match for NET
-   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+   name 'EXP_IO_36_pin'. NET is 'exp_io_36_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 577: Found case insensitive match for NET
-   name 'EXP_IO_44_pin'. NET is 'exp_io_44_pin'.
+   name 'EXP_IO_33_pin'. NET is 'exp_io_33_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 578: Found case insensitive match for NET
-   name 'EXP_IO_44_pin'. NET is 'exp_io_44_pin'.
+   name 'EXP_IO_33_pin'. NET is 'exp_io_33_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 579: Found case insensitive match for NET
+   name 'EXP_IO_33_pin'. NET is 'exp_io_33_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 580: Found case insensitive match for NET
+   name 'EXP_IO_33_pin'. NET is 'exp_io_33_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 581: Found case insensitive match for NET
+   name 'EXP_IO_33_pin'. NET is 'exp_io_33_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 583: Found case insensitive match for NET
-   name 'EXP_IO_45_pin'. NET is 'exp_io_45_pin'.
+   name 'EXP_IO_34_pin'. NET is 'exp_io_34_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 584: Found case insensitive match for NET
-   name 'EXP_IO_45_pin'. NET is 'exp_io_45_pin'.
+   name 'EXP_IO_34_pin'. NET is 'exp_io_34_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 585: Found case insensitive match for NET
+   name 'EXP_IO_34_pin'. NET is 'exp_io_34_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 586: Found case insensitive match for NET
+   name 'EXP_IO_34_pin'. NET is 'exp_io_34_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 587: Found case insensitive match for NET
+   name 'EXP_IO_34_pin'. NET is 'exp_io_34_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 589: Found case insensitive match for NET
+   name 'EXP_IO_31_pin'. NET is 'exp_io_31_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 590: Found case insensitive match for NET
+   name 'EXP_IO_31_pin'. NET is 'exp_io_31_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 591: Found case insensitive match for NET
+   name 'EXP_IO_31_pin'. NET is 'exp_io_31_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 592: Found case insensitive match for NET
+   name 'EXP_IO_31_pin'. NET is 'exp_io_31_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 593: Found case insensitive match for NET
+   name 'EXP_IO_31_pin'. NET is 'exp_io_31_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 595: Found case insensitive match for NET
+   name 'EXP_IO_32_pin'. NET is 'exp_io_32_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 596: Found case insensitive match for NET
-   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+   name 'EXP_IO_32_pin'. NET is 'exp_io_32_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 597: Found case insensitive match for NET
-   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+   name 'EXP_IO_32_pin'. NET is 'exp_io_32_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 598: Found case insensitive match for NET
-   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+   name 'EXP_IO_32_pin'. NET is 'exp_io_32_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 599: Found case insensitive match for NET
-   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 600: Found case insensitive match for NET
-   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+   name 'EXP_IO_32_pin'. NET is 'exp_io_32_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 601: Found case insensitive match for NET
+   name 'EXP_IO_29_pin'. NET is 'exp_io_29_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 602: Found case insensitive match for NET
+   name 'EXP_IO_29_pin'. NET is 'exp_io_29_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 603: Found case insensitive match for NET
+   name 'EXP_IO_29_pin'. NET is 'exp_io_29_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 604: Found case insensitive match for NET
-   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+   name 'EXP_IO_29_pin'. NET is 'exp_io_29_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 605: Found case insensitive match for NET
-   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 606: Found case insensitive match for NET
-   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+   name 'EXP_IO_29_pin'. NET is 'exp_io_29_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 607: Found case insensitive match for NET
-   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+   name 'EXP_IO_30_pin'. NET is 'exp_io_30_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 608: Found case insensitive match for NET
-   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 612: Found case insensitive match for NET
-   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+   name 'EXP_IO_30_pin'. NET is 'exp_io_30_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 609: Found case insensitive match for NET
+   name 'EXP_IO_30_pin'. NET is 'exp_io_30_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 610: Found case insensitive match for NET
+   name 'EXP_IO_30_pin'. NET is 'exp_io_30_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 611: Found case insensitive match for NET
+   name 'EXP_IO_30_pin'. NET is 'exp_io_30_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 613: Found case insensitive match for NET
-   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+   name 'EXP_IO_27_pin'. NET is 'exp_io_27_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 614: Found case insensitive match for NET
-   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+   name 'EXP_IO_27_pin'. NET is 'exp_io_27_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 615: Found case insensitive match for NET
-   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+   name 'EXP_IO_27_pin'. NET is 'exp_io_27_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 616: Found case insensitive match for NET
-   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 618: Found case insensitive match for NET
-   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+   name 'EXP_IO_27_pin'. NET is 'exp_io_27_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 617: Found case insensitive match for NET
+   name 'EXP_IO_27_pin'. NET is 'exp_io_27_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 619: Found case insensitive match for NET
-   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+   name 'EXP_IO_28_pin'. NET is 'exp_io_28_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 620: Found case insensitive match for NET
-   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+   name 'EXP_IO_28_pin'. NET is 'exp_io_28_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 621: Found case insensitive match for NET
-   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
+   name 'EXP_IO_28_pin'. NET is 'exp_io_28_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 622: Found case insensitive match for NET
-   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 624: Found case insensitive match for NET
-   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+   name 'EXP_IO_28_pin'. NET is 'exp_io_28_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 623: Found case insensitive match for NET
+   name 'EXP_IO_28_pin'. NET is 'exp_io_28_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 625: Found case insensitive match for NET
-   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+   name 'EXP_IO_40_pin'. NET is 'exp_io_40_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 626: Found case insensitive match for NET
-   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 627: Found case insensitive match for NET
-   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 628: Found case insensitive match for NET
-   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 630: Found case insensitive match for NET
-   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+   name 'EXP_IO_40_pin'. NET is 'exp_io_40_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 631: Found case insensitive match for NET
-   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 632: Found case insensitive match for NET
-   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 633: Found case insensitive match for NET
-   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 634: Found case insensitive match for NET
-   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 636: Found case insensitive match for NET
-   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 635: Found case insensitive match for NET
+   name 'EXP_IO_41_pin'. NET is 'exp_io_41_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 637: Found case insensitive match for NET
-   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+   name 'EXP_IO_42_pin'. NET is 'exp_io_42_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 638: Found case insensitive match for NET
-   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 639: Found case insensitive match for NET
-   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 640: Found case insensitive match for NET
-   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 642: Found case insensitive match for NET
-   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+   name 'EXP_IO_42_pin'. NET is 'exp_io_42_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 643: Found case insensitive match for NET
-   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 644: Found case insensitive match for NET
-   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 645: Found case insensitive match for NET
-   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 646: Found case insensitive match for NET
-   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 648: Found case insensitive match for NET
-   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 647: Found case insensitive match for NET
+   name 'EXP_IO_43_pin'. NET is 'exp_io_43_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 649: Found case insensitive match for NET
-   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+   name 'EXP_IO_44_pin'. NET is 'exp_io_44_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 650: Found case insensitive match for NET
-   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 651: Found case insensitive match for NET
-   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 652: Found case insensitive match for NET
-   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 654: Found case insensitive match for NET
-   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
+   name 'EXP_IO_44_pin'. NET is 'exp_io_44_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 655: Found case insensitive match for NET
-   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
+   name 'EXP_IO_45_pin'. NET is 'exp_io_45_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 656: Found case insensitive match for NET
-   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 657: Found case insensitive match for NET
-   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 658: Found case insensitive match for NET
-   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 660: Found case insensitive match for NET
-   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 661: Found case insensitive match for NET
-   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 662: Found case insensitive match for NET
-   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 663: Found case insensitive match for NET
-   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 664: Found case insensitive match for NET
-   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 666: Found case insensitive match for NET
-   name 'EXP_IO_61_pin'. NET is 'exp_io_61_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 667: Found case insensitive match for NET
-   name 'EXP_IO_61_pin'. NET is 'exp_io_61_pin'.
+   name 'EXP_IO_45_pin'. NET is 'exp_io_45_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 668: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 669: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 670: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 671: Found case insensitive match for NET
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 672: Found case insensitive match for NET
-   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 673: Found case insensitive match for NET
-   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 674: Found case insensitive match for NET
-   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 675: Found case insensitive match for NET
-   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+   name 'EXP_IO_48_pin'. NET is 'exp_io_48_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 676: Found case insensitive match for NET
-   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 677: Found case insensitive match for NET
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 678: Found case insensitive match for NET
-   name 'EXP_IO_63_pin'. NET is 'exp_io_63_pin'.
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 679: Found case insensitive match for NET
-   name 'EXP_IO_63_pin'. NET is 'exp_io_63_pin'.
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 680: Found case insensitive match for NET
+   name 'EXP_IO_50_pin'. NET is 'exp_io_50_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 684: Found case insensitive match for NET
-   name 'EXP_IO_64_pin'. NET is 'exp_io_64_pin'.
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 685: Found case insensitive match for NET
-   name 'EXP_IO_64_pin'. NET is 'exp_io_64_pin'.
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 686: Found case insensitive match for NET
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 687: Found case insensitive match for NET
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 688: Found case insensitive match for NET
+   name 'EXP_IO_52_pin'. NET is 'exp_io_52_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 690: Found case insensitive match for NET
-   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 691: Found case insensitive match for NET
-   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 692: Found case insensitive match for NET
-   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 693: Found case insensitive match for NET
-   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 694: Found case insensitive match for NET
-   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+   name 'EXP_IO_53_pin'. NET is 'exp_io_53_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 696: Found case insensitive match for NET
-   name 'EXP_IO_66_pin'. NET is 'exp_io_66_pin'.
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 697: Found case insensitive match for NET
-   name 'EXP_IO_66_pin'. NET is 'exp_io_66_pin'.
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 698: Found case insensitive match for NET
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 699: Found case insensitive match for NET
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 700: Found case insensitive match for NET
+   name 'EXP_IO_54_pin'. NET is 'exp_io_54_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 702: Found case insensitive match for NET
-   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 703: Found case insensitive match for NET
-   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 704: Found case insensitive match for NET
-   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 705: Found case insensitive match for NET
-   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 706: Found case insensitive match for NET
-   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+   name 'EXP_IO_55_pin'. NET is 'exp_io_55_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 708: Found case insensitive match for NET
-   name 'EXP_IO_68_pin'. NET is 'exp_io_68_pin'.
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 709: Found case insensitive match for NET
-   name 'EXP_IO_68_pin'. NET is 'exp_io_68_pin'.
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 710: Found case insensitive match for NET
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 711: Found case insensitive match for NET
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 712: Found case insensitive match for NET
+   name 'EXP_IO_56_pin'. NET is 'exp_io_56_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 714: Found case insensitive match for NET
-   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 715: Found case insensitive match for NET
-   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 716: Found case insensitive match for NET
-   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 717: Found case insensitive match for NET
-   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 718: Found case insensitive match for NET
-   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+   name 'EXP_IO_57_pin'. NET is 'exp_io_57_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 720: Found case insensitive match for NET
-   name 'EXP_IO_70_pin'. NET is 'exp_io_70_pin'.
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 721: Found case insensitive match for NET
-   name 'EXP_IO_70_pin'. NET is 'exp_io_70_pin'.
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 722: Found case insensitive match for NET
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 723: Found case insensitive match for NET
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 724: Found case insensitive match for NET
+   name 'EXP_IO_58_pin'. NET is 'exp_io_58_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 726: Found case insensitive match for NET
-   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 727: Found case insensitive match for NET
-   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 728: Found case insensitive match for NET
-   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 729: Found case insensitive match for NET
-   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 730: Found case insensitive match for NET
-   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+   name 'EXP_IO_59_pin'. NET is 'exp_io_59_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 732: Found case insensitive match for NET
-   name 'EXP_IO_72_pin'. NET is 'exp_io_72_pin'.
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 733: Found case insensitive match for NET
-   name 'EXP_IO_72_pin'. NET is 'exp_io_72_pin'.
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 734: Found case insensitive match for NET
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 735: Found case insensitive match for NET
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 736: Found case insensitive match for NET
+   name 'EXP_IO_60_pin'. NET is 'exp_io_60_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 738: Found case insensitive match for NET
-   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+   name 'EXP_IO_61_pin'. NET is 'exp_io_61_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 739: Found case insensitive match for NET
-   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 740: Found case insensitive match for NET
-   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 741: Found case insensitive match for NET
-   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 742: Found case insensitive match for NET
-   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+   name 'EXP_IO_61_pin'. NET is 'exp_io_61_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 744: Found case insensitive match for NET
-   name 'EXP_IO_74_pin'. NET is 'exp_io_74_pin'.
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 745: Found case insensitive match for NET
-   name 'EXP_IO_74_pin'. NET is 'exp_io_74_pin'.
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 746: Found case insensitive match for NET
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 747: Found case insensitive match for NET
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 748: Found case insensitive match for NET
+   name 'EXP_IO_62_pin'. NET is 'exp_io_62_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 750: Found case insensitive match for NET
-   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+   name 'EXP_IO_63_pin'. NET is 'exp_io_63_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 751: Found case insensitive match for NET
-   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 752: Found case insensitive match for NET
-   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 753: Found case insensitive match for NET
-   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
-INFO:NgdBuild:740 - "system.ucf" Line 754: Found case insensitive match for NET
-   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+   name 'EXP_IO_63_pin'. NET is 'exp_io_63_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 756: Found case insensitive match for NET
-   name 'EXP_IO_76_pin'. NET is 'exp_io_76_pin'.
+   name 'EXP_IO_64_pin'. NET is 'exp_io_64_pin'.
 INFO:NgdBuild:740 - "system.ucf" Line 757: Found case insensitive match for NET
+   name 'EXP_IO_64_pin'. NET is 'exp_io_64_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 762: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 763: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 764: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 765: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 766: Found case insensitive match for NET
+   name 'EXP_IO_65_pin'. NET is 'exp_io_65_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 768: Found case insensitive match for NET
+   name 'EXP_IO_66_pin'. NET is 'exp_io_66_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 769: Found case insensitive match for NET
+   name 'EXP_IO_66_pin'. NET is 'exp_io_66_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 774: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 775: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 776: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 777: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 778: Found case insensitive match for NET
+   name 'EXP_IO_67_pin'. NET is 'exp_io_67_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 780: Found case insensitive match for NET
+   name 'EXP_IO_68_pin'. NET is 'exp_io_68_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 781: Found case insensitive match for NET
+   name 'EXP_IO_68_pin'. NET is 'exp_io_68_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 786: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 787: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 788: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 789: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 790: Found case insensitive match for NET
+   name 'EXP_IO_69_pin'. NET is 'exp_io_69_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 792: Found case insensitive match for NET
+   name 'EXP_IO_70_pin'. NET is 'exp_io_70_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 793: Found case insensitive match for NET
+   name 'EXP_IO_70_pin'. NET is 'exp_io_70_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 798: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 799: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 800: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 801: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 802: Found case insensitive match for NET
+   name 'EXP_IO_71_pin'. NET is 'exp_io_71_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 804: Found case insensitive match for NET
+   name 'EXP_IO_72_pin'. NET is 'exp_io_72_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 805: Found case insensitive match for NET
+   name 'EXP_IO_72_pin'. NET is 'exp_io_72_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 810: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 811: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 812: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 813: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 814: Found case insensitive match for NET
+   name 'EXP_IO_73_pin'. NET is 'exp_io_73_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 816: Found case insensitive match for NET
+   name 'EXP_IO_74_pin'. NET is 'exp_io_74_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 817: Found case insensitive match for NET
+   name 'EXP_IO_74_pin'. NET is 'exp_io_74_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 822: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 823: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 824: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 825: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 826: Found case insensitive match for NET
+   name 'EXP_IO_75_pin'. NET is 'exp_io_75_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 828: Found case insensitive match for NET
+   name 'EXP_IO_76_pin'. NET is 'exp_io_76_pin'.
+INFO:NgdBuild:740 - "system.ucf" Line 829: Found case insensitive match for NET
    name 'EXP_IO_76_pin'. NET is 'exp_io_76_pin'.
 
 Checking timing specifications ...
@@ -369,6 +492,11 @@ INFO:XdmHelpers:851 - TNM "dcm_0_dcm_0_CLK0_BUF", used in period specification
    TNM groups and period specifications were generated at the DCM output(s):
    CLKDV: TS_vga_framebuffer_vga_framebuffer_CLKDV=PERIOD
 vga_framebuffer_vga_framebuffer_CLKDV TS_dcm_0_dcm_0_CLK0_BUF*4 HIGH 50%
+WARNING:XdmHelpers:662 - Period specification "TS_dcm_0_dcm_0_CLK0_BUF"
+   references the TNM group "dcm_0_dcm_0_CLK0_BUF", which contains both pads and
+   synchronous elements. The timing analyzer will ignore the pads for this
+   specification. You might want to use a qualifier (e.g. "FFS") on the TNM
+   property to remove the pads from this group.
 
 Processing BMM file ...
 
@@ -1212,9 +1340,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 224
+  Number of warnings: 225
 
-Total memory usage is 98924 kilobytes
+Total memory usage is 100972 kilobytes
 
 Writing NGD file "system.ngd" ...
 

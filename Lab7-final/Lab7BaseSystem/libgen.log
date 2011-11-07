@@ -10,7 +10,7 @@ Part (-p)			: virtex2p
 Software Specification file	: system.mss
 WARNING:MDT - IPNAME:opb2dcr_bridge INSTANCE:opb2dcr_bridge_0 -
    D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.m
-   hs line 448 - deprecated core for architecture 'virtex2p'!
+   hs line 460 - deprecated core for architecture 'virtex2p'!
 Sourcing tcl file
 C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_
 0.tcl ...
@@ -38,6 +38,9 @@ C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v
 Sourcing tcl file
 C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_modu
 le_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_spi_v1_00_e/data/opb_spi_v2_
+1_0.tcl ...
 
 Overriding IP level properties ...
 INFO:MDT -
@@ -87,6 +90,10 @@ INFO:MDT -
 INFO:MDT -
    C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
    odule_v2_1_0.mpd line 59 - dcm_1 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_spi_v1_00_e\data\opb_spi_
+   v2_1_0.mpd line 46 - opb_spi_0 (opb_spi) tool is overriding PARAMETER
    C_FAMILY value to virtex2p
 
 Performing IP level DRCs on properties...
@@ -354,13 +361,13 @@ _v2_1_0.tcl ...
 Check platform configuration ...
 IPNAME:plb_v34 INSTANCE:plb -
 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 192 - 3 master(s) : 3 slave(s)
+line 204 - 3 master(s) : 3 slave(s)
 IPNAME:opb_v20 INSTANCE:opb -
 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 202 - 1 master(s) : 9 slave(s)
+line 214 - 1 master(s) : 9 slave(s)
 IPNAME:dcr_v29 INSTANCE:dcr_v29_0 -
 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 442 - 1 master(s) : 1 slave(s)
+line 454 - 1 master(s) : 1 slave(s)
 
 Check port drivers...
 
@@ -370,11 +377,17 @@ INFO:MDT - Frequency for Top-Level Input Clock 'fpga_0_Audio_Codec_Bit_Clk_pin'
    is not specified. Clock DRCs will not be performed for IPs connected to that
    clock port. 
 
+WARNING:MDT - Peripheral opb_spi_0 is not connected to any of the processors in
+   the system. Check for the following reasons.
+   1. opb_spi_0 is not connected to any of the buses connected to a processor. 
+   2. opb_spi_0 does not have adresses set correctly. 
+   3. opb_spi_0's address is not within any of the bridge windows connected to a
+   processor.
 INFO:MDT - List of peripherals addressable from processor instance ppc405_0 : 
   - opb
 WARNING:MDT -
    D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.m
-   hs line 202 - No Driver Found for instance opb. To avoid seeing this warning,
+   hs line 214 - No Driver Found for instance opb. To avoid seeing this warning,
    assign the appropriate driver or driver "generic 1.00.a " to instance opb
 
   - RS232_Uart_1

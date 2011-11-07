@@ -1,7 +1,7 @@
 Release 9.1.02i - par J.33
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 
-Wed Nov 02 21:48:06 2011
+Fri Nov 04 16:04:52 2011
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -563,7 +563,7 @@ J5||DIFFM|IO_L38P_2|UNUSED||2||||||||||
 J6||DIFFS|IO_L38N_2|UNUSED||2||||||||||
 J7||DIFFM|IO_L05P_2|UNUSED||2||||||||||
 J8||DIFFS|IO_L05N_2|UNUSED||2||||||||||
-J9|||VCCO_2|||2|||||any******|||||
+J9|||VCCO_2|||2|||||3.30|||||
 J10|||VCCO_1|||1|||||3.30|||||
 J11|||VCCO_1|||1|||||3.30|||||
 J12|||VCCO_1|||1|||||3.30|||||
@@ -593,7 +593,7 @@ K5||DIFFM|IO_L45P_2|UNUSED||2||||||||||
 K6||DIFFS|IO_L45N_2|UNUSED||2||||||||||
 K7||DIFFM|IO_L35P_2|UNUSED||2||||||||||
 K8||DIFFS|IO_L35N_2|UNUSED||2||||||||||
-K9|||VCCO_2|||2|||||any******|||||
+K9|||VCCO_2|||2|||||3.30|||||
 K10|||VCCO_1|||1|||||3.30|||||
 K11|||VCCO_1|||1|||||3.30|||||
 K12|||VCCO_1|||1|||||3.30|||||
@@ -623,8 +623,8 @@ L5||DIFFS|IO_L54N_2|UNUSED||2||||||||||
 L6|||GND|||||||||||||
 L7||DIFFM|IO_L41P_2|UNUSED||2||||||||||
 L8||DIFFS|IO_L41N_2|UNUSED||2||||||||||
-L9|||VCCO_2|||2|||||any******|||||
-L10|||VCCO_2|||2|||||any******|||||
+L9|||VCCO_2|||2|||||3.30|||||
+L10|||VCCO_2|||2|||||3.30|||||
 L11|||GND|||||||||||||
 L12|||VCCINT||||||||1.5|||||
 L13|||VCCINT||||||||1.5|||||
@@ -653,8 +653,8 @@ M5||DIFFM|IO_L47P_2|UNUSED||2||||||||||
 M6||DIFFS|IO_L47N_2|UNUSED||2||||||||||
 M7||DIFFM|IO_L44P_2|UNUSED||2||||||||||
 M8||DIFFS|IO_L44N_2|UNUSED||2||||||||||
-M9|||VCCO_2|||2|||||any******|||||
-M10|||VCCO_2|||2|||||any******|||||
+M9|||VCCO_2|||2|||||3.30|||||
+M10|||VCCO_2|||2|||||3.30|||||
 M11|||VCCINT||||||||1.5|||||
 M12|||GND|||||||||||||
 M13|||GND|||||||||||||
@@ -683,8 +683,8 @@ N5||DIFFM|IO_L53P_2|UNUSED||2||||||||||
 N6||DIFFS|IO_L53N_2|UNUSED||2||||||||||
 N7||DIFFM|IO_L50P_2|UNUSED||2||||||||||
 N8||DIFFS|IO_L50N_2|UNUSED||2||||||||||
-N9|||VCCO_2|||2|||||any******|||||
-N10|||VCCO_2|||2|||||any******|||||
+N9|||VCCO_2|||2|||||3.30|||||
+N10|||VCCO_2|||2|||||3.30|||||
 N11|||VCCINT||||||||1.5|||||
 N12|||GND|||||||||||||
 N13|||GND|||||||||||||
@@ -708,13 +708,13 @@ N30||DIFFS|IO_L58N_7/VREF_7|UNUSED/VREF||7|||||1.25|||||
 P1||DIFFM|IO_L58P_2|UNUSED||2||||||||||
 P2||DIFFM|IO_L85P_2|UNUSED||2||||||||||
 P3||DIFFS|IO_L85N_2|UNUSED||2||||||||||
-P4||DIFFM|IO_L87P_2|UNUSED||2||||||||||
-P5||DIFFS|IO_L87N_2|UNUSED||2||||||||||
+P4|exp_io_29_pin|IOB|IO_L87P_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
+P5|exp_io_28_pin|IOB|IO_L87N_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
 P6|||GND|||||||||||||
 P7||DIFFM|IO_L59P_2|UNUSED||2||||||||||
 P8||DIFFS|IO_L59N_2|UNUSED||2||||||||||
 P9||DIFFS|IO_L56N_2|UNUSED||2||||||||||
-P10|||VCCO_2|||2|||||any******|||||
+P10|||VCCO_2|||2|||||3.30|||||
 P11|||VCCINT||||||||1.5|||||
 P12|||GND|||||||||||||
 P13|||GND|||||||||||||
@@ -736,15 +736,15 @@ P28||DIFFS|IO_L85N_7|UNUSED||7||||||||||
 P29|fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQS_pin<4>|IOB|IO_L85P_7|BIDIR|SSTL2_II|7||NONE*|NONE**|NONE||LOCATED||YES|NONE|
 P30|fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ_pin<36>|IOB|IO_L58P_7|BIDIR|SSTL2_II|7||NONE*|NONE**|NONE||LOCATED||YES|NONE|
 R1|||VCCAUX||||||||2.5|||||
-R2||DIFFS|IO_L88N_2/VREF_2|UNUSED||2||||||||||
-R3||DIFFM|IO_L90P_2|UNUSED||2||||||||||
-R4||DIFFS|IO_L90N_2|UNUSED||2||||||||||
-R5||DIFFM|IO_L89P_2|UNUSED||2||||||||||
-R6||DIFFS|IO_L89N_2|UNUSED||2||||||||||
-R7||DIFFM|IO_L86P_2|UNUSED||2||||||||||
+R2|exp_io_30_pin|IOB|IO_L88N_2/VREF_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
+R3|exp_io_35_pin|IOB|IO_L90P_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
+R4|exp_io_34_pin|IOB|IO_L90N_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
+R5|exp_io_33_pin|IOB|IO_L89P_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
+R6|exp_io_32_pin|IOB|IO_L89N_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
+R7|exp_io_27_pin|IOB|IO_L86P_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
 R8||DIFFS|IO_L86N_2|UNUSED||2||||||||||
 R9||DIFFM|IO_L56P_2|UNUSED||2||||||||||
-R10|||VCCO_2|||2|||||any******|||||
+R10|||VCCO_2|||2|||||3.30|||||
 R11|||VCCINT||||||||1.5|||||
 R12|||GND|||||||||||||
 R13|||GND|||||||||||||
@@ -766,10 +766,10 @@ R28||DIFFM|IO_L90P_7|UNUSED||7||||||||||
 R29||DIFFS|IO_L88N_7/VREF_7|UNUSED/VREF||7|||||1.25|||||
 R30|||VCCAUX||||||||2.5|||||
 T1|||VCCAUX||||||||2.5|||||
-T2||DIFFM|IO_L88P_2|UNUSED||2||||||||||
+T2|exp_io_31_pin|IOB|IO_L88P_2|OUTPUT|LVTTL|2|12|FAST|PULLUP|||LOCATED||NO|NONE|
 T3|exp_io_40_pin|IOB|IO_L88N_3|INPUT|LVTTL|3||||NONE||LOCATED||YES|NONE|
 T4|exp_io_41_pin|IOB|IO_L88P_3|OUTPUT|LVTTL|3|12|SLOW|PULLUP|||LOCATED||NO|NONE|
-T5||DIFFS|IO_L89N_3|UNUSED||3||||||||||
+T5|exp_io_38_pin|IOB|IO_L89N_3|OUTPUT|LVTTL|3|12|FAST|PULLUP|||LOCATED||NO|NONE|
 T6||DIFFM|IO_L89P_3|UNUSED||3||||||||||
 T7|exp_io_44_pin|IOB|IO_L86N_3|INPUT|LVTTL|3||||NONE||LOCATED||YES|NONE|
 T8|exp_io_45_pin|IOB|IO_L86P_3|INPUT|LVTTL|3||||NONE||LOCATED||YES|NONE|
@@ -795,7 +795,7 @@ T27||DIFFM|IO_L88P_6|UNUSED||6||||||||||
 T28||DIFFS|IO_L88N_6|UNUSED||6||||||||||
 T29||DIFFM|IO_L88P_7|UNUSED||7||||||||||
 T30|||VCCAUX||||||||2.5|||||
-U1||DIFFS|IO_L90N_3|UNUSED||3||||||||||
+U1|exp_io_36_pin|IOB|IO_L90N_3|OUTPUT|LVTTL|3|12|FAST|PULLUP|||LOCATED||NO|NONE|
 U2|exp_io_42_pin|IOB|IO_L87N_3/VREF_3|INPUT|LVTTL|3||||NONE||LOCATED||YES|NONE|
 U3|exp_io_43_pin|IOB|IO_L87P_3|OUTPUT|LVTTL|3|12|SLOW|PULLUP|||LOCATED||NO|NONE|
 U4||DIFFS|IO_L85N_3|UNUSED||3||||||||||
@@ -825,7 +825,7 @@ U27||DIFFS|IO_L85N_6|UNUSED||6||||||||||
 U28||DIFFM|IO_L87P_6|UNUSED||6||||||||||
 U29||DIFFS|IO_L87N_6/VREF_6|UNUSED/VREF||6|||||1.25|||||
 U30||DIFFS|IO_L90N_6|UNUSED||6||||||||||
-V1||DIFFM|IO_L90P_3|UNUSED||3||||||||||
+V1|exp_io_37_pin|IOB|IO_L90P_3|OUTPUT|LVTTL|3|12|FAST|NONE**|||LOCATED||NO|NONE|
 V2|exp_io_48_pin|IOB|IO_L60N_3|OUTPUT|LVTTL|3|12|SLOW|PULLUP|||LOCATED||NO|NONE|
 V3|exp_io_52_pin|IOB|IO_L58N_3|OUTPUT|LVTTL|3|12|SLOW|PULLUP|||LOCATED||NO|NONE|
 V4|exp_io_53_pin|IOB|IO_L58P_3|OUTPUT|LVTTL|3|12|SLOW|PULLUP|||LOCATED||NO|NONE|

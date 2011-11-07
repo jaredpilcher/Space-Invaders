@@ -65,107 +65,107 @@ Analyzing hierarchy for entity <system> in library <work> (architecture <STRUCTU
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <system> in library <work> (Architecture <STRUCTURE>).
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2684: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2692: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2700: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2708: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2716: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2724: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2732: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2740: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2748: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2756: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2764: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2772: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2780: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2788: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2796: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2804: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2812: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2820: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2828: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2836: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2844: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2852: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2860: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2868: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2876: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2884: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2892: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2900: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2908: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2916: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2924: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2932: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2940: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2948: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2956: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2964: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2972: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2980: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2988: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2996: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3004: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3012: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3020: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3028: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3036: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3044: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3052: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3060: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3068: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3076: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3084: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3092: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3100: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3108: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3116: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3124: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3132: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3140: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3148: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3156: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3164: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3172: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3180: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3188: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3196: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3204: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3212: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3220: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3228: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3236: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3244: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3252: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3260: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3268: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3276: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3284: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3292: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3300: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3308: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3316: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3324: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3332: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3340: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3348: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3356: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3364: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3372: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3380: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3388: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3396: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3404: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3412: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3420: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3428: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3436: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3444: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3452: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3460: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3468: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3476: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3484: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2810: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2818: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2826: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2834: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2842: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2850: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2858: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2866: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2874: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2882: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2890: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2898: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2906: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2914: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2922: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2930: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2938: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2946: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2954: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2962: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2970: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2978: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2986: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 2994: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3002: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3010: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3018: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3026: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3034: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3042: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3050: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3058: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3066: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3074: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3082: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3090: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3098: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3106: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3114: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3122: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3130: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3138: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3146: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3154: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3162: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3170: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3178: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3186: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3194: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3202: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3210: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3218: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3226: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3234: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3242: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3250: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3258: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3266: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3274: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3282: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3290: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3298: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3306: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3314: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3322: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3330: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3338: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3346: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3354: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3362: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3370: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3378: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3386: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3394: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3402: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3410: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3418: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3426: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3434: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3442: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3450: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3458: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3466: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3474: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3482: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3490: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3498: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3506: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3514: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3522: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3530: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3538: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3546: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3554: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3562: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3570: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3578: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3586: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3594: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3602: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/hdl/system.vhd" line 3610: Instantiating black box module <IOBUF>.
 Entity <system> analyzed. Unit <system> generated.
 
 
@@ -219,6 +219,7 @@ Reading core <../implementation/dcr_v29_0_wrapper.ngc>.
 Reading core <../implementation/opb2dcr_bridge_0_wrapper.ngc>.
 Reading core <../implementation/audio_codec_wrapper.ngc>.
 Reading core <../implementation/lab3_slave_0_wrapper.ngc>.
+Reading core <../implementation/opb_spi_0_wrapper.ngc>.
 Loading core <ppc405_0_wrapper> for timing and area information for instance <ppc405_0>.
 Loading core <ppc405_1_wrapper> for timing and area information for instance <ppc405_1>.
 Loading core <jtagppc_0_wrapper> for timing and area information for instance <jtagppc_0>.
@@ -245,6 +246,7 @@ Loading core <dcr_v29_0_wrapper> for timing and area information for instance <d
 Loading core <opb2dcr_bridge_0_wrapper> for timing and area information for instance <opb2dcr_bridge_0>.
 Loading core <audio_codec_wrapper> for timing and area information for instance <audio_codec>.
 Loading core <lab3_slave_0_wrapper> for timing and area information for instance <lab3_slave_0>.
+Loading core <opb_spi_0_wrapper> for timing and area information for instance <opb_spi_0>.
 Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
 
 =========================================================================
@@ -261,41 +263,41 @@ Optimizing unit <system> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0_1> 
 INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1> 
 INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0_1> 
 INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/OE_NOPIPE_GEN.DQ_OE_REG_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 8 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_OE_REG_I>
    <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_OE_REG_I> 
 INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[7].WR_DQS_EN_REG> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[6].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[5].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[4].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[3].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[2].WR_DQS_EN_REG>
    <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[1].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[0].WR_DQS_EN_REG> 
 INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_RST_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_RST_I>
    <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_RST_I> 
-INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following FF/Latch : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end_1> 
 INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_SETRST_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_SETRST_I>
    <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_SETRST_I> 
-INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[2].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[2].IPR_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following FF/Latch : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end_1> 
 INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[0].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[0].IPR_REG_BIT_I> 
-INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[1].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[1].IPR_REG_BIT_I> 
 INFO:Xst:2260 - The FF/Latch <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[28].INTC_DBUS_BIT_I> in Unit <opb_intc_0> is equivalent to the following 28 FFs/Latches : <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[27].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[26].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[25].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[24].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[23].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[22].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[21].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[20].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[19].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[18].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[17].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[16].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[15].INTC_DBUS_BIT_I>
    <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[14].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[13].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[12].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[11].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[10].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[9].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[8].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[7].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[6].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[5].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[4].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[3].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[2].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[1].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[0].INTC_DBUS_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[2].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[2].IPR_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[1].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[1].IPR_REG_BIT_I> 
 INFO:Xst:2260 - The FF/Latch <audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0> in Unit <audio_codec> is equivalent to the following FF/Latch : <audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0_1> 
-INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0_1> 
 INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1> 
 INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0_1> 
 INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/OE_NOPIPE_GEN.DQ_OE_REG_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 8 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_OE_REG_I>
    <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_OE_REG_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_OE_REG_I> 
 INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[7].WR_DQS_EN_REG> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[6].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[5].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[4].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[3].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[2].WR_DQS_EN_REG>
    <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[1].WR_DQS_EN_REG> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.DATASM_I/NOWRITE_PIPE_GEN.WRITE_DQS_EN_GEN[0].WR_DQS_EN_REG> 
 INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_RST_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_RST_I>
    <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_RST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_RST_I> 
-INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following FF/Latch : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end_1> 
 INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[7].DQS_SETRST_I> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following 7 FFs/Latches : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[6].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[5].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[4].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_SETRST_I>
    <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_SETRST_I> <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_SETRST_I> 
-INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[2].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[2].IPR_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end> in Unit <ddr_256mb_32mx64_rank1_row13_col10_cl2_5> is equivalent to the following FF/Latch : <ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/CNTRS_I/Trefi_pwrup_end_1> 
 INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[0].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[0].IPR_REG_BIT_I> 
-INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[1].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[1].IPR_REG_BIT_I> 
 INFO:Xst:2260 - The FF/Latch <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[28].INTC_DBUS_BIT_I> in Unit <opb_intc_0> is equivalent to the following 28 FFs/Latches : <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[27].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[26].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[25].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[24].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[23].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[22].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[21].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[20].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[19].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[18].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[17].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[16].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[15].INTC_DBUS_BIT_I>
    <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[14].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[13].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[12].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[11].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[10].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[9].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[8].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[7].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[6].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[5].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[4].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[3].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[2].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[1].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[0].INTC_DBUS_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[2].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[2].IPR_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[1].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[1].IPR_REG_BIT_I> 
 INFO:Xst:2260 - The FF/Latch <audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0> in Unit <audio_codec> is equivalent to the following FF/Latch : <audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0_1> 
 
 Final Macro Processing ...
@@ -327,68 +329,70 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 220
+# IOs                              : 232
 
 Cell Usage :
-# BELS                             : 4697
+# BELS                             : 5074
 #      BUF                         : 1
-#      GND                         : 29
-#      INV                         : 126
+#      GND                         : 30
+#      INV                         : 144
 #      LUT1                        : 142
-#      LUT2                        : 455
-#      LUT2_D                      : 20
+#      LUT2                        : 505
+#      LUT2_D                      : 21
 #      LUT2_L                      : 5
-#      LUT3                        : 687
+#      LUT3                        : 733
 #      LUT3_D                      : 18
-#      LUT3_L                      : 23
-#      LUT4                        : 1570
-#      LUT4_D                      : 48
-#      LUT4_L                      : 63
+#      LUT3_L                      : 27
+#      LUT4                        : 1757
+#      LUT4_D                      : 51
+#      LUT4_L                      : 70
 #      MULT_AND                    : 28
-#      MUXCY                       : 818
+#      MUXCY                       : 852
 #      MUXCY_D                     : 16
-#      MUXCY_L                     : 54
-#      MUXF5                       : 161
+#      MUXCY_L                     : 62
+#      MUXF5                       : 170
 #      MUXF6                       : 1
-#      VCC                         : 28
-#      XORCY                       : 404
-# FlipFlops/Latches                : 3528
-#      FD                          : 298
+#      VCC                         : 29
+#      XORCY                       : 412
+# FlipFlops/Latches                : 3653
+#      FD                          : 299
 #      FD_1                        : 21
-#      FDC                         : 110
-#      FDCE                        : 356
-#      FDCPE                       : 5
+#      FDC                         : 122
+#      FDC_1                       : 2
+#      FDCE                        : 357
+#      FDCP                        : 3
+#      FDCPE                       : 15
 #      FDDRRSE                     : 24
-#      FDE                         : 310
+#      FDE                         : 329
 #      FDP                         : 33
-#      FDPE                        : 115
-#      FDR                         : 1031
+#      FDPE                        : 117
+#      FDR                         : 1061
 #      FDR_1                       : 24
-#      FDRE                        : 925
-#      FDRS                        : 76
+#      FDRE                        : 949
+#      FDRS                        : 93
 #      FDRS_1                      : 1
 #      FDRSE                       : 34
-#      FDS                         : 107
+#      FDS                         : 108
 #      FDS_1                       : 33
-#      FDSE                        : 24
+#      FDSE                        : 27
 #      OFDDRRSE                    : 1
 # RAMS                             : 241
 #      RAM16X1D                    : 174
 #      RAMB16_S18_S36              : 1
 #      RAMB16_S1_S1                : 64
 #      RAMB16_S36_S36              : 2
-# Shift Registers                  : 74
+# Shift Registers                  : 90
 #      SRL16                       : 54
 #      SRL16_1                     : 1
-#      SRL16E                      : 19
-# Clock Buffers                    : 7
-#      BUFG                        : 5
+#      SRL16E                      : 35
+# Clock Buffers                    : 8
+#      BUFG                        : 6
 #      BUFGP                       : 2
-# IO Buffers                       : 217
+# IO Buffers                       : 229
 #      IBUF                        : 17
 #      IBUFG                       : 2
 #      IOBUF                       : 101
-#      OBUF                        : 97
+#      OBUF                        : 109
 # DCMs                             : 3
 #      DCM                         : 3
 # Others                           : 3
@@ -401,17 +405,17 @@ Device utilization summary:
 
 Selected Device : 2vp30ff896-7 
 
- Number of Slices:                    3114  out of  13696    22%  
- Number of Slice Flip Flops:          3155  out of  27392    11%  
- Number of 4 input LUTs:              3579  out of  27392    13%  
-    Number used as logic:             3157
-    Number used as Shift registers:     74
+ Number of Slices:                    3304  out of  13696    24%  
+ Number of Slice Flip Flops:          3280  out of  27392    11%  
+ Number of 4 input LUTs:              3911  out of  27392    14%  
+    Number used as logic:             3473
+    Number used as Shift registers:     90
     Number used as RAMs:               348
- Number of IOs:                        220
- Number of bonded IOBs:                219  out of    556    39%  
+ Number of IOs:                        232
+ Number of bonded IOBs:                231  out of    556    41%  
     IOB Flip Flops:                    373
  Number of BRAMs:                       67  out of    136    49%  
- Number of GCLKs:                        7  out of     16    43%  
+ Number of GCLKs:                        8  out of     16    50%  
  Number of PPC405s:                      2  out of      2   100%  
  Number of DCMs:                         3  out of      8    37%  
 
@@ -436,23 +440,24 @@ Clock Information:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                                                          | Clock buffer(FF name)                                                                                                                                                                          | Load  |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK0                                                                                                                                                               | 3045  |
-fpga_0_net_gnd_pin_OBUF                                                                                                                                                               | NONE(plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s1_s1_55)                                                                                                                        | 65    |
+sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK0                                                                                                                                                               | 3056  |
+fpga_0_net_gnd_pin_OBUF                                                                                                                                                               | NONE(plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s1_s1_23)                                                                                                                        | 174   |
 fpga_0_SysACE_CompactFlash_SysACE_CLK_pin                                                                                                                                             | BUFGP                                                                                                                                                                                          | 92    |
 sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK90                                                                                                                                                              | 72    |
 fpga_0_DDR_CLK_FB                                                                                                                                                                     | dcm_1/Using_Virtex.DCM_INST:CLK90                                                                                                                                                              | 378   |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/BU240)| 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU240)| 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/N0| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/BU240)| 2     |
 fpga_0_DDR_CLK_FB                                                                                                                                                                     | IBUFG                                                                                                                                                                                          | 4     |
 sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK0+vga_framebuffer/DCM_pixclk.DCM_pixclk:CLKDV                                                                                                                   | 130   |
 fpga_0_Audio_Codec_Bit_Clk_pin                                                                                                                                                        | BUFGP                                                                                                                                                                                          | 132   |
 audio_codec/Sln_retry                                                                                                                                                                 | NONE(audio_codec/audio_codec/AC97_FIFO_I/fdcpe_1)                                                                                                                                              | 1     |
+opb_spi_0/opb_spi_0/I_module/SCK_SR_local1                                                                                                                                            | BUFG                                                                                                                                                                                           | 21    |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -461,39 +466,73 @@ Asynchronous Control Signals Information:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                                                                                                                   | Buffer(FF name)                                                                                                                                                                                | Load  |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst:Q)                                                                                         | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU243)| 240   |
 opb/OPB_Rst(opb/opb/POR_FF_I:Q)                                                                                                                                                                                                                                                                                                                                                  | NONE(leds_4bit/leds_4bit/gpio_core_1/gpio_OE_3)                                                                                                                                                | 167   |
-fpga_0_net_gnd_pin_OBUF(XST_GND:G)                                                                                                                                                                                                                                                                                                                                               | NONE(dcm_0/dcm_0/rsti)                                                                                                                                                                         | 4     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst:Q)                                                                                         | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU74) | 240   |
 rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO:Q)                                                                                                                                                                                                                                                       | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/SRL_FIFO_I/data_Exists_I)                                                                                                 | 1     |
+fpga_0_net_gnd_pin_OBUF(XST_GND:G)                                                                                                                                                                                                                                                                                                                                               | NONE(dcm_0/dcm_0/rst_delay_2)                                                                                                                                                                  | 4     |
 rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO:Q)                                                                                                                                                                                                                                                       | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_RX_I/SRL_FIFO_I/data_Exists_I)                                                                                                 | 1     |
 plb2opb/plb2opb/PLB_abort_regd_clear(plb2opb/plb2opb/I_PLB_abort_regd_clear:O)                                                                                                                                                                                                                                                                                                   | NONE(plb2opb/plb2opb/I_PLB_abort_Reg)                                                                                                                                                          | 1     |
 plb2opb/BGO_dcrDBus<31>(plb2opb/XST_GND:G)                                                                                                                                                                                                                                                                                                                                       | NONE(plb2opb/plb2opb/I_PLB_abort_Reg)                                                                                                                                                          | 4     |
 plb2opb/plb2opb/PLBside_reset_OPB_timeout_onRd(plb2opb/plb2opb/I_OPB_timeout_side_Reg_CLR:O)                                                                                                                                                                                                                                                                                     | NONE(plb2opb/plb2opb/I_OPB_timeout_Reg)                                                                                                                                                        | 1     |
 plb2opb/plb2opb/PLBside_reset_OPB_retry_onRd(plb2opb/plb2opb/I_B_side_Reg_CLR:O)                                                                                                                                                                                                                                                                                                 | NONE(plb2opb/plb2opb/I_A_side_Reg)                                                                                                                                                             | 1     |
 plb2opb/plb2opb/OPBside_reset_Read_inprog_negedge_regd(plb2opb/plb2opb/I_OPBside_reset_Read_inprog_negedge_regd:O)                                                                                                                                                                                                                                                               | NONE(plb2opb/plb2opb/I_Read_inprog_negedge_Reg)                                                                                                                                                | 1     |
-sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/done3(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/DONE_REG3:Q)                                                                                                                                                                                                       | NONE(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/RDCE_REG3)                                                                                                    | 6     |
-plb/PLB_Rst(plb/plb/POR_FF2_I:Q)                                                                                                                                                                                                                                                                                                                                                 | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR_REGS_GEN[1].RDDATA_HIREG)       | 130   |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/DDR_DQ_ECC_t<6>(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/XST_GND:G)                                                                                                                                                                                                                                                                     | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DQS_REG_GEN[6].RDDQS_REG)           | 8     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU240)| 2     |
+opb_spi_0/opb_spi_0/I_module/SS_O_0__and0000(opb_spi_0/opb_spi_0/I_module/SS_O_0__and00001:O)                                                                                                                                                                                                                                                                                    | NONE(opb_spi_0/opb_spi_0/I_module/SS_O_0)                                                                                                                                                      | 1     |
+opb_spi_0/opb_spi_0/I_module/SS_O_0__and0001(opb_spi_0/opb_spi_0/I_module/SS_O_0__and00011:O)                                                                                                                                                                                                                                                                                    | NONE(opb_spi_0/opb_spi_0/I_module/SS_O_0)                                                                                                                                                      | 1     |
+net_vcc0(XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                              | NONE(opb_spi_0/opb_spi_0/I_module/Slave_MODF_strobe)                                                                                                                                           | 4     |
+opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_or0000(opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_or0000:O)                                                                                                                                                                                                                                                       | NONE(opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed)                                                                                                                                     | 1     |
+opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_or0000(opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_or00001:O)                                                                                                                                                                                                                                                          | NONE(opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg)                                                                                                                                       | 1     |
+opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Clear(opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Clear23:O)                                                                                                                                                                                                                                                                                   | NONE(opb_spi_0/opb_spi_0/I_module/SCK_SR_local)                                                                                                                                                | 1     |
+opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Preset(opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Preset1:O)                                                                                                                                                                                                                                                                                  | NONE(opb_spi_0/opb_spi_0/I_module/SCK_SR_local)                                                                                                                                                | 1     |
+opb_spi_0/opb_spi_0/I_module/SCK_Out_FF_Clear(opb_spi_0/opb_spi_0/I_module/SCK_Out_FF_Clear1:O)                                                                                                                                                                                                                                                                                  | NONE(opb_spi_0/opb_spi_0/I_module/SCK_Out)                                                                                                                                                     | 1     |
+opb_spi_0/opb_spi_0/I_module/SCK_Out_FF_Preset(opb_spi_0/opb_spi_0/I_module/SCK_Out_FF_Preset1:O)                                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/SCK_Out)                                                                                                                                                     | 1     |
+opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_inv(opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_inv1_INV_0:O)                                                                                                                                                                                                                                                      | NONE(opb_spi_0/opb_spi_0/I_module/SS_Asserted_1dly)                                                                                                                                            | 3     |
+sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/done3(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/DONE_REG3:Q)                                                                                                                                                                                                       | NONE(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/WRCE_REG2)                                                                                                    | 6     |
+plb/PLB_Rst(plb/plb/POR_FF2_I:Q)                                                                                                                                                                                                                                                                                                                                                 | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR_REGS_GEN[42].RDDATA_HIREG)      | 130   |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/DDR_DQ_ECC_t<6>(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/XST_GND:G)                                                                                                                                                                                                                                                                     | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DQS_REG_GEN[0].RDDQS_REG)           | 8     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/BU240)| 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU240)| 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU240)| 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU133)| 2     |
 ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/BU240)| 2     |
 dcm_1/dcm_1/reset(dcm_1/dcm_1/reset1_INV_0:O)                                                                                                                                                                                                                                                                                                                                    | NONE(dcm_1/dcm_1/rst_delay_1)                                                                                                                                                                  | 4     |
-audio_codec/audio_codec/AC97_FIFO_I/ac97_core_reset(audio_codec/audio_codec/AC97_FIFO_I/ac97_core_reset1:O)                                                                                                                                                                                                                                                                      | NONE(audio_codec/audio_codec/AC97_FIFO_I/ac97_core_I/data_out_15)                                                                                                                              | 37    |
+audio_codec/audio_codec/AC97_FIFO_I/ac97_core_reset(audio_codec/audio_codec/AC97_FIFO_I/ac97_core_reset1:O)                                                                                                                                                                                                                                                                      | NONE(audio_codec/audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_FFd2)                                                                                                                        | 37    |
 audio_codec/audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S(audio_codec/audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S:Q)                                                                                                                                                                                                                                                     | NONE(audio_codec/audio_codec/AC97_FIFO_I/fdcpe_1)                                                                                                                                              | 1     |
 audio_codec/audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S(audio_codec/audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S:Q)                                                                                                                                                                                                                                                       | NONE(audio_codec/audio_codec/AC97_FIFO_I/fdcpe_1)                                                                                                                                              | 1     |
+opb_spi_0/opb_spi_0/I_module/Bit_Count_or0000(opb_spi_0/opb_spi_0/I_module/Bit_Count_or00001:O)                                                                                                                                                                                                                                                                                  | NONE(opb_spi_0/opb_spi_0/I_module/Bit_Count_4)                                                                                                                                                 | 5     |
+opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch_or0000(opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch_or00001:O)                                                                                                                                                                                                                                                    | NONE(opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_clkd)                                                                                                                                | 1     |
+opb_spi_0/opb_spi_0/I_module/SR_In_or0000(opb_spi_0/opb_spi_0/I_module/SR_In_or00001:O)                                                                                                                                                                                                                                                                                          | NONE(opb_spi_0/opb_spi_0/I_module/SR_In)                                                                                                                                                       | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_2__and0000(opb_spi_0/opb_spi_0/I_module/Shift_Register_2__and00001:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_2)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_2__and0001(opb_spi_0/opb_spi_0/I_module/Shift_Register_2__and00011:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_2)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and0000(opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and00001:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_0)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and0001(opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and00011:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_0)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_7__and0000(opb_spi_0/opb_spi_0/I_module/Shift_Register_7__and00001:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_7)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_7__and0001(opb_spi_0/opb_spi_0/I_module/Shift_Register_7__and00011:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_7)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_5__and0000(opb_spi_0/opb_spi_0/I_module/Shift_Register_5__and00001:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_5)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_5__and0001(opb_spi_0/opb_spi_0/I_module/Shift_Register_5__and00011:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_5)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_3__and0000(opb_spi_0/opb_spi_0/I_module/Shift_Register_3__and00001:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_3)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_3__and0001(opb_spi_0/opb_spi_0/I_module/Shift_Register_3__and00011:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_3)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_6__and0000(opb_spi_0/opb_spi_0/I_module/Shift_Register_6__and00001:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_6)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_6__and0001(opb_spi_0/opb_spi_0/I_module/Shift_Register_6__and00011:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_6)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/SPIXfer_done_int_1dly(opb_spi_0/opb_spi_0/I_module/SPIXfer_done_int_1dly:Q)                                                                                                                                                                                                                                                                         | NONE(opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_posclkd)                                                                                                                             | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_1__and0000(opb_spi_0/opb_spi_0/I_module/Shift_Register_1__and00001:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_1)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_1__and0001(opb_spi_0/opb_spi_0/I_module/Shift_Register_1__and00011:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_1)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_4__and0000(opb_spi_0/opb_spi_0/I_module/Shift_Register_4__and00001:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_4)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/Shift_Register_4__and0001(opb_spi_0/opb_spi_0/I_module/Shift_Register_4__and00011:O)                                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/Shift_Register_4)                                                                                                                                            | 1     |
+opb_spi_0/opb_spi_0/I_module/SR_Out__and0000(opb_spi_0/opb_spi_0/I_module/SR_Out__and00001:O)                                                                                                                                                                                                                                                                                    | NONE(opb_spi_0/opb_spi_0/I_module/SR_Out)                                                                                                                                                      | 1     |
+opb_spi_0/opb_spi_0/I_module/SR_Out__and0001(opb_spi_0/opb_spi_0/I_module/SR_Out__and00011:O)                                                                                                                                                                                                                                                                                    | NONE(opb_spi_0/opb_spi_0/I_module/SR_Out)                                                                                                                                                      | 1     |
+opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch__and0001(opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch__and00011:O)                                                                                                                                                                                                                                                | NONE(opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch)                                                                                                                                    | 1     |
+opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch__and0002(opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and000111:O)                                                                                                                                                                                                                                                       | NONE(opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch)                                                                                                                                    | 1     |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -7
 
-   Minimum period: 8.951ns (Maximum Frequency: 111.721MHz)
-   Minimum input arrival time before clock: 6.886ns
+   Minimum period: 9.155ns (Maximum Frequency: 109.235MHz)
+   Minimum input arrival time before clock: 6.888ns
    Maximum output required time after clock: 5.405ns
    Maximum combinational path delay: No path found
 
@@ -503,10 +542,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sys_clk_pin'
-  Clock period: 8.951ns (frequency: 111.721MHz)
-  Total number of paths / destination ports: 158542 / 8843
+  Clock period: 9.155ns (frequency: 109.235MHz)
+  Total number of paths / destination ports: 160902 / 8865
 -------------------------------------------------------------------------
-Delay:               8.951ns (Levels of Logic = 30)
+Delay:               9.155ns (Levels of Logic = 30)
   Source:            plb2opb/plb2opb/XFER_IF_I/DUALPORT_RAM_GEN.RAM_FF_LOOP_GEN[40].RAM_FF_I (FF)
   Destination:       audio_codec/audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_9 (FF)
   Source Clock:      sys_clk_pin rising
@@ -521,23 +560,23 @@ Delay:               8.951ns (Levels of Logic = 30)
      begin scope: 'opb'
      end scope: 'opb'
      begin scope: 'lab3_slave_0'
-     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/interrupt_enable_not00011_wg_lut<0> (N2)
-     MUXCY:S->O            1   0.334   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<0> (lab3_slave_0/interrupt_enable_not00011_wg_cy<0>)
-     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<1> (lab3_slave_0/interrupt_enable_not00011_wg_cy<1>)
-     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<2> (lab3_slave_0/interrupt_enable_not00011_wg_cy<2>)
-     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<3> (lab3_slave_0/interrupt_enable_not00011_wg_cy<3>)
-     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<4> (lab3_slave_0/interrupt_enable_not00011_wg_cy<4>)
-     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupt_enable_not00011_wg_cy<5> (lab3_slave_0/interrupt_enable_not00011_wg_cy<5>)
-     MUXCY:CI->O           5   0.416   0.564  lab3_slave_0/interrupt_enable_not00011_wg_cy<6> (lab3_slave_0/output_and0000)
-     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/Sl_DBus<24>311 (N260)
-     MUXF5:I1->O          30   0.303   0.804  lab3_slave_0/Sl_DBus<24>31_f5 (lab3_slave_0/N101)
-     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/Sl_DBus<30>261 (N261)
-     MUXF5:I0->O           1   0.303   0.349  lab3_slave_0/Sl_DBus<30>26_f5 (Sl_DBus<30>)
+     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_lut<0> (N2)
+     MUXCY:S->O            1   0.334   0.000  lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<0> (lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<1> (lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<2> (lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<3> (lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<4> (lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<5> (lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<5>)
+     MUXCY:CI->O          16   0.416   0.766  lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<6> (lab3_slave_0/output_and0000)
+     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/Sl_DBus<24>311 (N276)
+     MUXF5:I1->O          30   0.303   0.804  lab3_slave_0/Sl_DBus<24>31_f5 (lab3_slave_0/N111)
+     LUT4:I0->O            1   0.275   0.000  lab3_slave_0/Sl_DBus<30>261 (N277)
+     MUXF5:I0->O           1   0.303   0.350  lab3_slave_0/Sl_DBus<30>26_f5 (Sl_DBus<30>)
      end scope: 'lab3_slave_0'
      begin scope: 'opb'
      LUT4:I2->O            1   0.275   0.000  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_30_or0000111 (N689)
      MUXF5:I0->O           2   0.303   0.396  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_30_or000011_f5 (opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_30_or0000_map6)
-     LUT3:I2->O           37   0.275   0.696  opb/OPB_DBus_I/Y_30_or00001 (OPB_DBus<30>)
+     LUT3:I2->O           38   0.275   0.698  opb/OPB_DBus_I/Y_30_or00001 (OPB_DBus<30>)
      end scope: 'opb'
      begin scope: 'audio_codec'
      LUT4:I2->O            2   0.275   0.378  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_and0000_inv1 (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_and0000_inv)
@@ -553,8 +592,8 @@ Delay:               8.951ns (Levels of Logic = 30)
      XORCY:CI->O           1   0.708   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_in_address_xor<9> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_in_address9)
      FDCE:D                    0.208          audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_9
     ----------------------------------------
-    Total                      8.951ns (5.106ns logic, 3.845ns route)
-                                       (57.0% logic, 43.0% route)
+    Total                      9.155ns (5.106ns logic, 4.049ns route)
+                                       (55.8% logic, 44.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_SysACE_CompactFlash_SysACE_CLK_pin'
@@ -632,10 +671,62 @@ Delay:               2.732ns (Levels of Logic = 3)
                                        (51.3% logic, 48.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_pin'
-  Total number of paths / destination ports: 802 / 205
+Timing constraint: Default period analysis for Clock 'fpga_0_net_gnd_pin_OBUF'
+  Clock period: 5.419ns (frequency: 184.551MHz)
+  Total number of paths / destination ports: 1080 / 279
 -------------------------------------------------------------------------
-Offset:              6.886ns (Levels of Logic = 21)
+Delay:               5.419ns (Levels of Logic = 5)
+  Source:            opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1_d1 (FF)
+  Destination:       opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_31 (FF)
+  Source Clock:      fpga_0_net_gnd_pin_OBUF rising
+  Destination Clock: fpga_0_net_gnd_pin_OBUF rising
+
+  Data Path: opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1_d1 to opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.370   0.543  opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1_d1 (opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1_d1)
+     LUT2:I1->O           16   0.275   0.630  opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ipic_retry_and000011 (opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CS<0>)
+     MUXCY:CI->O          17   0.415   0.723  opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I (opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<8>)
+     LUT2_D:I0->O          3   0.275   0.533  opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s0_8_and00001 (opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_RdCE<8>)
+     LUT4_L:I0->LO         1   0.275   0.236  opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or00004 (opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or0000_map2)
+     LUT4:I0->O            1   0.275   0.331  opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or000040 (opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or0000_map15)
+     FDRS:S                    0.536          opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_31
+    ----------------------------------------
+    Total                      5.419ns (2.422ns logic, 2.997ns route)
+                                       (44.7% logic, 55.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'opb_spi_0/opb_spi_0/I_module/SCK_SR_local1'
+  Clock period: 8.309ns (frequency: 120.356MHz)
+  Total number of paths / destination ports: 186 / 30
+-------------------------------------------------------------------------
+Delay:               4.154ns (Levels of Logic = 5)
+  Source:            opb_spi_0/opb_spi_0/I_module/Bit_Count_0 (FF)
+  Destination:       opb_spi_0/opb_spi_0/I_module/SR_Out (FF)
+  Source Clock:      opb_spi_0/opb_spi_0/I_module/SCK_SR_local1 falling
+  Destination Clock: opb_spi_0/opb_spi_0/I_module/SCK_SR_local1 rising
+
+  Data Path: opb_spi_0/opb_spi_0/I_module/Bit_Count_0 to opb_spi_0/opb_spi_0/I_module/SR_Out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.370   0.533  opb_spi_0/I_module/Bit_Count_0 (opb_spi_0/I_module/Bit_Count<0>)
+     LUT4_D:I0->O         13   0.275   0.560  opb_spi_0/I_module/Shift_Register_0_and000211 (opb_spi_0/I_module/N48)
+     LUT4:I3->O            1   0.275   0.370  opb_spi_0/I_module/SR_Out_mux000847 (opb_spi_0/I_module/SR_Out_mux0008_map17)
+     LUT4:I3->O            1   0.275   0.370  opb_spi_0/I_module/SR_Out_mux000867 (opb_spi_0/I_module/SR_Out_mux0008_map23)
+     LUT4:I3->O            1   0.275   0.369  opb_spi_0/I_module/SR_Out_mux0008106 (opb_spi_0/I_module/SR_Out_mux0008_map28)
+     LUT4:I3->O            1   0.275   0.000  opb_spi_0/I_module/SR_Out__or00001 (opb_spi_0/I_module/SR_Out__or0000)
+     FDCP:D                    0.208          opb_spi_0/I_module/SR_Out
+    ----------------------------------------
+    Total                      4.154ns (1.953ns logic, 2.201ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_pin'
+  Total number of paths / destination ports: 815 / 213
+-------------------------------------------------------------------------
+Offset:              6.888ns (Levels of Logic = 21)
   Source:            exp_io_61_pin (PAD)
   Destination:       audio_codec/audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_9 (FF)
   Destination Clock: sys_clk_pin rising
@@ -647,13 +738,13 @@ Offset:              6.886ns (Levels of Logic = 21)
      IBUF:I->O             3   0.878   0.533  exp_io_61_pin_IBUF (exp_io_61_pin_IBUF)
      begin scope: 'lab3_slave_0'
      LUT3:I0->O            1   0.275   0.430  lab3_slave_0/Sl_DBus<30>11 (lab3_slave_0/Sl_DBus<30>_map6)
-     LUT4:I1->O            1   0.275   0.000  lab3_slave_0/Sl_DBus<30>261 (N261)
-     MUXF5:I0->O           1   0.303   0.349  lab3_slave_0/Sl_DBus<30>26_f5 (Sl_DBus<30>)
+     LUT4:I1->O            1   0.275   0.000  lab3_slave_0/Sl_DBus<30>261 (N277)
+     MUXF5:I0->O           1   0.303   0.350  lab3_slave_0/Sl_DBus<30>26_f5 (Sl_DBus<30>)
      end scope: 'lab3_slave_0'
      begin scope: 'opb'
      LUT4:I2->O            1   0.275   0.000  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_30_or0000111 (N689)
      MUXF5:I0->O           2   0.303   0.396  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_30_or000011_f5 (opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_30_or0000_map6)
-     LUT3:I2->O           37   0.275   0.696  opb/OPB_DBus_I/Y_30_or00001 (OPB_DBus<30>)
+     LUT3:I2->O           38   0.275   0.698  opb/OPB_DBus_I/Y_30_or00001 (OPB_DBus<30>)
      end scope: 'opb'
      begin scope: 'audio_codec'
      LUT4:I2->O            2   0.275   0.378  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_and0000_inv1 (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_and0000_inv)
@@ -669,7 +760,7 @@ Offset:              6.886ns (Levels of Logic = 21)
      XORCY:CI->O           1   0.708   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_in_address_xor<9> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_in_address9)
      FDCE:D                    0.208          audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_9
     ----------------------------------------
-    Total                      6.886ns (4.104ns logic, 2.783ns route)
+    Total                      6.888ns (4.104ns logic, 2.784ns route)
                                        (59.6% logic, 40.4% route)
 
 =========================================================================
@@ -734,7 +825,7 @@ Offset:              1.583ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk_pin'
-  Total number of paths / destination ports: 422 / 153
+  Total number of paths / destination ports: 432 / 163
 -------------------------------------------------------------------------
 Offset:              5.405ns (Levels of Logic = 5)
   Source:            lab3_slave_0/lab3_slave_0/count_1 (FF)
@@ -776,6 +867,26 @@ Offset:              3.293ns (Levels of Logic = 2)
                                        (89.9% logic, 10.1% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_net_gnd_pin_OBUF'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.340ns (Levels of Logic = 2)
+  Source:            opb_spi_0/opb_spi_0/I_module/SCK_Out (FF)
+  Destination:       exp_io_37_pin (PAD)
+  Source Clock:      fpga_0_net_gnd_pin_OBUF rising
+
+  Data Path: opb_spi_0/opb_spi_0/I_module/SCK_Out to exp_io_37_pin
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            2   0.370   0.378  opb_spi_0/I_module/SCK_Out (SCK_O)
+     end scope: 'opb_spi_0'
+     OBUF:I->O                 2.592          exp_io_37_pin_OBUF (exp_io_37_pin)
+    ----------------------------------------
+    Total                      3.340ns (2.962ns logic, 0.378ns route)
+                                       (88.7% logic, 11.3% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_Audio_Codec_Bit_Clk_pin'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
@@ -796,11 +907,11 @@ Offset:              3.359ns (Levels of Logic = 2)
                                        (88.2% logic, 11.8% route)
 
 =========================================================================
-CPU : 42.48 / 42.55 s | Elapsed : 42.00 / 42.00 s
+CPU : 46.71 / 46.79 s | Elapsed : 47.00 / 47.00 s
  
 --> 
 
-Total memory usage is 230636 kilobytes
+Total memory usage is 233004 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  104 (   0 filtered)

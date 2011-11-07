@@ -538,6 +538,7 @@ void eraseAllLives(int prev_lives,int frame){
 
 
 int main() {
+	XIo_Out32(0x40080100, 0xABC);
 	print("begin\n\r");
 	XCache_EnableICache(0x00000001);
 	XCache_EnableDCache(0x00000001);

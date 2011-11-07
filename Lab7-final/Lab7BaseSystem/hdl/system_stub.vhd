@@ -88,7 +88,19 @@ entity system_stub is
     exp_io_73_pin : out std_logic;
     exp_io_74_pin : in std_logic;
     exp_io_75_pin : out std_logic;
-    exp_io_76_pin : in std_logic
+    exp_io_76_pin : in std_logic;
+    exp_io_37_pin : out std_logic;
+    exp_io_38_pin : out std_logic;
+    exp_io_35_pin : out std_logic;
+    exp_io_36_pin : out std_logic;
+    exp_io_33_pin : out std_logic;
+    exp_io_34_pin : out std_logic;
+    exp_io_31_pin : out std_logic;
+    exp_io_32_pin : out std_logic;
+    exp_io_29_pin : out std_logic;
+    exp_io_30_pin : out std_logic;
+    exp_io_27_pin : out std_logic;
+    exp_io_28_pin : out std_logic
   );
 end system_stub;
 
@@ -175,7 +187,19 @@ architecture STRUCTURE of system_stub is
       exp_io_73_pin : out std_logic;
       exp_io_74_pin : in std_logic;
       exp_io_75_pin : out std_logic;
-      exp_io_76_pin : in std_logic
+      exp_io_76_pin : in std_logic;
+      exp_io_37_pin : out std_logic;
+      exp_io_38_pin : out std_logic;
+      exp_io_35_pin : out std_logic;
+      exp_io_36_pin : out std_logic;
+      exp_io_33_pin : out std_logic;
+      exp_io_34_pin : out std_logic;
+      exp_io_31_pin : out std_logic;
+      exp_io_32_pin : out std_logic;
+      exp_io_29_pin : out std_logic;
+      exp_io_30_pin : out std_logic;
+      exp_io_27_pin : out std_logic;
+      exp_io_28_pin : out std_logic
     );
   end component;
 
@@ -262,7 +286,19 @@ begin
       exp_io_73_pin => exp_io_73_pin,
       exp_io_74_pin => exp_io_74_pin,
       exp_io_75_pin => exp_io_75_pin,
-      exp_io_76_pin => exp_io_76_pin
+      exp_io_76_pin => exp_io_76_pin,
+      exp_io_37_pin => exp_io_37_pin,
+      exp_io_38_pin => exp_io_38_pin,
+      exp_io_35_pin => exp_io_35_pin,
+      exp_io_36_pin => exp_io_36_pin,
+      exp_io_33_pin => exp_io_33_pin,
+      exp_io_34_pin => exp_io_34_pin,
+      exp_io_31_pin => exp_io_31_pin,
+      exp_io_32_pin => exp_io_32_pin,
+      exp_io_29_pin => exp_io_29_pin,
+      exp_io_30_pin => exp_io_30_pin,
+      exp_io_27_pin => exp_io_27_pin,
+      exp_io_28_pin => exp_io_28_pin
     );
 
 end architecture STRUCTURE;

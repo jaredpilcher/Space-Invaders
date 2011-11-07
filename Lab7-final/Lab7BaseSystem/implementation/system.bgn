@@ -5,7 +5,7 @@ C:\Xilinx91i.
    "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
 Opened constraints file system.pcf.
 
-Wed Nov 02 21:48:22 2011
+Fri Nov 04 16:05:08 2011
 
 c:\Xilinx91i\bin\nt\bitgen.exe -w -g CclkPin:PULLUP -g TdoPin:PULLNONE -g M1Pin:PULLDOWN -g DonePin:PULLUP -g DriveDone:No -g StartUpClk:JTAGCLK -g DONE_cycle:4 -g GTS_cycle:5 -g M0Pin:PULLUP -g M2Pin:PULLUP -g ProgPin:PULLUP -g TckPin:PULLUP -g TdiPin:PULLUP -g TmsPin:PULLUP -g DonePipe:No -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:NONE -g Persist:No system.ncd 
 
@@ -136,19 +136,41 @@ Summary of Bitgen Options:
 
 Running DRC.
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_30_pin/exp_io_30_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_31_pin/exp_io_31_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_32_pin/exp_io_32_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_33_pin/exp_io_33_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_41_pin/exp_io_41_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_34_pin/exp_io_34_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_50_pin/exp_io_50_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_35_pin/exp_io_35_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_43_pin/exp_io_43_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_27_pin/exp_io_27_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_52_pin/exp_io_52_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_28_pin/exp_io_28_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_60_pin/exp_io_60_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_36_pin/exp_io_36_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_53_pin/exp_io_53_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_29_pin/exp_io_29_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_62_pin/exp_io_62_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_38_pin/exp_io_38_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_54_pin/exp_io_54_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
@@ -195,7 +217,7 @@ WARNING:PhysDesignRules:1060 - Dangling pins on
    block:<vga_framebuffer/vga_framebuffer/RGB_BRAM_U4/RGB_BRAM/vga_framebuffer/v
    ga_framebuffer/RGB_BRAM_U4/RGB_BRAM.B>:<RAMB16_RAMB16B>.  The block is
    configured to use input parity pins. There are dangling output parity pins.
-DRC detected 0 errors and 26 warnings.
+DRC detected 0 errors and 37 warnings.
 Creating bit map...
 Saving bit stream in "system.bit".
 Bitstream generation is complete.

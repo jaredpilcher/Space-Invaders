@@ -95,7 +95,7 @@
       <text class="specsvaluemid" x="241" y="72">xc2vp30ff896-7</text>
       <rect x="0" y="80" width="300" height="16" style="fill:#EEEEEE; stroke:none;"/>
       <text class="specsheader" x="4" y="92">GENERATED</text>
-      <text class="specsvalue" x="138.5" y="92">Wed Nov 07 09:03:31 2007
+      <text class="specsvalue" x="138.5" y="92">Fri Nov 04 15:42:43 2011
 </text>
     </symbol>
     <symbol id="G_IOPort">
@@ -1432,184 +1432,212 @@
   <rect x="0" y="0" width="1674" height="1513" style="fill:#FFFFFF; stroke:#000000;stroke-width:4"/>
   <rect x="48" y="40" width="1578" height="1172" style="fill:#000088"/>
   <rect x="64" y="56" width="1546" height="1140" rx="8" ry="8" style="fill:#CCCCCC"/>
-  <use x="32" y="336" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clk_pin" xlink:href="#G_IOPort" transform="rotate(180,40,344)"/>
-  <text class="iopnumb" x="18" y="350">0<tspan class="iopgrp">GLB</tspan></text>
-  <use x="32" y="364" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clkn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,372)"/>
-  <text class="iopnumb" x="18" y="378">1<tspan class="iopgrp">GLB</tspan></text>
-  <use x="32" y="392" id="fpga_0_DDR_CLK_FB_OUT" xlink:href="#G_IOPort" transform="rotate(180,40,400)"/>
-  <text class="iopnumb" x="18" y="406">2<tspan class="iopgrp">GLB</tspan></text>
-  <use x="32" y="420" id="fpga_0_Audio_Codec_Bit_Clk_pin" xlink:href="#G_IOPort" transform="rotate(0,40,428)"/>
-  <text class="iopnumb" x="18" y="434">3<tspan class="iopgrp">A</tspan></text>
-  <use x="32" y="448" id="fpga_0_Audio_Codec_SData_In_pin" xlink:href="#G_IOPort" transform="rotate(0,40,456)"/>
-  <text class="iopnumb" x="18" y="462">4<tspan class="iopgrp">A</tspan></text>
-  <use x="32" y="476" id="fpga_0_Audio_Codec_AC97Reset_n_pin" xlink:href="#G_IOPort" transform="rotate(180,40,484)"/>
-  <text class="iopnumb" x="18" y="490">5<tspan class="iopgrp">A</tspan></text>
-  <use x="32" y="504" id="fpga_0_Audio_Codec_SData_Out_pin" xlink:href="#G_IOPort" transform="rotate(180,40,512)"/>
-  <text class="iopnumb" x="18" y="518">6<tspan class="iopgrp">A</tspan></text>
-  <use x="32" y="532" id="fpga_0_Audio_Codec_Sync_pin" xlink:href="#G_IOPort" transform="rotate(180,40,540)"/>
-  <text class="iopnumb" x="18" y="546">7<tspan class="iopgrp">A</tspan></text>
-  <use x="32" y="560" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQS_pin" xlink:href="#G_BIPort" transform="rotate(0,40,568)"/>
-  <text class="iopnumb" x="18" y="574">8<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="588" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ_pin" xlink:href="#G_BIPort" transform="rotate(0,40,596)"/>
-  <text class="iopnumb" x="18" y="602">9<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="616" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Addr_pin" xlink:href="#G_IOPort" transform="rotate(180,40,624)"/>
-  <text class="iopnumb" x="18" y="630">10<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="644" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_BankAddr_pin" xlink:href="#G_IOPort" transform="rotate(180,40,652)"/>
-  <text class="iopnumb" x="18" y="658">11<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="672" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CASn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,680)"/>
-  <text class="iopnumb" x="18" y="686">12<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="700" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CKE_pin" xlink:href="#G_IOPort" transform="rotate(180,40,708)"/>
-  <text class="iopnumb" x="18" y="714">13<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="728" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CSn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,736)"/>
-  <text class="iopnumb" x="18" y="742">14<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="756" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DM_pin" xlink:href="#G_IOPort" transform="rotate(180,40,764)"/>
-  <text class="iopnumb" x="18" y="770">15<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="784" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_RASn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,792)"/>
-  <text class="iopnumb" x="18" y="798">16<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="812" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_WEn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,820)"/>
-  <text class="iopnumb" x="18" y="826">17<tspan class="iopgrp">B</tspan></text>
-  <use x="32" y="840" id="fpga_0_DIPSWs_4Bit_GPIO_IO_pin" xlink:href="#G_BIPort" transform="rotate(0,40,848)"/>
-  <text class="iopnumb" x="18" y="854">18<tspan class="iopgrp">C</tspan></text>
-  <use x="32" y="868" id="fpga_0_LEDs_4Bit_GPIO_IO_pin" xlink:href="#G_BIPort" transform="rotate(0,40,876)"/>
-  <text class="iopnumb" x="18" y="882">19<tspan class="iopgrp">D</tspan></text>
-  <use x="545" y="1212" id="fpga_0_PushButtons_5Bit_GPIO_IO_pin" xlink:href="#G_BIPort" transform="rotate(0,553,1220)"/>
-  <text class="iopnumb" x="553" y="1248">20<tspan class="iopgrp">E</tspan></text>
-  <rect x="573" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="573" y="1212" id="fpga_0_RS232_Uart_1_RX_pin" xlink:href="#G_IOPort" transform="rotate(-90,581,1220)"/>
-  <text class="iopnumb" x="581" y="1248">21<tspan class="iopgrp">F</tspan></text>
-  <rect x="601" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="601" y="1212" id="fpga_0_RS232_Uart_1_TX_pin" xlink:href="#G_IOPort" transform="rotate(90,609,1220)"/>
-  <text class="iopnumb" x="609" y="1248">22<tspan class="iopgrp">F</tspan></text>
-  <rect x="629" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="629" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_CLK_pin" xlink:href="#G_IOPort" transform="rotate(-90,637,1220)"/>
-  <text class="iopnumb" x="637" y="1248">23<tspan class="iopgrp">G</tspan></text>
-  <rect x="657" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="657" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin" xlink:href="#G_IOPort" transform="rotate(-90,665,1220)"/>
-  <text class="iopnumb" x="665" y="1248">24<tspan class="iopgrp">G</tspan></text>
-  <use x="685" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_MPD_pin" xlink:href="#G_BIPort" transform="rotate(0,693,1220)"/>
-  <text class="iopnumb" x="693" y="1248">25<tspan class="iopgrp">G</tspan></text>
-  <rect x="713" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="713" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_CEN_pin" xlink:href="#G_IOPort" transform="rotate(90,721,1220)"/>
-  <text class="iopnumb" x="721" y="1248">26<tspan class="iopgrp">G</tspan></text>
-  <rect x="741" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="741" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_MPA_pin" xlink:href="#G_IOPort" transform="rotate(90,749,1220)"/>
-  <text class="iopnumb" x="749" y="1248">27<tspan class="iopgrp">G</tspan></text>
-  <rect x="769" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="769" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_OEN_pin" xlink:href="#G_IOPort" transform="rotate(90,777,1220)"/>
-  <text class="iopnumb" x="777" y="1248">28<tspan class="iopgrp">G</tspan></text>
-  <rect x="797" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="797" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_WEN_pin" xlink:href="#G_IOPort" transform="rotate(90,805,1220)"/>
-  <text class="iopnumb" x="805" y="1248">29<tspan class="iopgrp">G</tspan></text>
-  <rect x="825" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="825" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_BLNK_pin" xlink:href="#G_IOPort" transform="rotate(90,833,1220)"/>
-  <text class="iopnumb" x="833" y="1248">30<tspan class="iopgrp">H</tspan></text>
-  <rect x="853" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="853" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_B_pin" xlink:href="#G_IOPort" transform="rotate(90,861,1220)"/>
-  <text class="iopnumb" x="861" y="1248">31<tspan class="iopgrp">H</tspan></text>
-  <rect x="881" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="881" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_CLK_pin" xlink:href="#G_IOPort" transform="rotate(90,889,1220)"/>
-  <text class="iopnumb" x="889" y="1248">32<tspan class="iopgrp">H</tspan></text>
-  <rect x="909" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="909" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_G_pin" xlink:href="#G_IOPort" transform="rotate(90,917,1220)"/>
-  <text class="iopnumb" x="917" y="1248">33<tspan class="iopgrp">H</tspan></text>
-  <rect x="937" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="937" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_HSYNC_pin" xlink:href="#G_IOPort" transform="rotate(90,945,1220)"/>
-  <text class="iopnumb" x="945" y="1248">34<tspan class="iopgrp">H</tspan></text>
-  <rect x="965" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="965" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_R_pin" xlink:href="#G_IOPort" transform="rotate(90,973,1220)"/>
-  <text class="iopnumb" x="973" y="1248">35<tspan class="iopgrp">H</tspan></text>
-  <rect x="993" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="993" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC_pin" xlink:href="#G_IOPort" transform="rotate(90,1001,1220)"/>
-  <text class="iopnumb" x="1001" y="1248">36<tspan class="iopgrp">H</tspan></text>
-  <rect x="1021" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="1021" y="1212" id="sys_clk_pin" xlink:href="#G_IOPort" transform="rotate(-90,1029,1220)"/>
-  <text class="iopnumb" x="1029" y="1248">37<tspan class="iopgrp">I</tspan></text>
-  <rect x="1049" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="1049" y="1212" id="fpga_0_net_gnd_1_pin" xlink:href="#G_IOPort" transform="rotate(90,1057,1220)"/>
-  <text class="iopnumb" x="1057" y="1248">38<tspan class="iopgrp">I</tspan></text>
-  <rect x="1077" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
-  <use x="1077" y="1212" id="fpga_0_net_gnd_2_pin" xlink:href="#G_IOPort" transform="rotate(90,1085,1220)"/>
-  <text class="iopnumb" x="1085" y="1248">39<tspan class="iopgrp">I</tspan></text>
-  <use x="1626" y="336" id="fpga_0_net_gnd_3_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,344)"/>
-  <text class="iopnumb" x="1654" y="350">40<tspan class="iopgrp">I</tspan></text>
-  <use x="1626" y="364" id="fpga_0_net_gnd_4_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,372)"/>
-  <text class="iopnumb" x="1654" y="378">41<tspan class="iopgrp">I</tspan></text>
-  <use x="1626" y="392" id="fpga_0_net_gnd_5_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,400)"/>
-  <text class="iopnumb" x="1654" y="406">42<tspan class="iopgrp">I</tspan></text>
-  <use x="1626" y="420" id="fpga_0_net_gnd_6_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,428)"/>
-  <text class="iopnumb" x="1654" y="434">43<tspan class="iopgrp">I</tspan></text>
-  <use x="1626" y="448" id="fpga_0_net_gnd_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,456)"/>
-  <text class="iopnumb" x="1654" y="462">44<tspan class="iopgrp">I</tspan></text>
-  <use x="1626" y="476" id="fpga_0_DDR_CLK_FB" xlink:href="#G_IOPort" transform="rotate(180,1634,484)"/>
-  <text class="iopnumb" x="1654" y="490">45<tspan class="iopgrp">J</tspan></text>
-  <use x="1626" y="504" id="exp_io_40_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,512)"/>
-  <text class="iopnumb" x="1654" y="518">46<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="532" id="exp_io_42_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,540)"/>
-  <text class="iopnumb" x="1654" y="546">47<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="560" id="exp_io_44_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,568)"/>
-  <text class="iopnumb" x="1654" y="574">48<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="588" id="exp_io_45_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,596)"/>
-  <text class="iopnumb" x="1654" y="602">49<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="616" id="exp_io_61_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,624)"/>
-  <text class="iopnumb" x="1654" y="630">50<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="644" id="exp_io_63_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,652)"/>
-  <text class="iopnumb" x="1654" y="658">51<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="672" id="exp_io_64_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,680)"/>
-  <text class="iopnumb" x="1654" y="686">52<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="700" id="exp_io_66_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,708)"/>
-  <text class="iopnumb" x="1654" y="714">53<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="728" id="exp_io_68_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,736)"/>
-  <text class="iopnumb" x="1654" y="742">54<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="756" id="exp_io_70_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,764)"/>
-  <text class="iopnumb" x="1654" y="770">55<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="784" id="exp_io_72_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,792)"/>
-  <text class="iopnumb" x="1654" y="798">56<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="812" id="exp_io_74_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,820)"/>
-  <text class="iopnumb" x="1654" y="826">57<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="840" id="exp_io_76_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,848)"/>
-  <text class="iopnumb" x="1654" y="854">58<tspan class="iopgrp">K</tspan></text>
-  <use x="1626" y="868" id="exp_io_41_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,876)"/>
-  <text class="iopnumb" x="1654" y="882">59<tspan class="iopgrp">K</tspan></text>
-  <use x="547" y="24" id="exp_io_43_pin" xlink:href="#G_IOPort" transform="rotate(-90,555,32)"/>
-  <text class="iopnumb" x="555" y="22">60<tspan class="iopgrp">K</tspan></text>
-  <use x="575" y="24" id="exp_io_48_pin" xlink:href="#G_IOPort" transform="rotate(-90,583,32)"/>
-  <text class="iopnumb" x="583" y="22">61<tspan class="iopgrp">K</tspan></text>
-  <use x="603" y="24" id="exp_io_50_pin" xlink:href="#G_IOPort" transform="rotate(-90,611,32)"/>
-  <text class="iopnumb" x="611" y="22">62<tspan class="iopgrp">K</tspan></text>
-  <use x="631" y="24" id="exp_io_52_pin" xlink:href="#G_IOPort" transform="rotate(-90,639,32)"/>
-  <text class="iopnumb" x="639" y="22">63<tspan class="iopgrp">K</tspan></text>
-  <use x="659" y="24" id="exp_io_53_pin" xlink:href="#G_IOPort" transform="rotate(-90,667,32)"/>
-  <text class="iopnumb" x="667" y="22">64<tspan class="iopgrp">K</tspan></text>
-  <use x="687" y="24" id="exp_io_54_pin" xlink:href="#G_IOPort" transform="rotate(-90,695,32)"/>
-  <text class="iopnumb" x="695" y="22">65<tspan class="iopgrp">K</tspan></text>
-  <use x="715" y="24" id="exp_io_55_pin" xlink:href="#G_IOPort" transform="rotate(-90,723,32)"/>
-  <text class="iopnumb" x="723" y="22">66<tspan class="iopgrp">K</tspan></text>
-  <use x="743" y="24" id="exp_io_56_pin" xlink:href="#G_IOPort" transform="rotate(-90,751,32)"/>
-  <text class="iopnumb" x="751" y="22">67<tspan class="iopgrp">K</tspan></text>
-  <use x="771" y="24" id="exp_io_57_pin" xlink:href="#G_IOPort" transform="rotate(-90,779,32)"/>
-  <text class="iopnumb" x="779" y="22">68<tspan class="iopgrp">K</tspan></text>
-  <use x="799" y="24" id="exp_io_58_pin" xlink:href="#G_IOPort" transform="rotate(-90,807,32)"/>
-  <text class="iopnumb" x="807" y="22">69<tspan class="iopgrp">K</tspan></text>
-  <use x="827" y="24" id="exp_io_59_pin" xlink:href="#G_IOPort" transform="rotate(-90,835,32)"/>
-  <text class="iopnumb" x="835" y="22">70<tspan class="iopgrp">K</tspan></text>
-  <use x="855" y="24" id="exp_io_60_pin" xlink:href="#G_IOPort" transform="rotate(-90,863,32)"/>
-  <text class="iopnumb" x="863" y="22">71<tspan class="iopgrp">K</tspan></text>
-  <use x="883" y="24" id="exp_io_62_pin" xlink:href="#G_IOPort" transform="rotate(-90,891,32)"/>
-  <text class="iopnumb" x="891" y="22">72<tspan class="iopgrp">K</tspan></text>
-  <use x="911" y="24" id="exp_io_65_pin" xlink:href="#G_IOPort" transform="rotate(-90,919,32)"/>
-  <text class="iopnumb" x="919" y="22">73<tspan class="iopgrp">K</tspan></text>
-  <use x="939" y="24" id="exp_io_67_pin" xlink:href="#G_IOPort" transform="rotate(-90,947,32)"/>
-  <text class="iopnumb" x="947" y="22">74<tspan class="iopgrp">K</tspan></text>
-  <use x="967" y="24" id="exp_io_69_pin" xlink:href="#G_IOPort" transform="rotate(-90,975,32)"/>
-  <text class="iopnumb" x="975" y="22">75<tspan class="iopgrp">K</tspan></text>
-  <use x="995" y="24" id="exp_io_71_pin" xlink:href="#G_IOPort" transform="rotate(-90,1003,32)"/>
-  <text class="iopnumb" x="1003" y="22">76<tspan class="iopgrp">K</tspan></text>
-  <use x="1023" y="24" id="exp_io_73_pin" xlink:href="#G_IOPort" transform="rotate(-90,1031,32)"/>
-  <text class="iopnumb" x="1031" y="22">77<tspan class="iopgrp">K</tspan></text>
-  <use x="1051" y="24" id="exp_io_75_pin" xlink:href="#G_IOPort" transform="rotate(-90,1059,32)"/>
-  <text class="iopnumb" x="1059" y="22">78<tspan class="iopgrp">K</tspan></text>
-  <use x="1079" y="24" id="sys_rst_pin" xlink:href="#G_IOPort" transform="rotate(90,1087,32)"/>
-  <text class="iopnumb" x="1087" y="22">79<tspan class="iopgrp">L</tspan></text>
+  <use x="32" y="294" id="exp_io_37_pin" xlink:href="#G_IOPort" transform="rotate(180,40,302)"/>
+  <text class="iopnumb" x="18" y="308">0<tspan class="iopgrp">GLB</tspan></text>
+  <use x="32" y="322" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clk_pin" xlink:href="#G_IOPort" transform="rotate(180,40,330)"/>
+  <text class="iopnumb" x="18" y="336">1<tspan class="iopgrp">GLB</tspan></text>
+  <use x="32" y="350" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Clkn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,358)"/>
+  <text class="iopnumb" x="18" y="364">2<tspan class="iopgrp">GLB</tspan></text>
+  <use x="32" y="378" id="fpga_0_DDR_CLK_FB_OUT" xlink:href="#G_IOPort" transform="rotate(180,40,386)"/>
+  <text class="iopnumb" x="18" y="392">3<tspan class="iopgrp">GLB</tspan></text>
+  <use x="32" y="406" id="fpga_0_Audio_Codec_Bit_Clk_pin" xlink:href="#G_IOPort" transform="rotate(0,40,414)"/>
+  <text class="iopnumb" x="18" y="420">4<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="434" id="fpga_0_Audio_Codec_SData_In_pin" xlink:href="#G_IOPort" transform="rotate(0,40,442)"/>
+  <text class="iopnumb" x="18" y="448">5<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="462" id="fpga_0_Audio_Codec_AC97Reset_n_pin" xlink:href="#G_IOPort" transform="rotate(180,40,470)"/>
+  <text class="iopnumb" x="18" y="476">6<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="490" id="fpga_0_Audio_Codec_SData_Out_pin" xlink:href="#G_IOPort" transform="rotate(180,40,498)"/>
+  <text class="iopnumb" x="18" y="504">7<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="518" id="fpga_0_Audio_Codec_Sync_pin" xlink:href="#G_IOPort" transform="rotate(180,40,526)"/>
+  <text class="iopnumb" x="18" y="532">8<tspan class="iopgrp">A</tspan></text>
+  <use x="32" y="546" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQS_pin" xlink:href="#G_BIPort" transform="rotate(0,40,554)"/>
+  <text class="iopnumb" x="18" y="560">9<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="574" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQ_pin" xlink:href="#G_BIPort" transform="rotate(0,40,582)"/>
+  <text class="iopnumb" x="18" y="588">10<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="602" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_Addr_pin" xlink:href="#G_IOPort" transform="rotate(180,40,610)"/>
+  <text class="iopnumb" x="18" y="616">11<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="630" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_BankAddr_pin" xlink:href="#G_IOPort" transform="rotate(180,40,638)"/>
+  <text class="iopnumb" x="18" y="644">12<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="658" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CASn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,666)"/>
+  <text class="iopnumb" x="18" y="672">13<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="686" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CKE_pin" xlink:href="#G_IOPort" transform="rotate(180,40,694)"/>
+  <text class="iopnumb" x="18" y="700">14<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="714" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_CSn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,722)"/>
+  <text class="iopnumb" x="18" y="728">15<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="742" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DM_pin" xlink:href="#G_IOPort" transform="rotate(180,40,750)"/>
+  <text class="iopnumb" x="18" y="756">16<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="770" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_RASn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,778)"/>
+  <text class="iopnumb" x="18" y="784">17<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="798" id="fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_WEn_pin" xlink:href="#G_IOPort" transform="rotate(180,40,806)"/>
+  <text class="iopnumb" x="18" y="812">18<tspan class="iopgrp">B</tspan></text>
+  <use x="32" y="826" id="fpga_0_DIPSWs_4Bit_GPIO_IO_pin" xlink:href="#G_BIPort" transform="rotate(0,40,834)"/>
+  <text class="iopnumb" x="18" y="840">19<tspan class="iopgrp">C</tspan></text>
+  <use x="32" y="854" id="fpga_0_LEDs_4Bit_GPIO_IO_pin" xlink:href="#G_BIPort" transform="rotate(0,40,862)"/>
+  <text class="iopnumb" x="18" y="868">20<tspan class="iopgrp">D</tspan></text>
+  <use x="32" y="882" id="fpga_0_PushButtons_5Bit_GPIO_IO_pin" xlink:href="#G_BIPort" transform="rotate(0,40,890)"/>
+  <text class="iopnumb" x="18" y="896">21<tspan class="iopgrp">E</tspan></text>
+  <use x="32" y="910" id="fpga_0_RS232_Uart_1_RX_pin" xlink:href="#G_IOPort" transform="rotate(0,40,918)"/>
+  <text class="iopnumb" x="18" y="924">22<tspan class="iopgrp">F</tspan></text>
+  <rect x="503" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="503" y="1212" id="fpga_0_RS232_Uart_1_TX_pin" xlink:href="#G_IOPort" transform="rotate(90,511,1220)"/>
+  <text class="iopnumb" x="511" y="1248">23<tspan class="iopgrp">F</tspan></text>
+  <rect x="531" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="531" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_CLK_pin" xlink:href="#G_IOPort" transform="rotate(-90,539,1220)"/>
+  <text class="iopnumb" x="539" y="1248">24<tspan class="iopgrp">G</tspan></text>
+  <rect x="559" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="559" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin" xlink:href="#G_IOPort" transform="rotate(-90,567,1220)"/>
+  <text class="iopnumb" x="567" y="1248">25<tspan class="iopgrp">G</tspan></text>
+  <use x="587" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_MPD_pin" xlink:href="#G_BIPort" transform="rotate(0,595,1220)"/>
+  <text class="iopnumb" x="595" y="1248">26<tspan class="iopgrp">G</tspan></text>
+  <rect x="615" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="615" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_CEN_pin" xlink:href="#G_IOPort" transform="rotate(90,623,1220)"/>
+  <text class="iopnumb" x="623" y="1248">27<tspan class="iopgrp">G</tspan></text>
+  <rect x="643" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="643" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_MPA_pin" xlink:href="#G_IOPort" transform="rotate(90,651,1220)"/>
+  <text class="iopnumb" x="651" y="1248">28<tspan class="iopgrp">G</tspan></text>
+  <rect x="671" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="671" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_OEN_pin" xlink:href="#G_IOPort" transform="rotate(90,679,1220)"/>
+  <text class="iopnumb" x="679" y="1248">29<tspan class="iopgrp">G</tspan></text>
+  <rect x="699" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="699" y="1212" id="fpga_0_SysACE_CompactFlash_SysACE_WEN_pin" xlink:href="#G_IOPort" transform="rotate(90,707,1220)"/>
+  <text class="iopnumb" x="707" y="1248">30<tspan class="iopgrp">G</tspan></text>
+  <rect x="727" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="727" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_BLNK_pin" xlink:href="#G_IOPort" transform="rotate(90,735,1220)"/>
+  <text class="iopnumb" x="735" y="1248">31<tspan class="iopgrp">H</tspan></text>
+  <rect x="755" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="755" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_B_pin" xlink:href="#G_IOPort" transform="rotate(90,763,1220)"/>
+  <text class="iopnumb" x="763" y="1248">32<tspan class="iopgrp">H</tspan></text>
+  <rect x="783" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="783" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_CLK_pin" xlink:href="#G_IOPort" transform="rotate(90,791,1220)"/>
+  <text class="iopnumb" x="791" y="1248">33<tspan class="iopgrp">H</tspan></text>
+  <rect x="811" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="811" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_G_pin" xlink:href="#G_IOPort" transform="rotate(90,819,1220)"/>
+  <text class="iopnumb" x="819" y="1248">34<tspan class="iopgrp">H</tspan></text>
+  <rect x="839" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="839" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_HSYNC_pin" xlink:href="#G_IOPort" transform="rotate(90,847,1220)"/>
+  <text class="iopnumb" x="847" y="1248">35<tspan class="iopgrp">H</tspan></text>
+  <rect x="867" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="867" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_R_pin" xlink:href="#G_IOPort" transform="rotate(90,875,1220)"/>
+  <text class="iopnumb" x="875" y="1248">36<tspan class="iopgrp">H</tspan></text>
+  <rect x="895" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="895" y="1212" id="fpga_0_VGA_FrameBuffer_TFT_LCD_VSYNC_pin" xlink:href="#G_IOPort" transform="rotate(90,903,1220)"/>
+  <text class="iopnumb" x="903" y="1248">37<tspan class="iopgrp">H</tspan></text>
+  <rect x="923" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="923" y="1212" id="sys_clk_pin" xlink:href="#G_IOPort" transform="rotate(-90,931,1220)"/>
+  <text class="iopnumb" x="931" y="1248">38<tspan class="iopgrp">I</tspan></text>
+  <rect x="951" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="951" y="1212" id="fpga_0_net_gnd_1_pin" xlink:href="#G_IOPort" transform="rotate(90,959,1220)"/>
+  <text class="iopnumb" x="959" y="1248">39<tspan class="iopgrp">I</tspan></text>
+  <rect x="979" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="979" y="1212" id="fpga_0_net_gnd_2_pin" xlink:href="#G_IOPort" transform="rotate(90,987,1220)"/>
+  <text class="iopnumb" x="987" y="1248">40<tspan class="iopgrp">I</tspan></text>
+  <rect x="1007" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="1007" y="1212" id="fpga_0_net_gnd_3_pin" xlink:href="#G_IOPort" transform="rotate(90,1015,1220)"/>
+  <text class="iopnumb" x="1015" y="1248">41<tspan class="iopgrp">I</tspan></text>
+  <rect x="1035" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="1035" y="1212" id="fpga_0_net_gnd_4_pin" xlink:href="#G_IOPort" transform="rotate(90,1043,1220)"/>
+  <text class="iopnumb" x="1043" y="1248">42<tspan class="iopgrp">I</tspan></text>
+  <rect x="1063" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="1063" y="1212" id="fpga_0_net_gnd_5_pin" xlink:href="#G_IOPort" transform="rotate(90,1071,1220)"/>
+  <text class="iopnumb" x="1071" y="1248">43<tspan class="iopgrp">I</tspan></text>
+  <rect x="1091" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="1091" y="1212" id="fpga_0_net_gnd_6_pin" xlink:href="#G_IOPort" transform="rotate(90,1099,1220)"/>
+  <text class="iopnumb" x="1099" y="1248">44<tspan class="iopgrp">I</tspan></text>
+  <rect x="1119" y="1212" width="16" height="16" style="stroke:#000088; stroke-width:1"/>
+  <use x="1119" y="1212" id="fpga_0_net_gnd_pin" xlink:href="#G_IOPort" transform="rotate(90,1127,1220)"/>
+  <text class="iopnumb" x="1127" y="1248">45<tspan class="iopgrp">I</tspan></text>
+  <use x="1626" y="294" id="fpga_0_DDR_CLK_FB" xlink:href="#G_IOPort" transform="rotate(180,1634,302)"/>
+  <text class="iopnumb" x="1654" y="308">46<tspan class="iopgrp">J</tspan></text>
+  <use x="1626" y="322" id="exp_io_40_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,330)"/>
+  <text class="iopnumb" x="1654" y="336">47<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="350" id="exp_io_42_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,358)"/>
+  <text class="iopnumb" x="1654" y="364">48<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="378" id="exp_io_44_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,386)"/>
+  <text class="iopnumb" x="1654" y="392">49<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="406" id="exp_io_45_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,414)"/>
+  <text class="iopnumb" x="1654" y="420">50<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="434" id="exp_io_61_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,442)"/>
+  <text class="iopnumb" x="1654" y="448">51<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="462" id="exp_io_63_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,470)"/>
+  <text class="iopnumb" x="1654" y="476">52<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="490" id="exp_io_64_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,498)"/>
+  <text class="iopnumb" x="1654" y="504">53<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="518" id="exp_io_66_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,526)"/>
+  <text class="iopnumb" x="1654" y="532">54<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="546" id="exp_io_68_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,554)"/>
+  <text class="iopnumb" x="1654" y="560">55<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="574" id="exp_io_70_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,582)"/>
+  <text class="iopnumb" x="1654" y="588">56<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="602" id="exp_io_72_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,610)"/>
+  <text class="iopnumb" x="1654" y="616">57<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="630" id="exp_io_74_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,638)"/>
+  <text class="iopnumb" x="1654" y="644">58<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="658" id="exp_io_76_pin" xlink:href="#G_IOPort" transform="rotate(180,1634,666)"/>
+  <text class="iopnumb" x="1654" y="672">59<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="686" id="exp_io_27_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,694)"/>
+  <text class="iopnumb" x="1654" y="700">60<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="714" id="exp_io_28_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,722)"/>
+  <text class="iopnumb" x="1654" y="728">61<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="742" id="exp_io_29_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,750)"/>
+  <text class="iopnumb" x="1654" y="756">62<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="770" id="exp_io_30_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,778)"/>
+  <text class="iopnumb" x="1654" y="784">63<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="798" id="exp_io_31_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,806)"/>
+  <text class="iopnumb" x="1654" y="812">64<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="826" id="exp_io_32_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,834)"/>
+  <text class="iopnumb" x="1654" y="840">65<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="854" id="exp_io_33_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,862)"/>
+  <text class="iopnumb" x="1654" y="868">66<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="882" id="exp_io_34_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,890)"/>
+  <text class="iopnumb" x="1654" y="896">67<tspan class="iopgrp">K</tspan></text>
+  <use x="1626" y="910" id="exp_io_35_pin" xlink:href="#G_IOPort" transform="rotate(0,1634,918)"/>
+  <text class="iopnumb" x="1654" y="924">68<tspan class="iopgrp">K</tspan></text>
+  <use x="505" y="24" id="exp_io_36_pin" xlink:href="#G_IOPort" transform="rotate(-90,513,32)"/>
+  <text class="iopnumb" x="513" y="22">69<tspan class="iopgrp">K</tspan></text>
+  <use x="533" y="24" id="exp_io_38_pin" xlink:href="#G_IOPort" transform="rotate(-90,541,32)"/>
+  <text class="iopnumb" x="541" y="22">70<tspan class="iopgrp">K</tspan></text>
+  <use x="561" y="24" id="exp_io_41_pin" xlink:href="#G_IOPort" transform="rotate(-90,569,32)"/>
+  <text class="iopnumb" x="569" y="22">71<tspan class="iopgrp">K</tspan></text>
+  <use x="589" y="24" id="exp_io_43_pin" xlink:href="#G_IOPort" transform="rotate(-90,597,32)"/>
+  <text class="iopnumb" x="597" y="22">72<tspan class="iopgrp">K</tspan></text>
+  <use x="617" y="24" id="exp_io_48_pin" xlink:href="#G_IOPort" transform="rotate(-90,625,32)"/>
+  <text class="iopnumb" x="625" y="22">73<tspan class="iopgrp">K</tspan></text>
+  <use x="645" y="24" id="exp_io_50_pin" xlink:href="#G_IOPort" transform="rotate(-90,653,32)"/>
+  <text class="iopnumb" x="653" y="22">74<tspan class="iopgrp">K</tspan></text>
+  <use x="673" y="24" id="exp_io_52_pin" xlink:href="#G_IOPort" transform="rotate(-90,681,32)"/>
+  <text class="iopnumb" x="681" y="22">75<tspan class="iopgrp">K</tspan></text>
+  <use x="701" y="24" id="exp_io_53_pin" xlink:href="#G_IOPort" transform="rotate(-90,709,32)"/>
+  <text class="iopnumb" x="709" y="22">76<tspan class="iopgrp">K</tspan></text>
+  <use x="729" y="24" id="exp_io_54_pin" xlink:href="#G_IOPort" transform="rotate(-90,737,32)"/>
+  <text class="iopnumb" x="737" y="22">77<tspan class="iopgrp">K</tspan></text>
+  <use x="757" y="24" id="exp_io_55_pin" xlink:href="#G_IOPort" transform="rotate(-90,765,32)"/>
+  <text class="iopnumb" x="765" y="22">78<tspan class="iopgrp">K</tspan></text>
+  <use x="785" y="24" id="exp_io_56_pin" xlink:href="#G_IOPort" transform="rotate(-90,793,32)"/>
+  <text class="iopnumb" x="793" y="22">79<tspan class="iopgrp">K</tspan></text>
+  <use x="813" y="24" id="exp_io_57_pin" xlink:href="#G_IOPort" transform="rotate(-90,821,32)"/>
+  <text class="iopnumb" x="821" y="22">80<tspan class="iopgrp">K</tspan></text>
+  <use x="841" y="24" id="exp_io_58_pin" xlink:href="#G_IOPort" transform="rotate(-90,849,32)"/>
+  <text class="iopnumb" x="849" y="22">81<tspan class="iopgrp">K</tspan></text>
+  <use x="869" y="24" id="exp_io_59_pin" xlink:href="#G_IOPort" transform="rotate(-90,877,32)"/>
+  <text class="iopnumb" x="877" y="22">82<tspan class="iopgrp">K</tspan></text>
+  <use x="897" y="24" id="exp_io_60_pin" xlink:href="#G_IOPort" transform="rotate(-90,905,32)"/>
+  <text class="iopnumb" x="905" y="22">83<tspan class="iopgrp">K</tspan></text>
+  <use x="925" y="24" id="exp_io_62_pin" xlink:href="#G_IOPort" transform="rotate(-90,933,32)"/>
+  <text class="iopnumb" x="933" y="22">84<tspan class="iopgrp">K</tspan></text>
+  <use x="953" y="24" id="exp_io_65_pin" xlink:href="#G_IOPort" transform="rotate(-90,961,32)"/>
+  <text class="iopnumb" x="961" y="22">85<tspan class="iopgrp">K</tspan></text>
+  <use x="981" y="24" id="exp_io_67_pin" xlink:href="#G_IOPort" transform="rotate(-90,989,32)"/>
+  <text class="iopnumb" x="989" y="22">86<tspan class="iopgrp">K</tspan></text>
+  <use x="1009" y="24" id="exp_io_69_pin" xlink:href="#G_IOPort" transform="rotate(-90,1017,32)"/>
+  <text class="iopnumb" x="1017" y="22">87<tspan class="iopgrp">K</tspan></text>
+  <use x="1037" y="24" id="exp_io_71_pin" xlink:href="#G_IOPort" transform="rotate(-90,1045,32)"/>
+  <text class="iopnumb" x="1045" y="22">88<tspan class="iopgrp">K</tspan></text>
+  <use x="1065" y="24" id="exp_io_73_pin" xlink:href="#G_IOPort" transform="rotate(-90,1073,32)"/>
+  <text class="iopnumb" x="1073" y="22">89<tspan class="iopgrp">K</tspan></text>
+  <use x="1093" y="24" id="exp_io_75_pin" xlink:href="#G_IOPort" transform="rotate(-90,1101,32)"/>
+  <text class="iopnumb" x="1101" y="22">90<tspan class="iopgrp">K</tspan></text>
+  <use x="1121" y="24" id="sys_rst_pin" xlink:href="#G_IOPort" transform="rotate(90,1129,32)"/>
+  <text class="iopnumb" x="1129" y="22">91<tspan class="iopgrp">L</tspan></text>
   <use x="343" y="133" xlink:href="#symbol_SPACE_WEST_NONE_EAST_0"/>
   <use x="630" y="133" xlink:href="#symbol_SPACE_WEST_NONE_EAST_1"/>
   <use x="938" y="153" xlink:href="#symbol_SPACE_WEST_NONE_EAST_2"/>

@@ -141,6 +141,18 @@
  PORT exp_io_75_pin = exp_io_75, DIR = O
 # SW4
  PORT exp_io_76_pin = exp_io_76, DIR = I
+ PORT exp_io_37_pin = exp_io_37, DIR = O
+ PORT exp_io_38_pin = exp_io_38, DIR = O
+ PORT exp_io_35_pin = exp_io_35, DIR = O
+ PORT exp_io_36_pin = exp_io_36, DIR = O
+ PORT exp_io_33_pin = exp_io_33, DIR = O
+ PORT exp_io_34_pin = exp_io_34, DIR = O
+ PORT exp_io_31_pin = exp_io_31, DIR = O
+ PORT exp_io_32_pin = exp_io_32, DIR = O
+ PORT exp_io_29_pin = exp_io_29, DIR = O
+ PORT exp_io_30_pin = exp_io_30, DIR = O
+ PORT exp_io_27_pin = exp_io_27, DIR = O
+ PORT exp_io_28_pin = exp_io_28, DIR = O
 
 
 BEGIN ppc405
@@ -506,5 +518,22 @@ BEGIN lab3_slave
  PORT exp_io_74_s = exp_io_74
  PORT exp_io_75_s = exp_io_75
  PORT exp_io_76_s = exp_io_76
+ PORT exp_io_38_s = exp_io_38
+ PORT exp_io_35_s = exp_io_35
+ PORT exp_io_36_s = exp_io_36
+ PORT exp_io_33_s = exp_io_33
+ PORT exp_io_34_s = exp_io_34
+ PORT exp_io_31_s = exp_io_31
+ PORT exp_io_32_s = exp_io_32
+ PORT exp_io_29_s = exp_io_29
+ PORT exp_io_30_s = exp_io_30
+ PORT exp_io_27_s = exp_io_27
+ PORT exp_io_28_s = exp_io_28
+END
+
+BEGIN opb_spi
+ PARAMETER INSTANCE = opb_spi_0
+ PARAMETER HW_VER = 1.00.e
+ PORT SCK_O = exp_io_37
 END
 

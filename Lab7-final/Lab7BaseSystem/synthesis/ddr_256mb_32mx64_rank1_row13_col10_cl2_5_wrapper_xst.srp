@@ -3025,11 +3025,11 @@ Offset:              0.370ns (Levels of Logic = 0)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 29.04 / 29.11 s | Elapsed : 29.00 / 29.00 s
+CPU : 30.37 / 30.44 s | Elapsed : 30.00 / 30.00 s
  
 --> 
 
-Total memory usage is 270564 kilobytes
+Total memory usage is 286244 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  485 (   0 filtered)

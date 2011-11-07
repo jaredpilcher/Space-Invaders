@@ -26,6 +26,18 @@ entity lab3_slave_0_wrapper is
     OPB_select : in std_logic;
     OPB_seqAddr : in std_logic;
     interruptRequest : out std_logic;
+    exp_io_37_s : out std_logic;
+    exp_io_38_s : out std_logic;
+    exp_io_35_s : out std_logic;
+    exp_io_36_s : out std_logic;
+    exp_io_33_s : out std_logic;
+    exp_io_34_s : out std_logic;
+    exp_io_31_s : out std_logic;
+    exp_io_32_s : out std_logic;
+    exp_io_29_s : out std_logic;
+    exp_io_30_s : out std_logic;
+    exp_io_27_s : out std_logic;
+    exp_io_28_s : out std_logic;
     exp_io_40_s : in std_logic;
     exp_io_41_s : out std_logic;
     exp_io_42_s : in std_logic;
@@ -87,6 +99,18 @@ architecture STRUCTURE of lab3_slave_0_wrapper is
       OPB_select : in std_logic;
       OPB_seqAddr : in std_logic;
       interruptRequest : out std_logic;
+      exp_io_37_s : out std_logic;
+      exp_io_38_s : out std_logic;
+      exp_io_35_s : out std_logic;
+      exp_io_36_s : out std_logic;
+      exp_io_33_s : out std_logic;
+      exp_io_34_s : out std_logic;
+      exp_io_31_s : out std_logic;
+      exp_io_32_s : out std_logic;
+      exp_io_29_s : out std_logic;
+      exp_io_30_s : out std_logic;
+      exp_io_27_s : out std_logic;
+      exp_io_28_s : out std_logic;
       exp_io_40_s : in std_logic;
       exp_io_41_s : out std_logic;
       exp_io_42_s : in std_logic;
@@ -151,6 +175,18 @@ begin
       OPB_select => OPB_select,
       OPB_seqAddr => OPB_seqAddr,
       interruptRequest => interruptRequest,
+      exp_io_37_s => exp_io_37_s,
+      exp_io_38_s => exp_io_38_s,
+      exp_io_35_s => exp_io_35_s,
+      exp_io_36_s => exp_io_36_s,
+      exp_io_33_s => exp_io_33_s,
+      exp_io_34_s => exp_io_34_s,
+      exp_io_31_s => exp_io_31_s,
+      exp_io_32_s => exp_io_32_s,
+      exp_io_29_s => exp_io_29_s,
+      exp_io_30_s => exp_io_30_s,
+      exp_io_27_s => exp_io_27_s,
+      exp_io_28_s => exp_io_28_s,
       exp_io_40_s => exp_io_40_s,
       exp_io_41_s => exp_io_41_s,
       exp_io_42_s => exp_io_42_s,

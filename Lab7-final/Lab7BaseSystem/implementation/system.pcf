@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map J.33 on Wed Nov 02 21:46:26 2011
+// Written by: Map J.33 on Fri Nov 04 16:03:25 2011
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -105,18 +105,30 @@ COMP "fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQS_pin<6>" LOCATE =
         SITE "J29" LEVEL 1;
 COMP "fpga_0_DDR_256MB_32MX64_rank1_row13_col10_cl2_5_DDR_DQS_pin<7>" LOCATE =
         SITE "E30" LEVEL 1;
+COMP "exp_io_30_pin" LOCATE = SITE "R2" LEVEL 1;
+COMP "exp_io_31_pin" LOCATE = SITE "T2" LEVEL 1;
+COMP "exp_io_32_pin" LOCATE = SITE "R6" LEVEL 1;
 COMP "exp_io_40_pin" LOCATE = SITE "T3" LEVEL 1;
+COMP "exp_io_33_pin" LOCATE = SITE "R5" LEVEL 1;
 COMP "exp_io_41_pin" LOCATE = SITE "T4" LEVEL 1;
+COMP "exp_io_34_pin" LOCATE = SITE "R4" LEVEL 1;
 COMP "exp_io_50_pin" LOCATE = SITE "T9" LEVEL 1;
 COMP "exp_io_42_pin" LOCATE = SITE "U2" LEVEL 1;
+COMP "exp_io_35_pin" LOCATE = SITE "R3" LEVEL 1;
 COMP "exp_io_43_pin" LOCATE = SITE "U3" LEVEL 1;
+COMP "exp_io_27_pin" LOCATE = SITE "R7" LEVEL 1;
 COMP "exp_io_52_pin" LOCATE = SITE "V3" LEVEL 1;
+COMP "exp_io_28_pin" LOCATE = SITE "P5" LEVEL 1;
 COMP "exp_io_60_pin" LOCATE = SITE "Y2" LEVEL 1;
+COMP "exp_io_36_pin" LOCATE = SITE "U1" LEVEL 1;
 COMP "exp_io_44_pin" LOCATE = SITE "T7" LEVEL 1;
 COMP "exp_io_53_pin" LOCATE = SITE "V4" LEVEL 1;
+COMP "exp_io_29_pin" LOCATE = SITE "P4" LEVEL 1;
+COMP "exp_io_37_pin" LOCATE = SITE "V1" LEVEL 1;
 COMP "exp_io_61_pin" LOCATE = SITE "AA2" LEVEL 1;
 COMP "exp_io_45_pin" LOCATE = SITE "T8" LEVEL 1;
 COMP "exp_io_62_pin" LOCATE = SITE "V7" LEVEL 1;
+COMP "exp_io_38_pin" LOCATE = SITE "T5" LEVEL 1;
 COMP "exp_io_54_pin" LOCATE = SITE "W1" LEVEL 1;
 COMP "exp_io_70_pin" LOCATE = SITE "Y4" LEVEL 1;
 COMP "exp_io_71_pin" LOCATE = SITE "Y5" LEVEL 1;
@@ -912,7 +924,7 @@ TIMEGRP dcm_0_dcm_0_CLK0_BUF = PIN
         "plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s1_s1_62.A_pins<15>"
         PIN
         "plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s1_s1_63.A_pins<15>"
-        PIN "ppc405_0/ppc405_0/PPC405_i_pins<604>" PIN
+        BEL "exp_io_28_pin" PIN "ppc405_0/ppc405_0/PPC405_i_pins<604>" PIN
         "ppc405_0/ppc405_0/PPC405_i_pins<992>" PIN
         "ppc405_0/ppc405_0/PPC405_i_pins<604>" PIN
         "ppc405_0/ppc405_0/PPC405_i_pins<992>" BEL
@@ -5082,24 +5094,34 @@ TIMEGRP dcm_0_dcm_0_CLK0_BUF = PIN
         "lab3_slave_0/lab3_slave_0/leds_2" BEL
         "lab3_slave_0/lab3_slave_0/leds_1" BEL
         "lab3_slave_0/lab3_slave_0/leds_0" BEL
-        "lab3_slave_0/lab3_slave_0/digit1_3" BEL
-        "lab3_slave_0/lab3_slave_0/digit1_2" BEL
-        "lab3_slave_0/lab3_slave_0/digit1_1" BEL
-        "lab3_slave_0/lab3_slave_0/digit1_0" BEL
-        "lab3_slave_0/lab3_slave_0/interrupts_acknowledged" BEL
         "lab3_slave_0/lab3_slave_0/digit0_3" BEL
         "lab3_slave_0/lab3_slave_0/digit0_2" BEL
         "lab3_slave_0/lab3_slave_0/digit0_1" BEL
         "lab3_slave_0/lab3_slave_0/digit0_0" BEL
-        "lab3_slave_0/lab3_slave_0/inputs_changed" BEL
-        "lab3_slave_0/lab3_slave_0/digit2_3" BEL
-        "lab3_slave_0/lab3_slave_0/digit2_2" BEL
-        "lab3_slave_0/lab3_slave_0/digit2_1" BEL
-        "lab3_slave_0/lab3_slave_0/digit2_0" BEL
+        "lab3_slave_0/lab3_slave_0/interrupts_acknowledged" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_30" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_29" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_28" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_27" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_26" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_25" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_24" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_23" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_22" BEL
+        "lab3_slave_0/lab3_slave_0/our_value_21" BEL
         "lab3_slave_0/lab3_slave_0/digit3_3" BEL
         "lab3_slave_0/lab3_slave_0/digit3_2" BEL
         "lab3_slave_0/lab3_slave_0/digit3_1" BEL
         "lab3_slave_0/lab3_slave_0/digit3_0" BEL
+        "lab3_slave_0/lab3_slave_0/digit1_3" BEL
+        "lab3_slave_0/lab3_slave_0/digit1_2" BEL
+        "lab3_slave_0/lab3_slave_0/digit1_1" BEL
+        "lab3_slave_0/lab3_slave_0/digit1_0" BEL
+        "lab3_slave_0/lab3_slave_0/digit2_3" BEL
+        "lab3_slave_0/lab3_slave_0/digit2_2" BEL
+        "lab3_slave_0/lab3_slave_0/digit2_1" BEL
+        "lab3_slave_0/lab3_slave_0/digit2_0" BEL
+        "lab3_slave_0/lab3_slave_0/inputs_changed" BEL
         "lab3_slave_0/lab3_slave_0/interrupt_enable" BEL
         "lab3_slave_0/lab3_slave_0/buttons_old_4" BEL
         "lab3_slave_0/lab3_slave_0/buttons_old_3" BEL

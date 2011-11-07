@@ -48,6 +48,19 @@ PORT interruptRequest = "", DIR = OUT, SIGIS=INTERRUPT, SENSITIVITY=LEVEL_HIGH
 #########
 # J5
 #########
+ PORT exp_io_37_s = "", DIR = O #LED
+ PORT exp_io_38_s = "", DIR = O #LED
+ PORT exp_io_35_s = "", DIR = O #LED
+ PORT exp_io_36_s = "", DIR = O #LED
+ PORT exp_io_33_s = "", DIR = O #LED
+ PORT exp_io_34_s = "", DIR = O #LED
+ PORT exp_io_31_s = "", DIR = O #LED
+ PORT exp_io_32_s = "", DIR = O #LED
+ PORT exp_io_29_s = "", DIR = O #LED
+ PORT exp_io_30_s = "", DIR = O #LED
+ PORT exp_io_27_s = "", DIR = O #LED
+ PORT exp_io_28_s = "", DIR = O #LED
+ 
  PORT exp_io_40_s = "", DIR = I # SW3
  PORT exp_io_41_s = "", DIR = O # CB
  PORT exp_io_42_s = "", DIR = I # SW2

@@ -72,6 +72,19 @@ entity lab3_slave is
 
     -- These are the pins that go to the DIO1 board.
     -- J5 Connections
+	
+	exp_io_37_s : out std_logic;
+	exp_io_38_s : out std_logic;
+	exp_io_35_s : out std_logic;
+	exp_io_36_s : out std_logic;
+	exp_io_33_s : out std_logic;
+	exp_io_34_s : out std_logic;
+	exp_io_31_s : out std_logic;
+	exp_io_32_s : out std_logic;
+	exp_io_29_s : out std_logic;
+	exp_io_30_s : out std_logic;
+	exp_io_27_s : out std_logic;
+	exp_io_28_s : out std_logic;
     exp_io_40_s : in std_logic;
     exp_io_41_s : out std_logic;
     exp_io_42_s : in std_logic;
@@ -207,7 +220,7 @@ begin
 		if (buttons /= buttons_old) or (switches /= switches_old) then
 			inputs_changed_next <= '1';
 		end if;
-		if read_buttons = '1' then
+		if read_buttons = '1' then 
 			interrupts_acknowledged_next <= '0';
 		end if;
 		if OPB_select = '1' then
@@ -239,15 +252,15 @@ begin
 	
 	display_data(16 to 31) <= digit3 & digit2 & digit1 & digit0;
 	
-	output <= 	debounced_switches	when OPB_ABus = C_BASEADDR + 4 else
-				debounced_buttons		when OPB_ABus = C_BASEADDR + 8 else
+	output <= 	switches	when OPB_ABus = C_BASEADDR + 4 else
+				buttons		when OPB_ABus = C_BASEADDR + 8 else
 				(0 to 30 => '0') & interrupts_acknowledged when OPB_ABus = C_BASEADDR + 12 else
 				(0 to 30 => '0') & interrupt_enable when OPB_ABus = C_BASEADDR + 16 else
 				leds		when OPB_ABus = C_BASEADDR + 40 else
 				display_data when OPB_ABus = C_BASEADDR else
 				(others => '0');
 	
-	Sl_DBus <= 	output when SL_DBusEn = '1' else
+	Sl_DBus <= 	output when SL_DBusEn = '1' else 
 				(others => '0');
 
 	with final_digit select
@@ -293,6 +306,21 @@ begin
 
     -- These are the pins that go to the DIO1 board.
     -- J5 Connections
+	exp_io_37_s <= our_value(31);
+	exp_io_38_s <= our_value(30);
+	exp_io_35_s <= our_value(29);
+	exp_io_36_s <= our_value(28);
+	
+	exp_io_33_s <= our_value(27);
+	exp_io_34_s <= our_value(26);
+	exp_io_31_s <= our_value(25);
+	exp_io_32_s <= our_value(24);
+	
+	exp_io_29_s <= our_value(23);
+	exp_io_30_s <= our_value(22);
+	exp_io_27_s <= our_value(21);
+	exp_io_28_s <= OPB_Clk;
+	
     exp_io_41_s <= segments(1);
     exp_io_43_s <= segments(0);
 	
@@ -315,6 +343,8 @@ begin
     exp_io_71_s <= segments(4);
     exp_io_73_s <= segments(3);
     exp_io_75_s <= segments(2);
+	
+	
 	
 end DI01;
 

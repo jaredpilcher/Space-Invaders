@@ -587,25 +587,25 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-----------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                                 | Load  |
------------------------------------+-----------------------------------------------------------------------+-------+
-OPB_Clk                            | NONE(audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_1)| 117   |
-Bit_Clk                            | NONE(audio_codec/AC97_FIFO_I/ac97_core_I/accept_pcm_left)             | 132   |
-Sln_retry                          | NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                 | 1     |
------------------------------------+-----------------------------------------------------------------------+-------+
+-----------------------------------+------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                  | Load  |
+-----------------------------------+------------------------------------------------------------------------+-------+
+OPB_Clk                            | NONE(audio_codec/OPB_rdDBus_DFF[17].OPB_rdBus_FDRE)                    | 117   |
+Bit_Clk                            | NONE(audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0_1)| 132   |
+Sln_retry                          | NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                  | 1     |
+-----------------------------------+------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
-Control Signal                                                                                      | Buffer(FF name)                                                      | Load  |
-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
-OPB_Rst                                                                                             | NONE                                                                 | 45    |
-audio_codec/AC97_FIFO_I/ac97_core_reset(audio_codec/AC97_FIFO_I/ac97_core_reset1:O)                 | NONE(audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_3)| 37    |
-audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S(audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S:Q)| NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                | 1     |
-audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S(audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S:Q)  | NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                | 1     |
-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
+Control Signal                                                                                      | Buffer(FF name)                                                        | Load  |
+----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
+OPB_Rst                                                                                             | NONE                                                                   | 45    |
+audio_codec/AC97_FIFO_I/ac97_core_reset(audio_codec/AC97_FIFO_I/ac97_core_reset1:O)                 | NONE(audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0_1)| 37    |
+audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S(audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S:Q)| NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                  | 1     |
+audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S(audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S:Q)  | NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                  | 1     |
+----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -777,7 +777,7 @@ Offset:              0.370ns (Levels of Logic = 0)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 11.99 / 12.07 s | Elapsed : 12.00 / 12.00 s
+CPU : 12.58 / 12.66 s | Elapsed : 12.00 / 12.00 s
  
 --> 
 

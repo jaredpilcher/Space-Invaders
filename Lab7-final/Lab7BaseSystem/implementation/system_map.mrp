@@ -8,28 +8,28 @@ Target Device  : xc2vp30
 Target Package : ff896
 Target Speed   : -7
 Mapper Version : virtex2p -- $Revision: 1.36 $
-Mapped Date    : Wed Nov 02 21:46:12 2011
+Mapped Date    : Fri Nov 04 16:03:11 2011
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   31
+Number of warnings:   48
 Logic Utilization:
-  Number of Slice Flip Flops:       2,798 out of  27,392   10%
-  Number of 4 input LUTs:           2,314 out of  27,392    8%
+  Number of Slice Flip Flops:       2,808 out of  27,392   10%
+  Number of 4 input LUTs:           2,325 out of  27,392    8%
 Logic Distribution:
-  Number of occupied Slices:        2,681 out of  13,696   19%
-  Number of Slices containing only related logic:   2,681 out of   2,681  100%
-  Number of Slices containing unrelated logic:          0 out of   2,681    0%
+  Number of occupied Slices:        2,686 out of  13,696   19%
+  Number of Slices containing only related logic:   2,686 out of   2,686  100%
+  Number of Slices containing unrelated logic:          0 out of   2,686    0%
         *See NOTES below for an explanation of the effects of unrelated logic
-Total Number of 4 input LUTs:          2,961 out of  27,392   10%
-  Number used as logic:             2,314
+Total Number of 4 input LUTs:          2,972 out of  27,392   10%
+  Number used as logic:             2,325
   Number used as a route-thru:        231
   Number used for Dual Port RAMs:     342
     (Two LUTs used per Dual Port RAM)
   Number used as Shift registers:      74
 
-  Number of bonded IOBs:              219 out of     556   39%
+  Number of bonded IOBs:              231 out of     556   41%
     IOB Flip Flops:                   335
     IOB Dual-Data Rate Flops:          24
   Number of PPC405s:                   2 out of       2  100%
@@ -40,9 +40,9 @@ Total Number of 4 input LUTs:          2,961 out of  27,392   10%
   Number of GTs:                        0 out of       8    0%
   Number of GT10s:                      0 out of       0    0%
 
-Total equivalent gate count for design:  4,503,697
-Additional JTAG gate count for IOBs:  10,512
-Peak Memory Usage:  246 MB
+Total equivalent gate count for design:  4,503,843
+Additional JTAG gate count for IOBs:  11,088
+Peak Memory Usage:  248 MB
 Total REAL time to MAP completion:  16 secs 
 Total CPU time to MAP completion:   16 secs 
 
@@ -87,7 +87,7 @@ Section 2 - Warnings
 --------------------
 WARNING:LIT:243 - Logical network
    fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin_IBUF has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 985
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 1003
    more times for the following (max. 5 shown):
    opb_M_seqAddr,
    plb_PLB_wrPrim,
@@ -95,6 +95,12 @@ WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 985
    plb_PLB_rdPrim,
    plb_PLB_lockErr
    To see the details of these warning messages, please use the -detail switch.
+WARNING:MapLib:23 - Short on signal exp_io_37_pin detected.
+WARNING:MapLib:23 - Short on signal exp_io_37_pin detected.
+WARNING:MapLib:23 - Short on signal exp_io_37_pin detected.
+WARNING:MapLib:23 - Short on signal exp_io_37_pin detected.
+WARNING:MapLib:23 - Short on signal exp_io_37_pin detected.
+WARNING:MapLib:23 - Short on signal exp_io_37_pin detected.
 WARNING:MapLib:701 - Signal fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin
    connected to top level port fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin has
    been removed.
@@ -113,19 +119,41 @@ WARNING:Pack:266 - The function generator
    l2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/set_sl_busy_mux0008_SW0_f5.  There
    is a conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_30_pin/exp_io_30_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_31_pin/exp_io_31_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_32_pin/exp_io_32_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_33_pin/exp_io_33_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_41_pin/exp_io_41_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_34_pin/exp_io_34_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_50_pin/exp_io_50_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_35_pin/exp_io_35_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_43_pin/exp_io_43_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_27_pin/exp_io_27_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_52_pin/exp_io_52_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_28_pin/exp_io_28_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_60_pin/exp_io_60_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_36_pin/exp_io_36_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_53_pin/exp_io_53_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_29_pin/exp_io_29_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_62_pin/exp_io_62_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_38_pin/exp_io_38_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_54_pin/exp_io_54_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
@@ -179,7 +207,7 @@ INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:863 - The following Virtex BUFG(s) is/are being retargeted to
    Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
    BUFG symbol "dcm_0/dcm_0/Using_BUGF_for_CLK0.CLK0_BUFG_INST" (output
-   signal=plb_bram_if_cntlr_1_port_BRAM_Clk),
+   signal=exp_io_28_pin_OBUF),
    BUFG symbol "dcm_0/dcm_0/Using_BUGF_for_CLK90.CLK90_BUFG_INST" (output
    signal=clk_90_s),
    BUFG symbol "dcm_1/dcm_1/Using_BUGF_for_CLK0.CLK0_BUFG_INST" (output
@@ -195,16 +223,12 @@ INFO:MapLib:159 - Net Timing constraints on signal
 INFO:MapLib:159 - Net Timing constraints on signal
    fpga_0_SysACE_CompactFlash_SysACE_CLK_pin are pushed forward through input
    buffer.
-INFO:LIT:244 - All of the single ended outputs in this design are using slew
-   rate limited output drivers. The delay on speed critical single ended outputs
-   can be dramatically reduced by designating them as fast outputs in the
-   schematic.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 867 block(s) removed
- 345 block(s) optimized away
-1492 signal(s) removed
+1271 block(s) removed
+ 454 block(s) optimized away
+1935 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -2776,6 +2800,1089 @@ The signal "vga_framebuffer/TFT_LCD_DE" is loadless and has been removed.
 removed.
 The signal "dcr_v29_0/N2" is loadless and has been removed.
  Loadless block "dcr_v29_0/XST_GND" (ZERO) removed.
+The signal "opb_spi_0/MISO_T" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/I_module/MISO_T1" (ROM) removed.
+The signal "opb_spi_0/SPI_errAck" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Sln_errAck1" (ROM)
+removed.
+  The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_errack_s2" is loadless
+and has been removed.
+   Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_errack_s2" (SFF)
+removed.
+    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_errack_s1" is loadless
+and has been removed.
+     Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_errack_s1" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_WrCE<16>" is
+loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INCLUDE_RESET_MIR_GEN.RESET_MIR_I0/sw_
+reset_or0000111" (ROM) removed.
+        The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_cs_hit<1>" is
+loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[1].CS_I/XST_WA.GEN_DECODE[1
+].MUXCY_I" (MUX) removed.
+          The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[1].CS_I/carry_chain<1>" is
+loadless and has been removed.
+           Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[1].CS_I/XST_WA.GEN_DECODE[0
+].MUXCY_I" (MUX) removed.
+            The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/devicesel" is loadless and
+has been removed.
+             Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/XST_WA.GEN_DECODE[6].MU
+XCY_I" (MUX) removed.
+              The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/carry_chain<6>" is
+loadless and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/XST_WA.GEN_DECODE[5].MU
+XCY_I" (MUX) removed.
+                The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/carry_chain<5>" is
+loadless and has been removed.
+                 Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/XST_WA.GEN_DECODE[4].MU
+XCY_I" (MUX) removed.
+                  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/carry_chain<4>" is
+loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/XST_WA.GEN_DECODE[3].MU
+XCY_I" (MUX) removed.
+                    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/carry_chain<3>" is
+loadless and has been removed.
+                     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/XST_WA.GEN_DECODE[2].MU
+XCY_I" (MUX) removed.
+                      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/carry_chain<2>" is
+loadless and has been removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/XST_WA.GEN_DECODE[1].MU
+XCY_I" (MUX) removed.
+                        The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/carry_chain<1>" is
+loadless and has been removed.
+                         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/XST_WA.GEN_DECODE[0].MU
+XCY_I" (MUX) removed.
+                          The signal "opb_spi_0/SPI_DBus<22>" is loadless and has been removed.
+                          The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out<0>"
+is loadless and has been removed.
+                           Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out_0_and00001"
+(ROM) removed.
+                        The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out<1>"
+is loadless and has been removed.
+                         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out_1_and00001"
+(ROM) removed.
+                      The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out<2>"
+is loadless and has been removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out_2_and00001"
+(ROM) removed.
+                    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out<3>"
+is loadless and has been removed.
+                     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out_3_and00001"
+(ROM) removed.
+                  The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out<4>"
+is loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out_4_and00001"
+(ROM) removed.
+                The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out<5>"
+is loadless and has been removed.
+                 Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out_5_and00001"
+(ROM) removed.
+              The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out<6>"
+is loadless and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/DEVICESEL_S0_I/lut_out_6_not00001_INV_
+0" (BUF) removed.
+            The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[1].CS_I/lut_out<0>" is
+loadless and has been removed.
+             Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[1].CS_I/lut_out_0_and00001"
+(ROM) removed.
+          The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[1].CS_I/lut_out<1>" is
+loadless and has been removed.
+           Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[1].CS_I/lut_out_1_not00001_
+INV_0" (BUF) removed.
+        The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1_d1" is
+loadless and has been removed.
+         Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1_d1"
+(SFF) removed.
+          The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1_map4" is
+loadless and has been removed.
+           Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s18" (ROM)
+removed.
+            The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_cs_hit<0>" is
+loadless and has been removed.
+             Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].CS_I/XST_WA.GEN_DECODE[0
+].MUXCY_I" (MUX) removed.
+              The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].CS_I/lut_out<0>" is
+loadless and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].CS_I/lut_out_0_not00001_
+INV_0" (BUF) removed.
+            The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/intr2bus_rdack" is loadless
+and has been removed.
+             Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irp
+t_rdack1" (ROM) removed.
+              The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<7>" is loadless
+and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[7].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+                The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CS<0>" is loadless
+and has been removed.
+                 Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ipic_retry_and000011"
+(ROM) removed.
+                The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[7].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+                 Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[7].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+              The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<8>" is loadless
+and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[8].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+                The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[8].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+                 Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[8].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+              The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<10>" is loadless
+and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[10].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+                The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[10].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+                 Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[10].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and00002" (ROM) removed.
+            The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1_map1" is
+loadless and has been removed.
+             Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s12" (ROM)
+removed.
+              The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_cs_hit<2>" is
+loadless and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].CS_I/XST_WA.GEN_DECODE[0
+].MUXCY_I" (MUX) removed.
+                The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].CS_I/lut_out<0>" is
+loadless and has been removed.
+                 Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].CS_I/lut_out_0_and00001"
+(ROM) removed.
+              The signal "opb_spi_0/opb_spi_0/IP2Bus_Ack_map2" is loadless and has been
+removed.
+               Loadless block "opb_spi_0/opb_spi_0/IP2Bus_Ack4" (ROM) removed.
+                The signal "opb_spi_0/opb_spi_0/I_slvsel_reg/IP2Bus_WrAck_sa_int" is loadless
+and has been removed.
+                 Loadless block "opb_spi_0/opb_spi_0/I_slvsel_reg/IP2Bus_WrAck_sa_int" (SFF)
+removed.
+                  The signal "opb_spi_0/opb_spi_0/I_slvsel_reg/IP2Bus_WrAck_sa_int_and0000_norst"
+is loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/I_slvsel_reg/IP2Bus_WrAck_sa_int_and0000_norst1_INV_0"
+(BUF) removed.
+                  The signal "opb_spi_0/opb_spi_0/I_slvsel_reg/Bus2IP_Reg_WrCE_inv" is loadless
+and has been removed.
+                   Loadless block "opb_spi_0/opb_spi_0/I_slvsel_reg/Bus2IP_Reg_WrCE_inv1" (ROM)
+removed.
+                    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<21>" is loadless
+and has been removed.
+                     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[4].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+                      The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CS<2>" is loadless
+and has been removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_cs_s0_2_and00001" (ROM)
+removed.
+                      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[4].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[12].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and000011" (ROM) removed.
+                The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/IP2Bus_RdAck_sa_int" is loadless and
+has been removed.
+                 Loadless block "opb_spi_0/opb_spi_0/I_cntrl_reg/IP2Bus_RdAck_sa_int" (SFF)
+removed.
+                  The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/IP2Bus_RdAck_sa_int_and0000_norst"
+is loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/I_cntrl_reg/IP2Bus_RdAck_sa_int_and0000_norst1_INV_0" (BUF)
+removed.
+                  The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/Bus2IP_Reg_RdCE_inv" is loadless and
+has been removed.
+                   Loadless block "opb_spi_0/opb_spi_0/I_cntrl_reg/Bus2IP_Reg_RdCE_inv1" (ROM)
+removed.
+                    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<17>" is loadless
+and has been removed.
+                     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[0].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+                      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[0].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[0].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+                The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rc_occupcy/IP2Bus_RdAc
+k_sa_int" is loadless and has been removed.
+                 Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rc_occupcy/IP2Bus_RdAc
+k_sa_int" (SFF) removed.
+                  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rc_occupcy/IP2Bus_RdAc
+k_sa_int_and0000_norst" is loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rc_occupcy/IP2Bus_RdAc
+k_sa_int_and0000_norst1_INV_0" (BUF) removed.
+                  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rc_occupcy/Bus2IP_Reg_
+RdCE_inv" is loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rc_occupcy/Bus2IP_Reg_
+RdCE_inv1" (ROM) removed.
+                    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<23>" is loadless
+and has been removed.
+                     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[6].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+                      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[6].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[14].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and000011" (ROM) removed.
+                The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Tx_occupcy/IP2Bus_RdAc
+k_sa_int" is loadless and has been removed.
+                 Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Tx_occupcy/IP2Bus_RdAc
+k_sa_int" (SFF) removed.
+                  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Tx_occupcy/IP2Bus_RdAc
+k_sa_int_and0000_norst" is loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Tx_occupcy/IP2Bus_RdAc
+k_sa_int_and0000_norst1_INV_0" (BUF) removed.
+                  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Tx_occupcy/Bus2IP_Reg_
+RdCE_inv" is loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Tx_occupcy/Bus2IP_Reg_
+RdCE_inv1" (ROM) removed.
+                    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<22>" is loadless
+and has been removed.
+                     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[5].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+                      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[5].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[13].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and000011" (ROM) removed.
+              The signal "opb_spi_0/opb_spi_0/IP2Bus_Ack_map6" is loadless and has been
+removed.
+               Loadless block "opb_spi_0/opb_spi_0/IP2Bus_Ack11_f5" (MUX) removed.
+                The signal "opb_spi_0/N887" is loadless and has been removed.
+                 Loadless block "opb_spi_0/opb_spi_0/IP2Bus_Ack111" (ROM) removed.
+                  The signal "opb_spi_0/opb_spi_0/I_slvsel_reg/IP2Bus_RdAck_sa_int" is loadless
+and has been removed.
+                   Loadless block "opb_spi_0/opb_spi_0/I_slvsel_reg/IP2Bus_RdAck_sa_int" (SFF)
+removed.
+                    The signal "opb_spi_0/opb_spi_0/I_slvsel_reg/IP2Bus_RdAck_sa_int_and0000_norst"
+is loadless and has been removed.
+                     Loadless block
+"opb_spi_0/opb_spi_0/I_slvsel_reg/IP2Bus_RdAck_sa_int_and0000_norst1_INV_0"
+(BUF) removed.
+                    The signal "opb_spi_0/opb_spi_0/I_slvsel_reg/Bus2IP_Reg_RdCE_inv" is loadless
+and has been removed.
+                     Loadless block "opb_spi_0/opb_spi_0/I_slvsel_reg/Bus2IP_Reg_RdCE_inv1" (ROM)
+removed.
+                  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/IP2Bus_R
+dAck_RcFIFO_i" is loadless and has been removed.
+                   Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/IP2Bus_R
+dAck_RcFIFO_i" (SFF) removed.
+                    The signal "opb_spi_0/N799" is loadless and has been removed.
+                     Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/IP2Bus_R
+dAck_RcFIFO_i_and000011" (ROM) removed.
+                      The signal "opb_spi_0/opb_spi_0/Data_Exists_RcFIFO" is loadless and has been
+removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Data_Exists_D
+FF" (SFF) removed.
+                        The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/next_Data_Exi
+sts" is loadless and has been removed.
+                         Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/next_Data_Exi
+sts1" (ROM) removed.
+                          The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/buffer_Empty"
+is loadless and has been removed.
+                           Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/buffer_Empty_
+cmp_eq00001" (ROM) removed.
+                            The signal "opb_spi_0/opb_spi_0/Rc_FIFO_occ_Reversed<3>" is loadless and has
+been removed.
+                             Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[3].FDRE_I" (SFF) removed.
+                              The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/sum_A<3>" is
+loadless and has been removed.
+                               Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[3].XORCY_I" (XOR) removed.
+                                The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/hsum_A<3>" is
+loadless and has been removed.
+                                 Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/hsum_A_3_and0
+0001" (ROM) removed.
+                              The signal "opb_spi_0/opb_spi_0/Reset_RcFIFO_ptr" is loadless and has been
+removed.
+                               Loadless block "opb_spi_0/opb_spi_0/Reset_RcFIFO_ptr1" (ROM) removed.
+                                The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int<2>" is loadless
+and has been removed.
+                                 Loadless block "opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_2" (SFF)
+removed.
+                                  The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/Control_bits23_Reset" is loadless
+and has been removed.
+                                   Loadless block "opb_spi_0/opb_spi_0/I_cntrl_reg/Control_bits23_Reset1" (ROM)
+removed.
+                            The signal "opb_spi_0/opb_spi_0/Rc_FIFO_occ_Reversed<2>" is loadless and has
+been removed.
+                             Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[2].FDRE_I" (SFF) removed.
+                              The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/sum_A<2>" is
+loadless and has been removed.
+                               Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[2].XORCY_I" (XOR) removed.
+                                The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/hsum_A<2>" is
+loadless and has been removed.
+                                 Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/hsum_A_2_and0
+0001" (ROM) removed.
+                            The signal "opb_spi_0/opb_spi_0/Rc_FIFO_occ_Reversed<1>" is loadless and has
+been removed.
+                             Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[1].FDRE_I" (SFF) removed.
+                              The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/sum_A<1>" is
+loadless and has been removed.
+                               Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[1].XORCY_I" (XOR) removed.
+                                The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/hsum_A<1>" is
+loadless and has been removed.
+                                 Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/hsum_A_1_and0
+0001" (ROM) removed.
+                            The signal "opb_spi_0/opb_spi_0/Rc_FIFO_occ_Reversed<0>" is loadless and has
+been removed.
+                             Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[0].FDRE_I" (SFF) removed.
+                              The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/sum_A<0>" is
+loadless and has been removed.
+                               Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[0].XORCY_I" (XOR) removed.
+                                The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/valid_Write"
+is loadless and has been removed.
+                                 Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/valid_Write1"
+(ROM) removed.
+                                  The signal "opb_spi_0/opb_spi_0/SR_6_Rx_Full" is loadless and has been removed.
+                                   Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/buffer_Full_c
+mp_eq00001" (ROM) removed.
+                                The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/hsum_A<0>" is
+loadless and has been removed.
+                                 Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/hsum_A_0_and0
+0001" (ROM) removed.
+                      The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<20>" is loadless
+and has been removed.
+                       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[3].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+                        The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[3].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+                         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[11].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and000011" (ROM) removed.
+                The signal "opb_spi_0/N1" is loadless and has been removed.
+            The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/intr2bus_wrack" is loadless
+and has been removed.
+             Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irp
+t_wrack1" (ROM) removed.
+    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/OPB_select_inv" is loadless
+and has been removed.
+     Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/OPB_select_inv1_INV_0"
+(BUF) removed.
+The signal "opb_spi_0/SCK_T" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/I_module/SCK_T1" (ROM) removed.
+The signal "opb_spi_0/IP2INTC_Irpt" is loadless and has been removed.
+ Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_interrupt41" (ROM) removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_glbl_irpt_enable_reg" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_glbl_irpt_enable_reg" (SFF) removed.
+    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_WrCE<7>" is loadless
+and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_wrce_s0_7_and00001" (ROM)
+removed.
+  The signal "opb_spi_0/N845" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_interrupt41_SW0" (ROM) removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_interrupt_map7" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_interrupt15" (ROM) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg<5>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg_5" (SFF) removed.
+        The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_WrCE<10>" is
+loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_wrce_s0_10_and00001" (ROM)
+removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg<5>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_5" (SFF) removed.
+        The signal "opb_spi_0/N810" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_5_mux000211" (ROM) removed.
+        The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DRR_Over
+run_i" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DRR_Over
+run_i" (SFF) removed.
+          The signal "opb_spi_0/N800" is loadless and has been removed.
+           Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DRR_Over
+run_i_and000011" (ROM) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg<4>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg_4" (SFF) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg<4>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_4" (SFF) removed.
+        The signal "opb_spi_0/N811" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_4_mux00021" (ROM) removed.
+        The signal "opb_spi_0/N339" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_4_mux0002_SW0" (ROM) removed.
+          The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Rc_FIFO_
+Full_d1" is loadless and has been removed.
+           Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Rc_FIFO_
+Full_d1" (SFF) removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_interrupt_map2" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_interrupt4" (ROM) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg<1>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg_1" (SFF) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg<1>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_1" (SFF) removed.
+        The signal "opb_spi_0/N814" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_1_mux000211" (ROM) removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/Slave_MODF_strobe" is loadless and has
+been removed.
+         Loadless block "opb_spi_0/opb_spi_0/I_module/Slave_MODF_strobe" (FF) removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/Slave_MODF_strobe_mux0002" is loadless
+and has been removed.
+           Loadless block "opb_spi_0/opb_spi_0/I_module/Slave_MODF_strobe_mux00021" (ROM)
+removed.
+            The signal "opb_spi_0/opb_spi_0/I_module/Allow_Slave_MODF_Strobe" is loadless
+and has been removed.
+             Loadless block "opb_spi_0/opb_spi_0/I_module/Allow_Slave_MODF_Strobe" (FF)
+removed.
+              The signal "opb_spi_0/opb_spi_0/I_module/Allow_Slave_MODF_Strobe_not0001" is
+loadless and has been removed.
+               Loadless block "opb_spi_0/opb_spi_0/I_module/Allow_Slave_MODF_Strobe_not00011"
+(ROM) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg<0>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg_0" (SFF) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg<0>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_0" (SFF) removed.
+        The signal "opb_spi_0/N815" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_0_mux000211" (ROM) removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/MODF_strobe" is loadless and has been
+removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_interrupt_map10" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipi
+f_interrupt20" (ROM) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg<3>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg_3" (SFF) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg<3>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_3" (SFF) removed.
+        The signal "opb_spi_0/N812" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_3_mux000211" (ROM) removed.
+        The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i" (FF) removed.
+          The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i_and0000" is loadless and has been removed.
+           Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i_and000034" (ROM) removed.
+            The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i_and0000_map5" is loadless and has been removed.
+             Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i_and000012_f5" (MUX) removed.
+              The signal "opb_spi_0/N891" is loadless and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i_and0000122" (ROM) removed.
+                The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg" is loadless and
+has been removed.
+                 Loadless block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg" (FF)
+removed.
+                  The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_not0001" is
+loadless and has been removed.
+                   Loadless block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_not0001"
+(ROM) removed.
+                    The signal "opb_spi_0/N853" is loadless and has been removed.
+                     Loadless block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_not0001_SW1"
+(ROM) removed.
+                      The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch" is loadless
+and has been removed.
+                       Loadless block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch" (FF)
+removed.
+                        The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch__and0001" is
+loadless and has been removed.
+                         Loadless block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch__and00011"
+(ROM) removed.
+                        The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch__and0000" is
+loadless and has been removed.
+                         Loadless block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch__and00001"
+(ROM) removed.
+                        The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch__and0002" is
+loadless and has been removed.
+                         Loadless block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and000111" (ROM)
+removed.
+                  The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_or0000" is
+loadless and has been removed.
+                   Loadless block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_or00001"
+(ROM) removed.
+                  The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_mux0000" is
+loadless and has been removed.
+                   Loadless block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Reg_mux00001"
+(ROM) removed.
+              The signal "opb_spi_0/N890" is loadless and has been removed.
+               Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i_and0000121" (ROM) removed.
+            The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i_and0000_map13" is loadless and has been removed.
+             Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/DTR_Unde
+rrun_strobe_i_and000033" (ROM) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg<2>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg_2" (SFF) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg<2>" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_2" (SFF) removed.
+        The signal "opb_spi_0/N813" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_2_mux00021" (ROM) removed.
+        The signal "opb_spi_0/N341" is loadless and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_2_mux0002_SW0" (ROM) removed.
+          The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Tx_FIFO_
+Empty_d1" is loadless and has been removed.
+           Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Tx_FIFO_
+Empty_d1" (SFF) removed.
+            The signal "opb_spi_0/opb_spi_0/SR_5_Tx_Empty" is loadless and has been removed.
+             Loadless block "opb_spi_0/opb_spi_0/SR_5_Tx_Empty1_INV_0" (BUF) removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg<6>" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_enable_reg_6" (SFF) removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg<6>" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_6" (SFF) removed.
+    The signal "opb_spi_0/N809" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_6_mux00021" (ROM) removed.
+    The signal "opb_spi_0/N337" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_
+irpt_status_reg_6_mux0002_SW0" (ROM) removed.
+      The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Tx_FIFO_
+Occpncy_MSB_d1" is loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Tx_FIFO_
+Occpncy_MSB_d1" (SFF) removed.
+The signal "opb_spi_0/SPI_xferAck" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Sln_xferAck1" (ROM)
+removed.
+  The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s2" is loadless
+and has been removed.
+   Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s2" (SFF)
+removed.
+    The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s1" is loadless
+and has been removed.
+     Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_xferack_s113" (ROM)
+removed.
+The signal "opb_spi_0/SPI_DBus<0>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_0" (SFF)
+removed.
+  The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/intr2bus_data<0>" is
+loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irp
+t_read_data_31_mux00021_f5" (MUX) removed.
+    The signal "opb_spi_0/N886" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irp
+t_read_data_31_mux000211" (ROM) removed.
+      The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_RdCE<8>" is loadless
+and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s0_8_and00001" (ROM)
+removed.
+  The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_or0000" is
+loadless and has been removed.
+   Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_or000033"
+(ROM) removed.
+The signal "opb_spi_0/SPI_DBus<23>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_23" (SFF)
+removed.
+  The signal "opb_spi_0/opb_spi_0/IP2Bus_Data<23>" is loadless and has been
+removed.
+   Loadless block "opb_spi_0/opb_spi_0/I_cntrl_reg/Reg2SA_Data_0_and00001" (ROM)
+removed.
+The signal "opb_spi_0/SPI_DBus<24>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_24" (SFF)
+removed.
+  The signal "opb_spi_0/opb_spi_0/IP2Bus_Data<24>" is loadless and has been
+removed.
+   Loadless block "opb_spi_0/opb_spi_0/IP2Bus_Data_Reg_24_or00001" (ROM) removed.
+    The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int<1>" is loadless
+and has been removed.
+     Loadless block "opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_1" (SFF)
+removed.
+    The signal "opb_spi_0/opb_spi_0/bus2IP_RdCE_vec<17>" is loadless and has been
+removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s0_17_and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/Rc_FIFO_Data_Out<0>" is loadless and has been
+removed.
+The signal "opb_spi_0/SPI_DBus<25>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_25" (SFF)
+removed.
+  The signal "opb_spi_0/N808" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_25_or0000201" (ROM)
+removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_25_or0000_map5" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_25_or00009" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/Rc_FIFO_Data_Out<1>" is loadless and has been
+removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_25_or0000_map2" is
+loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_25_or00004" (ROM)
+removed.
+The signal "opb_spi_0/SPI_DBus<26>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_26" (SFF)
+removed.
+  The signal "opb_spi_0/N807" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_26_or0000201" (ROM)
+removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_26_or0000_map5" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_26_or00009" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/Rc_FIFO_Data_Out<2>" is loadless and has been
+removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_26_or0000_map2" is
+loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_26_or00004" (ROM)
+removed.
+    The signal "opb_spi_0/N893" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s0_8_and00001/LUT2_D_BUF"
+(BUF) removed.
+The signal "opb_spi_0/SPI_DBus<27>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_27" (SFF)
+removed.
+  The signal "opb_spi_0/N806" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_27_or0000271" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/Rc_FIFO_Data_Out<3>" is loadless and has been
+removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_27_or0000_map8" is
+loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_27_or000017" (ROM)
+removed.
+    The signal "opb_spi_0/N840" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_27_or000017_SW0" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/bus2IP_RdCE_vec<18>" is loadless and has been
+removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s0_18_and00001" (ROM)
+removed.
+        The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<18>" is loadless
+and has been removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[1].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+          The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[1].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+           Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[1].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+    The signal "opb_spi_0/N868" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_27_or000017_SW1" (ROM)
+removed.
+The signal "opb_spi_0/SPI_DBus<28>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_28" (SFF)
+removed.
+  The signal "opb_spi_0/N805" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_28_or0000421" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/Rc_FIFO_Data_Out<4>" is loadless and has been
+removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_28_or0000_map12" is
+loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_28_or000030" (ROM)
+removed.
+    The signal "opb_spi_0/N864" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_28_or000030_SW0_SW0"
+(ROM) removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_28_or0000_map5" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_28_or00009" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/SR_4_Tx_Full" is loadless and has been removed.
+      The signal "opb_spi_0/opb_spi_0/bus2IP_RdCE_vec<23>" is loadless and has been
+removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s0_23_and00001" (ROM)
+removed.
+    The signal "opb_spi_0/N874" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_28_or000030_SW1" (ROM)
+removed.
+The signal "opb_spi_0/SPI_DBus<29>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_29" (SFF)
+removed.
+  The signal "opb_spi_0/N804" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_29_or0000471" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/Rc_FIFO_Data_Out<5>" is loadless and has been
+removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_29_or0000_map13" is
+loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_29_or000034" (ROM)
+removed.
+    The signal "opb_spi_0/N862" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_29_or000034_SW0_SW0"
+(ROM) removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_29_or0000_map6" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_29_or000012" (ROM)
+removed.
+    The signal "opb_spi_0/N872" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_29_or000034_SW1" (ROM)
+removed.
+The signal "opb_spi_0/SPI_DBus<30>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_30" (SFF)
+removed.
+  The signal "opb_spi_0/N803" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_30_or0000421" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/Rc_FIFO_Data_Out<6>" is loadless and has been
+removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_30_or0000_map12" is
+loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_30_or000030" (ROM)
+removed.
+    The signal "opb_spi_0/N860" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_30_or000030_SW0_SW0"
+(ROM) removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_30_or0000_map5" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_30_or00009" (ROM)
+removed.
+    The signal "opb_spi_0/N870" is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_30_or000030_SW1" (ROM)
+removed.
+The signal "opb_spi_0/SPI_DBus<31>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_31" (SFF)
+removed.
+  The signal "opb_spi_0/N802" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or0000531" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/Rc_FIFO_Data_Out<7>" is loadless and has been
+removed.
+  The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or0000_map15" is
+loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or000040" (ROM)
+removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or0000_map2" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or00004/LUT4_L_BUF"
+(BUF) removed.
+      The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or00004/O" is
+loadless and has been removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or00004" (ROM)
+removed.
+        The signal "opb_spi_0/opb_spi_0/bus2IP_RdCE_vec<22>" is loadless and has been
+removed.
+         Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s0_22_and00001" (ROM)
+removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or0000_map6" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or000012" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int<8>" is loadless
+and has been removed.
+       Loadless block "opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_8" (SFF)
+removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or0000_map10" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or000025" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_slvsel_reg/Register_Data_int<0>" is loadless
+and has been removed.
+       Loadless block "opb_spi_0/opb_spi_0/I_slvsel_reg/Register_Data_int_0" (SFF)
+removed.
+      The signal "opb_spi_0/opb_spi_0/bus2IP_RdCE_vec<21>" is loadless and has been
+removed.
+       Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s0_21_and00001" (ROM)
+removed.
+    The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or0000_map13" is
+loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/ip2bus_data_mx_31_or000030" (ROM)
+removed.
+The signal "opb_spi_0/SS_O<0>" is loadless and has been removed.
+ Loadless block "opb_spi_0/opb_spi_0/I_module/SS_O_0" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/SS_O_0__and0000" is loadless and has
+been removed.
+   Loadless block "opb_spi_0/opb_spi_0/I_module/SS_O_0__and00001" (ROM) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/SS_O_0__or0000" is loadless and has
+been removed.
+   Loadless block "opb_spi_0/opb_spi_0/I_module/SS_O_0__or00001" (ROM) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/SS_O_0__and0001" is loadless and has
+been removed.
+   Loadless block "opb_spi_0/opb_spi_0/I_module/SS_O_0__and00011" (ROM) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[3].MUXCY_L_I/LO" is loadless and has been removed.
+ Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[3].MUXCY_L_I/MUXCY_L_BUF" (BUF) removed.
+  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[3].MUXCY_L_I/O" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[3].MUXCY_L_I" (MUX) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[3].MUXCY_L_I/LO" is loadless and has been removed.
+ Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[3].MUXCY_L_I/MUXCY_L_BUF" (BUF) removed.
+  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[3].MUXCY_L_I/O" is loadless and has been removed.
+   Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[3].MUXCY_L_I" (MUX) removed.
+    The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/hsum_A<3>"
+is loadless and has been removed.
+     Loadless block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/hsum_A_3_an
+d00001" (ROM) removed.
 Loadless block "dcr_v29_0/dcr_v29_0/DUMMY_BUF_I" (BUF) removed.
  The signal "dcr_v29_0/N1" is loadless and has been removed.
   Loadless block "dcr_v29_0/XST_VCC" (ONE) removed.
@@ -4173,6 +5280,123 @@ Loadless block
 "opb_intc_0/opb_intc_0/OPB_INTFC_I/OPB_DBUS_REG_GEN[9].OPB_DBUS_REG_BIT_I" (SFF)
 removed.
 Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[0].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[0].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[0].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[11].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[11].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[11].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and00002" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[12].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[12].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[12].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and00002" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[13].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[13].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[13].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and00002" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[14].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[14].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[14].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and00002" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[15].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[15].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[15].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[1].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[1].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[1].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[2].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[2].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[2].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[3].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[3].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[3].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[4].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[4].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[4].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[5].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[5].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[5].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[6].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[6].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[6].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[9].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+ The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[9].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is loadless and has been removed.
+  Loadless block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[9].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out_0_and00001" (ROM) removed.
+Loadless block
 "plb/plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/AVOID_MAPERR_GEN.AVOID_MAP_ERR_L
 UT" (ROM) removed.
  The signal "plb/plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/prioencdrOutput<3>"
@@ -5413,10 +6637,634 @@ nate_burst_and0000_SW0/O" is unused and has been removed.
  Unused block
 "plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/indetermi
 nate_burst_and0000_SW0" (ROM) removed.
+The signal "lab3_slave_0/exp_io_37_s" is unused and has been removed.
+ Unused block "lab3_slave_0/lab3_slave_0/our_value_31" (FF) removed.
+  The signal "lab3_slave_0/lab3_slave_0/our_value_mux0000<31>" is unused and has
+been removed.
+   Unused block "lab3_slave_0/lab3_slave_0/our_value_mux0000<31>1" (ROM) removed.
+The signal "opb_spi_0/MOSI_O" is unused and has been removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/SR_Out__and0000" is unused and has been
+removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out__and00001" (ROM) removed.
+    The signal "opb_spi_0/opb_spi_0/Data_From_TxFIFO<0>" is unused and has been
+removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/SR_Out__or0000" is unused and has been
+removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out__or00001" (ROM) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map44" is unused and has
+been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008186" (ROM) removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and0002" is unused and
+has been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and00022" (ROM)
+removed.
+        The signal "opb_spi_0/N896" is unused and has been removed.
+         Unused block
+"opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and000211/LUT4_D_BUF" (BUF)
+removed.
+    The signal "opb_spi_0/N820" is unused and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008201_SW0/LUT4_L_BUF"
+(BUF) removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008201_SW0/O" is unused and
+has been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008201_SW0" (ROM) removed.
+        The signal "opb_spi_0/N824" is unused and has been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000827_SW0" (ROM) removed.
+        The signal "opb_spi_0/opb_spi_0/Transmit_Data<0>" is unused and has been
+removed.
+         Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Tx_FIFO_
+Data_WithZero_0_and00001" (ROM) removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map6" is unused and has
+been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000813" (ROM) removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map4" is unused and has
+been removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux00086" (ROM) removed.
+            The signal "opb_spi_0/opb_spi_0/I_module/Bus_c<0>" is unused and has been
+removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/Bus_c_0" (SFF) removed.
+              The signal "opb_spi_0/opb_spi_0/I_module/SCK_SR_local_D" is unused and has been
+removed.
+              The signal "opb_spi_0/opb_spi_0/I_module/Result<2>" is unused and has been
+removed.
+               Unused block "opb_spi_0/opb_spi_0/I_module/Mcount_Bus_c_xor<2>11" (ROM) removed.
+                The signal "opb_spi_0/opb_spi_0/I_module/Bus_c<2>" is unused and has been
+removed.
+                 Unused block "opb_spi_0/opb_spi_0/I_module/Bus_c_2" (SFF) removed.
+                  The signal "opb_spi_0/opb_spi_0/I_module/Result<0>" is unused and has been
+removed.
+                   Unused block "opb_spi_0/opb_spi_0/I_module/Mcount_Bus_c_xor<0>11_INV_0" (BUF)
+removed.
+                  The signal "opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_inv" is unused
+and has been removed.
+                   Unused block "opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_inv1" (ROM)
+removed.
+                    The signal "opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_posclkd" is
+unused and has been removed.
+                     Unused block "opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_posclkd" (FF)
+removed.
+                      The signal "opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_clkd" is unused
+and has been removed.
+                       Unused block "opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_clkd" (FF)
+removed.
+                        The signal "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch_or0000" is
+unused and has been removed.
+                         Unused block "opb_spi_0/opb_spi_0/I_module/First_Char_Loaded_Asynch_or00001"
+(ROM) removed.
+                        The signal "opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_clkd_mux0002"
+is unused and has been removed.
+                         Unused block
+"opb_spi_0/opb_spi_0/I_module/SR_bit_current_index_en_clkd_mux00021" (ROM)
+removed.
+                The signal "opb_spi_0/opb_spi_0/I_module/Bus_c<1>" is unused and has been
+removed.
+                 Unused block "opb_spi_0/opb_spi_0/I_module/Bus_c_1" (SFF) removed.
+                  The signal "opb_spi_0/opb_spi_0/I_module/Result<1>" is unused and has been
+removed.
+                   Unused block "opb_spi_0/opb_spi_0/I_module/Mcount_Bus_c_xor<1>11" (ROM) removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/N47" is unused and has been removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux00081211/LUT4_L_BUF" (BUF)
+removed.
+            The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux00081211/O" is unused and has
+been removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux00081211" (ROM) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map41" is unused and has
+been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008160" (ROM) removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map32" is unused and has
+been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008122" (ROM) removed.
+        The signal "opb_spi_0/N838" is unused and has been removed.
+         Unused block
+"opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_cmp_eq00001_SW2/LUT3_L_BUF" (BUF)
+removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_cmp_eq00001_SW2/O" is
+unused and has been removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_cmp_eq00001_SW2"
+(ROM) removed.
+            The signal "opb_spi_0/opb_spi_0/Data_From_TxFIFO<7>" is unused and has been
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map37" is unused and has
+been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008133" (ROM) removed.
+        The signal "opb_spi_0/opb_spi_0/Transmit_Data<5>" is unused and has been
+removed.
+         Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Tx_FIFO_
+Data_WithZero_5_and00001" (ROM) removed.
+          The signal "opb_spi_0/opb_spi_0/Data_From_TxFIFO<5>" is unused and has been
+removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map34" is unused and has
+been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008125/LUT4_L_BUF" (BUF)
+removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008125/O" is unused and has
+been removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008125" (ROM) removed.
+            The signal "opb_spi_0/N822" is unused and has been removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_cmp_eq00001_SW0"
+(ROM) removed.
+              The signal "opb_spi_0/opb_spi_0/Data_From_TxFIFO<4>" is unused and has been
+removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/N10" is unused and has been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008111" (ROM) removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map39" is unused and has
+been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008145/LUT3_L_BUF" (BUF)
+removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008145/O" is unused and has
+been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008145" (ROM) removed.
+          The signal "opb_spi_0/opb_spi_0/Data_From_TxFIFO<6>" is unused and has been
+removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/N12" is unused and has been removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008121" (ROM) removed.
+            The signal "opb_spi_0/N818" is unused and has been removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008121_SW1/LUT3_L_BUF"
+(BUF) removed.
+              The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008121_SW1/O" is unused and
+has been removed.
+               Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008121_SW1" (ROM) removed.
+            The signal "opb_spi_0/N817" is unused and has been removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008121_SW0" (ROM) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map28" is unused and has
+been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008106" (ROM) removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map13" is unused and has
+been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000841" (ROM) removed.
+        The signal "opb_spi_0/N836" is unused and has been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_cmp_eq00001_SW1"
+(ROM) removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map24" is unused and has
+been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000875/LUT3_L_BUF" (BUF)
+removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000875/O" is unused and has
+been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000875" (ROM) removed.
+          The signal "opb_spi_0/opb_spi_0/Data_From_TxFIFO<2>" is unused and has been
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map23" is unused and has
+been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000867" (ROM) removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map14" is unused and has
+been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000842/LUT4_L_BUF" (BUF)
+removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000842/O" is unused and has
+been removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000842" (ROM) removed.
+            The signal "opb_spi_0/N829" is unused and has been removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008111_SW2" (ROM) removed.
+              The signal "opb_spi_0/opb_spi_0/Data_From_TxFIFO<3>" is unused and has been
+removed.
+            The signal "opb_spi_0/N830" is unused and has been removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008111_SW3" (ROM) removed.
+        The signal "opb_spi_0/N832" is unused and has been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000864_SW0" (ROM) removed.
+          The signal "opb_spi_0/N826" is unused and has been removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008111_SW0" (ROM) removed.
+            The signal "opb_spi_0/opb_spi_0/Data_From_TxFIFO<1>" is unused and has been
+removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008_map17" is unused and has
+been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux000847" (ROM) removed.
+          The signal "opb_spi_0/opb_spi_0/Transmit_Data<4>" is unused and has been
+removed.
+           Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/Tx_FIFO_
+Data_WithZero_4_and00001" (ROM) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/SR_Out__and0001" is unused and has been
+removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out__and00011" (ROM) removed.
+The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INCLUDE_RESET_MIR_GEN.RESET_MIR_I0/sw_
+rst_cond" is unused and has been removed.
+The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INCLUDE_RESET_MIR_GEN.RESET_MIR_I0/sw_
+rst_cond_d1" is unused and has been removed.
+The signal
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[2].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/lut_out<0>" is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[0].PER_CE_GEN[10].MULTIPLE_
+CES_THIS_CS_GEN.CE_I/lut_out_0_and000011" (ROM) removed.
+The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/Bus2IP_CE<19>" is unused
+and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/PER_AR_GEN[2].PER_CE_GEN[2].MULTIPLE_C
+ES_THIS_CS_GEN.CE_I/XST_WA.GEN_DECODE[0].MUXCY_I" (MUX) removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Receive_Data<0>" is unused and has been
+removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/Receive_Data_0" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/receive_data_strobe" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/receive_data_strobe1" (ROM) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register<0>" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0" (FF) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and00011" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/N9" is unused and has been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and000121" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/N17" is unused and has been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and000131" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and0000" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and00001" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/N18" is unused and has been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/Loading_SR_Reg11" (ROM) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_mux0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_mux00011" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/N111" is unused and has been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_mux000121" (ROM)
+removed.
+        The signal "opb_spi_0/opb_spi_0/I_module/SR_In" is unused and has been removed.
+         Unused block "opb_spi_0/opb_spi_0/I_module/SR_In" (FF) removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/SR_In_or0000" is unused and has been
+removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/SR_In_or00001" (ROM) removed.
+          The signal "opb_spi_0/opb_spi_0/I_module/SR_In_mux0002" is unused and has been
+removed.
+           Unused block "opb_spi_0/opb_spi_0/I_module/SR_In_mux0002" (MUX) removed.
+            The signal "opb_spi_0/N880" is unused and has been removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/SR_In_mux0002_F" (ROM) removed.
+            The signal "opb_spi_0/N881" is unused and has been removed.
+             Unused block "opb_spi_0/opb_spi_0/I_module/SR_In_mux0002_G" (ROM) removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/N19" is unused and has been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0_mux000131" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and0001" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_0__and00011" (ROM)
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Receive_Data<1>" is unused and has been
+removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/Receive_Data_1" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register<1>" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_1" (FF) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_1_and0000" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_1_and00001" (ROM)
+removed.
+      The signal "opb_spi_0/opb_spi_0/I_module/N16" is unused and has been removed.
+       Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_1_and000011" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_1__and0000" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_1__and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_1_mux0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_1_mux00011" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_1__and0001" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_1__and00011" (ROM)
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Receive_Data<2>" is unused and has been
+removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/Receive_Data_2" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register<2>" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_2" (FF) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_2_and0000" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_2_and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_2__and0000" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_2__and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_2_mux0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_2_mux00011" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_2__and0001" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_2__and00011" (ROM)
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Receive_Data<3>" is unused and has been
+removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/Receive_Data_3" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register<3>" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_3" (FF) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_3_and0000" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_3_and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_3__and0000" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_3__and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_3_mux0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_3_mux00011" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_3__and0001" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_3__and00011" (ROM)
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Receive_Data<4>" is unused and has been
+removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/Receive_Data_4" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register<4>" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_4" (FF) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_4_and0000" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_4_and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_4__and0000" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_4__and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_4_mux0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_4_mux00011" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_4__and0001" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_4__and00011" (ROM)
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Receive_Data<5>" is unused and has been
+removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/Receive_Data_5" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register<5>" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_5" (FF) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_5_and0000" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_5_and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_5__and0000" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_5__and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_5_mux0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_5_mux00011" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_5__and0001" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_5__and00011" (ROM)
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Receive_Data<6>" is unused and has been
+removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/Receive_Data_6" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register<6>" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_6" (FF) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_6_and0000" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_6_and00001" (ROM)
+removed.
+      The signal "opb_spi_0/N895" is unused and has been removed.
+       Unused block
+"opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and000131/LUT4_D_BUF" (BUF)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_6__and0000" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_6__and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_6_mux0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_6_mux00011" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_6__and0001" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_6__and00011" (ROM)
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Receive_Data<7>" is unused and has been
+removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/Receive_Data_7" (FF) removed.
+  The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register<7>" is unused and has
+been removed.
+   Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_7" (FF) removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_7_and0000" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_7_and00001" (ROM)
+removed.
+      The signal "opb_spi_0/N894" is unused and has been removed.
+       Unused block
+"opb_spi_0/opb_spi_0/I_module/Shift_Register_1_and000011/LUT4_D_BUF" (BUF)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_7__and0000" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_7__and00001" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_7_mux0001" is unused and
+has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_7_mux00011" (ROM)
+removed.
+    The signal "opb_spi_0/opb_spi_0/I_module/Shift_Register_7__and0001" is unused
+and has been removed.
+     Unused block "opb_spi_0/opb_spi_0/I_module/Shift_Register_7__and00011" (ROM)
+removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/next_Data_E
+xists" is unused and has been removed.
+The signal "opb_spi_0/opb_spi_0/Reset_TxFIFO_ptr" is unused and has been
+removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/sum_A<0>"
+is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[0].XORCY_I" (XOR) removed.
+  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/valid_Write
+" is unused and has been removed.
+   Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/valid_Write
+1" (ROM) removed.
+  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/hsum_A<0>"
+is unused and has been removed.
+   Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/hsum_A_0_an
+d00001" (ROM) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/sum_A<1>"
+is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[1].XORCY_I" (XOR) removed.
+  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/hsum_A<1>"
+is unused and has been removed.
+   Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/hsum_A_1_an
+d00001" (ROM) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/sum_A<2>"
+is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[2].XORCY_I" (XOR) removed.
+  The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/hsum_A<2>"
+is unused and has been removed.
+   Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/hsum_A_2_an
+d00001" (ROM) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/sum_A<3>"
+is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[3].XORCY_I" (XOR) removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_or0000" is
+unused and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_mux0002" is
+unused and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SCK_SR_local_CE" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Clear" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Preset" is unused and has
+been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SCK_Out_CE" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SCK_Out_FF_Clear" is unused and has
+been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SCK_Out_D" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SCK_Out_FF_Preset" is unused and has
+been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Allow_MODF_Strobe_not0001" is unused
+and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/MODF_strobe_mux0002" is unused and has
+been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_inv" is unused
+and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SS_Asserted_1dly_mux0001" is unused and
+has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SS_Asserted_mux0000" is unused and has
+been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SS_Asserted_2dly_mux0001" is unused and
+has been removed.
+The signal "opb_spi_0/opb_spi_0/SPIXfer_done" is unused and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<0>1" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Ratio_Count_and0000" is unused and has
+been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<1>1" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<2>1" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<3>" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Bit_Count_or0000" is unused and has
+been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<0>2" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<1>2" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<2>2" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<3>1" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Result<4>" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd1-In" is unused and
+has been removed.
+The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/IP2Bus_WrAck_sa_int_and0000_norst"
+is unused and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_cntrl_reg/Bus2IP_Reg_WrCE_inv" is unused and
+has been removed.
+ Unused block "opb_spi_0/opb_spi_0/I_cntrl_reg/Bus2IP_Reg_WrCE_inv1" (ROM)
+removed.
+The signal "opb_spi_0/opb_spi_0/I_status_reg/MODF_Reset" is unused and has been
+removed.
+The signal "opb_spi_0/opb_spi_0/I_status_reg/IP2Bus_RdAck_sa_int_and0000_norst"
+is unused and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_status_reg/Bus2IP_Reg_RdCE_inv" is unused and
+has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3-In_map20" is
+unused and has been removed.
+The signal "opb_spi_0/N801" is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/IP2Bus_W
+rAck_TxFIFO_i_and000011" (ROM) removed.
+The signal "opb_spi_0/N816" is unused and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd2-In_map18" is
+unused and has been removed.
+The signal "opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3-In_map9" is unused
+and has been removed.
+The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_or0000_map12"
+is unused and has been removed.
+ Unused block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_or000023"
+(ROM) removed.
+The signal "opb_spi_0/N878" is unused and has been removed.
+The signal "opb_spi_0/N879" is unused and has been removed.
+The signal "opb_spi_0/N882" is unused and has been removed.
+The signal "opb_spi_0/N883" is unused and has been removed.
+The signal "opb_spi_0/N884" is unused and has been removed.
+The signal "opb_spi_0/N885" is unused and has been removed.
+The signal "opb_spi_0/N888" is unused and has been removed.
+The signal "opb_spi_0/N889" is unused and has been removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[0].MUXCY_L_I/O" is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[0].MUXCY_L_I" (MUX) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[1].MUXCY_L_I/O" is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[1].MUXCY_L_I" (MUX) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[2].MUXCY_L_I/O" is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/Addr_Counters
+[2].MUXCY_L_I" (MUX) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[0].MUXCY_L_I/O" is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[0].MUXCY_L_I" (MUX) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[1].MUXCY_L_I/O" is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[1].MUXCY_L_I" (MUX) removed.
+The signal
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[2].MUXCY_L_I/O" is unused and has been removed.
+ Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Counte
+rs[2].MUXCY_L_I" (MUX) removed.
+The signal "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_or000028/O" is
+unused and has been removed.
+ Unused block "opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_dbus_s2_or000028"
+(ROM) removed.
+The signal "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008111_SW1_SW0/O" is unused
+and has been removed.
+ Unused block "opb_spi_0/opb_spi_0/I_module/SR_Out_mux0008111_SW1_SW0" (ROM)
+removed.
 Unused block
 "ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2
 _5/WO_ECC.DDR_CTRL_I/CLKGEN_I/NOT_VIRTEX4_IOREGS.GEN_CLK_PAIR_N[3].DDR_CLKN_REG_
 I" () removed.
+Unused block "exp_io_37_pin_PULLUP" (PULLUP) removed.
 Unused block "exp_io_65_pin_PULLUP" (PULLUP) removed.
 Unused block "iobuf_20/OBUFT" (TRI) removed.
 Unused block "iobuf_21/OBUFT" (TRI) removed.
@@ -5427,6 +7275,54 @@ Unused block "iobuf_25/OBUFT" (TRI) removed.
 Unused block "iobuf_26/OBUFT" (TRI) removed.
 Unused block "iobuf_27/OBUFT" (TRI) removed.
 Unused block "iobuf_28/OBUFT" (TRI) removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/FIFO_RAM[0].S
+RL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/FIFO_RAM[1].S
+RL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/FIFO_RAM[2].S
+RL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/FIFO_RAM[3].S
+RL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/FIFO_RAM[4].S
+RL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/FIFO_RAM[5].S
+RL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/FIFO_RAM[6].S
+RL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Rec_fifo/FIFO_RAM[7].S
+RL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/FIFO_RAM[0]
+.SRL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/FIFO_RAM[1]
+.SRL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/FIFO_RAM[2]
+.SRL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/FIFO_RAM[3]
+.SRL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/FIFO_RAM[4]
+.SRL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/FIFO_RAM[5]
+.SRL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/FIFO_RAM[6]
+.SRL16E_I" () removed.
+Unused block
+"opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/FIFO_RAM[7]
+.SRL16E_I" () removed.
 Unused block
 "plb2opb/plb2opb/RCV_DATA_IF_I/ASYNC_CLK_GEN.ASYNC_FIFO_I/DUALPORT_MEM_GEN[32].R
 AM_I" () removed.
@@ -5625,6 +7521,179 @@ GND 		opb2dcr_bridge_0/XST_GND
 VCC 		opb2dcr_bridge_0/XST_VCC
 GND 		opb_intc_0/XST_GND
 VCC 		opb_intc_0/XST_VCC
+GND 		opb_spi_0/XST_GND
+VCC 		opb_spi_0/XST_VCC
+FDR 		opb_spi_0/opb_spi_0/I_cntrl_reg/IP2Bus_WrAck_sa_int
+   optimized to 0
+INV 		opb_spi_0/opb_spi_0/I_cntrl_reg/IP2Bus_WrAck_sa_int_and0000_norst1_INV_0
+FDSE 		opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_0
+   optimized to 1
+FDRE 		opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_3
+   optimized to 0
+FDRE 		opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_4
+   optimized to 0
+FDRE 		opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_5
+   optimized to 0
+FDRE 		opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_6
+   optimized to 0
+FDRE 		opb_spi_0/opb_spi_0/I_cntrl_reg/Register_Data_int_7
+   optimized to 0
+FDPE 		opb_spi_0/opb_spi_0/I_module/Allow_MODF_Strobe
+   optimized to 1
+LUT4 		opb_spi_0/opb_spi_0/I_module/Allow_MODF_Strobe_not00011
+FDC 		opb_spi_0/opb_spi_0/I_module/Bit_Count_0
+   optimized to 0
+FDC 		opb_spi_0/opb_spi_0/I_module/Bit_Count_1
+   optimized to 0
+FDC 		opb_spi_0/opb_spi_0/I_module/Bit_Count_2
+   optimized to 0
+FDC 		opb_spi_0/opb_spi_0/I_module/Bit_Count_3
+   optimized to 0
+FDC 		opb_spi_0/opb_spi_0/I_module/Bit_Count_4
+   optimized to 0
+LUT4 		opb_spi_0/opb_spi_0/I_module/Bit_Count_or00001
+LUT2 		opb_spi_0/opb_spi_0/I_module/Bit_Count_or000011
+FDC 		opb_spi_0/opb_spi_0/I_module/MODF_strobe
+   optimized to 0
+LUT4 		opb_spi_0/opb_spi_0/I_module/MODF_strobe_mux00021
+INV 		opb_spi_0/opb_spi_0/I_module/Mcount_Bit_Count_xor<0>11_INV_0
+LUT2 		opb_spi_0/opb_spi_0/I_module/Mcount_Bit_Count_xor<1>11
+LUT3 		opb_spi_0/opb_spi_0/I_module/Mcount_Bit_Count_xor<2>11
+INV 		opb_spi_0/opb_spi_0/I_module/Mcount_Ratio_Count_xor<0>11_INV_0
+LUT2 		opb_spi_0/opb_spi_0/I_module/Mcount_Ratio_Count_xor<1>11
+LUT3 		opb_spi_0/opb_spi_0/I_module/Mcount_Ratio_Count_xor<2>11
+LUT4 		opb_spi_0/opb_spi_0/I_module/Mcount_Ratio_Count_xor<3>11
+FDR 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd1
+   optimized to 0
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd1-In1
+MUXF5 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd1-In_f5
+FDRS 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd2
+   optimized to 0
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd2-In42
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd2-In52
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd2-In6111
+LUT3 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd2-In6112
+MUXF5 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd2-In611_f5
+FDRS 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3
+   optimized to 0
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3-In20
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3-In20_SW0
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3-In20_SW1
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3-In35
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3-In43
+LUT3 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_FFd3-In54
+LUT2 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_Out51
+LUT2 		opb_spi_0/opb_spi_0/I_module/Ratio_Cnt_SM_cs_cmp_eq00001
+FDR 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_0
+   optimized to 0
+FDR 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_1
+   optimized to 0
+FDR 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_2
+   optimized to 0
+FDR 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_3
+   optimized to 0
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_and000011
+LUT3 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_and0000111
+MUXF5 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_and000025
+LUT4 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_and000025_F
+LUT3 		opb_spi_0/opb_spi_0/I_module/Ratio_Count_and000025_G
+LUT4 		opb_spi_0/opb_spi_0/I_module/Result<3>11
+LUT4 		opb_spi_0/opb_spi_0/I_module/Result<4>1
+MUXF5 		opb_spi_0/opb_spi_0/I_module/Result<4>_f5
+FDCPE 		opb_spi_0/opb_spi_0/I_module/SCK_Out
+   optimized to 0
+LUT4 		opb_spi_0/opb_spi_0/I_module/SCK_Out_CE
+LUT4 		opb_spi_0/opb_spi_0/I_module/SCK_Out_CE_SW2
+LUT4 		opb_spi_0/opb_spi_0/I_module/SCK_Out_CE_SW3
+INV 		opb_spi_0/opb_spi_0/I_module/SCK_Out_D1_INV_0
+LUT2 		opb_spi_0/opb_spi_0/I_module/SCK_Out_FF_Clear1
+LUT2 		opb_spi_0/opb_spi_0/I_module/SCK_Out_FF_Preset1
+LUT2 		opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Clear111
+LUT4 		opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Clear12
+LUT3 		opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Clear131
+LUT4 		opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Clear23
+LUT4 		opb_spi_0/opb_spi_0/I_module/SCK_SR_FF_Preset1
+FDCPE 		opb_spi_0/opb_spi_0/I_module/SCK_SR_local
+   optimized to 0
+LUT3 		opb_spi_0/opb_spi_0/I_module/SCK_SR_local_CE11
+LUT4 		opb_spi_0/opb_spi_0/I_module/SCK_SR_local_CE12
+MUXF5 		opb_spi_0/opb_spi_0/I_module/SCK_SR_local_CE1_f5
+INV 		opb_spi_0/opb_spi_0/I_module/SCK_SR_local_D1_INV_0
+FDC 		opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed
+   optimized to 0
+INV 		opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_inv1_INV_0
+LUT4 		opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_mux00021
+LUT4 		opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_or0000
+LUT3 		opb_spi_0/opb_spi_0/I_module/SPIXfer_Start_n_Proceed_or0000_SW0
+FDR 		opb_spi_0/opb_spi_0/I_module/SPIXfer_done_int_1dly
+   optimized to 0
+FDC 		opb_spi_0/opb_spi_0/I_module/SS_Asserted
+   optimized to 0
+FDC 		opb_spi_0/opb_spi_0/I_module/SS_Asserted_1dly
+   optimized to 0
+LUT3 		opb_spi_0/opb_spi_0/I_module/SS_Asserted_1dly_mux00011
+FDC 		opb_spi_0/opb_spi_0/I_module/SS_Asserted_2dly
+   optimized to 0
+LUT3 		opb_spi_0/opb_spi_0/I_module/SS_Asserted_2dly_mux00011
+LUT2 		opb_spi_0/opb_spi_0/I_module/SS_Asserted_mux00001
+LUT4_D 		opb_spi_0/opb_spi_0/I_module/Shift_Register_0_and000211
+LUT4 		opb_spi_0/opb_spi_0/I_module/sck_local_cntrl1
+LUT2 		opb_spi_0/opb_spi_0/I_status_reg/Bus2IP_Reg_RdCE_inv1
+FDR 		opb_spi_0/opb_spi_0/I_status_reg/IP2Bus_RdAck_sa_int
+   optimized to 0
+INV 		opb_spi_0/opb_spi_0/I_status_reg/IP2Bus_RdAck_sa_int_and0000_norst1_INV_0
+FDRE 		opb_spi_0/opb_spi_0/I_status_reg/MODF
+   optimized to 0
+LUT3 		opb_spi_0/opb_spi_0/I_status_reg/MODF_Reset1
+FDRE
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Count
+ers[0].FDRE_I
+   optimized to 0
+FDRE
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Count
+ers[1].FDRE_I
+   optimized to 0
+FDRE
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Count
+ers[2].FDRE_I
+   optimized to 0
+FDRE
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Addr_Count
+ers[3].FDRE_I
+   optimized to 0
+FDR
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/Data_Exist
+s_DFF
+   optimized to 0
+LUT4
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/buffer_Emp
+ty_cmp_eq00001
+LUT4
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/buffer_Ful
+l_cmp_eq00001
+LUT4
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_Trans_fifo/next_Data_
+Exists1
+FDR
+		opb_spi_0/opb_spi_0/Map_signals_and_Reg_for_WITH_FIFOs.I_fifo_ifmodule/IP2Bus_
+WrAck_TxFIFO_i
+   optimized to 0
+LUT2
+		opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INCLUDE_RESET_MIR_GEN.RESET_MIR_I0/Bu
+s2IP_Reset1
+FDRS
+		opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INCLUDE_RESET_MIR_GEN.RESET_MIR_I0/sw
+_reset
+   optimized to 0
+LUT4
+		opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INCLUDE_RESET_MIR_GEN.RESET_MIR_I0/sw
+_reset_or00001
+FDR
+		opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/INCLUDE_RESET_MIR_GEN.RESET_MIR_I0/sw
+_rst_cond_d1
+   optimized to 0
+LUT2 		opb_spi_0/opb_spi_0/OPB_IPIF_I/OPB_BAM_I/sln_errack_s1_SW0
+LUT3 		opb_spi_0/opb_spi_0/Reset_TxFIFO_ptr1
 GND 		plb/XST_GND
 VCC 		plb/XST_VCC
 LUT2 		plb/plb/I_PLB_ADDRPATH/I_PLBADDR_MUX/lutout_55_not00001
@@ -5973,6 +8042,18 @@ Section 6 - IOB Properties
 | IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
 |                                    |         |           |             | Strength | Rate |          |          | Delay |
 +------------------------------------------------------------------------------------------------------------------------+
+| exp_io_27_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_28_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_29_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_30_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_31_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_32_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_33_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_34_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_35_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_36_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
+| exp_io_37_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          |          |       |
+| exp_io_38_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | FAST |          | PULLUP   |       |
 | exp_io_40_pin                      | IOB     | INPUT     | LVTTL       |          |      | INFF1    |          |       |
 | exp_io_41_pin                      | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          | PULLUP   |       |
 | exp_io_42_pin                      | IOB     | INPUT     | LVTTL       |          |      | INFF1    |          |       |

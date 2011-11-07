@@ -1275,11 +1275,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                             | Load  |
------------------------------------+-------------------------------------------------------------------+-------+
-PLB_Clk                            | NONE(plb/I_PLB_ARBITER_LOGIC/I_ARBREGISTERS/arbSecRdMasterReg_i_0)| 81    |
------------------------------------+-------------------------------------------------------------------+-------+
+-----------------------------------+-----------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                         | Load  |
+-----------------------------------+-----------------------------------------------+-------+
+PLB_Clk                            | NONE(plb/I_PLB_ARBITER_LOGIC/I_WDT/PLB_RNWReg)| 81    |
+-----------------------------------+-----------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1395,7 +1395,7 @@ Delay:               3.217ns (Levels of Logic = 6)
                                        (61.7% logic, 38.3% route)
 
 =========================================================================
-CPU : 15.38 / 15.47 s | Elapsed : 15.00 / 15.00 s
+CPU : 15.36 / 15.44 s | Elapsed : 16.00 / 16.00 s
  
 --> 
 

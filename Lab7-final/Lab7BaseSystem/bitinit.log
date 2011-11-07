@@ -30,6 +30,9 @@ C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v
 Sourcing tcl file
 C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_modu
 le_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_spi_v1_00_e/data/opb_spi_v2_
+1_0.tcl ...
 
 Overriding IP level properties ...
 INFO:MDT -
@@ -96,6 +99,10 @@ INFO:MDT -
    D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\pcores\l
    ab3_slave\data\lab3_slave_v2_1_0.mpd line 26 - lab3_slave_0 (lab3_slave) tool
    is overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_spi_v1_00_e\data\opb_spi_
+   v2_1_0.mpd line 46 - opb_spi_0 (opb_spi) tool is overriding PARAMETER
+   C_FAMILY value to 
 
 Performing IP level DRCs on properties...
 

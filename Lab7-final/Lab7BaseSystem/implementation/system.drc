@@ -1,17 +1,39 @@
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_30_pin/exp_io_30_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_31_pin/exp_io_31_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_32_pin/exp_io_32_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_33_pin/exp_io_33_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_41_pin/exp_io_41_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_34_pin/exp_io_34_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_50_pin/exp_io_50_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_35_pin/exp_io_35_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_43_pin/exp_io_43_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_27_pin/exp_io_27_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_52_pin/exp_io_52_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_28_pin/exp_io_28_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_60_pin/exp_io_60_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_36_pin/exp_io_36_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_53_pin/exp_io_53_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_29_pin/exp_io_29_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_62_pin/exp_io_62_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_38_pin/exp_io_38_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_54_pin/exp_io_54_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
@@ -58,4 +80,4 @@ WARNING:PhysDesignRules:1060 - Dangling pins on
    block:<vga_framebuffer/vga_framebuffer/RGB_BRAM_U4/RGB_BRAM/vga_framebuffer/v
    ga_framebuffer/RGB_BRAM_U4/RGB_BRAM.B>:<RAMB16_RAMB16B>.  The block is
    configured to use input parity pins. There are dangling output parity pins.
-DRC detected 0 errors and 26 warnings.
+DRC detected 0 errors and 37 warnings.

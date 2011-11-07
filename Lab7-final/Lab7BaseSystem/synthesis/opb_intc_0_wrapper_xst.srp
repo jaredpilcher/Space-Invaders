@@ -791,11 +791,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+---------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                 | Load  |
------------------------------------+---------------------------------------+-------+
-OPB_Clk                            | NONE(opb_intc_0/OPB_INTFC_I/RNW_REG_I)| 128   |
------------------------------------+---------------------------------------+-------+
+-----------------------------------+---------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                               | Load  |
+-----------------------------------+---------------------------------------------------------------------+-------+
+OPB_Clk                            | NONE(opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[28].OPB_ABUS_REG_BIT_I)| 128   |
+-----------------------------------+---------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -884,7 +884,7 @@ Offset:              1.159ns (Levels of Logic = 1)
                                        (55.6% logic, 44.4% route)
 
 =========================================================================
-CPU : 8.21 / 8.28 s | Elapsed : 8.00 / 8.00 s
+CPU : 8.39 / 8.47 s | Elapsed : 9.00 / 9.00 s
  
 --> 
 

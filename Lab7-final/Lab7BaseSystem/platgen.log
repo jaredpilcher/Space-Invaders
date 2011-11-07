@@ -8,7 +8,7 @@ Parse system.mhs ...
 Read MPD definitions ...
 WARNING:MDT - IPNAME:opb2dcr_bridge INSTANCE:opb2dcr_bridge_0 -
    D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.m
-   hs line 448 - deprecated core for architecture 'virtex2p'!
+   hs line 460 - deprecated core for architecture 'virtex2p'!
 Sourcing tcl file
 C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_
 0.tcl ...
@@ -36,6 +36,9 @@ C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v
 Sourcing tcl file
 C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_c/data/dcm_modu
 le_v2_1_0.tcl ...
+Sourcing tcl file
+C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_spi_v1_00_e/data/opb_spi_v2_
+1_0.tcl ...
 
 Overriding IP level properties ...
 INFO:MDT -
@@ -85,6 +88,10 @@ INFO:MDT -
 INFO:MDT -
    C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_c\data\dcm_m
    odule_v2_1_0.mpd line 59 - dcm_1 (dcm_module) tool is overriding PARAMETER
+   C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb_spi_v1_00_e\data\opb_spi_
+   v2_1_0.mpd line 46 - opb_spi_0 (opb_spi) tool is overriding PARAMETER
    C_FAMILY value to virtex2p
 
 Performing IP level DRCs on properties...
@@ -352,13 +359,13 @@ _v2_1_0.tcl ...
 Check platform configuration ...
 IPNAME:plb_v34 INSTANCE:plb -
 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 192 - 3 master(s) : 3 slave(s)
+line 204 - 3 master(s) : 3 slave(s)
 IPNAME:opb_v20 INSTANCE:opb -
 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 202 - 1 master(s) : 9 slave(s)
+line 214 - 1 master(s) : 9 slave(s)
 IPNAME:dcr_v29 INSTANCE:dcr_v29_0 -
 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 442 - 1 master(s) : 1 slave(s)
+line 454 - 1 master(s) : 1 slave(s)
 
 Check port drivers...
 
@@ -383,16 +390,94 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:ppc405 INSTANCE:ppc405_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 158 - Copying cache implementation netlist
+IPNAME:ppc405 INSTANCE:ppc405_1 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 175 - Copying cache implementation netlist
+IPNAME:jtagppc_cntlr INSTANCE:jtagppc_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 181 - Copying cache implementation netlist
+IPNAME:proc_sys_reset INSTANCE:reset_block -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 188 - Copying cache implementation netlist
+IPNAME:plb_v34 INSTANCE:plb -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 204 - Copying cache implementation netlist
+IPNAME:opb_v20 INSTANCE:opb -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 214 - Copying cache implementation netlist
+IPNAME:plb2opb_bridge INSTANCE:plb2opb -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 222 - Copying cache implementation netlist
+IPNAME:opb_uartlite INSTANCE:rs232_uart_1 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 233 - Copying cache implementation netlist
+IPNAME:opb_sysace INSTANCE:sysace_compactflash -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 248 - Copying cache implementation netlist
+IPNAME:opb_gpio INSTANCE:leds_4bit -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 264 - Copying cache implementation netlist
+IPNAME:opb_gpio INSTANCE:dipsws_4bit -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 277 - Copying cache implementation netlist
+IPNAME:opb_gpio INSTANCE:pushbuttons_5bit -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 290 - Copying cache implementation netlist
+IPNAME:plb_ddr INSTANCE:ddr_256mb_32mx64_rank1_row13_col10_cl2_5 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 305 - Copying cache implementation netlist
+IPNAME:plb_bram_if_cntlr INSTANCE:plb_bram_if_cntlr_1 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 346 - Copying cache implementation netlist
+IPNAME:bram_block INSTANCE:plb_bram_if_cntlr_1_bram -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 356 - Copying cache implementation netlist
+IPNAME:opb_intc INSTANCE:opb_intc_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 362 - Copying cache implementation netlist
+IPNAME:util_vector_logic INSTANCE:sysclk_inv -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 372 - Copying cache implementation netlist
+IPNAME:util_vector_logic INSTANCE:clk90_inv -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 381 - Copying cache implementation netlist
+IPNAME:util_vector_logic INSTANCE:ddr_clk90_inv -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 390 - Copying cache implementation netlist
+IPNAME:dcm_module INSTANCE:dcm_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 399 - Copying cache implementation netlist
+IPNAME:dcm_module INSTANCE:dcm_1 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 416 - Copying cache implementation netlist
+IPNAME:plb_tft_cntlr_ref INSTANCE:vga_framebuffer -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 435 - Copying cache implementation netlist
+IPNAME:dcr_v29 INSTANCE:dcr_v29_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 454 - Copying cache implementation netlist
+IPNAME:opb2dcr_bridge INSTANCE:opb2dcr_bridge_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 460 - Copying cache implementation netlist
+IPNAME:opb_ac97 INSTANCE:audio_codec -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 469 - Copying cache implementation netlist
+IPNAME:lab3_slave INSTANCE:lab3_slave_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
+line 484 - Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:plb_bram_if_cntlr_1_bram -
 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 344 - elaborating IP
+line 356 - elaborating IP
 
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 11.00 seconds
+Completion time: 12.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -407,95 +492,12 @@ Running XST synthesis ...
 INFO:MDT - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
-IPNAME:ppc405_0_wrapper INSTANCE:ppc405_0 -
+IPNAME:opb_spi_0_wrapper INSTANCE:opb_spi_0 -
 D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 146 - Running XST synthesis
-IPNAME:ppc405_1_wrapper INSTANCE:ppc405_1 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 163 - Running XST synthesis
-IPNAME:jtagppc_0_wrapper INSTANCE:jtagppc_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 169 - Running XST synthesis
-IPNAME:reset_block_wrapper INSTANCE:reset_block -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 176 - Running XST synthesis
-IPNAME:plb_wrapper INSTANCE:plb -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 192 - Running XST synthesis
-IPNAME:opb_wrapper INSTANCE:opb -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 202 - Running XST synthesis
-IPNAME:plb2opb_wrapper INSTANCE:plb2opb -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 210 - Running XST synthesis
-IPNAME:rs232_uart_1_wrapper INSTANCE:rs232_uart_1 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 221 - Running XST synthesis
-IPNAME:sysace_compactflash_wrapper INSTANCE:sysace_compactflash -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 236 - Running XST synthesis
-IPNAME:leds_4bit_wrapper INSTANCE:leds_4bit -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 252 - Running XST synthesis
-IPNAME:dipsws_4bit_wrapper INSTANCE:dipsws_4bit -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 265 - Running XST synthesis
-IPNAME:pushbuttons_5bit_wrapper INSTANCE:pushbuttons_5bit -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 278 - Running XST synthesis
-IPNAME:ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper
-INSTANCE:ddr_256mb_32mx64_rank1_row13_col10_cl2_5 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 293 - Running XST synthesis
-IPNAME:plb_bram_if_cntlr_1_wrapper INSTANCE:plb_bram_if_cntlr_1 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 334 - Running XST synthesis
-IPNAME:plb_bram_if_cntlr_1_bram_wrapper INSTANCE:plb_bram_if_cntlr_1_bram -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 344 - Running XST synthesis
-IPNAME:opb_intc_0_wrapper INSTANCE:opb_intc_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 350 - Running XST synthesis
-IPNAME:sysclk_inv_wrapper INSTANCE:sysclk_inv -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 360 - Running XST synthesis
-IPNAME:clk90_inv_wrapper INSTANCE:clk90_inv -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 369 - Running XST synthesis
-IPNAME:ddr_clk90_inv_wrapper INSTANCE:ddr_clk90_inv -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 378 - Running XST synthesis
-IPNAME:dcm_0_wrapper INSTANCE:dcm_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 387 - Running XST synthesis
-IPNAME:dcm_1_wrapper INSTANCE:dcm_1 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 404 - Running XST synthesis
-IPNAME:vga_framebuffer_wrapper INSTANCE:vga_framebuffer -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 423 - Running XST synthesis
-IPNAME:dcr_v29_0_wrapper INSTANCE:dcr_v29_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 442 - Running XST synthesis
-IPNAME:opb2dcr_bridge_0_wrapper INSTANCE:opb2dcr_bridge_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 448 - Running XST synthesis
-IPNAME:audio_codec_wrapper INSTANCE:audio_codec -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 457 - Running XST synthesis
-IPNAME:lab3_slave_0_wrapper INSTANCE:lab3_slave_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 472 - Running XST synthesis
+line 534 - Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper
-INSTANCE:ddr_256mb_32mx64_rank1_row13_col10_cl2_5 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 293 - Running NGCBUILD
-IPNAME:opb_intc_0_wrapper INSTANCE:opb_intc_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab7-final\Lab7BaseSystem\system.mhs
-line 350 - Running NGCBUILD
 
 Rebuilding cache ...
 
-Total run time: 339.00 seconds
+Total run time: 88.00 seconds

@@ -354,11 +354,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+----------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)            | Load  |
------------------------------------+----------------------------------+-------+
-Slowest_sync_clk                   | NONE(reset_block/EXT_LPF/lpf_asr)| 59    |
------------------------------------+----------------------------------+-------+
+-----------------------------------+-------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                     | Load  |
+-----------------------------------+-------------------------------------------+-------+
+Slowest_sync_clk                   | NONE(reset_block/EXT_LPF/Mshreg_asr_lpf_0)| 59    |
+-----------------------------------+-------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -436,7 +436,7 @@ Offset:              0.370ns (Levels of Logic = 0)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 6.72 / 6.80 s | Elapsed : 7.00 / 7.00 s
+CPU : 6.64 / 6.72 s | Elapsed : 7.00 / 7.00 s
  
 --> 
 

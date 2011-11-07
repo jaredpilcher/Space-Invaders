@@ -88,7 +88,19 @@ entity system is
     exp_io_73_pin : out std_logic;
     exp_io_74_pin : in std_logic;
     exp_io_75_pin : out std_logic;
-    exp_io_76_pin : in std_logic
+    exp_io_76_pin : in std_logic;
+    exp_io_37_pin : out std_logic;
+    exp_io_38_pin : out std_logic;
+    exp_io_35_pin : out std_logic;
+    exp_io_36_pin : out std_logic;
+    exp_io_33_pin : out std_logic;
+    exp_io_34_pin : out std_logic;
+    exp_io_31_pin : out std_logic;
+    exp_io_32_pin : out std_logic;
+    exp_io_29_pin : out std_logic;
+    exp_io_30_pin : out std_logic;
+    exp_io_27_pin : out std_logic;
+    exp_io_28_pin : out std_logic
   );
 end system;
 
@@ -1169,6 +1181,18 @@ architecture STRUCTURE of system is
       OPB_select : in std_logic;
       OPB_seqAddr : in std_logic;
       interruptRequest : out std_logic;
+      exp_io_37_s : out std_logic;
+      exp_io_38_s : out std_logic;
+      exp_io_35_s : out std_logic;
+      exp_io_36_s : out std_logic;
+      exp_io_33_s : out std_logic;
+      exp_io_34_s : out std_logic;
+      exp_io_31_s : out std_logic;
+      exp_io_32_s : out std_logic;
+      exp_io_29_s : out std_logic;
+      exp_io_30_s : out std_logic;
+      exp_io_27_s : out std_logic;
+      exp_io_28_s : out std_logic;
       exp_io_40_s : in std_logic;
       exp_io_41_s : out std_logic;
       exp_io_42_s : in std_logic;
@@ -1202,6 +1226,39 @@ architecture STRUCTURE of system is
       exp_io_74_s : in std_logic;
       exp_io_75_s : out std_logic;
       exp_io_76_s : in std_logic
+    );
+  end component;
+
+  component opb_spi_0_wrapper is
+    port (
+      SCK_I : in std_logic;
+      SCK_O : out std_logic;
+      SCK_T : out std_logic;
+      MISO_I : in std_logic;
+      MISO_O : out std_logic;
+      MISO_T : out std_logic;
+      MOSI_I : in std_logic;
+      MOSI_O : out std_logic;
+      MOSI_T : out std_logic;
+      SPISEL : in std_logic;
+      SS_I : in std_logic_vector(0 to 0);
+      SS_O : out std_logic_vector(0 to 0);
+      SS_T : out std_logic;
+      OPB_Rst : in std_logic;
+      IP2INTC_Irpt : out std_logic;
+      Freeze : in std_logic;
+      OPB_Clk : in std_logic;
+      OPB_select : in std_logic;
+      OPB_RNW : in std_logic;
+      OPB_seqAddr : in std_logic;
+      OPB_BE : in std_logic_vector(0 to 3);
+      OPB_ABus : in std_logic_vector(0 to 31);
+      OPB_DBus : in std_logic_vector(0 to 31);
+      SPI_DBus : out std_logic_vector(0 to 31);
+      SPI_xferAck : out std_logic;
+      SPI_errAck : out std_logic;
+      SPI_toutSup : out std_logic;
+      SPI_retry : out std_logic
     );
   end component;
 
@@ -1247,6 +1304,18 @@ architecture STRUCTURE of system is
   signal ddr_clk_90_s : std_logic_vector(0 to 0);
   signal ddr_clk_feedback_out_s : std_logic;
   signal ddr_feedback_s : std_logic;
+  signal exp_io_27 : std_logic;
+  signal exp_io_28 : std_logic;
+  signal exp_io_29 : std_logic;
+  signal exp_io_30 : std_logic;
+  signal exp_io_31 : std_logic;
+  signal exp_io_32 : std_logic;
+  signal exp_io_33 : std_logic;
+  signal exp_io_34 : std_logic;
+  signal exp_io_35 : std_logic;
+  signal exp_io_36 : std_logic;
+  signal exp_io_37 : std_logic;
+  signal exp_io_38 : std_logic;
   signal exp_io_40 : std_logic;
   signal exp_io_41 : std_logic;
   signal exp_io_42 : std_logic;
@@ -1492,6 +1561,7 @@ architecture STRUCTURE of system is
   attribute box_type of opb2dcr_bridge_0_wrapper : component is "black_box";
   attribute box_type of audio_codec_wrapper : component is "black_box";
   attribute box_type of lab3_slave_0_wrapper : component is "black_box";
+  attribute box_type of opb_spi_0_wrapper : component is "black_box";
 
 begin
 
@@ -1564,6 +1634,18 @@ begin
   exp_io_74 <= exp_io_74_pin;
   exp_io_75_pin <= exp_io_75;
   exp_io_76 <= exp_io_76_pin;
+  exp_io_37_pin <= exp_io_37;
+  exp_io_38_pin <= exp_io_38;
+  exp_io_35_pin <= exp_io_35;
+  exp_io_36_pin <= exp_io_36;
+  exp_io_33_pin <= exp_io_33;
+  exp_io_34_pin <= exp_io_34;
+  exp_io_31_pin <= exp_io_31;
+  exp_io_32_pin <= exp_io_32;
+  exp_io_29_pin <= exp_io_29;
+  exp_io_30_pin <= exp_io_30;
+  exp_io_27_pin <= exp_io_27;
+  exp_io_28_pin <= exp_io_28;
   plb_PLB2OPB_rearb(1 to 1) <= B"0";
   plb_PLB2OPB_rearb(2 to 2) <= B"0";
   pgassign1(0 to 0) <= B"0";
@@ -2646,6 +2728,18 @@ begin
       OPB_select => opb_OPB_select,
       OPB_seqAddr => opb_OPB_seqAddr,
       interruptRequest => lab3_slave_interrupt_request,
+      exp_io_37_s => open,
+      exp_io_38_s => exp_io_38,
+      exp_io_35_s => exp_io_35,
+      exp_io_36_s => exp_io_36,
+      exp_io_33_s => exp_io_33,
+      exp_io_34_s => exp_io_34,
+      exp_io_31_s => exp_io_31,
+      exp_io_32_s => exp_io_32,
+      exp_io_29_s => exp_io_29,
+      exp_io_30_s => exp_io_30,
+      exp_io_27_s => exp_io_27,
+      exp_io_28_s => exp_io_28,
       exp_io_40_s => exp_io_40,
       exp_io_41_s => exp_io_41,
       exp_io_42_s => exp_io_42,
@@ -2679,6 +2773,38 @@ begin
       exp_io_74_s => exp_io_74,
       exp_io_75_s => exp_io_75,
       exp_io_76_s => exp_io_76
+    );
+
+  opb_spi_0 : opb_spi_0_wrapper
+    port map (
+      SCK_I => net_gnd0,
+      SCK_O => exp_io_37,
+      SCK_T => open,
+      MISO_I => net_gnd0,
+      MISO_O => open,
+      MISO_T => open,
+      MOSI_I => net_gnd0,
+      MOSI_O => open,
+      MOSI_T => open,
+      SPISEL => net_vcc0,
+      SS_I => net_gnd1(0 to 0),
+      SS_O => open,
+      SS_T => open,
+      OPB_Rst => net_gnd0,
+      IP2INTC_Irpt => open,
+      Freeze => net_gnd0,
+      OPB_Clk => net_gnd0,
+      OPB_select => net_gnd0,
+      OPB_RNW => net_gnd0,
+      OPB_seqAddr => net_gnd0,
+      OPB_BE => net_gnd4,
+      OPB_ABus => net_gnd32,
+      OPB_DBus => net_gnd32,
+      SPI_DBus => open,
+      SPI_xferAck => open,
+      SPI_errAck => open,
+      SPI_toutSup => open,
+      SPI_retry => open
     );
 
   iobuf_0 : IOBUF
