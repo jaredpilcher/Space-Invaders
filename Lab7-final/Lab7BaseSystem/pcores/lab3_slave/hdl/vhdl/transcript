@@ -34,3 +34,73 @@ vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/L
 # ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(235): Case choice must be a locally static expression.
 # ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(240): Case choice must be a locally static expression.
 # ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab7-final/Lab7BaseSystem/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd(242): Case choice must be a locally static expression.
+cd D:/put_Your_Temp_Files_Here/jeremy
+ls
+# lab7
+cd lab7/pcores/lab3_slave/hdl/vhdl
+ls
+# OPBSlaveExample.vhd
+# OPBSlaveExample.vhd.bak
+# SevenSeg.vhd
+# debounce.vhd
+# opb.do
+# spi.vhd
+# transcript
+# vsim.wlf
+# work
+vcom  spi.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity spi
+# -- Compiling architecture arch of spi
+vcom  spi.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity spi
+# -- Compiling architecture arch of spi
+vcom OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture arch of lab3_slave
+# ** Error: OPBSlaveExample.vhd(434): near "SPIDRout": expecting ',' or ')'
+# ** Error: OPBSlaveExample.vhd(442): VHDL Compiler exiting
+# C:/modeltech_6.4/win32/vcom failed.
+vcom OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture arch of lab3_slave
+vcom OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture arch of lab3_slave
+vcom OPBSlaveExample.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity lab3_slave
+# -- Compiling architecture arch of lab3_slave
+vcom  spi.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity spi
+# -- Compiling architecture arch of spi

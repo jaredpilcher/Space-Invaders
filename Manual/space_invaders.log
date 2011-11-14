@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  21 OCT 2011 11:54
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.16)  14 NOV 2011 16:05
 entering extended mode
 **D:/Put_Your_Temp_Files_Here/space_invaders/Manual/space_invaders.tex
 (D:/Put_Your_Temp_Files_Here/space_invaders/Manual/space_invaders.tex
@@ -380,16 +380,55 @@ Package pdftex.def Info: AC97_Operation.jpg used on input line 520.
 Chapter 4.
 [36
 
-] [37] [38] [39]
+] [37] <multiplayer.jpg, id=155, 4625.28pt x 3468.96pt>
+File: multiplayer.jpg Graphic file (type jpg)
+
+<use multiplayer.jpg>
+Package pdftex.def Info: multiplayer.jpg used on input line 609.
+(pdftex.def)             Requested size: 231.27754pt x 173.45816pt.
+ [38] [39 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/multiplayer.jpg>] 
+<youlose.jpg, id=162, 4625.28pt x 3468.96pt>
+File: youlose.jpg Graphic file (type jpg)
+
+<use youlose.jpg>
+Package pdftex.def Info: youlose.jpg used on input line 631.
+(pdftex.def)             Requested size: 231.27754pt x 173.45816pt.
+
+Overfull \hbox (6.24516pt too wide) in paragraph at lines 642--643
+\OT1/cmr/m/n/10.95 433/868/915MHZ fre-quency bands and trans-mits data us-ing F
+SK (Frequency-
+ []
+
+[40 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/youlose.jpg>]
+Overfull \hbox (130.61855pt too wide) in paragraph at lines 644--645
+[]\OT1/cmr/m/n/10.95 The doc-u-men-ta-tion for the transceiver can be ob-tained
+ at http://www.sparkfun.com/products/9582. 
+ []
+
+<tranciever.jpg, id=166, 602.25pt x 602.25pt>
+File: tranciever.jpg Graphic file (type jpg)
+ <use tranciever.jpg>
+Package pdftex.def Info: tranciever.jpg used on input line 648.
+(pdftex.def)             Requested size: 180.0pt x 179.99635pt.
+ [41 <D:/Put_Your_Temp_Files_Here/space_invaders/Manual/tranciever.jpg>]
+Overfull \hbox (141.5885pt too wide) in paragraph at lines 669--685
+ [] 
+ []
+
+[42] [43]
+Chapter 5.
+[44
+
+] [45] [46] [47] [48]
 (D:\Put_Your_Temp_Files_Here\space_invaders\Manual\space_invaders.aux) ) 
 Here is how much of TeX's memory you used:
- 1328 strings out of 494045
- 17967 string characters out of 3148324
- 69556 words of memory out of 3000000
- 4632 multiletter control sequences out of 15000+200000
+ 1347 strings out of 494045
+ 18286 string characters out of 3148324
+ 69602 words of memory out of 3000000
+ 4648 multiletter control sequences out of 15000+200000
  10537 words of font info for 37 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,6n,21p,932b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,21p,960b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTe
@@ -399,9 +438,9 @@ public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb>
-Output written on space_invaders.pdf (40 pages, 829307 bytes).
+Output written on space_invaders.pdf (49 pages, 6661319 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 221 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

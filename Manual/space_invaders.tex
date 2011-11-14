@@ -561,6 +561,137 @@ In our code we wrote a nice wrapper for playing and stopping sounds.  One need o
 
 
 
+
+
+\chapter{Game Controls and Displays}
+
+\subsection{Game Controls (Buttons)}
+\subsubsection{Tank Movement}
+The tank moves laterally across the bottom of the screen. The user is able to push the right button to move right, or push the left button to move left at a rate of two pixels. The user is able to hold down the left or right buttons to keep the tank moving across the screen.
+
+\subsubsection{Firing Bullets}
+You may also fire a missile by pushing the middle button. The tank is capable of moving and firing simultaneously. It is also capable of changing direction while shooting. This means that you are able to hold down the fire button and change directions.
+
+\subsubsection{GPIO Controller}
+The GPIO Controller handles input and output to the GPIO modules (such as LEDs, switches, and push buttons).  It interacts with other controllers and the PowerPC via the OPB.  It is not a reconfigurable component of the FPGA.
+
+\subsubsection{Poll Buttons Timer}  The buttons are polled in regular intervals using the the Poll Buttons timer. It checks the value of the push buttons.  If the left button is pushed, the tank move  left by a configurable amount of pixels.  If the tank is already on the left edge of the screen, nothing is performed.  If the right button is pushed, the tank moves right by the same amount.  If the tank is already on the right edge of the screen, nothing is performed.  If the middle button is pushed, a new tank bullet is fired from the tank.  If there is already a bullet on the screen, nothing is performed.
+
+The Poll Buttons timer checks the middle button on regular intervals for changes. When it detects that the middle button has been pushed, a bullet is drawn to the screen just above the center of the tank, and the global tank bullet variable is set to active. This is done by checking both the middle, left and right buttons every time the buttons are polled. Each button handler changes the state of the game before the next render. Thus the tank can move, change directions and fire between two calls to render().
+
+\subsection{DIO1 Board}
+The DIO1 board is an extension board attached to the Xilinx XUP board. It contains five buttons, eight switches and eight LEDs, and a 4-digit, 7-segment LED display. It is mainly used for educational purposes, however it also contains functionality within the Space Invaders game.
+
+The hardware attached to the board is created using the FPGA on the Xilinx board. It is implemented as a slave on the OPB Bus. It is used to implement the slave protocols on the OPB bus, and communicate with the hardware on the DIO1 board.  The slave contains 32-bit wide addresses and data busses.
+
+A series of addresses starting at the slave's base address are used to enable interrupts, acknowledge interrupts, read data from the buttons as switches, and write data to the hexadecimal displays and LEDs. Using these addresses, you can enable interrupts, receive interrupts from the buttons and switches, acknowledge them, read their values and perform the required actions. 
+
+Interrupts are generated when a button or switch changes value. The seven-segment display shows the current score when none of the swithes are high, the current number of alive aliens when SW1 is high, and the current number of lives when SW2 is high. If any of these values change during game play, they are updated on the DIO1 board when the render() function is called every 50ms. For example, once SW1 is pushed up and the alien count is currently displayed on the 7-segment display, the number decrements each time an alien is shot.
+
+\subsubsection{Buttons and Switches}
+The DIO1 buttons are generate an interrupt whenever any of the switches or pushbuttons change value. This is implemented in the OPB slave hardware. This hardware is capable of enabling or disabling interrupts by writing a 1 to an offset of the base slave address. The slave detects any change to the buttons or switches, sets an interrupt flag, and waits for an acknowledge signal written to one of its registers before clearing the acknowledge flag. Each time the Space Invaders game receives an interrupt, it acknowledges the interrupt and sends a '*' character to the UART within an interrupt handler.
+
+\subsubsection{Hexadecimal Displays}
+The seven-segment display shows the current score when none of the swithes are high, the current number of alive aliens when SW1 is high, and the current number of lives when SW2 is high. If any of these values change during game play, they are updated on the DIO1 board when the render() function is called every 50ms. For example, once SW1 is pushed up and the alien count is currently displayed on the 7-segment display, the number decrements each time an alien is shot.
+
+\subsubsection{LEDs}
+The LEDs are not used in the Space Invaders game.
+
+
+\subsection{Creative Component}
+
+The Multiplayer Space Invaders game is a fun game created to extend the enjoyment of Space Invaders by adding a competitive component to the game. Players are able to shoot aliens, resurecting aliens for the opponent. While aliens march toward the bottom of the screen, dead aliens become alive, challenging the player to shoot their aliens faster than their opponent.
+
+Game state signals are sent to the opponent's board on regular intervals using a struct. The struct includes the score, lives, number of aliens alive, and whether a space ship has been shot. When the board receives a signal, it parses the data and determines if a change has been made on the opponent's screen. If it has, the game state values are updated accordingly. The regular sending of messages is done to protect against lost signals. When a signal is lost, the values on the screen are not updated. When another packet comes with the same or similar data, the opponent's score is updated immediately on the VGA screen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.05]{multiplayer.jpg}
+\caption{Multiplayer Space Invaders. Yellow aliens depict aliens resurrected from the opponent shooting an alien. Blue aliens depict aliens resurrected from the opponent shooting a space ship.}
+\label{fig:multiplayer}
+\end{figure}
+
+\subsubsection{Game Start}
+The game starts by displaying the welcome screen of Space Invaders, asking players to push a button to start the game. After one player pushes a button, the game displays the text "WAITING FOR OPPONENT". The game starts only when the opposing player pushes a button.
+
+\subsubsection{Score}
+The score is continuously sent to the opponents board. When the board detects a change, it updates the current opponents score displayed on the VGA with the current score. This method protects against lost signals.
+
+\subsubsection{Shooting Aliens}
+Similar to the traditional Space Invaders game, the game starts with a block of marching aliens, moving toward the bottom of the screen. When you destroy an alien there is only a thirty percent chance that an alien is resurrected on an opponent's screen. These aliens appear yellow on the opponent's screen.
+
+\subsubsection{Shooting the Space Ship}
+When the Space Ship is destroyed, a score flashes in its place. This score is transmitted to the other board, which uses the score to determine how many aliens to resurrect. The integer number of aliens to resurrect is determined by dividing the score by 50. Thus, when the score is 350, seven aliens are resurrected on the opponents screen. These aliens appear blue in the opponent's screen.
+
+\subsubsection{Winning or Losing}
+Similar to the original Space Invaders game, you lose by losing all of your lives or when the aliens reach the bottom of the screen. Aliens are added when opponents destroy their aliens, adding competitiveness to the game. When you lose, the screen shown in Figure~\ref{fig:lose} is displayed. Players can each push the left button to continue playing the game. As before, a screen displays "WAITING FOR OPPONENT" until both players have pushed the left button.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.05]{youlose.jpg}
+\caption{YOU LOSE! screen. This screen displays if you have lost the game. The opposing players screen displays YOU WIN!}
+\label{fig:lose}
+\end{figure}
+
+
+\subsubsection{Wireless Transceiver}
+
+For our custom add-on to the game, we decided to make Space Invaders multiplayer.  We added a wireless transciever to two XUP Boards 
+
+We attached a RFM12B-S2 Wireless Transceiver module (Figure~\ref{fig:wireless}) to the XUP board.  It is a wireless transceiver that can operate in any of the 433/868/915MHZ frequency bands and transmits data using FSK (Frequency-shift keying).  We transmit with a 909MHz carrier frequency.  
+
+The documentation for the transceiver can be obtained at http://www.sparkfun.com/products/9582.   
+
+\begin{figure}
+\centering
+\includegraphics[width=.5\textwidth]{tranciever.jpg}
+\caption{RRM12B-S2 Transceiver}
+\label{fig:wireless}
+\end{figure}
+
+\subsubsection{SPI}
+The transceiver communicates with it's host through SPI (Serial Peripheral Interface).  We built an FPGA SPI communication module and attached it to the OPB bus, similar to the DIO board.  
+
+The SPI software API, spi.h, contains only one function sendSpiWord(), which takes a 16 bit word and sends it across the SPI and returns the 16 bit word that was returned by the SPI slave, in this case, the transceiver.  All communication with the transceiver (with the exception of an interrupt line) occurs over this SPI interface.  
+
+\subsubsection{Wireless API}
+The software API for the wireless transceiver is contained in wireless.h and has two important functions initWireless() and wirelessSend().  initWireless() and enables the transmitter and configures if with the correct carrier frequency, synchronization pattern, data rate, etc.  The function also takes as a parameter a callback function called onRecieved() which is called every time the driver receives a valid packet of data.  
+
+wirelessSend() sends a packet of data using the wireless transceiver.  It takes a pointer to the start of the packet data and the length of the packet to send as parameters.  
+
+\subsubsection{Packet Structure}
+
+We use a very simple packet structure to transmit arbitrary length packets across the wireless, the packet format is as follows:  
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| l | l | l | }
+\hline
+Byte & Data & Purpose \\ \hline \hline \hline
+0 & 0xAA & Preamble \\ \hline 
+1 & 0xAA & Preamble \\ \hline 
+2 & 0xAA & Preamble \\ \hline 
+3 & 0x2D & Synchronization Pattern \\ \hline 
+4 & 0xD4 & Synchronization Pattern \\ \hline 
+5 & ? & Packet Length (Does not include Preamble, Sync Pattern, Length Byte, or Checksum) \\ \hline 
+6 & ? & Data Byte 1 \\ \hline 
+7 & ? & Data Byte 2 \\ \hline 
+n-2 & ? & Data Byte (Second to last)\\ \hline 
+n-1 & ? & Data Byte (Last) \\ \hline 
+n & ? & Checksum \\ \hline 
+\end{tabular}
+\label{tab:buttonFunctions}
+\end{center}
+\end{table}
+
+\subsubsection{In Game Use}
+We use the wireless transmitter to transmit a game state structure to the other board 10 times a second.  Because the transceiver cannot receive and transmit at the same time, there is a chance to clobber transmission if both boards attempt to transmit at the same time.  To prevent deadlock, where both boards get on the same timing cycle and continual clobber each other's transmission every 100 milliseconds, the delay between transmissions is randomized to the range of 100$\pm$20ms.  
+
+Also, all of the values transmitted are absolutes as opposed to deltas, which enables us to loose packets (which is inevitable due to noise) and then recover when we get the next one.  For example when an alien is shot we don't send a number indicating the number of aliens shot since the last packet, we send the total shot since the beginning of the game.  
+
+
+
+
 \chapter{Bug Reports and File Organization}
 
 \section{Bug Reports}
@@ -612,4 +743,12 @@ When we attempted to parse our wav file for the sample rate, it appeared that we
 \subsection{Initial Failure}
 When we first began implementing sound, our experiments were erratic. We attempted to perform all of our parsing, and playing simultaneously in the main() function. It turned into spaghetti code, and was very disorderly. After several hours of looking through the code, we could not determine why the sound from the AC97 was scratchy. We separated our code into multiple functions, and found it much easier to implement the sound. The bugs became more clear, and we were able to finish the lab code only a few hours later.
 
+\subsection{Acknowledging Problems}
+When we pushed a button, two '*' characters displayed. Thinking the problem lied with our debounce circuit or other hardware components, we spent 5 hours trying to find the bug in our hardware. Being stubborn, we refused to simulate our hardware to determine the issue, however the problem persisted. After a long while, we decided to do simulate. We found numerous timing issues, but the problem still continued. We finally took a look at our software to determine any issues in there. We played with it, rearranging the different signals to the board. The issue was resolved. We discovered that we had acknowledged the Xilinx interrupt controller before acknowledging our slave. This meant that before we had a chance to acknowledge our slave, a second interrupt was sent to our Space Invader's game, sending a second '*' character. Should have checked the software before the hardware.
+
+\subsection{Seven Segment Display Too Dim}
+At first, we attempted to display data on our seven segment display. We discovered that the display was too dim, and that it was not displaying the correct characters. We discovered that the digit select signal to our seven segment display was not correct. After several hours of debugging, we decided to start over. We implemented a simpler version of the seven segment display controller hardware, which corrected the issue.
+
+\subsection{Improper Connections}
+We forgot many of the fundamentals of VHDL syntax, which cause some issues. Some of the signals we assigned to "downto" and others we assigned to "to". After we discovered that the lowest significant OPB bit was actuals bit 31, we were able to fix the issue. We payed closer attention to this issue in the later parts of the lab. 
 \end{document}
