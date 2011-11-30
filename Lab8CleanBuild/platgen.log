@@ -460,6 +460,96 @@ D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 539 -
 Copying (BBD-specified) netlist files.
 
 Managing cache ...
+IPNAME:ppc405 INSTANCE:ppc405_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 146 -
+Copying cache implementation netlist
+IPNAME:ppc405 INSTANCE:ppc405_1 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 163 -
+Copying cache implementation netlist
+IPNAME:jtagppc_cntlr INSTANCE:jtagppc_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 169 -
+Copying cache implementation netlist
+IPNAME:proc_sys_reset INSTANCE:reset_block -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 176 -
+Copying cache implementation netlist
+IPNAME:plb_v34 INSTANCE:plb -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 192 -
+Copying cache implementation netlist
+IPNAME:opb_v20 INSTANCE:opb -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 202 -
+Copying cache implementation netlist
+IPNAME:plb2opb_bridge INSTANCE:plb2opb -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 210 -
+Copying cache implementation netlist
+IPNAME:opb_uartlite INSTANCE:rs232_uart_1 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 221 -
+Copying cache implementation netlist
+IPNAME:opb_sysace INSTANCE:sysace_compactflash -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 236 -
+Copying cache implementation netlist
+IPNAME:opb_gpio INSTANCE:leds_4bit -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 252 -
+Copying cache implementation netlist
+IPNAME:opb_gpio INSTANCE:dipsws_4bit -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 265 -
+Copying cache implementation netlist
+IPNAME:opb_gpio INSTANCE:pushbuttons_5bit -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 278 -
+Copying cache implementation netlist
+IPNAME:plb_ddr INSTANCE:ddr_256mb_32mx64_rank1_row13_col10_cl2_5 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 293 -
+Copying cache implementation netlist
+IPNAME:plb_bram_if_cntlr INSTANCE:plb_bram_if_cntlr_1 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 334 -
+Copying cache implementation netlist
+IPNAME:bram_block INSTANCE:plb_bram_if_cntlr_1_bram -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 344 -
+Copying cache implementation netlist
+IPNAME:opb_intc INSTANCE:opb_intc_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 350 -
+Copying cache implementation netlist
+IPNAME:util_vector_logic INSTANCE:sysclk_inv -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 360 -
+Copying cache implementation netlist
+IPNAME:util_vector_logic INSTANCE:clk90_inv -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 369 -
+Copying cache implementation netlist
+IPNAME:util_vector_logic INSTANCE:ddr_clk90_inv -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 378 -
+Copying cache implementation netlist
+IPNAME:dcm_module INSTANCE:dcm_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 387 -
+Copying cache implementation netlist
+IPNAME:dcm_module INSTANCE:dcm_1 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 404 -
+Copying cache implementation netlist
+IPNAME:plb_tft_cntlr_ref INSTANCE:vga_framebuffer -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 423 -
+Copying cache implementation netlist
+IPNAME:dcr_v29 INSTANCE:dcr_v29_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 442 -
+Copying cache implementation netlist
+IPNAME:opb2dcr_bridge INSTANCE:opb2dcr_bridge_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 448 -
+Copying cache implementation netlist
+IPNAME:opb_ac97 INSTANCE:audio_codec -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 457 -
+Copying cache implementation netlist
+IPNAME:lab3_slave INSTANCE:lab3_slave_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 472 -
+Copying cache implementation netlist
+IPNAME:audio_dma INSTANCE:audio_dma_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 513 -
+Copying cache implementation netlist
+IPNAME:opb2plb_bridge INSTANCE:opb2plb_bridge_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 521 -
+Copying cache implementation netlist
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 533 -
+Copying cache implementation netlist
+IPNAME:chipscope_opb_iba INSTANCE:chipscope_opb_iba_0 -
+D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 539 -
+Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:plb_bram_if_cntlr_1_bram -
@@ -469,10 +559,10 @@ elaborating IP
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 12.00 seconds
+Completion time: 13.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -484,113 +574,9 @@ Running XST synthesis ...
 INFO:MDT - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
-IPNAME:ppc405_0_wrapper INSTANCE:ppc405_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 146 -
-Running XST synthesis
-IPNAME:ppc405_1_wrapper INSTANCE:ppc405_1 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 163 -
-Running XST synthesis
-IPNAME:jtagppc_0_wrapper INSTANCE:jtagppc_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 169 -
-Running XST synthesis
-IPNAME:reset_block_wrapper INSTANCE:reset_block -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 176 -
-Running XST synthesis
-IPNAME:plb_wrapper INSTANCE:plb -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 192 -
-Running XST synthesis
-IPNAME:opb_wrapper INSTANCE:opb -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 202 -
-Running XST synthesis
-IPNAME:plb2opb_wrapper INSTANCE:plb2opb -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 210 -
-Running XST synthesis
-IPNAME:rs232_uart_1_wrapper INSTANCE:rs232_uart_1 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 221 -
-Running XST synthesis
-IPNAME:sysace_compactflash_wrapper INSTANCE:sysace_compactflash -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 236 -
-Running XST synthesis
-IPNAME:leds_4bit_wrapper INSTANCE:leds_4bit -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 252 -
-Running XST synthesis
-IPNAME:dipsws_4bit_wrapper INSTANCE:dipsws_4bit -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 265 -
-Running XST synthesis
-IPNAME:pushbuttons_5bit_wrapper INSTANCE:pushbuttons_5bit -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 278 -
-Running XST synthesis
-IPNAME:ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper
-INSTANCE:ddr_256mb_32mx64_rank1_row13_col10_cl2_5 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 293 -
-Running XST synthesis
-IPNAME:plb_bram_if_cntlr_1_wrapper INSTANCE:plb_bram_if_cntlr_1 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 334 -
-Running XST synthesis
-IPNAME:plb_bram_if_cntlr_1_bram_wrapper INSTANCE:plb_bram_if_cntlr_1_bram -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 344 -
-Running XST synthesis
-IPNAME:opb_intc_0_wrapper INSTANCE:opb_intc_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 350 -
-Running XST synthesis
-IPNAME:sysclk_inv_wrapper INSTANCE:sysclk_inv -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 360 -
-Running XST synthesis
-IPNAME:clk90_inv_wrapper INSTANCE:clk90_inv -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 369 -
-Running XST synthesis
-IPNAME:ddr_clk90_inv_wrapper INSTANCE:ddr_clk90_inv -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 378 -
-Running XST synthesis
-IPNAME:dcm_0_wrapper INSTANCE:dcm_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 387 -
-Running XST synthesis
-IPNAME:dcm_1_wrapper INSTANCE:dcm_1 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 404 -
-Running XST synthesis
-IPNAME:vga_framebuffer_wrapper INSTANCE:vga_framebuffer -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 423 -
-Running XST synthesis
-IPNAME:dcr_v29_0_wrapper INSTANCE:dcr_v29_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 442 -
-Running XST synthesis
-IPNAME:opb2dcr_bridge_0_wrapper INSTANCE:opb2dcr_bridge_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 448 -
-Running XST synthesis
-IPNAME:audio_codec_wrapper INSTANCE:audio_codec -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 457 -
-Running XST synthesis
-IPNAME:lab3_slave_0_wrapper INSTANCE:lab3_slave_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 472 -
-Running XST synthesis
-IPNAME:audio_dma_0_wrapper INSTANCE:audio_dma_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 513 -
-Running XST synthesis
-IPNAME:opb2plb_bridge_0_wrapper INSTANCE:opb2plb_bridge_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 521 -
-Running XST synthesis
-IPNAME:chipscope_icon_0_wrapper INSTANCE:chipscope_icon_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 533 -
-Running XST synthesis
-IPNAME:chipscope_opb_iba_0_wrapper INSTANCE:chipscope_opb_iba_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 539 -
-Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:ddr_256mb_32mx64_rank1_row13_col10_cl2_5_wrapper
-INSTANCE:ddr_256mb_32mx64_rank1_row13_col10_cl2_5 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 293 -
-Running NGCBUILD
-IPNAME:opb_intc_0_wrapper INSTANCE:opb_intc_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 350 -
-Running NGCBUILD
-IPNAME:chipscope_icon_0_wrapper INSTANCE:chipscope_icon_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 533 -
-Running NGCBUILD
-IPNAME:chipscope_opb_iba_0_wrapper INSTANCE:chipscope_opb_iba_0 -
-D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\system.mhs line 539 -
-Running NGCBUILD
 
 Rebuilding cache ...
 
-Total run time: 413.00 seconds
+Total run time: 77.00 seconds

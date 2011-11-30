@@ -1,7 +1,7 @@
 Release 9.1.02i par J.33
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 
-CB400-01::  Tue Nov 29 18:40:59 2011
+CB400-01::  Tue Nov 29 19:03:46 2011
 
 par -w -ol high system_map.ncd system.ncd system.pcf 
 
@@ -36,36 +36,36 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 11 secs 
-Finished initial Timing Analysis.  REAL time: 11 secs 
+Starting initial Timing Analysis.  REAL time: 15 secs 
+Finished initial Timing Analysis.  REAL time: 15 secs 
 
 
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:9a80ce) REAL time: 20 secs 
+Phase 1.1 (Checksum:9a80ce) REAL time: 23 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:1312cfe) REAL time: 20 secs 
+Phase 2.7 (Checksum:1312cfe) REAL time: 23 secs 
 
 Phase 3.31
 WARNING:Place:479 - Use of the left PPC405 has been detected. The left processor requires specialdesign considerations
    when operating above 350 MHz in the -7 speed grade part.Please see Xilinx Application Note XAPP755 for details.
-Phase 3.31 (Checksum:1c9c37d) REAL time: 20 secs 
+Phase 3.31 (Checksum:1c9c37d) REAL time: 23 secs 
 
 Phase 4.2
 ......
 .......................
-Phase 4.2 (Checksum:990a0f) REAL time: 24 secs 
+Phase 4.2 (Checksum:990a0f) REAL time: 28 secs 
 
 Phase 5.30
-Phase 5.30 (Checksum:2faf07b) REAL time: 24 secs 
+Phase 5.30 (Checksum:2faf07b) REAL time: 28 secs 
 
 Phase 6.3
-Phase 6.3 (Checksum:39386fa) REAL time: 24 secs 
+Phase 6.3 (Checksum:39386fa) REAL time: 28 secs 
 
 Phase 7.5
-Phase 7.5 (Checksum:42c1d79) REAL time: 24 secs 
+Phase 7.5 (Checksum:42c1d79) REAL time: 28 secs 
 
 Phase 8.8
 ...............................................................
@@ -74,62 +74,62 @@ Phase 8.8
 .........
 ........
 ...
-Phase 8.8 (Checksum:dda038) REAL time: 58 secs 
+Phase 8.8 (Checksum:dda038) REAL time: 1 mins 12 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:55d4a77) REAL time: 58 secs 
+Phase 9.5 (Checksum:55d4a77) REAL time: 1 mins 12 secs 
 
 Phase 10.18
-Phase 10.18 (Checksum:5f5e0f6) REAL time: 1 mins 18 secs 
+Phase 10.18 (Checksum:5f5e0f6) REAL time: 1 mins 38 secs 
 
 Phase 11.5
-Phase 11.5 (Checksum:68e7775) REAL time: 1 mins 18 secs 
+Phase 11.5 (Checksum:68e7775) REAL time: 1 mins 38 secs 
 
 Phase 12.27
-Phase 12.27 (Checksum:7270df4) REAL time: 1 mins 19 secs 
+Phase 12.27 (Checksum:7270df4) REAL time: 1 mins 39 secs 
 
 Phase 13.24
-Phase 13.24 (Checksum:7bfa473) REAL time: 1 mins 19 secs 
+Phase 13.24 (Checksum:7bfa473) REAL time: 1 mins 39 secs 
 
-REAL time consumed by placer: 1 mins 23 secs 
-CPU  time consumed by placer: 1 mins 21 secs 
+REAL time consumed by placer: 1 mins 43 secs 
+CPU  time consumed by placer: 1 mins 36 secs 
 Writing design to file system.ncd
 
 
-Total REAL time to Placer completion: 1 mins 24 secs 
-Total CPU time to Placer completion: 1 mins 23 secs 
+Total REAL time to Placer completion: 1 mins 44 secs 
+Total CPU time to Placer completion: 1 mins 37 secs 
 
 Starting Router
 
-Phase 1: 32926 unrouted;       REAL time: 1 mins 34 secs 
+Phase 1: 32926 unrouted;       REAL time: 1 mins 53 secs 
 
-Phase 2: 26747 unrouted;       REAL time: 1 mins 36 secs 
+Phase 2: 26747 unrouted;       REAL time: 1 mins 56 secs 
 
-Phase 3: 5641 unrouted;       REAL time: 1 mins 46 secs 
+Phase 3: 5641 unrouted;       REAL time: 2 mins 5 secs 
 
-Phase 4: 5641 unrouted; (22222)      REAL time: 1 mins 46 secs 
+Phase 4: 5641 unrouted; (22222)      REAL time: 2 mins 6 secs 
 
-Phase 5: 5637 unrouted; (7433)      REAL time: 1 mins 51 secs 
+Phase 5: 5637 unrouted; (7433)      REAL time: 2 mins 10 secs 
 
-Phase 6: 5639 unrouted; (47)      REAL time: 1 mins 52 secs 
+Phase 6: 5639 unrouted; (47)      REAL time: 2 mins 11 secs 
 
-Phase 7: 5639 unrouted; (47)      REAL time: 1 mins 59 secs 
+Phase 7: 5639 unrouted; (47)      REAL time: 2 mins 18 secs 
 
-Phase 8: 0 unrouted; (47)      REAL time: 2 mins 8 secs 
+Phase 8: 0 unrouted; (47)      REAL time: 2 mins 29 secs 
 
-Phase 9: 0 unrouted; (47)      REAL time: 2 mins 14 secs 
+Phase 9: 0 unrouted; (47)      REAL time: 2 mins 35 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase 10: 0 unrouted; (47)      REAL time: 2 mins 26 secs 
+Phase 10: 0 unrouted; (47)      REAL time: 2 mins 47 secs 
 
-Phase 11: 0 unrouted; (47)      REAL time: 2 mins 28 secs 
+Phase 11: 0 unrouted; (47)      REAL time: 2 mins 49 secs 
 
-Phase 12: 0 unrouted; (47)      REAL time: 2 mins 45 secs 
+Phase 12: 0 unrouted; (47)      REAL time: 3 mins 6 secs 
 
-Phase 13: 0 unrouted; (47)      REAL time: 2 mins 46 secs 
+Phase 13: 0 unrouted; (47)      REAL time: 3 mins 8 secs 
 
-Phase 14: 0 unrouted; (0)      REAL time: 2 mins 49 secs 
+Phase 14: 0 unrouted; (0)      REAL time: 3 mins 11 secs 
 
 WARNING:Route:455 - CLK Net:sys_clk_pin_IBUFG may have excessive skew because 
       3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
@@ -138,8 +138,8 @@ WARNING:Route:455 - CLK Net:fpga_0_DDR_CLK_FB_IBUFG may have excessive skew beca
 WARNING:Route:455 - CLK Net:opb_M_select<0> may have excessive skew because 
       0 CLK pins and 50 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 2 mins 49 secs 
-Total CPU time to Router completion: 2 mins 47 secs 
+Total REAL time to Router completion: 3 mins 11 secs 
+Total CPU time to Router completion: 3 mins 3 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -265,8 +265,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 2 mins 54 secs 
-Total CPU time to PAR completion: 2 mins 51 secs 
+Total REAL time to PAR completion: 3 mins 15 secs 
+Total CPU time to PAR completion: 3 mins 7 secs 
 
 Peak Memory Usage:  387 MB
 
