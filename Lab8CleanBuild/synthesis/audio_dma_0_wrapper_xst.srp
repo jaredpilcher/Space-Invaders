@@ -51,12 +51,14 @@ Cores Search Directories           : {../implementation}
 =========================================================================
 Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" in Library audio_dma.
 Entity <audio_dma> compiled.
-WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 205. Choice C_BASEADDR is not a locally static expression.
-WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 207. Choice + is not a locally static expression.
-WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 209. Choice + is not a locally static expression.
-WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 217. Choice C_BASEADDR is not a locally static expression.
-WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 219. Choice + is not a locally static expression.
-WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 222. Choice + is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 231. Choice C_BASEADDR is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 233. Choice + is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 235. Choice + is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 237. Choice + is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 245. Choice C_BASEADDR is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 250. Choice + is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 253. Choice + is not a locally static expression.
+WARNING:HDLParsers:817 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" Line 256. Choice + is not a locally static expression.
 Entity <audio_dma> (Architecture <dma>) compiled.
 Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/audio_dma_0_wrapper.vhd" in Library work.
 Entity <audio_dma_0_wrapper> compiled.
@@ -102,13 +104,13 @@ Analyzing generic Entity <audio_dma> in library <audio_dma> (Architecture <dma>)
 	C_OPB_DWIDTH = 32
 WARNING:Xst:37 - Unknown property "SIGIS".
 WARNING:Xst:37 - Unknown property "SIGIS".
-WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" line 168: The following signals are missing in the process sensitivity list:
-   cur_index, master_address_reg, master_data_reg, master_rnw_reg, our_value, enable_reg, master_idle_out, control_reg, channel_addr_out, channel_length_out.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" line 171: The following signals are missing in the process sensitivity list:
+   cur_index, master_address_reg, master_data_reg, master_rnw_reg, destination, our_value, control_reg, interrupt, enable_reg, channel_length_out, channel_addr_out, master_data_out.
 Entity <audio_dma> analyzed. Unit <audio_dma> generated.
 
 Analyzing Entity <opb_master> in library <opb_master> (Architecture <opbm>).
-WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd" line 48: The following signals are missing in the process sensitivity list:
-   address, data, OPB_DBus.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd" line 50: The following signals are missing in the process sensitivity list:
+   data_out_reg, address, OPB_DBus, data.
 Entity <opb_master> analyzed. Unit <opb_master> generated.
 
 Analyzing Entity <channel_bank> in library <channel_bank> (Architecture <chanBank>).
@@ -125,29 +127,30 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <opb_master>.
     Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd".
-INFO:Xst:1799 - State address_select is never reached in FSM <current_state>.
-INFO:Xst:1799 - State request is never reached in FSM <current_state>.
-INFO:Xst:1799 - State acknowledged is never reached in FSM <current_state>.
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
-    | States             | 1                                              |
-    | Transitions        | 1                                              |
-    | Inputs             | 2                                              |
-    | Outputs            | 1                                              |
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | idle                                           |
     | Encoding           | automatic                                      |
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
-WARNING:Xst:737 - Found 32-bit latch for signal <data_out_reg_next>.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
 WARNING:Xst:737 - Found 1-bit latch for signal <master_request>.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit 4-to-1 multiplexer for signal <counter_next>.
+    Found 32-bit adder for signal <counter_next$share0000> created at line 59.
     Found 32-bit register for signal <data_out_reg>.
     Found 32-bit 4-to-1 multiplexer for signal <master_data>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred  32 D-type flip-flop(s).
-	inferred  32 Multiplexer(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  64 Multiplexer(s).
 Unit <opb_master> synthesized.
 
 
@@ -190,26 +193,38 @@ WARNING:Xst:647 - Input <OPB_retry> is never used.
 WARNING:Xst:647 - Input <OPB_seqAddr> is never used.
 WARNING:Xst:646 - Signal <our_value> is assigned but never used.
 WARNING:Xst:1780 - Signal <channel_select> is never used or assigned.
-WARNING:Xst:646 - Signal <master_data_out> is assigned but never used.
-WARNING:Xst:646 - Signal <cur_index> is assigned but never used.
-WARNING:Xst:737 - Found 32-bit latch for signal <control_reg_next>.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | OPB_Clk (rising_edge)                          |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
 WARNING:Xst:737 - Found 32-bit latch for signal <channel_data>.
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 181 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-    Using one-hot encoding for signal <current_state>.
-    Found 32-bit comparator greatequal for signal <channel_length_we$cmp_ge0000> created at line 202.
-    Found 32-bit comparator lessequal for signal <channel_length_we$cmp_le0000> created at line 202.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
     Found 32-bit register for signal <control_reg>.
-    Found 32-bit 4-to-1 multiplexer for signal <control_reg_next$mux0003>.
-    Found 2-bit register for signal <current_state>.
+    Found 32-bit register for signal <cur_index>.
+    Found 32-bit comparator greatequal for signal <cur_index$cmp_ge0000> created at line 228.
+    Found 32-bit comparator lessequal for signal <cur_index$cmp_le0000> created at line 228.
+    Found 3-bit comparator not equal for signal <cur_index$cmp_ne0000> created at line 247.
+    Found 32-bit comparator not equal for signal <current_state$cmp_ne0000> created at line 189.
+    Found 32-bit register for signal <destination>.
     Found 32-bit register for signal <master_address_reg>.
+    Found 32-bit adder for signal <master_address_reg$addsub0000> created at line 198.
     Found 32-bit register for signal <master_data_reg>.
     Found 1-bit register for signal <master_rnw_reg>.
+    Found 32-bit adder for signal <next_index$add0000> created at line 221.
+    Found 32-bit 4-to-1 multiplexer for signal <next_index$mux0000> created at line 186.
     Summary:
-	inferred  99 D-type flip-flop(s).
-	inferred   2 Comparator(s).
+	inferred   1 Finite State Machine(s).
+	inferred 161 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
 	inferred  32 Multiplexer(s).
 Unit <audio_dma> synthesized.
 
@@ -218,23 +233,27 @@ Synthesizing Unit <audio_dma_0_wrapper>.
     Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/audio_dma_0_wrapper.vhd".
 Unit <audio_dma_0_wrapper> synthesized.
 
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 22
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 3
+# Registers                                            : 24
  1-bit register                                        : 1
- 2-bit register                                        : 1
- 32-bit register                                       : 20
-# Latches                                              : 4
+ 32-bit register                                       : 23
+# Latches                                              : 2
  1-bit latch                                           : 1
- 32-bit latch                                          : 3
-# Comparators                                          : 2
+ 32-bit latch                                          : 1
+# Comparators                                          : 4
+ 3-bit comparator not equal                            : 1
  32-bit comparator greatequal                          : 1
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 6
- 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit comparator not equal                           : 1
+# Multiplexers                                         : 7
+ 32-bit 4-to-1 multiplexer                             : 3
  32-bit 8-to-1 multiplexer                             : 4
 
 =========================================================================
@@ -243,25 +262,48 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:2404 -  FFs/Latches <master_data_reg<0:-1>> (without init value) have a constant value of 0 in block <audio_dma>.
-WARNING:Xst:2404 -  FFs/Latches <master_address_reg<0:-1>> (without init value) have a constant value of 0 in block <audio_dma>.
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <audio_dma_0/current_state> on signal <current_state[1:2]> with gray encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ idle          | 00
+ read_audio    | 01
+ write_audio   | 10
+ write_silence | 11
+---------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <audio_dma_0/master/current_state> on signal <current_state[1:3]> with sequential encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ idle           | 000
+ retry          | 010
+ request        | 001
+ address_select | 011
+ acknowledged   | 100
+----------------------------
 Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 1
-# Registers                                            : 577
- Flip-Flops                                            : 577
-# Latches                                              : 4
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 3
+# Registers                                            : 742
+ Flip-Flops                                            : 742
+# Latches                                              : 2
  1-bit latch                                           : 1
- 32-bit latch                                          : 3
-# Comparators                                          : 2
+ 32-bit latch                                          : 1
+# Comparators                                          : 4
+ 3-bit comparator not equal                            : 1
  32-bit comparator greatequal                          : 1
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 6
- 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit comparator not equal                           : 1
+# Multiplexers                                         : 7
+ 32-bit 4-to-1 multiplexer                             : 3
  32-bit 8-to-1 multiplexer                             : 4
 
 =========================================================================
@@ -269,74 +311,12 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch  <master_rnw_reg> has a constant value of 0 in block <audio_dma>.
-WARNING:Xst:1710 - FF/Latch  <0> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <1> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <2> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <3> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <4> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <5> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <6> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <7> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <8> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <9> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <10> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <11> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <12> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <13> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <14> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <15> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <16> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <17> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <18> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <19> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <20> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <21> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <22> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <23> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <24> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <25> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <26> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <27> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <28> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <29> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <30> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <31> (without init value) has a constant value of 0 in block <LPM_LATCH_1>.
-WARNING:Xst:1710 - FF/Latch  <master_request> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1710 - FF/Latch  <data_out_reg_0> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_1> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_2> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_3> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_4> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_5> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_6> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_7> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_8> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_9> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_10> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_11> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_12> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_13> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_14> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_15> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_16> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_17> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_18> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_19> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_20> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_21> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_22> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_23> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_24> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_25> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_26> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_27> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_28> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_29> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_30> (without init value) has a constant value of 0 in block <opb_master>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_out_reg_31> (without init value) has a constant value of 0 in block <opb_master>.
+WARNING:Xst:1710 - FF/Latch  <cur_index_31> (without init value) has a constant value of 0 in block <audio_dma>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <cur_index_30> (without init value) has a constant value of 0 in block <audio_dma>.
 
 Optimizing unit <audio_dma_0_wrapper> ...
+
+Optimizing unit <opb_master> ...
 
 Optimizing unit <channel_bank> ...
 
@@ -344,7 +324,6 @@ Optimizing unit <audio_dma> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-FlipFlop audio_dma_0/control_reg_29 has been replicated 2 time(s)
 FlipFlop audio_dma_0/control_reg_30 has been replicated 2 time(s)
 FlipFlop audio_dma_0/control_reg_31 has been replicated 2 time(s)
 
@@ -354,8 +333,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 550
- Flip-Flops                                            : 550
+# Registers                                            : 744
+ Flip-Flops                                            : 744
 
 =========================================================================
 
@@ -383,21 +362,29 @@ Design Statistics
 # IOs                              : 185
 
 Cell Usage :
-# BELS                             : 734
+# BELS                             : 1306
 #      GND                         : 1
-#      INV                         : 3
-#      LUT2                        : 5
-#      LUT3                        : 389
-#      LUT4                        : 122
-#      LUT4_D                      : 2
-#      MUXCY                       : 16
-#      MUXF5                       : 131
+#      INV                         : 6
+#      LUT1                        : 62
+#      LUT2                        : 36
+#      LUT3                        : 425
+#      LUT3_D                      : 1
+#      LUT4                        : 323
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      MUXCY                       : 131
+#      MUXF5                       : 163
 #      MUXF6                       : 64
 #      VCC                         : 1
-# FlipFlops/Latches                : 614
-#      FD                          : 102
-#      FDE                         : 448
-#      LDE                         : 64
+#      XORCY                       : 91
+# FlipFlops/Latches                : 777
+#      FD                          : 131
+#      FDE                         : 548
+#      FDR                         : 1
+#      FDRE                        : 30
+#      FDS                         : 34
+#      LD                          : 1
+#      LDE                         : 32
 =========================================================================
 
 Device utilization summary:
@@ -405,9 +392,9 @@ Device utilization summary:
 
 Selected Device : 2vp30ff896-7 
 
- Number of Slices:                     498  out of  13696     3%  
- Number of Slice Flip Flops:           614  out of  27392     2%  
- Number of 4 input LUTs:               521  out of  27392     1%  
+ Number of Slices:                     715  out of  13696     5%  
+ Number of Slice Flip Flops:           777  out of  27392     2%  
+ Number of 4 input LUTs:               855  out of  27392     3%  
  Number of IOs:                        185
  Number of bonded IOBs:                  0  out of    556     0%  
 
@@ -429,12 +416,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-----------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                         | Load  |
------------------------------------+-----------------------------------------------+-------+
-OPB_Clk                            | NONE(audio_dma_0/channels/cur_chan_length4_14)| 550   |
-OPB_select                         | NONE(audio_dma_0/control_reg_next_0)          | 64    |
------------------------------------+-----------------------------------------------+-------+
+-------------------------------------+-----------------------------------------------+-------+
+Clock Signal                         | Clock buffer(FF name)                         | Load  |
+-------------------------------------+-----------------------------------------------+-------+
+OPB_Clk                              | NONE(audio_dma_0/channels/cur_chan_length3_17)| 744   |
+audio_dma_0/master/current_state_FFd3| NONE(audio_dma_0/master/master_request)       | 1     |
+OPB_select                           | NONE(audio_dma_0/channel_data_22)             | 32    |
+-------------------------------------+-----------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -445,10 +433,10 @@ Timing Summary:
 ---------------
 Speed Grade: -7
 
-   Minimum period: 2.292ns (Maximum Frequency: 436.286MHz)
-   Minimum input arrival time before clock: 5.705ns
-   Maximum output required time after clock: 4.151ns
-   Maximum combinational path delay: 3.905ns
+   Minimum period: 5.723ns (Maximum Frequency: 174.743MHz)
+   Minimum input arrival time before clock: 5.441ns
+   Maximum output required time after clock: 3.350ns
+   Maximum combinational path delay: 4.139ns
 
 Timing Detail:
 --------------
@@ -456,31 +444,66 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'OPB_Clk'
-  Clock period: 2.292ns (frequency: 436.286MHz)
-  Total number of paths / destination ports: 1600 / 512
+  Clock period: 5.723ns (frequency: 174.743MHz)
+  Total number of paths / destination ports: 19498 / 771
 -------------------------------------------------------------------------
-Delay:               2.292ns (Levels of Logic = 2)
+Delay:               5.723ns (Levels of Logic = 37)
   Source:            audio_dma_0/control_reg_31_1 (FF)
-  Destination:       audio_dma_0/channels/cur_chan_length7_31 (FF)
+  Destination:       audio_dma_0/master_address_reg_0 (FF)
   Source Clock:      OPB_Clk rising
   Destination Clock: OPB_Clk rising
 
-  Data Path: audio_dma_0/control_reg_31_1 to audio_dma_0/channels/cur_chan_length7_31
+  Data Path: audio_dma_0/control_reg_31_1 to audio_dma_0/master_address_reg_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.370   0.476  audio_dma_0/control_reg_31_1 (audio_dma_0/control_reg_31_1)
-     LUT4_D:I1->O         31   0.275   0.688  audio_dma_0/channels/Mmux_cur_chan_length7_mux00001101 (audio_dma_0/channels/N01)
-     LUT3:I2->O            1   0.275   0.000  audio_dma_0/channels/Mmux_cur_chan_length7_mux000081 (audio_dma_0/channels/cur_chan_length7_mux0000<16>)
-     FD:D                      0.208          audio_dma_0/channels/cur_chan_length7_16
+     FDE:C->Q             32   0.370   0.689  audio_dma_0/control_reg_31_1 (audio_dma_0/control_reg_31_1)
+     LUT3:I2->O            1   0.275   0.000  audio_dma_0/channels/Mmux_addr_out_624 (audio_dma_0/channels/N1011)
+     MUXF5:I0->O           1   0.303   0.000  audio_dma_0/channels/Mmux_addr_out_4_f5_23 (audio_dma_0/channels/Mmux_addr_out_4_f524)
+     MUXF6:I0->O           3   0.288   0.533  audio_dma_0/channels/Mmux_addr_out_2_f6_23 (audio_dma_0/channel_addr_out<31>)
+     LUT1:I0->O            1   0.275   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<0>_rt (audio_dma_0/Madd_master_address_reg_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.334   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<0> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<1> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<2> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<3> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<4> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<5> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<6> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<7> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<8> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<9> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<10> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<11> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<12> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<13> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<14> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<15> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<16> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<17> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<18> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<19> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<20> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<21> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<22> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<23> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<24> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<25> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<26> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<27> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<28> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<29> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.036   0.000  audio_dma_0/Madd_master_address_reg_addsub0000_cy<30> (audio_dma_0/Madd_master_address_reg_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.708   0.369  audio_dma_0/Madd_master_address_reg_addsub0000_xor<31> (audio_dma_0/master_address_reg_addsub0000<31>)
+     LUT4:I3->O            1   0.275   0.000  audio_dma_0/master_address_reg_mux0000<31>101 (N1845)
+     FDS:D                     0.208          audio_dma_0/master_address_reg_0
     ----------------------------------------
-    Total                      2.292ns (1.128ns logic, 1.164ns route)
-                                       (49.2% logic, 50.8% route)
+    Total                      5.723ns (4.131ns logic, 1.592ns route)
+                                       (72.2% logic, 27.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'OPB_select'
   Clock period: 1.742ns (frequency: 573.937MHz)
-  Total number of paths / destination ports: 64 / 64
+  Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
 Delay:               1.742ns (Levels of Logic = 1)
   Source:            audio_dma_0/channel_data_31 (LATCH)
@@ -501,81 +524,98 @@ Delay:               1.742ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_Clk'
-  Total number of paths / destination ports: 30720 / 512
+  Total number of paths / destination ports: 38691 / 837
 -------------------------------------------------------------------------
-Offset:              5.705ns (Levels of Logic = 7)
+Offset:              5.441ns (Levels of Logic = 7)
   Source:            OPB_ABus<5> (PAD)
-  Destination:       audio_dma_0/channels/cur_chan_addr7_31 (FF)
+  Destination:       audio_dma_0/cur_index_0 (FF)
   Destination Clock: OPB_Clk rising
 
-  Data Path: OPB_ABus<5> to audio_dma_0/channels/cur_chan_addr7_31
+  Data Path: OPB_ABus<5> to audio_dma_0/cur_index_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT4:I0->O            3   0.275   0.533  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_lut<6> (audio_dma_0/N6)
-     LUT4:I0->O            1   0.275   0.000  audio_dma_0/channel_length_we_cmp_eq00001_wg_lut<6> (N8)
-     MUXCY:S->O           37   0.713   0.814  audio_dma_0/channel_length_we_cmp_eq00001_wg_cy<6> (audio_dma_0/N36)
-     LUT4:I0->O            1   0.275   0.349  audio_dma_0/channel_addr_we_SW1 (N357)
-     LUT4:I2->O            8   0.275   0.614  audio_dma_0/channel_addr_we (audio_dma_0/channel_addr_we)
-     LUT4_D:I0->O         31   0.275   0.688  audio_dma_0/channels/Mmux_cur_chan_addr7_mux00001101 (audio_dma_0/channels/N11)
-     LUT3:I2->O            1   0.275   0.000  audio_dma_0/channels/Mmux_cur_chan_addr7_mux000081 (audio_dma_0/channels/cur_chan_addr7_mux0000<16>)
-     FD:D                      0.208          audio_dma_0/channels/cur_chan_addr7_16
+     LUT4:I0->O            3   0.275   0.415  audio_dma_0/Mcompar_cur_index_cmp_le0000_lut<6> (audio_dma_0/N9)
+     LUT4:I2->O            1   0.275   0.000  audio_dma_0/channel_addr_we_cmp_eq00001_wg_lut<6> (N16)
+     MUXCY:S->O            8   0.713   0.614  audio_dma_0/channel_addr_we_cmp_eq00001_wg_cy<6> (audio_dma_0/N391)
+     LUT3:I0->O            3   0.275   0.533  audio_dma_0/cur_index_cmp_eq00001 (audio_dma_0/cur_index_cmp_eq0000)
+     LUT4:I0->O            1   0.275   0.369  audio_dma_0/cur_index_mux0000<10>2_SW0 (N1304)
+     LUT4_D:I3->O         29   0.275   0.803  audio_dma_0/cur_index_mux0000<10>2 (audio_dma_0/N01)
+     LUT3:I0->O            1   0.275   0.000  audio_dma_0/cur_index_mux0000<4>1 (audio_dma_0/cur_index_mux0000<4>)
+     FDRE:D                    0.208          audio_dma_0/cur_index_27
     ----------------------------------------
-    Total                      5.705ns (2.707ns logic, 2.998ns route)
-                                       (47.4% logic, 52.6% route)
+    Total                      5.441ns (2.707ns logic, 2.734ns route)
+                                       (49.8% logic, 50.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_select'
-  Total number of paths / destination ports: 4896 / 128
+  Total number of paths / destination ports: 2976 / 64
 -------------------------------------------------------------------------
-Offset:              4.194ns (Levels of Logic = 5)
+Offset:              3.857ns (Levels of Logic = 5)
   Source:            OPB_ABus<5> (PAD)
-  Destination:       audio_dma_0/control_reg_next_31 (LATCH)
+  Destination:       audio_dma_0/channel_data_31 (LATCH)
   Destination Clock: OPB_select falling
 
-  Data Path: OPB_ABus<5> to audio_dma_0/control_reg_next_31
+  Data Path: OPB_ABus<5> to audio_dma_0/channel_data_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT4:I0->O            3   0.275   0.533  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_lut<6> (audio_dma_0/N6)
-     LUT4:I0->O            1   0.275   0.000  audio_dma_0/channel_length_we_cmp_eq00001_wg_lut<6> (N8)
-     MUXCY:S->O           37   0.713   0.696  audio_dma_0/channel_length_we_cmp_eq00001_wg_cy<6> (audio_dma_0/N36)
-     LUT4:I2->O           32   0.275   0.807  audio_dma_0/Mmux_control_reg_next_mux00031101 (audio_dma_0/N11)
-     LUT3:I0->O            1   0.275   0.000  audio_dma_0/Mmux_control_reg_next_mux000391 (audio_dma_0/control_reg_next_mux0003<17>)
-     LDE:D                     0.208          audio_dma_0/control_reg_next_14
+     LUT4:I0->O            3   0.275   0.415  audio_dma_0/Mcompar_cur_index_cmp_le0000_lut<6> (audio_dma_0/N9)
+     LUT4:I2->O            1   0.275   0.000  audio_dma_0/channel_addr_we_cmp_eq00001_wg_lut<6> (N16)
+     MUXCY:S->O            8   0.713   0.516  audio_dma_0/channel_addr_we_cmp_eq00001_wg_cy<6> (audio_dma_0/N391)
+     LUT4:I3->O           32   0.275   0.769  audio_dma_0/channel_data_mux0003<0>21 (audio_dma_0/N381)
+     LUT4:I1->O            1   0.275   0.000  audio_dma_0/channel_data_mux0003<9>1 (audio_dma_0/channel_data_mux0003<9>)
+     LDE:D                     0.208          audio_dma_0/channel_data_22
     ----------------------------------------
-    Total                      4.194ns (2.157ns logic, 2.037ns route)
-                                       (51.4% logic, 48.6% route)
+    Total                      3.857ns (2.157ns logic, 1.700ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'audio_dma_0/master/current_state_FFd3'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.536ns (Levels of Logic = 0)
+  Source:            audio_dma_0/master/master_request (LATCH)
+  Destination:       M_request (PAD)
+  Source Clock:      audio_dma_0/master/current_state_FFd3 falling
+
+  Data Path: audio_dma_0/master/master_request to M_request
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               0   0.536   0.000  audio_dma_0/master/master_request (M_request)
+    ----------------------------------------
+    Total                      0.536ns (0.536ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'OPB_Clk'
-  Total number of paths / destination ports: 992 / 32
+  Total number of paths / destination ports: 1251 / 98
 -------------------------------------------------------------------------
-Offset:              4.151ns (Levels of Logic = 6)
+Offset:              3.350ns (Levels of Logic = 5)
   Source:            audio_dma_0/control_reg_31 (FF)
-  Destination:       Sl_DBus<29> (PAD)
+  Destination:       Sl_DBus<0> (PAD)
   Source Clock:      OPB_Clk rising
 
-  Data Path: audio_dma_0/control_reg_31 to Sl_DBus<29>
+  Data Path: audio_dma_0/control_reg_31 to Sl_DBus<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q             257   0.370   1.127  audio_dma_0/control_reg_31 (audio_dma_0/control_reg_31)
-     LUT3:I0->O            1   0.275   0.000  audio_dma_0/channels/Mmux_addr_out_421 (audio_dma_0/channels/N861)
-     MUXF5:I1->O           1   0.303   0.000  audio_dma_0/channels/Mmux_addr_out_3_f5_20 (audio_dma_0/channels/Mmux_addr_out_3_f521)
-     MUXF6:I1->O           1   0.288   0.467  audio_dma_0/channels/Mmux_addr_out_2_f6_20 (audio_dma_0/channel_addr_out<29>)
-     LUT2:I0->O            1   0.275   0.000  audio_dma_0/data_out<29>31_SW01 (N398)
-     MUXF5:I1->O           1   0.303   0.468  audio_dma_0/data_out<29>31_SW0_f5 (N363)
-     LUT3:I0->O            0   0.275   0.000  audio_dma_0/data_out<29>31 (Sl_DBus<29>)
+     FDE:C->Q            210   0.370   1.060  audio_dma_0/control_reg_31 (audio_dma_0/control_reg_31)
+     LUT3:I0->O            1   0.275   0.000  audio_dma_0/channels/Mmux_length_out_4 (audio_dma_0/channels/N2)
+     MUXF5:I1->O           1   0.303   0.000  audio_dma_0/channels/Mmux_length_out_3_f5 (audio_dma_0/channels/Mmux_length_out_3_f5)
+     MUXF6:I1->O           2   0.288   0.476  audio_dma_0/channels/Mmux_length_out_2_f6 (audio_dma_0/channel_length_out<0>)
+     LUT4:I1->O            1   0.275   0.000  audio_dma_0/data_out<0>42_F (N2009)
+     MUXF5:I0->O           0   0.303   0.000  audio_dma_0/data_out<0>42 (Sl_DBus<0>)
     ----------------------------------------
-    Total                      4.151ns (2.089ns logic, 2.062ns route)
-                                       (50.3% logic, 49.7% route)
+    Total                      3.350ns (1.814ns logic, 1.536ns route)
+                                       (54.1% logic, 45.9% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2791 / 33
+  Total number of paths / destination ports: 3835 / 33
 -------------------------------------------------------------------------
-Delay:               3.905ns (Levels of Logic = 13)
+Delay:               4.139ns (Levels of Logic = 14)
   Source:            OPB_ABus<15> (PAD)
   Destination:       Sl_DBus<0> (PAD)
 
@@ -583,31 +623,32 @@ Delay:               3.905ns (Levels of Logic = 13)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT4:I0->O            1   0.275   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_lut<0> (audio_dma_0/N2)
-     MUXCY:S->O            1   0.334   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<0> (audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<0>)
-     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<1> (audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<1>)
-     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<2> (audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<2>)
-     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<3> (audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<3>)
-     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<4> (audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<4>)
-     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<5> (audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<5>)
-     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<6> (audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<6>)
-     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<7> (audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<7>)
-     MUXCY:CI->O           5   0.415   0.466  audio_dma_0/Mcompar_channel_length_we_cmp_le0000_cy<8> (audio_dma_0/channel_length_we_cmp_le0000)
-     LUT4:I3->O           61   0.275   0.848  audio_dma_0/data_out<0>21 (audio_dma_0/N35)
-     LUT3:I0->O            1   0.275   0.350  audio_dma_0/data_out<9>_SW1 (N20)
-     LUT4:I2->O            0   0.275   0.000  audio_dma_0/data_out<9> (Sl_DBus<9>)
+     LUT4:I0->O            1   0.275   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_lut<0> (audio_dma_0/N5)
+     MUXCY:S->O            1   0.334   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<0> (audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<1> (audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<2> (audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<3> (audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<4> (audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<5> (audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<6> (audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.036   0.000  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<7> (audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<7>)
+     MUXCY:CI->O           4   0.415   0.431  audio_dma_0/Mcompar_cur_index_cmp_le0000_cy<8> (audio_dma_0/cur_index_cmp_le0000)
+     LUT3:I2->O            1   0.275   0.429  audio_dma_0/cur_index_and0000211 (Sl_xferAck)
+     LUT3:I1->O           64   0.275   0.735  audio_dma_0/data_out<9>40 (audio_dma_0/data_out<0>_map12)
+     LUT4:I2->O            1   0.275   0.000  audio_dma_0/data_out<9>42_F (N1947)
+     MUXF5:I0->O           0   0.303   0.000  audio_dma_0/data_out<9>42 (Sl_DBus<9>)
     ----------------------------------------
-    Total                      3.905ns (2.241ns logic, 1.664ns route)
-                                       (57.4% logic, 42.6% route)
+    Total                      4.139ns (2.544ns logic, 1.595ns route)
+                                       (61.5% logic, 38.5% route)
 
 =========================================================================
-CPU : 11.74 / 11.81 s | Elapsed : 12.00 / 12.00 s
+CPU : 15.75 / 15.83 s | Elapsed : 16.00 / 16.00 s
  
 --> 
 
-Total memory usage is 205356 kilobytes
+Total memory usage is 208940 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   96 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

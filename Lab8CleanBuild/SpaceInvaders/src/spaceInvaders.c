@@ -63,23 +63,22 @@ int main() {
 	// sounds[SpaceShip].priority = 8;
 	// sounds[SpaceShipHit] = createSound("a:\\SLow.wav");
 	// sounds[SpaceShipHit].priority = 9;
-
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 8);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 4 + 8);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, 0xBEEFADED);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 3 + 8);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, 0xADEFACED);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 4 + 8);
-	int a = XIo_In32(XPAR_AUDIO_DMA_0_BASEADDR + 4);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR,3 + 8);
-	int b = XIo_In32(XPAR_AUDIO_DMA_0_BASEADDR + 4);
-	usleep(100000);
-	xil_printf("%x should == %x\n\r", 0xBEEFADED, a);
-	xil_printf("%x should == %x\n\r", 0xADEFACED, b);
-
-
-
-
-
-
+	char hello[] = "Hello World\n\r";
+	int world[11];
+	int i;
+	for(i = 0; i < 11; i++){
+		world[i] = hello[i];
+	}
+	xil_printf("Hello\n\r");
+	usleep(10000);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 12, XPAR_RS232_UART_1_BASEADDR + 4);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, world);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, 11);
+	usleep(10000);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 24);
+	usleep(1000);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
+	xil_printf("Done!\n\r");
+	
 }

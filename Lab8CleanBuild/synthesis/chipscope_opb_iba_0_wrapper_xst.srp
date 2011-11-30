@@ -376,7 +376,7 @@ WARNING:Xst:616 - Invalid property "C_TRIGGER_UNIT_MATCH_TYPE extended with edge
 WARNING:Xst:616 - Invalid property "C_WRDATA_UNIT_COUNTER_WIDTH 0": Did not attach to chipscope_opb_iba_0.
 WARNING:Xst:616 - Invalid property "C_WRDATA_UNIT_MATCH_TYPE basic": Did not attach to chipscope_opb_iba_0.
 WARNING:Xst:616 - Invalid property "C_WRDATA_UNITS 0": Did not attach to chipscope_opb_iba_0.
-CPU : 6.36 / 6.44 s | Elapsed : 7.00 / 7.00 s
+CPU : 6.14 / 6.22 s | Elapsed : 7.00 / 7.00 s
  
 --> 
 

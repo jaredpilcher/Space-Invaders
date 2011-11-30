@@ -8,7 +8,7 @@ Target Device  : xc2vp30
 Target Package : ff896
 Target Speed   : -7
 Mapper Version : virtex2p -- $Revision: 1.36 $
-Mapped Date    : Tue Nov 29 19:03:13 2011
+Mapped Date    : Wed Nov 30 15:24:26 2011
 
 Mapping design into LUTs...
 Writing file system_map.ngm...
@@ -22,20 +22,20 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:   31
+Number of warnings:   32
 Logic Utilization:
-  Total Number Slice Registers:     4,690 out of  27,392   17%
-    Number used as Flip Flops:                 4,626
-    Number used as Latches:                       64
-  Number of 4 input LUTs:           3,665 out of  27,392   13%
+  Total Number Slice Registers:     4,854 out of  27,392   17%
+    Number used as Flip Flops:                 4,821
+    Number used as Latches:                       33
+  Number of 4 input LUTs:           3,939 out of  27,392   14%
 Logic Distribution:
-  Number of occupied Slices:        4,220 out of  13,696   30%
-  Number of Slices containing only related logic:   4,220 out of   4,220  100%
-  Number of Slices containing unrelated logic:          0 out of   4,220    0%
+  Number of occupied Slices:        4,425 out of  13,696   32%
+  Number of Slices containing only related logic:   4,425 out of   4,425  100%
+  Number of Slices containing unrelated logic:          0 out of   4,425    0%
         *See NOTES below for an explanation of the effects of unrelated logic
-Total Number of 4 input LUTs:          4,672 out of  27,392   17%
-  Number used as logic:             3,665
-  Number used as a route-thru:        307
+Total Number of 4 input LUTs:          5,003 out of  27,392   18%
+  Number used as logic:             3,939
+  Number used as a route-thru:        364
   Number used for Dual Port RAMs:     346
     (Two LUTs used per Dual Port RAM)
   Number used as Shift registers:     354
@@ -53,11 +53,11 @@ Total Number of 4 input LUTs:          4,672 out of  27,392   17%
   Number of GT10s:                      0 out of       0    0%
 
    Number of RPM macros:           14
-Total equivalent gate count for design:  4,743,843
+Total equivalent gate count for design:  4,747,603
 Additional JTAG gate count for IOBs:  10,512
-Peak Memory Usage:  276 MB
-Total REAL time to MAP completion:  28 secs 
-Total CPU time to MAP completion:   25 secs 
+Peak Memory Usage:  274 MB
+Total REAL time to MAP completion:  21 secs 
+Total CPU time to MAP completion:   21 secs 
 
 NOTES:
 

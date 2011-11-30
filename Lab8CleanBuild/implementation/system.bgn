@@ -5,7 +5,7 @@ C:\Xilinx91i.
    "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
 Opened constraints file system.pcf.
 
-Tue Nov 29 19:07:25 2011
+Wed Nov 30 15:27:57 2011
 
 c:\Xilinx91i\bin\nt\bitgen.exe -w -g CclkPin:PULLUP -g TdoPin:PULLNONE -g M1Pin:PULLDOWN -g DonePin:PULLUP -g DriveDone:No -g StartUpClk:JTAGCLK -g DONE_cycle:4 -g GTS_cycle:5 -g M0Pin:PULLUP -g M2Pin:PULLUP -g ProgPin:PULLUP -g TckPin:PULLUP -g TdiPin:PULLUP -g TmsPin:PULLUP -g DonePipe:No -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:NONE -g Persist:No system.ncd 
 
@@ -135,6 +135,9 @@ Summary of Bitgen Options:
  ** The specified setting matches the default setting.
 
 Running DRC.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net opb_OPB_select is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_41_pin/exp_io_41_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
@@ -195,7 +198,7 @@ WARNING:PhysDesignRules:1060 - Dangling pins on
    block:<vga_framebuffer/vga_framebuffer/RGB_BRAM_U4/RGB_BRAM/vga_framebuffer/v
    ga_framebuffer/RGB_BRAM_U4/RGB_BRAM.B>:<RAMB16_RAMB16B>.  The block is
    configured to use input parity pins. There are dangling output parity pins.
-DRC detected 0 errors and 26 warnings.
+DRC detected 0 errors and 27 warnings.
 Creating bit map...
 Saving bit stream in "system.bit".
 Bitstream generation is complete.

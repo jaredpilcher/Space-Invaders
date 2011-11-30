@@ -8,25 +8,25 @@ Target Device  : xc2vp30
 Target Package : ff896
 Target Speed   : -7
 Mapper Version : virtex2p -- $Revision: 1.36 $
-Mapped Date    : Tue Nov 29 19:03:13 2011
+Mapped Date    : Wed Nov 30 15:24:26 2011
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   31
+Number of warnings:   32
 Logic Utilization:
-  Total Number Slice Registers:     4,690 out of  27,392   17%
-    Number used as Flip Flops:                 4,626
-    Number used as Latches:                       64
-  Number of 4 input LUTs:           3,665 out of  27,392   13%
+  Total Number Slice Registers:     4,854 out of  27,392   17%
+    Number used as Flip Flops:                 4,821
+    Number used as Latches:                       33
+  Number of 4 input LUTs:           3,939 out of  27,392   14%
 Logic Distribution:
-  Number of occupied Slices:        4,220 out of  13,696   30%
-  Number of Slices containing only related logic:   4,220 out of   4,220  100%
-  Number of Slices containing unrelated logic:          0 out of   4,220    0%
+  Number of occupied Slices:        4,425 out of  13,696   32%
+  Number of Slices containing only related logic:   4,425 out of   4,425  100%
+  Number of Slices containing unrelated logic:          0 out of   4,425    0%
         *See NOTES below for an explanation of the effects of unrelated logic
-Total Number of 4 input LUTs:          4,672 out of  27,392   17%
-  Number used as logic:             3,665
-  Number used as a route-thru:        307
+Total Number of 4 input LUTs:          5,003 out of  27,392   18%
+  Number used as logic:             3,939
+  Number used as a route-thru:        364
   Number used for Dual Port RAMs:     346
     (Two LUTs used per Dual Port RAM)
   Number used as Shift registers:     354
@@ -44,11 +44,11 @@ Total Number of 4 input LUTs:          4,672 out of  27,392   17%
   Number of GT10s:                      0 out of       0    0%
 
    Number of RPM macros:           14
-Total equivalent gate count for design:  4,743,843
+Total equivalent gate count for design:  4,747,603
 Additional JTAG gate count for IOBs:  10,512
-Peak Memory Usage:  276 MB
-Total REAL time to MAP completion:  28 secs 
-Total CPU time to MAP completion:   25 secs 
+Peak Memory Usage:  274 MB
+Total REAL time to MAP completion:  21 secs 
+Total CPU time to MAP completion:   21 secs 
 
 NOTES:
 
@@ -116,6 +116,9 @@ WARNING:Pack:266 - The function generator
    ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_c
    l2_5/WO_ECC.PLB_IPIF_I/I_SLAVE_ATTACHMENT/set_sl_busy_mux0008_SW0_f5.  There
    is a conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net opb_OPB_select is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    exp_io_41_pin/exp_io_41_pin is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
@@ -6604,12 +6607,6 @@ unused and has been removed.
  Unused block
 "plb/plb/I_PLB_ARBITER_LOGIC/I_BUSLOCK_SM/plb_buslock_reg_or0000_SW0" (ROM)
 removed.
-The signal
-"opb/opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/MULTI_MASTER_GEN.PARK_LOCK_I/grant_las
-t_reg<1>" is unused and has been removed.
- Unused block
-"opb/opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/MULTI_MASTER_GEN.PARK_LOCK_I/grant_las
-t_reg_1" (SFF) removed.
 The signal "plb2opb/Bus_Error_Det" is unused and has been removed.
  Unused block "plb2opb/plb2opb/BUSERR_INTR_I/RISING_EDGE_GEN.INTERRUPT_REFF_I"
 (SFF) removed.
@@ -6656,6 +6653,11 @@ has been removed.
 The signal
 "plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/data_cntl
 _state_FFd1-In" is unused and has been removed.
+The signal "audio_dma_0/audio_dma_0/Madd_master_address_reg_addsub0000_cy<0>_rt"
+is unused and has been removed.
+ Unused block
+"audio_dma_0/audio_dma_0/Madd_master_address_reg_addsub0000_cy<0>_rt" (ROM)
+removed.
 The signal "opb2plb_bridge_0/Bus_Error_Det" is unused and has been removed.
  Unused block "opb2plb_bridge_0/opb2plb_bridge_0/REGS_I/Bus_err_det1" (ROM)
 removed.
@@ -7053,9 +7055,6 @@ VCC 		opb/XST_VCC
 LUT4 		opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_errAck_I/Y_0_or00004
 LUT4 		opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_retry_I/Y_0_or00004
 LUT4 		opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_toutSup_I/Y_0_or00004
-LUT3
-		opb/opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/MULTI_MASTER_GEN.ARB_LOGIC_I/_mux0007
-1
 GND 		opb2dcr_bridge_0/XST_GND
 VCC 		opb2dcr_bridge_0/XST_VCC
 GND 		opb2plb_bridge_0/XST_GND
@@ -7227,6 +7226,7 @@ GND 		sysace_compactflash/XST_GND
 VCC 		sysace_compactflash/XST_VCC
 GND 		vga_framebuffer/XST_GND
 VCC 		vga_framebuffer/XST_VCC
+MUXCY 		audio_dma_0/audio_dma_0/Madd_master_address_reg_addsub0000_cy<0>
 MUXCY
 		plb/plb/I_PLB_ADDRPATH/I_PLBMSIZE_MUX/EVEN_GEN.DATA_WIDTH_GEN[0].CYMUX_FIRST
 MUXCY

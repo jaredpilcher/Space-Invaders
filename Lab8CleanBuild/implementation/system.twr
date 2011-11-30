@@ -27,7 +27,7 @@ Timing constraint: NET "fpga_0_Audio_Codec_Bit_Clk_pin_BUFGP/IBUFG" PERIOD =
 81.38 ns HIGH 50%;
 
  1902 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   7.063ns.
+ Minimum period is   7.183ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -35,7 +35,7 @@ Timing constraint: NET "fpga_0_SysACE_CompactFlash_SysACE_CLK_pin_BUFGP/IBUFG"
 PERIOD = 30 ns         HIGH 50%;
 
  197 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   5.323ns.
+ Minimum period is   4.079ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -43,7 +43,7 @@ Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 10 ns HIGH
 50%;
 
  3 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   1.373ns.
+ Minimum period is   1.314ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -57,7 +57,7 @@ Timing constraint: TS_fpga_0_DDR_CLK_FB = PERIOD TIMEGRP "fpga_0_DDR_CLK_FB" 10
 ns HIGH 50%;
 
  3 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   1.339ns.
+ Minimum period is   1.457ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -65,15 +65,15 @@ Timing constraint: TS_dcm_1_dcm_1_CLK90_BUF = PERIOD TIMEGRP
 "dcm_1_dcm_1_CLK90_BUF"         TS_fpga_0_DDR_CLK_FB PHASE 4.844 ns HIGH 50%;
 
  1512 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   4.642ns.
+ Minimum period is   4.742ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: TS_dcm_0_dcm_0_CLK0_BUF = PERIOD TIMEGRP 
 "dcm_0_dcm_0_CLK0_BUF" TS_sys_clk_pin         HIGH 50%;
 
- 312806 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   9.964ns.
+ 1181340 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   9.926ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -81,7 +81,7 @@ Timing constraint: TS_dcm_0_dcm_0_CLK90_BUF = PERIOD TIMEGRP
 "dcm_0_dcm_0_CLK90_BUF"         TS_sys_clk_pin PHASE 2.5 ns HIGH 50%;
 
  112 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   9.832ns.
+ Minimum period is   9.737ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -90,7 +90,7 @@ Timing constraint: TS_vga_framebuffer_vga_framebuffer_CLKDV = PERIOD TIMEGRP
  HIGH 50%;
 
  819 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is  35.344ns.
+ Minimum period is  34.620ns.
 --------------------------------------------------------------------------------
 
 
@@ -106,7 +106,7 @@ Clock to Setup on destination clock fpga_0_Audio_Codec_Bit_Clk_pin
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-fpga_0_Audio_Codec_Bit_Clk_pin|    7.063|    2.907|         |    2.794|
+fpga_0_Audio_Codec_Bit_Clk_pin|    7.183|    3.284|         |    2.794|
 ------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock fpga_0_DDR_CLK_FB
@@ -114,7 +114,7 @@ Clock to Setup on destination clock fpga_0_DDR_CLK_FB
                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------+---------+---------+---------+---------+
-fpga_0_DDR_CLK_FB|    4.642|         |         |         |
+fpga_0_DDR_CLK_FB|    4.742|         |         |         |
 -----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock fpga_0_SysACE_CompactFlash_SysACE_CLK_pin
@@ -122,7 +122,7 @@ Clock to Setup on destination clock fpga_0_SysACE_CompactFlash_SysACE_CLK_pin
                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------------------+---------+---------+---------+---------+
-fpga_0_SysACE_CompactFlash_SysACE_CLK_pin|    5.323|         |         |         |
+fpga_0_SysACE_CompactFlash_SysACE_CLK_pin|    4.079|         |         |         |
 -----------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock sys_clk_pin
@@ -130,7 +130,7 @@ Clock to Setup on destination clock sys_clk_pin
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-sys_clk_pin    |    9.964|    4.829|    4.963|    3.426|
+sys_clk_pin    |    9.926|    4.614|    7.303|    2.764|
 ---------------+---------+---------+---------+---------+
 
 
@@ -139,20 +139,20 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover 317357 paths, 0 nets, and 27065 connections
+Constraints cover 1185891 paths, 0 nets, and 28822 connections
 
 Design statistics:
-   Minimum period:  35.344ns   (Maximum frequency:  28.293MHz)
+   Minimum period:  34.620ns   (Maximum frequency:  28.885MHz)
 
 
-Analysis completed Tue Nov 29 19:07:18 2011 
+Analysis completed Wed Nov 30 15:27:51 2011 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 262 MB
+Peak Memory Usage: 268 MB
 
 
 

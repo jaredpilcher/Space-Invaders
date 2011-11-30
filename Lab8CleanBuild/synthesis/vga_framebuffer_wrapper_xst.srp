@@ -928,7 +928,7 @@ WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_frameb
 WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_B4.
 WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/FD_B5.
 WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to vga_framebuffer/TFT_IF_U5/TFT_CLK_OFDDR.
-CPU : 9.88 / 9.95 s | Elapsed : 10.00 / 10.00 s
+CPU : 9.70 / 9.78 s | Elapsed : 10.00 / 10.00 s
  
 --> 
 

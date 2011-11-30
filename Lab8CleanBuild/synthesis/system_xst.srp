@@ -290,7 +290,6 @@ INFO:Xst:2260 - The FF/Latch <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[29].INTC_
 INFO:Xst:2260 - The FF/Latch <audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0> in Unit <audio_codec> is equivalent to the following FF/Latch : <audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0_1> 
 INFO:Xst:2260 - The FF/Latch <audio_dma_0/control_reg_31> in Unit <audio_dma_0> is equivalent to the following 2 FFs/Latches : <audio_dma_0/control_reg_31_1> <audio_dma_0/control_reg_31_2> 
 INFO:Xst:2260 - The FF/Latch <audio_dma_0/control_reg_30> in Unit <audio_dma_0> is equivalent to the following 2 FFs/Latches : <audio_dma_0/control_reg_30_1> <audio_dma_0/control_reg_30_2> 
-INFO:Xst:2260 - The FF/Latch <audio_dma_0/control_reg_29> in Unit <audio_dma_0> is equivalent to the following 2 FFs/Latches : <audio_dma_0/control_reg_29_1> <audio_dma_0/control_reg_29_2> 
 INFO:Xst:2260 - The FF/Latch <opb2plb_bridge_0/PLB_INTFC_I/PRIORITY_REG_GEN[0].PRIORITY_REG_I> in Unit <opb2plb_bridge_0> is equivalent to the following 2 FFs/Latches : <opb2plb_bridge_0/PLB_INTFC_I/PRIORITY_REG_GEN[1].PRIORITY_REG_I> <opb2plb_bridge_0/PLB_INTFC_I/SIZE_REG_GEN[1].SIZE_REG_I> 
 INFO:Xst:2260 - The FF/Latch <opb2plb_bridge_0/OPB_INTFC_I/WR_EN_DLY_REG_I> in Unit <opb2plb_bridge_0> is equivalent to the following FF/Latch : <opb2plb_bridge_0/OPB_INTFC_I/OPB_SM_I/cur_st_FFd5> 
 INFO:Xst:2260 - The FF/Latch <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2> in Unit <plb> is equivalent to the following FF/Latch : <plb/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1> 
@@ -314,9 +313,8 @@ INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_G
 INFO:Xst:2260 - The FF/Latch <audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0> in Unit <audio_codec> is equivalent to the following FF/Latch : <audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0_1> 
 INFO:Xst:2260 - The FF/Latch <audio_dma_0/control_reg_31> in Unit <audio_dma_0> is equivalent to the following 2 FFs/Latches : <audio_dma_0/control_reg_31_1> <audio_dma_0/control_reg_31_2> 
 INFO:Xst:2260 - The FF/Latch <audio_dma_0/control_reg_30> in Unit <audio_dma_0> is equivalent to the following 2 FFs/Latches : <audio_dma_0/control_reg_30_1> <audio_dma_0/control_reg_30_2> 
-INFO:Xst:2260 - The FF/Latch <audio_dma_0/control_reg_29> in Unit <audio_dma_0> is equivalent to the following 2 FFs/Latches : <audio_dma_0/control_reg_29_1> <audio_dma_0/control_reg_29_2> 
-INFO:Xst:2260 - The FF/Latch <opb2plb_bridge_0/OPB_INTFC_I/WR_EN_DLY_REG_I> in Unit <opb2plb_bridge_0> is equivalent to the following FF/Latch : <opb2plb_bridge_0/OPB_INTFC_I/OPB_SM_I/cur_st_FFd5> 
 INFO:Xst:2260 - The FF/Latch <opb2plb_bridge_0/PLB_INTFC_I/PRIORITY_REG_GEN[0].PRIORITY_REG_I> in Unit <opb2plb_bridge_0> is equivalent to the following 2 FFs/Latches : <opb2plb_bridge_0/PLB_INTFC_I/PRIORITY_REG_GEN[1].PRIORITY_REG_I> <opb2plb_bridge_0/PLB_INTFC_I/SIZE_REG_GEN[1].SIZE_REG_I> 
+INFO:Xst:2260 - The FF/Latch <opb2plb_bridge_0/OPB_INTFC_I/WR_EN_DLY_REG_I> in Unit <opb2plb_bridge_0> is equivalent to the following FF/Latch : <opb2plb_bridge_0/OPB_INTFC_I/OPB_SM_I/cur_st_FFd5> 
 
 Final Macro Processing ...
 
@@ -350,51 +348,52 @@ Design Statistics
 # IOs                              : 220
 
 Cell Usage :
-# BELS                             : 6744
+# BELS                             : 7316
 #      BUF                         : 2
 #      GND                         : 34
-#      INV                         : 145
-#      LUT1                        : 222
-#      LUT2                        : 545
+#      INV                         : 148
+#      LUT1                        : 284
+#      LUT2                        : 576
 #      LUT2_D                      : 22
 #      LUT2_L                      : 8
-#      LUT3                        : 1284
-#      LUT3_D                      : 22
+#      LUT3                        : 1320
+#      LUT3_D                      : 23
 #      LUT3_L                      : 28
-#      LUT4                        : 2237
-#      LUT4_D                      : 62
-#      LUT4_L                      : 69
+#      LUT4                        : 2438
+#      LUT4_D                      : 61
+#      LUT4_L                      : 70
 #      MULT_AND                    : 60
-#      MUXCY                       : 878
+#      MUXCY                       : 993
 #      MUXCY_D                     : 16
 #      MUXCY_L                     : 157
-#      MUXF5                       : 333
+#      MUXF5                       : 365
 #      MUXF6                       : 87
 #      MUXF7                       : 5
 #      MUXF8                       : 2
 #      VCC                         : 32
-#      XORCY                       : 494
-# FlipFlops/Latches                : 5678
-#      FD                          : 562
+#      XORCY                       : 585
+# FlipFlops/Latches                : 5841
+#      FD                          : 591
 #      FD_1                        : 21
 #      FDC                         : 111
 #      FDCE                        : 379
 #      FDCP                        : 1
 #      FDCPE                       : 5
 #      FDDRRSE                     : 24
-#      FDE                         : 825
+#      FDE                         : 925
 #      FDP                         : 115
 #      FDPE                        : 249
-#      FDR                         : 1501
+#      FDR                         : 1502
 #      FDR_1                       : 24
-#      FDRE                        : 1471
+#      FDRE                        : 1501
 #      FDRS                        : 102
 #      FDRS_1                      : 1
 #      FDRSE                       : 36
-#      FDS                         : 123
+#      FDS                         : 157
 #      FDS_1                       : 33
 #      FDSE                        : 30
-#      LDE                         : 64
+#      LD                          : 1
+#      LDE                         : 32
 #      OFDDRRSE                    : 1
 # RAMS                             : 244
 #      RAM16X1D                    : 174
@@ -428,10 +427,10 @@ Device utilization summary:
 
 Selected Device : 2vp30ff896-7 
 
- Number of Slices:                    4767  out of  13696    34%  
- Number of Slice Flip Flops:          5305  out of  27392    19%  
- Number of 4 input LUTs:              5347  out of  27392    19%  
-    Number used as logic:             4644
+ Number of Slices:                    4953  out of  13696    36%  
+ Number of Slice Flip Flops:          5468  out of  27392    19%  
+ Number of 4 input LUTs:              5681  out of  27392    20%  
+    Number used as logic:             4978
     Number used as Shift registers:    355
     Number used as RAMs:               348
  Number of IOs:                        220
@@ -463,7 +462,7 @@ Clock Information:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                                                          | Clock buffer(FF name)                                                                                                                                                                          | Load  |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK0                                                                                                                                                               | 5184  |
+sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK0                                                                                                                                                               | 5378  |
 fpga_0_net_gnd_pin_OBUF                                                                                                                                                               | NONE(plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s1_s1_22)                                                                                                                        | 65    |
 fpga_0_SysACE_CompactFlash_SysACE_CLK_pin                                                                                                                                             | BUFGP                                                                                                                                                                                          | 92    |
 sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK90                                                                                                                                                              | 72    |
@@ -480,7 +479,8 @@ fpga_0_DDR_CLK_FB                                                               
 sys_clk_pin                                                                                                                                                                           | dcm_0/Using_Virtex.DCM_INST:CLK0+vga_framebuffer/DCM_pixclk.DCM_pixclk:CLKDV                                                                                                                   | 130   |
 fpga_0_Audio_Codec_Bit_Clk_pin                                                                                                                                                        | BUFGP                                                                                                                                                                                          | 132   |
 audio_codec/Sln_retry                                                                                                                                                                 | NONE(audio_codec/audio_codec/AC97_FIFO_I/fdcpe_1)                                                                                                                                              | 1     |
-opb/OPB_select(opb/opb/OPB_select_I/Y_0_or00001:O)                                                                                                                                    | NONE(*)(audio_dma_0/audio_dma_0/channel_data_11)                                                                                                                                               | 64    |
+audio_dma_0/audio_dma_0/master/current_state_FFd3                                                                                                                                     | NONE(audio_dma_0/audio_dma_0/master/master_request)                                                                                                                                            | 1     |
+opb/OPB_select(opb/opb/OPB_select_I/Y_0_or00001:O)                                                                                                                                    | NONE(*)(audio_dma_0/audio_dma_0/channel_data_26)                                                                                                                                               | 32    |
 chipscope_icon_0/chipscope_icon_0/icon_inst/u_icon/i_yes_bscan/u_bs/drck1                                                                                                             | BUFG                                                                                                                                                                                           | 233   |
 chipscope_icon_0/chipscope_icon_0/icon_inst/iupdate_out                                                                                                                               | NONE(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_idata_cmd)                                                                                                                    | 1     |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
@@ -491,56 +491,56 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                                                                                                                                                                                                                                                                                                                                                                   | Buffer(FF name)                                                                                                                                                                                                           | Load  |
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-opb/OPB_Rst(opb/opb/POR_FF_I:Q)                                                                                                                                                                                                                                                                                                                                                  | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/mux_sel_2)                                                                                                                                           | 167   |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst:Q)                                                                                         | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU234)                           | 240   |
-rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO:Q)                                                                                                                                                                                                                                                       | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/SRL_FIFO_I/data_Exists_I)                                                                                                                            | 1     |
-fpga_0_net_gnd_pin_OBUF(XST_GND:G)                                                                                                                                                                                                                                                                                                                                               | NONE(dcm_0/dcm_0/rsti)                                                                                                                                                                                                    | 4     |
-chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/Gnd(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/GND:G)                                                                                                                                                                                                                     | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_tq0/g_tw/0/u_tqf)                                                                                          | 82    |
-chipscope_icon_0/chipscope_icon_0/icon_inst/control0<22>(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_ctrl_out/f_ncp/0/f_cmd/2/u_hce:O)                                                                                                                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig/u_tm/g_nmu/2/u_m/u_mu/i_mut_gand/u_match/i_srl16/u_gand_srl16/i_yes_ireg/f_tw/0/u_ireg)  | 32    |
-plb2opb/plb2opb/PLB_abort_regd_clear(plb2opb/plb2opb/I_PLB_abort_regd_clear:O)                                                                                                                                                                                                                                                                                                   | NONE(plb2opb/plb2opb/I_PLB_abort_Reg)                                                                                                                                                                                     | 1     |
-plb2opb/BGO_dcrDBus<31>(plb2opb/XST_GND:G)                                                                                                                                                                                                                                                                                                                                       | NONE(plb2opb/plb2opb/I_PLB_abort_Reg)                                                                                                                                                                                     | 4     |
-rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO:Q)                                                                                                                                                                                                                                                       | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_RX_I/SRL_FIFO_I/data_Exists_I)                                                                                                                            | 1     |
-plb2opb/plb2opb/PLBside_reset_OPB_timeout_onRd(plb2opb/plb2opb/I_OPB_timeout_side_Reg_CLR:O)                                                                                                                                                                                                                                                                                     | NONE(plb2opb/plb2opb/I_OPB_timeout_Reg)                                                                                                                                                                                   | 1     |
-plb2opb/plb2opb/PLBside_reset_OPB_retry_onRd(plb2opb/plb2opb/I_B_side_Reg_CLR:O)                                                                                                                                                                                                                                                                                                 | NONE(plb2opb/plb2opb/I_A_side_Reg)                                                                                                                                                                                        | 1     |
-plb2opb/plb2opb/OPBside_reset_Read_inprog_negedge_regd(plb2opb/plb2opb/I_OPBside_reset_Read_inprog_negedge_regd:O)                                                                                                                                                                                                                                                               | NONE(plb2opb/plb2opb/I_Read_inprog_negedge_Reg)                                                                                                                                                                           | 1     |
-chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/ireset_6(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/g_rst/1/u_rst:Q)                                                                                                                                       | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig/u_tm/g_nmu/2/u_m/u_mu/i_oreg/i_yes_oreg/u_oreg)                                          | 3     |
-chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dsl1/iclr(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dsl1/u_clear:O)                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dsl1/u_dout0)                                                                          | 4     |
-chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/icap_ext_trigout(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_g2_sq/u_capctrl/u_trig0:Q)                                                                                                                         | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig_out/u_trigout_fdre)                                                                      | 1     |
-chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_halt_xfer/iclr(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_halt_xfer/u_clear:O)                                                                                                                   | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_halt_xfer/u_dout0)                                                                      | 4     |
-chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_arm_xfer/iclr(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_arm_xfer/u_clear:O)                                                                                                                     | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_arm_xfer/u_dout0)                                                                       | 4     |
-chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/actreset_pulse(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_reset_edge/i_h2l/u_dout:Q)                                                                                                             | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_rising)                                                                                | 1     |
-chipscope_icon_0/chipscope_icon_0/icon_inst/control0<21>(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_ctrl_out/f_ncp/0/f_cmd/1/u_hce:O)                                                                                                                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig/u_tm/g_nmu/1/u_m/u_mu/i_mut_varx/u_match/i_srl16/u_var_srl16/i_yes_ireg/f_tw/0/u_ireg)   | 64    |
-chipscope_icon_0/chipscope_icon_0/icon_inst/control0<20>(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_ctrl_out/f_ncp/0/f_cmd/0/u_hce:O)                                                                                                                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig/u_tm/g_nmu/0/u_m/u_mu/i_mut_gandx/u_match/i_srl16/u_gandx_srl16/i_yes_ireg/f_tw/0/u_ireg)| 34    |
-sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/done3(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/DONE_REG3:Q)                                                                                                                                                                                                       | NONE(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/RDCE_REG3)                                                                                                                               | 6     |
-plb/PLB_Rst(plb/plb/POR_FF2_I:Q)                                                                                                                                                                                                                                                                                                                                                 | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR_REGS_GEN[12].RDDATA_HIREG)                                 | 130   |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/DDR_DQ_ECC_t<6>(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/XST_GND:G)                                                                                                                                                                                                                                                                     | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DQS_REG_GEN[6].RDDQS_REG)                                      | 8     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU240)                           | 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/BU133)                           | 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/BU240)                           | 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/BU240)                           | 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU240)                           | 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU133)                           | 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU240)                           | 2     |
-ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/BU240)                           | 2     |
-dcm_1/dcm_1/reset(dcm_1/dcm_1/reset1_INV_0:O)                                                                                                                                                                                                                                                                                                                                    | NONE(dcm_1/dcm_1/rsti)                                                                                                                                                                                                    | 4     |
-audio_codec/audio_codec/AC97_FIFO_I/ac97_core_reset(audio_codec/audio_codec/AC97_FIFO_I/ac97_core_reset1:O)                                                                                                                                                                                                                                                                      | NONE(audio_codec/audio_codec/AC97_FIFO_I/ac97_core_I/data_out_13)                                                                                                                                                         | 37    |
-audio_codec/audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S(audio_codec/audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S:Q)                                                                                                                                                                                                                                                     | NONE(audio_codec/audio_codec/AC97_FIFO_I/fdcpe_1)                                                                                                                                                                         | 1     |
-audio_codec/audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S(audio_codec/audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S:Q)                                                                                                                                                                                                                                                       | NONE(audio_codec/audio_codec/AC97_FIFO_I/fdcpe_1)                                                                                                                                                                         | 1     |
-chipscope_icon_0/chipscope_icon_0/icon_inst/u_icon/u_cmd/isel_n(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_cmd/u_sel_n:O)                                                                                                                                                                                                                                       | NONE(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_cmd/g_target/15/i_eq0/u_target)                                                                                                                          | 10    |
-chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/iarm(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_arm_xfer/u_gen_delay/3/u_fd:Q)                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dirty)                                                                                 | 1     |
-chipscope_icon_0/chipscope_icon_0/icon_inst/control0<13>(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_ctrl_out/f_ncp/0/f_cmd/9/u_lce:O)                                                                                                                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dirty)                                                                                 | 1     |
-chipscope_icon_0/chipscope_icon_0/icon_inst/u_icon/isel_n(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_isel_n:O)                                                                                                                                                                                                                                                  | NONE(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_idata_cmd)                                                                                                                                               | 1     |
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                                                                                   | Buffer(FF name)                                                                                                                                                                                                         | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+opb/OPB_Rst(opb/opb/POR_FF_I:Q)                                                                                                                                                                                                                                                                                                                                                  | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/mux_sel_2)                                                                                                                                         | 167   |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/fifo_rst:Q)                                                                                         | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU234)                         | 240   |
+chipscope_icon_0/chipscope_icon_0/icon_inst/control0<21>(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_ctrl_out/f_ncp/0/f_cmd/1/u_hce:O)                                                                                                                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig/u_tm/g_nmu/1/u_m/u_mu/i_mut_varx/u_match/i_srl16/u_var_srl16/i_yes_treg/f_tw/24/u_treg)| 64    |
+chipscope_icon_0/chipscope_icon_0/icon_inst/control0<20>(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_ctrl_out/f_ncp/0/f_cmd/0/u_hce:O)                                                                                                                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig/u_tm/g_nmu/0/u_m/u_mu/i_mut_gandx/u_match/i_srl16/u_gandx_srl16/f_tw/13/u_treg)        | 34    |
+chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/ireset_6(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/g_rst/1/u_rst:Q)                                                                                                                                       | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig/u_tm/g_nmu/0/u_m/u_mu/i_oreg/i_yes_oreg/u_oreg)                                        | 3     |
+rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO:Q)                                                                                                                                                                                                                                                       | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/SRL_FIFO_I/data_Exists_I)                                                                                                                          | 1     |
+fpga_0_net_gnd_pin_OBUF(XST_GND:G)                                                                                                                                                                                                                                                                                                                                               | NONE(dcm_0/dcm_0/rsti)                                                                                                                                                                                                  | 4     |
+plb2opb/plb2opb/PLB_abort_regd_clear(plb2opb/plb2opb/I_PLB_abort_regd_clear:O)                                                                                                                                                                                                                                                                                                   | NONE(plb2opb/plb2opb/I_PLB_abort_Reg)                                                                                                                                                                                   | 1     |
+plb2opb/BGO_dcrDBus<31>(plb2opb/XST_GND:G)                                                                                                                                                                                                                                                                                                                                       | NONE(plb2opb/plb2opb/I_PLB_abort_Reg)                                                                                                                                                                                   | 4     |
+rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO:Q)                                                                                                                                                                                                                                                       | NONE(rs232_uart_1/rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_RX_I/SRL_FIFO_I/data_Exists_I)                                                                                                                          | 1     |
+plb2opb/plb2opb/PLBside_reset_OPB_timeout_onRd(plb2opb/plb2opb/I_OPB_timeout_side_Reg_CLR:O)                                                                                                                                                                                                                                                                                     | NONE(plb2opb/plb2opb/I_OPB_timeout_Reg)                                                                                                                                                                                 | 1     |
+plb2opb/plb2opb/PLBside_reset_OPB_retry_onRd(plb2opb/plb2opb/I_B_side_Reg_CLR:O)                                                                                                                                                                                                                                                                                                 | NONE(plb2opb/plb2opb/I_A_side_Reg)                                                                                                                                                                                      | 1     |
+chipscope_icon_0/chipscope_icon_0/icon_inst/control0<22>(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_ctrl_out/f_ncp/0/f_cmd/2/u_hce:O)                                                                                                                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig/u_tm/g_nmu/2/u_m/u_mu/i_mut_gand/u_match/i_srl16/u_gand_srl16/i_yes_ireg/f_tw/0/u_ireg)| 32    |
+plb2opb/plb2opb/OPBside_reset_Read_inprog_negedge_regd(plb2opb/plb2opb/I_OPBside_reset_Read_inprog_negedge_regd:O)                                                                                                                                                                                                                                                               | NONE(plb2opb/plb2opb/I_Read_inprog_negedge_Reg)                                                                                                                                                                         | 1     |
+chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/Gnd(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/GND:G)                                                                                                                                                                                                                     | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_tq2/g_tw/0/u_tqf)                                                                                        | 82    |
+chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/icap_ext_trigout(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_g2_sq/u_capctrl/u_trig0:Q)                                                                                                                         | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_trig_out/u_trigout_fdre)                                                                    | 1     |
+chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_halt_xfer/iclr(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_halt_xfer/u_clear:O)                                                                                                                   | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_halt_xfer/u_dout0)                                                                    | 4     |
+chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_arm_xfer/iclr(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_arm_xfer/u_clear:O)                                                                                                                     | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_arm_xfer/u_dout0)                                                                     | 4     |
+chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dsl1/iclr(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dsl1/u_clear:O)                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dsl1/u_dout0)                                                                        | 4     |
+chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/actreset_pulse(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_reset_edge/i_h2l/u_dout:Q)                                                                                                             | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_rising)                                                                              | 1     |
+sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/done3(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/DONE_REG3:Q)                                                                                                                                                                                                       | NONE(sysace_compactflash/sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/RDCE_REG3)                                                                                                                             | 6     |
+plb/PLB_Rst(plb/plb/POR_FF2_I:Q)                                                                                                                                                                                                                                                                                                                                                 | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DDR_REGS_GEN[12].RDDATA_HIREG)                               | 130   |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/DDR_DQ_ECC_t<6>(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/XST_GND:G)                                                                                                                                                                                                                                                                     | NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.IO_REG_I/NOT_VIRTEX4_IOREGS.INPUT_DQS_REG_GEN[6].RDDQS_REG)                                    | 8     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[7].V2_ASYNCH_FIFO_I/BU240)                         | 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[6].V2_ASYNCH_FIFO_I/BU133)                         | 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[5].V2_ASYNCH_FIFO_I/BU240)                         | 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[4].V2_ASYNCH_FIFO_I/BU240)                         | 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU240)                         | 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU133)                         | 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU240)                         | 2     |
+ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/N0(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/GND:G)| NONE(ddr_256mb_32mx64_rank1_row13_col10_cl2_5/ddr_256mb_32mx64_rank1_row13_col10_cl2_5/WO_ECC.DDR_CTRL_I/WO_ECC_BUS1XDDR.RDDATA_PATH_I/GEN_RD_DATA_BUS1XDDR.FIFO_GEN[0].V2_ASYNCH_FIFO_I/BU240)                         | 2     |
+dcm_1/dcm_1/reset(dcm_1/dcm_1/reset1_INV_0:O)                                                                                                                                                                                                                                                                                                                                    | NONE(dcm_1/dcm_1/rsti)                                                                                                                                                                                                  | 4     |
+audio_codec/audio_codec/AC97_FIFO_I/ac97_core_reset(audio_codec/audio_codec/AC97_FIFO_I/ac97_core_reset1:O)                                                                                                                                                                                                                                                                      | NONE(audio_codec/audio_codec/AC97_FIFO_I/ac97_core_I/data_out_13)                                                                                                                                                       | 37    |
+audio_codec/audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S(audio_codec/audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S:Q)                                                                                                                                                                                                                                                     | NONE(audio_codec/audio_codec/AC97_FIFO_I/fdcpe_1)                                                                                                                                                                       | 1     |
+audio_codec/audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S(audio_codec/audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S:Q)                                                                                                                                                                                                                                                       | NONE(audio_codec/audio_codec/AC97_FIFO_I/fdcpe_1)                                                                                                                                                                       | 1     |
+chipscope_icon_0/chipscope_icon_0/icon_inst/u_icon/u_cmd/isel_n(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_cmd/u_sel_n:O)                                                                                                                                                                                                                                       | NONE(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_cmd/g_target/15/i_eq0/u_target)                                                                                                                        | 10    |
+chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/iarm(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_rst/u_arm_xfer/u_gen_delay/3/u_fd:Q)                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dirty)                                                                               | 1     |
+chipscope_icon_0/chipscope_icon_0/icon_inst/control0<13>(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_ctrl_out/f_ncp/0/f_cmd/9/u_lce:O)                                                                                                                                                                                                                           | NONE(chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/cs_coregen_chipscope_opb_iba_0/i_no_d/u_ila/u_stat/u_dirty)                                                                               | 1     |
+chipscope_icon_0/chipscope_icon_0/icon_inst/u_icon/isel_n(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_isel_n:O)                                                                                                                                                                                                                                                  | NONE(chipscope_icon_0/chipscope_icon_0/icon_inst/icon_1/u_icon/u_idata_cmd)                                                                                                                                             | 1     |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -7
 
-   Minimum period: 12.429ns (Maximum Frequency: 80.460MHz)
-   Minimum input arrival time before clock: 7.997ns
+   Minimum period: 13.586ns (Maximum Frequency: 73.603MHz)
+   Minimum input arrival time before clock: 8.005ns
    Maximum output required time after clock: 5.405ns
    Maximum combinational path delay: No path found
 
@@ -550,23 +550,24 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sys_clk_pin'
-  Clock period: 12.429ns (frequency: 80.460MHz)
-  Total number of paths / destination ports: 363361 / 12456
+  Clock period: 13.586ns (frequency: 73.603MHz)
+  Total number of paths / destination ports: 1278842 / 12883
 -------------------------------------------------------------------------
-Delay:               12.429ns (Levels of Logic = 28)
-  Source:            plb2opb/plb2opb/XFER_IF_I/DUALPORT_RAM_GEN.RAM_FF_LOOP_GEN[36].RAM_FF_I (FF)
+Delay:               13.586ns (Levels of Logic = 29)
+  Source:            audio_dma_0/audio_dma_0/master/current_state_FFd3 (FF)
   Destination:       audio_codec/audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_9 (FF)
   Source Clock:      sys_clk_pin rising
   Destination Clock: sys_clk_pin rising
 
-  Data Path: plb2opb/plb2opb/XFER_IF_I/DUALPORT_RAM_GEN.RAM_FF_LOOP_GEN[36].RAM_FF_I to audio_codec/audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_9
+  Data Path: audio_dma_0/audio_dma_0/master/current_state_FFd3 to audio_codec/audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.370   0.467  plb2opb/XFER_IF_I/DUALPORT_RAM_GEN.RAM_FF_LOOP_GEN[36].RAM_FF_I (BGO_ABus<4>)
-     end scope: 'plb2opb'
+     FDS:C->Q            107   0.370   0.914  audio_dma_0/master/current_state_FFd3 (audio_dma_0/master/current_state_FFd3)
+     LUT3:I0->O            1   0.275   0.429  audio_dma_0/master/master_address<4>1 (M_ABus<4>)
+     end scope: 'audio_dma_0'
      begin scope: 'opb'
-     LUT2:I0->O           16   0.275   0.766  opb/OPB_ABus_I/Y_4_or00001 (OPB_ABus<4>)
+     LUT2:I1->O           16   0.275   0.766  opb/OPB_ABus_I/Y_4_or00001 (OPB_ABus<4>)
      end scope: 'opb'
      begin scope: 'lab3_slave_0'
      LUT4:I0->O            1   0.275   0.370  lab3_slave_0/interrupts_acknowledged_cmp_eq000011_SW0 (N71)
@@ -582,7 +583,7 @@ Delay:               12.429ns (Levels of Logic = 28)
      begin scope: 'opb'
      LUT4:I0->O            1   0.275   0.369  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013_SW0 (N983)
      LUT4:I3->O            2   0.275   0.416  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013 (opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8)
-     LUT4:I3->O           42   0.275   0.703  opb/OPB_DBus_I/Y_31_or00001 (OPB_DBus<31>)
+     LUT4:I3->O           47   0.275   0.711  opb/OPB_DBus_I/Y_31_or00001 (OPB_DBus<31>)
      end scope: 'opb'
      begin scope: 'audio_codec'
      LUT4:I2->O            2   0.275   0.378  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_and0000_inv1 (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_and0000_inv)
@@ -598,8 +599,8 @@ Delay:               12.429ns (Levels of Logic = 28)
      XORCY:CI->O           1   0.708   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Mcount_in_address_xor<9> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Mcount_in_address9)
      FDCE:D                    0.208          audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_9
     ----------------------------------------
-    Total                     12.429ns (5.930ns logic, 6.498ns route)
-                                       (47.7% logic, 52.3% route)
+    Total                     13.586ns (6.205ns logic, 7.381ns route)
+                                       (45.7% logic, 54.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_SysACE_CompactFlash_SysACE_CLK_pin'
@@ -679,7 +680,7 @@ Delay:               2.732ns (Levels of Logic = 3)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'opb/OPB_select'
   Clock period: 1.742ns (frequency: 573.937MHz)
-  Total number of paths / destination ports: 64 / 64
+  Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
 Delay:               1.742ns (Levels of Logic = 1)
   Source:            audio_dma_0/audio_dma_0/channel_data_31 (LATCH)
@@ -751,9 +752,9 @@ Delay:               1.581ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_pin'
-  Total number of paths / destination ports: 828 / 221
+  Total number of paths / destination ports: 1055 / 279
 -------------------------------------------------------------------------
-Offset:              7.997ns (Levels of Logic = 22)
+Offset:              8.005ns (Levels of Logic = 22)
   Source:            exp_io_45_pin (PAD)
   Destination:       audio_codec/audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_9 (FF)
   Destination Clock: sys_clk_pin rising
@@ -772,7 +773,7 @@ Offset:              7.997ns (Levels of Logic = 22)
      begin scope: 'opb'
      LUT4:I0->O            1   0.275   0.369  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013_SW0 (N983)
      LUT4:I3->O            2   0.275   0.416  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013 (opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8)
-     LUT4:I3->O           42   0.275   0.703  opb/OPB_DBus_I/Y_31_or00001 (OPB_DBus<31>)
+     LUT4:I3->O           47   0.275   0.711  opb/OPB_DBus_I/Y_31_or00001 (OPB_DBus<31>)
      end scope: 'opb'
      begin scope: 'audio_codec'
      LUT4:I2->O            2   0.275   0.378  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_and0000_inv1 (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_and0000_inv)
@@ -788,7 +789,7 @@ Offset:              7.997ns (Levels of Logic = 22)
      XORCY:CI->O           1   0.708   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Mcount_in_address_xor<9> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Mcount_in_address9)
      FDCE:D                    0.208          audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_9
     ----------------------------------------
-    Total                      7.997ns (4.351ns logic, 3.647ns route)
+    Total                      8.005ns (4.351ns logic, 3.654ns route)
                                        (54.4% logic, 45.6% route)
 
 =========================================================================
@@ -853,14 +854,14 @@ Offset:              1.583ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'opb/OPB_select'
-  Total number of paths / destination ports: 26 / 16
+  Total number of paths / destination ports: 13 / 8
 -------------------------------------------------------------------------
-Offset:              6.663ns (Levels of Logic = 12)
+Offset:              6.590ns (Levels of Logic = 12)
   Source:            exp_io_45_pin (PAD)
-  Destination:       audio_dma_0/audio_dma_0/control_reg_next_0 (LATCH)
+  Destination:       audio_dma_0/audio_dma_0/channel_data_0 (LATCH)
   Destination Clock: opb/OPB_select falling
 
-  Data Path: exp_io_45_pin to audio_dma_0/audio_dma_0/control_reg_next_0
+  Data Path: exp_io_45_pin to audio_dma_0/audio_dma_0/channel_data_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -868,20 +869,20 @@ Offset:              6.663ns (Levels of Logic = 12)
      begin scope: 'lab3_slave_0'
      LUT4:I2->O            1   0.275   0.430  lab3_slave_0/Sl_DBus<31>56_SW0 (N201)
      LUT3:I1->O            1   0.275   0.000  lab3_slave_0/Sl_DBus<31>84_SW0_F (N206)
-     MUXF5:I0->O           1   0.303   0.467  lab3_slave_0/Sl_DBus<31>84_SW0 (N204)
+     MUXF5:I0->O           1   0.303   0.468  lab3_slave_0/Sl_DBus<31>84_SW0 (N204)
      LUT4:I0->O            1   0.275   0.467  lab3_slave_0/Sl_DBus<31>84 (Sl_DBus<31>)
      end scope: 'lab3_slave_0'
      begin scope: 'opb'
      LUT4:I0->O            1   0.275   0.369  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013_SW0 (N983)
      LUT4:I3->O            2   0.275   0.416  opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013 (opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8)
-     LUT4:I3->O           42   0.275   0.783  opb/OPB_DBus_I/Y_31_or00001 (OPB_DBus<31>)
+     LUT4:I3->O           47   0.275   0.711  opb/OPB_DBus_I/Y_31_or00001 (OPB_DBus<31>)
      end scope: 'opb'
      begin scope: 'audio_dma_0'
-     LUT3:I1->O            1   0.275   0.000  audio_dma_0/Mmux_control_reg_next_mux0003251 (audio_dma_0/control_reg_next_mux0003<31>)
-     LDE:D                     0.208          audio_dma_0/control_reg_next_0
+     LUT4:I2->O            1   0.275   0.000  audio_dma_0/channel_data_mux0003<31>1 (audio_dma_0/channel_data_mux0003<31>)
+     LDE:D                     0.208          audio_dma_0/channel_data_0
     ----------------------------------------
-    Total                      6.663ns (3.314ns logic, 3.349ns route)
-                                       (49.7% logic, 50.3% route)
+    Total                      6.590ns (3.314ns logic, 3.276ns route)
+                                       (50.3% logic, 49.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'chipscope_icon_0/chipscope_icon_0/icon_inst/u_icon/i_yes_bscan/u_bs/drck1'
@@ -994,13 +995,13 @@ Offset:              0.370ns (Levels of Logic = 0)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 75.34 / 75.45 s | Elapsed : 75.00 / 75.00 s
+CPU : 59.34 / 59.41 s | Elapsed : 60.00 / 60.00 s
  
 --> 
 
-Total memory usage is 247340 kilobytes
+Total memory usage is 249196 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  104 (   0 filtered)
-Number of infos    :   39 (   0 filtered)
+Number of infos    :   37 (   0 filtered)
 

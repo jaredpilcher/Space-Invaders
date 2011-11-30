@@ -1,5 +1,5 @@
 (edif test (edifVersion 2 0 0) (edifLevel 0) (keywordMap (keywordLevel 0))
-(status (written (timeStamp 2011 11 29 18 31 48)
+(status (written (timeStamp 2011 11 30 15 15 50)
    (author "Xilinx, Inc.")
    (program "ChipScope Pro Core Generator" (version "9.1.03i (build 09103.7.81.1059)"))))
    (comment "**********************************")

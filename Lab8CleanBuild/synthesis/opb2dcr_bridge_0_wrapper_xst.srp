@@ -891,9 +891,9 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:1989 - Unit <address_decoder>: instances <MEM_DECODE_GEN[0].MEM_SELECT_I>, <MEM_DECODE_GEN[1].MEM_SELECT_I> of unit <pselect_1> are equivalent, second instance is removed
-INFO:Xst:2261 - The FF/Latch <RdCE_Out_i_reg_1> in Unit <address_decoder> is equivalent to the following FF/Latch, which will be removed : <RdCE_Out_i_reg_0> 
 INFO:Xst:2261 - The FF/Latch <CE_Out_i_reg_1> in Unit <address_decoder> is equivalent to the following 3 FFs/Latches, which will be removed : <CE_Out_i_reg_0> <CS_Out_i_reg_1> <CS_Out_i_reg_0> 
 INFO:Xst:2261 - The FF/Latch <WrCE_Out_i_reg_1> in Unit <address_decoder> is equivalent to the following FF/Latch, which will be removed : <WrCE_Out_i_reg_0> 
+INFO:Xst:2261 - The FF/Latch <RdCE_Out_i_reg_1> in Unit <address_decoder> is equivalent to the following FF/Latch, which will be removed : <RdCE_Out_i_reg_0> 
 INFO:Xst:2261 - The FF/Latch <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/CS_Size_i_reg_2> in Unit <opb2dcr_bridge_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/CS_Size_i_reg_1> 
 WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/RdCE_Out_i_reg_1> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
 WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/WrCE_Out_i_reg_1> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
@@ -1031,11 +1031,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+---------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                         | Load  |
------------------------------------+---------------------------------------------------------------+-------+
-OPB_dcrClk                         | NONE(opb2dcr_bridge_0/opb2dcr_bridge_core_1/OPB_dcrDBusOut_22)| 160   |
------------------------------------+---------------------------------------------------------------+-------+
+-----------------------------------+---------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                     | Load  |
+-----------------------------------+---------------------------------------------------------------------------+-------+
+OPB_dcrClk                         | NONE(opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_23)| 160   |
+-----------------------------------+---------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1142,7 +1142,7 @@ Delay:               0.411ns (Levels of Logic = 1)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 11.22 / 11.30 s | Elapsed : 11.00 / 11.00 s
+CPU : 11.11 / 11.19 s | Elapsed : 11.00 / 11.00 s
  
 --> 
 

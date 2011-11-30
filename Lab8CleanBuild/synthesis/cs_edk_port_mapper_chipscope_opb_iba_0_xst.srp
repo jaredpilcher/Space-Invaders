@@ -414,7 +414,7 @@ Delay:               0.000ns (Levels of Logic = 0)
 WARNING:Xst:616 - Invalid property "C_GENERIC_TRIGGER_IN_WIDTH 8": Did not attach to i_cs_coregen_chipscope_opb_iba_0.
 WARNING:Xst:616 - Invalid property "C_NUM_MASTERS 2": Did not attach to i_cs_coregen_chipscope_opb_iba_0.
 WARNING:Xst:616 - Invalid property "C_NUM_SLAVES 11": Did not attach to i_cs_coregen_chipscope_opb_iba_0.
-CPU : 10.16 / 10.24 s | Elapsed : 10.00 / 11.00 s
+CPU : 9.28 / 9.36 s | Elapsed : 9.00 / 9.00 s
  
 --> 
 

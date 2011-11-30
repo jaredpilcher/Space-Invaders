@@ -28,13 +28,14 @@ entity opb_master is
 end entity opb_master;
 
 architecture opbm of opb_master is
-	type state_type is (idle, request, address_select, acknowledged);
+	type state_type is (idle, retry, request, address_select, acknowledged);
 	signal next_state, current_state: state_type := idle;
 	signal data_out_reg, data_out_reg_next : std_logic_vector(0 to 31);
 	signal master_request: std_logic;
 	signal master_select: std_logic;
 	signal master_address: std_logic_vector(0 to 31);
 	signal master_data: std_logic_vector(0 to 31);
+	signal counter, counter_next : unsigned(0 to 31);
 	signal idle_sig: std_logic;
 begin
 	process(clk)
@@ -42,26 +43,32 @@ begin
 		if(clk'event and clk='1') then
 			current_state <= next_state;
 			data_out_reg  <= data_out_reg_next;
+			counter <= counter_next;
         end if;
     end process;
 	
-	process(enable,current_state, OPB_xferAck, OPB_MGrant,rnw)
+	process(enable,current_state, OPB_xferAck, OPB_MGrant,rnw, counter)
 	begin
 		next_state <= current_state;
 		master_data <= X"00000000";
 		master_address <= X"00000000";
 		idle_sig <= '0';
 		master_select <= '0';
+		data_out_reg_next <= data_out_reg;
+		counter_next <= counter + 1;
 		case current_state is
 			when idle =>
 				idle_sig <= '1';
 				if enable = '1' then
 					next_state <= request;
 				end if;
+			when retry =>
+				next_state <= request;
 			when request =>
 				master_request <= '1';
 				if OPB_MGrant = '1' then
 					next_state <= address_select;
+					counter_next <= (others => '0');
 				end if;
 			when address_select =>
 				master_request <= '0';
@@ -69,13 +76,16 @@ begin
 				master_address <= address;
 				if OPB_xferAck = '1' then
 					next_state <= acknowledged;
+					data_out_reg_next <= OPB_DBus;
 				end if;
 				if rnw = '0' then
 					master_data <= data;
 				end if;
+				if counter = 500 then
+					next_state <= retry;
+				end if;
 			when acknowledged =>
 				next_state <= idle;
-				data_out_reg_next <= OPB_DBus;
 			when others =>
 		end case;
 	end process;

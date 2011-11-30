@@ -92,7 +92,7 @@ entity audio_dma is
 end entity audio_dma;
 
 architecture dma of audio_dma is
-	type state_type is (idle, read_audio, write_audio);
+	type state_type is (idle, read_audio, write_audio, write_silence);
 	signal next_state, current_state: state_type := idle;
 	
 	--Used when write to an address that isn't set up yet
@@ -105,10 +105,12 @@ architecture dma of audio_dma is
 	signal master_rnw_reg, master_rnw_reg_next, master_idle_out: std_logic := '0';
 	signal master_address_reg, master_address_reg_next, master_data_reg, master_data_reg_next, master_data_out: std_logic_vector(0 to 31);
 	signal data_out: std_logic_vector(0 to 31);
-	signal cur_index, next_index: unsigned(0 to 31);
+	signal destination, destination_next: std_logic_vector(0 to 31);
+	signal cur_index, next_index: std_logic_vector(0 to 31);
 	signal channel_addr_we, channel_length_we: std_logic;
 	signal channel_data, channel_addr_out, channel_length_out: std_logic_vector(0 to 31);
 	signal channel_select: std_logic_vector(0 to 2);
+	signal interrupt: std_logic;
 	
 	
 	component opb_master is
@@ -158,6 +160,7 @@ begin
 			current_state<=next_state;
 			our_value <= our_value_next;
 			control_reg <= control_reg_next;
+			destination <= destination_next;
 			master_address_reg <= master_address_reg_next;
 			master_data_reg <= master_data_reg_next;
 			master_rnw_reg <= master_rnw_reg_next;
@@ -165,33 +168,57 @@ begin
         end if;
     end process;
 	
-	process(current_state, OPB_MGrant, OPB_xferAck,OPB_select, OPB_RNW, OPB_ABus, OPB_DBus, OPB_Clk)
+	process(current_state, OPB_MGrant, OPB_xferAck,OPB_select, OPB_RNW, OPB_ABus, OPB_DBus, OPB_Clk, master_idle_out)
 	begin
 		next_state <= current_state;
 		next_index <= cur_index;
 		master_address_reg_next <= master_address_reg;
 		master_data_reg_next <= master_data_reg;
 		master_rnw_reg_next <= master_rnw_reg;
+		destination_next <= destination;
 		Sl_xferAck <= '0';
 		our_value_next <= our_value;
 		master_enable <= '0';
 		data_out <= X"00000000";
 		channel_addr_we <= '0';
 		channel_length_we <= '0';
+		control_reg_next <= control_reg;
 		case current_state is
 			when idle =>
-				if enable_reg = '1' and master_idle_out = '1' then
-					next_state <= read_audio;
+				if interrupt = '1' and master_idle_out = '1' then
+					if enable_reg = '1' and (cur_index /= channel_length_out) then
+						next_state <= read_audio;
+					else
+						next_state <= write_silence;
+					end if;
 				end if;
 			when read_audio =>
 				if master_idle_out = '1' then
-					--master_enable <= '1';
-					--master_address_reg_next <= cur_chan_addr1 + cur_index;
+					master_enable <= '1';
+					master_address_reg_next <= channel_addr_out + cur_index;
+					--next_index <= cur_index + unsigned(4);
 					--next_index <= cur_index + 4;
-					--master_data_reg_next <= OPB_DBus;
-					--master_rnw_reg_next <= '1';
+					--master_data_reg_next <= master_data_out;
+					master_rnw_reg_next <= '1';
+					next_state <= write_audio;
 					--next_state <= idle;
-					--enable_reg_next <= '0';
+				end if;
+			when write_silence =>
+				if master_idle_out = '1' then
+					master_enable <= '1';
+					master_address_reg_next <= destination;
+					master_data_reg_next <= (others => '0');
+					master_rnw_reg_next <= '0';
+					next_state <= idle;
+				end if;
+			when write_audio =>
+				if master_idle_out = '1' then
+					master_enable <= '1';
+					master_address_reg_next <= destination;
+					master_data_reg_next <= master_data_out;
+					master_rnw_reg_next <= '0';
+					next_state <= idle;
+					next_index <= cur_index + 4;
 				end if;
 			when others =>
 				next_state <= idle;
@@ -207,6 +234,8 @@ begin
 							data_out <= channel_addr_out;
 						when C_BASEADDR + 8 =>
 							data_out <= channel_length_out;
+						when C_BASEADDR + 12 =>
+							data_out <= master_data_out;
 						when others =>
 							data_out <= X"00000000";
 					end case;
@@ -215,12 +244,17 @@ begin
 					case OPB_ABus is
 						when C_BASEADDR =>
 							control_reg_next <= OPB_DBus;
+							if control_reg_next(29 to 31) /= control_reg(29 to 31) then
+								next_index <= (others => '0');
+							end if;
 						when C_BASEADDR + 4 =>
 							channel_data <= OPB_DBus;
 							channel_addr_we <= '1';
 						when C_BASEADDR + 8 =>
 							channel_data <= OPB_DBus;
 							channel_length_we <= '1';
+						when C_BASEADDR + 12 =>
+							destination_next <= OPB_DBus;
 						when others =>
 					end case;
 					Sl_xferAck <= '1';
@@ -229,6 +263,7 @@ begin
 		end if;
 	end process;
 	
+	interrupt <= control_reg(27);
 	enable_reg <= control_reg(28);
     M_busLock <= '0';
     M_seqAddr <= '0';
