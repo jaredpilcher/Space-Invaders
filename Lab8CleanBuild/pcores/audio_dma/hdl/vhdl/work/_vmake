@@ -1,0 +1,21 @@
+m255
+K3
+cModel Technology
+Eaudio_dma
+Z0 !s91 D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+Z1 !s90 -reportprogress|300|-work|work|D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd|
+Adma
+Z2 !s91 D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+R1
+Echannel_bank
+Z3 !s91 D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+Z4 !s90 -reportprogress|300|-work|work|D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd|
+Achanbank
+R3
+R4
+Eopb_master
+Z5 !s91 D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+Z6 !s90 -reportprogress|300|-work|work|D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd|
+Aopbm
+R5
+R6

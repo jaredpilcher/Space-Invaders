@@ -1,0 +1,56 @@
+HDL language for the peripheral (top level) design unit audio_dma is vhdl ...
+WARNING:MDT - Project file
+   D:\Put_Your_Temp_Files_Here\MJD\Lab8Extended\Lab8\pcores/audio_dma.prj
+   already exists, will be overwrite and removed afterward ...
+INFO:MDT - Create temparary xst project file:
+   D:\Put_Your_Temp_Files_Here\MJD\Lab8Extended\Lab8\pcores/audio_dma.prj
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/MJD/Lab8Extended/audio_dma.vhd"
+in Library audio_dma.
+Entity <audio_dma> compiled.
+Entity <audio_dma> (Architecture <audio_dma_arch>) compiled.
+
+
+Analyzing HDL attributes ...
+INFO:MDT - IPTYPE set to value : PERIPHERAL
+INFO:MDT - IMP_NETLIST set to value : TRUE
+INFO:MDT - HDL set to value : VHDL
+WARNING:MDT - Unable to delete temparary project file
+   D:\Put_Your_Temp_Files_Here\MJD\Lab8Extended\Lab8\pcores\audio_dma.prj : 13
+ERROR:MDT - OPB MasterSlave Output Signal connected to bus port Sl_DBus defined
+   more than once in HDL source
+INFO:MDT - Infer bus clock [OPB_Clk] for bus interface MSOPB ...
+WARNING:MDT - psfutil cannot infer bus connector Sl_DBus due to multiple
+   candidates ...
+ERROR:MDT - No port was associated to bus connector M_DBus!
+ERROR:MDT - No port was associated to bus connector Sl_DBus!
+Copying file audio_dma.vhd to
+D:\Put_Your_Temp_Files_Here\MJD\Lab8Extended\Lab8\pcores/audio_dma/hdl/vhdl/ ...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under
+D:\Put_Your_Temp_Files_Here\MJD\Lab8Extended\Lab8\pcores\audio_dma.
+
+Summary:
+
+  Logical library     : audio_dma
+  Version             : None
+  Bus interface(s)    : MSOPB 
+
+The following sub-directories will be created:
+
+  - audio_dma\data
+  - audio_dma\hdl
+  - audio_dma\hdl\vhdl
+
+
+The following HDL source files will be copied into the audio_dma\hdl\vhdl
+directory:
+
+  - audio_dma.vhd
+
+The following files will be created under the audio_dma\data directory:
+
+  - audio_dma_v2_1_0.mpd
+  - audio_dma_v2_1_0.pao
+
+

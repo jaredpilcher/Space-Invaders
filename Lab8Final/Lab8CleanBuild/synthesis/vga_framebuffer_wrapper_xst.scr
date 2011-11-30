@@ -1,0 +1,12 @@
+run
+-opt_mode speed
+-opt_level 1
+-p xc2vp30ff896-7
+-top vga_framebuffer_wrapper
+-ifmt MIXED
+-ifn vga_framebuffer_wrapper_xst.prj
+-ofn ../implementation/vga_framebuffer_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"D:\Put_Your_Temp_Files_Here\space_invaders\Lab8Final\Lab8CleanBuild\pcores\" "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\Xilinx91i\EDK\hw\XilinxReferenceDesigns\pcores\" }

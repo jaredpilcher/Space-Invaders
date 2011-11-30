@@ -1,0 +1,22 @@
+# Reading C:/modeltech_6.4/tcl/vsim/pref.tcl 
+# //  ModelSim SE 6.4 Jun 18 2008 
+# //
+# //  Copyright 1991-2008 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# OpenFile D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd 
+vlib work
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma

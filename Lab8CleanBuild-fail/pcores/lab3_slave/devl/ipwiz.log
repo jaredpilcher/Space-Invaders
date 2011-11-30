@@ -1,0 +1,52 @@
+HDL language for the peripheral (top level) design unit OPBSlaveExample is vhdl
+...
+WARNING:MDT - Project file
+   C:\hutch\ECEn427\Labs\Lab6WithOPBSlaveTest1\pcores/lab3_slave.prj already
+   exists, will be overwrite and removed afterward ...
+INFO:MDT - Create temparary xst project file:
+   C:\hutch\ECEn427\Labs\Lab6WithOPBSlaveTest1\pcores/lab3_slave.prj
+Compiling vhdl file
+"C:/hutch/ECEn427/Labs/Lab6WithOPBSlaveTest1/MyHDL/OPBSlaveExample.vhd" in
+Library lab3_slave.
+Entity <lab3_slave> compiled.
+Entity <lab3_slave> (Architecture <IMP>) compiled.
+
+
+Analyzing HDL attributes ...
+INFO:MDT - IPTYPE set to value : PERIPHERAL
+INFO:MDT - IMP_NETLIST set to value : TRUE
+INFO:MDT - HDL set to value : VHDL
+WARNING:MDT - Unable to delete temparary project file
+   C:\hutch\ECEn427\Labs\Lab6WithOPBSlaveTest1\pcores\lab3_slave.prj : 13
+INFO:MDT - Infer bus clock [OPB_Clk] for bus interface SOPB ...
+Copying file OPBSlaveExample.vhd to
+C:\hutch\ECEn427\Labs\Lab6WithOPBSlaveTest1\pcores/lab3_slave/hdl/vhdl/ ...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under
+C:\hutch\ECEn427\Labs\Lab6WithOPBSlaveTest1\pcores\lab3_slave.
+
+Summary:
+
+  Logical library     : lab3_slave
+  Version             : None
+  Bus interface(s)    : SOPB 
+
+The following sub-directories will be created:
+
+  - lab3_slave\data
+  - lab3_slave\hdl
+  - lab3_slave\hdl\vhdl
+
+
+The following HDL source files will be copied into the lab3_slave\hdl\vhdl
+directory:
+
+  - OPBSlaveExample.vhd
+
+The following files will be created under the lab3_slave\data directory:
+
+  - lab3_slave_v2_1_0.mpd
+  - lab3_slave_v2_1_0.pao
+
+

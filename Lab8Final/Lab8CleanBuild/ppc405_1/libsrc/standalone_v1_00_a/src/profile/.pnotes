@@ -1,0 +1,5 @@
+$Command Line:   xcs publish -notes="restore files from HEAD to EDK_HEAD" -noquestions -reviewer1=salindac
+$Publish Tag :   
+$Published To:   Subsystem Integrator
+$reviewer1: salindac
+$notes: restore files from HEAD to EDK_HEAD

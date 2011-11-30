@@ -1,0 +1,1285 @@
+# Reading C:/modeltech_6.4/tcl/vsim/pref.tcl 
+# //  ModelSim SE 6.4 Jun 18 2008 
+# //
+# //  Copyright 1991-2008 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# OpenFile D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd 
+vlib work
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(151): (vcom-1014) Array type case expression must be of a locally static subtype.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(152): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(173): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(173): (vcom-1136) Unknown identifier "sl_dbusen".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(179): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(179): (vcom-1136) Unknown identifier "interruptrequest".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(182): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(152): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(173): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(173): (vcom-1136) Unknown identifier "sl_dbusen".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(179): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(179): (vcom-1136) Unknown identifier "interruptrequest".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(182): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(152): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(178): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(178): (vcom-1136) Unknown identifier "interruptrequest".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(181): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(152): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(151): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(13): Index constraint cannot be applied to non-array type ieee.std_logic_1164.std_logic.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(14): Index constraint cannot be applied to non-array type ieee.std_logic_1164.std_logic.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): (vcom-1136) Unknown identifier "opb_dbus".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): Bad resolution function (std_logic) for type (error).
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): near ":": expecting ';' or ')'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): (vcom-1136) Unknown identifier "opb_dbus".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): Bad resolution function (std_logic) for type (error).
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): near ":": expecting ';' or ')'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): (vcom-1136) Unknown identifier "opb_dbus".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): Bad resolution function (std_logic) for type (error).
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(16): near ":": expecting ';' or ')'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(27): near ")": expecting "IDENTIFIER"
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(28): near "end": expecting ';'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(28): near "end": expecting ';'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(28): near "end": expecting ';'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(40): (vcom-1136) Unknown identifier "opb_clk".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(40): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(42): (vcom-1136) Unknown identifier "opb_clk".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(42): Attribute "event" requires a static signal prefix.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(42): (vcom-1136) Unknown identifier "opb_clk".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(42): Bad expression in right operand of infix expression "and".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(42): Type error resolving infix expression "and" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(79): near "end": expecting "PROCESS"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(85): near "M_DBus": expecting ';'
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(88): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(40): (vcom-1136) Unknown identifier "opb_clk".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(40): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(79): near "end": expecting "PROCESS"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(85): near "M_DBus": expecting ';'
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(88): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(79): near "end": expecting "PROCESS"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(85): near "M_DBus": expecting ';'
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(88): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(83): near "M_DBus": expecting ';'
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(86): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(68): (vcom-1136) Unknown identifier "opb_xferack".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(68): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd(88): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(96): (vcom-1136) Unknown identifier "request".
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(156): Case choice must be a locally static expression.
+# ** Warning: [14] D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(159): Array length is 32; string literal length is 8.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(160): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(160): (vcom-1136) Unknown identifier "rnw".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(170): (vcom-1136) Unknown identifier "master_request".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(175): (vcom-1136) Unknown identifier "rnw".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(176): (vcom-1136) Unknown identifier "master_select".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(204): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(156): Case choice must be a locally static expression.
+# ** Warning: [14] D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(159): Array length is 32; string literal length is 8.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(160): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(160): (vcom-1136) Unknown identifier "rnw".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(170): (vcom-1136) Unknown identifier "master_request".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(175): (vcom-1136) Unknown identifier "rnw".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(176): (vcom-1136) Unknown identifier "master_select".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(204): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(156): Case choice must be a locally static expression.
+# ** Warning: [14] D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(159): Array length is 32; string literal length is 8.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(170): (vcom-1136) Unknown identifier "master_request".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(175): (vcom-1136) Unknown identifier "rnw".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(176): (vcom-1136) Unknown identifier "master_select".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(204): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(156): Case choice must be a locally static expression.
+# ** Warning: [14] D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(159): Array length is 32; string literal length is 8.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(156): Case choice must be a locally static expression.
+# ** Warning: [14] D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(159): Array length is 32; string literal length is 8.
+vsim -gui work.audio_dma
+# vsim -gui work.audio_dma 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.audio_dma(dma)#1
+# Loading work.opb_master(opbm)#1
+add wave \
+{sim:/audio_dma/opb_clk } \
+{sim:/audio_dma/opb_rst } \
+{sim:/audio_dma/opb_dbus } \
+{sim:/audio_dma/opb_errack } \
+{sim:/audio_dma/opb_mgrant } \
+{sim:/audio_dma/opb_retry } \
+{sim:/audio_dma/opb_timeout } \
+{sim:/audio_dma/opb_xferack } \
+{sim:/audio_dma/opb_abus } \
+{sim:/audio_dma/opb_be } \
+{sim:/audio_dma/opb_rnw } \
+{sim:/audio_dma/opb_select } \
+{sim:/audio_dma/opb_seqaddr } \
+{sim:/audio_dma/m_abus } \
+{sim:/audio_dma/m_be } \
+{sim:/audio_dma/m_buslock } \
+{sim:/audio_dma/m_dbus } \
+{sim:/audio_dma/m_request } \
+{sim:/audio_dma/m_rnw } \
+{sim:/audio_dma/m_select } \
+{sim:/audio_dma/m_seqaddr } \
+{sim:/audio_dma/sl_dbus } \
+{sim:/audio_dma/sl_errack } \
+{sim:/audio_dma/sl_retry } \
+{sim:/audio_dma/sl_toutsup } \
+{sim:/audio_dma/sl_xferack } \
+{sim:/audio_dma/ac97int } \
+{sim:/audio_dma/next_state } \
+{sim:/audio_dma/current_state } \
+{sim:/audio_dma/our_value } \
+{sim:/audio_dma/our_value_next } \
+{sim:/audio_dma/master_enable_reg } \
+{sim:/audio_dma/master_enable_reg_next } \
+{sim:/audio_dma/master_rnw } \
+{sim:/audio_dma/master_idle_out } \
+{sim:/audio_dma/master_address } \
+{sim:/audio_dma/master_data } \
+{sim:/audio_dma/master_data_out } 
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(156): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(159): (vcom-1076) OTHERS choice can not be used in unconstrained array aggregate.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(199): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(156): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(160): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(140): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(140): (vcom-1136) Unknown identifier "master_enable_reg".
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(179): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(204): (vcom-1136) Unknown identifier "master_rnw".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(219): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(180): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(205): (vcom-1136) Unknown identifier "master_rnw".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(220): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(180): Case choice must be a locally static expression.
+quit -sim
+vsim -gui work.audio_dma
+# vsim -gui work.audio_dma 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.audio_dma(dma)#1
+# Loading work.opb_master(opbm)#1
+add wave \
+{sim:/audio_dma/opb_clk } \
+{sim:/audio_dma/opb_rst } \
+{sim:/audio_dma/opb_dbus } \
+{sim:/audio_dma/opb_errack } \
+{sim:/audio_dma/opb_mgrant } \
+{sim:/audio_dma/opb_retry } \
+{sim:/audio_dma/opb_timeout } \
+{sim:/audio_dma/opb_xferack } \
+{sim:/audio_dma/opb_abus } \
+{sim:/audio_dma/opb_be } \
+{sim:/audio_dma/opb_rnw } \
+{sim:/audio_dma/opb_select } \
+{sim:/audio_dma/opb_seqaddr } \
+{sim:/audio_dma/m_abus } \
+{sim:/audio_dma/m_be } \
+{sim:/audio_dma/m_buslock } \
+{sim:/audio_dma/m_dbus } \
+{sim:/audio_dma/m_request } \
+{sim:/audio_dma/m_rnw } \
+{sim:/audio_dma/m_select } \
+{sim:/audio_dma/m_seqaddr } \
+{sim:/audio_dma/sl_dbus } \
+{sim:/audio_dma/sl_errack } \
+{sim:/audio_dma/sl_retry } \
+{sim:/audio_dma/sl_toutsup } \
+{sim:/audio_dma/sl_xferack } \
+{sim:/audio_dma/ac97int } \
+{sim:/audio_dma/next_state } \
+{sim:/audio_dma/current_state } \
+{sim:/audio_dma/our_value } \
+{sim:/audio_dma/our_value_next } \
+{sim:/audio_dma/enable_reg } \
+{sim:/audio_dma/enable_reg_next } \
+{sim:/audio_dma/master_enable } \
+{sim:/audio_dma/master_rnw_reg } \
+{sim:/audio_dma/master_rnw_reg_next } \
+{sim:/audio_dma/master_idle_out } \
+{sim:/audio_dma/master_address_reg } \
+{sim:/audio_dma/master_address_reg_next } \
+{sim:/audio_dma/master_data_reg } \
+{sim:/audio_dma/master_data_reg_next } \
+{sim:/audio_dma/master_data_out } 
+force -freeze sim:/audio_dma/opb_clk 1 0, 0 {50 ns} -r 100
+add wave \
+{sim:/audio_dma/opb_dbus } 
+force -freeze sim:/audio_dma/opb_dbus 00000000000000000000000000000001 0
+add wave \
+{sim:/audio_dma/opb_abus } 
+force -freeze sim:/audio_dma/opb_abus 01000000000010010000000000000000 0
+run 1ms
+add wave \
+{sim:/audio_dma/opb_select } 
+force -freeze sim:/audio_dma/opb_select 1 0
+run 100 ns
+force -freeze sim:/audio_dma/opb_select 1 0
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(183): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(183): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(184): Signal "master_enable" is type ieee.std_logic_1164.std_logic; expecting type ieee.std_logic_1164.std_logic_vector.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(185): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(186): Signal "master_idle_out" is type ieee.std_logic_1164.std_logic; expecting type ieee.std_logic_1164.std_logic_vector.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(193): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(233): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(183): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(186): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(195): Case choice must be a locally static expression.
+quit -sim
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vsim -gui work.opb_master
+# vsim -gui work.opb_master 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.opb_master(opbm)#1
+add wave \
+{sim:/opb_master/clk } \
+{sim:/opb_master/enable } \
+{sim:/opb_master/address } \
+{sim:/opb_master/rnw } \
+{sim:/opb_master/data } \
+{sim:/opb_master/data_out } \
+{sim:/opb_master/idle_out } \
+{sim:/opb_master/opb_dbus } \
+{sim:/opb_master/opb_xferack } \
+{sim:/opb_master/opb_mgrant } \
+{sim:/opb_master/m_abus } \
+{sim:/opb_master/m_be } \
+{sim:/opb_master/m_dbus } \
+{sim:/opb_master/m_request } \
+{sim:/opb_master/m_rnw } \
+{sim:/opb_master/m_select } \
+{sim:/opb_master/next_state } \
+{sim:/opb_master/current_state } \
+{sim:/opb_master/data_out_reg } \
+{sim:/opb_master/data_out_reg_next } \
+{sim:/opb_master/master_request } \
+{sim:/opb_master/master_select } \
+{sim:/opb_master/master_address } \
+{sim:/opb_master/master_data } \
+{sim:/opb_master/idle_sig } 
+force -freeze sim:/opb_master/clk 1 0, 0 {50 ns} -r 100
+force -freeze sim:/opb_master/enable 0 0
+force -freeze sim:/opb_master/rnw 0 0
+force -freeze sim:/opb_master/address 00000000000000000000000000000000 0
+force -freeze sim:/opb_master/data 00000000000000000000000000000000 0
+force -freeze sim:/opb_master/opb_dbus 00000000000000000000000000000000 0
+force -freeze sim:/opb_master/opb_xferack 0 0
+force -freeze sim:/opb_master/opb_mgrant 0 0
+run 1ms
+force -freeze sim:/opb_master/enable 1 0
+run 100ns
+force -freeze sim:/opb_master/data_out 00000000000000000000000000000000 0
+noforce sim:/opb_master/data_out
+run 500ns
+force -freeze sim:/opb_master/opb_mgrant 1 0
+run 100ns
+run 100ns
+quit -sim
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity opb_master
+# -- Compiling architecture opbm of opb_master
+vsim -gui work.opb_master
+# vsim -gui work.opb_master 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.opb_master(opbm)#1
+add wave \
+{sim:/opb_master/clk } \
+{sim:/opb_master/enable } \
+{sim:/opb_master/address } \
+{sim:/opb_master/rnw } \
+{sim:/opb_master/data } \
+{sim:/opb_master/data_out } \
+{sim:/opb_master/idle_out } \
+{sim:/opb_master/opb_dbus } \
+{sim:/opb_master/opb_xferack } \
+{sim:/opb_master/opb_mgrant } \
+{sim:/opb_master/m_abus } \
+{sim:/opb_master/m_be } \
+{sim:/opb_master/m_dbus } \
+{sim:/opb_master/m_request } \
+{sim:/opb_master/m_rnw } \
+{sim:/opb_master/m_select } \
+{sim:/opb_master/next_state } \
+{sim:/opb_master/current_state } \
+{sim:/opb_master/data_out_reg } \
+{sim:/opb_master/data_out_reg_next } \
+{sim:/opb_master/master_request } \
+{sim:/opb_master/master_select } \
+{sim:/opb_master/master_address } \
+{sim:/opb_master/master_data } \
+{sim:/opb_master/idle_sig } 
+force -freeze sim:/opb_master/clk 1 0, 0 {50 ns} -r 100
+force -freeze sim:/opb_master/enable 0 0
+force -freeze sim:/opb_master/address 00000000000000000000000000000000 0
+force -freeze sim:/opb_master/rnw 0 0
+force -freeze sim:/opb_master/data 00000000000000000000000000000000 0
+force -freeze sim:/opb_master/opb_dbus 00000000000000000000000000000000 0
+force -freeze sim:/opb_master/opb_xferack 0 0
+force -freeze sim:/opb_master/opb_mgrant 0 0
+force -freeze sim:/opb_master/opb_mgrant 0 0
+run 1ms
+force -freeze sim:/opb_master/enable 1 0
+run 100ns
+run 100ns
+force -freeze sim:/opb_master/enable 0 0
+force -freeze sim:/opb_master/opb_mgrant 1 0
+run 200ns
+force -freeze sim:/opb_master/opb_mgrant 0 0
+force -freeze sim:/opb_master/data 00000000100010000100000000000000 0
+run 100ns
+run 100ns
+force -freeze sim:/opb_master/opb_xferack 1 0
+run 200ns
+run 100ns
+run 1ms
+force -freeze sim:/opb_master/opb_xferack 0 0
+quit -sim
+vsim -gui work.audio_dma
+# vsim -gui work.audio_dma 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.audio_dma(dma)#1
+# Loading work.opb_master(opbm)#1
+add wave \
+{sim:/audio_dma/opb_clk } \
+{sim:/audio_dma/opb_rst } \
+{sim:/audio_dma/opb_dbus } \
+{sim:/audio_dma/opb_errack } \
+{sim:/audio_dma/opb_mgrant } \
+{sim:/audio_dma/opb_retry } \
+{sim:/audio_dma/opb_timeout } \
+{sim:/audio_dma/opb_xferack } \
+{sim:/audio_dma/opb_abus } \
+{sim:/audio_dma/opb_be } \
+{sim:/audio_dma/opb_rnw } \
+{sim:/audio_dma/opb_select } \
+{sim:/audio_dma/opb_seqaddr } \
+{sim:/audio_dma/m_abus } \
+{sim:/audio_dma/m_be } \
+{sim:/audio_dma/m_buslock } \
+{sim:/audio_dma/m_dbus } \
+{sim:/audio_dma/m_request } \
+{sim:/audio_dma/m_rnw } \
+{sim:/audio_dma/m_select } \
+{sim:/audio_dma/m_seqaddr } \
+{sim:/audio_dma/sl_dbus } \
+{sim:/audio_dma/sl_errack } \
+{sim:/audio_dma/sl_retry } \
+{sim:/audio_dma/sl_toutsup } \
+{sim:/audio_dma/sl_xferack } \
+{sim:/audio_dma/ac97int } \
+{sim:/audio_dma/next_state } \
+{sim:/audio_dma/current_state } \
+{sim:/audio_dma/our_value } \
+{sim:/audio_dma/our_value_next } \
+{sim:/audio_dma/enable_reg } \
+{sim:/audio_dma/enable_reg_next } \
+{sim:/audio_dma/master_enable } \
+{sim:/audio_dma/master_rnw_reg } \
+{sim:/audio_dma/master_rnw_reg_next } \
+{sim:/audio_dma/master_idle_out } \
+{sim:/audio_dma/master_address_reg } \
+{sim:/audio_dma/master_address_reg_next } \
+{sim:/audio_dma/master_data_reg } \
+{sim:/audio_dma/master_data_reg_next } \
+{sim:/audio_dma/master_data_out } \
+{sim:/audio_dma/data_out } 
+force -freeze sim:/audio_dma/opb_clk 1 0, 0 {50 ns} -r 100
+force -freeze sim:/audio_dma/opb_clk 1 0, 0 {50 ns} -r 100
+force -freeze sim:/audio_dma/opb_rst 0 0
+force -freeze sim:/audio_dma/opb_dbus 00000000000000000000000000000000 0
+force -freeze sim:/audio_dma/opb_errack 0 0
+force -freeze sim:/audio_dma/opb_mgrant 0 0
+force -freeze sim:/audio_dma/opb_retry 0 0
+force -freeze sim:/audio_dma/opb_timeout 0 0
+force -freeze sim:/audio_dma/opb_xferack 0 0
+force -freeze sim:/audio_dma/opb_abus 00000000000000000000000000000000 0
+force -freeze sim:/audio_dma/opb_be 0 0
+force -freeze sim:/audio_dma/opb_rnw 0 0
+force -freeze sim:/audio_dma/opb_select 0 0
+force -freeze sim:/audio_dma/opb_seqaddr 0 0
+run 100us
+force -freeze sim:/audio_dma/opb_dbus 00000000000000000000000000000001 0
+run 200ns
+run 400ns
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity channel_bank
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(17): near ")": expecting "IDENTIFIER"
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity channel_bank
+# -- Compiling architecture chanbank of channel_bank
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(52): near "cur_chan_addr0": expecting ';'
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(77): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(78): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(78): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(79): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(79): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(80): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(80): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(81): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(81): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(82): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(82): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(83): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(83): near "out": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(84): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(84): near "out": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Cannot resolve expression type of label "chan_sel_in".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Cannot resolve expression type of label "addr_we".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): (vcom-1136) Unknown identifier "lenth_we".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Cannot resolve expression type of label "data_in".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Illegal sequential statement.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(91): near "next_chan_addr0": expecting ';'
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(116): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(116): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(117): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(117): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(118): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(120): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(120): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(121): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(123): near "when": expecting "END"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(125): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(125): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(126): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(126): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(127): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(129): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(129): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(130): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(132): near "when": expecting "END"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(134): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(134): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(135): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(135): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(136): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(138): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(138): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(139): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(141): near "when": syntax error
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(143): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(143): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(144): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(144): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(145): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(147): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(147): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(148): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(150): near "when": syntax error
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(152): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(152): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(153): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(153): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(154): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(156): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(156): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(157): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(159): near "when": syntax error
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(161): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(161): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(162): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(162): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(163): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(165): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(165): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(166): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(168): near "when": syntax error
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(170): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(170): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(171): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(171): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(172): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(174): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(174): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(175): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(177): near "when": syntax error
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(179): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(179): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(180): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(180): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(181): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(183): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(183): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(184): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(186): near "when": syntax error
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity channel_bank
+# -- Compiling architecture chanbank of channel_bank
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(77): Symbol "clk" has already been declared in this region.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(77): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(78): Symbol "chan_sel_in" has already been declared in this region.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(78): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(78): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(79): Symbol "chan_sel_out" has already been declared in this region.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(79): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(79): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(80): Symbol "addr_we" has already been declared in this region.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(80): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(80): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(81): Symbol "length_we" has already been declared in this region.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(81): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(81): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(82): Symbol "data_in" has already been declared in this region.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(82): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(82): near "in": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(83): Symbol "addr_out" has already been declared in this region.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(83): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(83): near "out": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(84): Symbol "length_out" has already been declared in this region.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(84): Statement cannot be labeled.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(84): near "out": expecting "WITH"
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Cannot resolve expression type of label "chan_sel_in".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Cannot resolve expression type of label "addr_we".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): (vcom-1136) Unknown identifier "lenth_we".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Cannot resolve expression type of label "data_in".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(87): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(113): Cannot resolve expression type.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(114): String literal found where non-array type (error) was expected.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(115): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(115): Bad target (label "addr_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(116): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(116): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(117): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(117): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(118): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(120): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(120): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(121): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(123): String literal found where non-array type (error) was expected.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(124): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(124): Bad target (label "addr_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(125): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(125): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(126): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(126): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(127): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(129): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(129): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(130): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(132): String literal found where non-array type (error) was expected.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(133): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(133): Bad target (label "addr_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(134): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(134): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(135): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(135): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(136): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(138): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(138): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(139): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(141): String literal found where non-array type (error) was expected.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(142): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(142): Bad target (label "addr_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(143): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(143): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(144): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(144): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(145): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(147): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(147): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(148): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(150): String literal found where non-array type (error) was expected.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(151): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(151): Bad target (label "addr_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(152): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(152): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(153): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(153): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(154): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(156): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(156): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(157): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(159): String literal found where non-array type (error) was expected.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(160): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(160): Bad target (label "addr_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(161): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(161): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(162): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(162): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(163): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(165): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(165): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(166): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(168): String literal found where non-array type (error) was expected.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(169): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(169): Bad target (label "addr_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(170): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(170): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(171): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(171): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(172): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(174): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(174): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(175): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(178): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(178): Bad target (label "addr_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(179): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(179): Bad target (label "length_out") for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(180): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(180): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(181): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(183): Bad expression in left operand of infix expression "=".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(183): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(184): Bad expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(177): OTHERS must be the only choice in the last case statement alternative.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(191): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity channel_bank
+# -- Compiling architecture chanbank of channel_bank
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(79): (vcom-1136) Unknown identifier "lenth_we".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(79): Expression is not a signal.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(169): OTHERS must be the only choice in the last case statement alternative.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(183): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity channel_bank
+# -- Compiling architecture chanbank of channel_bank
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(169): OTHERS must be the only choice in the last case statement alternative.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(183): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity channel_bank
+# -- Compiling architecture chanbank of channel_bank
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(169): near "others": syntax error
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(183): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity channel_bank
+# -- Compiling architecture chanbank of channel_bank
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(169): near "others": syntax error
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd(183): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity channel_bank
+# -- Compiling architecture chanbank of channel_bank
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(112): near "component": expecting ';'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(190): No feasible entries for infix operator "+".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(190): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(205): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(208): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(211): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(219): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(221): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(223): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(265): near ":": expecting ',' or ')'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(190): No feasible entries for infix operator "+".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(190): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(205): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(208): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(211): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(219): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(221): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(223): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(266): (vcom-1136) Unknown identifier "channel_select".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(267): (vcom-1136) Unknown identifier "channel_addr_we".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(268): (vcom-1136) Unknown identifier "channel_length_we".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(269): (vcom-1136) Unknown identifier "channel_data_in".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(270): (vcom-1136) Unknown identifier "channel_addr_out".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(271): (vcom-1136) Unknown identifier "channel_length_out".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(274): near "entity": expecting ';'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(194): No feasible entries for infix operator "+".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(194): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(209): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(212): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(215): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(223): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(225): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(227): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(278): near "entity": expecting ';'
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(194): No feasible entries for infix operator "+".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(194): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(209): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(212): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(215): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(223): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(225): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(227): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(277): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(194): No feasible entries for infix operator "+".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(194): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(209): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(212): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(215): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(223): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(225): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(227): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(277): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(209): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(212): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(215): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(223): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(225): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(227): Case choice must be a locally static expression.
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(171): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(171): (vcom-1136) Unknown identifier "next_chan_length1".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(172): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(172): (vcom-1136) Unknown identifier "next_chan_addr1".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(173): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(173): (vcom-1136) Unknown identifier "enable_reg_next".
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(207): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(209): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(211): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(206): Case statement covers only 3 out of 3.43368e+030 cases.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(218): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(220): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(221): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(221): (vcom-1136) Unknown identifier "channel_data".
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(223): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(224): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(224): (vcom-1136) Unknown identifier "channel_data".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(269): (vcom-1136) Unknown identifier "channel_data".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(273): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(204): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(206): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(208): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(203): Case statement covers only 3 out of 3.43368e+030 cases.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(215): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(217): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(218): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(218): (vcom-1136) Unknown identifier "channel_data".
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(220): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(221): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(221): (vcom-1136) Unknown identifier "channel_data".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(266): (vcom-1136) Unknown identifier "channel_data".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(270): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(204): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(206): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(208): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(216): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(218): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(219): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(219): (vcom-1136) Unknown identifier "channel_data".
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(221): Case choice must be a locally static expression.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(222): Illegal target for signal assignment.
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(222): (vcom-1136) Unknown identifier "channel_data".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(267): (vcom-1136) Unknown identifier "channel_data".
+# ** Error: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(271): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+# Model Technology ModelSim SE vcom 6.4 Compiler 2008.06 Jun 18 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity audio_dma
+# -- Compiling architecture dma of audio_dma
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(204): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(206): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(208): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(216): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(218): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(221): Case choice must be a locally static expression.

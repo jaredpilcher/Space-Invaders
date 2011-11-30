@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          D:\Put_Your_Temp_Files_Here\MDIEHL\Lab8Extended\Lab8\pcores/audio_dma/data/audio_dma_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Dec 10 13:45:49 2007 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib opb_master opb_master   vhdl
+lib audio_dma audio_dma     vhdl
+lib channel_bank channel_bank vhdl
+#lib audio_dma audio_channel vhdl #modify the above line to add more vhdl files

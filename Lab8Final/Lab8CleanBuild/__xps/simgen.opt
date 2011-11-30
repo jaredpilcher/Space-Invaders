@@ -1,0 +1,1 @@
+ -p virtex2p -lang vhdl    -pe ppc405_0 SpaceInvaders/executable.elf -s mti -X D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/ -E D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/

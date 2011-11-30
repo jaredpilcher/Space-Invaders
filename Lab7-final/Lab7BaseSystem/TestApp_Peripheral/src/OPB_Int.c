@@ -18,7 +18,8 @@ void clearInterrupts(){
 	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_MER_OFFSET, 0);
 	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_IER_OFFSET, 0);
 	XIntc_Out32(XPAR_OPB_INTC_0_BASEADDR + XIN_IAR_OFFSET, 0xFFFFFFFF);
-	XIo_Out32(0x40080000 + 16, 0);
+	//clear interrupts from ac97 slave
+	//XIo_Out32(0x40080000 + 16, 0);
 }
 
 void initializeMER(){

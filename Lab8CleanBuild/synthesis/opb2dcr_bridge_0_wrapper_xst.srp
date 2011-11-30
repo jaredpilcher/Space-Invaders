@@ -1,0 +1,1154 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "opb2dcr_bridge_0_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/opb2dcr_bridge_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : opb2dcr_bridge_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_muxcy.vhd" in Library proc_common_v1_00_b.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v1_00_b.
+Package <proc_common_pkg> compiled.
+WARNING:HDLParsers:3534 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" Line 364. In the function Get_RLOC_Name, not all control paths contain a return statement.
+WARNING:HDLParsers:3534 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" Line 379. In the function Get_Reg_File_Area, not all control paths contain a return statement.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/srl_fifo.vhd" in Library proc_common_v1_00_b.
+Entity <SRL_FIFO> compiled.
+Entity <SRL_FIFO> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/srl_fifo_rbu.vhd" in Library proc_common_v1_00_b.
+Entity <srl_fifo_rbu> compiled.
+Entity <srl_fifo_rbu> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd" in Library proc_common_v1_00_b.
+Entity <pselect> compiled.
+Entity <pselect> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/ld_arith_reg.vhd" in Library proc_common_v1_00_b.
+Entity <ld_arith_reg> compiled.
+Entity <ld_arith_reg> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/down_counter.vhd" in Library proc_common_v1_00_b.
+Entity <down_counter> compiled.
+Entity <down_counter> (Architecture <simulation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd" in Library proc_common_v1_00_b.
+Entity <or_gate> compiled.
+Entity <or_gate> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/family.vhd" in Library proc_common_v1_00_b.
+Package <family> compiled.
+Package body <family> compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/inferred_lut4.vhd" in Library proc_common_v1_00_b.
+Entity <inferred_lut4> compiled.
+Entity <inferred_lut4> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_counter_bit.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_counter_bit> compiled.
+Entity <pf_counter_bit> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_adder_bit.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_adder_bit> compiled.
+Entity <pf_adder_bit> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_counter.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_counter> compiled.
+Entity <pf_counter> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_occ_counter.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_occ_counter> compiled.
+Entity <pf_occ_counter> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ipif_common_v1_00_a/hdl/vhdl/ipif_pkg.vhd" in Library ipif_common_v1_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_occ_counter_top.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_occ_counter_top> compiled.
+Entity <pf_occ_counter_top> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_counter_top.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_counter_top> compiled.
+Entity <pf_counter_top> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_adder.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_adder> compiled.
+Entity <pf_adder> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_dly1_mux.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_dly1_mux> compiled.
+Entity <pf_dly1_mux> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ipif_common_v1_00_a/hdl/vhdl/interrupt_control.vhd" in Library ipif_common_v1_00_a.
+Entity <interrupt_control> compiled.
+Entity <interrupt_control> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ipif_common_v1_00_a/hdl/vhdl/ipif_steer.vhd" in Library ipif_common_v1_00_a.
+Entity <IPIF_Steer> compiled.
+Entity <IPIF_Steer> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ipif_control_wr.vhd" in Library opb_ipif_v2_00_a.
+Entity <ipif_control_wr> compiled.
+Entity <ipif_control_wr> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/wrpfifo_dp_cntl.vhd" in Library opb_ipif_v2_00_a.
+Entity <wrpfifo_dp_cntl> compiled.
+Entity <wrpfifo_dp_cntl> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/pf_dpram_select.vhd" in Library opb_ipif_v2_00_a.
+Entity <pf_dpram_select> compiled.
+Entity <pf_dpram_select> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/srl16_fifo.vhd" in Library opb_ipif_v2_00_a.
+Entity <srl16_fifo> compiled.
+Entity <srl16_fifo> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ipif_control_rd.vhd" in Library opb_ipif_v2_00_a.
+Entity <ipif_control_rd> compiled.
+Entity <ipif_control_rd> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/rdpfifo_dp_cntl.vhd" in Library opb_ipif_v2_00_a.
+Entity <rdpfifo_dp_cntl> compiled.
+Entity <rdpfifo_dp_cntl> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ipif_reset.vhd" in Library opb_ipif_v2_00_a.
+Entity <ipif_reset> compiled.
+Entity <ipif_reset> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ip2bus_dmux.vhd" in Library opb_ipif_v2_00_a.
+Entity <ip2bus_dmux> compiled.
+Entity <ip2bus_dmux> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ip2bus_srmux.vhd" in Library opb_ipif_v2_00_a.
+Entity <ip2bus_srmux> compiled.
+Entity <ip2bus_srmux> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/addr_load_and_incr.vhd" in Library opb_ipif_v2_00_a.
+Entity <addr_load_and_incr> compiled.
+Entity <addr_load_and_incr> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/mst_module.vhd" in Library opb_ipif_v2_00_a.
+Entity <mst_module> compiled.
+Entity <mst_module> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/dma_sg_pkg.vhd" in Library opb_ipif_v2_00_a.
+Package <dma_sg_pkg> compiled.
+Package body <dma_sg_pkg> compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/dma_sg_cmp.vhd" in Library opb_ipif_v2_00_a.
+Package <dma_sg_cmp> compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/master_attachment.vhd" in Library opb_ipif_v2_00_a.
+Entity <master_attachment> compiled.
+Entity <master_attachment> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/address_decoder.vhd" in Library opb_ipif_v2_00_a.
+Entity <address_decoder> compiled.
+Entity <address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ip2bus_srmux_blk.vhd" in Library opb_ipif_v2_00_a.
+Entity <ip2bus_srmux_blk> compiled.
+Entity <ip2bus_srmux_blk> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/bus2ip_amux.vhd" in Library opb_ipif_v2_00_a.
+Entity <bus2ip_amux> compiled.
+Entity <bus2ip_amux> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ip2bus_dmux_blk.vhd" in Library opb_ipif_v2_00_a.
+Entity <ip2bus_dmux_blk> compiled.
+Entity <ip2bus_dmux_blk> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/slave_attachment.vhd" in Library opb_ipif_v2_00_a.
+Entity <slave_attachment> compiled.
+Entity <slave_attachment> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/reset_control.vhd" in Library opb_ipif_v2_00_a.
+Entity <reset_control> compiled.
+Entity <reset_control> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/rdpfifo_top.vhd" in Library opb_ipif_v2_00_a.
+Entity <rdpfifo_top> compiled.
+Entity <rdpfifo_top> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/wrpfifo_top.vhd" in Library opb_ipif_v2_00_a.
+Entity <wrpfifo_top> compiled.
+Entity <wrpfifo_top> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/dma_sg.vhd" in Library opb_ipif_v2_00_a.
+Entity <dma_sg> compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ipif.vhd" in Library opb_ipif_v2_00_a.
+Entity <ipif> compiled.
+Entity <ipif> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ctrl_reg.vhd" in Library opb_ipif_v2_00_a.
+Entity <ctrl_reg> compiled.
+Entity <ctrl_reg> (Architecture <sim>) compiled.
+Entity <ctrl_reg_0_to_6> compiled.
+Entity <ctrl_reg_0_to_6> (Architecture <sim>) compiled.
+Entity <ctrl_reg_0_to_0> compiled.
+Entity <ctrl_reg_0_to_0> (Architecture <sim>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/dma_sg_sim.vhd" in Library opb_ipif_v2_00_a.
+Entity <dma_sg> (Architecture <sim>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/opb_ipif.vhd" in Library opb_ipif_v2_00_a.
+Entity <opb_ipif> compiled.
+Entity <opb_ipif> (Architecture <implementation>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb2dcr_bridge_v1_00_a/hdl/vhdl/opb2dcr_bridge_core.vhd" in Library opb2dcr_bridge_v1_00_a.
+Entity <opb2dcr_bridge_core> compiled.
+Entity <opb2dcr_bridge_core> (Architecture <implemented>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb2dcr_bridge_v1_00_a/hdl/vhdl/opb2dcr_bridge.vhd" in Library opb2dcr_bridge_v1_00_a.
+Entity <opb2dcr_bridge> compiled.
+Entity <opb2dcr_bridge> (Architecture <implementation>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/opb2dcr_bridge_0_wrapper.vhd" in Library work.
+Entity <opb2dcr_bridge_0_wrapper> compiled.
+Entity <opb2dcr_bridge_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <opb2dcr_bridge_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <opb2dcr_bridge> in library <opb2dcr_bridge_v1_00_a> (architecture <implementation>) with generics.
+	C_BASEADDR = "01000001001000011000000000000000"
+	C_FAMILY = "virtex2p"
+	C_HIGHADDR = "01000001001000011000111111111111"
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+
+Analyzing hierarchy for entity <opb_ipif> in library <opb_ipif_v2_00_a> (architecture <implementation>) with generics.
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111",
+	                          "0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111")
+	C_ARD_DWIDTH_ARRAY = (32,32)
+	C_ARD_ID_ARRAY = (100,101)
+	C_ARD_NUM_CE_ARRAY = (1,1)
+	C_DEV_BLK_ID = 1
+	C_DEV_BURST_ENABLE = 0
+	C_DEV_MAX_BURST_SIZE = 64
+	C_DEV_MIR_ENABLE = 0
+	C_DMA_ALLOW_BURST = 1
+	C_DMA_CHAN_TYPE_ARRAY = (2,3)
+	C_DMA_INTR_COALESCE_ARRAY = (0,0)
+	C_DMA_LENGTH_WIDTH_ARRAY = (11,11)
+	C_DMA_PACKET_WAIT_UNIT_NS = 1000000
+	C_DMA_PKT_LEN_FIFO_ADDR_ARRAY = ("0000000000000000000000000000000000000000000000000000000000000000",
+	                                 "0000000000000000000000000000000000000000000000000000000000000000")
+	C_DMA_PKT_STAT_FIFO_ADDR_ARRAY = ("0000000000000000000000000000000000000000000000000000000000000000",
+	                                  "0000000000000000000000000000000000000000000000000000000000000000")
+	C_FAMILY = "virtex2p"
+	C_INCLUDE_DEV_ISC = 1
+	C_INCLUDE_DEV_PENCODER = 0
+	C_IPIF_DWIDTH = 32
+	C_IP_INTR_MODE_ARRAY = (1)
+	C_IP_MASTER_PRESENT = 0
+	C_OPB_AWIDTH = 32
+	C_OPB_CLK_PERIOD_PS = 10000
+	C_OPB_DWIDTH = 32
+
+Analyzing hierarchy for entity <opb2dcr_bridge_core> in library <opb2dcr_bridge_v1_00_a> (architecture <implemented>).
+
+Analyzing hierarchy for entity <ipif> in library <opb_ipif_v2_00_a> (architecture <implementation>) with generics.
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111",
+	                          "0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111")
+	C_ARD_DWIDTH_ARRAY = (32,32)
+	C_ARD_ID_ARRAY = (100,101)
+	C_ARD_NUM_CE_ARRAY = (1,1)
+	C_DEV_BLK_ID = 1
+	C_DEV_BURST_ENABLE = false
+	C_DEV_MAX_BURST_SIZE = 64
+	C_DEV_MIR_ENABLE = false
+	C_DMA_ALLOW_BURST = true
+	C_DMA_CHAN_TYPE_ARRAY = (2,3)
+	C_DMA_INTR_COALESCE_ARRAY = (0,0)
+	C_DMA_LENGTH_WIDTH_ARRAY = (11,11)
+	C_DMA_PACKET_WAIT_UNIT_NS = 1000000
+	C_DMA_PKT_LEN_FIFO_ADDR_ARRAY = ("0000000000000000000000000000000000000000000000000000000000000000",
+	                                 "0000000000000000000000000000000000000000000000000000000000000000")
+	C_DMA_PKT_STAT_FIFO_ADDR_ARRAY = ("0000000000000000000000000000000000000000000000000000000000000000",
+	                                  "0000000000000000000000000000000000000000000000000000000000000000")
+	C_FAMILY = "virtex2p"
+	C_INCLUDE_DEV_ISC = true
+	C_INCLUDE_DEV_PENCODER = false
+	C_IPIF_DWIDTH = 32
+	C_IP_INTR_MODE_ARRAY = (1)
+	C_IP_MASTER_PRESENT = false
+	C_OPB_AWIDTH = 32
+	C_OPB_CLK_PERIOD_PS = 10000
+	C_OPB_DWIDTH = 32
+
+Analyzing hierarchy for entity <address_decoder> in library <opb_ipif_v2_00_a> (architecture <IMP>) with generics.
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111",
+	                          "0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111")
+	C_ARD_DWIDTH_ARRAY = (32,32)
+	C_ARD_NUM_CE_ARRAY = (1,1)
+	C_BUS_AWIDTH = 12
+	C_USE_REG_OUTPUTS = true
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+
+Analyzing hierarchy for entity <ip2bus_srmux_blk> in library <opb_ipif_v2_00_a> (architecture <implementation>).
+
+Analyzing hierarchy for entity <bus2ip_amux> in library <opb_ipif_v2_00_a> (architecture <implementation>) with generics.
+	C_IPIF_ABUS_WIDTH = 32
+	C_IPIF_DBUS_WIDTH = 32
+
+Analyzing hierarchy for entity <ip2bus_dmux_blk> in library <opb_ipif_v2_00_a> (architecture <implementation>) with generics.
+	C_DBUS_WIDTH = 32
+
+Analyzing hierarchy for entity <slave_attachment> in library <opb_ipif_v2_00_a> (architecture <implementation>) with generics.
+	C_DEV_ADDR_DECODE_WIDTH = 20
+	C_DEV_BASEADDR = "01000001001000011000000000000000"
+	C_DEV_BURST_ENABLE = false
+	C_DEV_IS_SLAVE_ONLY = true
+	C_IPIF_ABUS_WIDTH = 32
+	C_IPIF_DBUS_WIDTH = 32
+	C_MA2SA_NUM_WIDTH = 4
+	C_OPB_ABUS_WIDTH = 32
+	C_OPB_DBUS_WIDTH = 32
+
+Analyzing hierarchy for entity <IPIF_Steer> in library <ipif_common_v1_00_a> (architecture <IMP>) with generics.
+	C_AWIDTH = 32
+	C_DWIDTH = 32
+	C_SMALLEST = 32
+
+Analyzing hierarchy for entity <pselect> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_AB = 0
+	C_AW = 12
+	C_BAR = "000000000000"
+
+Analyzing hierarchy for entity <or_gate> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 3
+	C_OR_WIDTH = 2
+	C_USE_LUT_OR = true
+
+Analyzing hierarchy for entity <or_gate> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 1
+	C_OR_WIDTH = 2
+	C_USE_LUT_OR = true
+
+Analyzing hierarchy for entity <ip2bus_srmux> in library <opb_ipif_v2_00_a> (architecture <implementation>).
+
+Analyzing hierarchy for entity <ip2bus_dmux> in library <opb_ipif_v2_00_a> (architecture <implementation>) with generics.
+	C_DBUS_WIDTH = 32
+
+Analyzing hierarchy for entity <pselect> in library <proc_common_v1_00_b> (architecture <imp>) with generics.
+	C_AB = 20
+	C_AW = 32
+	C_BAR = "01000001001000011000000000000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <opb2dcr_bridge_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set user-defined property "X_CORE_INFO =  opb2dcr_bridge_v1_00_a" for unit <opb2dcr_bridge>.
+Entity <opb2dcr_bridge_0_wrapper> analyzed. Unit <opb2dcr_bridge_0_wrapper> generated.
+
+Analyzing generic Entity <opb2dcr_bridge> in library <opb2dcr_bridge_v1_00_a> (Architecture <implementation>).
+	C_BASEADDR = "01000001001000011000000000000000"
+	C_FAMILY = "virtex2p"
+	C_HIGHADDR = "01000001001000011000111111111111"
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+Entity <opb2dcr_bridge> analyzed. Unit <opb2dcr_bridge> generated.
+
+Analyzing generic Entity <opb_ipif> in library <opb_ipif_v2_00_a> (Architecture <implementation>).
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111",
+	                          "0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111")
+	C_ARD_DWIDTH_ARRAY = (32,32)
+	C_ARD_ID_ARRAY = (100,101)
+	C_ARD_NUM_CE_ARRAY = (1,1)
+	C_DEV_BLK_ID = 1
+	C_DEV_BURST_ENABLE = 0
+	C_DEV_MAX_BURST_SIZE = 64
+	C_DEV_MIR_ENABLE = 0
+	C_DMA_ALLOW_BURST = 1
+	C_DMA_CHAN_TYPE_ARRAY = (2,3)
+	C_DMA_INTR_COALESCE_ARRAY = (0,0)
+	C_DMA_LENGTH_WIDTH_ARRAY = (11,11)
+	C_DMA_PACKET_WAIT_UNIT_NS = 1000000
+	C_DMA_PKT_LEN_FIFO_ADDR_ARRAY = ("0000000000000000000000000000000000000000000000000000000000000000",
+	                                 "0000000000000000000000000000000000000000000000000000000000000000")
+	C_DMA_PKT_STAT_FIFO_ADDR_ARRAY = ("0000000000000000000000000000000000000000000000000000000000000000",
+	                                  "0000000000000000000000000000000000000000000000000000000000000000")
+	C_FAMILY = "virtex2p"
+	C_INCLUDE_DEV_ISC = 1
+	C_INCLUDE_DEV_PENCODER = 0
+	C_IPIF_DWIDTH = 32
+	C_IP_INTR_MODE_ARRAY = (1)
+	C_IP_MASTER_PRESENT = 0
+	C_OPB_AWIDTH = 32
+	C_OPB_CLK_PERIOD_PS = 10000
+	C_OPB_DWIDTH = 32
+Entity <opb_ipif> analyzed. Unit <opb_ipif> generated.
+
+Analyzing generic Entity <ipif> in library <opb_ipif_v2_00_a> (Architecture <implementation>).
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111",
+	                          "0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111")
+	C_ARD_DWIDTH_ARRAY = (32,32)
+	C_ARD_ID_ARRAY = (100,101)
+	C_ARD_NUM_CE_ARRAY = (1,1)
+	C_DEV_BLK_ID = 1
+	C_DEV_BURST_ENABLE = false
+	C_DEV_MAX_BURST_SIZE = 64
+	C_DEV_MIR_ENABLE = false
+	C_DMA_ALLOW_BURST = true
+	C_DMA_CHAN_TYPE_ARRAY = (2,3)
+	C_DMA_INTR_COALESCE_ARRAY = (0,0)
+	C_DMA_LENGTH_WIDTH_ARRAY = (11,11)
+	C_DMA_PACKET_WAIT_UNIT_NS = 1000000
+	C_DMA_PKT_LEN_FIFO_ADDR_ARRAY = ("0000000000000000000000000000000000000000000000000000000000000000",
+	                                 "0000000000000000000000000000000000000000000000000000000000000000")
+	C_DMA_PKT_STAT_FIFO_ADDR_ARRAY = ("0000000000000000000000000000000000000000000000000000000000000000",
+	                                  "0000000000000000000000000000000000000000000000000000000000000000")
+	C_FAMILY = "virtex2p"
+	C_INCLUDE_DEV_ISC = true
+	C_INCLUDE_DEV_PENCODER = false
+	C_IPIF_DWIDTH = 32
+	C_IP_INTR_MODE_ARRAY = (1)
+	C_IP_MASTER_PRESENT = false
+	C_OPB_AWIDTH = 32
+	C_OPB_CLK_PERIOD_PS = 10000
+	C_OPB_DWIDTH = 32
+WARNING:Xst:753 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ipif.vhd" line 1497: Unconnected output port 'Addr_Match' of component 'address_decoder'.
+WARNING:Xst:752 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ipif.vhd" line 1606: Unconnected input port 'MA2SA_Retry' of component 'slave_attachment' is tied to default value.
+Entity <ipif> analyzed. Unit <ipif> generated.
+
+Analyzing generic Entity <address_decoder> in library <opb_ipif_v2_00_a> (Architecture <IMP>).
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111",
+	                          "0000000000000000000000000000000001000001001000011000000000000000",
+	                          "0000000000000000000000000000000001000001001000011000111111111111")
+	C_ARD_DWIDTH_ARRAY = (32,32)
+	C_ARD_NUM_CE_ARRAY = (1,1)
+	C_BUS_AWIDTH = 12
+	C_USE_REG_OUTPUTS = true
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+WARNING:Xst:1748 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd" line 243: VHDL Assertion Statement with non constant condition is ignored.
+Entity <address_decoder> analyzed. Unit <address_decoder> generated.
+
+Analyzing generic Entity <pselect.1> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_AB = 0
+	C_AW = 12
+	C_BAR = "000000000000"
+Entity <pselect.1> analyzed. Unit <pselect.1> generated.
+
+Analyzing generic Entity <or_gate.1> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_BUS_WIDTH = 3
+	C_OR_WIDTH = 2
+	C_USE_LUT_OR = true
+Entity <or_gate.1> analyzed. Unit <or_gate.1> generated.
+
+Analyzing generic Entity <or_gate.2> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_BUS_WIDTH = 1
+	C_OR_WIDTH = 2
+	C_USE_LUT_OR = true
+Entity <or_gate.2> analyzed. Unit <or_gate.2> generated.
+
+Analyzing Entity <ip2bus_srmux_blk> in library <opb_ipif_v2_00_a> (Architecture <implementation>).
+Entity <ip2bus_srmux_blk> analyzed. Unit <ip2bus_srmux_blk> generated.
+
+Analyzing Entity <ip2bus_srmux> in library <opb_ipif_v2_00_a> (Architecture <implementation>).
+Entity <ip2bus_srmux> analyzed. Unit <ip2bus_srmux> generated.
+
+Analyzing generic Entity <bus2ip_amux> in library <opb_ipif_v2_00_a> (Architecture <implementation>).
+	C_IPIF_ABUS_WIDTH = 32
+	C_IPIF_DBUS_WIDTH = 32
+Entity <bus2ip_amux> analyzed. Unit <bus2ip_amux> generated.
+
+Analyzing generic Entity <ip2bus_dmux_blk> in library <opb_ipif_v2_00_a> (Architecture <implementation>).
+	C_DBUS_WIDTH = 32
+Entity <ip2bus_dmux_blk> analyzed. Unit <ip2bus_dmux_blk> generated.
+
+Analyzing generic Entity <ip2bus_dmux> in library <opb_ipif_v2_00_a> (Architecture <implementation>).
+	C_DBUS_WIDTH = 32
+Entity <ip2bus_dmux> analyzed. Unit <ip2bus_dmux> generated.
+
+Analyzing generic Entity <slave_attachment> in library <opb_ipif_v2_00_a> (Architecture <implementation>).
+	C_DEV_ADDR_DECODE_WIDTH = 20
+	C_DEV_BASEADDR = "01000001001000011000000000000000"
+	C_DEV_BURST_ENABLE = false
+	C_DEV_IS_SLAVE_ONLY = true
+	C_IPIF_ABUS_WIDTH = 32
+	C_IPIF_DBUS_WIDTH = 32
+	C_MA2SA_NUM_WIDTH = 4
+	C_OPB_ABUS_WIDTH = 32
+	C_OPB_DBUS_WIDTH = 32
+Entity <slave_attachment> analyzed. Unit <slave_attachment> generated.
+
+Analyzing generic Entity <pselect.2> in library <proc_common_v1_00_b> (Architecture <imp>).
+	C_AB = 20
+	C_AW = 32
+	C_BAR = "01000001001000011000000000000000"
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+Entity <pselect.2> analyzed. Unit <pselect.2> generated.
+
+Analyzing generic Entity <IPIF_Steer> in library <ipif_common_v1_00_a> (Architecture <IMP>).
+	C_AWIDTH = 32
+	C_DWIDTH = 32
+	C_SMALLEST = 32
+Entity <IPIF_Steer> analyzed. Unit <IPIF_Steer> generated.
+
+Analyzing Entity <opb2dcr_bridge_core> in library <opb2dcr_bridge_v1_00_a> (Architecture <implemented>).
+Entity <opb2dcr_bridge_core> analyzed. Unit <opb2dcr_bridge_core> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <opb2dcr_bridge_core>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb2dcr_bridge_v1_00_a/hdl/vhdl/opb2dcr_bridge_core.vhd".
+WARNING:Xst:647 - Input <Bus2IP_Addr<0:19>> is never used.
+WARNING:Xst:647 - Input <Bus2IP_Addr<30:31>> is never used.
+    Found 32-bit register for signal <OPB_dcrDBusOut>.
+    Found 10-bit register for signal <OPB_dcrABus>.
+    Found 1-bit register for signal <dcr_opbAck_d1>.
+    Found 1-bit register for signal <OPB_dcrRead_i>.
+    Found 1-bit register for signal <OPB_dcrWrite_i>.
+    Found 1-bit register for signal <rd_req_hold>.
+    Found 4-bit up counter for signal <timeout_cnt>.
+    Found 1-bit register for signal <wr_req_hold>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  47 D-type flip-flop(s).
+Unit <opb2dcr_bridge_core> synthesized.
+
+
+Synthesizing Unit <bus2ip_amux>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/bus2ip_amux.vhd".
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+    Found 32-bit adder for signal <addr_plus1>.
+    Found 32-bit register for signal <reg_addr_plus1>.
+    Found 32-bit 4-to-1 multiplexer for signal <selected_addr>.
+    Found 4-bit 4-to-1 multiplexer for signal <selected_be>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  36 Multiplexer(s).
+Unit <bus2ip_amux> synthesized.
+
+
+Synthesizing Unit <IPIF_Steer>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ipif_common_v1_00_a/hdl/vhdl/ipif_steer.vhd".
+WARNING:Xst:647 - Input <Addr> is never used.
+WARNING:Xst:647 - Input <Decode_size> is never used.
+Unit <IPIF_Steer> synthesized.
+
+
+Synthesizing Unit <pselect_1>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd".
+WARNING:Xst:647 - Input <A> is never used.
+WARNING:Xst:1780 - Signal <lut_out> is never used or assigned.
+Unit <pselect_1> synthesized.
+
+
+Synthesizing Unit <or_gate_1>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned.
+Unit <or_gate_1> synthesized.
+
+
+Synthesizing Unit <or_gate_2>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/or_gate.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned.
+Unit <or_gate_2> synthesized.
+
+
+Synthesizing Unit <ip2bus_srmux>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ip2bus_srmux.vhd".
+Unit <ip2bus_srmux> synthesized.
+
+
+Synthesizing Unit <ip2bus_dmux>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ip2bus_dmux.vhd".
+Unit <ip2bus_dmux> synthesized.
+
+
+Synthesizing Unit <address_decoder>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/address_decoder.vhd".
+    Found 2-bit register for signal <CE_Out_i_reg>.
+    Found 2-bit register for signal <CS_Out_i_reg>.
+    Found 3-bit register for signal <CS_Size_i_reg>.
+    Found 1-bit register for signal <decode_hit_reg>.
+    Found 2-bit register for signal <RdCE_Out_i_reg>.
+    Found 2-bit register for signal <WrCE_Out_i_reg>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <address_decoder> synthesized.
+
+
+Synthesizing Unit <ip2bus_srmux_blk>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ip2bus_srmux_blk.vhd".
+Unit <ip2bus_srmux_blk> synthesized.
+
+
+Synthesizing Unit <ip2bus_dmux_blk>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ip2bus_dmux_blk.vhd".
+Unit <ip2bus_dmux_blk> synthesized.
+
+
+Synthesizing Unit <pselect_2>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_b/hdl/vhdl/pselect.vhd".
+WARNING:Xst:647 - Input <A<20:31>> is never used.
+WARNING:Xst:1780 - Signal <lut_out<5>> is never used or assigned.
+Unit <pselect_2> synthesized.
+
+
+Synthesizing Unit <slave_attachment>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/slave_attachment.vhd".
+WARNING:Xst:647 - Input <MA2SA_Num> is never used.
+WARNING:Xst:1305 - Output <SA2MA_Error> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <SA2MA_Retry> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <MA2SA_XferAck> is never used.
+WARNING:Xst:647 - Input <MA2SA_Rd> is never used.
+WARNING:Xst:647 - Input <MA2SA_Retry> is never used.
+WARNING:Xst:647 - Input <MA2SA_Select> is never used.
+WARNING:Xst:647 - Input <Bus_MnGrant> is never used.
+WARNING:Xst:647 - Input <OPB_SeqAddr> is never used.
+WARNING:Xst:1780 - Signal <opb_burst> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_burst_mstr> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_devicesel_mstr> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_devicesel_opb_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <addrcntr_ce_opb> is never used or assigned.
+WARNING:Xst:1780 - Signal <sln_dbus_data> is never used or assigned.
+WARNING:Xst:1780 - Signal <opb_seqaddr_d1> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_rd_flag> is never used or assigned.
+WARNING:Xst:1780 - Signal <addrcntr_ce_mstr_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_devicesel_dec> is never used or assigned.
+WARNING:Xst:1780 - Signal <addrcntr_ce_opb_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_burst_fe> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_burstcntr_ld> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_sel_opb_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <sa2ma_rdrdy_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_rdreq_opb_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <devicesel_rst> is never used or assigned.
+WARNING:Xst:1780 - Signal <sln_rst_mstr> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_sel_mstr_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <valid_decode_d1> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_rd_flag_rst> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_burstcntr_reset> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_wrreq_mstr_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_sel_d1> is never used or assigned.
+WARNING:Xst:1780 - Signal <sob_ctrlsm_ns> is never used or assigned.
+WARNING:Xst:1780 - Signal <sa2ma_wrack_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_busy> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_rd_re> is never used or assigned.
+WARNING:Xst:1780 - Signal <sa2ma_rdrdy_i> is never used or assigned.
+WARNING:Xst:1780 - Signal <slv_opbsm_cs> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_burst_opb> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_devicesel_mstr_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <slv_mstrsm_cs> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_wrreq_mstr> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_wrreq_opb_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_sel_vec> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_devicesel_i> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_select_d1> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_select_d2> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_rdreq_mstr_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_burst> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_busy_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_sel_mstr> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_burst_reg> is never used or assigned.
+WARNING:Xst:1780 - Signal <sln_dbus_fifo_notmt> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_cntr_clken_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_burst_opb_reg> is never used or assigned.
+WARNING:Xst:1780 - Signal <sln_dbus_fifo_rd> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_xferack_d1> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_xferack_d2> is never used or assigned.
+WARNING:Xst:1780 - Signal <sa2ma_retry_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <opb_busy_reg> is never used or assigned.
+WARNING:Xst:1780 - Signal <slv_opbsm_ns> is never used or assigned.
+WARNING:Xst:1780 - Signal <slv_mstrsm_ns> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_sel_i> is never used or assigned.
+WARNING:Xst:1780 - Signal <sln_dbus_rst> is never used or assigned.
+WARNING:Xst:1780 - Signal <read_buf_data> is never used or assigned.
+WARNING:Xst:1780 - Signal <sln_dbus_ce> is never used or assigned.
+WARNING:Xst:1780 - Signal <sln_dbus_fifo_wr> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_sel_opb> is never used or assigned.
+WARNING:Xst:1780 - Signal <opb_busy_set> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_rdreq_mstr> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_wrreq_opb> is never used or assigned.
+WARNING:Xst:1780 - Signal <opb_busy_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_rd_d1> is never used or assigned.
+WARNING:Xst:1780 - Signal <sln_dbus_fifo_rst> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_devicesel_opb> is never used or assigned.
+WARNING:Xst:1780 - Signal <ma2sa_select_re> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_burst_cnt> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_rdreq_opb> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_burstcntr_ce> is never used or assigned.
+WARNING:Xst:1780 - Signal <devicesel_set> is never used or assigned.
+WARNING:Xst:1780 - Signal <sob_ctrlsm_cs> is never used or assigned.
+WARNING:Xst:1780 - Signal <opb_busy> is never used or assigned.
+WARNING:Xst:1780 - Signal <mstr_burst_d1> is never used or assigned.
+WARNING:Xst:1780 - Signal <bus2ip_devicesel_d1> is never used or assigned.
+WARNING:Xst:1780 - Signal <addr_sel_vec_cmb> is never used or assigned.
+WARNING:Xst:1780 - Signal <burst> is never used or assigned.
+    Found finite state machine <FSM_0> for signal <sonb_ctrlsm_cs>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | OPB_Clk (rising_edge)                          |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <bus2ip_rdreq_dec>.
+    Found 1-bit register for signal <bus2ip_wrreq_dec>.
+    Found 32-bit register for signal <opb_abus_d1>.
+    Found 4-bit register for signal <opb_be_d1>.
+    Found 32-bit register for signal <opb_dbus_d1>.
+    Found 1-bit register for signal <opb_rnw_d1>.
+    Found 1-bit register for signal <opb_select_d1>.
+    Found 32-bit register for signal <sln_dbus_i>.
+    Found 1-bit register for signal <sln_errack_i>.
+    Found 1-bit register for signal <sln_retry_i>.
+    Found 1-bit register for signal <sln_rst>.
+    Found 1-bit register for signal <sln_xferack_i>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 108 D-type flip-flop(s).
+Unit <slave_attachment> synthesized.
+
+
+Synthesizing Unit <ipif>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/ipif.vhd".
+WARNING:Xst:647 - Input <IP2DMA_RxLength_Empty> is never used.
+WARNING:Xst:647 - Input <IP2Bus_DMA_Req> is never used.
+WARNING:Xst:647 - Input <IP2RFIFO_WrRelease> is never used.
+WARNING:Xst:647 - Input <OPB_timeout> is never used.
+WARNING:Xst:647 - Input <IP2Bus_MstWrReq> is never used.
+WARNING:Xst:647 - Input <IP2Bus_MstBusLock> is never used.
+WARNING:Xst:647 - Input <IP2RFIFO_WrRestore> is never used.
+WARNING:Xst:647 - Input <IP2RFIFO_WrMark> is never used.
+WARNING:Xst:647 - Input <IP2WFIFO_RdMark> is never used.
+WARNING:Xst:647 - Input <IP2Bus_Clk> is never used.
+WARNING:Xst:647 - Input <OPB_MnGrant> is never used.
+WARNING:Xst:647 - Input <IP2DMA_RxStatus_Empty> is never used.
+WARNING:Xst:647 - Input <IP2Bus_MstBurst> is never used.
+WARNING:Xst:647 - Input <OPB_errAck> is never used.
+WARNING:Xst:647 - Input <OPB_xferAck> is never used.
+WARNING:Xst:647 - Input <IP2DMA_TxLength_Full> is never used.
+WARNING:Xst:647 - Input <IP2Bus_MstBE> is never used.
+WARNING:Xst:647 - Input <IP2RFIFO_Data> is never used.
+WARNING:Xst:647 - Input <OPB_retry> is never used.
+WARNING:Xst:647 - Input <IP2RFIFO_WrReq> is never used.
+WARNING:Xst:647 - Input <IP2DMA_TxStatus_Empty> is never used.
+WARNING:Xst:647 - Input <IP2WFIFO_RdRelease> is never used.
+WARNING:Xst:647 - Input <IP2Bus_Addr> is never used.
+WARNING:Xst:647 - Input <IP2WFIFO_RdReq> is never used.
+WARNING:Xst:647 - Input <IP2WFIFO_RdRestore> is never used.
+WARNING:Xst:647 - Input <IP2Bus_MstRdReq> is never used.
+WARNING:Xst:646 - Signal <WFIFO2DMA_Vacancy> is assigned but never used.
+WARNING:Xst:646 - Signal <DMA2Bus_MstBE> is assigned but never used.
+WARNING:Xst:646 - Signal <SA2MA_WrAck> is assigned but never used.
+WARNING:Xst:646 - Signal <DMA2Bus_MstRdReq> is assigned but never used.
+WARNING:Xst:646 - Signal <SA2MA_RdRdy> is assigned but never used.
+WARNING:Xst:653 - Signal <CONST_ALL_IP_BYTES_ENABLED> is used but never assigned. Tied to value 1111.
+WARNING:Xst:646 - Signal <WFIFO2DMA_Full> is assigned but never used.
+WARNING:Xst:646 - Signal <DMA2Intr_Intr> is assigned but never used.
+WARNING:Xst:646 - Signal <IPIF_Reg_Interrupts> is assigned but never used.
+WARNING:Xst:646 - Signal <SA2MA_Error> is assigned but never used.
+WARNING:Xst:646 - Signal <DMA2Bus_MstWrReq> is assigned but never used.
+WARNING:Xst:646 - Signal <SA2MA_Retry> is assigned but never used.
+WARNING:Xst:646 - Signal <DMA2Bus_MstBusLock> is assigned but never used.
+WARNING:Xst:646 - Signal <RFIFO2DMA_Empty> is assigned but never used.
+WARNING:Xst:646 - Signal <DMA2Bus_MstBurst> is assigned but never used.
+WARNING:Xst:646 - Signal <RFIFO2DMA_AlmostEmpty> is assigned but never used.
+WARNING:Xst:646 - Signal <RFIFO2DMA_Occupancy> is assigned but never used.
+WARNING:Xst:646 - Signal <DMA2Bus_Addr> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_Freeze_i> is assigned but never used.
+WARNING:Xst:1780 - Signal <WFIFO2DMA_AlmostFull> is never used or assigned.
+WARNING:Xst:646 - Signal <IPIF_Lvl_Interrupts> is assigned but never used.
+Unit <ipif> synthesized.
+
+
+Synthesizing Unit <opb_ipif>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb_ipif_v2_00_a/hdl/vhdl/opb_ipif.vhd".
+Unit <opb_ipif> synthesized.
+
+
+Synthesizing Unit <opb2dcr_bridge>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/opb2dcr_bridge_v1_00_a/hdl/vhdl/opb2dcr_bridge.vhd".
+WARNING:Xst:646 - Signal <Bus2IP_MstWrAck> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_Freeze> is assigned but never used.
+WARNING:Xst:646 - Signal <RFIFO2IP_WrAck> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_MstLastAck> is assigned but never used.
+WARNING:Xst:646 - Signal <Mn_request> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_DMA_Ack> is assigned but never used.
+WARNING:Xst:646 - Signal <Mn_BE> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_MstError> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_RdCE> is assigned but never used.
+WARNING:Xst:646 - Signal <WFIFO2IP_AlmostEmpty> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_MstRetry> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_RNW> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_WrCE> is assigned but never used.
+WARNING:Xst:646 - Signal <RFIFO2IP_AlmostFull> is assigned but never used.
+WARNING:Xst:646 - Signal <Mn_busLock> is assigned but never used.
+WARNING:Xst:646 - Signal <IP2INTC_Irpt> is assigned but never used.
+WARNING:Xst:646 - Signal <WFIFO2IP_Data> is assigned but never used.
+WARNING:Xst:646 - Signal <WFIFO2IP_RdAck> is assigned but never used.
+WARNING:Xst:646 - Signal <RFIFO2IP_Full> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_MstTimeOut> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_Burst> is assigned but never used.
+WARNING:Xst:646 - Signal <WFIFO2IP_Occupancy> is assigned but never used.
+WARNING:Xst:646 - Signal <Mn_ABus> is assigned but never used.
+WARNING:Xst:646 - Signal <Mn_seqAddr> is assigned but never used.
+WARNING:Xst:646 - Signal <WFIFO2IP_Empty> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_CE> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_MstRdAck> is assigned but never used.
+WARNING:Xst:646 - Signal <Mn_select> is assigned but never used.
+WARNING:Xst:646 - Signal <Bus2IP_CS<1>> is assigned but never used.
+WARNING:Xst:646 - Signal <RFIFO2IP_Vacancy> is assigned but never used.
+WARNING:Xst:646 - Signal <Mn_RNW> is assigned but never used.
+Unit <opb2dcr_bridge> synthesized.
+
+
+Synthesizing Unit <opb2dcr_bridge_0_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/opb2dcr_bridge_0_wrapper.vhd".
+Unit <opb2dcr_bridge_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 26
+ 1-bit register                                        : 14
+ 10-bit register                                       : 1
+ 2-bit register                                        : 4
+ 3-bit register                                        : 1
+ 32-bit register                                       : 5
+ 4-bit register                                        : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/sonb_ctrlsm_cs> on signal <sonb_ctrlsm_cs[1:3]> with gray encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ idle           | 000
+ ack            | 010
+ set_device_sel | 001
+ set_req        | 011
+ wait_ack       | 110
+----------------------------
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 202
+ Flip-Flops                                            : 202
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <address_decoder>: instances <MEM_DECODE_GEN[0].MEM_SELECT_I>, <MEM_DECODE_GEN[1].MEM_SELECT_I> of unit <pselect_1> are equivalent, second instance is removed
+INFO:Xst:2261 - The FF/Latch <RdCE_Out_i_reg_1> in Unit <address_decoder> is equivalent to the following FF/Latch, which will be removed : <RdCE_Out_i_reg_0> 
+INFO:Xst:2261 - The FF/Latch <CE_Out_i_reg_1> in Unit <address_decoder> is equivalent to the following 3 FFs/Latches, which will be removed : <CE_Out_i_reg_0> <CS_Out_i_reg_1> <CS_Out_i_reg_0> 
+INFO:Xst:2261 - The FF/Latch <WrCE_Out_i_reg_1> in Unit <address_decoder> is equivalent to the following FF/Latch, which will be removed : <WrCE_Out_i_reg_0> 
+INFO:Xst:2261 - The FF/Latch <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/CS_Size_i_reg_2> in Unit <opb2dcr_bridge_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/CS_Size_i_reg_1> 
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/RdCE_Out_i_reg_1> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/WrCE_Out_i_reg_1> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/CS_Size_i_reg_2> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/CS_Size_i_reg_0> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_ADDRESS_DECODER/decode_hit_reg> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+
+Optimizing unit <opb2dcr_bridge_0_wrapper> ...
+
+Optimizing unit <opb2dcr_bridge_core> ...
+
+Optimizing unit <bus2ip_amux> ...
+
+Optimizing unit <slave_attachment> ...
+WARNING:Xst:1710 - FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_20> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_21> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_22> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_23> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_24> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_25> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_26> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_27> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_28> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_29> (without init value) has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/sln_retry_i> has a constant value of 0 in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_0> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_1> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_2> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_3> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_4> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_5> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_6> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_7> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_8> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_9> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_10> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_11> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_12> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_13> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_14> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_15> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_16> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_17> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_18> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_19> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_30> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_BUS2IP_AMUX/reg_addr_plus1_31> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_30> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+WARNING:Xst:2677 - Node <opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_31> of sequential type is unconnected in block <opb2dcr_bridge_0_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 160
+ Flip-Flops                                            : 160
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/opb2dcr_bridge_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 192
+
+Cell Usage :
+# BELS                             : 51
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 8
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 9
+#      LUT4                        : 19
+#      LUT4_D                      : 4
+#      LUT4_L                      : 1
+#      MUXCY                       : 5
+#      VCC                         : 1
+# FlipFlops/Latches                : 160
+#      FD                          : 11
+#      FDR                         : 75
+#      FDRE                        : 41
+#      FDRS                        : 32
+#      FDS                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                      99  out of  13696     0%  
+ Number of Slice Flip Flops:           160  out of  27392     0%  
+ Number of 4 input LUTs:                44  out of  27392     0%  
+ Number of IOs:                        192
+ Number of bonded IOBs:                  0  out of    556     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                         | Load  |
+-----------------------------------+---------------------------------------------------------------+-------+
+OPB_dcrClk                         | NONE(opb2dcr_bridge_0/opb2dcr_bridge_core_1/OPB_dcrDBusOut_22)| 160   |
+-----------------------------------+---------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 3.363ns (Maximum Frequency: 297.389MHz)
+   Minimum input arrival time before clock: 1.992ns
+   Maximum output required time after clock: 2.809ns
+   Maximum combinational path delay: 0.411ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OPB_dcrClk'
+  Clock period: 3.363ns (frequency: 297.389MHz)
+  Total number of paths / destination ports: 679 / 170
+-------------------------------------------------------------------------
+Delay:               3.363ns (Levels of Logic = 3)
+  Source:            opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_3 (FF)
+  Destination:       opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_0 (FF)
+  Source Clock:      OPB_dcrClk rising
+  Destination Clock: OPB_dcrClk rising
+
+  Data Path: opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_3 to opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.370   0.564  opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_3 (opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_3)
+     LUT4_D:I0->O          9   0.275   0.537  opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cmp_eq00001 (opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout)
+     LUT4_D:I3->LO         1   0.275   0.118  opb2dcr_bridge_0/opb2dcr_bridge_core_1/IP2Bus_WrAck_i1 (N52)
+     LUT4:I2->O            4   0.275   0.413  opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_or00001 (opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_or0000)
+     FDRE:R                    0.536          opb2dcr_bridge_0/opb2dcr_bridge_core_1/timeout_cnt_3
+    ----------------------------------------
+    Total                      3.363ns (1.731ns logic, 1.632ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_dcrClk'
+  Total number of paths / destination ports: 275 / 257
+-------------------------------------------------------------------------
+Offset:              1.992ns (Levels of Logic = 2)
+  Source:            OPB_Rst (PAD)
+  Destination:       opb2dcr_bridge_0/opb2dcr_bridge_core_1/rd_req_hold (FF)
+  Destination Clock: OPB_dcrClk rising
+
+  Data Path: OPB_Rst to opb2dcr_bridge_0/opb2dcr_bridge_core_1/rd_req_hold
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2_D:I1->O          2   0.275   0.476  opb2dcr_bridge_0/opb2dcr_bridge_core_1/OPB_dcrRead_i_or0000_SW0 (N17)
+     LUT4:I1->O            1   0.275   0.331  opb2dcr_bridge_0/opb2dcr_bridge_core_1/wr_req_hold_or00001 (opb2dcr_bridge_0/opb2dcr_bridge_core_1/wr_req_hold_or0000)
+     FDRE:R                    0.536          opb2dcr_bridge_0/opb2dcr_bridge_core_1/wr_req_hold
+    ----------------------------------------
+    Total                      1.992ns (1.184ns logic, 0.808ns route)
+                                       (59.4% logic, 40.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OPB_dcrClk'
+  Total number of paths / destination ports: 100 / 79
+-------------------------------------------------------------------------
+Offset:              2.809ns (Levels of Logic = 7)
+  Source:            opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_0 (FF)
+  Destination:       Sln_ToutSup (PAD)
+  Source Clock:      OPB_dcrClk rising
+
+  Data Path: opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_0 to Sln_ToutSup
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.370   0.468  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_0 (opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_0)
+     LUT4:I0->O            1   0.275   0.000  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/lut_out_0_and00001 (opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/lut_out<0>)
+     MUXCY:S->O            1   0.334   0.000  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/XST_WA.GEN_DECODE[0].MUXCY_I (opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/carry_chain<1>)
+     MUXCY:CI->O           1   0.036   0.000  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/XST_WA.GEN_DECODE[1].MUXCY_I (opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/carry_chain<2>)
+     MUXCY:CI->O           1   0.036   0.000  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/XST_WA.GEN_DECODE[2].MUXCY_I (opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/carry_chain<3>)
+     MUXCY:CI->O           1   0.036   0.000  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/XST_WA.GEN_DECODE[3].MUXCY_I (opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/carry_chain<4>)
+     MUXCY:CI->O           7   0.416   0.563  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/SLV_ONLY_NO_BURST_SLV_ATTACH.SL_ATTCH_PSELECT_I/XST_WA.GEN_DECODE[4].MUXCY_I (opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/valid_decode)
+     LUT2:I1->O            0   0.275   0.000  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/Sln_toutSup1 (Sln_ToutSup)
+    ----------------------------------------
+    Total                      2.809ns (1.779ns logic, 1.030ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               0.411ns (Levels of Logic = 1)
+  Source:            OPB_select (PAD)
+  Destination:       Sln_XferAck (PAD)
+
+  Data Path: OPB_select to Sln_XferAck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I0->O            0   0.275   0.000  opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/Sln_xferAck1 (Sln_XferAck)
+    ----------------------------------------
+    Total                      0.411ns (0.411ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+CPU : 11.22 / 11.30 s | Elapsed : 11.00 / 11.00 s
+ 
+--> 
+
+Total memory usage is 231848 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  230 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

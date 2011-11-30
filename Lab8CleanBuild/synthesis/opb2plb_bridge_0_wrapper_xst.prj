@@ -1,0 +1,14 @@
+VHDL proc_common_v1_00_b C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b/hdl/vhdl/proc_common_pkg.vhd
+VHDL proc_common_v1_00_b C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b/hdl/vhdl/common_types_pkg.vhd
+VHDL proc_common_v1_00_b C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b/hdl/vhdl/pselect.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/opb2plb_bridge_pkg.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/rdbuffer.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/wrbuffer.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/regs.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/opb_sm.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/plb_sm.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/dcr_intfc.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/plb_intfc.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/opb_intfc.vhd
+VHDL opb2plb_bridge_v1_00_c C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\opb2plb_bridge_v1_00_c/hdl/vhdl/opb2plb_bridge.vhd
+vhdl work ../hdl/opb2plb_bridge_0_wrapper.vhd
