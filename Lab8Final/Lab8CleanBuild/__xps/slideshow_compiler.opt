@@ -1,0 +1,20 @@
+ppc405_0
+SLIDESHOW_SOURCES = SpaceInvaders/src/slideshow.c SpaceInvaders/src/graphics.c 
+SLIDESHOW_HEADERS = SpaceInvaders/src/gameParameters.h SpaceInvaders/src/graphics.h 
+SLIDESHOW_CC = powerpc-eabi-gcc
+SLIDESHOW_CC_SIZE = powerpc-eabi-size
+SLIDESHOW_CC_OPT = -O2
+SLIDESHOW_CFLAGS = 
+SLIDESHOW_CC_SEARCH = # -B
+SLIDESHOW_LIBPATH = -L./ppc405_0/lib/ # -L
+SLIDESHOW_INCLUDES = -I./ppc405_0/include/  -ISpaceInvaders/src/ # -I
+SLIDESHOW_LFLAGS = # -l
+SLIDESHOW_LINKER_SCRIPT = 
+SLIDESHOW_CC_DEBUG_FLAG =  -g 
+SLIDESHOW_CC_PROFILE_FLAG = # -pg
+SLIDESHOW_CC_GLOBPTR_FLAG= # -msdata=eabi
+SLIDESHOW_CC_INFERRED_FLAGS= 
+SLIDESHOW_CC_START_ADDR_FLAG=  # -Wl,-defsym -Wl,_START_ADDR=
+SLIDESHOW_CC_STACK_SIZE_FLAG=  # -Wl,-defsym -Wl,_STACK_SIZE=
+SLIDESHOW_CC_HEAP_SIZE_FLAG=  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(SLIDESHOW_CC_INFERRED_FLAGS)  \

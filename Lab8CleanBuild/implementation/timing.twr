@@ -1,0 +1,46 @@
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* TS_vga_framebuffer_vga_framebuffer_CLKDV  | SETUP   |     1.430ns|     8.570ns|       0|           0
+  = PERIOD TIMEGRP         "vga_framebuffer | HOLD    |    -0.047ns|            |       1|          47
+  _vga_framebuffer_CLKDV" TS_dcm_0_dcm_0_CL |         |            |            |        |            
+  K0_BUF * 4         HIGH 50%               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_dcm_0_dcm_0_CLK0_BUF = PERIOD TIMEGRP  | SETUP   |     0.036ns|     9.964ns|       0|           0
+  "dcm_0_dcm_0_CLK0_BUF" TS_sys_clk_pin     | HOLD    |     0.140ns|            |       0|           0
+       HIGH 50%                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_dcm_0_dcm_0_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     0.042ns|     9.832ns|       0|           0
+   "dcm_0_dcm_0_CLK90_BUF"         TS_sys_c | HOLD    |     0.447ns|            |       0|           0
+  lk_pin PHASE 2.5 ns HIGH 50%              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_dcm_1_dcm_1_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     5.358ns|     4.642ns|       0|           0
+   "dcm_1_dcm_1_CLK90_BUF"         TS_fpga_ | HOLD    |     0.487ns|            |       0|           0
+  0_DDR_CLK_FB PHASE 4.844 ns HIGH 50%      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP   |     8.627ns|     1.373ns|       0|           0
+  pin" 10 ns HIGH 50%                       | HOLD    |     0.591ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TS_fpga_0_DDR_CLK_FB = PERIOD TIMEGRP "fp | SETUP   |     8.661ns|     1.339ns|       0|           0
+  ga_0_DDR_CLK_FB" 10 ns HIGH 50%           | HOLD    |     0.768ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "fpga_0_SysACE_CompactFlash_SysACE_CL | SETUP   |    24.677ns|     5.323ns|       0|           0
+  K_pin_BUFGP/IBUFG" PERIOD = 30 ns         | HOLD    |     0.336ns|            |       0|           0
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "fpga_0_Audio_Codec_Bit_Clk_pin_BUFGP | SETUP   |    37.783ns|     7.063ns|       0|           0
+  /IBUFG" PERIOD = 81.38 ns HIGH 50%        | HOLD    |     0.553ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  PATH "TS_RST1_path" TIG                   | SETUP   |         N/A|     3.663ns|     N/A|           0
+------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

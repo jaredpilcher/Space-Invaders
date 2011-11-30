@@ -1,0 +1,789 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "audio_codec_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/audio_codec_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : audio_codec_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_timing.vhd" in Library opb_ac97_v2_00_a.
+Entity <ac97_timing> compiled.
+Entity <ac97_timing> (Architecture <IMP>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/srl_fifo.vhd" in Library opb_ac97_v2_00_a.
+Entity <SRL_FIFO> compiled.
+Entity <SRL_FIFO> (Architecture <IMP>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd" in Library opb_ac97_v2_00_a.
+Entity <BRAM_FIFO> compiled.
+Entity <BRAM_FIFO> (Architecture <IMP>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_core.vhd" in Library opb_ac97_v2_00_a.
+Entity <ac97_core> compiled.
+Entity <ac97_core> (Architecture <IMP>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" in Library opb_ac97_v2_00_a.
+Entity <ac97_fifo> compiled.
+Entity <ac97_fifo> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/common_v1_00_a/hdl/vhdl/pselect.vhd" in Library common_v1_00_a.
+Entity <pselect> compiled.
+Entity <pselect> (Architecture <imp>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" in Library opb_ac97_v2_00_a.
+Entity <opb_ac97> compiled.
+Entity <opb_ac97> (Architecture <IMP>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/hdl/audio_codec_wrapper.vhd" in Library work.
+Entity <audio_codec_wrapper> compiled.
+Entity <audio_codec_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <audio_codec_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <opb_ac97> in library <opb_ac97_v2_00_a> (architecture <IMP>) with generics.
+	C_BASEADDR = "01111101010000000000000000000000"
+	C_HIGHADDR = "01111101010000001111111111111111"
+	C_INTR_LEVEL = 1
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+	C_PLAYBACK = 1
+	C_RECORD = 1
+	C_USE_BRAM = 1
+
+Analyzing hierarchy for entity <pselect> in library <Common_v1_00_a> (architecture <imp>) with generics.
+	C_AB = 16
+	C_AW = 32
+	C_BAR = "01111101010000000000000000000000"
+
+Analyzing hierarchy for entity <ac97_fifo> in library <opb_ac97_v2_00_a> (architecture <IMP>) with generics.
+	C_AWIDTH = 32
+	C_DWIDTH = 32
+	C_INTR_LEVEL = 1
+	C_PLAYBACK = 1
+	C_RECORD = 1
+	C_USE_BRAM = 1
+
+Analyzing hierarchy for entity <BRAM_FIFO> in library <opb_ac97_v2_00_a> (architecture <IMP>) with generics.
+	C_ADDR_BITS = 9
+	C_DATA_BITS = 32
+
+Analyzing hierarchy for entity <ac97_core> in library <opb_ac97_v2_00_a> (architecture <IMP>) with generics.
+	C_PCM_DATA_WIDTH = 16
+
+Analyzing hierarchy for entity <ac97_timing> in library <opb_ac97_v2_00_a> (architecture <IMP>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <audio_codec_wrapper> in library <work> (Architecture <STRUCTURE>).
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+    Set user-defined property "X_CORE_INFO =  opb_ac97_v2_00_a" for unit <opb_ac97>.
+Entity <audio_codec_wrapper> analyzed. Unit <audio_codec_wrapper> generated.
+
+Analyzing generic Entity <opb_ac97> in library <opb_ac97_v2_00_a> (Architecture <IMP>).
+	C_BASEADDR = "01111101010000000000000000000000"
+	C_HIGHADDR = "01111101010000001111111111111111"
+	C_INTR_LEVEL = 1
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+	C_PLAYBACK = 1
+	C_RECORD = 1
+	C_USE_BRAM = 1
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 233: Instantiating black box module <FDR>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd" line 271: Instantiating black box module <FDRE>.
+Entity <opb_ac97> analyzed. Unit <opb_ac97> generated.
+
+Analyzing generic Entity <pselect> in library <Common_v1_00_a> (Architecture <imp>).
+	C_AB = 16
+	C_AW = 32
+	C_BAR = "01111101010000000000000000000000"
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/common_v1_00_a/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/common_v1_00_a/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/common_v1_00_a/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/common_v1_00_a/hdl/vhdl/pselect.vhd" line 195: Instantiating black box module <MUXCY>.
+Entity <pselect> analyzed. Unit <pselect> generated.
+
+Analyzing generic Entity <ac97_fifo> in library <opb_ac97_v2_00_a> (Architecture <IMP>).
+	C_AWIDTH = 32
+	C_DWIDTH = 32
+	C_INTR_LEVEL = 1
+	C_PLAYBACK = 1
+	C_RECORD = 1
+	C_USE_BRAM = 1
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 295: The following signals are missing in the process sensitivity list:
+   debug_i.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 492: The following signals are missing in the process sensitivity list:
+   Bus2IP_Reset.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 532: Instantiating black box module <FDCPE>.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 566: The following signals are missing in the process sensitivity list:
+   IpClk_playback_accept_St.
+WARNING:Xst:753 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 624: Unconnected output port 'Overflow' of component 'BRAM_FIFO'.
+WARNING:Xst:753 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 624: Unconnected output port 'Underflow' of component 'BRAM_FIFO'.
+WARNING:Xst:753 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 688: Unconnected output port 'Overflow' of component 'BRAM_FIFO'.
+WARNING:Xst:753 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 688: Unconnected output port 'Underflow' of component 'BRAM_FIFO'.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd" line 760: The following signals are missing in the process sensitivity list:
+   in_FIFO_Half_Empty.
+Entity <ac97_fifo> analyzed. Unit <ac97_fifo> generated.
+
+Analyzing generic Entity <BRAM_FIFO> in library <opb_ac97_v2_00_a> (Architecture <IMP>).
+	C_ADDR_BITS = 9
+	C_DATA_BITS = 32
+WARNING:Xst:753 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd" line 117: Unconnected output port 'DOA' of component 'RAMB16_S36_S36'.
+WARNING:Xst:753 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd" line 117: Unconnected output port 'DOPA' of component 'RAMB16_S36_S36'.
+WARNING:Xst:753 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd" line 117: Unconnected output port 'DOPB' of component 'RAMB16_S36_S36'.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd" line 117: Instantiating black box module <RAMB16_S36_S36>.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd" line 139: The following signals are missing in the process sensitivity list:
+   Reset.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd" line 152: The following signals are missing in the process sensitivity list:
+   Reset.
+Entity <BRAM_FIFO> analyzed. Unit <BRAM_FIFO> generated.
+
+Analyzing generic Entity <ac97_core> in library <opb_ac97_v2_00_a> (Architecture <IMP>).
+	C_PCM_DATA_WIDTH = 16
+WARNING:Xst:753 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_core.vhd" line 261: Unconnected output port 'Bit_Num' of component 'ac97_timing'.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_core.vhd" line 279: The following signals are missing in the process sensitivity list:
+   Reset.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_core.vhd" line 504: The following signals are missing in the process sensitivity list:
+   Reset.
+Entity <ac97_core> analyzed. Unit <ac97_core> generated.
+
+Analyzing Entity <ac97_timing> in library <opb_ac97_v2_00_a> (Architecture <IMP>).
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_timing.vhd" line 107: The following signals are missing in the process sensitivity list:
+   Reset.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_timing.vhd" line 129: The following signals are missing in the process sensitivity list:
+   Reset.
+WARNING:Xst:819 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_timing.vhd" line 146: The following signals are missing in the process sensitivity list:
+   Reset.
+Entity <ac97_timing> analyzed. Unit <ac97_timing> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ac97_timing>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_timing.vhd".
+    Found 5-bit up counter for signal <bitnum_i>.
+    Found 1-bit register for signal <frame_end_i>.
+    Found 4-bit up counter for signal <slotnum_i>.
+    Found 1-bit register for signal <sync_i>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <ac97_timing> synthesized.
+
+
+Synthesizing Unit <pselect>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/common_v1_00_a/hdl/vhdl/pselect.vhd".
+WARNING:Xst:647 - Input <A<16:31>> is never used.
+WARNING:Xst:1780 - Signal <lut_out<4>> is never used or assigned.
+Unit <pselect> synthesized.
+
+
+Synthesizing Unit <BRAM_FIFO>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/bram_fifo.vhd".
+WARNING:Xst:646 - Signal <addra<9>> is assigned but never used.
+WARNING:Xst:646 - Signal <addrb<9>> is assigned but never used.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+    Found 10-bit subtractor for signal <addr_diff>.
+    Found 10-bit subtractor for signal <addr_diff$addsub0000> created at line 189.
+    Found 10-bit up counter for signal <in_address>.
+    Found 10-bit up counter for signal <out_address>.
+    Found 1-bit register for signal <overflow_i>.
+    Found 1-bit register for signal <underflow_i>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <BRAM_FIFO> synthesized.
+
+
+Synthesizing Unit <ac97_core>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_core.vhd".
+    Found finite state machine <FSM_0> for signal <reg_if_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 22                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 11                                             |
+    | Clock              | AC97_Bit_Clk (rising_edge)                     |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <AC97_Reg_Read_Data_Valid>.
+    Found 16-bit register for signal <AC97_Reg_Read_Data>.
+    Found 1-bit register for signal <ac97_reg_busy_i>.
+    Found 1-bit register for signal <ac97_reg_error_i>.
+    Found 1-bit register for signal <accept_pcm_left>.
+    Found 1-bit register for signal <accept_pcm_right>.
+    Found 1-bit register for signal <codec_rdy_i>.
+    Found 20-bit register for signal <data_in>.
+    Found 20-bit register for signal <data_out>.
+    Found 16-bit register for signal <PCM_Record_Left_i>.
+    Found 16-bit register for signal <PCM_Record_Right_i>.
+    Found 1-bit register for signal <record_pcm_left_valid>.
+    Found 1-bit register for signal <record_pcm_right_valid>.
+    Found 7-bit comparator not equal for signal <reg_if_state$cmp_ne0000> created at line 350.
+    Found 7-bit register for signal <register_addr>.
+    Found 16-bit register for signal <register_data>.
+    Found 1-bit register for signal <register_write_cmd>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 120 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <ac97_core> synthesized.
+
+
+Synthesizing Unit <ac97_fifo>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/ac97_fifo.vhd".
+WARNING:Xst:647 - Input <Bus2IP_Addr<0:26>> is never used.
+WARNING:Xst:647 - Input <Bus2IP_Addr<30:31>> is never used.
+WARNING:Xst:647 - Input <Bus2IP_BE> is never used.
+WARNING:Xst:1780 - Signal <BitClk_ac97_reg_access_St<2>> is never used or assigned.
+WARNING:Xst:646 - Signal <BitClk_ac97_reg_data_valid> is assigned but never used.
+WARNING:Xst:1780 - Signal <out_srl_fifo_level> is never used or assigned.
+WARNING:Xst:1780 - Signal <in_srl_fifo_level> is never used or assigned.
+WARNING:Xst:646 - Signal <in_FIFO_Half_Full> is assigned but never used.
+WARNING:Xst:653 - Signal <status_Reg<11>> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <BitClk_ac97_reg_read_data_valid> is never used or assigned.
+WARNING:Xst:646 - Signal <out_FIFO_Half_Empty> is assigned but never used.
+WARNING:Xst:646 - Signal <BitClk_record_right_valid> is assigned but never used.
+WARNING:Xst:646 - Signal <BitClk_playback_right_accept> is assigned but never used.
+    Found finite state machine <FSM_1> for signal <ac97_register_access_sm>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 1                                              |
+    | Clock              | Bus2IP_Clk (rising_edge)                       |
+    | Reset              | Bus2IP_Reset (positive)                        |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <ac97_reset_i>.
+    Found 1-bit register for signal <BitClk_ac97_reg_access_S>.
+    Found 2-bit register for signal <BitClk_ac97_reg_access_St<1:0>>.
+    Found 1-bit register for signal <in_fifo_interrupt_en>.
+    Found 1-bit register for signal <in_FIFO_Underrun>.
+    Found 1-bit register for signal <IpClk_ac97_reg_access_S>.
+    Found 7-bit register for signal <IpClk_ac97_reg_addr>.
+    Found 1-bit register for signal <IpClk_ac97_reg_busy>.
+    Found 1-bit register for signal <IpClk_ac97_reg_error>.
+    Found 1-bit register for signal <IpClk_ac97_reg_read>.
+    Found 16-bit register for signal <IpClk_ac97_Reg_Write_Data>.
+    Found 1-bit register for signal <IpClk_codec_rdy>.
+    Found 2-bit register for signal <IpClk_playback_accept_St>.
+    Found 2-bit register for signal <IpClk_record_valid_St>.
+    Found 1-bit register for signal <out_fifo_interrupt_en>.
+    Found 1-bit register for signal <out_FIFO_Overrun>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  40 D-type flip-flop(s).
+Unit <ac97_fifo> synthesized.
+
+
+Synthesizing Unit <opb_ac97>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/opb_ac97_v2_00_a/hdl/vhdl/opb_ac97.vhd".
+WARNING:Xst:647 - Input <OPB_seqAddr> is never used.
+    Register <xfer_Ack> equivalent to <ac97_CS_3> has been removed
+    Found 1-bit register for signal <ac97_CS_2>.
+    Found 1-bit register for signal <ac97_CS_3>.
+    Found 1-bit register for signal <opb_RNW_1>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <opb_ac97> synthesized.
+
+
+Synthesizing Unit <audio_codec_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/hdl/audio_codec_wrapper.vhd".
+Unit <audio_codec_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 10-bit subtractor                                     : 4
+# Counters                                             : 6
+ 10-bit up counter                                     : 4
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 44
+ 1-bit register                                        : 35
+ 16-bit register                                       : 5
+ 20-bit register                                       : 2
+ 7-bit register                                        : 2
+# Comparators                                          : 1
+ 7-bit comparator not equal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <audio_codec/AC97_FIFO_I/ac97_register_access_sm> on signal <ac97_register_access_sm[1:2]> with gray encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ idle           | 00
+ issue_access   | 01
+ process_access | 11
+----------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state> on signal <reg_if_state[1:7]> with one-hot encoding.
+--------------------------------
+ State              | Encoding
+--------------------------------
+ idle               | 0000001
+ wait_for_new_frame | 0000010
+ send_request_frame | 0000100
+ response_slot0     | 0001000
+ response_slot1     | 0100000
+ response_slot2     | 1000000
+ end_state          | 0010000
+--------------------------------
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 2
+ 10-bit subtractor borrow in                           : 2
+# Counters                                             : 6
+ 10-bit up counter                                     : 4
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 212
+ Flip-Flops                                            : 212
+# Comparators                                          : 1
+ 7-bit comparator not equal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch  <data_out_0> has a constant value of 0 in block <ac97_core>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <data_out_1> has a constant value of 0 in block <ac97_core>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <data_out_2> has a constant value of 0 in block <ac97_core>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <data_out_3> has a constant value of 0 in block <ac97_core>.
+
+Optimizing unit <audio_codec_wrapper> ...
+
+Optimizing unit <ac97_timing> ...
+
+Optimizing unit <BRAM_FIFO> ...
+
+Optimizing unit <ac97_core> ...
+
+Optimizing unit <ac97_fifo> ...
+
+Optimizing unit <opb_ac97> ...
+WARNING:Xst:2677 - Node <audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/underflow_i> of sequential type is unconnected in block <audio_codec_wrapper>.
+WARNING:Xst:2677 - Node <audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/overflow_i> of sequential type is unconnected in block <audio_codec_wrapper>.
+WARNING:Xst:2677 - Node <audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/underflow_i> of sequential type is unconnected in block <audio_codec_wrapper>.
+WARNING:Xst:2677 - Node <audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/overflow_i> of sequential type is unconnected in block <audio_codec_wrapper>.
+WARNING:Xst:2677 - Node <audio_codec/AC97_FIFO_I/ac97_core_I/record_pcm_right_valid> of sequential type is unconnected in block <audio_codec_wrapper>.
+WARNING:Xst:2677 - Node <audio_codec/AC97_FIFO_I/ac97_core_I/accept_pcm_right> of sequential type is unconnected in block <audio_codec_wrapper>.
+WARNING:Xst:2677 - Node <audio_codec/AC97_FIFO_I/ac97_core_I/AC97_Reg_Read_Data_Valid> of sequential type is unconnected in block <audio_codec_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+FlipFlop audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <audio_codec_wrapper> :
+	Found 5-bit shift register for signal <audio_codec/AC97_FIFO_I/ac97_core_I/data_in_4>.
+Unit <audio_codec_wrapper> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 246
+ Flip-Flops                                            : 246
+# Shift Registers                                      : 1
+ 5-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/audio_codec_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 115
+
+Cell Usage :
+# BELS                             : 438
+#      GND                         : 1
+#      INV                         : 5
+#      LUT2                        : 35
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 90
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 132
+#      LUT4_D                      : 5
+#      LUT4_L                      : 8
+#      MUXCY                       : 58
+#      MUXF5                       : 38
+#      VCC                         : 1
+#      XORCY                       : 58
+# FlipFlops/Latches                : 247
+#      FD                          : 9
+#      FD_1                        : 16
+#      FDC                         : 34
+#      FDCE                        : 27
+#      FDCPE                       : 1
+#      FDE                         : 75
+#      FDP                         : 1
+#      FDPE                        : 20
+#      FDR                         : 3
+#      FDRE                        : 60
+#      FDSE                        : 1
+# RAMS                             : 2
+#      RAMB16_S36_S36              : 2
+# Shift Registers                  : 1
+#      SRL16_1                     : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                     205  out of  13696     1%  
+ Number of Slice Flip Flops:           247  out of  27392     0%  
+ Number of 4 input LUTs:               283  out of  27392     1%  
+    Number used as logic:              282
+    Number used as Shift registers:      1
+ Number of IOs:                        115
+ Number of bonded IOBs:                  0  out of    556     0%  
+ Number of BRAMs:                        2  out of    136     1%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                 | Load  |
+-----------------------------------+-----------------------------------------------------------------------+-------+
+OPB_Clk                            | NONE(audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_1)| 117   |
+Bit_Clk                            | NONE(audio_codec/AC97_FIFO_I/ac97_core_I/accept_pcm_left)             | 132   |
+Sln_retry                          | NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                 | 1     |
+-----------------------------------+-----------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+Control Signal                                                                                      | Buffer(FF name)                                                      | Load  |
+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+OPB_Rst                                                                                             | NONE                                                                 | 45    |
+audio_codec/AC97_FIFO_I/ac97_core_reset(audio_codec/AC97_FIFO_I/ac97_core_reset1:O)                 | NONE(audio_codec/AC97_FIFO_I/ac97_core_I/ac97_timing_I_1/slotnum_i_3)| 37    |
+audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S(audio_codec/AC97_FIFO_I/BitClk_ac97_reg_access_S:Q)| NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                | 1     |
+audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S(audio_codec/AC97_FIFO_I/IpClk_ac97_reg_access_S:Q)  | NONE(audio_codec/AC97_FIFO_I/fdcpe_1)                                | 1     |
+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 5.465ns (Maximum Frequency: 182.996MHz)
+   Minimum input arrival time before clock: 4.069ns
+   Maximum output required time after clock: 3.278ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OPB_Clk'
+  Clock period: 5.081ns (frequency: 196.798MHz)
+  Total number of paths / destination ports: 2376 / 253
+-------------------------------------------------------------------------
+Delay:               5.081ns (Levels of Logic = 12)
+  Source:            audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_0 (FF)
+  Destination:       audio_codec/OPB_rdDBus_DFF[29].OPB_rdBus_FDRE (FF)
+  Source Clock:      OPB_Clk rising
+  Destination Clock: OPB_Clk rising
+
+  Data Path: audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_0 to audio_codec/OPB_rdDBus_DFF[29].OPB_rdBus_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.370   0.549  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_0 (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_0)
+     LUT2:I0->O            2   0.275   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_lut<0> (audio_codec/AC97_FIFO_I/out_fifo_level<9>)
+     MUXCY:S->O            1   0.334   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<0> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<1> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<2> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<3> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<4> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<5> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_cy<5>)
+     XORCY:CI->O           2   0.708   0.416  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Msub_addr_diff_Madd_xor<6> (audio_codec/AC97_FIFO_I/out_fifo_level<3>)
+     LUT4:I3->O            2   0.275   0.514  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/empty_i_cmp_eq000018 (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/empty_i_cmp_eq00001_map4)
+     LUT4:I0->O            2   0.275   0.396  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/empty_i_cmp_eq00002 (audio_codec/AC97_FIFO_I/out_FIFO_Empty)
+     LUT4:I2->O            1   0.275   0.000  audio_codec/AC97_FIFO_I/IP2Bus_Data_29_mux0000_F (N1152)
+     MUXF5:I0->O           1   0.303   0.000  audio_codec/AC97_FIFO_I/IP2Bus_Data_29_mux0000 (audio_codec/iSln_DBus<29>)
+     FDRE:D                    0.208          audio_codec/OPB_rdDBus_DFF[29].OPB_rdBus_FDRE
+    ----------------------------------------
+    Total                      5.081ns (3.206ns logic, 1.876ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Bit_Clk'
+  Clock period: 5.465ns (frequency: 182.996MHz)
+  Total number of paths / destination ports: 1902 / 190
+-------------------------------------------------------------------------
+Delay:               2.732ns (Levels of Logic = 3)
+  Source:            audio_codec/AC97_FIFO_I/ac97_core_I/data_in_18 (FF)
+  Destination:       audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_FFd1 (FF)
+  Source Clock:      Bit_Clk falling
+  Destination Clock: Bit_Clk rising
+
+  Data Path: audio_codec/AC97_FIFO_I/ac97_core_I/data_in_18 to audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             5   0.370   0.466  audio_codec/AC97_FIFO_I/ac97_core_I/data_in_18 (audio_codec/AC97_FIFO_I/ac97_core_I/data_in_18)
+     LUT4:I3->O            1   0.275   0.467  audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_cmp_ne0000113 (audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_cmp_ne0000_map33)
+     LUT4_D:I0->O          2   0.275   0.396  audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_cmp_ne0000144 (audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_cmp_ne0000)
+     LUT4:I2->O            1   0.275   0.000  audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_FFd1-In (audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_FFd1-In)
+     FDC:D                     0.208          audio_codec/AC97_FIFO_I/ac97_core_I/reg_if_state_FFd1
+    ----------------------------------------
+    Total                      2.732ns (1.403ns logic, 1.329ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 1655 / 236
+-------------------------------------------------------------------------
+Offset:              4.069ns (Levels of Logic = 13)
+  Source:            OPB_ABus<28> (PAD)
+  Destination:       audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_9 (FF)
+  Destination Clock: OPB_Clk rising
+
+  Data Path: OPB_ABus<28> to audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/in_address_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT3:I0->O           19   0.275   0.734  audio_codec/AC97_FIFO_I/IP2Bus_Data_16_mux000021 (audio_codec/AC97_FIFO_I/N1)
+     LUT3:I0->O           49   0.275   0.831  audio_codec/AC97_FIFO_I/out_fifo_interrupt_en_and00001 (audio_codec/AC97_FIFO_I/out_fifo_interrupt_en_and0000)
+     LUT3:I0->O            1   0.275   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_lut<0> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/N2)
+     MUXCY:S->O            1   0.334   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<0> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<1> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<2> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<3> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<4> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<5> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<5>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<6> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<6>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<7> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<7>)
+     MUXCY:CI->O           0   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<8> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_cy<8>)
+     XORCY:CI->O           1   0.708   0.000  audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address_xor<9> (audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/Mcount_out_address9)
+     FDPE:D                    0.208          audio_codec/AC97_FIFO_I/Using_Recording_BRAM.OUT_FIFO/out_address_9
+    ----------------------------------------
+    Total                      4.069ns (2.503ns logic, 1.566ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Bit_Clk'
+  Total number of paths / destination ports: 41 / 41
+-------------------------------------------------------------------------
+Offset:              2.906ns (Levels of Logic = 3)
+  Source:            OPB_Rst (PAD)
+  Destination:       audio_codec/AC97_FIFO_I/ac97_core_I/AC97_Reg_Read_Data_0 (FF)
+  Destination Clock: Bit_Clk rising
+
+  Data Path: OPB_Rst to audio_codec/AC97_FIFO_I/ac97_core_I/AC97_Reg_Read_Data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I1->O           40   0.275   0.721  audio_codec/AC97_FIFO_I/ac97_core_reset1 (audio_codec/AC97_FIFO_I/ac97_core_reset)
+     LUT4:I3->O            1   0.275   0.369  audio_codec/AC97_FIFO_I/ac97_core_I/AC97_Reg_Read_Data_and0000_SW1 (N1180)
+     LUT4:I3->O           16   0.275   0.630  audio_codec/AC97_FIFO_I/ac97_core_I/AC97_Reg_Read_Data_and0000 (audio_codec/AC97_FIFO_I/ac97_core_I/AC97_Reg_Read_Data_and0000)
+     FDE:CE                    0.263          audio_codec/AC97_FIFO_I/ac97_core_I/AC97_Reg_Read_Data_15
+    ----------------------------------------
+    Total                      2.906ns (1.186ns logic, 1.720ns route)
+                                       (40.8% logic, 59.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 88 / 35
+-------------------------------------------------------------------------
+Offset:              3.278ns (Levels of Logic = 11)
+  Source:            audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_0 (FF)
+  Destination:       Interrupt (PAD)
+  Source Clock:      OPB_Clk rising
+
+  Data Path: audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_0 to Interrupt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.370   0.549  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_0 (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/in_address_0)
+     LUT2:I0->O            2   0.275   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_lut<0> (audio_codec/AC97_FIFO_I/in_fifo_level<9>)
+     MUXCY:S->O            1   0.334   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<0> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<1> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<2> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<3> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<4> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<5> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<5>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<6> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<6>)
+     MUXCY:CI->O           1   0.036   0.000  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<7> (audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_cy<7>)
+     XORCY:CI->O           4   0.708   0.511  audio_codec/AC97_FIFO_I/Using_Playback_BRAM.IN_FIFO/Msub_addr_diff_Madd_xor<8> (audio_codec/AC97_FIFO_I/in_fifo_level<1>)
+     LUT4:I1->O            0   0.275   0.000  audio_codec/AC97_FIFO_I/Interrupt1 (Interrupt)
+    ----------------------------------------
+    Total                      3.278ns (2.217ns logic, 1.060ns route)
+                                       (67.7% logic, 32.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Bit_Clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.370ns (Levels of Logic = 0)
+  Source:            audio_codec/AC97_FIFO_I/ac97_core_I/data_out_19 (FF)
+  Destination:       SData_Out (PAD)
+  Source Clock:      Bit_Clk rising
+
+  Data Path: audio_codec/AC97_FIFO_I/ac97_core_I/data_out_19 to SData_Out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              0   0.370   0.000  audio_codec/AC97_FIFO_I/ac97_core_I/data_out_19 (SData_Out)
+    ----------------------------------------
+    Total                      0.370ns (0.370ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+CPU : 11.97 / 12.05 s | Elapsed : 12.00 / 12.00 s
+ 
+--> 
+
+Total memory usage is 223272 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   93 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

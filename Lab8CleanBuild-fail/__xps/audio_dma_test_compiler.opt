@@ -1,0 +1,20 @@
+ppc405_0
+AUDIO_DMA_TEST_SOURCES = audio_dma_test/src/audio_test.c audio_dma_test/src/sdSoundReader.c 
+AUDIO_DMA_TEST_HEADERS = audio_dma_test/src/sdSoundReader.h 
+AUDIO_DMA_TEST_CC = powerpc-eabi-gcc
+AUDIO_DMA_TEST_CC_SIZE = powerpc-eabi-size
+AUDIO_DMA_TEST_CC_OPT = -O2
+AUDIO_DMA_TEST_CFLAGS = 
+AUDIO_DMA_TEST_CC_SEARCH = # -B
+AUDIO_DMA_TEST_LIBPATH = -L./ppc405_0/lib/ # -L
+AUDIO_DMA_TEST_INCLUDES = -I./ppc405_0/include/  -Iaudio_dma_test/src/ # -I
+AUDIO_DMA_TEST_LFLAGS = # -l
+AUDIO_DMA_TEST_LINKER_SCRIPT = 
+AUDIO_DMA_TEST_CC_DEBUG_FLAG =  -g 
+AUDIO_DMA_TEST_CC_PROFILE_FLAG = # -pg
+AUDIO_DMA_TEST_CC_GLOBPTR_FLAG= # -msdata=eabi
+AUDIO_DMA_TEST_CC_INFERRED_FLAGS= 
+AUDIO_DMA_TEST_CC_START_ADDR_FLAG=  # -Wl,-defsym -Wl,_START_ADDR=
+AUDIO_DMA_TEST_CC_STACK_SIZE_FLAG=  # -Wl,-defsym -Wl,_STACK_SIZE=
+AUDIO_DMA_TEST_CC_HEAP_SIZE_FLAG=  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(AUDIO_DMA_TEST_CC_INFERRED_FLAGS)  \

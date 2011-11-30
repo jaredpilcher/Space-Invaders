@@ -1,0 +1,11 @@
+##############################################################################
+## Filename:          C:\hutch\ECEn427\Labs\Lab6WithOPBSlaveTest1\pcores/lab3_slave/data/lab3_slave_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Oct 29 12:49:10 2007 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib lab3_slave   OPBSlaveExample  vhdl
+#lib lab3_slave   text_mem         vhdl  #modify the above line to add more vhdl files
+#lib lab3_slave   marquee_ctrl     vhdl
+#lib lab3_slave   ssd_extended     vhdl
+#lib lab3_slave   button_debouncer vhdl

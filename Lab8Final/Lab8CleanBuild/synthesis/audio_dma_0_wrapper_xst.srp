@@ -1,0 +1,357 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "audio_dma_0_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/audio_dma_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : audio_dma_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" in Library audio_dma.
+Entity <audio_dma> compiled.
+Entity <audio_dma> (Architecture <dma>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/hdl/audio_dma_0_wrapper.vhd" in Library work.
+Entity <audio_dma_0_wrapper> compiled.
+Entity <audio_dma_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <audio_dma_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <audio_dma> in library <audio_dma> (architecture <dma>) with generics.
+	C_BASEADDR = "01000000000010010000000000000000"
+	C_FAMILY = "virtex2p"
+	C_HIGHADDR = "01000000000010011111111111111111"
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <audio_dma_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+    Set user-defined property "X_CORE_INFO =  audio_dma_v" for unit <audio_dma>.
+Entity <audio_dma_0_wrapper> analyzed. Unit <audio_dma_0_wrapper> generated.
+
+Analyzing generic Entity <audio_dma> in library <audio_dma> (Architecture <dma>).
+	C_BASEADDR = "01000000000010010000000000000000"
+	C_FAMILY = "virtex2p"
+	C_HIGHADDR = "01000000000010011111111111111111"
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:1610 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd" line 126: Width mismatch. <master_data> has a width of 32 bits but assigned expression is 8-bit wide.
+INFO:Xst:2679 - Register <master_select> in unit <audio_dma> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <rnw> in unit <audio_dma> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <master_address> in unit <audio_dma> has a constant value of 01000000011000000000000000000100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <master_data> in unit <audio_dma> has a constant value of 00000000000000000000000000100011 during circuit operation. The register is replaced by logic.
+Entity <audio_dma> analyzed. Unit <audio_dma> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <audio_dma>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd".
+WARNING:Xst:647 - Input <OPB_timeout> is never used.
+WARNING:Xst:647 - Input <AC97Int> is never used.
+WARNING:Xst:647 - Input <OPB_BE> is never used.
+WARNING:Xst:647 - Input <OPB_RNW> is never used.
+WARNING:Xst:647 - Input <OPB_Rst> is never used.
+WARNING:Xst:647 - Input <OPB_errAck> is never used.
+WARNING:Xst:647 - Input <OPB_retry> is never used.
+WARNING:Xst:647 - Input <OPB_DBus> is never used.
+WARNING:Xst:647 - Input <OPB_select> is never used.
+WARNING:Xst:647 - Input <OPB_ABus> is never used.
+WARNING:Xst:647 - Input <OPB_seqAddr> is never used.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | OPB_Clk (rising_edge)                          |
+    | Power Up State     | request                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <master_request>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <audio_dma> synthesized.
+
+
+Synthesizing Unit <audio_dma_0_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/hdl/audio_dma_0_wrapper.vhd".
+Unit <audio_dma_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <audio_dma_0/current_state> on signal <current_state[1:2]> with gray encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ idle           | 01
+ request        | 00
+ address_select | 11
+ acknowledged   | 10
+----------------------------
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <audio_dma_0_wrapper> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/audio_dma_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 185
+
+Cell Usage :
+# BELS                             : 6
+#      GND                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 3
+#      FD                          : 2
+#      LD                          : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                       2  out of  13696     0%  
+ Number of Slice Flip Flops:             3  out of  27392     0%  
+ Number of 4 input LUTs:                 4  out of  27392     0%  
+ Number of IOs:                        185
+ Number of bonded IOBs:                  0  out of    556     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------+-------------------------------------+-------+
+Clock Signal                                                           | Clock buffer(FF name)               | Load  |
+-----------------------------------------------------------------------+-------------------------------------+-------+
+audio_dma_0/master_request_or0000(audio_dma_0/master_request_or00001:O)| NONE(*)(audio_dma_0/master_request) | 1     |
+OPB_Clk                                                                | NONE(audio_dma_0/current_state_FFd1)| 2     |
+-----------------------------------------------------------------------+-------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 1.402ns (Maximum Frequency: 713.216MHz)
+   Minimum input arrival time before clock: 0.619ns
+   Maximum output required time after clock: 0.536ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OPB_Clk'
+  Clock period: 1.402ns (frequency: 713.216MHz)
+  Total number of paths / destination ports: 4 / 2
+-------------------------------------------------------------------------
+Delay:               1.402ns (Levels of Logic = 1)
+  Source:            audio_dma_0/current_state_FFd1 (FF)
+  Destination:       audio_dma_0/current_state_FFd1 (FF)
+  Source Clock:      OPB_Clk rising
+  Destination Clock: OPB_Clk rising
+
+  Data Path: audio_dma_0/current_state_FFd1 to audio_dma_0/current_state_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.370   0.549  audio_dma_0/current_state_FFd1 (audio_dma_0/current_state_FFd1)
+     LUT3:I0->O            1   0.275   0.000  audio_dma_0/current_state_FFd1-In1 (audio_dma_0/current_state_FFd1-In)
+     FD:D                      0.208          audio_dma_0/current_state_FFd1
+    ----------------------------------------
+    Total                      1.402ns (0.853ns logic, 0.549ns route)
+                                       (60.8% logic, 39.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Offset:              0.619ns (Levels of Logic = 1)
+  Source:            OPB_MGrant (PAD)
+  Destination:       audio_dma_0/current_state_FFd2 (FF)
+  Destination Clock: OPB_Clk rising
+
+  Data Path: OPB_MGrant to audio_dma_0/current_state_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.275   0.000  audio_dma_0/current_state_FFd2-In1 (audio_dma_0/current_state_FFd2-In)
+     FD:D                      0.208          audio_dma_0/current_state_FFd2
+    ----------------------------------------
+    Total                      0.619ns (0.619ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'audio_dma_0/master_request_or0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.536ns (Levels of Logic = 0)
+  Source:            audio_dma_0/master_request (LATCH)
+  Destination:       M_request (PAD)
+  Source Clock:      audio_dma_0/master_request_or0000 falling
+
+  Data Path: audio_dma_0/master_request to M_request
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               0   0.536   0.000  audio_dma_0/master_request (M_request)
+    ----------------------------------------
+    Total                      0.536ns (0.536ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+CPU : 6.00 / 6.08 s | Elapsed : 6.00 / 6.00 s
+ 
+--> 
+
+Total memory usage is 197036 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

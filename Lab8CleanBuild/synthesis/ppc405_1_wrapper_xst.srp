@@ -1,0 +1,291 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "ppc405_1_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/ppc405_1_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : ppc405_1_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/hdl/vhdl/ppc405_top.vhd" in Library ppc405_v2_00_c.
+Entity <ppc405_top> compiled.
+Entity <ppc405_top> (Architecture <structure>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/ppc405_1_wrapper.vhd" in Library work.
+Entity <ppc405_1_wrapper> compiled.
+Entity <ppc405_1_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ppc405_1_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <ppc405_top> in library <ppc405_v2_00_c> (architecture <structure>) with generics.
+	C_DCR_RESYNC = 0
+	C_DETERMINISTIC_MULT = 0
+	C_DISABLE_OPERAND_FORWARDING = 1
+	C_DSOCM_DCR_BASEADDR = "0000100000"
+	C_DSOCM_DCR_HIGHADDR = "0000100011"
+	C_ISOCM_DCR_BASEADDR = "0000010000"
+	C_ISOCM_DCR_HIGHADDR = "0000010011"
+	C_MMU_ENABLE = 1
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ppc405_1_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set user-defined property "X_CORE_INFO =  ppc405_v2_00_c" for unit <ppc405_top>.
+Entity <ppc405_1_wrapper> analyzed. Unit <ppc405_1_wrapper> generated.
+
+Analyzing generic Entity <ppc405_top> in library <ppc405_v2_00_c> (Architecture <structure>).
+	C_DCR_RESYNC = 0
+	C_DETERMINISTIC_MULT = 0
+	C_DISABLE_OPERAND_FORWARDING = 1
+	C_DSOCM_DCR_BASEADDR = "0000100000"
+	C_DSOCM_DCR_HIGHADDR = "0000100011"
+	C_ISOCM_DCR_BASEADDR = "0000010000"
+	C_ISOCM_DCR_HIGHADDR = "0000010011"
+	C_MMU_ENABLE = 1
+WARNING:Xst:2211 - "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/hdl/vhdl/ppc405_top.vhd" line 508: Instantiating black box module <PPC405>.
+Entity <ppc405_top> analyzed. Unit <ppc405_top> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ppc405_top>.
+    Related source file is "C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/hdl/vhdl/ppc405_top.vhd".
+WARNING:Xst:647 - Input <PLBC405DCUSBUSYS> is never used.
+WARNING:Xst:647 - Input <PLBC405DCUREARBITRATE> is never used.
+WARNING:Xst:647 - Input <PLBC405DCUSERR> is never used.
+WARNING:Xst:647 - Input <DCRCLK> is never used.
+WARNING:Xst:647 - Input <PLBC405DCUWRBTERM> is never used.
+WARNING:Xst:647 - Input <PLBC405DCURDWDADDR<0>> is never used.
+WARNING:Xst:647 - Input <PLBC405ICUWRBTERM> is never used.
+WARNING:Xst:647 - Input <PLBC405ICUWRDACK> is never used.
+WARNING:Xst:647 - Input <PLBC405DCURDBTERM> is never used.
+WARNING:Xst:647 - Input <PLBC405ICURDWDADDR<0>> is never used.
+WARNING:Xst:647 - Input <PLBC405ICUREARBITRATE> is never used.
+WARNING:Xst:647 - Input <PLBC405ICUSBUSYS> is never used.
+WARNING:Xst:647 - Input <PLBC405ICUSSIZE<0>> is never used.
+WARNING:Xst:647 - Input <PLBC405ICURDBTERM> is never used.
+WARNING:Xst:647 - Input <PLBC405DCUSSIZE<0>> is never used.
+WARNING:Xst:647 - Input <PLBC405ICUSERR> is never used.
+Unit <ppc405_top> synthesized.
+
+
+Synthesizing Unit <ppc405_1_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/ppc405_1_wrapper.vhd".
+Unit <ppc405_1_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ppc405_1_wrapper> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/ppc405_1_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 855
+
+Cell Usage :
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# Others                           : 1
+#      PPC405                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                       0  out of  13696     0%  
+ Number of IOs:                        855
+ Number of bonded IOBs:                  0  out of    556     0%  
+ Number of PPC405s:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CPMC405CLOCK                       | NONE(ppc405_1/PPC405_i)| 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 1.131ns
+   Maximum output required time after clock: 1.931ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CPMC405CLOCK'
+  Total number of paths / destination ports: 82 / 82
+-------------------------------------------------------------------------
+Offset:              1.131ns (Levels of Logic = 0)
+  Source:            TRCC405TRIGGEREVENTIN (PAD)
+  Destination:       ppc405_1/PPC405_i (CPU)
+  Destination Clock: CPMC405CLOCK rising
+
+  Data Path: TRCC405TRIGGEREVENTIN to ppc405_1/PPC405_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     PPC405:TRCC405TRIGGEREVENTIN        1.131          ppc405_1/PPC405_i
+    ----------------------------------------
+    Total                      1.131ns (1.131ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CPMC405CLOCK'
+  Total number of paths / destination ports: 110 / 110
+-------------------------------------------------------------------------
+Offset:              1.931ns (Levels of Logic = 0)
+  Source:            ppc405_1/PPC405_i (CPU)
+  Destination:       C405DBGWBCOMPLETE (PAD)
+  Source Clock:      CPMC405CLOCK rising
+
+  Data Path: ppc405_1/PPC405_i to C405DBGWBCOMPLETE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     PPC405:CPMC405CLOCK->C405DBGWBCOMPLETE    0   1.931   0.000  ppc405_1/PPC405_i (C405DBGWBCOMPLETE)
+    ----------------------------------------
+    Total                      1.931ns (1.931ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+CPU : 7.53 / 7.61 s | Elapsed : 8.00 / 8.00 s
+ 
+--> 
+
+Total memory usage is 197036 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,36 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Put_Your_Temp_Files_Here\space_invaders\Lab8Final\Lab8CleanBuild\pcores\lab3_slave\hdl\vhdl
+Elab3_slave
+Z1 w1322008354
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z3 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z4 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z5 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+Z6 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab8Final/Lab8CleanBuild/pcores/lab3_slave/hdl/vhdl/OPBSlaveExample.vhd
+l0
+L45
+V0FBnO41;1h;_j^8:DWCWX0
+!s100 >g2iXI>d?[_0=4e@>KZE:1
+Z7 OE;C;6.4;39
+32
+Z8 o-work work
+Z9 tExplicit 1
+Adi01
+R2
+R3
+R4
+DEx4 work 10 lab3_slave 0 22 0FBnO41;1h;_j^8:DWCWX0
+l155
+L130
+VYoJJ@<fzc8ED^?13M>Z2j1
+!s100 ;]SokGn>AANnKbQXO>2C@2
+R7
+32
+Z10 Mx3 4 ieee 14 std_logic_1164
+Mx2 4 ieee 15 std_logic_arith
+Mx1 4 ieee 18 std_logic_unsigned
+R8
+R9
