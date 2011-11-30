@@ -66,7 +66,7 @@ int main() {
 	char hello[] = "Hello World\n\r";
 	int world[11];
 	int i;
-	for(i = 0; i < 11; i++){
+	for(i = 0; i < 13; i++){
 		world[i] = hello[i];
 	}
 	xil_printf("Hello\n\r");
@@ -74,11 +74,31 @@ int main() {
 	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
 	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 12, XPAR_RS232_UART_1_BASEADDR + 4);
 	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, world);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, 11);
-	usleep(10000);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 24);
-	usleep(1000);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, 24);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 1);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, world + 6);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, 28);
+	for(i = 0; i < 11; i++){
+		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 24);
+		usleep(100000);
+		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 16);
+		print("here");
+		//xil_printf("channel_length_out: %d\n\r", XIo_In32(XPAR_AUDIO_DMA_0_BASEADDR + 8));
+		usleep(100000);
+//		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 1);
+//		usleep(100000);
+//		xil_printf("channel_length_out: %d\n\r", XIo_In32(XPAR_AUDIO_DMA_0_BASEADDR + 8));
+//		usleep(100000);
+		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 25);
+		usleep(100000);
+//		xil_printf("channel_length_out: %d\n\r", XIo_In32(XPAR_AUDIO_DMA_0_BASEADDR + 8));
+//		usleep(100000);
+//		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
+//		usleep(100000);
+//		xil_printf("channel_length_out: %d\n\r", XIo_In32(XPAR_AUDIO_DMA_0_BASEADDR + 8));
+//		usleep(100000);
+	}
+	//XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
 	xil_printf("Done!\n\r");
 	
 }
