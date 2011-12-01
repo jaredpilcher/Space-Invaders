@@ -700,10 +700,10 @@ Optimizing unit <regs> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2260 - The FF/Latch <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[29].INTC_DBUS_BIT_I> in Unit <opb_intc_0_wrapper> is equivalent to the following 29 FFs/Latches : <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[28].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[27].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[26].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[25].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[24].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[23].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[22].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[21].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[20].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[19].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[18].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[17].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[16].INTC_DBUS_BIT_I>
-   <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[15].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[14].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[13].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[12].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[11].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[10].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[9].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[8].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[7].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[6].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[5].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[4].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[3].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[2].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[1].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[0].INTC_DBUS_BIT_I> 
 INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[0].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0_wrapper> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[0].IPR_REG_BIT_I> 
 INFO:Xst:2260 - The FF/Latch <opb_intc_0/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[1].MASKED_INTS_REG_BIT_I> in Unit <opb_intc_0_wrapper> is equivalent to the following FF/Latch : <opb_intc_0/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[1].IPR_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[29].INTC_DBUS_BIT_I> in Unit <opb_intc_0_wrapper> is equivalent to the following 29 FFs/Latches : <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[28].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[27].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[26].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[25].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[24].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[23].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[22].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[21].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[20].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[19].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[18].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[17].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[16].INTC_DBUS_BIT_I>
+   <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[15].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[14].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[13].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[12].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[11].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[10].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[9].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[8].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[7].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[6].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[5].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[4].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[3].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[2].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[1].INTC_DBUS_BIT_I> <opb_intc_0/OPB_INTFC_I/INTC_DBUS_REG_GEN[0].INTC_DBUS_BIT_I> 
 
 Final Macro Processing ...
 
@@ -788,11 +788,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+---------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                               | Load  |
------------------------------------+---------------------------------------------------------------------+-------+
-OPB_Clk                            | NONE(opb_intc_0/OPB_INTFC_I/OPB_ABUS_REG_GEN[18].OPB_ABUS_REG_BIT_I)| 122   |
------------------------------------+---------------------------------------------------------------------+-------+
+-----------------------------------+-----------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                           | Load  |
+-----------------------------------+-----------------------------------------------------------------+-------+
+OPB_Clk                            | NONE(opb_intc_0/INTC_CORE_I/REGS_I/ISR_REG_GEN[1].ISR_REG_BIT_I)| 122   |
+-----------------------------------+-----------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -885,7 +885,7 @@ Offset:              1.159ns (Levels of Logic = 1)
                                        (55.6% logic, 44.4% route)
 
 =========================================================================
-CPU : 7.95 / 8.03 s | Elapsed : 8.00 / 8.00 s
+CPU : 7.92 / 8.00 s | Elapsed : 8.00 / 8.00 s
  
 --> 
 

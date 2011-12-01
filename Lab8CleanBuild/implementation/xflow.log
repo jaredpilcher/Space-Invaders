@@ -1747,17 +1747,17 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   32
 Logic Utilization:
-  Total Number Slice Registers:     4,854 out of  27,392   17%
+  Total Number Slice Registers:     4,853 out of  27,392   17%
     Number used as Flip Flops:                 4,821
-    Number used as Latches:                       33
-  Number of 4 input LUTs:           3,939 out of  27,392   14%
+    Number used as Latches:                       32
+  Number of 4 input LUTs:           3,878 out of  27,392   14%
 Logic Distribution:
-  Number of occupied Slices:        4,425 out of  13,696   32%
-  Number of Slices containing only related logic:   4,425 out of   4,425  100%
-  Number of Slices containing unrelated logic:          0 out of   4,425    0%
+  Number of occupied Slices:        4,409 out of  13,696   32%
+  Number of Slices containing only related logic:   4,409 out of   4,409  100%
+  Number of Slices containing unrelated logic:          0 out of   4,409    0%
         *See NOTES below for an explanation of the effects of unrelated logic
-Total Number of 4 input LUTs:          5,003 out of  27,392   18%
-  Number used as logic:             3,939
+Total Number of 4 input LUTs:          4,942 out of  27,392   18%
+  Number used as logic:             3,878
   Number used as a route-thru:        364
   Number used for Dual Port RAMs:     346
     (Two LUTs used per Dual Port RAM)
@@ -1776,7 +1776,7 @@ Total Number of 4 input LUTs:          5,003 out of  27,392   18%
   Number of GT10s:                      0 out of       0    0%
 
    Number of RPM macros:           14
-Total equivalent gate count for design:  4,747,603
+Total equivalent gate count for design:  4,747,232
 Additional JTAG gate count for IOBs:  10,512
 Peak Memory Usage:  274 MB
 Total REAL time to MAP completion:  21 secs 
@@ -1836,7 +1836,7 @@ Device Utilization Summary:
    Number of JTAGPPCs                        1 out of 1     100%
    Number of PPC405s                         2 out of 2     100%
    Number of RAMB16s                        70 out of 136    51%
-   Number of SLICEs                       4425 out of 13696  32%
+   Number of SLICEs                       4409 out of 13696  32%
 
 
 Overall effort level (-ol):   High 
@@ -1844,14 +1844,14 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 11 secs 
+Starting initial Timing Analysis.  REAL time: 10 secs 
 Finished initial Timing Analysis.  REAL time: 11 secs 
 
 
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:9a9317) REAL time: 18 secs 
+Phase 1.1 (Checksum:9a9127) REAL time: 18 secs 
 
 Phase 2.7
 Phase 2.7 (Checksum:1312cfe) REAL time: 18 secs 
@@ -1876,72 +1876,70 @@ Phase 7.5
 Phase 7.5 (Checksum:42c1d79) REAL time: 22 secs 
 
 Phase 8.8
-...............................
-......
-...........................
+................................
+.....
+.........................
 ......
 ......
 .....
-Phase 8.8 (Checksum:efa298) REAL time: 51 secs 
+Phase 8.8 (Checksum:f201c0) REAL time: 49 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:55d4a77) REAL time: 51 secs 
+Phase 9.5 (Checksum:55d4a77) REAL time: 49 secs 
 
 Phase 10.18
-Phase 10.18 (Checksum:5f5e0f6) REAL time: 1 mins 20 secs 
+Phase 10.18 (Checksum:5f5e0f6) REAL time: 1 mins 21 secs 
 
 Phase 11.5
-Phase 11.5 (Checksum:68e7775) REAL time: 1 mins 20 secs 
+Phase 11.5 (Checksum:68e7775) REAL time: 1 mins 22 secs 
 
 Phase 12.27
-Phase 12.27 (Checksum:7270df4) REAL time: 1 mins 23 secs 
+Phase 12.27 (Checksum:7270df4) REAL time: 1 mins 25 secs 
 
 Phase 13.24
-Phase 13.24 (Checksum:7bfa473) REAL time: 1 mins 23 secs 
+Phase 13.24 (Checksum:7bfa473) REAL time: 1 mins 25 secs 
 
-REAL time consumed by placer: 1 mins 28 secs 
-CPU  time consumed by placer: 1 mins 27 secs 
+REAL time consumed by placer: 1 mins 29 secs 
+CPU  time consumed by placer: 1 mins 29 secs 
 Writing design to file system.ncd
 
 
-Total REAL time to Placer completion: 1 mins 29 secs 
-Total CPU time to Placer completion: 1 mins 29 secs 
+Total REAL time to Placer completion: 1 mins 30 secs 
+Total CPU time to Placer completion: 1 mins 30 secs 
 
 Starting Router
 
-Phase 1: 34361 unrouted;       REAL time: 1 mins 38 secs 
+Phase 1: 34195 unrouted;       REAL time: 1 mins 39 secs 
 
-Phase 2: 27820 unrouted;       REAL time: 1 mins 41 secs 
+Phase 2: 27675 unrouted;       REAL time: 1 mins 42 secs 
 
-Phase 3: 6282 unrouted;       REAL time: 1 mins 49 secs 
+Phase 3: 6207 unrouted;       REAL time: 1 mins 50 secs 
 
-Phase 4: 6282 unrouted; (105495)      REAL time: 1 mins 50 secs 
+Phase 4: 6207 unrouted; (93153)      REAL time: 1 mins 51 secs 
 
-Phase 5: 6517 unrouted; (0)      REAL time: 1 mins 54 secs 
+Phase 5: 6425 unrouted; (2693)      REAL time: 1 mins 56 secs 
 
-Phase 6: 6517 unrouted; (0)      REAL time: 1 mins 55 secs 
+Phase 6: 6439 unrouted; (0)      REAL time: 1 mins 58 secs 
 
-Phase 7: 0 unrouted; (29)      REAL time: 2 mins 6 secs 
+Phase 7: 0 unrouted; (984)      REAL time: 2 mins 10 secs 
 
-Phase 8: 0 unrouted; (29)      REAL time: 2 mins 12 secs 
+Phase 8: 0 unrouted; (984)      REAL time: 2 mins 16 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase 9: 0 unrouted; (0)      REAL time: 2 mins 32 secs 
+Phase 9: 0 unrouted; (0)      REAL time: 2 mins 36 secs 
 
-Phase 10: 0 unrouted; (0)      REAL time: 2 mins 36 secs 
+Phase 10: 0 unrouted; (0)      REAL time: 2 mins 40 secs 
 
 WARNING:Route:455 - CLK Net:fpga_0_DDR_CLK_FB_IBUFG may have excessive skew because 
       3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:sys_clk_pin_IBUFG may have excessive skew because 
       3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:opb_OPB_select may have excessive skew because 
-      0 CLK pins and 38 NON_CLK pins failed to route using a CLK template.
-WARNING:Route:455 - CLK Net:audio_dma_0/audio_dma_0/master/current_state_FFd3 may have excessive skew because 
-      1 CLK pins and 107 NON_CLK pins failed to route using a CLK template.
+      0 CLK pins and 39 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 2 mins 40 secs 
-Total CPU time to Router completion: 2 mins 40 secs 
+Total REAL time to Router completion: 2 mins 43 secs 
+Total CPU time to Router completion: 2 mins 43 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -1960,39 +1958,35 @@ Generating Clock Report
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
 |plb_bram_if_cntlr_1_ |              |      |      |            |             |
-|       port_BRAM_Clk |     BUFGMUX3S| No   | 2890 |  0.281     |  1.258      |
-+---------------------+--------------+------+------+------------+-------------+
-|vga_framebuffer/vga_ |              |      |      |            |             |
-|framebuffer/buffered |              |      |      |            |             |
-|        _pixel_clock |     BUFGMUX7S| No   |   92 |  0.246     |  1.252      |
-+---------------------+--------------+------+------+------------+-------------+
-|     CS_OPB_CONT0<0> |     BUFGMUX6S| No   |  124 |  0.196     |  1.257      |
-+---------------------+--------------+------+------+------------+-------------+
-|        ddr_clk_90_s |     BUFGMUX2S| No   |  202 |  0.168     |  1.257      |
-+---------------------+--------------+------+------+------------+-------------+
-|fpga_0_Audio_Codec_B |              |      |      |            |             |
-|    it_Clk_pin_BUFGP |     BUFGMUX0S| No   |   79 |  0.166     |  1.257      |
+|       port_BRAM_Clk |     BUFGMUX3S| No   | 2889 |  0.281     |  1.258      |
 +---------------------+--------------+------+------+------------+-------------+
 |            clk_90_s |     BUFGMUX4P| No   |   50 |  0.145     |  1.257      |
 +---------------------+--------------+------+------+------------+-------------+
+|     CS_OPB_CONT0<0> |     BUFGMUX6S| No   |  124 |  0.203     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_Audio_Codec_B |              |      |      |            |             |
+|    it_Clk_pin_BUFGP |     BUFGMUX0S| No   |   79 |  0.161     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
 |fpga_0_SysACE_Compac |              |      |      |            |             |
 |tFlash_SysACE_CLK_pi |              |      |      |            |             |
-|             n_BUFGP |     BUFGMUX1S| No   |   61 |  0.120     |  1.241      |
+|             n_BUFGP |     BUFGMUX1S| No   |   61 |  0.122     |  1.241      |
 +---------------------+--------------+------+------+------------+-------------+
-|      opb_OPB_select |         Local|      |   60 |  0.168     |  2.795      |
+|        ddr_clk_90_s |     BUFGMUX2S| No   |  202 |  0.154     |  1.257      |
 +---------------------+--------------+------+------+------------+-------------+
-|audio_dma_0/audio_dm |              |      |      |            |             |
-|a_0/master/current_s |              |      |      |            |             |
-|           tate_FFd3 |         Local|      |  108 |  0.000     |  1.340      |
+|vga_framebuffer/vga_ |              |      |      |            |             |
+|framebuffer/buffered |              |      |      |            |             |
+|        _pixel_clock |     BUFGMUX7S| No   |   92 |  0.251     |  1.252      |
++---------------------+--------------+------+------+------------+-------------+
+|      opb_OPB_select |         Local|      |   61 |  0.037     |  2.656      |
 +---------------------+--------------+------+------+------------+-------------+
 |fpga_0_DDR_CLK_FB_IB |              |      |      |            |             |
-|                 UFG |         Local|      |    4 |  0.383     |  2.962      |
+|                 UFG |         Local|      |    4 |  0.159     |  2.954      |
 +---------------------+--------------+------+------+------------+-------------+
 |chipscope_icon_0/chi |              |      |      |            |             |
 |pscope_icon_0/icon_i |              |      |      |            |             |
-|     nst/iupdate_out |         Local|      |    1 |  0.000     |  1.299      |
+|     nst/iupdate_out |         Local|      |    1 |  0.000     |  1.165      |
 +---------------------+--------------+------+------+------------+-------------+
-|   sys_clk_pin_IBUFG |         Local|      |    4 |  0.005     |  0.847      |
+|   sys_clk_pin_IBUFG |         Local|      |    4 |  0.001     |  0.661      |
 +---------------------+--------------+------+------+------------+-------------+
 |jtagppc_0_0_JTGC405T |              |      |      |            |             |
 |                  CK |         Local|      |    2 |  1.793     |  4.547      |
@@ -2012,37 +2006,37 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-  TS_dcm_0_dcm_0_CLK0_BUF = PERIOD TIMEGRP  | SETUP   |     0.042ns|     9.926ns|       0|           0
-  "dcm_0_dcm_0_CLK0_BUF" TS_sys_clk_pin     | HOLD    |     0.234ns|            |       0|           0
+  TS_dcm_0_dcm_0_CLK0_BUF = PERIOD TIMEGRP  | SETUP   |     0.007ns|     9.993ns|       0|           0
+  "dcm_0_dcm_0_CLK0_BUF" TS_sys_clk_pin     | HOLD    |     0.236ns|            |       0|           0
        HIGH 50%                             |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_dcm_0_dcm_0_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     0.197ns|     9.737ns|       0|           0
-   "dcm_0_dcm_0_CLK90_BUF"         TS_sys_c | HOLD    |     0.446ns|            |       0|           0
+  TS_dcm_0_dcm_0_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     0.573ns|     7.708ns|       0|           0
+   "dcm_0_dcm_0_CLK90_BUF"         TS_sys_c | HOLD    |     0.452ns|            |       0|           0
   lk_pin PHASE 2.5 ns HIGH 50%              |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_vga_framebuffer_vga_framebuffer_CLKDV  | SETUP   |     1.345ns|    34.620ns|       0|           0
-  = PERIOD TIMEGRP         "vga_framebuffer | HOLD    |     0.431ns|            |       0|           0
+  TS_vga_framebuffer_vga_framebuffer_CLKDV  | SETUP   |     2.377ns|    30.492ns|       0|           0
+  = PERIOD TIMEGRP         "vga_framebuffer | HOLD    |     0.373ns|            |       0|           0
   _vga_framebuffer_CLKDV" TS_dcm_0_dcm_0_CL |         |            |            |        |            
   K0_BUF * 4         HIGH 50%               |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_dcm_1_dcm_1_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     5.258ns|     4.742ns|       0|           0
-   "dcm_1_dcm_1_CLK90_BUF"         TS_fpga_ | HOLD    |     0.453ns|            |       0|           0
+  TS_dcm_1_dcm_1_CLK90_BUF = PERIOD TIMEGRP | SETUP   |     5.359ns|     4.641ns|       0|           0
+   "dcm_1_dcm_1_CLK90_BUF"         TS_fpga_ | HOLD    |     0.476ns|            |       0|           0
   0_DDR_CLK_FB PHASE 4.844 ns HIGH 50%      |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_fpga_0_DDR_CLK_FB = PERIOD TIMEGRP "fp | SETUP   |     8.543ns|     1.457ns|       0|           0
-  ga_0_DDR_CLK_FB" 10 ns HIGH 50%           | HOLD    |     0.791ns|            |       0|           0
+  TS_fpga_0_DDR_CLK_FB = PERIOD TIMEGRP "fp | SETUP   |     8.421ns|     1.579ns|       0|           0
+  ga_0_DDR_CLK_FB" 10 ns HIGH 50%           | HOLD    |     0.794ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP   |     8.686ns|     1.314ns|       0|           0
-  pin" 10 ns HIGH 50%                       | HOLD    |     0.591ns|            |       0|           0
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP   |     8.691ns|     1.309ns|       0|           0
+  pin" 10 ns HIGH 50%                       | HOLD    |     0.597ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  NET "fpga_0_SysACE_CompactFlash_SysACE_CL | SETUP   |    25.921ns|     4.079ns|       0|           0
+  NET "fpga_0_SysACE_CompactFlash_SysACE_CL | SETUP   |    25.702ns|     4.298ns|       0|           0
   K_pin_BUFGP/IBUFG" PERIOD = 30 ns         | HOLD    |     0.460ns|            |       0|           0
    HIGH 50%                                 |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  NET "fpga_0_Audio_Codec_Bit_Clk_pin_BUFGP | SETUP   |    37.406ns|     7.183ns|       0|           0
+  NET "fpga_0_Audio_Codec_Bit_Clk_pin_BUFGP | SETUP   |    36.922ns|     7.932ns|       0|           0
   /IBUFG" PERIOD = 81.38 ns HIGH 50%        | HOLD    |     0.553ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  PATH "TS_RST1_path" TIG                   | SETUP   |         N/A|     3.628ns|     N/A|           0
+  PATH "TS_RST1_path" TIG                   | SETUP   |         N/A|     3.592ns|     N/A|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -2055,8 +2049,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 2 mins 45 secs 
-Total CPU time to PAR completion: 2 mins 44 secs 
+Total REAL time to PAR completion: 2 mins 49 secs 
+Total CPU time to PAR completion: 2 mins 48 secs 
 
 Peak Memory Usage:  414 MB
 
@@ -2065,7 +2059,7 @@ Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 5
+Number of warning messages: 4
 Number of info messages: 0
 
 Writing design to file system.ncd
@@ -2114,13 +2108,13 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover 1185891 paths, 0 nets, and 28822 connections
+Constraints cover 1209287 paths, 0 nets, and 28629 connections
 
 Design statistics:
-   Minimum period:  34.620ns (Maximum frequency:  28.885MHz)
+   Minimum period:  30.492ns (Maximum frequency:  32.795MHz)
 
 
-Analysis completed Wed Nov 30 15:27:51 2011
+Analysis completed Thu Dec 01 14:45:41 2011
 --------------------------------------------------------------------------------
 
 Generating Report ...

@@ -472,7 +472,7 @@ Inserting wrapper level ...
 Completion time: 13.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -593,4 +593,4 @@ Running NGCBUILD
 
 Rebuilding cache ...
 
-Total run time: 410.00 seconds
+Total run time: 408.00 seconds

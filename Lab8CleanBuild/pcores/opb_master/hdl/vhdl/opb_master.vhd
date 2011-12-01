@@ -56,6 +56,7 @@ begin
 		master_select <= '0';
 		data_out_reg_next <= data_out_reg;
 		counter_next <= counter + 1;
+		master_request <= '0';
 		case current_state is
 			when idle =>
 				idle_sig <= '1';

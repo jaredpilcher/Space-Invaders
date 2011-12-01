@@ -204,13 +204,14 @@ begin
 					--next_state <= idle;
 				end if;
 			when write_silence =>
-				if master_idle_out = '1' then
-					master_enable <= '1';
-					master_address_reg_next <= destination;
-					master_data_reg_next <= (others => '0');
-					master_rnw_reg_next <= '0';
-					next_state <= idle;
-				end if;
+				-- if master_idle_out = '1' then
+					-- master_enable <= '1';
+					-- master_address_reg_next <= destination;
+					-- master_data_reg_next <= X"00000023";--(others => '0');
+					-- master_rnw_reg_next <= '0';
+					-- next_state <= idle;
+				-- end if;
+				next_state <= idle;
 			when write_audio =>
 				if master_idle_out = '1' then
 					master_enable <= '1';
@@ -244,7 +245,7 @@ begin
 					case OPB_ABus is
 						when C_BASEADDR =>
 							control_reg_next <= OPB_DBus;
-							if control_reg_next(29 to 31) /= control_reg(29 to 31) then
+							if (control_reg_next(29 to 31) /= control_reg(29 to 31)) or control_reg_next(26) = '1' then
 								next_index <= (others => '0');
 							end if;
 						when C_BASEADDR + 4 =>

@@ -8,7 +8,7 @@ Target Device  : xc2vp30
 Target Package : ff896
 Target Speed   : -7
 Mapper Version : virtex2p -- $Revision: 1.36 $
-Mapped Date    : Wed Nov 30 15:24:26 2011
+Mapped Date    : Thu Dec 01 14:42:14 2011
 
 Mapping design into LUTs...
 Writing file system_map.ngm...
@@ -24,17 +24,17 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   32
 Logic Utilization:
-  Total Number Slice Registers:     4,854 out of  27,392   17%
+  Total Number Slice Registers:     4,853 out of  27,392   17%
     Number used as Flip Flops:                 4,821
-    Number used as Latches:                       33
-  Number of 4 input LUTs:           3,939 out of  27,392   14%
+    Number used as Latches:                       32
+  Number of 4 input LUTs:           3,878 out of  27,392   14%
 Logic Distribution:
-  Number of occupied Slices:        4,425 out of  13,696   32%
-  Number of Slices containing only related logic:   4,425 out of   4,425  100%
-  Number of Slices containing unrelated logic:          0 out of   4,425    0%
+  Number of occupied Slices:        4,409 out of  13,696   32%
+  Number of Slices containing only related logic:   4,409 out of   4,409  100%
+  Number of Slices containing unrelated logic:          0 out of   4,409    0%
         *See NOTES below for an explanation of the effects of unrelated logic
-Total Number of 4 input LUTs:          5,003 out of  27,392   18%
-  Number used as logic:             3,939
+Total Number of 4 input LUTs:          4,942 out of  27,392   18%
+  Number used as logic:             3,878
   Number used as a route-thru:        364
   Number used for Dual Port RAMs:     346
     (Two LUTs used per Dual Port RAM)
@@ -53,7 +53,7 @@ Total Number of 4 input LUTs:          5,003 out of  27,392   18%
   Number of GT10s:                      0 out of       0    0%
 
    Number of RPM macros:           14
-Total equivalent gate count for design:  4,747,603
+Total equivalent gate count for design:  4,747,232
 Additional JTAG gate count for IOBs:  10,512
 Peak Memory Usage:  274 MB
 Total REAL time to MAP completion:  21 secs 
