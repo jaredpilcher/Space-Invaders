@@ -1584,12 +1584,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+----------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                    | Load  |
------------------------------------+----------------------------------------------------------+-------+
-PLB_Clk                            | NONE(opb2plb_bridge_0/PLB_INTFC_I/WRDACK_REG_I)          | 540   |
-OPB_Clk                            | NONE(opb2plb_bridge_0/REGS_I/BEAR_REG_GEN[13].BEAR_REG_I)| 364   |
------------------------------------+----------------------------------------------------------+-------+
+-----------------------------------+---------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                   | Load  |
+-----------------------------------+---------------------------------------------------------+-------+
+PLB_Clk                            | NONE(opb2plb_bridge_0/PLB_INTFC_I/PLB_SM_I/cur_st_FFd56)| 540   |
+OPB_Clk                            | NONE(opb2plb_bridge_0/REGS_I/rst_cntr_2)                | 364   |
+-----------------------------------+---------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1767,7 +1767,7 @@ Delay:               0.373ns (Levels of Logic = 1)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 17.86 / 17.96 s | Elapsed : 18.00 / 18.00 s
+CPU : 18.16 / 18.24 s | Elapsed : 18.00 / 18.00 s
  
 --> 
 

@@ -1,5 +1,5 @@
 #ChipScope Core Generator Project File Version 3.0
-#Thu Dec 01 14:33:41 MST 2011
+#Thu Dec 01 17:23:53 MST 2011
 SignalExport.bus<0000>.channelList=0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
 SignalExport.bus<0000>.name=OPB_CTRL
 SignalExport.bus<0000>.offset=0.0

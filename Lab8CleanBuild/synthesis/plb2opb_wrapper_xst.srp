@@ -1044,7 +1044,7 @@ Clock Information:
 -----------------------------------+----------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                            | Load  |
 -----------------------------------+----------------------------------------------------------------------------------+-------+
-PLB_Clk                            | NONE(plb2opb/PLB_IF_I/BGO_rdDBus_41)                                             | 558   |
+PLB_Clk                            | NONE(plb2opb/BGO_rdDBus_int_1dly_6)                                              | 558   |
 OPB_Clk                            | NONE(plb2opb/RCV_DATA_IF_I/ASYNC_CLK_GEN.ASYNC_FIFO_I/DUALPORT_MEM_GEN[33].RAM_I)| 151   |
 -----------------------------------+----------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -1054,11 +1054,11 @@ Asynchronous Control Signals Information:
 --------------------------------------------------------------------------------------------------+----------------------------------------+-------+
 Control Signal                                                                                    | Buffer(FF name)                        | Load  |
 --------------------------------------------------------------------------------------------------+----------------------------------------+-------+
-plb2opb/OPBside_reset_Read_inprog_negedge_regd(plb2opb/I_OPBside_reset_Read_inprog_negedge_regd:O)| NONE(plb2opb/I_Read_inprog_negedge_Reg)| 1     |
-BGO_dcrDBus<31>(XST_GND:G)                                                                        | NONE(plb2opb/I_Read_inprog_negedge_Reg)| 4     |
 plb2opb/PLB_abort_regd_clear(plb2opb/I_PLB_abort_regd_clear:O)                                    | NONE(plb2opb/I_PLB_abort_Reg)          | 1     |
-plb2opb/PLBside_reset_OPB_retry_onRd(plb2opb/I_B_side_Reg_CLR:O)                                  | NONE(plb2opb/I_A_side_Reg)             | 1     |
+BGO_dcrDBus<31>(XST_GND:G)                                                                        | NONE(plb2opb/I_PLB_abort_Reg)          | 4     |
+plb2opb/OPBside_reset_Read_inprog_negedge_regd(plb2opb/I_OPBside_reset_Read_inprog_negedge_regd:O)| NONE(plb2opb/I_Read_inprog_negedge_Reg)| 1     |
 plb2opb/PLBside_reset_OPB_timeout_onRd(plb2opb/I_OPB_timeout_side_Reg_CLR:O)                      | NONE(plb2opb/I_OPB_timeout_Reg)        | 1     |
+plb2opb/PLBside_reset_OPB_retry_onRd(plb2opb/I_B_side_Reg_CLR:O)                                  | NONE(plb2opb/I_A_side_Reg)             | 1     |
 --------------------------------------------------------------------------------------------------+----------------------------------------+-------+
 
 Timing Summary:
@@ -1229,7 +1229,7 @@ Delay:               1.868ns (Levels of Logic = 3)
                                        (51.4% logic, 48.6% route)
 
 =========================================================================
-CPU : 16.86 / 16.94 s | Elapsed : 17.00 / 17.00 s
+CPU : 17.32 / 17.39 s | Elapsed : 17.00 / 17.00 s
  
 --> 
 

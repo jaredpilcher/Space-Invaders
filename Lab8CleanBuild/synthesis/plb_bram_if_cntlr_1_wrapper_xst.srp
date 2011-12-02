@@ -1226,11 +1226,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+---------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                               | Load  |
------------------------------------+---------------------------------------------------------------------+-------+
-bram_clk                           | NONE(plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/plb_be_reg_6)| 295   |
------------------------------------+---------------------------------------------------------------------+-------+
+-----------------------------------+---------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                     | Load  |
+-----------------------------------+---------------------------------------------------------------------------+-------+
+bram_clk                           | NONE(plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/plb_masterid_reg_0)| 295   |
+-----------------------------------+---------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1334,7 +1334,7 @@ Delay:               0.000ns (Levels of Logic = 0)
     Total                      0.000ns (0.000ns logic, 0.000ns route)
 
 =========================================================================
-CPU : 13.24 / 13.31 s | Elapsed : 13.00 / 13.00 s
+CPU : 13.33 / 13.40 s | Elapsed : 13.00 / 13.00 s
  
 --> 
 

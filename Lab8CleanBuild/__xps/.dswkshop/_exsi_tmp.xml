@@ -1,5 +1,5 @@
 
-<EDKSYSTEM ARCH="virtex2p" EDKVERSION="9.1.02" PART="xc2vp30ff896-7" SRC="D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/system.xmp" TIMESTAMP="Tue Nov 29 18:58:57 2011&#xA;">
+<EDKSYSTEM ARCH="virtex2p" EDKVERSION="9.1.02" PART="xc2vp30ff896-7" SRC="D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/system.xmp" TIMESTAMP="Thu Dec 01 16:46:39 2011&#xA;">
 
   <MODULES>
     <MODULE DOC_DRIVER="C:/Xilinx91i/EDK/sw/XilinxProcessorIPLib/drivers/cpu_ppc405_v1_00_a/doc/html/api/index.html" DOC_IP="C:/Xilinx91i/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/doc/ppc405.pdf" HWVERSION="2.00.c" INSTANCE="ppc405_0" INTERRUPT_CNTLR="opb_intc_0" IPTYPE="PROCESSOR" IS_PLACED="TRUE" MODCLASS="PROCESSOR" MODTYPE="ppc405">

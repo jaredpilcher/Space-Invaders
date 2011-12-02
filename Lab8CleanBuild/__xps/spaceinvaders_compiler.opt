@@ -1,6 +1,6 @@
 ppc405_0
-SPACEINVADERS_SOURCES = SpaceInvaders/src/spaceInvaders.c 
-SPACEINVADERS_HEADERS = SpaceInvaders/src/gameParameters.h 
+SPACEINVADERS_SOURCES = SpaceInvaders/src/spaceInvaders.c SpaceInvaders/src/sound.c SpaceInvaders/src/wave_header.c 
+SPACEINVADERS_HEADERS = SpaceInvaders/src/gameParameters.h SpaceInvaders/src/sound.h SpaceInvaders/src/sysace_header.h SpaceInvaders/src/wave_header.h 
 SPACEINVADERS_CC = powerpc-eabi-gcc
 SPACEINVADERS_CC_SIZE = powerpc-eabi-size
 SPACEINVADERS_CC_OPT = -O2

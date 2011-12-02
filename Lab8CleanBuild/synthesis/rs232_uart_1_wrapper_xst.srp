@@ -479,11 +479,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-----------------------------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                                                   | Load  |
------------------------------------+-----------------------------------------------------------------------------------------+-------+
-OPB_Clk                            | NONE(rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/SRL_FIFO_I/FIFO_RAM[5].SRL16E_I)| 83    |
------------------------------------+-----------------------------------------------------------------------------------------+-------+
+-----------------------------------+-----------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                     | Load  |
+-----------------------------------+-----------------------------------------------------------+-------+
+OPB_Clk                            | NONE(rs232_uart_1/OPB_UARTLITE_Core_I/Baud_Rate_I/Count_2)| 83    |
+-----------------------------------+-----------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -491,8 +491,8 @@ Asynchronous Control Signals Information:
 ------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
 Control Signal                                                                                  | Buffer(FF name)                                                                  | Load  |
 ------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
-rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO(rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO:Q)| NONE(rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/SRL_FIFO_I/data_Exists_I)| 1     |
 OPB_Rst                                                                                         | NONE                                                                             | 22    |
+rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO(rs232_uart_1/OPB_UARTLITE_Core_I/reset_TX_FIFO:Q)| NONE(rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/SRL_FIFO_I/data_Exists_I)| 1     |
 rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO(rs232_uart_1/OPB_UARTLITE_Core_I/reset_RX_FIFO:Q)| NONE(rs232_uart_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_RX_I/SRL_FIFO_I/data_Exists_I)| 1     |
 ------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
 
@@ -574,7 +574,7 @@ Offset:              0.370ns (Levels of Logic = 0)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 7.19 / 7.27 s | Elapsed : 7.00 / 7.00 s
+CPU : 7.48 / 7.56 s | Elapsed : 7.00 / 7.00 s
  
 --> 
 

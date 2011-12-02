@@ -130,9 +130,9 @@ FPGA_IMP_DEPENDENCY = $(BMM_FILE) $(POSTSYN_NETLIST) $(UCF_FILE) $(BITGEN_UT_FIL
 # SOFTWARE APPLICATION SPACEINVADERS
 #################################################################
 
-SPACEINVADERS_SOURCES = SpaceInvaders/src/spaceInvaders.c 
+SPACEINVADERS_SOURCES = SpaceInvaders/src/spaceInvaders.c SpaceInvaders/src/sound.c SpaceInvaders/src/wave_header.c 
 
-SPACEINVADERS_HEADERS = SpaceInvaders/src/gameParameters.h 
+SPACEINVADERS_HEADERS = SpaceInvaders/src/gameParameters.h SpaceInvaders/src/sound.h SpaceInvaders/src/sysace_header.h SpaceInvaders/src/wave_header.h 
 
 SPACEINVADERS_CC = powerpc-eabi-gcc
 SPACEINVADERS_CC_SIZE = powerpc-eabi-size

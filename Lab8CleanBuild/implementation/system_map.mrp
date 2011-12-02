@@ -8,7 +8,7 @@ Target Device  : xc2vp30
 Target Package : ff896
 Target Speed   : -7
 Mapper Version : virtex2p -- $Revision: 1.36 $
-Mapped Date    : Thu Dec 01 14:42:14 2011
+Mapped Date    : Thu Dec 01 17:32:49 2011
 
 Design Summary
 --------------
@@ -18,14 +18,14 @@ Logic Utilization:
   Total Number Slice Registers:     4,853 out of  27,392   17%
     Number used as Flip Flops:                 4,821
     Number used as Latches:                       32
-  Number of 4 input LUTs:           3,878 out of  27,392   14%
+  Number of 4 input LUTs:           3,943 out of  27,392   14%
 Logic Distribution:
-  Number of occupied Slices:        4,409 out of  13,696   32%
-  Number of Slices containing only related logic:   4,409 out of   4,409  100%
-  Number of Slices containing unrelated logic:          0 out of   4,409    0%
+  Number of occupied Slices:        4,429 out of  13,696   32%
+  Number of Slices containing only related logic:   4,429 out of   4,429  100%
+  Number of Slices containing unrelated logic:          0 out of   4,429    0%
         *See NOTES below for an explanation of the effects of unrelated logic
-Total Number of 4 input LUTs:          4,942 out of  27,392   18%
-  Number used as logic:             3,878
+Total Number of 4 input LUTs:          5,007 out of  27,392   18%
+  Number used as logic:             3,943
   Number used as a route-thru:        364
   Number used for Dual Port RAMs:     346
     (Two LUTs used per Dual Port RAM)
@@ -44,11 +44,11 @@ Total Number of 4 input LUTs:          4,942 out of  27,392   18%
   Number of GT10s:                      0 out of       0    0%
 
    Number of RPM macros:           14
-Total equivalent gate count for design:  4,747,232
+Total equivalent gate count for design:  4,747,622
 Additional JTAG gate count for IOBs:  10,512
 Peak Memory Usage:  274 MB
-Total REAL time to MAP completion:  21 secs 
-Total CPU time to MAP completion:   21 secs 
+Total REAL time to MAP completion:  22 secs 
+Total CPU time to MAP completion:   22 secs 
 
 NOTES:
 
@@ -91,13 +91,13 @@ Section 2 - Warnings
 --------------------
 WARNING:LIT:243 - Logical network
    fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin_IBUF has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 1078
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 1077
    more times for the following (max. 5 shown):
-   Audio_Codec_Interrupt,
    plb_PLB_wrPrim,
    opb_OPB_dwXfer,
    plb_PLB_rdPrim,
-   plb_PLB_lockErr
+   plb_PLB_lockErr,
+   opb_OPB_beAck
    To see the details of these warning messages, please use the -detail switch.
 WARNING:MapLib:701 - Signal fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin
    connected to top level port fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin has
@@ -212,9 +212,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-1224 block(s) removed
+1223 block(s) removed
  427 block(s) optimized away
-1663 signal(s) removed
+1662 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -235,8 +235,6 @@ has been removed.
   The signal "fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin" is loadless and has
 been removed.
    Loadless block "fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin" (PAD) removed.
-The signal "Audio_Codec_Interrupt" is loadless and has been removed.
- Loadless block "audio_codec/audio_codec/AC97_FIFO_I/Interrupt1" (ROM) removed.
 The signal "plb_PLB_wrPrim" is loadless and has been removed.
  Loadless block "plb/plb/I_PLB_ARBITER_LOGIC/PLB_wrPrim" (ROM) removed.
   The signal "plb/N465" is loadless and has been removed.

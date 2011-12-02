@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map J.33 on Thu Dec 01 14:42:31 2011
+// Written by: Map J.33 on Thu Dec 01 17:33:07 2011
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -5341,6 +5341,7 @@ TIMEGRP D_CLK = PIN
         "audio_dma_0/audio_dma_0/master_address_reg_2" BEL
         "audio_dma_0/audio_dma_0/master_address_reg_1" BEL
         "audio_dma_0/audio_dma_0/master_address_reg_0" BEL
+        "audio_dma_0/audio_dma_0/master/current_state_FFd3" BEL
         "audio_dma_0/audio_dma_0/master/current_state_FFd1" BEL
         "audio_dma_0/audio_dma_0/cur_index_29" BEL
         "audio_dma_0/audio_dma_0/cur_index_28" BEL
@@ -5470,7 +5471,6 @@ TIMEGRP D_CLK = PIN
         "audio_dma_0/audio_dma_0/destination_0" BEL
         "audio_dma_0/audio_dma_0/current_state_FFd2" BEL
         "audio_dma_0/audio_dma_0/current_state_FFd1" BEL
-        "audio_dma_0/audio_dma_0/master/current_state_FFd3" BEL
         "audio_dma_0/audio_dma_0/master/current_state_FFd2" BEL
         "audio_dma_0/audio_dma_0/master/counter_0" BEL
         "audio_dma_0/audio_dma_0/master/counter_1" BEL
@@ -13329,6 +13329,7 @@ TIMEGRP dcm_0_dcm_0_CLK0_BUF = PIN
         "audio_dma_0/audio_dma_0/master_address_reg_2" BEL
         "audio_dma_0/audio_dma_0/master_address_reg_1" BEL
         "audio_dma_0/audio_dma_0/master_address_reg_0" BEL
+        "audio_dma_0/audio_dma_0/master/current_state_FFd3" BEL
         "audio_dma_0/audio_dma_0/master/current_state_FFd1" BEL
         "audio_dma_0/audio_dma_0/cur_index_29" BEL
         "audio_dma_0/audio_dma_0/cur_index_28" BEL
@@ -13458,7 +13459,6 @@ TIMEGRP dcm_0_dcm_0_CLK0_BUF = PIN
         "audio_dma_0/audio_dma_0/destination_0" BEL
         "audio_dma_0/audio_dma_0/current_state_FFd2" BEL
         "audio_dma_0/audio_dma_0/current_state_FFd1" BEL
-        "audio_dma_0/audio_dma_0/master/current_state_FFd3" BEL
         "audio_dma_0/audio_dma_0/master/current_state_FFd2" BEL
         "audio_dma_0/audio_dma_0/master/counter_0" BEL
         "audio_dma_0/audio_dma_0/master/counter_1" BEL

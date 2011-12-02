@@ -14,14 +14,14 @@
 #include "xcache_l.h"
 
 //#include "OPB_Int.h"
-//#include "sound.h"
+#include "sound.h"
 
 
 int * tempSpace = 0x00800000;
 int * nextFreeAddress;
-//Sound * current_sound;
+Sound * current_sound;
 enum sound_enum { AMove1, AMove2, AMove3, AMove4, Fire, TankExplode, SpaceShip, SpaceShipHit, Stairway };
-//Sound sounds[20];
+Sound sounds[20];
 
 
 // int main() {
@@ -46,8 +46,23 @@ enum sound_enum { AMove1, AMove2, AMove3, AMove4, Fire, TankExplode, SpaceShip, 
 // }
 
 int main() {
-	// sounds[AMove1] = createSound("a:\\AMove1.wav");
-	// sounds[AMove1].priority = 1;
+	initializeSound();
+	sounds[0] = createSound("a:\\AMove1.wav");
+	sounds[1] = createSound("a:\\AMove2.wav");
+	sounds[2] = createSound("a:\\AMove3.wav");
+	sounds[3] = createSound("a:\\AMove4.wav");
+	while(1){
+		int i;
+		for(i = 0; i < 4; i++){
+			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, i);
+			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 12, XPAR_AUDIO_CODEC_BASEADDR);
+			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, sounds[i].address + 44*4);
+			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, (sounds[i].length-44) * 4);
+			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 56 + i);
+			usleep(1000000);
+			xil_printf("Look no hands\n\r");
+		}
+	}
 	//future sounds to implement
 	// sounds[AMove2] = createSound("a:\\AMove2.wav");
 	// sounds[AMove2].priority = 1;
@@ -63,28 +78,31 @@ int main() {
 	// sounds[SpaceShip].priority = 8;
 	// sounds[SpaceShipHit] = createSound("a:\\SLow.wav");
 	// sounds[SpaceShipHit].priority = 9;
-	char hello[] = "Hello World\n\r";
-	int world[11];
-	int i;
-	for(i = 0; i < 13; i++){
-		world[i] = hello[i];
-	}
-	//xil_printf("Hello\n\r");
-	usleep(10000);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 12, XPAR_RS232_UART_1_BASEADDR + 4);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, world);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, 24);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 1);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, world + 6);
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, 28);
-	for(i = 0; i < 11; i++){
-		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 56);
-		usleep(10000);
-		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 57);
-		usleep(10000);
-	}
-	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
-	xil_printf("Done!\n\r");
+	
+	
+	
+//	char hello[] = "Hello World\n\r";
+//	int world[11];
+//	int i;
+//	for(i = 0; i < 13; i++){
+//		world[i] = hello[i];
+//	}
+//	//xil_printf("Hello\n\r");
+//	usleep(10000);
+//	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
+//	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 12, XPAR_RS232_UART_1_BASEADDR + 4);
+//	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, world);
+//	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, 24);
+//	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 1);
+//	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, world + 6);
+//	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, 28);
+//	for(i = 0; i < 11; i++){
+//		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 56);
+//		usleep(10000);
+//		XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 57);
+//		usleep(10000);
+//	}
+//	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
+//	xil_printf("Done!\n\r");
 	
 }

@@ -37,7 +37,12 @@ SwProj: SpaceInvaders
 Processor: ppc405_0
 Executable: SpaceInvaders/executable.elf
 Source: SpaceInvaders/src/spaceInvaders.c
+Source: SpaceInvaders/src/sound.c
+Source: SpaceInvaders/src/wave_header.c
 Header: SpaceInvaders/src/gameParameters.h
+Header: SpaceInvaders/src/sound.h
+Header: SpaceInvaders/src/sysace_header.h
+Header: SpaceInvaders/src/wave_header.h
 DefaultInit: executable
 InitBram: 1
 Active: 1

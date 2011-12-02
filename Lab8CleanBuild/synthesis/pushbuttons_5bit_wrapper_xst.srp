@@ -1430,11 +1430,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-----------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                           | Load  |
------------------------------------+-----------------------------------------------------------------+-------+
-OPB_Clk                            | NONE(pushbuttons_5bit/gpio_core_1/READ_REG_GEN[3].READ_REG_FF_I)| 69    |
------------------------------------+-----------------------------------------------------------------+-------+
+-----------------------------------+-------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                       | Load  |
+-----------------------------------+-------------------------------------------------------------+-------+
+OPB_Clk                            | NONE(pushbuttons_5bit/OPB_IPIF_I/OPB_BAM_I/bus2ip_rdce_s1_9)| 69    |
+-----------------------------------+-------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1549,7 +1549,7 @@ Delay:               0.373ns (Levels of Logic = 1)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 10.67 / 10.77 s | Elapsed : 11.00 / 11.00 s
+CPU : 10.91 / 10.99 s | Elapsed : 11.00 / 11.00 s
  
 --> 
 

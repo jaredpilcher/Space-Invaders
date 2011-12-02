@@ -1036,12 +1036,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-----------------------------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                                                   | Load  |
------------------------------------+-----------------------------------------------------------------------------------------+-------+
-SysACE_CLK                         | NONE(sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/MEM_DQ_O_GEN[6].MEM_DQ_O_1)| 92    |
-OPB_Clk                            | NONE(sysace_compactflash/OPB_IPIF_I/OPB_BAM_I/opb_dbus_s0_0)                            | 144   |
------------------------------------+-----------------------------------------------------------------------------------------+-------+
+-----------------------------------+-------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                               | Load  |
+-----------------------------------+-------------------------------------------------------------------------------------+-------+
+SysACE_CLK                         | NONE(sysace_compactflash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/MEM_A_GEN[4].MEM_A_OUT)| 92    |
+OPB_Clk                            | NONE(sysace_compactflash/OPB_IPIF_I/OPB_BAM_I/encoded_dsize_s1_0)                   | 144   |
+-----------------------------------+-------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1209,7 +1209,7 @@ Delay:               0.373ns (Levels of Logic = 1)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-CPU : 10.55 / 10.64 s | Elapsed : 10.00 / 10.00 s
+CPU : 10.69 / 10.77 s | Elapsed : 11.00 / 11.00 s
  
 --> 
 

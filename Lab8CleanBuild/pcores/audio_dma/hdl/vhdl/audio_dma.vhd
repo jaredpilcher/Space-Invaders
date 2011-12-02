@@ -204,13 +204,13 @@ begin
 					--next_state <= idle;
 				end if;
 			when write_silence =>
-				-- if master_idle_out = '1' then
-					-- master_enable <= '1';
-					-- master_address_reg_next <= destination;
-					-- master_data_reg_next <= X"00000023";--(others => '0');
-					-- master_rnw_reg_next <= '0';
-					-- next_state <= idle;
-				-- end if;
+				if master_idle_out = '1' then
+					master_enable <= '1';
+					master_address_reg_next <= destination;
+					master_data_reg_next <= (others => '0');
+					master_rnw_reg_next <= '0';
+					next_state <= idle;
+				end if;
 				next_state <= idle;
 			when write_audio =>
 				if master_idle_out = '1' then
@@ -264,7 +264,7 @@ begin
 		end if;
 	end process;
 	
-	interrupt <= control_reg(27);
+	interrupt <= AC97Int;
 	enable_reg <= control_reg(28);
     M_busLock <= '0';
     M_seqAddr <= '0';
