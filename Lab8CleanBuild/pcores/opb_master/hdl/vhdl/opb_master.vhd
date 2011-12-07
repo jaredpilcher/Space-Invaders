@@ -18,6 +18,9 @@ entity opb_master is
 	OPB_MGrant: in std_logic;
 	M_ABus   : out std_logic_vector(0 to 31);
     M_BE     : out std_logic_vector(0 to 3);
+	OPB_errAck                     : in  std_logic;
+    OPB_retry                      : in  std_logic;
+    OPB_timeout                    : in  std_logic;
 --    M_busLock: out std_logic;
     M_DBus   : out std_logic_vector(0 to 31);
     M_request: out std_logic;
@@ -28,7 +31,7 @@ entity opb_master is
 end entity opb_master;
 
 architecture opbm of opb_master is
-	type state_type is (idle, retry, request, address_select, acknowledged);
+	type state_type is (idle, retry, retry1, request, address_select, acknowledged);
 	signal next_state, current_state: state_type := idle;
 	signal data_out_reg, data_out_reg_next : std_logic_vector(0 to 31);
 	signal master_request: std_logic;
@@ -47,7 +50,7 @@ begin
         end if;
     end process;
 	
-	process(enable,current_state, OPB_xferAck, OPB_MGrant,rnw, counter)
+	process(enable,current_state, OPB_xferAck, OPB_MGrant,rnw, counter, OPB_errAck, OPB_retry, OPB_timeout)
 	begin
 		next_state <= current_state;
 		master_data <= X"00000000";
@@ -64,6 +67,8 @@ begin
 					next_state <= request;
 				end if;
 			when retry =>
+				next_state <= retry1;
+			when retry1 =>
 				next_state <= request;
 			when request =>
 				master_request <= '1';
@@ -82,7 +87,7 @@ begin
 				if rnw = '0' then
 					master_data <= data;
 				end if;
-				if counter = 500 then
+				if (counter = 128) or (OPB_errAck = '1') or (OPB_retry = '1') or (OPB_timeout = '1') then
 					next_state <= retry;
 				end if;
 			when acknowledged =>

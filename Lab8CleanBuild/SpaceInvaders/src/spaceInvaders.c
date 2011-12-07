@@ -17,13 +17,11 @@
 #include "sound.h"
 
 
-int * tempSpace = 0x00800000;
-int * nextFreeAddress;
-Sound * current_sound;
-enum sound_enum { AMove1, AMove2, AMove3, AMove4, Fire, TankExplode, SpaceShip, SpaceShipHit, Stairway };
+//int * tempSpace = 0x00800000;
+//int * nextFreeAddress;
+//Sound * current_sound;
+enum sound_enum { AMove1, AMove2, AMove3, AMove4, Fire, TankExplode, SpaceShip, SpaceShipHit };
 Sound sounds[20];
-
-
 // int main() {
   // print("Starting up\n\r");
   // // int enable = XIo_In32(XPAR_AUDIO_DMA_0_BASEADDR + 4);
@@ -45,23 +43,35 @@ Sound sounds[20];
   // while(1){};
 // }
 
-int main() {
+
+int maint() {
+	print("Starting up... \n\r");
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 0);
+	
+	//initializeSound();
+	sounds[AMove1] = createSound("a:\\AMove1.wav");
+	sounds[AMove2] = createSound("a:\\AMove2.wav");
+	sounds[AMove3] = createSound("a:\\AMove3.wav");
+	sounds[AMove4] = createSound("a:\\AMove4.wav");
+	sounds[Fire] = createSound("a:\\fire.wav");
+	sounds[TankExplode] = createSound("a:\\TankXplo.wav");
+	sounds[SpaceShipHit] = createSound("a:\\SLow.wav");
+	sounds[SpaceShip] = createSound("a:\\Ufo.wav");
+	usleep(1000000);
 	initializeSound();
-	sounds[0] = createSound("a:\\AMove1.wav");
-	sounds[1] = createSound("a:\\AMove2.wav");
-	sounds[2] = createSound("a:\\AMove3.wav");
-	sounds[3] = createSound("a:\\AMove4.wav");
+	//startLoop(&sounds[]);
+	usleep(10000000);
+	endLoop();
 	while(1){
 		int i;
-		for(i = 0; i < 4; i++){
-			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, i);
-			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 12, XPAR_AUDIO_CODEC_BASEADDR);
-			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, sounds[i].address + 44*4);
-			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, (sounds[i].length-44) * 4);
-			XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, 56 + i);
+		for(i = 0; i < 8; i++){
+			playSound(&sounds[i]);
 			usleep(1000000);
 			xil_printf("Look no hands\n\r");
 		}
+		startLoop(&sounds[SpaceShip]);
+		usleep(10000000);
+		endLoop();
 	}
 	//future sounds to implement
 	// sounds[AMove2] = createSound("a:\\AMove2.wav");

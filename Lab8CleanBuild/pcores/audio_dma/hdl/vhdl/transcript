@@ -19,11 +19,342 @@ vcom -reportprogress 300 -work work D:/Put_Your_Temp_Files_Here/space_invaders/L
 # -- Loading package numeric_std
 # -- Compiling entity audio_dma
 # -- Compiling architecture dma of audio_dma
-# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(232): Case choice must be a locally static expression.
-# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(234): Case choice must be a locally static expression.
-# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(236): Case choice must be a locally static expression.
-# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(238): Case choice must be a locally static expression.
-# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(246): Case choice must be a locally static expression.
-# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(251): Case choice must be a locally static expression.
-# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(254): Case choice must be a locally static expression.
-# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(257): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(260): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(262): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(264): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(266): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(268): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(276): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(281): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(284): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(287): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(289): Case choice must be a locally static expression.
+# ** Warning: D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd(291): Case choice must be a locally static expression.
+vsim -gui work.audio_dma
+# vsim -gui work.audio_dma 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.audio_dma(dma)#1
+# Loading work.opb_master(opbm)#1
+# Loading work.channel_bank(chanbank)#1
+add wave \
+{sim:/audio_dma/c_baseaddr } \
+{sim:/audio_dma/c_highaddr } \
+{sim:/audio_dma/c_opb_awidth } \
+{sim:/audio_dma/c_opb_dwidth } \
+{sim:/audio_dma/c_family } \
+{sim:/audio_dma/opb_clk } \
+{sim:/audio_dma/opb_rst } \
+{sim:/audio_dma/opb_dbus } \
+{sim:/audio_dma/opb_errack } \
+{sim:/audio_dma/opb_mgrant } \
+{sim:/audio_dma/opb_retry } \
+{sim:/audio_dma/opb_timeout } \
+{sim:/audio_dma/opb_xferack } \
+{sim:/audio_dma/opb_abus } \
+{sim:/audio_dma/opb_be } \
+{sim:/audio_dma/opb_rnw } \
+{sim:/audio_dma/opb_select } \
+{sim:/audio_dma/opb_seqaddr } \
+{sim:/audio_dma/m_abus } \
+{sim:/audio_dma/m_be } \
+{sim:/audio_dma/m_buslock } \
+{sim:/audio_dma/m_dbus } \
+{sim:/audio_dma/m_request } \
+{sim:/audio_dma/m_rnw } \
+{sim:/audio_dma/m_select } \
+{sim:/audio_dma/m_seqaddr } \
+{sim:/audio_dma/sl_dbus } \
+{sim:/audio_dma/sl_errack } \
+{sim:/audio_dma/sl_retry } \
+{sim:/audio_dma/sl_toutsup } \
+{sim:/audio_dma/sl_xferack } \
+{sim:/audio_dma/ac97int } \
+{sim:/audio_dma/next_state } \
+{sim:/audio_dma/current_state } \
+{sim:/audio_dma/our_value } \
+{sim:/audio_dma/our_value_next } \
+{sim:/audio_dma/enable_reg } \
+{sim:/audio_dma/control_reg } \
+{sim:/audio_dma/control_reg_next } \
+{sim:/audio_dma/master_enable } \
+{sim:/audio_dma/master_rnw_reg } \
+{sim:/audio_dma/master_rnw_reg_next } \
+{sim:/audio_dma/master_idle_out } \
+{sim:/audio_dma/master_address_reg } \
+{sim:/audio_dma/master_address_reg_next } \
+{sim:/audio_dma/master_data_reg } \
+{sim:/audio_dma/master_data_reg_next } \
+{sim:/audio_dma/master_data_out } \
+{sim:/audio_dma/data_out } \
+{sim:/audio_dma/destination } \
+{sim:/audio_dma/destination_next } \
+{sim:/audio_dma/cur_index } \
+{sim:/audio_dma/next_index } \
+{sim:/audio_dma/channel_addr_we } \
+{sim:/audio_dma/channel_length_we } \
+{sim:/audio_dma/channel_data } \
+{sim:/audio_dma/channel_addr_out } \
+{sim:/audio_dma/channel_length_out } \
+{sim:/audio_dma/interrupt } \
+{sim:/audio_dma/global_enable } \
+{sim:/audio_dma/looping } \
+{sim:/audio_dma/arbitrary_write_next } \
+{sim:/audio_dma/arbitrary_write } \
+{sim:/audio_dma/arbitrary_address_next } \
+{sim:/audio_dma/arbitrary_address } \
+{sim:/audio_dma/arbitrary_data_next } \
+{sim:/audio_dma/arbitrary_data } 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: superman  Hostname: CB400-01  ProcessID: 9728
+#           Attempting to use alternate WLF file "./wlftz7sab2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftz7sab2
+force -freeze sim:/audio_dma/opb_clk 1 0, 0 {50 ns} -r 100
+run 1ms
+force -freeze sim:/audio_dma/global_enable 1 0
+force -freeze sim:/audio_dma/interrupt 1 0
+force -freeze sim:/audio_dma/enable_reg 1 0
+force -freeze sim:/audio_dma/looping 1 0
+force -freeze sim:/audio_dma/channel_length_out 00000000000000000000000000010000 0
+force -freeze sim:/audio_dma/next_index 0 0
+# Value length (1) does not equal array index length (32).
+# 
+# ** Error: (vsim-4011) Invalid force value: 0 0.
+# 
+force -freeze sim:/audio_dma/next_index 00000000000000000000000000000000 0
+force -freeze sim:/audio_dma/next_index 00000000000000000000000000000000 0
+run 100ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1000050 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1000100 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1000100 ns  Iteration: 1  Instance: /audio_dma
+run 500ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1000150 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1000200 ns  Iteration: 0  Instance: /audio_dma
+run 1ms
+force -freeze sim:/audio_dma/master_idle_out 1 0
+run 200ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2000800 ns  Iteration: 1  Instance: /audio_dma
+noforce sim:/audio_dma/next_index
+run 200ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2000850 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2000900 ns  Iteration: 0  Instance: /audio_dma
+run 200bns
+# Invalid time value: 200bns
+run 200ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001100 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001150 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001200 ns  Iteration: 0  Instance: /audio_dma
+run 10us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001400 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001450 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001500 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001700 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001750 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2001800 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002 us  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002050 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002100 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002300 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002350 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002400 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002600 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002650 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002700 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002900 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2002950 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003 us  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003200 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003250 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003300 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003500 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003550 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003600 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003800 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003850 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2003900 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004100 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004150 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004200 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004400 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004450 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004500 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004700 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004750 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2004800 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005 us  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005050 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005100 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005300 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005350 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005400 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005600 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005650 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005700 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005900 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2005950 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006 us  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006200 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006250 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006300 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006500 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006550 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006600 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006800 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006850 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2006900 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007100 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007150 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007200 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007400 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007450 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007500 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007700 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007750 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2007800 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008 us  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008050 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008100 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008300 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008350 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008400 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008600 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008650 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008700 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008900 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2008950 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009 us  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009200 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009250 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009300 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009500 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009550 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009600 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009800 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009850 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2009900 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010100 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010150 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010200 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010400 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010450 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010500 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010700 ns  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010750 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2010800 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2011 us  Iteration: 1  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2011050 ns  Iteration: 0  Instance: /audio_dma
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2011100 ns  Iteration: 0  Instance: /audio_dma

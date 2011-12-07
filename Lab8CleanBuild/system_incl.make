@@ -130,9 +130,9 @@ FPGA_IMP_DEPENDENCY = $(BMM_FILE) $(POSTSYN_NETLIST) $(UCF_FILE) $(BITGEN_UT_FIL
 # SOFTWARE APPLICATION SPACEINVADERS
 #################################################################
 
-SPACEINVADERS_SOURCES = SpaceInvaders/src/spaceInvaders.c SpaceInvaders/src/sound.c SpaceInvaders/src/wave_header.c 
+SPACEINVADERS_SOURCES = SpaceInvaders/src/spaceInvaders.c SpaceInvaders/src/sound.c SpaceInvaders/src/wave_header.c SpaceInvaders/src/alienCodes.c SpaceInvaders/src/bullets.c SpaceInvaders/src/coord_objects.c SpaceInvaders/src/drawUtils.c SpaceInvaders/src/explosion.c SpaceInvaders/src/OPB_Int.c SpaceInvaders/src/slave.c SpaceInvaders/src/TestApp_Memory.c SpaceInvaders/src/TestApp_Peripheral.c SpaceInvaders/src/text.c SpaceInvaders/src/timer.c SpaceInvaders/src/xgpio_intr_tapp_example.c SpaceInvaders/src/xgpio_tapp_example.c SpaceInvaders/src/xintc_tapp_example.c SpaceInvaders/src/xsysace_selftest_example.c 
 
-SPACEINVADERS_HEADERS = SpaceInvaders/src/gameParameters.h SpaceInvaders/src/sound.h SpaceInvaders/src/sysace_header.h SpaceInvaders/src/wave_header.h 
+SPACEINVADERS_HEADERS = SpaceInvaders/src/sound.h SpaceInvaders/src/sysace_header.h SpaceInvaders/src/wave_header.h SpaceInvaders/src/alienCodes.h SpaceInvaders/src/bullets.h SpaceInvaders/src/coord_objects.h SpaceInvaders/src/ddr_header.h SpaceInvaders/src/drawUtils.h SpaceInvaders/src/explosion.h SpaceInvaders/src/gameParameters.h SpaceInvaders/src/gpio_header.h SpaceInvaders/src/gpio_intr_header.h SpaceInvaders/src/intc_header.h SpaceInvaders/src/OPB_Int.h SpaceInvaders/src/slave.h SpaceInvaders/src/TestApp_Memory.h SpaceInvaders/src/text.h SpaceInvaders/src/timer.h 
 
 SPACEINVADERS_CC = powerpc-eabi-gcc
 SPACEINVADERS_CC_SIZE = powerpc-eabi-size

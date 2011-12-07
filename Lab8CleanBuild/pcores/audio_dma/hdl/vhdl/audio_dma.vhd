@@ -92,7 +92,7 @@ entity audio_dma is
 end entity audio_dma;
 
 architecture dma of audio_dma is
-	type state_type is (idle, read_audio, write_audio, write_silence);
+	type state_type is (idle, read_audio, arbitrary_write_step, write_audio, write_silence);
 	signal next_state, current_state: state_type := idle;
 	
 	--Used when write to an address that isn't set up yet
@@ -111,6 +111,10 @@ architecture dma of audio_dma is
 	signal channel_data, channel_addr_out, channel_length_out: std_logic_vector(0 to 31);
 	signal channel_select: std_logic_vector(0 to 2);
 	signal interrupt: std_logic;
+	signal global_enable: std_logic;
+	signal looping: std_logic;
+	signal arbitrary_write_next, arbitrary_write: std_logic;
+	signal arbitrary_address_next, arbitrary_address, arbitrary_data_next, arbitrary_data: std_logic_vector(0 to 31);
 	
 	
 	component opb_master is
@@ -129,12 +133,16 @@ architecture dma of audio_dma is
 		OPB_xferAck : in  std_logic;
 		M_ABus   : out std_logic_vector(0 to 31);
 		M_BE     : out std_logic_vector(0 to 3);
-	--    M_busLock: out std_logic;
+		--    M_busLock: out std_logic;
+		OPB_errAck                     : in  std_logic;
+		OPB_retry                      : in  std_logic;
+		OPB_timeout                    : in  std_logic;
 		M_DBus   : out std_logic_vector(0 to 31);
 		M_request: out std_logic;
 		M_RNW    : out std_logic;
 		M_select : out std_logic
 	--    M_seqAddr: out std_logic;
+	
 	  );
 	end component opb_master;
 
@@ -165,6 +173,9 @@ begin
 			master_data_reg <= master_data_reg_next;
 			master_rnw_reg <= master_rnw_reg_next;
 			cur_index <= next_index;
+			arbitrary_write <= arbitrary_write_next;
+			arbitrary_address <= arbitrary_address_next;
+			arbitrary_data <= arbitrary_data_next;
         end if;
     end process;
 	
@@ -183,15 +194,29 @@ begin
 		channel_addr_we <= '0';
 		channel_length_we <= '0';
 		control_reg_next <= control_reg;
+		arbitrary_write_next <= arbitrary_write;
+		arbitrary_address_next <= arbitrary_address;
+		arbitrary_data_next <= arbitrary_data;
 		case current_state is
 			when idle =>
-				if interrupt = '1' and master_idle_out = '1' then
+				-- if arbitrary_write = '1' then
+					-- next_state <= arbitrary_write_step;
+				if global_enable = '1' and interrupt = '1' and master_idle_out = '1' then
 					if enable_reg = '1' and (cur_index /= channel_length_out) then
 						next_state <= read_audio;
 					else
 						next_state <= write_silence;
 					end if;
 				end if;
+			-- when arbitrary_write_step =>
+				-- if master_idle_out = '1' then
+					-- master_enable <= '1';
+					-- master_address_reg_next <= arbitrary_address;
+					-- master_data_reg_next <= arbitrary_data;
+					-- master_rnw_reg_next <= '0';
+					-- arbitrary_write_next <= '0';
+					-- next_state <= idle;
+				-- end if;
 			when read_audio =>
 				if master_idle_out = '1' then
 					master_enable <= '1';
@@ -220,6 +245,9 @@ begin
 					master_rnw_reg_next <= '0';
 					next_state <= idle;
 					next_index <= cur_index + 4;
+					if (looping = '1') and (next_index = channel_length_out) then
+						next_index <= (others => '0');
+					end if;
 				end if;
 			when others =>
 				next_state <= idle;
@@ -237,6 +265,8 @@ begin
 							data_out <= channel_length_out;
 						when C_BASEADDR + 12 =>
 							data_out <= master_data_out;
+						when C_BASEADDR + 16 =>
+							data_out <= X"0000000" & "000" & arbitrary_write;
 						when others =>
 							data_out <= X"00000000";
 					end case;
@@ -256,6 +286,11 @@ begin
 							channel_length_we <= '1';
 						when C_BASEADDR + 12 =>
 							destination_next <= OPB_DBus;
+						when C_BASEADDR + 16 =>
+							arbitrary_address_next <= OPB_DBus;
+						when C_BASEADDR + 20 =>
+							arbitrary_data_next <= OPB_DBus;
+							arbitrary_write_next <= '1';
 						when others =>
 					end case;
 					Sl_xferAck <= '1';
@@ -266,6 +301,8 @@ begin
 	
 	interrupt <= AC97Int;
 	enable_reg <= control_reg(28);
+	global_enable <= control_reg(27);
+	looping <= control_reg(25); 
     M_busLock <= '0';
     M_seqAddr <= '0';
 	
@@ -286,6 +323,9 @@ begin
 		OPB_DBus => OPB_DBus,
 		OPB_MGrant => OPB_MGrant,
 		OPB_xferAck => OPB_xferAck,
+		OPB_errAck => OPB_errAck,
+		OPB_retry => OPB_retry,
+		OPB_timeout => OPB_timeout,
 		M_ABus => M_ABus,
 		M_BE => M_BE,
 		--    M_busLock: out std_logic;

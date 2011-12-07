@@ -1,8 +1,0 @@
-vhdl common_v1_00_a "C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\common_v1_00_a\hdl\vhdl\pselect.vhd"
-vhdl opb_ac97_v2_00_a "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\opb_ac97_v2_00_a\hdl\vhdl\srl_fifo.vhd"
-vhdl opb_ac97_v2_00_a "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\opb_ac97_v2_00_a\hdl\vhdl\bram_fifo.vhd"
-vhdl opb_ac97_v2_00_a "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\opb_ac97_v2_00_a\hdl\vhdl\ac97_timing.vhd"
-vhdl opb_ac97_v2_00_a "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\opb_ac97_v2_00_a\hdl\vhdl\ac97_core.vhd"
-vhdl opb_ac97_v2_00_a "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\opb_ac97_v2_00_a\hdl\vhdl\ac97_fifo.vhd"
-vhdl opb_ac97_v2_00_a "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\opb_ac97_v2_00_a\hdl\vhdl\opb_ac97.vhd"
-vhdl work "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\hdl\audio_codec_wrapper.vhd"

@@ -9,19 +9,19 @@
 int getSampleRate(char * tempSpace){
   wav_riff * tempRIFF = (wav_riff *) tempSpace;
   int i;
-  xil_printf("RIFF address: %d, sample address: %d\n",&tempRIFF,&tempRIFF->fmt.SampleRate);
-  xil_printf("SampleRate: %x\n", tempRIFF->fmt.SampleRate);
-  xil_printf("NumChannels: %d\n", tempRIFF->fmt.NumChannels);
+  //xil_printf("RIFF address: %d, sample address: %d\n",&tempRIFF,&tempRIFF->fmt.SampleRate);
+  //xil_printf("SampleRate: %x\n", tempRIFF->fmt.SampleRate);
+  //xil_printf("NumChannels: %d\n", tempRIFF->fmt.NumChannels);
   unsigned char * upper = (char*)&tempRIFF->fmt.SampleRate;
-  xil_printf("%x ", *upper);
+  //xil_printf("%x ", *upper);
   unsigned char * upper_mid = upper + 1;
-  xil_printf("%x ", *upper_mid);
+  //xil_printf("%x ", *upper_mid);
   unsigned char * lower_mid = upper + 2;
-  xil_printf("%x ", *lower_mid);
+  //xil_printf("%x ", *lower_mid);
   unsigned char * lower = upper + 3;
-  xil_printf("%x ", *lower);
+  //xil_printf("%x ", *lower);
   int sample = ((unsigned)*lower) << 24 | ((unsigned)*lower_mid) << 16 | ((unsigned)*upper_mid) << 8 | *upper;
-  xil_printf("Rate in Other endian: %x\n", sample);
+  //xil_printf("Rate in Other endian: %x\n", sample);
   switch(sample){
 		case 8000:
 			 return AC97_PCM_RATE_8000_HZ ;

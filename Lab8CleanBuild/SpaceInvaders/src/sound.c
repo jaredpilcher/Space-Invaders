@@ -6,8 +6,13 @@
 #include "sysace_stdio.h"
 
 #define BASE_ADDRESS 0x00600000
+int nextChannel = 0;
 
 void initializeSound(){
+
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 12, XPAR_AUDIO_CODEC_BASEADDR);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, GLOBAL_ENABLE);
+	
    XAC97_mSetControl(XPAR_AUDIO_CODEC_BASEADDR, AC97_ENABLE_RESET_AC97);
    usleep(100);
    XAC97_mSetControl(XPAR_AUDIO_CODEC_BASEADDR, AC97_DISABLE_RESET_AC97);
@@ -59,9 +64,14 @@ Sound createSound(char * filename){
 	Sound newSound;
 	newSound.length = getFileFromCF((char *)tempSpace, filename);
 	newSound.address = convertArrayToInt((char *)tempSpace, newSound.length);
+	newSound.channel = nextChannel;
 	nextFreeAddress += newSound.length;
+	nextChannel++;
 	newSound.sampling = getSampleRate(tempSpace);
 	newSound.current_sample = 0;
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, newSound.channel);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 4, newSound.address + 44*4);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 8, (newSound.length-200)*4);
 	return newSound;
 }
 
@@ -110,15 +120,19 @@ int getFileFromCF(char * wav_file_char, char * filename){
 	SYSACE_FILE * infile;
 	int numread;
 	char * audiobuffer = 0x00c00000;
+	print("Opening file...");
 	infile = sysace_fopen(filename, "r");
+	print("Success!\n\r");
 	int j = 0;
 	int i = 0;
 	
 	while(1){
 		if(infile) {
-			
-			numread = sysace_fread(audiobuffer, 1, 1000, infile);
-			
+//			print("Reading....");
+//			xil_printf("audiobuffer: %x...", audiobuffer);
+//			xil_printf("infile: %x...", infile);
+			numread = sysace_fread(audiobuffer, 1, 100, infile);
+
 			if(numread == 0)
 				break;
 			
@@ -131,8 +145,10 @@ int getFileFromCF(char * wav_file_char, char * filename){
 			break;
 		}
 	}
-	
+	print("Closing file...");
 	sysace_fclose(infile);
+	print("Success!\n\r");
+	
 	return j;
 
 }
@@ -140,7 +156,7 @@ int getFileFromCF(char * wav_file_char, char * filename){
 int * convertArrayToInt(char * wav_sound, int length){
 	int i;
 	int * sound = nextFreeAddress;
-	for(i = 276; i < length; i++){
+	for(i = 0; i < length; i++){
 		int value = wav_sound[i];
 		value -= 128;
 		value = (value << 24) | ((value << 8)& 0xFFFF);
@@ -151,14 +167,16 @@ int * convertArrayToInt(char * wav_sound, int length){
 
 void playSound(Sound * newSound){
 	XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_PCM_DAC_Rate,newSound->sampling);
-	newSound->current_sample=0;
-	if(current_sound && newSound->priority > current_sound->priority){
-		current_sound->current_sample=0;
-		current_sound=newSound;
-	} else if(!current_sound) {
-		current_sound=newSound;
-	}
-	return;
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, PLAY_NO_LOOPING + newSound->channel);
+}
+
+void startLoop(Sound * newSound){
+	XAC97_WriteReg(XPAR_AUDIO_CODEC_BASEADDR,AC97_PCM_DAC_Rate,newSound->sampling);
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, PLAY_LOOPING + newSound->channel);
+}
+
+void endLoop(){
+	XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR, GLOBAL_ENABLE + ENABLE + PLAY);
 }
 
 void endSound(Sound * newSound){

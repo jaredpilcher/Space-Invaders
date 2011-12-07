@@ -1,4 +1,0 @@
-#
-# Clock constraints
-#
-NET "opb_clk" TNM_NET = D_CLK ;

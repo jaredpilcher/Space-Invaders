@@ -1,4 +1,0 @@
-VHDL proc_common_v1_00_b C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b/hdl/vhdl/or_muxcy.vhd
-VHDL proc_common_v1_00_b C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b/hdl/vhdl/or_gate.vhd
-VHDL dcr_v29_v1_00_a C:\Xilinx91i\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a/hdl/vhdl/dcr_v29.vhd
-vhdl work ../hdl/dcr_v29_0_wrapper.vhd

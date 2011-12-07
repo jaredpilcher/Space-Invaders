@@ -72,9 +72,6 @@ void bufferUnderrun(){
 
 void non_critical_handler(){
 	int interrupts = XIntc_mGetIntrStatus(XPAR_OPB_INTC_0_BASEADDR);
-	if(interrupts & XPAR_AUDIO_CODEC_INTERRUPT_MASK){
-		bufferUnderrun();
-	}
 	if(interrupts & XPAR_LAB3_SLAVE_0_INTERRUPTREQUEST_MASK) {
 		slaveHandler();
 	}
@@ -561,7 +558,7 @@ int main() {
 	sounds[Fire].priority = 7;
 	sounds[TankExplode] = createSound("a:\\TankXplo.wav");
 	sounds[TankExplode].priority = 10;
-	sounds[SpaceShip] = createSound("a:\\SHigh2.wav");
+	sounds[SpaceShip] = createSound("a:\\Ufo.wav");
 	sounds[SpaceShip].priority = 8;
 	sounds[SpaceShipHit] = createSound("a:\\SLow.wav");
 	sounds[SpaceShipHit].priority = 9;

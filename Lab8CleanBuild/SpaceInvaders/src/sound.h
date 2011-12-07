@@ -1,12 +1,20 @@
 #ifndef SPACE_INVADERS_SOUND
 #define SPACE_INVADERS_SOUND
 
+#define LOOPING 64
+#define PLAY 32
+#define GLOBAL_ENABLE 16
+#define ENABLE 8
+#define PLAY_LOOPING 120
+#define PLAY_NO_LOOPING 56
+
 typedef struct{
 	int * address;
 	int length;
 	int sampling;
 	int current_sample;
 	int priority;
+	int channel;
 }Sound;
 
 void initializeSound();

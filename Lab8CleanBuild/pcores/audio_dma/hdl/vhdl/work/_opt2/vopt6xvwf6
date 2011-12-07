@@ -1,0 +1,127 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\audio_dma\hdl\vhdl
+T_opt
+Z1 Vd<`l[8ZS9<W_z`AC2HCCH1
+Z2 04 9 3 work audio_dma dma 1
+Z3 =1-000ffe75aea7-4ed559f9-2d5-2600
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 OE;O;6.4;39
+T_opt1
+Z6 V<aWC5Y?H5O_G3PkRdDoL52
+R2
+Z7 =4-000ffe75aea7-4ed7ec21-1c2-273c
+Z8 o-quiet -auto_acc_if_foreign -work work +acc
+R5
+T_opt2
+Z9 VoV2d36C1NNgK9=iSf`1hN2
+R2
+Z10 =1-000ffe75aea7-4edfd714-326-4794
+R4
+R5
+Eaudio_dma
+Z11 w1323291935
+Z12 DPx21 C:\modeltech_6.4\ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z13 DPx21 C:\modeltech_6.4\ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z14 DPx21 C:\modeltech_6.4\ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z15 DPx21 C:\modeltech_6.4\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z16 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+Z17 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/audio_dma/hdl/vhdl/audio_dma.vhd
+l0
+L46
+Z18 V2Ag`7HoV2IcO:J>gV=E6N0
+Z19 OE;C;6.4;39
+Z20 o-work work
+Z21 tExplicit 1
+Z22 !s100 `HmIc=kZJ`N9RKgigiDRH2
+Adma
+Z23 DEx88 D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\audio_dma\hdl\vhdl\work 12 channel_bank 0 22 ch^HA;zCkVcmoOD8;_f9G1
+Z24 DEx88 D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\audio_dma\hdl\vhdl\work 10 opb_master 0 22 l>=<llX@kYXQWPeLRJ=2b1
+R12
+R13
+R14
+R15
+DEx88 D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\audio_dma\hdl\vhdl\work 9 audio_dma 0 22 2Ag`7HoV2IcO:J>gV=E6N0
+32
+Z25 Mx4 21 C:\modeltech_6.4\ieee 14 std_logic_1164
+Z26 Mx3 21 C:\modeltech_6.4\ieee 18 std_logic_unsigned
+Z27 Mx2 21 C:\modeltech_6.4\ieee 15 std_logic_arith
+Z28 Mx1 21 C:\modeltech_6.4\ieee 11 numeric_std
+l163
+L94
+Z29 V5O<LYDR_RIRLZ8d=flCd:3
+R19
+R20
+R21
+Z30 !s100 XdPml=D`R2b1BZdV18Bdi1
+Echannel_bank
+Z31 w1322619271
+R12
+R13
+R14
+R15
+32
+Z32 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+Z33 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+l0
+L6
+Z34 Vch^HA;zCkVcmoOD8;_f9G1
+R19
+R20
+R21
+Z35 !s100 D_2lbnOJVRY`;KHU9?8<<3
+Achanbank
+R12
+R13
+R14
+R15
+R23
+32
+R25
+R26
+R27
+R28
+l46
+L20
+Z36 V<?9d81kebIH95nPe66nJ10
+R19
+R20
+R21
+Z37 !s100 1c3O@FIld`ZdAXMhmV>Kc1
+Eopb_master
+Z38 w1323283082
+R12
+R13
+R14
+R15
+32
+Z39 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+Z40 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+l0
+L6
+Z41 Vl>=<llX@kYXQWPeLRJ=2b1
+R19
+R20
+R21
+Z42 !s100 3<2IVlc0_dQHD[B^iSkPP3
+Aopbm
+R12
+R13
+R14
+R15
+R24
+32
+R25
+R26
+R27
+R28
+l43
+L33
+Z43 Vz8>b>UBAVoC4Dol=^mJ0L3
+R19
+R20
+R21
+Z44 !s100 3[KfM8XR;J3<6SNRMPF?;1

@@ -1,6 +1,6 @@
 iMPACT Version: Feb 27 2007 13:15:18
 
-iMPACT log file Started on Fri Oct 28 12:20:57 2011
+iMPACT log file Started on Wed Dec 07 09:33:10 2011
 
 AutoDetecting cable. Please wait.
 Connecting to cable (Parallel Port - LPT1).
@@ -71,7 +71,7 @@ INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000
 INFO:iMPACT:579 - '3': Completed downloading bit file to device.
 INFO:iMPACT - '3': Checking done pin....done.
 '3': Programmed successfully.
-Elapsed time =      3 sec.
+Elapsed time =      4 sec.
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------

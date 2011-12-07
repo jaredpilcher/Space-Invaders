@@ -1,0 +1,30 @@
+# Current time Wed Dec 07 14:15:48 2011
+# ModelSim Stack Trace
+# Program = vish
+# Id = "6.4"
+# Version = "2008.06"
+# Date = "Jun 18 2008"
+# Platform = win32
+
+Exception c0000005 has occurred at address 00480b95. Traceback:
+# 0    0x00480b95: 'Mtirpc_Init + 0x1e875'
+# 1    0x0048d2a5: 'Mtirpc_Init + 0x2af85'
+# 2    0x00489ccf: 'Mtirpc_Init + 0x279af'
+# 3    0x1000d52b: 'TclEvalObjvInternal + 0x24b'
+# 4    0x1002cad7: 'TclCompEvalObj + 0x637'
+# 5    0x1002c590: 'TclCompEvalObj + 0xf0'
+# 6    0x1005383a: 'TclObjInterpProc + 0x26a'
+# 7    0x1000d52b: 'TclEvalObjvInternal + 0x24b'
+# 8    0x1000d6a6: 'Tcl_EvalObjv + 0xa6'
+# 9    0x1000e24a: 'Tcl_EvalObjEx + 0x14a'
+# 10   0x10011e9a: 'Tcl_EvalObjCmd + 0x4a'
+# 11   0x1000d52b: 'TclEvalObjvInternal + 0x24b'
+# 12   0x1002cad7: 'TclCompEvalObj + 0x637'
+# 13   0x1002c590: 'TclCompEvalObj + 0xf0'
+# 14   0x1005383a: 'TclObjInterpProc + 0x26a'
+# 15   0x1000d52b: 'TclEvalObjvInternal + 0x24b'
+# 16   0x1000dce0: 'Tcl_EvalEx + 0x180'
+# 17   0x02c545ab: '<unknown (@0x2c545ab)>'
+StackWalk failed 487
+# End of Stack Trace
+

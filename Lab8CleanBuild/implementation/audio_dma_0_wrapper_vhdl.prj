@@ -1,4 +1,0 @@
-vhdl opb_master "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\opb_master\hdl\vhdl\opb_master.vhd"
-vhdl audio_dma "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\audio_dma\hdl\vhdl\audio_dma.vhd"
-vhdl channel_bank "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\pcores\channel_bank\hdl\vhdl\channel_bank.vhd"
-vhdl work "D:\Put_Your_Temp_Files_Here\space_invaders\Lab8CleanBuild\hdl\audio_dma_0_wrapper.vhd"

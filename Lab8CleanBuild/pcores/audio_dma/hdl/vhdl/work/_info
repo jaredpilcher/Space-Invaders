@@ -16,13 +16,13 @@ R1
 o-quiet -auto_acc_if_foreign -work work +acc
 R3
 T_opt2
-VPOd:W1i`WQT`bG4zLL1`m0
-04 12 8 work channel_bank chanbank 1
-=1-000ffe75aea7-4ed6bdee-2e0-2854
+VoV2d36C1NNgK9=iSf`1hN2
+R1
+=1-000ffe75aea7-4edfd714-326-4794
 R2
 R3
 Eaudio_dma
-Z4 w1322785350
+Z4 w1323291935
 Z5 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
 Z6 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
 Z7 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
@@ -43,26 +43,26 @@ R6
 R7
 R8
 Z14 DEx4 work 9 audio_dma 0 22 2Ag`7HoV2IcO:J>gV=E6N0
-l155
+l163
 L94
-V7LNo7Wf:>FVhgho9J4h5]0
-!s100 4o6;ZYFKOW4EZ_I0fNOao0
+Z15 V5O<LYDR_RIRLZ8d=flCd:3
+Z16 !s100 XdPml=D`R2b1BZdV18Bdi1
 R11
 32
-Z15 Mx4 4 ieee 14 std_logic_1164
-Z16 Mx3 4 ieee 18 std_logic_unsigned
-Z17 Mx2 4 ieee 15 std_logic_arith
-Z18 Mx1 4 ieee 11 numeric_std
+Z17 Mx4 4 ieee 14 std_logic_1164
+Z18 Mx3 4 ieee 18 std_logic_unsigned
+Z19 Mx2 4 ieee 15 std_logic_arith
+Z20 Mx1 4 ieee 11 numeric_std
 R12
 R13
 Echannel_bank
-Z19 w1322619271
+Z21 w1322619271
 R5
 R6
 R7
 R8
-Z20 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
-Z21 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+Z22 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
+Z23 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/channel_bank/hdl/vhdl/channel_bank.vhd
 l0
 L6
 Vch^HA;zCkVcmoOD8;_f9G1
@@ -82,44 +82,44 @@ L20
 V<?9d81kebIH95nPe66nJ10
 R11
 32
-R15
-R16
 R17
 R18
+R19
+R20
 R12
 R13
 !s100 1c3O@FIld`ZdAXMhmV>Kc1
 Eopb_master
-Z22 w1322687314
+Z24 w1323283082
 R5
 R6
 R7
 R8
-Z23 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
-Z24 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+Z25 8D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
+Z26 FD:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/pcores/opb_master/hdl/vhdl/opb_master.vhd
 l0
 L6
-VZYBg=TZ6@ka07NM6FnEkc1
+Vl>=<llX@kYXQWPeLRJ=2b1
 R11
 32
 R12
 R13
-!s100 Fk0QkLmILo9WnfSEko?E22
+!s100 3<2IVlc0_dQHD[B^iSkPP3
 Aopbm
 R5
 R6
 R7
 R8
-DEx4 work 10 opb_master 0 22 ZYBg=TZ6@ka07NM6FnEkc1
-l40
-L30
-V3jFT]jaGmAA00=J_SEJ<c3
+DEx4 work 10 opb_master 0 22 l>=<llX@kYXQWPeLRJ=2b1
+l43
+L33
+Vz8>b>UBAVoC4Dol=^mJ0L3
 R11
 32
-R15
-R16
 R17
 R18
+R19
+R20
 R12
 R13
-!s100 Mn=LQnYA2d9WDkAnAE_Z52
+!s100 3[KfM8XR;J3<6SNRMPF?;1
