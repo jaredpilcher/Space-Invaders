@@ -690,7 +690,31 @@ We use the wireless transmitter to transmit a game state structure to the other 
 Also, all of the values transmitted are absolutes as opposed to deltas, which enables us to loose packets (which is inevitable due to noise) and then recover when we get the next one.  For example when an alien is shot we don't send a number indicating the number of aliens shot since the last packet, we send the total shot since the beginning of the game.  
 
 
+\chapter{DMA Controller}
+	The DMA controller is a peripheral device set on the OPB bus to handle data transfers between memory and other peripherals. It acts as both a master and a slave on the OPB bus. It is capable of transferring between the DDR memory and the AC97 codec peripheral. When the AC97 FIFO is low, an interrupt signal is set, and the DMA controller reads audio information from the DDR memory and places it on the AC97 codec. This is all done by following the protocol of the OPB bus. This means that timing is strictly followed for all signals, and that all errors are handled properly. 
+	All addresses and lengths of songs are placed on a Look Up Table on the DMA. These are set by writing to the correct addresses on the DMA controller, placing the address and then the data on the DMA. This must be done in that order for the length of the song (in bytes) to be properly associated with the correct address.
 
+\subsection{How to Set It Up}
+	A control register is used to manage the master portion on the DMA. It is composed of the following flags:
+\begin{itemize}
+\item Global Enable - This flag is used to turn on the DMA. The DMA will continue in its idle state, doing nothing, until this flag is set.
+\item Channel Select - The lower three bits are used to select the channel that corresponds to the channel in the LUT on the DMA. This is used to both set the channel data, and also to read from it (depending on the state of the other flags).
+\item Play Sound - This flag is used to play a sound a second time. The sound can only be played from the beginning of the sound by changing channels, or by setting this flag.
+\item Enable Sound - This flag is used to enable playing sound. When this is flag is not set, the DMA will write all zeros to the AC97 audio codec. This means that the codec plays silence. The DMA will starting playing the sound as soon as this flag is set.
+\item Looping - This flag is used to loop a sound. When a sound completes playing, the address index to play a sound is reset and the sound is played again. To stop looping a sound, set this to zero.
+\end{itemize}
+
+\subsection{How to Use It}
+	To use this you need to write to the control register with the correct flags. For convenience, we have provided the following four functions:
+
+\begin{itemize}
+\item playSound - Pass a sound struct in the parameter to play that sound. This will set the correct flags on the DMA control register. This will also set the correct sampling rate on the AC97.
+\item startLoop - Pass a sound struct in the parameter to start playing a sound in a loop. This will set the correct flags on the DMA control register.
+\item endLoop - This function writes a zero to the Looping flag to end looping a sound. This will set the correct flags on the DMA control register. 
+\end{itemize}
+
+\subsection{Timing Analysis}
+	There was a definite improvement in the CPU utilization between our interrupt driven sound and our DMA controller implementation. There was a 17% improvement in the time taken by our render function. We timed this by capturing a timer value at the beginning and end of the render function and compared the difference. Since this a key part of our program, it represents a significant improvement in our overall performance.
 
 \chapter{Bug Reports and File Organization}
 
@@ -752,3 +776,9 @@ At first, we attempted to display data on our seven segment display. We discover
 \subsection{Improper Connections}
 We forgot many of the fundamentals of VHDL syntax, which cause some issues. Some of the signals we assigned to "downto" and others we assigned to "to". After we discovered that the lowest significant OPB bit was actuals bit 31, we were able to fix the issue. We payed closer attention to this issue in the later parts of the lab. 
 \end{document}
+
+\subsection{RNW Signal}
+We discovered using ChipScope, with the help of Josh, that we were holding our RNW signal in our master portion of our DMA too long. It should have been lowered when we lowered our Select signal, however it was not lowered until one clock cycle later. This wasn't always manifest but under certain circumstances it would cause the entire system to hang. We were lucky to find the bug.
+
+\subsection{Data and Address Signals}
+We discovered after some time that we were not setting our data and address signals to zeros after we read and wrote to the bus. This caused other peripherals to malfunction as the lines were OR'ed with the data from our DMA.

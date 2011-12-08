@@ -1,0 +1,504 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "plb_bram_if_cntlr_1_bram_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : plb_bram_if_cntlr_1_bram_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" in Library plb_bram_if_cntlr_1_bram_elaborate_v1_00_a.
+Entity <plb_bram_if_cntlr_1_bram_elaborate> compiled.
+Entity <plb_bram_if_cntlr_1_bram_elaborate> (Architecture <STRUCTURE>) compiled.
+Compiling vhdl file "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/plb_bram_if_cntlr_1_bram_wrapper.vhd" in Library work.
+Entity <plb_bram_if_cntlr_1_bram_wrapper> compiled.
+Entity <plb_bram_if_cntlr_1_bram_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <plb_bram_if_cntlr_1_bram_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <plb_bram_if_cntlr_1_bram_elaborate> in library <plb_bram_if_cntlr_1_bram_elaborate_v1_00_a> (architecture <STRUCTURE>) with generics.
+	C_FAMILY = "virtex2p"
+	C_MEMSIZE = 131072
+	C_NUM_WE = 8
+	C_PORT_AWIDTH = 32
+	C_PORT_DWIDTH = 64
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <plb_bram_if_cntlr_1_bram_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set user-defined property "KEEP_HIERARCHY =  yes" for unit <plb_bram_if_cntlr_1_bram_wrapper>.
+    Set user-defined property "KEEP_HIERARCHY =  yes" for unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "X_CORE_INFO =  plb_bram_if_cntlr_1_bram_elaborate_v1_00_a" for unit <plb_bram_if_cntlr_1_bram_elaborate>.
+Entity <plb_bram_if_cntlr_1_bram_wrapper> analyzed. Unit <plb_bram_if_cntlr_1_bram_wrapper> generated.
+
+Analyzing generic Entity <plb_bram_if_cntlr_1_bram_elaborate> in library <plb_bram_if_cntlr_1_bram_elaborate_v1_00_a> (Architecture <STRUCTURE>).
+	C_FAMILY = "virtex2p"
+	C_MEMSIZE = 131072
+	C_NUM_WE = 8
+	C_PORT_AWIDTH = 32
+	C_PORT_DWIDTH = 64
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 81: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_0> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_0> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 103: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_1> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_1> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 125: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_2> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_2> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 147: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_3> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_3> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 169: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_4> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_4> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 191: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_5> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_5> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 213: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_6> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_6> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 235: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_7> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_7> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 257: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_8> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_8> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 279: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_9> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_9> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 301: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_10> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_10> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 323: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_11> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_11> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 345: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_12> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_12> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 367: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_13> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_13> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 389: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_14> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_14> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 411: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_15> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_15> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 433: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_16> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_16> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 455: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_17> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_17> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 477: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_18> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_18> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 499: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_19> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_19> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 521: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_20> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_20> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 543: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_21> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_21> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 565: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_22> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_22> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 587: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_23> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_23> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 609: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_24> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_24> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 631: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_25> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_25> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 653: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_26> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_26> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 675: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_27> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_27> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 697: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_28> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_28> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 719: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_29> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_29> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 741: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_30> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_30> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 763: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_31> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_31> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 785: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_32> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_32> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 807: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_33> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_33> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 829: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_34> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_34> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 851: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_35> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_35> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 873: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_36> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_36> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 895: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_37> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_37> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 917: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_38> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_38> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 939: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_39> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_39> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 961: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_40> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_40> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 983: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_41> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_41> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1005: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_42> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_42> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1027: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_43> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_43> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1049: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_44> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_44> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1071: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_45> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_45> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1093: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_46> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_46> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1115: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_47> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_47> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1137: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_48> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_48> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1159: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_49> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_49> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1181: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_50> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_50> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1203: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_51> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_51> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1225: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_52> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_52> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1247: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_53> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_53> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1269: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_54> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_54> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1291: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_55> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_55> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1313: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_56> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_56> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1335: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_57> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_57> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1357: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_58> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_58> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1379: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_59> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_59> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1401: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_60> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_60> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1423: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_61> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_61> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1445: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_62> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_62> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+WARNING:Xst:2211 - "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd" line 1467: Instantiating black box module <RAMB16_S1_S1>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s1_s1_63> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s1_s1_63> in unit <plb_bram_if_cntlr_1_bram_elaborate>.
+Entity <plb_bram_if_cntlr_1_bram_elaborate> analyzed. Unit <plb_bram_if_cntlr_1_bram_elaborate> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <plb_bram_if_cntlr_1_bram_elaborate>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/elaborate/plb_bram_if_cntlr_1_bram_elaborate_v1_00_a/hdl/vhdl/plb_bram_if_cntlr_1_bram_elaborate.vhd".
+WARNING:Xst:647 - Input <BRAM_Addr_A<0:14>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_A<29:31>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_B<0:14>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_B<29:31>> is never used.
+Unit <plb_bram_if_cntlr_1_bram_elaborate> synthesized.
+
+
+Synthesizing Unit <plb_bram_if_cntlr_1_bram_wrapper>.
+    Related source file is "D:/Put_Your_Temp_Files_Here/space_invaders/Lab8CleanBuild/hdl/plb_bram_if_cntlr_1_bram_wrapper.vhd".
+Unit <plb_bram_if_cntlr_1_bram_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <plb_bram_if_cntlr_1_bram_wrapper> ...
+
+Optimizing unit <plb_bram_if_cntlr_1_bram_elaborate> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 342
+
+Cell Usage :
+# RAMS                             : 64
+#      RAMB16_S1_S1                : 64
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                       0  out of  13696     0%  
+ Number of IOs:                        342
+ Number of bonded IOBs:                  0  out of    556     0%  
+ Number of BRAMs:                       64  out of    136    47%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                         | Load  |
+-----------------------------------+-----------------------------------------------+-------+
+BRAM_Clk_A                         | NONE(plb_bram_if_cntlr_1_bram/ramb16_s1_s1_48)| 64    |
+BRAM_Clk_B                         | NONE(plb_bram_if_cntlr_1_bram/ramb16_s1_s1_53)| 64    |
+-----------------------------------+-----------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 0.325ns
+   Maximum output required time after clock: 0.000ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BRAM_Clk_A'
+  Total number of paths / destination ports: 1152 / 1152
+-------------------------------------------------------------------------
+Offset:              0.325ns (Levels of Logic = 1)
+  Source:            BRAM_WEN_A<0> (PAD)
+  Destination:       plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 (RAM)
+  Destination Clock: BRAM_Clk_A rising
+
+  Data Path: BRAM_WEN_A<0> to plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'plb_bram_if_cntlr_1_bram'
+     RAMB16_S1_S1:WEA          0.325          ramb16_s1_s1_0
+    ----------------------------------------
+    Total                      0.325ns (0.325ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BRAM_Clk_B'
+  Total number of paths / destination ports: 1152 / 1152
+-------------------------------------------------------------------------
+Offset:              0.325ns (Levels of Logic = 1)
+  Source:            BRAM_WEN_B<0> (PAD)
+  Destination:       plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 (RAM)
+  Destination Clock: BRAM_Clk_B rising
+
+  Data Path: BRAM_WEN_B<0> to plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'plb_bram_if_cntlr_1_bram'
+     RAMB16_S1_S1:WEB          0.325          ramb16_s1_s1_0
+    ----------------------------------------
+    Total                      0.325ns (0.325ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BRAM_Clk_B'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              0.000ns (Levels of Logic = 1)
+  Source:            plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 (RAM)
+  Destination:       BRAM_Din_B<0> (PAD)
+  Source Clock:      BRAM_Clk_B rising
+
+  Data Path: plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 to BRAM_Din_B<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S1_S1:CLKB->DOB0    0   0.000   0.000  ramb16_s1_s1_0 (BRAM_Din_B<0>)
+     end scope: 'plb_bram_if_cntlr_1_bram'
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BRAM_Clk_A'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              0.000ns (Levels of Logic = 1)
+  Source:            plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 (RAM)
+  Destination:       BRAM_Din_A<0> (PAD)
+  Source Clock:      BRAM_Clk_A rising
+
+  Data Path: plb_bram_if_cntlr_1_bram/ramb16_s1_s1_0 to BRAM_Din_A<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S1_S1:CLKA->DOA0    0   0.000   0.000  ramb16_s1_s1_0 (BRAM_Din_A<0>)
+     end scope: 'plb_bram_if_cntlr_1_bram'
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+CPU : 7.63 / 7.71 s | Elapsed : 7.00 / 8.00 s
+ 
+--> 
+
+Total memory usage is 200748 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   68 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

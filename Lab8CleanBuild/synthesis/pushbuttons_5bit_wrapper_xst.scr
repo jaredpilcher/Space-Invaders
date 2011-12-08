@@ -1,0 +1,11 @@
+run
+-opt_mode speed
+-opt_level 1
+-p xc2vp30ff896-7
+-top pushbuttons_5bit_wrapper
+-ifmt MIXED
+-ifn pushbuttons_5bit_wrapper_xst.prj
+-ofn ../implementation/pushbuttons_5bit_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}

@@ -92,7 +92,7 @@ void newShip(){
 		new_space_ship.x=-64;
 		new_space_ship.y=45;
 		new_space_ship.active=1;
-		playSound(&sounds[SpaceShip]);
+		startLoop(&sounds[SpaceShip]);
 	}
 }
 
@@ -101,7 +101,7 @@ void updateShip(){
 	int ship_active = new_space_ship.active;
 	new_space_ship = moveShip(new_space_ship);
 	if(ship_active && !new_space_ship.active)
-		endSound(&sounds[SpaceShip]);
+		endLoop();
 }
 
 void stepShipExplosion(){
@@ -391,7 +391,7 @@ int to_hex_display(int value){
 //  that were drawn.  The other problem is that we are passing a pointer for alien_bullets, which resides on the previous stack frame.
 // If there are any problems, look there first.
 void render(){
-		  print("Rendering...");
+		  int initial = pit_counter;
 		  int i;
 		  //draw stuff to next frame
 		  drawAllLives(new_lives,next_frame);
@@ -416,6 +416,8 @@ void render(){
 		  }
 		  drawScore(new_score,next_frame);
 		  //switch frame
+		  
+		  //XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 16, XPAR_VGA_FRAMEBUFFER_DCR_BASEADDR);
 		  XIo_Out32(XPAR_VGA_FRAMEBUFFER_DCR_BASEADDR, next_frame);
 		  //XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 16, XPAR_VGA_FRAMEBUFFER_DCR_BASEADDR);
 		  //XIo_Out32(XPAR_AUDIO_DMA_0_BASEADDR + 20, next_frame);
@@ -468,7 +470,8 @@ void render(){
 		  } else {
 				XIo_Out32(0x40080000, to_hex_display(score));
 		  }
-		  print("....Done.\n\r");
+		  int final = pit_counter;
+		  xil_printf("render took %d ticks\n\r", final - initial);
 }
 void initialize_frame(int frame){
   XTft_mClearScreen(frame, BLACK);

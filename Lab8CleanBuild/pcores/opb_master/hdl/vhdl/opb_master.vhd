@@ -40,6 +40,7 @@ architecture opbm of opb_master is
 	signal master_data: std_logic_vector(0 to 31);
 	signal counter, counter_next : unsigned(0 to 31);
 	signal idle_sig: std_logic;
+	signal rnw_sig: std_logic;
 begin
 	process(clk)
 	begin
@@ -60,6 +61,7 @@ begin
 		data_out_reg_next <= data_out_reg;
 		counter_next <= counter + 1;
 		master_request <= '0';
+		rnw_sig <= '0';
 		case current_state is
 			when idle =>
 				idle_sig <= '1';
@@ -80,6 +82,7 @@ begin
 				master_request <= '0';
 				master_select <= '1';
 				master_address <= address;
+				rnw_sig <= rnw;
 				if OPB_xferAck = '1' then
 					next_state <= acknowledged;
 					data_out_reg_next <= OPB_DBus;
@@ -95,7 +98,7 @@ begin
 			when others =>
 		end case;
 	end process;
-	M_RNW <= rnw;
+	M_RNW <= rnw_sig;
 	data_out <= data_out_reg;
 	idle_out <= idle_sig;
 	M_ABus   <= master_address;

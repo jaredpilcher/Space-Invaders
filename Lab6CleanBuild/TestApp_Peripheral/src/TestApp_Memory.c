@@ -363,6 +363,7 @@ void drawBunkers(int frame){
 //  that were drawn.  The other problem is that we are passing a pointer for alien_bullets, which resides on the previous stack frame.
 // If there are any problems, look there first.
 void render(){
+		  int initial = pit_counter;
 		  int i;
 		  //draw stuff to next frame
 		  drawAllLives(new_lives,next_frame);
@@ -431,6 +432,8 @@ void render(){
 		  next_frame^=prev_frame;
 		  prev_frame^=next_frame;
 		  
+		  int final = pit_counter;
+		  xil_printf("render took %d ticks\n\r", final - initial);
 }
 void initialize_frame(int frame){
   XTft_mClearScreen(frame, BLACK);

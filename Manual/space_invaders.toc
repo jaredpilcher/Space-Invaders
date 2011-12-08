@@ -85,28 +85,31 @@
 \contentsline {subsubsection}{Shooting Aliens}{39}
 \contentsline {subsubsection}{Shooting the Space Ship}{40}
 \contentsline {subsubsection}{Winning or Losing}{40}
-\contentsline {subsubsection}{Wireless Transceivers}{40}
-\contentsline {subsubsection}{Wireless Transceiver}{41}
+\contentsline {subsubsection}{Wireless Transceiver}{40}
 \contentsline {subsubsection}{SPI}{41}
 \contentsline {subsubsection}{Wireless API}{41}
 \contentsline {subsubsection}{Packet Structure}{42}
 \contentsline {subsubsection}{In Game Use}{42}
-\contentsline {chapter}{\numberline {5}Bug Reports and File Organization}{44}
-\contentsline {section}{\numberline {5.1}Bug Reports}{44}
-\contentsline {subsection}{\numberline {5.1.1}Drawing Bullets}{44}
-\contentsline {subsection}{\numberline {5.1.2}Destroying Aliens}{44}
-\contentsline {subsection}{\numberline {5.1.3}Moving Aliens to Right of Screen}{45}
-\contentsline {subsection}{\numberline {5.1.4}Overlay of Bullet Black Boxes}{45}
-\contentsline {subsection}{\numberline {5.1.5}One Alien Firing Two Bullets Simultaneously}{45}
-\contentsline {subsection}{\numberline {5.1.6}Overwriting Memory}{45}
-\contentsline {subsection}{\numberline {5.1.7}Tank Out of Bounds}{46}
-\contentsline {subsection}{\numberline {5.1.8}Not Enough Bunker Blocks}{46}
-\contentsline {subsection}{\numberline {5.1.9}Tank Movement During Explosion}{46}
-\contentsline {subsection}{\numberline {5.1.10}Tank Bullet Grazing Aliens}{46}
-\contentsline {subsection}{\numberline {5.1.11}Knowing when a sound has finished playing}{47}
-\contentsline {subsection}{\numberline {5.1.12}AC97 Interrupts}{47}
-\contentsline {subsection}{\numberline {5.1.13}Big Endian}{47}
-\contentsline {subsection}{\numberline {5.1.14}Initial Failure}{47}
-\contentsline {subsection}{\numberline {5.1.15}Acknowledging Problems}{48}
-\contentsline {subsection}{\numberline {5.1.16}Seven Segment Display Too Dim}{48}
-\contentsline {subsection}{\numberline {5.1.17}Improper Connections}{48}
+\contentsline {chapter}{\numberline {5}DMA Controller}{43}
+\contentsline {subsection}{\numberline {5.0.7}How to Set It Up}{43}
+\contentsline {subsection}{\numberline {5.0.8}How to Use It}{44}
+\contentsline {subsection}{\numberline {5.0.9}Timing Analysis}{44}
+\contentsline {chapter}{\numberline {6}Bug Reports and File Organization}{45}
+\contentsline {section}{\numberline {6.1}Bug Reports}{45}
+\contentsline {subsection}{\numberline {6.1.1}Drawing Bullets}{45}
+\contentsline {subsection}{\numberline {6.1.2}Destroying Aliens}{45}
+\contentsline {subsection}{\numberline {6.1.3}Moving Aliens to Right of Screen}{46}
+\contentsline {subsection}{\numberline {6.1.4}Overlay of Bullet Black Boxes}{46}
+\contentsline {subsection}{\numberline {6.1.5}One Alien Firing Two Bullets Simultaneously}{46}
+\contentsline {subsection}{\numberline {6.1.6}Overwriting Memory}{46}
+\contentsline {subsection}{\numberline {6.1.7}Tank Out of Bounds}{47}
+\contentsline {subsection}{\numberline {6.1.8}Not Enough Bunker Blocks}{47}
+\contentsline {subsection}{\numberline {6.1.9}Tank Movement During Explosion}{47}
+\contentsline {subsection}{\numberline {6.1.10}Tank Bullet Grazing Aliens}{47}
+\contentsline {subsection}{\numberline {6.1.11}Knowing when a sound has finished playing}{48}
+\contentsline {subsection}{\numberline {6.1.12}AC97 Interrupts}{48}
+\contentsline {subsection}{\numberline {6.1.13}Big Endian}{48}
+\contentsline {subsection}{\numberline {6.1.14}Initial Failure}{48}
+\contentsline {subsection}{\numberline {6.1.15}Acknowledging Problems}{49}
+\contentsline {subsection}{\numberline {6.1.16}Seven Segment Display Too Dim}{49}
+\contentsline {subsection}{\numberline {6.1.17}Improper Connections}{49}

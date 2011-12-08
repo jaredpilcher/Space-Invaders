@@ -1,0 +1,64 @@
+WARNING:PhysDesignRules:372 - Gated clock. Clock net opb_OPB_select is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_41_pin/exp_io_41_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_50_pin/exp_io_50_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_43_pin/exp_io_43_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_52_pin/exp_io_52_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_60_pin/exp_io_60_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_53_pin/exp_io_53_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_62_pin/exp_io_62_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_54_pin/exp_io_54_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_71_pin/exp_io_71_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_55_pin/exp_io_55_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_48_pin/exp_io_48_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_56_pin/exp_io_56_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_57_pin/exp_io_57_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_73_pin/exp_io_73_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_58_pin/exp_io_58_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_75_pin/exp_io_75_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_59_pin/exp_io_59_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_67_pin/exp_io_67_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   exp_io_69_pin/exp_io_69_pin is set but the tri state is not configured. 
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin CPMC405CLOCK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin PLBCLK for the comp
+   ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM driven
+   clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMISOCMCLK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMDSOCMCLK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMISOCMCLK for the
+   comp ppc405_0/ppc405_0/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMDSOCMCLK for the
+   comp ppc405_0/ppc405_0/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<vga_framebuffer/vga_framebuffer/RGB_BRAM_U4/RGB_BRAM/vga_framebuffer/v
+   ga_framebuffer/RGB_BRAM_U4/RGB_BRAM.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+DRC detected 0 errors and 27 warnings.

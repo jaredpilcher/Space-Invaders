@@ -1,0 +1,464 @@
+--------------------------------------------------------------------------------
+Release 9.1.02i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+trce -e 3 -xml system.twx system.ncd system.pcf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,package,speed:     xc2vp30,ff896,-7 (PRODUCTION 1.93 2007-02-23)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+30 logic loops found and disabled.
+
+  ----------------------------------------------------------------------
+ ! Warning: The following connections close logic loops, and some paths !
+ !          through these connections may not be analyzed.              !
+ !                                                                      !
+ ! Signal                            Driver            Load             !
+ ! --------------------------------  ----------------  ---------------- !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X58Y36.F1  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X59Y32.F1  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X57Y33.F2  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X60Y32.F2  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X61Y32.F1  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X59Y28.F1  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X56Y33.F2  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X60Y30.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X59Y33.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X60Y31.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X59Y31.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X56Y30.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X61Y31.F1  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X57Y29.F1  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X56Y37.F4  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X59Y29.F1  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X58Y38.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X57Y35.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X58Y37.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X56Y35.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X61Y34.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X62Y37.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X59Y35.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X64Y34.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X60Y35.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X62Y35.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X63Y41.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X56Y31.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X60Y28.BX  !
+ ! 0/audio_dma_0/next_index_and0000  SLICE_X64Y28.X    SLICE_X65Y37.F2  !
+  ---------------------------------------------------------------------- 
+
+
+================================================================================
+Timing constraint: NET "fpga_0_Audio_Codec_Bit_Clk_pin_BUFGP/IBUFG" PERIOD = 
+81.38 ns HIGH 50%;
+
+ 1902 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   8.293ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "fpga_0_SysACE_CompactFlash_SysACE_CLK_pin_BUFGP/IBUFG" 
+PERIOD = 30 ns         HIGH 50%;
+
+ 197 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   4.198ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 10 ns HIGH 
+50%;
+
+ 3 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   1.309ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_RST1_path" TIG;
+
+ 3 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_fpga_0_DDR_CLK_FB = PERIOD TIMEGRP "fpga_0_DDR_CLK_FB" 10 
+ns HIGH 50%;
+
+ 3 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   1.860ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm_1_dcm_1_CLK90_BUF = PERIOD TIMEGRP 
+"dcm_1_dcm_1_CLK90_BUF"         TS_fpga_0_DDR_CLK_FB PHASE 4.844 ns HIGH 50%;
+
+ 1512 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   4.736ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm_0_dcm_0_CLK0_BUF = PERIOD TIMEGRP 
+"dcm_0_dcm_0_CLK0_BUF" TS_sys_clk_pin         HIGH 50%;
+
+ 10716212 items analyzed, 35 timing errors detected. (35 setup errors, 0 hold errors)
+ Minimum period is  12.818ns.
+--------------------------------------------------------------------------------
+Slack:                  -2.818ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_dma_0/audio_dma_0/master/current_state_FFd1 (FF)
+  Destination:          audio_dma_0/audio_dma_0/cur_index_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      12.818ns (Levels of Logic = 19)
+  Clock Path Skew:      0.000ns
+  Source Clock:         plb_bram_if_cntlr_1_port_BRAM_Clk rising at 0.000ns
+  Destination Clock:    plb_bram_if_cntlr_1_port_BRAM_Clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_dma_0/audio_dma_0/master/current_state_FFd1 to audio_dma_0/audio_dma_0/cur_index_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X57Y42.XQ      Tcko                  0.370   audio_dma_0/audio_dma_0/master/current_state_FFd1
+                                                       audio_dma_0/audio_dma_0/master/current_state_FFd1
+    SLICE_X56Y41.G1      net (fanout=75)       0.568   audio_dma_0/audio_dma_0/master/current_state_FFd1
+    SLICE_X56Y41.Y       Tilo                  0.275   chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_dt1/1/data_and_trig_dly1_46
+                                                       opb/opb/OPB_ABus_I/Y_1_or00001
+    SLICE_X54Y43.G4      net (fanout=16)       0.581   opb_OPB_ABus<1>
+    SLICE_X54Y43.Y       Tilo                  0.275   lab3_slave_0/lab3_slave_0/N181
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_cmp_eq000011_SW0
+    SLICE_X54Y43.F3      net (fanout=1)        0.037   lab3_slave_0/N71
+    SLICE_X54Y43.X       Tilo                  0.254   lab3_slave_0/lab3_slave_0/N181
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_cmp_eq000011
+    SLICE_X54Y40.G3      net (fanout=2)        0.211   lab3_slave_0/lab3_slave_0/N181
+    SLICE_X54Y40.YB      Topgyb                0.616   lab3_slave_0/lab3_slave_0/output_and0000
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_lut<5>
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<5>
+    SLICE_X58Y43.G3      net (fanout=6)        0.396   lab3_slave_0/lab3_slave_0/output_and0000
+    SLICE_X58Y43.Y       Tilo                  0.275   opb_Sl_DBus<288>
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>41
+    SLICE_X59Y43.F3      net (fanout=28)       0.157   lab3_slave_0/lab3_slave_0/N201
+    SLICE_X59Y43.X       Tilo                  0.254   lab3_slave_0/N202
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>56_SW1
+    SLICE_X61Y43.G4      net (fanout=1)        0.212   lab3_slave_0/N202
+    SLICE_X61Y43.X       Tif5x                 0.578   lab3_slave_0/N204
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84_SW0_F
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84_SW0
+    SLICE_X60Y42.F4      net (fanout=1)        0.057   lab3_slave_0/N204
+    SLICE_X60Y42.X       Tilo                  0.254   opb_Sl_DBus<319>
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84
+    SLICE_X61Y40.G3      net (fanout=1)        0.189   opb_Sl_DBus<319>
+    SLICE_X61Y40.Y       Tilo                  0.275   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+                                                       opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013_SW0
+    SLICE_X61Y40.F3      net (fanout=1)        0.037   opb/N983
+    SLICE_X61Y40.X       Tilo                  0.254   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+                                                       opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013
+    SLICE_X60Y40.G2      net (fanout=1)        0.097   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+    SLICE_X60Y40.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/control_reg_31_1
+                                                       opb/opb/OPB_DBus_I/Y_31_or00001
+    SLICE_X60Y40.F4      net (fanout=47)       0.152   opb_OPB_DBus<31>
+    SLICE_X60Y40.X       Tilo                  0.254   audio_dma_0/audio_dma_0/control_reg_31_1
+                                                       audio_dma_0/audio_dma_0/next_index_or000079_SW0
+    SLICE_X59Y34.G3      net (fanout=2)        0.383   audio_dma_0/N1634
+    SLICE_X59Y34.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/next_index<0>41
+                                                       audio_dma_0/audio_dma_0/next_index<0>11
+    SLICE_X58Y36.G3      net (fanout=15)       0.297   audio_dma_0/audio_dma_0/N0
+    SLICE_X58Y36.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/next_index<29>
+                                                       audio_dma_0/audio_dma_0/next_index<0>31
+    SLICE_X64Y34.G1      net (fanout=19)       0.676   audio_dma_0/audio_dma_0/N421
+    SLICE_X64Y34.X       Tif5x                 0.578   audio_dma_0/audio_dma_0/next_index<6>
+                                                       audio_dma_0/audio_dma_0/next_index<6>2
+                                                       audio_dma_0/audio_dma_0/next_index<6>_f5
+    SLICE_X58Y34.F3      net (fanout=1)        0.437   audio_dma_0/audio_dma_0/next_index<6>
+    SLICE_X58Y34.COUT    Topcyf                0.671   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_lut<12>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<12>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+    SLICE_X58Y35.CIN     net (fanout=1)        0.000   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+    SLICE_X58Y35.YB      Tcinyb                0.452   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<14>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+    SLICE_X64Y28.F3      net (fanout=1)        0.808   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+    SLICE_X64Y28.X       Tilo                  0.254   audio_dma_0/audio_dma_0/next_index_and0000
+                                                       audio_dma_0/audio_dma_0/next_index_and00001
+    SLICE_X64Y33.G4      net (fanout=60)       0.534   audio_dma_0/audio_dma_0/next_index_and0000
+    SLICE_X64Y33.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/cur_index<1>
+                                                       audio_dma_0/audio_dma_0/cur_index_mux0000<0>1
+    SLICE_X64Y33.DY      net (fanout=1)        0.000   audio_dma_0/audio_dma_0/cur_index_mux0000<0>
+    SLICE_X64Y33.CLK     Tdyck                 0.000   audio_dma_0/audio_dma_0/cur_index<1>
+                                                       audio_dma_0/audio_dma_0/cur_index_0
+    -------------------------------------------------  ---------------------------
+    Total                                     12.818ns (6.989ns logic, 5.829ns route)
+                                                       (54.5% logic, 45.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.818ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_dma_0/audio_dma_0/master_address_reg_14 (FF)
+  Destination:          audio_dma_0/audio_dma_0/cur_index_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      12.818ns (Levels of Logic = 20)
+  Clock Path Skew:      0.000ns
+  Source Clock:         plb_bram_if_cntlr_1_port_BRAM_Clk rising at 0.000ns
+  Destination Clock:    plb_bram_if_cntlr_1_port_BRAM_Clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_dma_0/audio_dma_0/master_address_reg_14 to audio_dma_0/audio_dma_0/cur_index_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y35.XQ      Tcko                  0.370   audio_dma_0/audio_dma_0/master_address_reg<14>
+                                                       audio_dma_0/audio_dma_0/master_address_reg_14
+    SLICE_X59Y40.G2      net (fanout=3)        0.658   audio_dma_0/audio_dma_0/master_address_reg<14>
+    SLICE_X59Y40.Y       Tilo                  0.275   opb2dcr_bridge_0/opb2dcr_bridge_0/opb_ipif_1/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1<15>
+                                                       opb/opb/OPB_ABus_I/Y_14_or00001
+    SLICE_X58Y40.F1      net (fanout=15)       0.443   opb_OPB_ABus<14>
+    SLICE_X58Y40.COUT    Topcyf                0.671   lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<1>
+                                                       lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_lut<0>
+                                                       lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<0>
+                                                       lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<1>
+    SLICE_X58Y41.CIN     net (fanout=1)        0.000   lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<1>
+    SLICE_X58Y41.COUT    Tbyp                  0.073   lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<3>
+                                                       lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<2>
+                                                       lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<3>
+    SLICE_X58Y42.CIN     net (fanout=1)        0.000   lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<3>
+    SLICE_X58Y42.XB      Tcinxb                0.406   lab3_slave_0/lab3_slave_0/SL_DBusEn_cmp_le0000
+                                                       lab3_slave_0/lab3_slave_0/Mcompar_SL_DBusEn_cmp_le0000_cy<4>
+    SLICE_X59Y42.G2      net (fanout=1)        0.273   lab3_slave_0/lab3_slave_0/SL_DBusEn_cmp_le0000
+    SLICE_X59Y42.Y       Tilo                  0.275   lab3_slave_0/lab3_slave_0/Sl_DBus<31>_map4
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_mux000021
+    SLICE_X58Y43.G2      net (fanout=5)        0.139   opb_Sl_xferAck<9>
+    SLICE_X58Y43.Y       Tilo                  0.275   opb_Sl_DBus<288>
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>41
+    SLICE_X59Y43.F3      net (fanout=28)       0.157   lab3_slave_0/lab3_slave_0/N201
+    SLICE_X59Y43.X       Tilo                  0.254   lab3_slave_0/N202
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>56_SW1
+    SLICE_X61Y43.G4      net (fanout=1)        0.212   lab3_slave_0/N202
+    SLICE_X61Y43.X       Tif5x                 0.578   lab3_slave_0/N204
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84_SW0_F
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84_SW0
+    SLICE_X60Y42.F4      net (fanout=1)        0.057   lab3_slave_0/N204
+    SLICE_X60Y42.X       Tilo                  0.254   opb_Sl_DBus<319>
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84
+    SLICE_X61Y40.G3      net (fanout=1)        0.189   opb_Sl_DBus<319>
+    SLICE_X61Y40.Y       Tilo                  0.275   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+                                                       opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013_SW0
+    SLICE_X61Y40.F3      net (fanout=1)        0.037   opb/N983
+    SLICE_X61Y40.X       Tilo                  0.254   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+                                                       opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013
+    SLICE_X60Y40.G2      net (fanout=1)        0.097   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+    SLICE_X60Y40.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/control_reg_31_1
+                                                       opb/opb/OPB_DBus_I/Y_31_or00001
+    SLICE_X60Y40.F4      net (fanout=47)       0.152   opb_OPB_DBus<31>
+    SLICE_X60Y40.X       Tilo                  0.254   audio_dma_0/audio_dma_0/control_reg_31_1
+                                                       audio_dma_0/audio_dma_0/next_index_or000079_SW0
+    SLICE_X59Y34.G3      net (fanout=2)        0.383   audio_dma_0/N1634
+    SLICE_X59Y34.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/next_index<0>41
+                                                       audio_dma_0/audio_dma_0/next_index<0>11
+    SLICE_X58Y36.G3      net (fanout=15)       0.297   audio_dma_0/audio_dma_0/N0
+    SLICE_X58Y36.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/next_index<29>
+                                                       audio_dma_0/audio_dma_0/next_index<0>31
+    SLICE_X64Y34.G1      net (fanout=19)       0.676   audio_dma_0/audio_dma_0/N421
+    SLICE_X64Y34.X       Tif5x                 0.578   audio_dma_0/audio_dma_0/next_index<6>
+                                                       audio_dma_0/audio_dma_0/next_index<6>2
+                                                       audio_dma_0/audio_dma_0/next_index<6>_f5
+    SLICE_X58Y34.F3      net (fanout=1)        0.437   audio_dma_0/audio_dma_0/next_index<6>
+    SLICE_X58Y34.COUT    Topcyf                0.671   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_lut<12>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<12>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+    SLICE_X58Y35.CIN     net (fanout=1)        0.000   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+    SLICE_X58Y35.YB      Tcinyb                0.452   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<14>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+    SLICE_X64Y28.F3      net (fanout=1)        0.808   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+    SLICE_X64Y28.X       Tilo                  0.254   audio_dma_0/audio_dma_0/next_index_and0000
+                                                       audio_dma_0/audio_dma_0/next_index_and00001
+    SLICE_X64Y33.G4      net (fanout=60)       0.534   audio_dma_0/audio_dma_0/next_index_and0000
+    SLICE_X64Y33.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/cur_index<1>
+                                                       audio_dma_0/audio_dma_0/cur_index_mux0000<0>1
+    SLICE_X64Y33.DY      net (fanout=1)        0.000   audio_dma_0/audio_dma_0/cur_index_mux0000<0>
+    SLICE_X64Y33.CLK     Tdyck                 0.000   audio_dma_0/audio_dma_0/cur_index<1>
+                                                       audio_dma_0/audio_dma_0/cur_index_0
+    -------------------------------------------------  ---------------------------
+    Total                                     12.818ns (7.269ns logic, 5.549ns route)
+                                                       (56.7% logic, 43.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.805ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_dma_0/audio_dma_0/master/current_state_FFd1 (FF)
+  Destination:          audio_dma_0/audio_dma_0/cur_index_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      12.805ns (Levels of Logic = 19)
+  Clock Path Skew:      0.000ns
+  Source Clock:         plb_bram_if_cntlr_1_port_BRAM_Clk rising at 0.000ns
+  Destination Clock:    plb_bram_if_cntlr_1_port_BRAM_Clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_dma_0/audio_dma_0/master/current_state_FFd1 to audio_dma_0/audio_dma_0/cur_index_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X57Y42.XQ      Tcko                  0.370   audio_dma_0/audio_dma_0/master/current_state_FFd1
+                                                       audio_dma_0/audio_dma_0/master/current_state_FFd1
+    SLICE_X56Y41.G1      net (fanout=75)       0.568   audio_dma_0/audio_dma_0/master/current_state_FFd1
+    SLICE_X56Y41.Y       Tilo                  0.275   chipscope_opb_iba_0/chipscope_opb_iba_0/i_cs_coregen_chipscope_opb_iba_0/i_dt1/1/data_and_trig_dly1_46
+                                                       opb/opb/OPB_ABus_I/Y_1_or00001
+    SLICE_X54Y43.G4      net (fanout=16)       0.581   opb_OPB_ABus<1>
+    SLICE_X54Y43.Y       Tilo                  0.275   lab3_slave_0/lab3_slave_0/N181
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_cmp_eq000011_SW0
+    SLICE_X54Y43.F3      net (fanout=1)        0.037   lab3_slave_0/N71
+    SLICE_X54Y43.X       Tilo                  0.254   lab3_slave_0/lab3_slave_0/N181
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_cmp_eq000011
+    SLICE_X54Y40.G3      net (fanout=2)        0.211   lab3_slave_0/lab3_slave_0/N181
+    SLICE_X54Y40.YB      Topgyb                0.616   lab3_slave_0/lab3_slave_0/output_and0000
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_lut<5>
+                                                       lab3_slave_0/lab3_slave_0/interrupts_acknowledged_cmp_eq00001_wg_cy<5>
+    SLICE_X58Y43.G3      net (fanout=6)        0.396   lab3_slave_0/lab3_slave_0/output_and0000
+    SLICE_X58Y43.Y       Tilo                  0.275   opb_Sl_DBus<288>
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>41
+    SLICE_X59Y43.F3      net (fanout=28)       0.157   lab3_slave_0/lab3_slave_0/N201
+    SLICE_X59Y43.X       Tilo                  0.254   lab3_slave_0/N202
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>56_SW1
+    SLICE_X61Y43.G4      net (fanout=1)        0.212   lab3_slave_0/N202
+    SLICE_X61Y43.X       Tif5x                 0.578   lab3_slave_0/N204
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84_SW0_F
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84_SW0
+    SLICE_X60Y42.F4      net (fanout=1)        0.057   lab3_slave_0/N204
+    SLICE_X60Y42.X       Tilo                  0.254   opb_Sl_DBus<319>
+                                                       lab3_slave_0/lab3_slave_0/Sl_DBus<31>84
+    SLICE_X61Y40.G3      net (fanout=1)        0.189   opb_Sl_DBus<319>
+    SLICE_X61Y40.Y       Tilo                  0.275   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+                                                       opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013_SW0
+    SLICE_X61Y40.F3      net (fanout=1)        0.037   opb/N983
+    SLICE_X61Y40.X       Tilo                  0.254   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+                                                       opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or000013
+    SLICE_X60Y40.G2      net (fanout=1)        0.097   opb/opb/ARBITER_HAS_NO_PROC_INTF.OPB_rdDBus_I/Y_31_or0000_map8
+    SLICE_X60Y40.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/control_reg_31_1
+                                                       opb/opb/OPB_DBus_I/Y_31_or00001
+    SLICE_X60Y40.F4      net (fanout=47)       0.152   opb_OPB_DBus<31>
+    SLICE_X60Y40.X       Tilo                  0.254   audio_dma_0/audio_dma_0/control_reg_31_1
+                                                       audio_dma_0/audio_dma_0/next_index_or000079_SW0
+    SLICE_X59Y34.G3      net (fanout=2)        0.383   audio_dma_0/N1634
+    SLICE_X59Y34.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/next_index<0>41
+                                                       audio_dma_0/audio_dma_0/next_index<0>11
+    SLICE_X58Y36.G3      net (fanout=15)       0.297   audio_dma_0/audio_dma_0/N0
+    SLICE_X58Y36.Y       Tilo                  0.275   audio_dma_0/audio_dma_0/next_index<29>
+                                                       audio_dma_0/audio_dma_0/next_index<0>31
+    SLICE_X64Y34.G1      net (fanout=19)       0.676   audio_dma_0/audio_dma_0/N421
+    SLICE_X64Y34.X       Tif5x                 0.578   audio_dma_0/audio_dma_0/next_index<6>
+                                                       audio_dma_0/audio_dma_0/next_index<6>2
+                                                       audio_dma_0/audio_dma_0/next_index<6>_f5
+    SLICE_X58Y34.F3      net (fanout=1)        0.437   audio_dma_0/audio_dma_0/next_index<6>
+    SLICE_X58Y34.COUT    Topcyf                0.671   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_lut<12>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<12>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+    SLICE_X58Y35.CIN     net (fanout=1)        0.000   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<13>
+    SLICE_X58Y35.YB      Tcinyb                0.452   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<14>
+                                                       audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+    SLICE_X64Y28.F3      net (fanout=1)        0.808   audio_dma_0/audio_dma_0/Mcompar_next_index_cmp_eq0000_cy<15>
+    SLICE_X64Y28.X       Tilo                  0.254   audio_dma_0/audio_dma_0/next_index_and0000
+                                                       audio_dma_0/audio_dma_0/next_index_and00001
+    SLICE_X64Y33.F4      net (fanout=60)       0.542   audio_dma_0/audio_dma_0/next_index_and0000
+    SLICE_X64Y33.X       Tilo                  0.254   audio_dma_0/audio_dma_0/cur_index<1>
+                                                       audio_dma_0/audio_dma_0/cur_index_mux0000<1>1
+    SLICE_X64Y33.DX      net (fanout=1)        0.000   audio_dma_0/audio_dma_0/cur_index_mux0000<1>
+    SLICE_X64Y33.CLK     Tdxck                 0.000   audio_dma_0/audio_dma_0/cur_index<1>
+                                                       audio_dma_0/audio_dma_0/cur_index_1
+    -------------------------------------------------  ---------------------------
+    Total                                     12.805ns (6.968ns logic, 5.837ns route)
+                                                       (54.4% logic, 45.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_dcm_0_dcm_0_CLK90_BUF = PERIOD TIMEGRP 
+"dcm_0_dcm_0_CLK90_BUF"         TS_sys_clk_pin PHASE 2.5 ns HIGH 50%;
+
+ 112 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   8.448ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_vga_framebuffer_vga_framebuffer_CLKDV = PERIOD TIMEGRP    
+     "vga_framebuffer_vga_framebuffer_CLKDV" TS_dcm_0_dcm_0_CLK0_BUF * 4        
+ HIGH 50%;
+
+ 819 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  25.848ns.
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock fpga_0_Audio_Codec_Bit_Clk_pin
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+fpga_0_Audio_Codec_Bit_Clk_pin|    8.293|    3.680|         |    2.794|
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR_CLK_FB
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+fpga_0_DDR_CLK_FB|    4.736|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_SysACE_CompactFlash_SysACE_CLK_pin
+-----------------------------------------+---------+---------+---------+---------+
+                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------+---------+---------+---------+---------+
+fpga_0_SysACE_CompactFlash_SysACE_CLK_pin|    4.198|         |         |         |
+-----------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sys_clk_pin
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_pin    |   12.818|    4.362|    5.397|    2.962|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 35  Score: 82119
+
+Constraints cover 10720763 paths, 0 nets, and 29067 connections
+
+Design statistics:
+   Minimum period:  25.848ns   (Maximum frequency:  38.688MHz)
+
+
+Analysis completed Wed Dec 07 16:04:17 2011 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 268 MB
+
+
+
